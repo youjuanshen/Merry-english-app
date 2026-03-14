@@ -252,21 +252,27 @@ h1 {
 .options-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
+  gap: 12px;
   width: 100%;
+  flex: 1;
 }
 .option-card {
-  border: 2px solid var(--gray);
+  border: 3px solid var(--gray);
   border-radius: 16px;
-  padding: 10px;
+  padding: 15px;
   text-align: center;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
-  min-height: 80px;
+  min-height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.option-card img {
+  max-width: 90px;
+  max-height: 90px;
+  object-fit: contain;
 }
 .option-card.correct {
   border-color: var(--primary);
@@ -438,41 +444,42 @@ h1 {
 }
 
 /* Floating Feedback */
+/* "完美/太棒了"提示 - 从顶部出现，不遮挡正确答案 */
 .floating-feedback {
   position: fixed;
-  top: 50%;
+  top: 15%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 36px;
+  transform: translate(-50%, 0);
+  font-size: 28px;
   font-weight: bold;
-  padding: 20px 40px;
-  border-radius: 20px;
+  padding: 12px 30px;
+  border-radius: 16px;
   z-index: 2000;
-  -webkit-animation: feedbackPop 1.5s ease-out forwards;
-  animation: feedbackPop 1.5s ease-out forwards;
+  -webkit-animation: feedbackSlideDown 1.5s ease-out forwards;
+  animation: feedbackSlideDown 1.5s ease-out forwards;
 }
 .floating-feedback.success {
   background: linear-gradient(135deg, #58cc02, #7de832);
   color: white;
-  box-shadow: 0 8px 0 #46a302;
+  box-shadow: 0 4px 0 #46a302;
 }
 .floating-feedback.encourage {
   background: linear-gradient(135deg, #1cb0f6, #4dc4f9);
   color: white;
-  box-shadow: 0 8px 0 #1899d6;
+  box-shadow: 0 4px 0 #1899d6;
 }
 
-@-webkit-keyframes feedbackPop {
-  0% { -webkit-transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
-  20% { -webkit-transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
-  40% { -webkit-transform: translate(-50%, -50%) scale(1); }
-  100% { -webkit-transform: translate(-50%, -80%) scale(1); opacity: 0; }
+@-webkit-keyframes feedbackSlideDown {
+  0% { -webkit-transform: translate(-50%, -50px); opacity: 0; }
+  20% { -webkit-transform: translate(-50%, 0); opacity: 1; }
+  80% { -webkit-transform: translate(-50%, 0); opacity: 1; }
+  100% { -webkit-transform: translate(-50%, -30px); opacity: 0; }
 }
-@keyframes feedbackPop {
-  0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
-  20% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
-  40% { transform: translate(-50%, -50%) scale(1); }
-  100% { transform: translate(-50%, -80%) scale(1); opacity: 0; }
+@keyframes feedbackSlideDown {
+  0% { transform: translate(-50%, -50px); opacity: 0; }
+  20% { transform: translate(-50%, 0); opacity: 1; }
+  80% { transform: translate(-50%, 0); opacity: 1; }
+  100% { transform: translate(-50%, -30px); opacity: 0; }
 }
 
 /* Correct Hint */
