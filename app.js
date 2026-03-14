@@ -100,49 +100,52 @@ let moduleQuestions = [];
 // Professional hints - Duolingo style (不直接给答案，引导思考)
 // 分层提示：Level 1 = 轻提示, Level 2 = 更多提示, Level 3 = 查书提示
 
+// 提示设计原则：
+// - 操作指示用中文（学生看得懂）
+// - 知识点用英文（测试是否掌握）
 const hintData = {
-    // Animals
+    // Animals - 直接给英文单词测试掌握
     'bear': {
-        level1: 'Starts with "b"',           // 首字母提示
-        level2: 'b _ _ r (4 letters)',       // 部分字母
-        level3: 'Look at your book, page 2'  // 查书
+        level1: 'b___',                    // 首字母
+        level2: 'bear',                    // 直接给单词，测试是否认识
+        level3: '请查书第2页'               // 中文指示
     },
     'horse': {
-        level1: 'Starts with "h"',
-        level2: 'h _ _ _ e (5 letters)',
-        level3: 'Look at your book, page 2'
+        level1: 'h____',
+        level2: 'horse',
+        level3: '请查书第2页'
     },
     'bird': {
-        level1: 'Starts with "b"',
-        level2: 'b _ _ d (4 letters)',
-        level3: 'Look at your book, page 2'
+        level1: 'b___',
+        level2: 'bird',
+        level3: '请查书第2页'
     },
     'panda': {
-        level1: 'Starts with "p"',
-        level2: 'p _ _ _ a (5 letters)',
-        level3: 'Look at your book, page 3'
+        level1: 'p____',
+        level2: 'panda',
+        level3: '请查书第3页'
     },
-    // Sentences - grammar hints
+    // Sentences - 语法知识点
     'This is a bear.': {
-        level1: '"This" or "That"?',
-        level2: 'Near = This, Far = That',
-        level3: 'Look at your book, page 4'
+        level1: 'This / That ?',           // 选择题形式
+        level2: 'This is a ___.',          // 句型结构
+        level3: '近的用This，远的用That'    // 中文解释
     },
     'That is a horse.': {
-        level1: '"This" or "That"?',
-        level2: 'Near = This, Far = That',
-        level3: 'Look at your book, page 4'
+        level1: 'This / That ?',
+        level2: 'That is a ___.',
+        level3: '近的用This，远的用That'
     },
     // Adjectives
     'big': {
-        level1: 'Opposite of "small"',
-        level2: 'b _ g (3 letters)',
-        level3: 'Look at your book, page 5'
+        level1: 'b__',
+        level2: 'big',
+        level3: '请查书第5页'
     },
     'cute': {
-        level1: 'Means lovely',
-        level2: 'c _ _ e (4 letters)',
-        level3: 'Look at your book, page 5'
+        level1: 'c___',
+        level2: 'cute',
+        level3: '请查书第5页'
     }
 };
 
@@ -463,11 +466,16 @@ function showProgressiveHint(hint, level) {
         document.getElementById('question-container').appendChild(hintEl);
     }
 
-    // Different styles for different levels
+    // 中文标签（学生看得懂）
     const icons = ['💡', '📝', '📖'];
-    const labels = ['Hint:', 'More help:', 'Check your book:'];
+    const labels = ['提示：', '答案是：', ''];  // level3直接显示内容
 
-    hintEl.innerHTML = `${icons[level]} ${labels[level]} <strong>${hint}</strong>`;
+    if (level === 2) {
+        // Level 3: 直接显示中文指示
+        hintEl.innerHTML = `${icons[level]} ${hint}`;
+    } else {
+        hintEl.innerHTML = `${icons[level]} ${labels[level]} <strong>${hint}</strong>`;
+    }
     hintEl.style.display = 'block';
 }
 
