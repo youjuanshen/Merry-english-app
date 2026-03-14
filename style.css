@@ -444,42 +444,43 @@ h1 {
 }
 
 /* Floating Feedback */
-/* "完美/太棒了"提示 - 从顶部出现，不遮挡正确答案 */
+/* "完美/太棒了"提示 - 固定在顶部，只有淡入淡出，不移动不遮挡 */
 .floating-feedback {
   position: fixed;
-  top: 15%;
+  top: 80px;
   left: 50%;
-  transform: translate(-50%, 0);
-  font-size: 28px;
+  transform: translateX(-50%);
+  font-size: 24px;
   font-weight: bold;
-  padding: 12px 30px;
-  border-radius: 16px;
+  padding: 10px 25px;
+  border-radius: 14px;
   z-index: 2000;
-  -webkit-animation: feedbackSlideDown 1.5s ease-out forwards;
-  animation: feedbackSlideDown 1.5s ease-out forwards;
+  -webkit-animation: feedbackFade 1.5s ease-out forwards;
+  animation: feedbackFade 1.5s ease-out forwards;
 }
 .floating-feedback.success {
   background: linear-gradient(135deg, #58cc02, #7de832);
   color: white;
-  box-shadow: 0 4px 0 #46a302;
+  box-shadow: 0 3px 0 #46a302;
 }
 .floating-feedback.encourage {
   background: linear-gradient(135deg, #1cb0f6, #4dc4f9);
   color: white;
-  box-shadow: 0 4px 0 #1899d6;
+  box-shadow: 0 3px 0 #1899d6;
 }
 
-@-webkit-keyframes feedbackSlideDown {
-  0% { -webkit-transform: translate(-50%, -50px); opacity: 0; }
-  20% { -webkit-transform: translate(-50%, 0); opacity: 1; }
-  80% { -webkit-transform: translate(-50%, 0); opacity: 1; }
-  100% { -webkit-transform: translate(-50%, -30px); opacity: 0; }
+/* 只有淡入淡出，不移动位置 */
+@-webkit-keyframes feedbackFade {
+  0% { opacity: 0; -webkit-transform: translateX(-50%) scale(0.8); }
+  15% { opacity: 1; -webkit-transform: translateX(-50%) scale(1); }
+  85% { opacity: 1; -webkit-transform: translateX(-50%) scale(1); }
+  100% { opacity: 0; -webkit-transform: translateX(-50%) scale(0.8); }
 }
-@keyframes feedbackSlideDown {
-  0% { transform: translate(-50%, -50px); opacity: 0; }
-  20% { transform: translate(-50%, 0); opacity: 1; }
-  80% { transform: translate(-50%, 0); opacity: 1; }
-  100% { transform: translate(-50%, -30px); opacity: 0; }
+@keyframes feedbackFade {
+  0% { opacity: 0; transform: translateX(-50%) scale(0.8); }
+  15% { opacity: 1; transform: translateX(-50%) scale(1); }
+  85% { opacity: 1; transform: translateX(-50%) scale(1); }
+  100% { opacity: 0; transform: translateX(-50%) scale(0.8); }
 }
 
 /* Correct Hint */
