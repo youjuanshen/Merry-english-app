@@ -341,3 +341,72 @@ h1 {
 @keyframes fall {
   to { transform: translateY(100vh) rotate(720deg); }
 }
+
+/* Floating Feedback */
+.floating-feedback {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  font-weight: bold;
+  padding: 20px 40px;
+  border-radius: 20px;
+  z-index: 2000;
+  -webkit-animation: feedbackPop 1.5s ease-out forwards;
+  animation: feedbackPop 1.5s ease-out forwards;
+}
+.floating-feedback.success {
+  background: linear-gradient(135deg, #58cc02, #7de832);
+  color: white;
+  box-shadow: 0 8px 0 #46a302;
+}
+.floating-feedback.encourage {
+  background: linear-gradient(135deg, #1cb0f6, #4dc4f9);
+  color: white;
+  box-shadow: 0 8px 0 #1899d6;
+}
+
+@-webkit-keyframes feedbackPop {
+  0% { -webkit-transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
+  20% { -webkit-transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+  40% { -webkit-transform: translate(-50%, -50%) scale(1); }
+  100% { -webkit-transform: translate(-50%, -80%) scale(1); opacity: 0; }
+}
+@keyframes feedbackPop {
+  0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
+  20% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+  40% { transform: translate(-50%, -50%) scale(1); }
+  100% { transform: translate(-50%, -80%) scale(1); opacity: 0; }
+}
+
+/* Correct Hint */
+.correct-hint {
+  background: #fff3cd;
+  border: 2px solid #ffc107;
+  border-radius: 12px;
+  padding: 15px 20px;
+  margin-top: 20px;
+  font-size: 18px;
+  text-align: center;
+  color: #856404;
+  -webkit-animation: hintSlide 0.3s ease-out;
+  animation: hintSlide 0.3s ease-out;
+}
+
+@-webkit-keyframes hintSlide {
+  from { -webkit-transform: translateY(-10px); opacity: 0; }
+  to { -webkit-transform: translateY(0); opacity: 1; }
+}
+@keyframes hintSlide {
+  from { transform: translateY(-10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Chinese Hint under question */
+.chinese-hint {
+  font-size: 16px;
+  color: #888;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}

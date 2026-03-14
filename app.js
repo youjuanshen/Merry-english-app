@@ -19,6 +19,37 @@ let currentPhase = 'pretest'; // pretest -> practice
 let currentLessonData = lesson1;
 let moduleQuestions = [];
 
+// Chinese vocabulary helper
+const vocabulary = {
+    // Animals
+    'bear': '熊', 'horse': '马', 'bird': '鸟', 'panda': '熊猫',
+    'animal': '动物', 'animals': '动物们',
+    // Adjectives
+    'big': '大的', 'small': '小的', 'cute': '可爱的', 'fast': '快的',
+    'beautiful': '美丽的', 'red': '红色', 'blue': '蓝色',
+    'black': '黑色', 'white': '白色',
+    // Sentences
+    'This is a bear.': '这是一只熊。',
+    'That is a horse.': '那是一匹马。',
+    'This is a bird.': '这是一只鸟。',
+    'That is a panda.': '那是一只熊猫。',
+    'It\'s big.': '它很大。',
+    'It\'s cute.': '它很可爱。',
+    'It can run fast.': '它跑得很快。',
+    'They are beautiful.': '它们很美丽。',
+    'It\'s black and white.': '它是黑白色的。',
+    'This is a red bird.': '这是一只红色的鸟。',
+    'What\'s this?': '这是什么？',
+    'What\'s that?': '那是什么？',
+    'Is it big?': '它大吗？',
+    'Is it cute?': '它可爱吗？',
+    'Yes': '是的', 'No': '不是'
+};
+
+function getChineseHint(english) {
+    return vocabulary[english] || '';
+}
+
 // Web Audio API for sound effects
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
@@ -40,10 +71,44 @@ function playTone(freq, type, duration, vol = 0.1) {
 function playSuccessSound() {
     playTone(523.25, 'sine', 0.1); // C5
     setTimeout(() => playTone(659.25, 'sine', 0.2), 100); // E5
+    setTimeout(() => playTone(783.99, 'sine', 0.3), 200); // G5
 }
 
 function playWrongSound() {
-    playTone(300, 'sawtooth', 0.3);
+    playTone(300, 'sawtooth', 0.2);
+    playTone(250, 'sawtooth', 0.3);
+}
+
+// Voice encouragement
+const successPhrases = ['太棒了！', '真厉害！', '你真棒！', '继续加油！', '非常好！', '好极了！'];
+const tryAgainPhrases = ['再想想！', '加油！', '没关系！', '再试一次！', '你可以的！'];
+
+function speakEncouragement(isCorrect) {
+    if ('speechSynthesis' in window) {
+        const phrases = isCorrect ? successPhrases : tryAgainPhrases;
+        const phrase = phrases[Math.floor(Math.random() * phrases.length)];
+        const utterance = new SpeechSynthesisUtterance(phrase);
+        utterance.lang = 'zh-CN';
+        utterance.rate = 1.1;
+        window.speechSynthesis.speak(utterance);
+    }
+}
+
+// Show floating feedback text
+function showFeedbackText(isCorrect) {
+    const text = isCorrect ? ['🎉 太棒了！', '⭐ 真厉害！', '👏 好极了！'][Math.floor(Math.random() * 3)]
+                           : ['💪 加油！', '🤔 再想想！', '😊 没关系！'][Math.floor(Math.random() * 3)];
+
+    const feedback = document.createElement('div');
+    feedback.className = 'floating-feedback ' + (isCorrect ? 'success' : 'encourage');
+    feedback.textContent = text;
+    document.body.appendChild(feedback);
+
+    setTimeout(() => {
+        if (document.body.contains(feedback)) {
+            document.body.removeChild(feedback);
+        }
+    }, 1500);
 }
 
 function speakWord(word) {
@@ -203,21 +268,51 @@ function updateHeader() {
     document.getElementById('player2-ui').querySelector('.stars').innerHTML = `⭐ ${players[1].stars}`;
 }
 
-function handleAnswer(isCorrect, cardEl = null) {
+function handleAnswer(isCorrect, cardEl = null, correctAnswer = null) {
     if(isAnimating) return;
     isAnimating = true;
 
     if (isCorrect) {
         if (cardEl) cardEl.classList.add('correct');
         playSuccessSound();
+        showFeedbackText(true);
+        speakEncouragement(true);
         onCorrect();
     } else {
         if (cardEl) cardEl.classList.add('wrong');
         playWrongSound();
+        showFeedbackText(false);
+        speakEncouragement(false);
+
+        // Show correct answer hint if provided
+        if (correctAnswer !== null) {
+            showCorrectHint(correctAnswer);
+        }
+
         setTimeout(() => {
             if (cardEl) cardEl.classList.remove('wrong');
+            hideCorrectHint();
             isAnimating = false;
-        }, 1000);
+        }, 2000);
+    }
+}
+
+function showCorrectHint(answer) {
+    let hint = document.getElementById('correct-hint');
+    if (!hint) {
+        hint = document.createElement('div');
+        hint.id = 'correct-hint';
+        hint.className = 'correct-hint';
+        document.getElementById('question-container').appendChild(hint);
+    }
+    hint.innerHTML = `💡 提示：正确答案是 <strong>${answer}</strong>`;
+    hint.style.display = 'block';
+}
+
+function hideCorrectHint() {
+    const hint = document.getElementById('correct-hint');
+    if (hint) {
+        hint.style.display = 'none';
     }
 }
 
