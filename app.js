@@ -104,11 +104,11 @@ let moduleQuestions = [];
 // - 操作指示用中文（学生看得懂）
 // - 知识点用英文（测试是否掌握）
 const hintData = {
-    // Animals - 直接给英文单词测试掌握
+    // ===== 动物单词 Animals =====
     'bear': {
-        level1: 'b___',                    // 首字母
-        level2: 'bear',                    // 直接给单词，测试是否认识
-        level3: '请查书第2页'               // 中文指示
+        level1: 'b___',
+        level2: 'bear',
+        level3: '请查书第2页'
     },
     'horse': {
         level1: 'h____',
@@ -125,18 +125,13 @@ const hintData = {
         level2: 'panda',
         level3: '请查书第3页'
     },
-    // Sentences - 语法知识点
-    'This is a bear.': {
-        level1: 'This / That ?',           // 选择题形式
-        level2: 'This is a ___.',          // 句型结构
-        level3: '近的用This，远的用That'    // 中文解释
+    'animal': {
+        level1: 'a_____',
+        level2: 'animal',
+        level3: '请查书第2页'
     },
-    'That is a horse.': {
-        level1: 'This / That ?',
-        level2: 'That is a ___.',
-        level3: '近的用This，远的用That'
-    },
-    // Adjectives
+
+    // ===== 形容词 Adjectives =====
     'big': {
         level1: 'b__',
         level2: 'big',
@@ -146,6 +141,89 @@ const hintData = {
         level1: 'c___',
         level2: 'cute',
         level3: '请查书第5页'
+    },
+    'fast': {
+        level1: 'f___',
+        level2: 'fast',
+        level3: '请查书第5页'
+    },
+
+    // ===== This/That 句型 =====
+    'This is a bear.': {
+        level1: 'This / That ?',
+        level2: 'This is a ___.',
+        level3: '近的用This，远的用That'
+    },
+    'That is a horse.': {
+        level1: 'This / That ?',
+        level2: 'That is a ___.',
+        level3: '近的用This，远的用That'
+    },
+    'This is a bird.': {
+        level1: 'This / That ?',
+        level2: 'This is a ___.',
+        level3: '近的用This，远的用That'
+    },
+    'That is a panda.': {
+        level1: 'This / That ?',
+        level2: 'That is a ___.',
+        level3: '近的用This，远的用That'
+    },
+
+    // ===== It's 句型 =====
+    "It's big.": {
+        level1: "It's ___.",
+        level2: 'big / small ?',
+        level3: '请查书第5页'
+    },
+    "It's cute.": {
+        level1: "It's ___.",
+        level2: 'cute',
+        level3: '请查书第5页'
+    },
+    'It can run fast.': {
+        level1: 'It can ___ fast.',
+        level2: 'run',
+        level3: '请查书第5页'
+    },
+
+    // ===== 组合句子 =====
+    "This is a bear. It's big.": {
+        level1: 'bear + big',
+        level2: 'This is a bear.',
+        level3: '两句话：这是熊 + 它很大'
+    },
+    "That is a panda. It's cute.": {
+        level1: 'panda + cute',
+        level2: 'That is a panda.',
+        level3: '两句话：那是熊猫 + 它很可爱'
+    },
+    'This is a horse. It can run fast.': {
+        level1: 'horse + fast',
+        level2: 'This is a horse.',
+        level3: '两句话：这是马 + 它跑得快'
+    },
+
+    // ===== 听力排序 =====
+    'bear, bird': {
+        level1: '先听到哪个？',
+        level2: 'bear → bird',
+        level3: '请两人一起商量'
+    },
+    'horse, panda': {
+        level1: '先听到哪个？',
+        level2: 'horse → panda',
+        level3: '请两人一起商量'
+    },
+    'bird, bear, panda': {
+        level1: '顺序：1, 2, 3',
+        level2: 'bird → bear → panda',
+        level3: '请两人一起商量'
+    },
+    'panda, horse, bird': {
+        level1: '顺序：1, 2, 3',
+        level2: 'panda → horse → bird',
+        level3: '请两人一起商量'
     }
 };
 
