@@ -540,6 +540,29 @@ h1 {
   flex: 1;
   text-align: center;
 }
+.turn-indicator .turn-timer {
+  background: rgba(255,255,255,0.3);
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+/* 跳过/下一题按钮 */
+.skip-btn {
+  display: block;
+  margin: 15px auto 0;
+  padding: 8px 20px;
+  font-size: 14px;
+  background: #f5f5f5;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  color: #888;
+  cursor: pointer;
+}
+.skip-btn:active {
+  background: #e8e8e8;
+}
 
 /* 答对时显示正确答案+中文翻译 */
 .correct-answer-display {

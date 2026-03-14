@@ -13,6 +13,11 @@ let currentPlayerIndex = 0;
 let currentQuestionIndex = 0;
 let isAnimating = false;
 
+// 计时器相关
+let questionTimer = null;
+let timeLeft = 30; // 每题30秒
+const TIME_PER_QUESTION = 30;
+
 // Student <-> Teacher Sync
 let lastTeacherCommandTime = 0;
 
@@ -467,16 +472,20 @@ function renderQuestion() {
     const container = document.getElementById('question-container');
     container.innerHTML = '';
 
-    // Update turn indicator with progress (合并显示)
+    // Update turn indicator with progress and timer (合并显示)
     const currentPlayerName = players[currentPlayerIndex].name.replace(/^\d+\.\s*/, '');
     const progress = `${currentQuestionIndex + 1}/${moduleQuestions.length}`;
     document.getElementById('turn-indicator').innerHTML = `
         <span class="turn-progress">${progress}</span>
         <span class="turn-name">👉 请 <strong>${currentPlayerName}</strong> 同学回答</span>
+        <span class="turn-timer" id="question-timer">⏱️ ${TIME_PER_QUESTION}s</span>
     `;
 
     // Update header progress (头像中间)
     document.getElementById('question-progress').textContent = progress;
+
+    // 启动计时器
+    startQuestionTimer();
 
     // Delegate to module renderers
     if (currentModule === 'listening') {
@@ -488,7 +497,14 @@ function renderQuestion() {
     } else if (currentModule === 'speaking') {
         renderSpeakingQuestion(q, container);
     }
-    
+
+    // 添加"下一题"按钮（提前做完可以跳过）
+    const skipBtn = document.createElement('button');
+    skipBtn.className = 'skip-btn';
+    skipBtn.textContent = '跳过 ➡️';
+    skipBtn.onclick = skipToNextQuestion;
+    container.appendChild(skipBtn);
+
     syncStudentProgress();
 }
 
@@ -525,6 +541,7 @@ function handleAnswer(isCorrect, cardEl = null, correctAnswer = null) {
     isAnimating = true;
 
     if (isCorrect) {
+        stopQuestionTimer(); // 答对停止计时
         if (cardEl) cardEl.classList.add('correct');
         playSuccessSound();
         showFeedbackText(true);   // 屏幕显示中文
@@ -619,6 +636,75 @@ function hideCorrectAnswerDisplay() {
     if (display) {
         display.style.display = 'none';
     }
+}
+
+// ===== 计时器功能 =====
+function startQuestionTimer() {
+    // 清除之前的计时器
+    if (questionTimer) {
+        clearInterval(questionTimer);
+    }
+
+    timeLeft = TIME_PER_QUESTION;
+    updateTimerDisplay();
+
+    questionTimer = setInterval(() => {
+        timeLeft--;
+        updateTimerDisplay();
+
+        if (timeLeft <= 0) {
+            // 时间到，强制下一题
+            clearInterval(questionTimer);
+            forceNextQuestion();
+        }
+    }, 1000);
+}
+
+function updateTimerDisplay() {
+    const timerEl = document.getElementById('question-timer');
+    if (timerEl) {
+        timerEl.textContent = `⏱️ ${timeLeft}s`;
+        // 时间少于10秒变红色警告
+        if (timeLeft <= 10) {
+            timerEl.style.color = '#ff4b4b';
+            timerEl.style.fontWeight = 'bold';
+        } else {
+            timerEl.style.color = '';
+            timerEl.style.fontWeight = '';
+        }
+    }
+}
+
+function stopQuestionTimer() {
+    if (questionTimer) {
+        clearInterval(questionTimer);
+        questionTimer = null;
+    }
+}
+
+function forceNextQuestion() {
+    // 时间到，显示提示并强制下一题
+    showFeedbackText(false);
+    speakFeedback(false);
+
+    setTimeout(() => {
+        currentPlayerIndex = Math.random() < 0.5 ? 0 : 1;
+        currentQuestionIndex++;
+        resetHintLevel();
+        syncStudentProgress();
+        renderQuestion();
+    }, 1500);
+}
+
+// 手动跳过/下一题按钮
+function skipToNextQuestion() {
+    if (isAnimating) return;
+    stopQuestionTimer();
+    currentPlayerIndex = Math.random() < 0.5 ? 0 : 1;
+    currentQuestionIndex++;
+    resetHintLevel();
+    syncStudentProgress();
+    renderQuestion();
 }
 
 function showCorrectHint(answer) {
