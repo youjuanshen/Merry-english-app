@@ -356,6 +356,21 @@ function renderQuestion() {
     const container = document.getElementById('question-container');
     container.innerHTML = '';
 
+    // Show whose turn it is (more obvious)
+    const currentPlayerName = players[currentPlayerIndex].name.replace(/^\d+\.\s*/, '');
+    const turnIndicator = document.createElement('div');
+    turnIndicator.className = 'turn-indicator';
+    turnIndicator.innerHTML = `👉 请 <strong>${currentPlayerName}</strong> 同学回答`;
+    container.appendChild(turnIndicator);
+
+    // Cooperation reminder (show occasionally)
+    if (Math.random() < 0.3) {
+        const coopHint = document.createElement('div');
+        coopHint.className = 'coop-hint';
+        coopHint.textContent = '💬 两人可以一起商量哦！';
+        container.appendChild(coopHint);
+    }
+
     // Progress bar
     document.getElementById('progress-fill').style.width = ((currentQuestionIndex) / moduleQuestions.length * 100) + '%';
 
@@ -485,7 +500,8 @@ function onCorrect() {
     createConfetti(15);
 
     setTimeout(() => {
-        currentPlayerIndex = (currentPlayerIndex + 1) % 2;
+        // Random next player (not just alternating)
+        currentPlayerIndex = Math.random() < 0.5 ? 0 : 1;
         currentQuestionIndex++;
         syncStudentProgress();
         renderQuestion();
