@@ -517,16 +517,28 @@ h1 {
   border-radius: 20px;
 }
 
-/* Turn Indicator - below header */
+/* Turn Indicator - combined with progress */
 .turn-indicator {
-  text-align: center;
-  font-size: 16px;
-  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  padding: 6px 12px;
   background: linear-gradient(135deg, #58cc02, #7de832);
   color: white;
-  border-radius: 12px;
-  margin-bottom: 10px;
-  box-shadow: 0 3px 0 #46a302;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 0 #46a302;
+}
+.turn-indicator .turn-progress {
+  background: rgba(255,255,255,0.3);
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.turn-indicator .turn-name {
+  flex: 1;
+  text-align: center;
 }
 
 /* 答对时显示正确答案+中文翻译 */

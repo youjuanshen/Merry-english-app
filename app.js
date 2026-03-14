@@ -467,15 +467,16 @@ function renderQuestion() {
     const container = document.getElementById('question-container');
     container.innerHTML = '';
 
-    // Update turn indicator (in header area)
+    // Update turn indicator with progress (合并显示)
     const currentPlayerName = players[currentPlayerIndex].name.replace(/^\d+\.\s*/, '');
-    document.getElementById('turn-indicator').innerHTML = `👉 请 <strong>${currentPlayerName}</strong> 同学回答`;
+    const progress = `${currentQuestionIndex + 1}/${moduleQuestions.length}`;
+    document.getElementById('turn-indicator').innerHTML = `
+        <span class="turn-progress">${progress}</span>
+        <span class="turn-name">👉 请 <strong>${currentPlayerName}</strong> 同学回答</span>
+    `;
 
-    // Progress bar
-    document.getElementById('progress-fill').style.width = ((currentQuestionIndex) / moduleQuestions.length * 100) + '%';
-
-    // Progress text (简洁版，在头像中间)
-    document.getElementById('question-progress').textContent = `${currentQuestionIndex + 1}/${moduleQuestions.length}`;
+    // Update header progress (头像中间)
+    document.getElementById('question-progress').textContent = progress;
 
     // Delegate to module renderers
     if (currentModule === 'listening') {
@@ -658,7 +659,6 @@ function onCorrect() {
 function showFinishScreen() {
     document.getElementById('game-screen').classList.remove('active');
     document.getElementById('finish-screen').classList.add('active');
-    document.getElementById('progress-fill').style.width = '100%';
 
     // Show final scores
     const finishStars = document.getElementById('finish-stars');

@@ -1,13 +1,14 @@
 // listening.js
 
 function renderListeningQuestion(q, container) {
-    // 大喇叭按钮（不需要文字说明，图标足够明显）
+    // 喇叭按钮（适中大小，节省空间给选项）
     const playBtn = document.createElement('button');
     playBtn.className = 'play-sound-btn animate-pop';
     playBtn.innerHTML = '🔊';
-    playBtn.style.width = '100px';
-    playBtn.style.height = '100px';
-    playBtn.style.fontSize = '50px';
+    playBtn.style.width = '70px';
+    playBtn.style.height = '70px';
+    playBtn.style.fontSize = '36px';
+    playBtn.style.marginBottom = '10px';
     playBtn.onclick = () => speakWord(q.audio);
     container.appendChild(playBtn);
 
