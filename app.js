@@ -498,10 +498,10 @@ function renderQuestion() {
         renderSpeakingQuestion(q, container);
     }
 
-    // 添加"下一题"按钮（提前做完可以跳过）
+    // 添加"下一题"按钮
     const skipBtn = document.createElement('button');
-    skipBtn.className = 'skip-btn';
-    skipBtn.textContent = '跳过 ➡️';
+    skipBtn.className = 'next-btn';
+    skipBtn.textContent = '下一题 ▶';
     skipBtn.onclick = skipToNextQuestion;
     container.appendChild(skipBtn);
 
