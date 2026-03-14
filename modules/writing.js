@@ -197,6 +197,43 @@ function renderWritingQuestion(q, container) {
         container.appendChild(answerArea);
         container.appendChild(sourceArea);
 
+    } else if (q.type === 'fill_blank') {
+        // 填空题：句子填空
+        if (q.image) {
+            const imgEl = document.createElement('div');
+            imgEl.style.fontSize = '60px';
+            imgEl.style.marginBottom = '15px';
+            imgEl.textContent = q.image;
+            container.appendChild(imgEl);
+        }
+
+        const promptEl = document.createElement('div');
+        promptEl.style.fontSize = '28px';
+        promptEl.style.fontWeight = 'bold';
+        promptEl.style.marginBottom = '25px';
+        promptEl.style.textAlign = 'center';
+        promptEl.textContent = q.prompt;
+        container.appendChild(promptEl);
+
+        const grid = document.createElement('div');
+        grid.className = 'options-grid';
+        q.options.forEach((opt, idx) => {
+            const card = document.createElement('div');
+            card.className = 'option-card';
+            card.style.fontSize = '30px';
+            card.textContent = opt;
+            card.onclick = () => {
+                if (idx === q.correct) {
+                    promptEl.textContent = promptEl.textContent.replace('_____', opt).replace('___', opt);
+                    promptEl.style.color = 'var(--primary)';
+                    promptEl.classList.add('animate-pop');
+                }
+                handleAnswer(idx === q.correct, card);
+            };
+            grid.appendChild(card);
+        });
+        container.appendChild(grid);
+
     } else if (q.type === 'pinyin_fill') {
         const descEl = document.createElement('h3');
         descEl.textContent = 'Fill in the missing letter! ' + (q.chinese || '');
