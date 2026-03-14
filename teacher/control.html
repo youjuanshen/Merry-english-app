@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>课中控制 - Merry英语</title>
+    <link rel="stylesheet" href="teacher.css">
+</head>
+<body data-page="control" style="background-color: var(--teacher-success);">
+    <div class="top-nav" style="background-color: var(--teacher-success); box-shadow: none;">
+        <a href="index.html" class="back-btn">← 返回</a>
+        <h1>🎯 课中控制</h1>
+    </div>
+    
+    <div class="teacher-view" style="padding-top: 0;">
+        <div style="color: white; text-align: center; margin-bottom: 20px;">
+            <h2 id="display-module" style="font-size: 28px; margin: 0 0 10px 0;">听力 - 前测</h2>
+            <div id="timer-display" style="font-size: 24px; font-weight: bold;">⏱️ 00:00</div>
+        </div>
+
+        <div class="teacher-card">
+            <h3 class="card-title">📊 实时排名</h3>
+            <div id="ranking-list">
+                <!-- Data populated by JS -->
+            </div>
+            <div style="text-align: center; font-size: 12px; color: var(--teacher-text-light); margin-top: 10px;">
+                (后3名隐藏，保护学生自尊)
+            </div>
+        </div>
+
+        <div class="teacher-card">
+            <h3 class="card-title">📋 完成进度</h3>
+            <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                <div class="progress-bar" style="flex: 1; margin-right: 15px;">
+                    <div class="progress-fill" id="completion-bar-fill" style="width: 0%;"></div>
+                </div>
+                <div id="completion-text" style="font-weight: bold; width: 60px; text-align: right;">0/13组</div>
+            </div>
+            
+            <div style="font-size: 14px; color: var(--teacher-text-light);">
+                <strong>未完成：</strong>
+                <ul class="info-list" id="incomplete-list" style="margin-top: 5px;">
+                    <li>获取数据中...</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <button class="teacher-btn btn-warning" id="btn-pause">📢 暂停</button>
+            <button class="teacher-btn btn-primary" style="margin-top: 0;" id="btn-next">➡️ 下一步</button>
+        </div>
+        
+        <button class="teacher-btn btn-outline" style="width: 100%; margin-top: 15px; border-color: rgba(255,255,255,0.5); color: white;" onclick="alert('宣布排名！')">
+            🏆 宣布今日第一
+        </button>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="teacher.js"></script>
+</body>
+</html>

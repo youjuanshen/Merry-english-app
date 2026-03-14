@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>数据总览 - Merry英语</title>
+    <link rel="stylesheet" href="teacher.css">
+    <style>
+        .student-list-item { background: white; border-radius: 12px; padding: 15px; margin-bottom: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); display: flex; align-items: center;}
+        .student-avatar { width: 50px; height: 50px; background: #eef5fb; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-right: 15px; color: var(--teacher-primary); font-weight: bold;}
+        .student-info { flex: 1; }
+        .student-name { font-size: 18px; font-weight: bold; margin: 0 0 5px 0; color: var(--teacher-text); }
+        .student-stats { font-size: 14px; color: var(--teacher-text-light); margin: 0; }
+        .action-btn { background: transparent; border: 1px solid var(--teacher-primary); color: var(--teacher-primary); padding: 5px 10px; border-radius: 6px; cursor: pointer; }
+        
+        .tab-btn { padding: 10px; border: none; background: transparent; font-size: 16px; font-weight: bold; cursor: pointer; color: var(--teacher-text-light); flex: 1; border-bottom: 3px solid transparent; }
+        .tab-btn.active { color: #8e44ad; border-bottom-color: #8e44ad; }
+    </style>
+</head>
+<body data-page="dashboard" style="background-color: #8e44ad;">
+    <div class="top-nav" style="background-color: #8e44ad; box-shadow: none;">
+        <a href="index.html" class="back-btn">← 返回</a>
+        <h1>📊 数据总览</h1>
+    </div>
+    
+    <div class="teacher-view" style="padding-top: 0; background: var(--teacher-bg);">
+        <div style="display: flex; background: white; margin-bottom: 15px;">
+            <button class="tab-btn active" onclick="switchTab('stu')">学生档案</button>
+            <button class="tab-btn" onclick="switchTab('trend')">班级趋势</button>
+        </div>
+
+        <div id="tab-stu">
+            <input type="text" class="select-input" placeholder="🔍 搜索学生姓名..." style="margin-bottom: 15px;">
+            <div id="student-list-container">
+                <!-- Data populated by JS -->
+            </div>
+        </div>
+
+        <div id="tab-trend" style="display: none;">
+            <div class="teacher-card">
+                <h3 class="card-title">📈 近期平均正确率趋势</h3>
+                <div style="height: 200px; display: flex; align-items: flex-end; justify-content: space-around; padding-top: 20px; border-bottom: 1px solid #eee;">
+                    <!-- Mock simple bars -->
+                    <div style="width: 15%; background: var(--teacher-primary); height: 40%; text-align: center; color: white; font-size: 12px; border-radius: 4px 4px 0 0;">40%</div>
+                    <div style="width: 15%; background: var(--teacher-primary); height: 50%; text-align: center; color: white; font-size: 12px; border-radius: 4px 4px 0 0;">50%</div>
+                    <div style="width: 15%; background: var(--teacher-primary); height: 65%; text-align: center; color: white; font-size: 12px; border-radius: 4px 4px 0 0;">65%</div>
+                    <div style="width: 15%; background: var(--teacher-primary); height: 60%; text-align: center; color: white; font-size: 12px; border-radius: 4px 4px 0 0;">60%</div>
+                    <div style="width: 15%; background: var(--teacher-success); height: 85%; text-align: center; color: white; font-size: 12px; border-radius: 4px 4px 0 0;">85%</div>
+                </div>
+                <div style="display: flex; justify-content: space-around; font-size: 12px; color: var(--teacher-text-light); margin-top: 5px;">
+                    <span>3/10</span>
+                    <span>3/11</span>
+                    <span>3/12</span>
+                    <span>3/13</span>
+                    <span style="font-weight: bold; color: var(--teacher-success);">今天</span>
+                </div>
+            </div>
+
+            <div class="teacher-card">
+                <h3 class="card-title">🏆 模块表现对比</h3>
+                <ul class="info-list">
+                    <li><strong>听力：</strong> 表现优秀 (90%)</li>
+                    <li><strong>阅读：</strong> 稳步提升 (85%)</li>
+                    <li><strong>写作：</strong> 需要关注 (60%) ⚠️</li>
+                    <li><strong>口语：</strong> 普遍较弱 (55%) ⚠️</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="teacher.js"></script>
+    <script>
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('#tab-stu, #tab-trend').forEach(el => el.style.display = 'none');
+            
+            event.target.classList.add('active');
+            document.getElementById('tab-' + tabId).style.display = 'block';
+        }
+
+        function initDashboardPage() {
+            // Flatten observation groups into a single array
+            let allStudents = [];
+            observationGroups.forEach(g => {
+                allStudents = allStudents.concat(g);
+            });
+            // Sort by ID
+            allStudents.sort((a,b) => a.id - b.id);
+
+            const container = document.getElementById('student-list-container');
+            container.innerHTML = allStudents.map(s => {
+                // Mock stats
+                const accuracy = Math.floor(Math.random() * 40) + 50; // 50-90
+                const stars = Math.floor(Math.random() * 200) + 20;
+                let trendIcon = accuracy > 75 ? '📈' : (accuracy < 60 ? '📉 ⚠️' : '➡️');
+                
+                return `
+                <div class="student-list-item">
+                    <div class="student-avatar">${s.name.charAt(0)}</div>
+                    <div class="student-info">
+                        <h4 class="student-name">${s.id}. ${s.name}</h4>
+                        <p class="student-stats">正确率: ${accuracy}% ${trendIcon} | 总星星: ⭐ ${stars}</p>
+                    </div>
+                    <button class="action-btn" onclick="alert('查看 ${s.name} 的详细档案')">详细档案</button>
+                </div>
+                `;
+            }).join('');
+        }
+    </script>
+</body>
+</html>

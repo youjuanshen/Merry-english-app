@@ -1,29 +1,18 @@
 // listening.js
 
 function renderListeningQuestion(q, container) {
-    // Sound button with instruction
-    const instruction = document.createElement('div');
-    instruction.style.textAlign = 'center';
-    instruction.style.marginBottom = '10px';
-    instruction.style.fontSize = '18px';
-    instruction.style.color = '#666';
-    instruction.textContent = '👆 点击喇叭听发音';
-    container.appendChild(instruction);
-
+    // 大喇叭按钮（不需要文字说明，图标足够明显）
     const playBtn = document.createElement('button');
     playBtn.className = 'play-sound-btn animate-pop';
     playBtn.innerHTML = '🔊';
+    playBtn.style.width = '100px';
+    playBtn.style.height = '100px';
+    playBtn.style.fontSize = '50px';
     playBtn.onclick = () => speakWord(q.audio);
     container.appendChild(playBtn);
 
-    // English hint (scaffolding - not giving away the answer)
-    const englishHint = getEnglishHint(q.audio);
-    if (englishHint) {
-        const hintEl = document.createElement('div');
-        hintEl.className = 'chinese-hint';
-        hintEl.textContent = `💡 Hint: ${englishHint}`;
-        container.appendChild(hintEl);
-    }
+    // 提示不要一开始就显示，只在答错时才显示
+    // （由handleAnswer函数中的showProgressiveHint处理）
 
     setTimeout(() => speakWord(q.audio), 300); // Auto play
 
@@ -52,19 +41,12 @@ function renderListeningQuestion(q, container) {
 
     } else if (q.type === 'listen_tf') {
         const imgEl = document.createElement('div');
-        imgEl.style.fontSize = '80px';
+        imgEl.style.fontSize = '100px';  // 放大图片
         imgEl.style.marginBottom = '20px';
         imgEl.innerHTML = q.image;
         container.appendChild(imgEl);
 
-        // Add English hint for sentence (context clue)
-        const sentenceHint = getEnglishHint(q.audio);
-        if (sentenceHint) {
-            const hintEl = document.createElement('div');
-            hintEl.className = 'chinese-hint';
-            hintEl.textContent = `💡 Hint: ${sentenceHint}`;
-            container.appendChild(hintEl);
-        }
+        // 提示只在答错时显示，不要一开始就显示
 
         const grid = document.createElement('div');
         grid.className = 'options-grid';

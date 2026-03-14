@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>课前准备 - Merry英语</title>
+    <link rel="stylesheet" href="teacher.css">
+</head>
+<body data-page="prepare">
+    <div class="top-nav">
+        <a href="index.html" class="back-btn">← 返回</a>
+        <h1>📚 课前准备</h1>
+    </div>
+    
+    <div class="teacher-view">
+        <div class="teacher-card">
+            <h3 class="card-title">📚 选择课程</h3>
+            <div class="grid-2">
+                <select class="select-input" id="unit-select">
+                    <option value="1">Unit 1</option>
+                    <option value="2">Unit 2</option>
+                </select>
+                <select class="select-input" id="lesson-select">
+                    <option value="1">Lesson 1: This is a bear.</option>
+                    <option value="2">Lesson 2</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="teacher-card">
+            <h3 class="card-title">🎯 选择模块</h3>
+            <div class="grid-4" id="module-selector">
+                <div class="module-select active" data-mod="listening">听力<br>✓</div>
+                <div class="module-select" data-mod="reading">阅读<br>&nbsp;</div>
+                <div class="module-select" data-mod="writing">写作<br>&nbsp;</div>
+                <div class="module-select" data-mod="speaking">口语<br>&nbsp;</div>
+            </div>
+        </div>
+
+        <div class="teacher-card" id="objectives-container">
+            <!-- Rendered by JS -->
+        </div>
+
+        <div class="teacher-card">
+            <h3 class="card-title">👀 今日观察名单</h3>
+            <div class="name-grid" id="observation-list">
+                <!-- Rendered by JS -->
+            </div>
+        </div>
+
+        <div class="teacher-card">
+            <h3 class="card-title">⚠️ 上节课遗留</h3>
+            <ul class="info-list">
+                <li><span style="color:var(--teacher-danger)">• 张睿渊：</span>正确率下降20%</li>
+                <li><span style="color:var(--teacher-warning)">• 张依彤：</span>未完成实战</li>
+            </ul>
+        </div>
+
+        <button class="teacher-btn btn-primary" id="btn-start-class">
+            🚀 开始上课 (发布任务)
+        </button>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="teacher.js"></script>
+</body>
+</html>

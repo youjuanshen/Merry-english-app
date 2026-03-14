@@ -306,14 +306,32 @@ function speakEncouragement(isCorrect) {
     }
 }
 
-// Show floating feedback text
+// Show floating feedback text (中文显示，配合英文语音)
+// 语音说英文，屏幕显示中文翻译，让学生知道英文意思
+const feedbackMap = {
+    success: [
+        { en: 'Great!', cn: '🎉 太棒了！' },
+        { en: 'Awesome!', cn: '⭐ 真厉害！' },
+        { en: 'Good job!', cn: '👏 好极了！' },
+        { en: 'Perfect!', cn: '✨ 完美！' },
+        { en: 'Well done!', cn: '🌟 做得好！' },
+        { en: 'Excellent!', cn: '💯 太棒了！' }
+    ],
+    encourage: [
+        { en: 'Try again!', cn: '💪 再试一次！' },
+        { en: 'Almost!', cn: '🤔 差一点！' },
+        { en: 'Keep going!', cn: '😊 继续加油！' },
+        { en: 'You can do it!', cn: '👊 你可以的！' }
+    ]
+};
+
 function showFeedbackText(isCorrect) {
-    const text = isCorrect ? ['🎉 太棒了！', '⭐ 真厉害！', '👏 好极了！'][Math.floor(Math.random() * 3)]
-                           : ['💪 加油！', '🤔 再想想！', '😊 没关系！'][Math.floor(Math.random() * 3)];
+    const list = isCorrect ? feedbackMap.success : feedbackMap.encourage;
+    const item = list[Math.floor(Math.random() * list.length)];
 
     const feedback = document.createElement('div');
     feedback.className = 'floating-feedback ' + (isCorrect ? 'success' : 'encourage');
-    feedback.textContent = text;
+    feedback.textContent = item.cn;  // 屏幕显示中文
     document.body.appendChild(feedback);
 
     setTimeout(() => {
@@ -321,6 +339,18 @@ function showFeedbackText(isCorrect) {
             document.body.removeChild(feedback);
         }
     }, 1500);
+}
+
+// 语音鼓励（说英文）
+function speakFeedback(isCorrect) {
+    if ('speechSynthesis' in window) {
+        const list = isCorrect ? feedbackMap.success : feedbackMap.encourage;
+        const item = list[Math.floor(Math.random() * list.length)];
+        const utterance = new SpeechSynthesisUtterance(item.en);
+        utterance.lang = 'en-US';
+        utterance.rate = 1.0;
+        window.speechSynthesis.speak(utterance);
+    }
 }
 
 function speakWord(word) {
@@ -437,26 +467,15 @@ function renderQuestion() {
     const container = document.getElementById('question-container');
     container.innerHTML = '';
 
-    // Show whose turn it is (more obvious)
+    // Update turn indicator (in header area)
     const currentPlayerName = players[currentPlayerIndex].name.replace(/^\d+\.\s*/, '');
-    const turnIndicator = document.createElement('div');
-    turnIndicator.className = 'turn-indicator';
-    turnIndicator.innerHTML = `👉 请 <strong>${currentPlayerName}</strong> 同学回答`;
-    container.appendChild(turnIndicator);
-
-    // Cooperation reminder (show occasionally)
-    if (Math.random() < 0.3) {
-        const coopHint = document.createElement('div');
-        coopHint.className = 'coop-hint';
-        coopHint.textContent = '💬 两人可以一起商量哦！';
-        container.appendChild(coopHint);
-    }
+    document.getElementById('turn-indicator').innerHTML = `👉 请 <strong>${currentPlayerName}</strong> 同学回答`;
 
     // Progress bar
     document.getElementById('progress-fill').style.width = ((currentQuestionIndex) / moduleQuestions.length * 100) + '%';
 
-    // Progress text (Chinese for students)
-    document.getElementById('question-progress').textContent = `第${currentQuestionIndex + 1}题 / 共${moduleQuestions.length}题`;
+    // Progress text (简洁版，在头像中间)
+    document.getElementById('question-progress').textContent = `${currentQuestionIndex + 1}/${moduleQuestions.length}`;
 
     // Delegate to module renderers
     if (currentModule === 'listening') {
@@ -507,17 +526,17 @@ function handleAnswer(isCorrect, cardEl = null, correctAnswer = null) {
     if (isCorrect) {
         if (cardEl) cardEl.classList.add('correct');
         playSuccessSound();
-        showFeedbackText(true);
-        speakEncouragement(true);
-        resetHintLevel(); // Reset hints for next question
+        showFeedbackText(true);   // 屏幕显示中文
+        speakFeedback(true);      // 语音说英文
+        resetHintLevel();
         onCorrect();
     } else {
         if (cardEl) cardEl.classList.add('wrong');
         playWrongSound();
-        showFeedbackText(false);
-        speakEncouragement(false);
+        showFeedbackText(false);  // 屏幕显示中文
+        speakFeedback(false);     // 语音说英文
 
-        // Show progressive hint based on wrong attempts (Duolingo style)
+        // 答错才显示提示（分层提示）
         const q = moduleQuestions[currentQuestionIndex];
         if (q && q.audio) {
             const hint = getHint(q.audio);
@@ -525,7 +544,7 @@ function handleAnswer(isCorrect, cardEl = null, correctAnswer = null) {
                 showProgressiveHint(hint, wrongAttempts);
             }
         }
-        increaseHintLevel(); // Increase for next wrong attempt
+        increaseHintLevel();
 
         setTimeout(() => {
             if (cardEl) cardEl.classList.remove('wrong');
