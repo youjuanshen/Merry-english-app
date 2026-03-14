@@ -13,50 +13,172 @@ let currentPlayerIndex = 0;
 let currentQuestionIndex = 0;
 let isAnimating = false;
 
+// Student <-> Teacher Sync
+let lastTeacherCommandTime = 0;
+
+setInterval(() => {
+    const cmdStr = localStorage.getItem('teacherCommand');
+    if (cmdStr) {
+        const cmd = JSON.parse(cmdStr);
+        if (cmd.timestamp > lastTeacherCommandTime) {
+            lastTeacherCommandTime = cmd.timestamp;
+            handleTeacherCommand(cmd);
+        }
+    }
+}, 1500);
+
+function handleTeacherCommand(cmd) {
+    if (cmd.action === 'start') {
+        const modScreen = document.getElementById('module-screen');
+        const gameScreen = document.getElementById('game-screen');
+        
+        if (modScreen.classList.contains('active') || gameScreen.classList.contains('active')) {
+            currentModule = cmd.module;
+            currentPhase = cmd.phase; // pretest or practice
+            
+            // Skip directly to game screen
+            document.getElementById('login-screen').classList.remove('active');
+            modScreen.classList.remove('active');
+            startGame();
+        }
+    } else if (cmd.action === 'pause') {
+        alert('👩‍🏫 老师已暂停活动，请注意听讲！');
+    }
+}
+
+function syncStudentProgress(isComplete = false) {
+    if (!players || players.length === 0) return;
+    
+    const p1 = players[0];
+    const p2 = players[1];
+    
+    // Extract ID (e.g. "1. 张宇豪" -> 1)
+    const id1Match = p1.name.match(/^(\d+)/);
+    const id1 = id1Match ? parseInt(id1Match[1]) : 0;
+    const name1 = p1.name.replace(/^\d+\.\s*/, '');
+    
+    let id2 = null, name2 = null;
+    if (p2) {
+        const id2Match = p2.name.match(/^(\d+)/);
+        id2 = id2Match ? parseInt(id2Match[1]) : 0;
+        name2 = p2.name.replace(/^\d+\.\s*/, '');
+    }
+    
+    const progressData = {
+        studentId: id1,
+        studentName: name1,
+        partnerId: id2,
+        partnerName: name2,
+        module: currentModule,
+        phase: currentPhase,
+        currentQuestion: Math.min(currentQuestionIndex + 1, moduleQuestions.length),
+        totalQuestions: moduleQuestions.length,
+        stars: p1.stars + (p2 ? p2.stars : 0),
+        completed: isComplete,
+        timestamp: Date.now()
+    };
+    
+    if (id1) localStorage.setItem(`studentProgress_${id1}`, JSON.stringify(progressData));
+    if (id2) {
+        const progressData2 = { 
+            ...progressData, 
+            studentId: id2, 
+            studentName: name2, 
+            partnerId: id1, 
+            partnerName: name1 
+        };
+        localStorage.setItem(`studentProgress_${id2}`, JSON.stringify(progressData2));
+    }
+}
+
 // Module Control
 let currentModule = 'listening';
 let currentPhase = 'pretest'; // pretest -> practice
 let currentLessonData = lesson1;
 let moduleQuestions = [];
 
-// English hints - simple clues without giving the answer (for scaffolding)
-const englishHints = {
-    // Animals - give simple English clues
-    'bear': 'A big animal, likes honey 🍯',
-    'horse': 'You can ride it 🏇',
-    'bird': 'It can fly in the sky ✈️',
-    'panda': 'Black and white, eats bamboo 🎋',
-    'animal': 'A living thing 🐾',
+// Professional hints - Duolingo style (不直接给答案，引导思考)
+// 分层提示：Level 1 = 轻提示, Level 2 = 更多提示, Level 3 = 查书提示
+
+const hintData = {
+    // Animals
+    'bear': {
+        level1: 'Starts with "b"',           // 首字母提示
+        level2: 'b _ _ r (4 letters)',       // 部分字母
+        level3: 'Look at your book, page 2'  // 查书
+    },
+    'horse': {
+        level1: 'Starts with "h"',
+        level2: 'h _ _ _ e (5 letters)',
+        level3: 'Look at your book, page 2'
+    },
+    'bird': {
+        level1: 'Starts with "b"',
+        level2: 'b _ _ d (4 letters)',
+        level3: 'Look at your book, page 2'
+    },
+    'panda': {
+        level1: 'Starts with "p"',
+        level2: 'p _ _ _ a (5 letters)',
+        level3: 'Look at your book, page 3'
+    },
+    // Sentences - grammar hints
+    'This is a bear.': {
+        level1: '"This" or "That"?',
+        level2: 'Near = This, Far = That',
+        level3: 'Look at your book, page 4'
+    },
+    'That is a horse.': {
+        level1: '"This" or "That"?',
+        level2: 'Near = This, Far = That',
+        level3: 'Look at your book, page 4'
+    },
     // Adjectives
-    'big': 'Not small, very large',
-    'small': 'Not big, very little',
-    'cute': 'Very lovely, makes you smile 😊',
-    'fast': 'Very quick, like a race car 🏎️',
-    'beautiful': 'Very pretty, nice to look at',
-    'red': '❤️ Like an apple',
-    'blue': '💙 Like the sky',
-    'black': '🖤 Like night',
-    'white': '🤍 Like snow',
-    // Sentences - give context clues
-    'This is a bear.': 'Point to something near you 👉',
-    'That is a horse.': 'Point to something far away 👉',
-    'This is a bird.': 'This = near you',
-    'That is a panda.': 'That = far from you'
+    'big': {
+        level1: 'Opposite of "small"',
+        level2: 'b _ g (3 letters)',
+        level3: 'Look at your book, page 5'
+    },
+    'cute': {
+        level1: 'Means lovely',
+        level2: 'c _ _ e (4 letters)',
+        level3: 'Look at your book, page 5'
+    }
 };
 
-// Chinese translations for "wrong answer" feedback only
-const chineseTranslations = {
-    'bear': '熊', 'horse': '马', 'bird': '鸟', 'panda': '熊猫',
-    'big': '大的', 'small': '小的', 'cute': '可爱的', 'fast': '快的'
-};
+// Track wrong attempts per question
+let wrongAttempts = 0;
 
+function getHint(word) {
+    const hints = hintData[word];
+    if (!hints) return '';
+
+    // 根据错误次数给不同级别的提示
+    if (wrongAttempts === 0) {
+        return hints.level1;
+    } else if (wrongAttempts === 1) {
+        return hints.level2;
+    } else {
+        return hints.level3;
+    }
+}
+
+function resetHintLevel() {
+    wrongAttempts = 0;
+}
+
+function increaseHintLevel() {
+    wrongAttempts = Math.min(wrongAttempts + 1, 2);
+}
+
+// Keep for backward compatibility
 function getEnglishHint(english) {
-    return englishHints[english] || '';
+    return getHint(english);
 }
 
 function getChineseHint(english) {
-    // Only used for wrong answer feedback, not as main hint
-    return chineseTranslations[english] || '';
+    // 不再使用中文提示
+    return '';
 }
 
 // Web Audio API for sound effects
@@ -250,6 +372,8 @@ function renderQuestion() {
     } else if (currentModule === 'speaking') {
         renderSpeakingQuestion(q, container);
     }
+    
+    syncStudentProgress();
 }
 
 function showTransition() {
@@ -289,6 +413,7 @@ function handleAnswer(isCorrect, cardEl = null, correctAnswer = null) {
         playSuccessSound();
         showFeedbackText(true);
         speakEncouragement(true);
+        resetHintLevel(); // Reset hints for next question
         onCorrect();
     } else {
         if (cardEl) cardEl.classList.add('wrong');
@@ -296,17 +421,39 @@ function handleAnswer(isCorrect, cardEl = null, correctAnswer = null) {
         showFeedbackText(false);
         speakEncouragement(false);
 
-        // Show correct answer hint if provided
-        if (correctAnswer !== null) {
-            showCorrectHint(correctAnswer);
+        // Show progressive hint based on wrong attempts (Duolingo style)
+        const q = moduleQuestions[currentQuestionIndex];
+        if (q && q.audio) {
+            const hint = getHint(q.audio);
+            if (hint) {
+                showProgressiveHint(hint, wrongAttempts);
+            }
         }
+        increaseHintLevel(); // Increase for next wrong attempt
 
         setTimeout(() => {
             if (cardEl) cardEl.classList.remove('wrong');
             hideCorrectHint();
             isAnimating = false;
-        }, 2000);
+        }, 2500);
     }
+}
+
+function showProgressiveHint(hint, level) {
+    let hintEl = document.getElementById('progressive-hint');
+    if (!hintEl) {
+        hintEl = document.createElement('div');
+        hintEl.id = 'progressive-hint';
+        hintEl.className = 'correct-hint';
+        document.getElementById('question-container').appendChild(hintEl);
+    }
+
+    // Different styles for different levels
+    const icons = ['💡', '📝', '📖'];
+    const labels = ['Hint:', 'More help:', 'Check your book:'];
+
+    hintEl.innerHTML = `${icons[level]} ${labels[level]} <strong>${hint}</strong>`;
+    hintEl.style.display = 'block';
 }
 
 function showCorrectHint(answer) {
@@ -326,6 +473,10 @@ function hideCorrectHint() {
     if (hint) {
         hint.style.display = 'none';
     }
+    const progressiveHint = document.getElementById('progressive-hint');
+    if (progressiveHint) {
+        progressiveHint.style.display = 'none';
+    }
 }
 
 function onCorrect() {
@@ -336,6 +487,7 @@ function onCorrect() {
     setTimeout(() => {
         currentPlayerIndex = (currentPlayerIndex + 1) % 2;
         currentQuestionIndex++;
+        syncStudentProgress();
         renderQuestion();
     }, 1500);
 }
@@ -355,6 +507,7 @@ function showFinishScreen() {
     `;
 
     createConfetti(50);
+    syncStudentProgress(true);
 }
 
 function createConfetti(count = 20) {
