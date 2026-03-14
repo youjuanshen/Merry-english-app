@@ -19,35 +19,44 @@ let currentPhase = 'pretest'; // pretest -> practice
 let currentLessonData = lesson1;
 let moduleQuestions = [];
 
-// Chinese vocabulary helper
-const vocabulary = {
-    // Animals
-    'bear': '熊', 'horse': '马', 'bird': '鸟', 'panda': '熊猫',
-    'animal': '动物', 'animals': '动物们',
+// English hints - simple clues without giving the answer (for scaffolding)
+const englishHints = {
+    // Animals - give simple English clues
+    'bear': 'A big animal, likes honey 🍯',
+    'horse': 'You can ride it 🏇',
+    'bird': 'It can fly in the sky ✈️',
+    'panda': 'Black and white, eats bamboo 🎋',
+    'animal': 'A living thing 🐾',
     // Adjectives
-    'big': '大的', 'small': '小的', 'cute': '可爱的', 'fast': '快的',
-    'beautiful': '美丽的', 'red': '红色', 'blue': '蓝色',
-    'black': '黑色', 'white': '白色',
-    // Sentences
-    'This is a bear.': '这是一只熊。',
-    'That is a horse.': '那是一匹马。',
-    'This is a bird.': '这是一只鸟。',
-    'That is a panda.': '那是一只熊猫。',
-    'It\'s big.': '它很大。',
-    'It\'s cute.': '它很可爱。',
-    'It can run fast.': '它跑得很快。',
-    'They are beautiful.': '它们很美丽。',
-    'It\'s black and white.': '它是黑白色的。',
-    'This is a red bird.': '这是一只红色的鸟。',
-    'What\'s this?': '这是什么？',
-    'What\'s that?': '那是什么？',
-    'Is it big?': '它大吗？',
-    'Is it cute?': '它可爱吗？',
-    'Yes': '是的', 'No': '不是'
+    'big': 'Not small, very large',
+    'small': 'Not big, very little',
+    'cute': 'Very lovely, makes you smile 😊',
+    'fast': 'Very quick, like a race car 🏎️',
+    'beautiful': 'Very pretty, nice to look at',
+    'red': '❤️ Like an apple',
+    'blue': '💙 Like the sky',
+    'black': '🖤 Like night',
+    'white': '🤍 Like snow',
+    // Sentences - give context clues
+    'This is a bear.': 'Point to something near you 👉',
+    'That is a horse.': 'Point to something far away 👉',
+    'This is a bird.': 'This = near you',
+    'That is a panda.': 'That = far from you'
 };
 
+// Chinese translations for "wrong answer" feedback only
+const chineseTranslations = {
+    'bear': '熊', 'horse': '马', 'bird': '鸟', 'panda': '熊猫',
+    'big': '大的', 'small': '小的', 'cute': '可爱的', 'fast': '快的'
+};
+
+function getEnglishHint(english) {
+    return englishHints[english] || '';
+}
+
 function getChineseHint(english) {
-    return vocabulary[english] || '';
+    // Only used for wrong answer feedback, not as main hint
+    return chineseTranslations[english] || '';
 }
 
 // Web Audio API for sound effects
@@ -79,17 +88,17 @@ function playWrongSound() {
     playTone(250, 'sawtooth', 0.3);
 }
 
-// Voice encouragement
-const successPhrases = ['太棒了！', '真厉害！', '你真棒！', '继续加油！', '非常好！', '好极了！'];
-const tryAgainPhrases = ['再想想！', '加油！', '没关系！', '再试一次！', '你可以的！'];
+// Voice encouragement - English like Duolingo
+const successPhrases = ['Great!', 'Awesome!', 'Good job!', 'Perfect!', 'Well done!', 'Excellent!'];
+const tryAgainPhrases = ['Try again!', 'Almost!', 'Keep going!', 'You can do it!'];
 
 function speakEncouragement(isCorrect) {
     if ('speechSynthesis' in window) {
         const phrases = isCorrect ? successPhrases : tryAgainPhrases;
         const phrase = phrases[Math.floor(Math.random() * phrases.length)];
         const utterance = new SpeechSynthesisUtterance(phrase);
-        utterance.lang = 'zh-CN';
-        utterance.rate = 1.1;
+        utterance.lang = 'en-US';
+        utterance.rate = 1.0;
         window.speechSynthesis.speak(utterance);
     }
 }
@@ -225,8 +234,11 @@ function renderQuestion() {
     const container = document.getElementById('question-container');
     container.innerHTML = '';
 
-    // Progress
+    // Progress bar
     document.getElementById('progress-fill').style.width = ((currentQuestionIndex) / moduleQuestions.length * 100) + '%';
+
+    // Progress text (Chinese for students)
+    document.getElementById('question-progress').textContent = `第${currentQuestionIndex + 1}题 / 共${moduleQuestions.length}题`;
 
     // Delegate to module renderers
     if (currentModule === 'listening') {

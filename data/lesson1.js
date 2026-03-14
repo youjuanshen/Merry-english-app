@@ -6,200 +6,158 @@ const lesson1 = {
   // 听力板块
   listening: {
     pretest: [
-      { type: 'listen_select', audio: 'bear', options: ['🐻', '🐴', '🐦', '🐼'], correct: 0 },
-      { type: 'listen_select', audio: 'horse', options: ['🐻', '🐴', '🐦', '🐼'], correct: 1 },
-      { type: 'listen_select', audio: 'bird', options: ['🐻', '🐴', '🐦', '🐼'], correct: 2 },
-      { type: 'listen_select', audio: 'panda', options: ['🐻', '🐴', '🐦', '🐼'], correct: 3 },
-      { type: 'listen_select', audio: 'big', options: ['🐘', '🐭'], correct: 0 },
-      { type: 'listen_select', audio: 'cute', options: ['🐼', '🐻'], correct: 0 },
-      { type: 'listen_select', audio: 'fast', options: ['🐴', '🐢'], correct: 0 },
-      { type: 'listen_select', audio: 'beautiful', options: ['🦚', '🪲'], correct: 0 },
-      { type: 'listen_tf', audio: 'This is a bear.', image: '🐻', correct: true },
-      { type: 'listen_tf', audio: 'This is a bird.', image: '🐼', correct: false },
-      { type: 'listen_tf', audio: 'It\'s big.', image: '🐘', correct: true },
-      { type: 'listen_tf', audio: 'It\'s cute.', image: '🐼', correct: true }
+      // 1-4: 听单词选图（基础）
+      { type: 'listen_select', audio: 'bear', options: ['🐻', '🐴'], correct: 0, chinese: '熊' },
+      { type: 'listen_select', audio: 'horse', options: ['🐴', '🐦'], correct: 0, chinese: '马' },
+      { type: 'listen_select', audio: 'bird', options: ['🐦', '🐼'], correct: 0, chinese: '鸟' },
+      { type: 'listen_select', audio: 'panda', options: ['🐼', '🐻'], correct: 0, chinese: '熊猫' },
+
+      // 5-8: 听句子选图
+      { type: 'listen_select', audio: 'This is a bear.', options: ['🐻', '🐴', '🐦', '🐼'], correct: 0, chinese: '这是一只熊。' },
+      { type: 'listen_select', audio: 'That is a horse.', options: ['🐻', '🐴', '🐦', '🐼'], correct: 1, chinese: '那是一匹马。' },
+      { type: 'listen_select', audio: 'This is a bird.', options: ['🐻', '🐴', '🐦', '🐼'], correct: 2, chinese: '这是一只鸟。' },
+      { type: 'listen_select', audio: 'That is a panda.', options: ['🐻', '🐴', '🐦', '🐼'], correct: 3, chinese: '那是一只熊猫。' },
+
+      // 9-12: 判断对错
+      { type: 'listen_tf', audio: 'This is a bear.', image: '🐻', correct: true, chinese: '这是一只熊。' },
+      { type: 'listen_tf', audio: 'This is a bird.', image: '🐼', correct: false, chinese: '这是一只鸟。' },
+      { type: 'listen_tf', audio: 'That is a horse.', image: '🐴', correct: true, chinese: '那是一匹马。' },
+      { type: 'listen_tf', audio: 'That is a panda.', image: '🐦', correct: false, chinese: '那是一只熊猫。' }
     ],
+
     practice: [
-      { type: 'listen_select', audio: 'This is a bear.', options: ['🐻', '🐴'], correct: 0 },
-      { type: 'listen_select', audio: 'That is a horse.', options: ['🐻', '🐴'], correct: 1 },
-      { type: 'listen_select', audio: 'This is a bird.', options: ['🐦', '🐼'], correct: 0 },
-      { type: 'listen_select', audio: 'That is a panda.', options: ['🐦', '🐼'], correct: 1 },
-      { type: 'listen_select', audio: 'It\'s big.', options: ['🐘', '🐦'], correct: 0 },
-      { type: 'listen_select', audio: 'It\'s cute.', options: ['🐼', '🐴'], correct: 0 },
-      { type: 'listen_select', audio: 'It can run fast.', options: ['🐴', '🐼'], correct: 0 },
-      { type: 'listen_select', audio: 'They are beautiful.', options: ['🦚', '🐻'], correct: 0 },
-      { type: 'listen_select', audio: 'It\'s black and white.', options: ['🐼', '🐴'], correct: 0 },
-      { type: 'listen_select', audio: 'This is a red bird.', options: ['🐦', '🕊️'], correct: 0 },
-      { type: 'listen_sequence', audio: 'bear, bird', words: ['🐻', '🐦', '🐴'], correct: [0, 1] },
-      { type: 'listen_sequence', audio: 'horse, panda', words: ['🐴', '🐼', '🐻'], correct: [0, 1] },
-      { type: 'listen_sequence', audio: 'bird, bear, horse', words: ['🐦', '🐻', '🐴'], correct: [0, 1, 2] },
-      { type: 'listen_sequence', audio: 'panda, bird, bear', words: ['🐼', '🐦', '🐻'], correct: [0, 1, 2] },
-      { type: 'listen_sequence', audio: 'horse, bird, panda', words: ['🐴', '🐦', '🐼'], correct: [0, 1, 2] },
-      { type: 'listen_sequence', audio: 'bear, panda, horse', words: ['🐻', '🐼', '🐴'], correct: [0, 1, 2] },
-      { type: 'listen_sequence', audio: 'big, cute, fast', words: ['🐘', '🐼', '🐴'], correct: [0, 1, 2] },
-      { type: 'listen_sequence', audio: 'red, blue, black', words: ['🟥', '🟦', '⬛'], correct: [0, 1, 2] },
-      { type: 'listen_sequence', audio: 'bear, horse, bird, panda', words: ['🐻', '🐴', '🐦', '🐼'], correct: [0, 1, 2, 3] },
-      { type: 'listen_sequence', audio: 'panda, bear, bird, horse', words: ['🐼', '🐻', '🐦', '🐴'], correct: [0, 1, 2, 3] },
-      { type: 'listen_question', audio: 'What\'s this?', image: '🐻', options: ['bear', 'bird'], correct: 0 },
-      { type: 'listen_question', audio: 'What\'s that?', image: '🐴', options: ['panda', 'horse'], correct: 1 },
-      { type: 'listen_question', audio: 'Is it big?', image: '🐘', options: ['Yes', 'No'], correct: 0 },
-      { type: 'listen_question', audio: 'Is it cute?', image: '🐼', options: ['Yes', 'No'], correct: 0 },
-      { type: 'listen_question', audio: 'What color is it?', image: '🐼', options: ['black and white', 'red'], correct: 0 },
-      { type: 'listen_question', audio: 'Can it run fast?', image: '🐴', options: ['Yes', 'No'], correct: 0 },
-      { type: 'listen_question', audio: 'Is this a bird?', image: '🐦', options: ['Yes', 'No'], correct: 0 },
-      { type: 'listen_question', audio: 'Is that a bear?', image: '🐼', options: ['Yes', 'No'], correct: 1 },
-      { type: 'listen_question', audio: 'Are they beautiful?', image: '🦚', options: ['Yes', 'No'], correct: 0 },
-      { type: 'listen_question', audio: 'What animal is black and white?', image: '', options: ['panda', 'horse'], correct: 0 }
+      // 1-6: 打地鼠（快速反应）
+      { type: 'whack_mole', audio: 'bear', options: ['<img src="assets/images/bear.png" width="80">', '<img src="assets/images/horse.png" width="80">', '<img src="assets/images/bird.png" width="80">', '<img src="assets/images/panda.png" width="80">'], correct: 0, timeLimit: 3, chinese: '熊' },
+      { type: 'whack_mole', audio: 'horse', options: ['<img src="assets/images/bear.png" width="80">', '<img src="assets/images/horse.png" width="80">', '<img src="assets/images/bird.png" width="80">', '<img src="assets/images/panda.png" width="80">'], correct: 1, timeLimit: 3, chinese: '马' },
+      { type: 'whack_mole', audio: 'bird', options: ['<img src="assets/images/bear.png" width="80">', '<img src="assets/images/horse.png" width="80">', '<img src="assets/images/bird.png" width="80">', '<img src="assets/images/panda.png" width="80">'], correct: 2, timeLimit: 3, chinese: '鸟' },
+      { type: 'whack_mole', audio: 'panda', options: ['<img src="assets/images/bear.png" width="80">', '<img src="assets/images/horse.png" width="80">', '<img src="assets/images/bird.png" width="80">', '<img src="assets/images/panda.png" width="80">'], correct: 3, timeLimit: 3, chinese: '熊猫' },
+      { type: 'whack_mole', audio: 'animal', options: ['<img src="assets/images/bear.png" width="80">', '🚗', '📚', '🏠'], correct: 0, timeLimit: 3, chinese: '动物' },
+      { type: 'whack_mole', audio: 'This is a bear.', options: ['<img src="assets/images/bear.png" width="80">', '<img src="assets/images/horse.png" width="80">', '<img src="assets/images/bird.png" width="80">', '<img src="assets/images/panda.png" width="80">'], correct: 0, timeLimit: 4, chinese: '这是一只熊。' },
+
+      // 7-12: 气球爆破
+      { type: 'balloon_pop', text: 'bear', options: ['<img src="assets/images/bear.png" width="60">', '<img src="assets/images/horse.png" width="60">', '<img src="assets/images/bird.png" width="60">', '<img src="assets/images/panda.png" width="60">'], correct: 0, chinese: '熊' },
+      { type: 'balloon_pop', text: 'This is a bird.', options: ['<img src="assets/images/bear.png" width="60">', '<img src="assets/images/horse.png" width="60">', '<img src="assets/images/bird.png" width="60">', '<img src="assets/images/panda.png" width="60">'], correct: 2, chinese: '这是一只鸟。' },
+      { type: 'balloon_pop', text: 'That is a panda.', options: ['<img src="assets/images/bear.png" width="60">', '<img src="assets/images/horse.png" width="60">', '<img src="assets/images/bird.png" width="60">', '<img src="assets/images/panda.png" width="60">'], correct: 3, chinese: '那是一只熊猫。' },
+      { type: 'balloon_pop', text: "It's big.", options: ['<img src="assets/images/elephant.png" width="60">', '<img src="assets/images/mouse.png" width="60">'], correct: 0, chinese: '它很大。' },
+      { type: 'balloon_pop', text: "It's cute.", options: ['<img src="assets/images/panda.png" width="60">', '<img src="assets/images/tiger.png" width="60">'], correct: 0, chinese: '它很可爱。' },
+      { type: 'balloon_pop', text: "It can run fast.", options: ['<img src="assets/images/horse.png" width="60">', '🐢'], correct: 0, chinese: '它跑得很快。' },
+
+      // 13-18: 听音排序
+      { type: 'listen_sequence', audio: 'bear, bird', words: ['<img src="assets/images/bear.png" width="60">', '<img src="assets/images/bird.png" width="60">', '<img src="assets/images/horse.png" width="60">'], correct: [0, 1], chinese: '熊，鸟' },
+      { type: 'listen_sequence', audio: 'horse, panda', words: ['<img src="assets/images/horse.png" width="60">', '<img src="assets/images/panda.png" width="60">', '<img src="assets/images/bear.png" width="60">'], correct: [0, 1], chinese: '马，熊猫' },
+      { type: 'listen_sequence', audio: 'bird, bear, panda', words: ['<img src="assets/images/bird.png" width="60">', '<img src="assets/images/bear.png" width="60">', '<img src="assets/images/panda.png" width="60">'], correct: [0, 1, 2], chinese: '鸟，熊，熊猫' },
+      { type: 'listen_sequence', audio: 'panda, horse, bird', words: ['<img src="assets/images/panda.png" width="60">', '<img src="assets/images/horse.png" width="60">', '<img src="assets/images/bird.png" width="60">'], correct: [0, 1, 2], chinese: '熊猫，马，鸟' },
+      { type: 'listen_sequence', audio: 'bear, horse, bird, panda', words: ['<img src="assets/images/bear.png" width="60">', '<img src="assets/images/horse.png" width="60">', '<img src="assets/images/bird.png" width="60">', '<img src="assets/images/panda.png" width="60">'], correct: [0, 1, 2, 3], chinese: '熊，马，鸟，熊猫' },
+      { type: 'listen_sequence', audio: 'panda, bird, horse, bear', words: ['<img src="assets/images/panda.png" width="60">', '<img src="assets/images/bird.png" width="60">', '<img src="assets/images/horse.png" width="60">', '<img src="assets/images/bear.png" width="60">'], correct: [0, 1, 2, 3], chinese: '熊猫，鸟，马，熊' },
+
+      // 19-24: 双人PK模式
+      { type: 'duo_race', audio: 'This is a bear.', options: ['<img src="assets/images/bear.png" width="80">', '<img src="assets/images/horse.png" width="80">'], correct: 0, chinese: '这是一只熊。' },
+      { type: 'duo_race', audio: 'That is a horse.', options: ['<img src="assets/images/horse.png" width="80">', '<img src="assets/images/panda.png" width="80">'], correct: 0, chinese: '那是一匹马。' },
+      { type: 'duo_race', audio: 'This is a bird.', options: ['<img src="assets/images/bird.png" width="80">', '<img src="assets/images/bear.png" width="80">'], correct: 0, chinese: '这是一只鸟。' },
+      { type: 'duo_race', audio: 'That is a panda.', options: ['<img src="assets/images/panda.png" width="80">', '<img src="assets/images/horse.png" width="80">'], correct: 0, chinese: '那是一只熊猫。' },
+      { type: 'duo_race', audio: "It's big.", options: ['<img src="assets/images/elephant.png" width="80">', '<img src="assets/images/mouse.png" width="80">'], correct: 0, chinese: '它很大。' },
+      { type: 'duo_race', audio: "It's cute.", options: ['<img src="assets/images/panda.png" width="80">', '<img src="assets/images/tiger.png" width="80">'], correct: 0, chinese: '它很可爱。' },
+      
+      // 25-30: 综合题
+      { type: 'listen_select', audio: 'This is a bear. It\'s big.', options: ['<img src="assets/images/bear.png" width="80">', '<img src="assets/images/mouse.png" width="80">'], correct: 0, chinese: '这是一只熊。它很大。' },
+      { type: 'listen_select', audio: 'That is a panda. It\'s cute.', options: ['<img src="assets/images/panda.png" width="80">', '<img src="assets/images/tiger.png" width="80">'], correct: 0, chinese: '那是一只熊猫。它很可爱。' },
+      { type: 'listen_select', audio: 'This is a horse. It can run fast.', options: ['<img src="assets/images/horse.png" width="80">', '🐢'], correct: 0, chinese: '这是一匹马。它跑得很快。' }
     ]
   },
 
   // 阅读板块
   reading: {
     pretest: [
-      { type: 'word_match', word: 'bear', options: ['🐻', '🐴', '🐦', '🐼'], correct: 0 },
-      { type: 'word_match', word: 'horse', options: ['🐻', '🐴', '🐦', '🐼'], correct: 1 },
-      { type: 'word_match', word: 'bird', options: ['🐻', '🐴', '🐦', '🐼'], correct: 2 },
-      { type: 'word_match', word: 'panda', options: ['🐻', '🐴', '🐦', '🐼'], correct: 3 },
-      { type: 'word_match', word: 'big', options: ['🐘', '🐭'], correct: 0 },
-      { type: 'word_match', word: 'cute', options: ['🐼', '🐛'], correct: 0 },
-      { type: 'word_match', word: 'fast', options: ['🐴', '🐢'], correct: 0 },
-      { type: 'word_match', word: 'beautiful', options: ['🦚', '🪲'], correct: 0 },
-      { type: 'sentence_match', sentence: 'This is a bear.', options: ['🐻', '🐦'], correct: 0 },
-      { type: 'sentence_match', sentence: 'That is a horse.', options: ['🐴', '🐼'], correct: 0 },
-      { type: 'sentence_match', sentence: 'It\'s cute.', options: ['🐼', '🐻'], correct: 0 },
-      { type: 'sentence_match', sentence: 'They are birds.', options: ['🐦', '🐻'], correct: 0 }
+      { type: 'word_match', word: 'bear', options: ['<img src="assets/images/bear.png" width="80">', '<img src="assets/images/horse.png" width="80">', '<img src="assets/images/bird.png" width="80">', '<img src="assets/images/panda.png" width="80">'], correct: 0, chinese: '熊' },
+      { type: 'word_match', word: 'horse', options: ['<img src="assets/images/bear.png" width="80">', '<img src="assets/images/horse.png" width="80">', '<img src="assets/images/bird.png" width="80">', '<img src="assets/images/panda.png" width="80">'], correct: 1, chinese: '马' },
+      { type: 'sentence_match', sentence: 'This is a bear.', options: ['<img src="assets/images/bear.png" width="80">', '<img src="assets/images/bird.png" width="80">'], correct: 0, chinese: '这是一只熊。' },
+      { type: 'sentence_match', sentence: 'They are birds.', options: ['<img src="assets/images/bird.png" width="80">', '<img src="assets/images/bear.png" width="80">'], correct: 0, chinese: '它们是鸟。' }
     ],
     practice: [
-      { type: 'word_match', word: 'bear', options: ['🐻', '🐦'], correct: 0 },
-      { type: 'word_match', word: 'horse', options: ['🐴', '🐼'], correct: 0 },
-      { type: 'word_match', word: 'bird', options: ['🐦', '🐻'], correct: 0 },
-      { type: 'word_match', word: 'panda', options: ['🐼', '🐴'], correct: 0 },
-      { type: 'word_match', word: 'animal', options: ['🦁', '🍎'], correct: 0 },
-      { type: 'word_match', word: 'big', options: ['🐘', '🐭'], correct: 0 },
-      { type: 'word_match', word: 'small', options: ['🐭', '🐘'], correct: 0 },
-      { type: 'word_match', word: 'cute', options: ['🐼', '🦍'], correct: 0 },
-      { type: 'word_match', word: 'fast', options: ['🐴', '🐢'], correct: 0 },
-      { type: 'word_match', word: 'beautiful', options: ['🦚', '🐛'], correct: 0 },
-      { type: 'sentence_match', sentence: 'This is a bear.', options: ['🐻', '🐴'], correct: 0 },
-      { type: 'sentence_match', sentence: 'That is a panda.', options: ['🐼', '🐦'], correct: 0 },
-      { type: 'sentence_match', sentence: 'It\'s big.', options: ['🐘', '🐜'], correct: 0 },
-      { type: 'sentence_match', sentence: 'It\'s cute.', options: ['🐼', '🐻'], correct: 0 },
-      { type: 'sentence_match', sentence: 'It can run fast.', options: ['🐴', '🐢'], correct: 0 },
-      { type: 'sentence_match', sentence: 'It\'s black and white.', options: ['🐼', '🐴'], correct: 0 },
-      { type: 'sentence_match', sentence: 'This is a red bird.', options: ['🟥🐦', '🟦🐦'], correct: 0 },
-      { type: 'sentence_match', sentence: 'That is a blue bird.', options: ['🟦🐦', '🟥🐦'], correct: 0 },
-      { type: 'sentence_match', sentence: 'They are beautiful.', options: ['🦚', '🪲'], correct: 0 },
-      { type: 'sentence_match', sentence: 'They are animals.', options: ['🦁🐱🐰', '🚗🧸📱'], correct: 0 },
-      { type: 'drag_match', pairs: [['bear', '🐻'], ['bird', '🐦']] },
-      { type: 'drag_match', pairs: [['horse', '🐴'], ['panda', '🐼']] },
-      { type: 'drag_match', pairs: [['big', '🐘'], ['small', '🐭']] },
-      { type: 'drag_match', pairs: [['cute', '🐼'], ['beautiful', '🦚']] },
-      { type: 'drag_match', pairs: [['fast', '🐴'], ['slow', '🐢']] },
-      { type: 'drag_match', pairs: [['red', '🟥'], ['blue', '🟦']] },
-      { type: 'drag_match', pairs: [['black', '⬛'], ['white', '⬜']] },
-      { type: 'drag_match', pairs: [['This is', '👇'], ['That is', '👉']] },
-      { type: 'drag_match', pairs: [['bear', '🐻'], ['horse', '🐴'], ['bird', '🐦']] },
-      { type: 'drag_match', pairs: [['panda', '🐼'], ['bird', '🐦'], ['bear', '🐻']] }
+      {
+        type: 'memory_match',
+        pairs: [
+          { word: 'bear', image: '<img src="assets/images/bear.png" width="60">', chinese: '熊' },
+          { word: 'horse', image: '<img src="assets/images/horse.png" width="60">', chinese: '马' },
+          { word: 'bird', image: '<img src="assets/images/bird.png" width="60">', chinese: '鸟' },
+          { word: 'panda', image: '<img src="assets/images/panda.png" width="60">', chinese: '熊猫' }
+        ],
+        timeLimit: 60
+      },
+      {
+        type: 'drag_connect',
+        pairs: [
+          ['bear', '<img src="assets/images/bear.png" width="60">'],
+          ['bird', '<img src="assets/images/bird.png" width="60">'],
+          ['horse', '<img src="assets/images/horse.png" width="60">']
+        ],
+        chinese: '将单词与图片连线'
+      },
+      { type: 'word_match', word: 'panda', options: ['<img src="assets/images/panda.png" width="80">', '<img src="assets/images/horse.png" width="80">'], correct: 0, chinese: '熊猫' },
+      { type: 'sentence_match', sentence: 'It\'s big.', options: ['<img src="assets/images/elephant.png" width="80">', '<img src="assets/images/mouse.png" width="80">'], correct: 0, chinese: '它很大。' },
+      {
+        type: 'spot_diff',
+        image1: '<img src="assets/images/bear.png" width="100">',
+        image2: '<img src="assets/images/panda.png" width="100">',
+        question: 'Which one is "bear"?',
+        correct: 0,
+        chinese: '选出“熊”'
+      }
     ]
   },
 
   // 写作板块
   writing: {
     pretest: [
-      { type: 'letter_select', prompt: '选出字母 B', options: ['A', 'B', 'C', 'D'], correct: 1 },
-      { type: 'letter_select', prompt: '选出字母 P', options: ['P', 'Q', 'R', 'S'], correct: 0 },
-      { type: 'letter_select', prompt: '选出字母 H', options: ['F', 'G', 'H', 'I'], correct: 2 },
-      { type: 'letter_select', prompt: '选出字母 b', options: ['a', 'b', 'c', 'd'], correct: 1 },
-      { type: 'letter_select', prompt: '选出字母 p', options: ['n', 'o', 'p', 'q'], correct: 2 },
-      { type: 'letter_select', prompt: '选出字母 h', options: ['f', 'g', 'h', 'i'], correct: 2 },
-      { type: 'letter_select', prompt: 'bear的首字母是?', options: ['a', 'b', 'c'], correct: 1 },
-      { type: 'letter_select', prompt: 'panda的首字母是?', options: ['n', 'o', 'p'], correct: 2 },
-      { type: 'letter_select', prompt: 'horse的首字母是?', options: ['g', 'h', 'i'], correct: 1 },
-      { type: 'letter_select', prompt: 'bird的首字母是?', options: ['a', 'b', 'c'], correct: 1 },
-      { type: 'word_spell', image: '🐻', hint: 'b_ar', options: ['e', 'a', 'o'], correct: 0 },
-      { type: 'word_spell', image: '🐼', hint: 'p_nda', options: ['a', 'e', 'i'], correct: 0 }
+      { type: 'letter_select', prompt: 'bear的首字母是?', options: ['a', 'b', 'c'], correct: 1, chinese: '熊' },
+      { type: 'letter_select', prompt: 'panda的首字母是?', options: ['n', 'o', 'p'], correct: 2, chinese: '熊猫' }
     ],
     practice: [
-      { type: 'letter_trace', letter: 'B', word: 'bear' },
-      { type: 'letter_trace', letter: 'P', word: 'panda' },
-      { type: 'letter_trace', letter: 'H', word: 'horse' },
-      { type: 'letter_trace', letter: 'A', word: 'animal' },
-      { type: 'letter_trace', letter: 'C', word: 'cute' },
-      { type: 'letter_trace', letter: 'F', word: 'fast' },
-      { type: 'letter_trace', letter: 'R', word: 'red' },
-      { type: 'letter_trace', letter: 'W', word: 'white' },
-      { type: 'letter_trace', letter: 'L', word: 'blue' },
-      { type: 'letter_trace', letter: 'K', word: 'black' },
-      { type: 'word_spell', image: '🐻', hint: 'b_ar', options: ['e', 'a', 'o'], correct: 0 },
-      { type: 'word_spell', image: '🐦', hint: 'bi_d', options: ['r', 'l', 'n'], correct: 0 },
-      { type: 'word_spell', image: '🐴', hint: 'h_rse', options: ['o', 'a', 'e'], correct: 0 },
-      { type: 'word_spell', image: '🐼', hint: 'pan_a', options: ['d', 'b', 't'], correct: 0 },
-      { type: 'word_spell', image: '🐻', hint: '_ear', options: ['b', 'p', 'd'], correct: 0 },
-      { type: 'word_spell', image: '🐴', hint: 'hors_', options: ['e', 'a', 'i'], correct: 0 },
-      { type: 'word_spell', image: '🐘', hint: 'b_g', options: ['i', 'a', 'e'], correct: 0 },
-      { type: 'word_spell', image: '🐼', hint: 'c_te', options: ['u', 'a', 'o'], correct: 0 },
-      { type: 'word_spell', image: '🐴', hint: 'f_st', options: ['a', 'e', 'i'], correct: 0 },
-      { type: 'word_spell', image: '🟥', hint: 'r_d', options: ['e', 'a', 'i'], correct: 0 },
-      { type: 'sentence_fill', sentence: 'This is a ___.', image: '🐻', options: ['bear', 'bird'], correct: 0 },
-      { type: 'sentence_fill', sentence: 'That is a ___.', image: '🐴', options: ['horse', 'panda'], correct: 0 },
-      { type: 'sentence_fill', sentence: 'This is a ___.', image: '🐦', options: ['bird', 'bear'], correct: 0 },
-      { type: 'sentence_fill', sentence: 'That is a ___.', image: '🐼', options: ['panda', 'horse'], correct: 0 },
-      { type: 'sentence_fill', sentence: 'It\'s ___.', image: '🐘', options: ['big', 'small'], correct: 0 },
-      { type: 'sentence_fill', sentence: 'It\'s ___.', image: '🐼', options: ['cute', 'ugly'], correct: 0 },
-      { type: 'sentence_fill', sentence: 'It can run ___.', image: '🐴', options: ['fast', 'slow'], correct: 0 },
-      { type: 'sentence_fill', sentence: 'They are ___.', image: '🦚', options: ['beautiful', 'ugly'], correct: 0 },
-      { type: 'sentence_fill', sentence: 'It\'s ___ and white.', image: '🐼', options: ['black', 'red'], correct: 0 },
-      { type: 'sentence_fill', sentence: 'This is a ___ bird.', image: '🟥', options: ['red', 'blue'], correct: 0 }
+      {
+        type: 'word_puzzle',
+        word: 'bear',
+        letters: ['b', 'e', 'a', 'r'],
+        scrambled: ['a', 'r', 'b', 'e'],
+        image: '<img src="assets/images/bear.png" width="80">',
+        chinese: '熊'
+      },
+      {
+        type: 'word_puzzle',
+        word: 'horse',
+        letters: ['h', 'o', 'r', 's', 'e'],
+        scrambled: ['e', 'o', 's', 'r', 'h'],
+        image: '<img src="assets/images/horse.png" width="80">',
+        chinese: '马'
+      },
+      {
+        type: 'sentence_order',
+        sentence: 'This is a bear.',
+        words: ['This', 'is', 'a', 'bear', '.'],
+        scrambled: ['bear', 'a', 'is', 'This', '.'],
+        chinese: '这是一只熊。'
+      },
+      {
+        type: 'pinyin_fill',
+        image: '<img src="assets/images/bird.png" width="80">',
+        hint: '_ i r d',
+        options: ['b', 'p', 'd'],
+        correct: 0,
+        chinese: '鸟'
+      }
     ]
   },
 
   // 口语板块
   speaking: {
     pretest: [
-      { type: 'repeat_word', word: 'bear', audio: 'bear.mp3' },
-      { type: 'repeat_word', word: 'horse', audio: 'horse.mp3' },
-      { type: 'repeat_word', word: 'bird', audio: 'bird.mp3' },
-      { type: 'repeat_word', word: 'panda', audio: 'panda.mp3' },
-      { type: 'repeat_word', word: 'big', audio: 'big.mp3' },
-      { type: 'repeat_word', word: 'cute', audio: 'cute.mp3' },
-      { type: 'repeat_word', word: 'fast', audio: 'fast.mp3' },
-      { type: 'repeat_word', word: 'beautiful', audio: 'beautiful.mp3' },
-      { type: 'repeat_sentence', sentence: 'This is a bear.', audio: 's1.mp3' },
-      { type: 'repeat_sentence', sentence: 'That is a panda.', audio: 's4.mp3' },
-      { type: 'repeat_sentence', sentence: 'It\'s cute.', audio: 's6.mp3' },
-      { type: 'repeat_sentence', sentence: 'It\'s big.', audio: 's5.mp3' }
+      { type: 'repeat_word', word: 'bear', audio: 'bear.mp3', chinese: '熊' },
+      { type: 'repeat_word', word: 'horse', audio: 'horse.mp3', chinese: '马' }
     ],
     practice: [
-      { type: 'repeat_word', word: 'bear', audio: 'bear.mp3' },
-      { type: 'repeat_word', word: 'horse', audio: 'horse.mp3' },
-      { type: 'repeat_word', word: 'bird', audio: 'bird.mp3' },
-      { type: 'repeat_word', word: 'panda', audio: 'panda.mp3' },
-      { type: 'repeat_word', word: 'animal', audio: 'animal.mp3' },
-      { type: 'repeat_word', word: 'big', audio: 'big.mp3' },
-      { type: 'repeat_word', word: 'cute', audio: 'cute.mp3' },
-      { type: 'repeat_word', word: 'fast', audio: 'fast.mp3' },
-      { type: 'repeat_word', word: 'beautiful', audio: 'beautiful.mp3' },
-      { type: 'repeat_word', word: 'black', audio: 'black.mp3' },
-      { type: 'repeat_sentence', sentence: 'This is a bear.', audio: 's1.mp3' },
-      { type: 'repeat_sentence', sentence: 'That is a horse.', audio: 's2.mp3' },
-      { type: 'repeat_sentence', sentence: 'This is a bird.', audio: 's3.mp3' },
-      { type: 'repeat_sentence', sentence: 'That is a panda.', audio: 's4.mp3' },
-      { type: 'repeat_sentence', sentence: 'It\'s big.', audio: 's5.mp3' },
-      { type: 'repeat_sentence', sentence: 'It\'s cute.', audio: 's6.mp3' },
-      { type: 'repeat_sentence', sentence: 'It can run fast.', audio: 's7.mp3' },
-      { type: 'repeat_sentence', sentence: 'It\'s black and white.', audio: 's8.mp3' },
-      { type: 'repeat_sentence', sentence: 'They are beautiful.', audio: 's9.mp3' },
-      { type: 'repeat_sentence', sentence: 'They are birds.', audio: 's10.mp3' },
-      { type: 'picture_speak', image: '🐻', expected: 'This is a bear.' },
-      { type: 'picture_speak', image: '🐴', expected: 'That is a horse.' },
-      { type: 'picture_speak', image: '🐦', expected: 'This is a bird.' },
-      { type: 'picture_speak', image: '🐼', expected: 'That is a panda.' },
-      { type: 'picture_speak', image: '🐘', expected: 'It\'s big.' },
-      { type: 'picture_speak', image: '🐼', expected: 'It\'s cute.' },
-      { type: 'picture_speak', image: '🐴', expected: 'It can run fast.' },
-      { type: 'picture_speak', image: '🐼', expected: 'It\'s black and white.' },
-      { type: 'picture_speak', image: '🦚', expected: 'They are beautiful.' },
-      { type: 'picture_speak', image: '🦁', expected: 'They are animals.' }
+       { type: 'wheel_spin', options: ['bear', 'horse', 'bird', 'panda'], type_embedded: 'repeat_word', chinese: '转盘读词' },
+       { type: 'picture_speak', image: '<img src="assets/images/panda.png" width="100">', expected: 'This is a panda.', chinese: '看图说话' },
+       { type: 'picture_speak', image: '<img src="assets/images/elephant.png" width="100">', expected: 'It\'s big.', chinese: '看图说话' },
+       { type: 'repeat_sentence', sentence: 'It can run fast.', audio: 's7.mp3', chinese: '它跑得快。' }
     ]
   }
 };

@@ -16,12 +16,12 @@ function renderListeningQuestion(q, container) {
     playBtn.onclick = () => speakWord(q.audio);
     container.appendChild(playBtn);
 
-    // Chinese hint
-    const chineseHint = getChineseHint(q.audio);
-    if (chineseHint) {
+    // English hint (scaffolding - not giving away the answer)
+    const englishHint = getEnglishHint(q.audio);
+    if (englishHint) {
         const hintEl = document.createElement('div');
         hintEl.className = 'chinese-hint';
-        hintEl.textContent = `提示：${chineseHint}`;
+        hintEl.textContent = `💡 Hint: ${englishHint}`;
         container.appendChild(hintEl);
     }
 
@@ -57,12 +57,12 @@ function renderListeningQuestion(q, container) {
         imgEl.innerHTML = q.image;
         container.appendChild(imgEl);
 
-        // Add Chinese translation for the sentence
-        const sentenceHint = getChineseHint(q.audio);
+        // Add English hint for sentence (context clue)
+        const sentenceHint = getEnglishHint(q.audio);
         if (sentenceHint) {
             const hintEl = document.createElement('div');
             hintEl.className = 'chinese-hint';
-            hintEl.textContent = `句子意思：${sentenceHint}`;
+            hintEl.textContent = `💡 Hint: ${sentenceHint}`;
             container.appendChild(hintEl);
         }
 
@@ -143,5 +143,121 @@ function renderListeningQuestion(q, container) {
             wordsContainer.appendChild(wordBtn);
         });
         container.appendChild(wordsContainer);
+    } else if (q.type === 'whack_mole') {
+        const descEl = document.createElement('h3');
+        descEl.textContent = 'Whack the correct one! ' + (q.chinese || '');
+        container.appendChild(descEl);
+
+        const grid = document.createElement('div');
+        grid.className = 'whack-mole-grid';
+        let moles = [];
+
+        q.options.forEach((opt, idx) => {
+            const hole = document.createElement('div');
+            hole.className = 'whack-mole-hole';
+            
+            const mole = document.createElement('div');
+            mole.className = 'whack-mole-item';
+            mole.innerHTML = opt;
+            moles.push(mole);
+            
+            mole.onclick = (e) => {
+                 e.stopPropagation(); // prevent hole click
+                 if(!mole.classList.contains('up')) return;
+                 handleAnswer(idx === q.correct, hole);
+                 mole.classList.remove('up');
+            };
+
+            hole.appendChild(mole);
+            grid.appendChild(hole);
+        });
+        container.appendChild(grid);
+
+        // Mole logic
+        let moleInterval = setInterval(() => {
+            if(isAnimating) return;
+            moles.forEach(m => m.classList.remove('up'));
+            const randomMole = moles[Math.floor(Math.random() * moles.length)];
+            randomMole.classList.add('up');
+            setTimeout(() => randomMole.classList.remove('up'), 1000);
+        }, 1200);
+
+        // clear interval on answer
+        const origHandleAnswer = handleAnswer;
+        handleAnswer = function(isCorrect, cardEl) {
+            clearInterval(moleInterval);
+            origHandleAnswer(isCorrect, cardEl);
+        }
+        
+    } else if (q.type === 'balloon_pop') {
+        const descEl = document.createElement('h3');
+        descEl.textContent = q.text || 'Pop the correct balloon!';
+        if(q.chinese) descEl.textContent += ` (${q.chinese})`;
+        container.appendChild(descEl);
+        
+        const area = document.createElement('div');
+        area.className = 'balloon-container';
+        container.appendChild(area);
+        
+        q.options.forEach((opt, idx) => {
+            const bal = document.createElement('div');
+            bal.className = 'balloon';
+            bal.innerHTML = opt;
+            bal.style.left = (10 + idx * 22) + '%';
+            bal.style.animationDelay = (Math.random() * 2) + 's';
+            
+            bal.onclick = () => {
+                bal.style.animationPlayState = 'paused';
+                handleAnswer(idx === q.correct, bal);
+            };
+            area.appendChild(bal);
+        });
+        
+    } else if (q.type === 'duo_race') {
+        const title = document.createElement('h2');
+        title.style.color = '#ff4b4b';
+        title.innerHTML = '⚡ DUO RACE ⚡';
+        container.appendChild(title);
+        
+        const descEl = document.createElement('div');
+        descEl.style.marginBottom = '20px';
+        descEl.textContent = 'Who is faster? ' + (q.chinese || '');
+        container.appendChild(descEl);
+        
+        const raceArea = document.createElement('div');
+        raceArea.style.display = 'flex';
+        raceArea.style.justifyContent = 'space-between';
+        raceArea.style.width = '100%';
+        
+        [0, 1].forEach(playerIdx => {
+             const playerArea = document.createElement('div');
+             playerArea.style.width = '45%';
+             playerArea.style.border = '2px dashed var(--gray)';
+             playerArea.style.padding = '10px';
+             playerArea.style.borderRadius = '16px';
+             
+             const pname = document.createElement('h4');
+             pname.textContent = players[playerIdx].name;
+             pname.style.textAlign = 'center';
+             playerArea.appendChild(pname);
+             
+             q.options.forEach((opt, idx) => {
+                 const card = document.createElement('div');
+                 card.className = 'option-card';
+                 card.style.marginBottom = '10px';
+                 card.style.minHeight = '60px';
+                 card.innerHTML = opt;
+                 card.onclick = () => {
+                     // Temporary override currentPlayerIndex so the correct player gets the star
+                     const originalPlayer = currentPlayerIndex;
+                     currentPlayerIndex = playerIdx;
+                     handleAnswer(idx === q.correct, card);
+                     currentPlayerIndex = originalPlayer;
+                 };
+                 playerArea.appendChild(card);
+             });
+             raceArea.appendChild(playerArea);
+        });
+        container.appendChild(raceArea);
     }
 }

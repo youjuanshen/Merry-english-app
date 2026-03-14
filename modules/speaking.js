@@ -1,6 +1,10 @@
 // speaking.js
 
 function renderSpeakingQuestion(q, container) {
+    if (q.type === 'wheel_spin') {
+        renderWheelSpin(q, container);
+        return;
+    }
     if (q.type === 'repeat_word' || q.type === 'repeat_sentence') {
         const textEl = document.createElement('h2');
         textEl.style.fontSize = q.type === 'repeat_sentence' ? '40px' : '60px';
@@ -97,4 +101,97 @@ function renderSpeakingQuestion(q, container) {
 
     container.appendChild(recordBtn);
     container.appendChild(statusText);
+}
+
+function renderWheelSpin(q, container) {
+    const descEl = document.createElement('h3');
+    descEl.textContent = 'Spin the wheel! ' + (q.chinese || '');
+    container.appendChild(descEl);
+
+    const wheelContainer = document.createElement('div');
+    wheelContainer.style.width = '200px';
+    wheelContainer.style.height = '200px';
+    wheelContainer.style.borderRadius = '50%';
+    wheelContainer.style.border = '10px solid var(--secondary)';
+    wheelContainer.style.margin = '20px auto';
+    wheelContainer.style.position = 'relative';
+    wheelContainer.style.overflow = 'hidden';
+    wheelContainer.style.cursor = 'pointer';
+    wheelContainer.style.transition = 'transform 3s cubic-bezier(0.17, 0.67, 0.12, 0.99)';
+    
+    // Simplistic wheel display
+    const wordsEl = document.createElement('div');
+    wordsEl.style.width = '100%';
+    wordsEl.style.height = '100%';
+    wordsEl.style.display = 'flex';
+    wordsEl.style.flexDirection = 'column';
+    wordsEl.style.justifyContent = 'space-around';
+    wordsEl.style.alignItems = 'center';
+    
+    q.options.forEach(opt => {
+        const item = document.createElement('div');
+        item.textContent = opt;
+        item.style.fontWeight = 'bold';
+        wordsEl.appendChild(item);
+    });
+
+    wheelContainer.appendChild(wordsEl);
+    
+    const pointer = document.createElement('div');
+    pointer.style.position = 'absolute';
+    pointer.style.top = '-20px';
+    pointer.style.left = '50%';
+    pointer.style.transform = 'translateX(-50%)';
+    pointer.style.width = '0';
+    pointer.style.height = '0';
+    pointer.style.borderLeft = '15px solid transparent';
+    pointer.style.borderRight = '15px solid transparent';
+    pointer.style.borderTop = '30px solid #ff4b4b';
+    pointer.style.zIndex = '10';
+
+    const wrapper = document.createElement('div');
+    wrapper.style.position = 'relative';
+    wrapper.style.width = 'max-content';
+    wrapper.style.margin = '0 auto';
+
+    wrapper.appendChild(pointer);
+    wrapper.appendChild(wheelContainer);
+    container.appendChild(wrapper);
+
+    wheelContainer.onclick = () => {
+        if(isAnimating) return;
+        isAnimating = true;
+        
+        const spins = 5;
+        const randomOptIndex = Math.floor(Math.random() * q.options.length);
+        const deg = spins * 360 + randomOptIndex * (360 / q.options.length);
+        
+        wheelContainer.style.transform = `rotate(${deg}deg)`;
+        
+        setTimeout(() => {
+            isAnimating = false;
+            // Now render the embedded question
+            container.innerHTML = '';
+            
+            // Re-render as a speaking question of type_embedded
+            const subQ = {
+                type: q.type_embedded,
+                word: q.options[randomOptIndex],
+                chinese: q.chinese
+            };
+            
+            const transitionEl = document.createElement('h2');
+            transitionEl.textContent = "You got: " + subQ.word;
+            transitionEl.className = 'animate-pop';
+            transitionEl.style.color = 'var(--primary)';
+            transitionEl.style.textAlign = 'center';
+            container.appendChild(transitionEl);
+            
+            setTimeout(() => {
+                container.innerHTML = '';
+                renderSpeakingQuestion(subQ, container);
+            }, 1500);
+            
+        }, 3000);
+    };
 }
