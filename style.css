@@ -444,29 +444,29 @@ h1 {
 }
 
 /* Floating Feedback */
-/* "完美/太棒了"提示 - 固定在顶部，只有淡入淡出，不移动不遮挡 */
+/* "完美/太棒了"提示 - 更小更靠上，不遮挡正确答案 */
 .floating-feedback {
   position: fixed;
-  top: 80px;
+  top: 50px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
-  padding: 10px 25px;
-  border-radius: 14px;
+  padding: 6px 16px;
+  border-radius: 10px;
   z-index: 2000;
-  -webkit-animation: feedbackFade 1.5s ease-out forwards;
-  animation: feedbackFade 1.5s ease-out forwards;
+  -webkit-animation: feedbackFade 1.3s ease-out forwards;
+  animation: feedbackFade 1.3s ease-out forwards;
 }
 .floating-feedback.success {
   background: linear-gradient(135deg, #58cc02, #7de832);
   color: white;
-  box-shadow: 0 3px 0 #46a302;
+  box-shadow: 0 2px 0 #46a302;
 }
 .floating-feedback.encourage {
   background: linear-gradient(135deg, #1cb0f6, #4dc4f9);
   color: white;
-  box-shadow: 0 3px 0 #1899d6;
+  box-shadow: 0 2px 0 #1899d6;
 }
 
 /* 只有淡入淡出，不移动位置 */
