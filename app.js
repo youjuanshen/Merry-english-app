@@ -529,7 +529,18 @@ function handleAnswer(isCorrect, cardEl = null, correctAnswer = null) {
         showFeedbackText(true);   // 屏幕显示中文
         speakFeedback(true);      // 语音说英文
         resetHintLevel();
-        onCorrect();
+
+        // 答对时显示正确答案+中文翻译（加深学习印象）
+        const q = moduleQuestions[currentQuestionIndex];
+        if (q) {
+            showCorrectAnswerWithTranslation(q);
+        }
+
+        // 延迟进入下一题，让学生看清答案
+        setTimeout(() => {
+            hideCorrectAnswerDisplay();
+            onCorrect();
+        }, 2000);
     } else {
         if (cardEl) cardEl.classList.add('wrong');
         playWrongSound();
@@ -576,6 +587,39 @@ function showProgressiveHint(hint, level) {
     hintEl.style.display = 'block';
 }
 
+// 答对时显示正确答案+中文翻译（让学生加深印象）
+function showCorrectAnswerWithTranslation(q) {
+    let display = document.getElementById('correct-answer-display');
+    if (!display) {
+        display = document.createElement('div');
+        display.id = 'correct-answer-display';
+        display.className = 'correct-answer-display';
+        document.getElementById('question-container').appendChild(display);
+    }
+
+    // 获取英文内容和中文翻译
+    let english = q.audio || q.word || q.sentence || '';
+    let chinese = q.chinese || '';
+
+    if (english && chinese) {
+        display.innerHTML = `
+            <div class="answer-english">${english}</div>
+            <div class="answer-chinese">${chinese}</div>
+        `;
+    } else if (english) {
+        display.innerHTML = `<div class="answer-english">${english}</div>`;
+    }
+
+    display.style.display = 'block';
+}
+
+function hideCorrectAnswerDisplay() {
+    const display = document.getElementById('correct-answer-display');
+    if (display) {
+        display.style.display = 'none';
+    }
+}
+
 function showCorrectHint(answer) {
     let hint = document.getElementById('correct-hint');
     if (!hint) {
@@ -604,13 +648,11 @@ function onCorrect() {
     updateHeader();
     createConfetti(15);
 
-    setTimeout(() => {
-        // Random next player (not just alternating)
-        currentPlayerIndex = Math.random() < 0.5 ? 0 : 1;
-        currentQuestionIndex++;
-        syncStudentProgress();
-        renderQuestion();
-    }, 1500);
+    // Random next player (not just alternating)
+    currentPlayerIndex = Math.random() < 0.5 ? 0 : 1;
+    currentQuestionIndex++;
+    syncStudentProgress();
+    renderQuestion();
 }
 
 function showFinishScreen() {

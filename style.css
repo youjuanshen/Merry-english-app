@@ -528,3 +528,34 @@ h1 {
   margin-bottom: 10px;
   box-shadow: 0 3px 0 #46a302;
 }
+
+/* 答对时显示正确答案+中文翻译 */
+.correct-answer-display {
+  text-align: center;
+  padding: 15px 20px;
+  background: linear-gradient(135deg, #d7ffb8, #b8ffd7);
+  border: 3px solid var(--primary);
+  border-radius: 16px;
+  margin-top: 15px;
+  -webkit-animation: slideUp 0.3s ease-out;
+  animation: slideUp 0.3s ease-out;
+}
+.correct-answer-display .answer-english {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--primary);
+  margin-bottom: 5px;
+}
+.correct-answer-display .answer-chinese {
+  font-size: 18px;
+  color: #666;
+}
+
+@-webkit-keyframes slideUp {
+  from { -webkit-transform: translateY(20px); opacity: 0; }
+  to { -webkit-transform: translateY(0); opacity: 1; }
+}
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
