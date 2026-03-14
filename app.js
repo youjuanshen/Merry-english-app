@@ -15,7 +15,7 @@ let isAnimating = false;
 
 // Module Control
 let currentModule = 'listening';
-let currentPhase = 'pretest';
+let currentPhase = 'pretest'; // pretest -> practice
 let currentLessonData = lesson1;
 let moduleQuestions = [];
 
@@ -64,9 +64,7 @@ students.forEach(name => {
     studentListEl.appendChild(el);
 });
 
-const startBtn = document.getElementById('start-btn');
-const moduleSelect = document.getElementById('module-select');
-const phaseRadios = document.querySelectorAll('input[name="phase"]');
+const nextBtn = document.getElementById('next-btn');
 
 function toggleStudent(name, el) {
     if (selectedStudents.includes(name)) {
@@ -77,42 +75,87 @@ function toggleStudent(name, el) {
         selectedStudents.push(name);
         el.classList.add('selected');
     }
-    startBtn.disabled = selectedStudents.length !== 2;
+    nextBtn.disabled = selectedStudents.length !== 2;
 }
 
 function getQuestions(module, phase) {
     return currentLessonData[module][phase] || [];
 }
 
-startBtn.onclick = startGame;
-
-function startGame() {
+// Step 1: Click "下一步" to go to module selection
+nextBtn.onclick = function() {
     if (audioCtx.state === 'suspended') audioCtx.resume();
     players = selectedStudents.map(n => ({ name: n, stars: 0 }));
+
+    document.getElementById('login-screen').classList.remove('active');
+    document.getElementById('module-screen').classList.add('active');
+};
+
+// Step 2: Click module card to start pretest
+document.querySelectorAll('.module-card').forEach(card => {
+    card.onclick = function() {
+        currentModule = this.dataset.module;
+        currentPhase = 'pretest'; // Always start with pretest
+        startGame();
+    };
+});
+
+function startGame() {
     document.getElementById('player1-ui').querySelector('.name').textContent = players[0].name;
     document.getElementById('player2-ui').querySelector('.name').textContent = players[1].name;
 
-    currentModule = moduleSelect.value;
-    currentPhase = Array.from(phaseRadios).find(r => r.checked).value;
     moduleQuestions = getQuestions(currentModule, currentPhase);
     currentQuestionIndex = 0;
+    currentPlayerIndex = 0;
 
-    document.getElementById('login-screen').classList.remove('active');
+    document.getElementById('module-screen').classList.remove('active');
     document.getElementById('game-screen').classList.add('active');
 
+    // Show phase indicator
+    updatePhaseIndicator();
     renderQuestion();
+}
+
+function updatePhaseIndicator() {
+    let indicator = document.getElementById('phase-indicator');
+    if (!indicator) {
+        indicator = document.createElement('div');
+        indicator.id = 'phase-indicator';
+        indicator.className = 'phase-indicator';
+        const gameScreen = document.getElementById('game-screen');
+        gameScreen.insertBefore(indicator, gameScreen.firstChild);
+    }
+
+    const moduleNames = {
+        listening: '听力',
+        reading: '阅读',
+        writing: '写作',
+        speaking: '口语'
+    };
+    const phaseNames = {
+        pretest: '前测',
+        practice: '练习'
+    };
+
+    indicator.textContent = `${moduleNames[currentModule]} - ${phaseNames[currentPhase]}`;
 }
 
 function renderQuestion() {
     isAnimating = false;
     updateHeader();
-    
-    // Check if we reached the end
+
+    // Check if we reached the end of current phase
     if (currentQuestionIndex >= moduleQuestions.length) {
-        showFinishScreen();
+        if (currentPhase === 'pretest') {
+            // Pretest done, start practice
+            showTransition();
+        } else {
+            // Practice done, show finish
+            showFinishScreen();
+        }
         return;
     }
-    
+
     const q = moduleQuestions[currentQuestionIndex];
     const container = document.getElementById('question-container');
     container.innerHTML = '';
@@ -130,6 +173,27 @@ function renderQuestion() {
     } else if (currentModule === 'speaking') {
         renderSpeakingQuestion(q, container);
     }
+}
+
+function showTransition() {
+    const container = document.getElementById('question-container');
+    container.innerHTML = `
+        <div style="text-align: center; padding: 40px;">
+            <div style="font-size: 60px; margin-bottom: 20px;">🎉</div>
+            <h2>前测完成！</h2>
+            <p style="font-size: 20px; color: #666;">准备开始练习...</p>
+        </div>
+    `;
+
+    createConfetti(30);
+
+    setTimeout(() => {
+        currentPhase = 'practice';
+        moduleQuestions = getQuestions(currentModule, currentPhase);
+        currentQuestionIndex = 0;
+        updatePhaseIndicator();
+        renderQuestion();
+    }, 2000);
 }
 
 function updateHeader() {
@@ -173,6 +237,16 @@ function showFinishScreen() {
     document.getElementById('game-screen').classList.remove('active');
     document.getElementById('finish-screen').classList.add('active');
     document.getElementById('progress-fill').style.width = '100%';
+
+    // Show final scores
+    const finishStars = document.getElementById('finish-stars');
+    finishStars.innerHTML = `
+        <div style="margin-bottom: 20px;">
+            <div>${players[0].name}: ⭐ ${players[0].stars}</div>
+            <div>${players[1].name}: ⭐ ${players[1].stars}</div>
+        </div>
+    `;
+
     createConfetti(50);
 }
 

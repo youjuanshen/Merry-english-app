@@ -8,28 +8,36 @@
 </head>
 <body>
   <div id="app">
-    <!-- Login Screen -->
+    <!-- Login Screen: Step 1 - Select Students -->
     <div id="login-screen" class="screen active">
-      <h1>请选择你们的名字 (选2人)</h1>
+      <h1>请选择你们的名字（选2人）</h1>
       <div class="student-list" id="student-list">
         <!-- JS will populate -->
       </div>
-      
-      <div class="module-selector" style="text-align: center; margin-bottom: 20px;">
-        <h3>Select Module:</h3>
-        <select id="module-select" style="padding: 10px; font-size: 18px; border-radius: 8px;">
-          <option value="listening">Listening</option>
-          <option value="reading">Reading</option>
-          <option value="writing">Writing</option>
-          <option value="speaking">Speaking</option>
-        </select>
-        <div style="margin-top: 10px;">
-            <label><input type="radio" name="phase" value="pretest" checked> Pretest</label>
-            <label style="margin-left: 20px;"><input type="radio" name="phase" value="practice"> Practice</label>
+      <button id="next-btn" class="primary-btn" disabled>下一步</button>
+    </div>
+
+    <!-- Module Select Screen: Step 2 - Choose Module -->
+    <div id="module-screen" class="screen">
+      <h1>选择今天的学习内容</h1>
+      <div class="module-cards">
+        <div class="module-card" data-module="listening">
+          <div class="module-icon">👂</div>
+          <div class="module-name">听力</div>
+        </div>
+        <div class="module-card" data-module="reading">
+          <div class="module-icon">📖</div>
+          <div class="module-name">阅读</div>
+        </div>
+        <div class="module-card" data-module="writing">
+          <div class="module-icon">✏️</div>
+          <div class="module-name">写作</div>
+        </div>
+        <div class="module-card" data-module="speaking">
+          <div class="module-icon">🎤</div>
+          <div class="module-name">口语</div>
         </div>
       </div>
-
-      <button id="start-btn" class="primary-btn" disabled>开始游戏</button>
     </div>
 
     <!-- Game Screen -->
