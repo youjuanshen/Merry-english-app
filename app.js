@@ -528,9 +528,9 @@ const pageDotsEl = document.getElementById('page-dots');
 function getStudentsPerPage() {
     const width = window.innerWidth;
     if (width >= 1000) return 30;      // iPad横屏: 6列x5行
-    if (width >= 700) return 20;       // iPad竖屏: 5列x4行
+    if (width >= 700) return 25;       // iPad竖屏: 5列x5行
     if (width >= 400) return 12;       // iPhone 7 Plus: 3列x4行
-    return 9;                          // iPhone 7: 3列x3行
+    return 12;                          // iPhone 7: 3列x4行 (默认也是12)
 }
 
 const STUDENTS_PER_PAGE = getStudentsPerPage();
