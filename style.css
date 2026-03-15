@@ -567,7 +567,7 @@ h1 {
 /* 下一题按钮 - 固定在最底部安全区域 */
 .next-btn {
   position: fixed;
-  bottom: 10px;
+  bottom: 15px;
   left: 20px;
   right: 20px;
   padding: 14px 40px;
@@ -579,9 +579,10 @@ h1 {
   color: white;
   cursor: pointer;
   box-shadow: 0 4px 0 #1899d6;
-  z-index: 100;
+  z-index: 9999;
   transition: all 0.2s;
   -webkit-transition: all 0.2s;
+  -webkit-tap-highlight-color: transparent;
 }
 .next-btn:active:not(:disabled) {
   transform: translateY(4px);
@@ -601,11 +602,13 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 15px 25px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
   background: linear-gradient(135deg, #d7ffb8, #e8ffe0);
   border: 3px solid var(--primary);
   border-radius: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   -webkit-animation: correctPop 0.4s ease-out;
   animation: correctPop 0.4s ease-out;
 }

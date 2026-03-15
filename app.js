@@ -929,6 +929,13 @@ function showCorrectAnswerWithTranslation(q) {
     } else {
         container.appendChild(display);
     }
+
+    // 确保下一题按钮被启用
+    const nextBtn = document.getElementById('next-question-btn');
+    if (nextBtn) {
+        nextBtn.disabled = false;
+        nextBtn.style.pointerEvents = 'auto';
+    }
 }
 
 function hideCorrectAnswerDisplay() {
