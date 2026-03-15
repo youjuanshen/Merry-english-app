@@ -474,6 +474,62 @@ const unit1_lesson2 = {
         ],
         "correct": 3,
         "difficulty": "hard"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Bob is at the zoo. He wants to see a big cat with stripes.",
+        "chinese": "鲍勃在动物园。他想看一只有条纹的大猫。",
+        "question": "Where should Bob go?",
+        "options": [
+          "<img src=\"assets/images/lion.png\" width=\"80\">",
+          "<img src=\"assets/images/tiger.png\" width=\"80\">",
+          "<img src=\"assets/images/monkey.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "feedback": "Tigers have stripes!",
+        "difficulty": "easy"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Amy wants a pet that lives in water.",
+        "chinese": "艾米想要一只生活在水里的宠物。",
+        "question": "What should Amy get?",
+        "options": [
+          "<img src=\"assets/images/fish.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/cat.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "feedback": "Fish live in water!",
+        "difficulty": "easy"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Jack sees an animal with a long tail climbing trees.",
+        "chinese": "杰克看到一只长尾巴的动物在爬树。",
+        "question": "What animal does Jack see?",
+        "options": [
+          "<img src=\"assets/images/elephant.png\" width=\"80\">",
+          "<img src=\"assets/images/monkey.png\" width=\"80\">",
+          "<img src=\"assets/images/tiger.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "feedback": "Monkeys climb trees!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "The king of the jungle is sleeping under a tree.",
+        "chinese": "丛林之王正在树下睡觉。",
+        "question": "What animal is it?",
+        "options": [
+          "<img src=\"assets/images/monkey.png\" width=\"80\">",
+          "<img src=\"assets/images/lion.png\" width=\"80\">",
+          "<img src=\"assets/images/fish.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "feedback": "The lion is the king of the jungle!",
+        "difficulty": "medium"
       }
     ]
   },

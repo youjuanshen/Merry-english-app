@@ -334,6 +334,48 @@ const unit4_lesson3 = {
           "<img src=\"assets/images/family.png\" width=\"80\">"
         ],
         "correct": 0
+      },
+      {
+        "type": "scenario",
+        "scenario": "Lily's younger girl plays dolls with her every day.",
+        "chinese": "莉莉的妹妹每天和她玩洋娃娃。",
+        "question": "Who plays with Lily?",
+        "options": [
+          "<img src=\"assets/images/brother.png\" width=\"80\">",
+          "<img src=\"assets/images/sister.png\" width=\"80\">",
+          "<img src=\"assets/images/father.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "feedback": "Sister plays dolls!",
+        "difficulty": "easy"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Someone gives Tom a birthday gift. She says 'Happy Birthday, son!'",
+        "chinese": "有人送给汤姆生日礼物。她说"儿子，生日快乐！"",
+        "question": "Who gives the gift?",
+        "options": [
+          "<img src=\"assets/images/mother.png\" width=\"80\">",
+          "<img src=\"assets/images/sister.png\" width=\"80\">",
+          "<img src=\"assets/images/brother.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "feedback": "Mother gives birthday gifts to her son!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "It is raining. Someone comes with an umbrella to pick up Tom from school.",
+        "chinese": "下雨了。有人拿着雨伞来学校接汤姆。",
+        "question": "This can be Tom's...",
+        "options": [
+          "<img src=\"assets/images/mother.png\" width=\"80\">",
+          "<img src=\"assets/images/baby.png\" width=\"80\">",
+          "<img src=\"assets/images/grandma.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "feedback": "Mother or family picks up children from school!",
+        "difficulty": "medium"
       }
     ]
   },

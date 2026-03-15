@@ -469,6 +469,62 @@ const unit4_lesson4 = {
         ],
         "correct": 1,
         "difficulty": "hard"
+      },
+      {
+        "type": "scenario",
+        "scenario": "There is a photo on the wall. It has Mom, Dad, and two children.",
+        "chinese": "墙上有一张照片。有妈妈、爸爸和两个孩子。",
+        "question": "What is in the photo?",
+        "options": [
+          "<img src=\"assets/images/family.png\" width=\"80\">",
+          "<img src=\"assets/images/baby.png\" width=\"80\">",
+          "<img src=\"assets/images/father.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "feedback": "This is a family photo!",
+        "difficulty": "easy"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Someone takes care of the baby at home. She is very kind.",
+        "chinese": "有人在家照顾宝宝。她很慈祥。",
+        "question": "Who takes care of the baby?",
+        "options": [
+          "<img src=\"assets/images/brother.png\" width=\"80\">",
+          "<img src=\"assets/images/grandma.png\" width=\"80\">",
+          "<img src=\"assets/images/father.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "feedback": "Grandma takes care of baby!",
+        "difficulty": "easy"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Tom's older boy teaches him to play basketball.",
+        "chinese": "汤姆的哥哥教他打篮球。",
+        "question": "Who teaches Tom?",
+        "options": [
+          "<img src=\"assets/images/sister.png\" width=\"80\">",
+          "<img src=\"assets/images/mother.png\" width=\"80\">",
+          "<img src=\"assets/images/brother.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "feedback": "Brother teaches basketball!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "On Sunday, everyone goes to the park together. They have a picnic.",
+        "chinese": "星期天，大家一起去公园。他们野餐。",
+        "question": "Who goes to the park?",
+        "options": [
+          "<img src=\"assets/images/baby.png\" width=\"80\">",
+          "<img src=\"assets/images/family.png\" width=\"80\">",
+          "<img src=\"assets/images/father.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "feedback": "The whole family goes to the park!",
+        "difficulty": "medium"
       }
     ]
   },

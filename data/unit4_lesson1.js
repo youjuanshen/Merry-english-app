@@ -469,6 +469,62 @@ const unit4_lesson1 = {
         ],
         "correct": 2,
         "difficulty": "hard"
+      },
+      {
+        "type": "scenario",
+        "scenario": "It is Mother's Day. Tom wants to give flowers to someone.",
+        "chinese": "今天是母亲节。汤姆想送花给一个人。",
+        "question": "Who should Tom give flowers to?",
+        "options": [
+          "<img src=\"assets/images/father.png\" width=\"80\">",
+          "<img src=\"assets/images/mother.png\" width=\"80\">",
+          "<img src=\"assets/images/brother.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "feedback": "Give flowers to mother on Mother's Day!",
+        "difficulty": "easy"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Someone is cooking dinner in the kitchen. She says 'Dinner is ready!'",
+        "chinese": "有人在厨房做饭。她说"晚饭好了！"",
+        "question": "Who is cooking?",
+        "options": [
+          "<img src=\"assets/images/mother.png\" width=\"80\">",
+          "<img src=\"assets/images/brother.png\" width=\"80\">",
+          "<img src=\"assets/images/father.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "feedback": "Mother is cooking dinner!",
+        "difficulty": "easy"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Someone is fixing the car. He is wearing a cap.",
+        "chinese": "有人在修车。他戴着帽子。",
+        "question": "Who is fixing the car?",
+        "options": [
+          "<img src=\"assets/images/mother.png\" width=\"80\">",
+          "<img src=\"assets/images/sister.png\" width=\"80\">",
+          "<img src=\"assets/images/father.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "feedback": "Father is fixing the car!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Lily has an older boy in her family. He helps her with homework.",
+        "chinese": "莉莉家里有一个大男孩。他帮她做作业。",
+        "question": "Who helps Lily?",
+        "options": [
+          "<img src=\"assets/images/sister.png\" width=\"80\">",
+          "<img src=\"assets/images/brother.png\" width=\"80\">",
+          "<img src=\"assets/images/mother.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "feedback": "Brother helps with homework!",
+        "difficulty": "medium"
       }
     ]
   },

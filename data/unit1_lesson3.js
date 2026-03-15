@@ -469,6 +469,62 @@ const unit1_lesson3 = {
         ],
         "correct": 0,
         "difficulty": "hard"
+      },
+      {
+        "type": "scenario",
+        "scenario": "It is raining. A duck is very happy.",
+        "chinese": "下雨了。一只鸭子很开心。",
+        "question": "What does the duck like?",
+        "options": [
+          "<img src=\"assets/images/fish.png\" width=\"80\">",
+          "<img src=\"assets/images/duck.png\" width=\"80\">",
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "feedback": "Ducks love water and rain!",
+        "difficulty": "easy"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Mary has some carrots. She wants to feed an animal.",
+        "chinese": "玛丽有一些胡萝卜。她想喂动物。",
+        "question": "What animal likes carrots?",
+        "options": [
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+          "<img src=\"assets/images/duck.png\" width=\"80\">",
+          "<img src=\"assets/images/fish.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "feedback": "Rabbits love carrots!",
+        "difficulty": "easy"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Dad sees a small animal with a long tail eating cheese.",
+        "chinese": "爸爸看到一只长尾巴的小动物在吃奶酪。",
+        "question": "What is it?",
+        "options": [
+          "<img src=\"assets/images/duck.png\" width=\"80\">",
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+          "<img src=\"assets/images/mouse.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "feedback": "Mice love cheese!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "An animal is swimming in the pond. It says 'quack quack'.",
+        "chinese": "一只动物在池塘里游泳。它说"嘎嘎嘎"。",
+        "question": "What animal is it?",
+        "options": [
+          "<img src=\"assets/images/fish.png\" width=\"80\">",
+          "<img src=\"assets/images/duck.png\" width=\"80\">",
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "feedback": "Ducks say quack!",
+        "difficulty": "medium"
       }
     ]
   },

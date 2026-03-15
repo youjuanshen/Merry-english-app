@@ -484,6 +484,62 @@ const lesson1 = {
         "correct": 0,
         "chinese": "熊",
         "difficulty": "hard"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Tom wants a pet that can catch mice.",
+        "chinese": "汤姆想要一只能抓老鼠的宠物。",
+        "question": "What should Tom get?",
+        "options": [
+          "<img src=\"assets/images/cat.png\" width=\"80\">",
+          "<img src=\"assets/images/bird.png\" width=\"80\">",
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "feedback": "Cats catch mice!",
+        "difficulty": "easy"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Lily is at the zoo. She sees a big animal with a long nose.",
+        "chinese": "莉莉在动物园。她看到一只长鼻子的大动物。",
+        "question": "What does Lily see?",
+        "options": [
+          "<img src=\"assets/images/tiger.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">",
+          "<img src=\"assets/images/bear.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "feedback": "Elephants have long noses!",
+        "difficulty": "easy"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Sam wants a pet that can run fast.",
+        "chinese": "山姆想要一只跑得快的宠物。",
+        "question": "What should Sam get?",
+        "options": [
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/horse.png\" width=\"80\">",
+          "<img src=\"assets/images/panda.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "feedback": "Horses run very fast!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Emma hears a beautiful song in the tree.",
+        "chinese": "艾玛在树上听到一首美丽的歌。",
+        "question": "What animal is singing?",
+        "options": [
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/tiger.png\" width=\"80\">",
+          "<img src=\"assets/images/bird.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "feedback": "Birds sing beautiful songs!",
+        "difficulty": "medium"
       }
     ]
   },

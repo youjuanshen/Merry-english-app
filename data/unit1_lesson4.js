@@ -484,6 +484,62 @@ const unit1_lesson4 = {
         ],
         "correct": 3,
         "difficulty": "hard"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Tim's friend barks and wags its tail.",
+        "chinese": "蒂姆的朋友会叫，还会摇尾巴。",
+        "question": "What is Tim's friend?",
+        "options": [
+          "<img src=\"assets/images/cat.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/bird.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "feedback": "Dogs bark and wag their tails!",
+        "difficulty": "easy"
+      },
+      {
+        "type": "scenario",
+        "scenario": "The animal is big and has black and white colors. It eats bamboo.",
+        "chinese": "这只动物很大，有黑白两色。它吃竹子。",
+        "question": "What animal is it?",
+        "options": [
+          "<img src=\"assets/images/bear.png\" width=\"80\">",
+          "<img src=\"assets/images/panda.png\" width=\"80\">",
+          "<img src=\"assets/images/tiger.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "feedback": "Pandas eat bamboo!",
+        "difficulty": "easy"
+      },
+      {
+        "type": "scenario",
+        "scenario": "An animal lives in a very cold place. It is big and white.",
+        "chinese": "一只动物生活在很冷的地方。它又大又白。",
+        "question": "What animal is it?",
+        "options": [
+          "<img src=\"assets/images/panda.png\" width=\"80\">",
+          "<img src=\"assets/images/bear.png\" width=\"80\">",
+          "<img src=\"assets/images/lion.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "feedback": "Polar bears live in cold places!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Lucy wants a pet that can fly and sing songs.",
+        "chinese": "露西想要一只会飞会唱歌的宠物。",
+        "question": "What should Lucy get?",
+        "options": [
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/cat.png\" width=\"80\">",
+          "<img src=\"assets/images/bird.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "feedback": "Birds can fly and sing!",
+        "difficulty": "medium"
       }
     ]
   },

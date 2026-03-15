@@ -1477,6 +1477,66 @@ function showFinishScreen() {
     syncStudentProgress(true);
 }
 
+// ===== 宠物系统集成 =====
+
+// 宠物按钮点击事件
+var petBtn = document.getElementById('pet-btn');
+if (petBtn) {
+    petBtn.onclick = function() {
+        if (typeof showPetModal === 'function') {
+            showPetModal();
+        }
+    };
+}
+
+// ===== 进度地图集成 =====
+
+// 进度地图按钮点击事件
+var mapBtn = document.getElementById('map-btn');
+if (mapBtn) {
+    mapBtn.onclick = function() {
+        if (typeof showProgressMapModal === 'function') {
+            showProgressMapModal();
+        }
+    };
+}
+
+// 从地图选择课程
+function selectLessonFromMap(lessonId) {
+    // 根据lessonId找到对应的课程数据
+    var lessonMap = {
+        'U1L1': lesson1,
+        'U1L2': unit1_lesson2,
+        'U1L3': unit1_lesson3,
+        'U1L4': unit1_lesson4,
+        'U2L1': unit2_lesson1,
+        'U2L2': unit2_lesson2,
+        'U2L3': unit2_lesson3,
+        'U2L4': unit2_lesson4,
+        'U3L1': unit3_lesson1,
+        'U3L2': unit3_lesson2,
+        'U3L3': unit3_lesson3,
+        'U3L4': unit3_lesson4,
+        'U4L1': unit4_lesson1,
+        'U4L2': unit4_lesson2,
+        'U4L3': unit4_lesson3,
+        'U4L4': unit4_lesson4
+    };
+
+    if (lessonMap[lessonId]) {
+        // 保存选择的课程
+        localStorage.setItem('currentLesson', JSON.stringify({
+            id: lessonId,
+            displayName: lessonMap[lessonId].title + ' - 听力',
+            module: 'listening',
+            stage: 'practice'
+        }));
+
+        // 刷新页面加载新课程
+        location.reload();
+    }
+}
+
 // ===== 成就系统集成 =====
 
 // 成就按钮点击事件

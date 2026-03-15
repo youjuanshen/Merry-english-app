@@ -438,6 +438,62 @@ const unit4_lesson2 = {
         ],
         "correct": 0,
         "difficulty": "hard"
+      },
+      {
+        "type": "scenario",
+        "scenario": "An old woman is telling stories to the children. She has white hair.",
+        "chinese": "一位老奶奶在给孩子们讲故事。她有白头发。",
+        "question": "Who is telling stories?",
+        "options": [
+          "<img src=\"assets/images/grandma.png\" width=\"80\">",
+          "<img src=\"assets/images/mother.png\" width=\"80\">",
+          "<img src=\"assets/images/sister.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "feedback": "Grandma tells stories!",
+        "difficulty": "easy"
+      },
+      {
+        "type": "scenario",
+        "scenario": "A little one is crying. He wants milk.",
+        "chinese": "一个小宝宝在哭。他想喝奶。",
+        "question": "Who wants milk?",
+        "options": [
+          "<img src=\"assets/images/father.png\" width=\"80\">",
+          "<img src=\"assets/images/baby.png\" width=\"80\">",
+          "<img src=\"assets/images/brother.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "feedback": "Baby wants milk!",
+        "difficulty": "easy"
+      },
+      {
+        "type": "scenario",
+        "scenario": "An old man is reading newspaper. He wears glasses.",
+        "chinese": "一位老爷爷在看报纸。他戴着眼镜。",
+        "question": "Who is reading?",
+        "options": [
+          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
+          "<img src=\"assets/images/father.png\" width=\"80\">",
+          "<img src=\"assets/images/brother.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "feedback": "Grandpa reads the newspaper!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "The whole family is having dinner together. There are many people at the table.",
+        "chinese": "全家人一起吃晚饭。桌子旁有很多人。",
+        "question": "This is a...",
+        "options": [
+          "<img src=\"assets/images/baby.png\" width=\"80\">",
+          "<img src=\"assets/images/family.png\" width=\"80\">",
+          "<img src=\"assets/images/father.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "feedback": "This is a family!",
+        "difficulty": "medium"
       }
     ]
   },

@@ -1196,7 +1196,7 @@ h1 {
   z-index: 100;
 }
 
-.achievements-btn, .quests-btn {
+.achievements-btn, .quests-btn, .map-btn {
   background: linear-gradient(135deg, #FFD700, #FFA500);
   color: #333;
   border: none;
@@ -1206,6 +1206,18 @@ h1 {
   font-weight: bold;
   box-shadow: 0 3px 0 #cc8800;
   cursor: pointer;
+}
+
+.map-btn {
+  background: linear-gradient(135deg, #58cc02, #7ce800);
+  box-shadow: 0 3px 0 #58a700;
+  color: white;
+}
+
+.pet-btn {
+  background: linear-gradient(135deg, #FF9800, #F57C00);
+  box-shadow: 0 3px 0 #E65100;
+  color: white;
 }
 
 .quests-btn {
