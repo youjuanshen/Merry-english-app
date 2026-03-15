@@ -577,15 +577,30 @@ nextBtn.onclick = function() {
 
     document.getElementById('login-screen').classList.remove('active');
     
+    // Dynamic Course Loading System
     const lessonStr = localStorage.getItem('currentLesson');
     if (lessonStr) {
         const lesson = JSON.parse(lessonStr);
         currentModule = lesson.module || 'listening';
+        
+        // Construct the variable name based on unit and lesson
+        // Default to lesson1 (Unit 1 Lesson 1) for fallback tests
+        const dataVarName = (lesson.unit === 1 && lesson.lesson === 1) ? 'lesson1' : `unit${lesson.unit}_lesson${lesson.lesson}`;
+        
+        // Dynamically grab the loaded data object from window
+        if (window[dataVarName]) {
+            currentLessonData = window[dataVarName];
+            console.log(`Loaded course data: ${dataVarName}`);
+        } else {
+            console.warn(`Course data ${dataVarName} not found, falling back to lesson1.`);
+            currentLessonData = lesson1;
+        }
     } else {
         currentModule = 'listening'; // fallback
+        currentLessonData = lesson1;
     }
-    currentPhase = 'pretest'; // Always start with pretest
     
+    currentPhase = 'pretest'; // Always start with pretest
     startGame();
 };
 
@@ -914,6 +929,9 @@ function handleAnswer(isCorrect, cardEl = null, correctAnswer = null) {
         if (nextBtn) {
             nextBtn.disabled = false;
         }
+
+        // 答对后解锁交互，允许点击下一题按钮
+        isAnimating = false;
 
         // 不再自动跳转，让学生点击下一题按钮
     } else {
