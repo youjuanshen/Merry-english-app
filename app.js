@@ -64,8 +64,8 @@ const DEFAULT_TIME_LIMIT = 30;
 // ========== 自适应难度系统 ==========
 // 前测统计（用于计算学生水平）
 let pretestStats = {
-    player1: { correct: 0, total: 0, totalTime: 0 },
-    player2: { correct: 0, total: 0, totalTime: 0 }
+    player1: { correct: 0, total: 0, totalTime: 0, wrongWords: [] },
+    player2: { correct: 0, total: 0, totalTime: 0, wrongWords: [] }
 };
 let questionStartTime = 0; // 每题开始时间
 
@@ -146,7 +146,11 @@ function syncStudentProgress(isComplete = false) {
         totalQuestions: moduleQuestions.length,
         stars: p1.stars + (p2 ? p2.stars : 0),
         completed: isComplete,
-        timestamp: Date.now()
+        timestamp: Date.now(),
+        // Add detailed stats for Teacher Dashboard
+        correct: pretestStats.player1.correct + (id2 ? pretestStats.player2.correct : 0) + p1.correct + (p2 ? p2.correct : 0),
+        totalAnswered: pretestStats.player1.total + (id2 ? pretestStats.player2.total : 0) + p1.total + (p2 ? p2.total : 0),
+        wrongWords: [...new Set([...pretestStats.player1.wrongWords, ...(id2 ? pretestStats.player2.wrongWords : [])])]
     };
     
     if (id1) localStorage.setItem(`studentProgress_${id1}`, JSON.stringify(progressData));
@@ -649,8 +653,8 @@ function startGame() {
 
     // 重置前测统计
     pretestStats = {
-        player1: { correct: 0, total: 0, totalTime: 0 },
-        player2: { correct: 0, total: 0, totalTime: 0 }
+        player1: { correct: 0, total: 0, totalTime: 0, wrongWords: [] },
+        player2: { correct: 0, total: 0, totalTime: 0, wrongWords: [] }
     };
     studentLevel = 'B'; // 重置为默认中等
     consecutiveCorrect = 0;
@@ -782,11 +786,11 @@ function renderQuestion() {
         difficultyIndicator = `<span class="difficulty-tag">${diffLabels[currentDifficulty] || ''}</span>`;
     }
 
+    // 简洁设计：进度只在顶部显示，这里只显示轮次和计时
     document.getElementById('turn-indicator').innerHTML = `
-        <span class="turn-progress">${progress}</span>
-        <span class="turn-name">👉 请 <strong>${currentPlayerName}</strong> 同学回答</span>
+        <span class="turn-name">请 <strong>${currentPlayerName}</strong> 回答</span>
         ${difficultyIndicator}
-        <span class="turn-timer" id="question-timer">⏱️ ${currentTimeLimit ? currentTimeLimit + 's' : '无限制'}</span>
+        <span class="turn-timer" id="question-timer">${currentTimeLimit ? currentTimeLimit + 's' : ''}</span>
     `;
 
     // Update header progress (头像中间)
@@ -955,13 +959,23 @@ function handleAnswer(isCorrect, cardEl = null, correctAnswer = null) {
     // 记录答题时间
     const responseTime = Date.now() - questionStartTime;
 
-    // 记录前测统计（用于计算学生水平）
-    if (currentPhase === 'pretest') {
-        const playerKey = currentPlayerIndex === 0 ? 'player1' : 'player2';
-        pretestStats[playerKey].total++;
-        pretestStats[playerKey].totalTime += responseTime;
-        if (isCorrect) {
-            pretestStats[playerKey].correct++;
+    // 记录前测或练习统计（用于计算学生水平和易错词收集）
+    const playerKey = currentPlayerIndex === 0 ? 'player1' : 'player2';
+    const targetStats = pretestStats[playerKey];
+    
+    // We update pretestStats as a global accumulator for the Teacher Dashboard export
+    targetStats.total++;
+    targetStats.totalTime += responseTime;
+    
+    if (isCorrect) {
+        targetStats.correct++;
+    } else {
+        const q = moduleQuestions[currentQuestionIndex];
+        if (q && q.word && !targetStats.wrongWords.includes(q.word)) {
+            // Store up to 10 unique wrong words per session
+            if (targetStats.wrongWords.length < 10) {
+                targetStats.wrongWords.push(q.word);
+            }
         }
     }
 

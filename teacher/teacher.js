@@ -237,3 +237,160 @@ function getModuleChinese(mod) {
     const map = { listening: '听力', reading: '阅读', writing: '写作', speaking: '口语' };
     return map[mod] || mod;
 }
+
+// --- DASHBOARD PAGE ---
+function initDashboardPage() {
+    let allProgress = [];
+    if (typeof localStorage !== 'undefined') {
+        for (let i = 1; i <= 27; i++) {
+            const pStr = localStorage.getItem('studentProgress_' + i);
+            if (pStr) {
+                allProgress.push(JSON.parse(pStr));
+            } else {
+                let sName = 'Student ' + i;
+                if (typeof observationGroups !== 'undefined') {
+                    observationGroups.forEach(g => {
+                        const s = g.find(st => st.id === i);
+                        if (s) sName = s.name;
+                    });
+                }
+                allProgress.push({
+                    studentId: i,
+                    studentName: sName,
+                    completed: false,
+                    correct: 0,
+                    totalAnswered: 0,
+                    stars: 0,
+                    wrongWords: []
+                });
+            }
+        }
+    }
+
+    // 1. Class Overview Render
+    const completedCount = allProgress.filter(p => p.completed).length;
+    let sumCorrect = 0, sumTotal = 0;
+    allProgress.forEach(p => {
+        sumCorrect += p.correct || 0;
+        sumTotal += p.totalAnswered || 0;
+    });
+    
+    const avgAcc = sumTotal > 0 ? Math.round((sumCorrect / sumTotal) * 100) : 0;
+    const trendIconClass = avgAcc >= 80 ? '📈' : (avgAcc < 60 ? '📉 ⚠️' : '➡️');
+    
+    // Extract weak words across class
+    const wordFreq = {};
+    allProgress.forEach(p => {
+        if (p.wrongWords) {
+            p.wrongWords.forEach(w => {
+                wordFreq[w] = (wordFreq[w] || 0) + 1;
+            });
+        }
+    });
+    const sortedWords = Object.entries(wordFreq).sort((a,b) => b[1] - a[1]).slice(0, 5);
+    const weakWordsHtml = sortedWords.length > 0 
+        ? sortedWords.map(item => `<span style="background:#fff3cd; color:#856404; padding:5px 10px; border-radius:15px; font-size:14px; border:1px solid #ffeeba;">${item[0]} (${item[1]}人错)</span>`).join(' ')
+        : '<span style="color:var(--teacher-success);">全班表现优异，暂无易错词！</span>';
+    
+    const tabTrend = document.getElementById('tab-trend');
+    if (tabTrend) {
+        tabTrend.innerHTML = `
+            <div class="teacher-card">
+                <h3 class="card-title">🏫 班级今日概览</h3>
+                <ul class="info-list">
+                    <li><strong>今日完成率：</strong> ${completedCount} / 27 (${Math.round((completedCount/27)*100)}%)</li>
+                    <li><strong>班级平均正确率：</strong> ${avgAcc}% ${trendIconClass}</li>
+                </ul>
+            </div>
+            <div class="teacher-card">
+                <h3 class="card-title">📖 薄弱词汇预警</h3>
+                <p style="font-size:14px; color:var(--teacher-text-light);">（建议下一节课重点复习）</p>
+                <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:10px;">
+                    ${weakWordsHtml}
+                </div>
+            </div>
+        `;
+    }
+
+    // 2. Student List Render
+    const listContainer = document.getElementById('student-list-container');
+    if (listContainer) {
+        listContainer.innerHTML = allProgress.map(s => {
+            const acc = s.totalAnswered > 0 ? Math.round((s.correct / s.totalAnswered) * 100) : 0;
+            let icon = acc > 75 ? '📈' : (acc < 60 ? '📉 ⚠️' : '➡️');
+            if (s.totalAnswered === 0) icon = '⏳ 未开始';
+            
+            const errList = (s.wrongWords && s.wrongWords.length > 0) 
+                ? `<div style="font-size:12px; color:#e74c3c; margin-top:5px;">易错词：${s.wrongWords.join(', ')}</div>` 
+                : `<div style="font-size:12px; color:#27ae60; margin-top:5px;">无明显薄弱词</div>`;
+
+            return `
+            <div class="student-list-item">
+                <div class="student-avatar" style="font-size:18px;">${s.studentId}</div>
+                <div class="student-info">
+                    <h4 class="student-name">${s.studentName}</h4>
+                    <p class="student-stats">正确率: ${s.totalAnswered > 0 ? acc + '%' : '--'} ${icon} | 总星星: ⭐ ${s.stars}</p>
+                    ${s.totalAnswered > 0 ? errList : ''}
+                </div>
+                ${s.completed ? '<span style="color:#27ae60;font-weight:bold;font-size:12px;white-space:nowrap;">✅ 已完成</span>' : ''}
+            </div>
+            `;
+        }).join('');
+    }
+}
+
+function downloadCSV() {
+    let allProgress = [];
+    for (let i = 1; i <= 27; i++) {
+        const p = localStorage.getItem('studentProgress_' + i);
+        if (p) allProgress.push(JSON.parse(p));
+    }
+    
+    if (allProgress.length === 0) {
+        alert("暂无学生数据可导出");
+        return;
+    }
+
+    let csvContent = "";
+    // UTF-8 BOM helps Excel recognize Chinese correctly
+    csvContent += "\uFEFF"; 
+    csvContent += "学号,姓名,搭档,完成状态,答题总数,正确数,正确率,获得星星,易错词\n";
+    
+    allProgress.forEach(p => {
+        const acc = p.totalAnswered > 0 ? Math.round((p.correct / p.totalAnswered) * 100) + '%' : '0%';
+        const status = p.completed ? "已完成" : "未完成";
+        const partner = p.partnerName || "无";
+        const words = (p.wrongWords || []).join('; ');
+        
+        let rowArray = [
+            p.studentId,
+            p.studentName,
+            partner,
+            status,
+            p.totalAnswered || 0,
+            p.correct || 0,
+            acc,
+            p.stars || 0,
+            words
+        ];
+        
+        // Escape quotes and comma
+        let rowStr = rowArray.map(v => '"' + String(v).replace(/"/g, '""') + '"').join(",");
+        csvContent += rowStr + "\n";
+    });
+    
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    
+    const dateStr = new Date().toISOString().split('T')[0];
+    link.download = "Merry英语成绩单_" + dateStr + ".csv";
+    document.body.appendChild(link);
+    link.click();
+    
+    setTimeout(() => {
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+    }, 100);
+}

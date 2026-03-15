@@ -27,6 +27,7 @@
         <div style="display: flex; background: white; margin-bottom: 15px;">
             <button class="tab-btn active" onclick="switchTab('stu')">学生档案</button>
             <button class="tab-btn" onclick="switchTab('trend')">班级趋势</button>
+            <button class="tab-btn" onclick="downloadCSV()" style="color: #27ae60; flex: 0.5;">📥 导出成绩</button>
         </div>
 
         <div id="tab-stu">
@@ -77,35 +78,6 @@
             
             event.target.classList.add('active');
             document.getElementById('tab-' + tabId).style.display = 'block';
-        }
-
-        function initDashboardPage() {
-            // Flatten observation groups into a single array
-            let allStudents = [];
-            observationGroups.forEach(g => {
-                allStudents = allStudents.concat(g);
-            });
-            // Sort by ID
-            allStudents.sort((a,b) => a.id - b.id);
-
-            const container = document.getElementById('student-list-container');
-            container.innerHTML = allStudents.map(s => {
-                // Mock stats
-                const accuracy = Math.floor(Math.random() * 40) + 50; // 50-90
-                const stars = Math.floor(Math.random() * 200) + 20;
-                let trendIcon = accuracy > 75 ? '📈' : (accuracy < 60 ? '📉 ⚠️' : '➡️');
-                
-                return `
-                <div class="student-list-item">
-                    <div class="student-avatar">${s.name.charAt(0)}</div>
-                    <div class="student-info">
-                        <h4 class="student-name">${s.id}. ${s.name}</h4>
-                        <p class="student-stats">正确率: ${accuracy}% ${trendIcon} | 总星星: ⭐ ${stars}</p>
-                    </div>
-                    <button class="action-btn" onclick="alert('查看 ${s.name} 的详细档案')">详细档案</button>
-                </div>
-                `;
-            }).join('');
         }
     </script>
 </body>

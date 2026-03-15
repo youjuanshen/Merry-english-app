@@ -47,17 +47,17 @@ function renderListeningQuestion(q, container) {
         imgEl.innerHTML = q.image;
         container.appendChild(imgEl);
 
-        // 两个大按钮并排
+        // 两个大按钮并排 - Yes/No 英文
         const grid = document.createElement('div');
         grid.className = 'tf-options-grid';
 
-        [['对', true, '#58cc02'], ['错', false, '#ff4b4b']].forEach(([label, value, color]) => {
+        [['Yes', true, '#58cc02'], ['No', false, '#ff4b4b']].forEach(([label, value, color]) => {
             const card = document.createElement('div');
             card.className = 'tf-option-card';
             card.innerHTML = label;
             card.style.borderColor = color;
             card.onclick = () => {
-                const correctAnswer = q.correct ? '对' : '错';
+                const correctAnswer = q.correct ? 'Yes' : 'No';
                 handleAnswer(value === q.correct, card, correctAnswer);
             };
             grid.appendChild(card);
