@@ -1,4 +1,3 @@
-// Auto-generated question bank UI Overhaul P2
 const unit4_lesson4 = {
   "id": "U4L4",
   "title": "Who is this?",
@@ -418,6 +417,58 @@ const unit4_lesson4 = {
         "difficulty": "hard",
         "image": "<img src=\"assets/images/brother.png\" width=\"80\">",
         "correct": false
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "姐姐",
+        "options": [
+          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
+          "<img src=\"assets/images/grandma.png\" width=\"80\">",
+          "<img src=\"assets/images/sister.png\" width=\"80\">",
+          "<img src=\"assets/images/father.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "easy"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "奶奶",
+        "options": [
+          "<img src=\"assets/images/grandma.png\" width=\"80\">",
+          "<img src=\"assets/images/mother.png\" width=\"80\">",
+          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
+          "<img src=\"assets/images/father.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "medium"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "妈妈",
+        "options": [
+          "<img src=\"assets/images/mother.png\" width=\"80\">",
+          "<img src=\"assets/images/baby.png\" width=\"80\">",
+          "<img src=\"assets/images/brother.png\" width=\"80\">",
+          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "medium"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "爷爷",
+        "options": [
+          "<img src=\"assets/images/family.png\" width=\"80\">",
+          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
+          "<img src=\"assets/images/brother.png\" width=\"80\">",
+          "<img src=\"assets/images/grandma.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "hard"
       }
     ]
   },

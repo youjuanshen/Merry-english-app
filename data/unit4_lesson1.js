@@ -1,4 +1,3 @@
-// Auto-generated question bank UI Overhaul P2
 const unit4_lesson1 = {
   "id": "U4L1",
   "title": "This is my mother.",
@@ -418,6 +417,58 @@ const unit4_lesson1 = {
           "<img src=\"assets/images/brother.png\" width=\"80\">"
         ],
         "correct": 0
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "妈妈",
+        "options": [
+          "<img src=\"assets/images/father.png\" width=\"80\">",
+          "<img src=\"assets/images/sister.png\" width=\"80\">",
+          "<img src=\"assets/images/brother.png\" width=\"80\">",
+          "<img src=\"assets/images/mother.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "difficulty": "easy"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "爸爸",
+        "options": [
+          "<img src=\"assets/images/sister.png\" width=\"80\">",
+          "<img src=\"assets/images/brother.png\" width=\"80\">",
+          "<img src=\"assets/images/mother.png\" width=\"80\">",
+          "<img src=\"assets/images/father.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "difficulty": "medium"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "爸爸",
+        "options": [
+          "<img src=\"assets/images/sister.png\" width=\"80\">",
+          "<img src=\"assets/images/brother.png\" width=\"80\">",
+          "<img src=\"assets/images/father.png\" width=\"80\">",
+          "<img src=\"assets/images/mother.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "medium"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "哥哥",
+        "options": [
+          "<img src=\"assets/images/father.png\" width=\"80\">",
+          "<img src=\"assets/images/sister.png\" width=\"80\">",
+          "<img src=\"assets/images/brother.png\" width=\"80\">",
+          "<img src=\"assets/images/mother.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "hard"
       }
     ]
   },

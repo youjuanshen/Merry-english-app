@@ -1,4 +1,3 @@
-// Auto-generated question bank UI Overhaul P2
 const unit4_lesson2 = {
   "id": "U4L2",
   "title": "I love my grandma.",
@@ -391,6 +390,54 @@ const unit4_lesson2 = {
           "<img src=\"assets/images/baby.png\" width=\"80\">"
         ],
         "correct": 2
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "宝宝",
+        "options": [
+          "<img src=\"assets/images/baby.png\" width=\"80\">",
+          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
+          "<img src=\"assets/images/grandma.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "easy"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "爷爷",
+        "options": [
+          "<img src=\"assets/images/baby.png\" width=\"80\">",
+          "<img src=\"assets/images/grandma.png\" width=\"80\">",
+          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "medium"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "奶奶",
+        "options": [
+          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
+          "<img src=\"assets/images/grandma.png\" width=\"80\">",
+          "<img src=\"assets/images/baby.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "medium"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "爷爷",
+        "options": [
+          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
+          "<img src=\"assets/images/grandma.png\" width=\"80\">",
+          "<img src=\"assets/images/baby.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "hard"
       }
     ]
   },

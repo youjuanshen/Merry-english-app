@@ -1,4 +1,3 @@
-// Auto-generated question bank UI Overhaul P2
 const unit1_lesson4 = {
   "id": "U1L4",
   "title": "What is this? It's a dog.",
@@ -433,6 +432,58 @@ const unit1_lesson4 = {
           "<img src=\"assets/images/bear.png\" width=\"80\">"
         ],
         "correct": 2
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "老鼠",
+        "options": [
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/fish.png\" width=\"80\">",
+          "<img src=\"assets/images/bird.png\" width=\"80\">",
+          "<img src=\"assets/images/lion.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "easy"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "大象",
+        "options": [
+          "<img src=\"assets/images/lion.png\" width=\"80\">",
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">",
+          "<img src=\"assets/images/duck.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "medium"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "鸭子",
+        "options": [
+          "<img src=\"assets/images/bird.png\" width=\"80\">",
+          "<img src=\"assets/images/fish.png\" width=\"80\">",
+          "<img src=\"assets/images/duck.png\" width=\"80\">",
+          "<img src=\"assets/images/cat.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "medium"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "熊",
+        "options": [
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+          "<img src=\"assets/images/tiger.png\" width=\"80\">",
+          "<img src=\"assets/images/lion.png\" width=\"80\">",
+          "<img src=\"assets/images/bear.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "difficulty": "hard"
       }
     ]
   },

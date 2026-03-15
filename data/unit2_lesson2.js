@@ -1,4 +1,3 @@
-// Auto-generated question bank UI Overhaul P2
 const unit2_lesson2 = {
   "id": "U2L2",
   "title": "I like orange.",
@@ -418,6 +417,114 @@ const unit2_lesson2 = {
           "<img src=\"assets/images/orange_orange.png\" width=\"80\">"
         ],
         "correct": 0
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "橙色",
+        "options": [
+          "<img src=\"assets/images/brown_bear.png\" width=\"80\">",
+          "<img src=\"assets/images/purple_grape.png\" width=\"80\">",
+          "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
+          "<img src=\"assets/images/pink_flower.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "easy"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "棕色",
+        "options": [
+          "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
+          "<img src=\"assets/images/pink_flower.png\" width=\"80\">",
+          "<img src=\"assets/images/purple_grape.png\" width=\"80\">",
+          "<img src=\"assets/images/brown_bear.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "difficulty": "medium"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "粉色",
+        "options": [
+          "<img src=\"assets/images/brown_bear.png\" width=\"80\">",
+          "<img src=\"assets/images/purple_grape.png\" width=\"80\">",
+          "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
+          "<img src=\"assets/images/pink_flower.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "difficulty": "medium"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "紫色",
+        "options": [
+          "<img src=\"assets/images/purple_grape.png\" width=\"80\">",
+          "<img src=\"assets/images/pink_flower.png\" width=\"80\">",
+          "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
+          "<img src=\"assets/images/brown_bear.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "hard"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Max is at the zoo. He sees a big, scary animal.",
+        "chinese": "麦克斯在动物园。他看到一只又大又可怕的动物。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/duck.png\" width=\"80\">",
+          "<img src=\"assets/images/fish.png\" width=\"80\">",
+          "<img src=\"assets/images/tiger.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "feedback": "Tigers are big and scary!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Mia is in the garden. She wants to smell something.",
+        "chinese": "米娅在花园里。她想闻闻什么东西。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/cat.png\" width=\"80\">",
+          "<img src=\"assets/images/pink_flower.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "feedback": "Flowers smell good!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Leo wants an animal that can climb trees.",
+        "chinese": "里奥想要一只会爬树的动物。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/monkey.png\" width=\"80\">",
+          "<img src=\"assets/images/fish.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "feedback": "Monkeys climb trees very well!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Sarah looks at the sky. It is very bright.",
+        "chinese": "莎拉看着天空。非常明亮。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
+          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
+          "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "feedback": "The sun is bright!",
+        "difficulty": "medium"
       }
     ]
   },

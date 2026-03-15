@@ -1,4 +1,3 @@
-// Auto-generated question bank UI Overhaul P2
 const unit2_lesson1 = {
   "id": "U2L1",
   "title": "It's red.",
@@ -428,6 +427,114 @@ const unit2_lesson1 = {
         "difficulty": "hard",
         "image": "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
         "correct": false
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "黄色",
+        "options": [
+          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
+          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
+          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
+          "<img src=\"assets/images/red_apple.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "easy"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "红色",
+        "options": [
+          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
+          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
+          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
+          "<img src=\"assets/images/red_apple.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "difficulty": "medium"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "黄色",
+        "options": [
+          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
+          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
+          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
+          "<img src=\"assets/images/green_tree.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "medium"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "蓝色",
+        "options": [
+          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
+          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
+          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
+          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "hard"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Tom is at the pet shop. He wants a quiet pet.",
+        "chinese": "汤姆在宠物店，他想要一只安静的宠物。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/monkey.png\" width=\"80\">",
+          "<img src=\"assets/images/fish.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "feedback": "A fish is quiet!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Lily wants to play catch in the park.",
+        "chinese": "莉莉想在公园玩接球游戏。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/fish.png\" width=\"80\">",
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "feedback": "Dogs love playing catch!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Sam is hungry. He wants a big fruit.",
+        "chinese": "山姆饿了。他想要一个大水果。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/fish.png\" width=\"80\">",
+          "<img src=\"assets/images/orange_orange.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "feedback": "An orange is a fruit!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Emma sees something flying in the sky.",
+        "chinese": "艾玛看到天上有东西在飞。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/bear.png\" width=\"80\">",
+          "<img src=\"assets/images/bird.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "feedback": "Birds can fly!",
+        "difficulty": "medium"
       }
     ]
   },

@@ -1,4 +1,3 @@
-// Auto-generated question bank UI Overhaul P2
 const unit3_lesson1 = {
   "id": "U3L1",
   "title": "I have two apples.",
@@ -438,6 +437,114 @@ const unit3_lesson1 = {
           "<img src=\"assets/images/four.png\" width=\"80\">"
         ],
         "correct": 1
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "四",
+        "options": [
+          "<img src=\"assets/images/one.png\" width=\"80\">",
+          "<img src=\"assets/images/five.png\" width=\"80\">",
+          "<img src=\"assets/images/four.png\" width=\"80\">",
+          "<img src=\"assets/images/three.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "easy"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "一",
+        "options": [
+          "<img src=\"assets/images/two.png\" width=\"80\">",
+          "<img src=\"assets/images/four.png\" width=\"80\">",
+          "<img src=\"assets/images/three.png\" width=\"80\">",
+          "<img src=\"assets/images/one.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "difficulty": "medium"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "三",
+        "options": [
+          "<img src=\"assets/images/one.png\" width=\"80\">",
+          "<img src=\"assets/images/three.png\" width=\"80\">",
+          "<img src=\"assets/images/five.png\" width=\"80\">",
+          "<img src=\"assets/images/four.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "medium"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "一",
+        "options": [
+          "<img src=\"assets/images/one.png\" width=\"80\">",
+          "<img src=\"assets/images/two.png\" width=\"80\">",
+          "<img src=\"assets/images/four.png\" width=\"80\">",
+          "<img src=\"assets/images/three.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "hard"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Leo wants an animal that can climb trees.",
+        "chinese": "里奥想要一只会爬树的动物。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/elephant.png\" width=\"80\">",
+          "<img src=\"assets/images/monkey.png\" width=\"80\">",
+          "<img src=\"assets/images/fish.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "feedback": "Monkeys climb trees very well!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Sarah looks at the sky. It is very bright.",
+        "chinese": "莎拉看着天空。非常明亮。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
+          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
+          "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "feedback": "The sun is bright!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Jack wants a pet with long ears.",
+        "chinese": "杰克想要一只有长耳朵的宠物。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+          "<img src=\"assets/images/monkey.png\" width=\"80\">",
+          "<img src=\"assets/images/tiger.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "feedback": "Rabbits have long ears!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Anna is small and wants a small pet.",
+        "chinese": "安娜很小，她想要一只小宠物。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">",
+          "<img src=\"assets/images/bear.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "feedback": "A mouse is very small!",
+        "difficulty": "medium"
       }
     ]
   },

@@ -1,4 +1,3 @@
-// Auto-generated question bank UI Overhaul P2
 const unit4_lesson3 = {
   "id": "U4L3",
   "title": "My family has five.",

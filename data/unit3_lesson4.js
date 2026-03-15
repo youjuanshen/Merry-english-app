@@ -1,4 +1,3 @@
-// Auto-generated question bank UI Overhaul P2
 const unit3_lesson4 = {
   "id": "U3L4",
   "title": "Count the apples.",
@@ -423,6 +422,114 @@ const unit3_lesson4 = {
           "<img src=\"assets/images/four.png\" width=\"80\">"
         ],
         "correct": 3
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "四",
+        "options": [
+          "<img src=\"assets/images/three.png\" width=\"80\">",
+          "<img src=\"assets/images/five.png\" width=\"80\">",
+          "<img src=\"assets/images/six.png\" width=\"80\">",
+          "<img src=\"assets/images/four.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "difficulty": "easy"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "五",
+        "options": [
+          "<img src=\"assets/images/one.png\" width=\"80\">",
+          "<img src=\"assets/images/four.png\" width=\"80\">",
+          "<img src=\"assets/images/eight.png\" width=\"80\">",
+          "<img src=\"assets/images/five.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "difficulty": "medium"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "二",
+        "options": [
+          "<img src=\"assets/images/four.png\" width=\"80\">",
+          "<img src=\"assets/images/eight.png\" width=\"80\">",
+          "<img src=\"assets/images/seven.png\" width=\"80\">",
+          "<img src=\"assets/images/two.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "difficulty": "medium"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "三",
+        "options": [
+          "<img src=\"assets/images/seven.png\" width=\"80\">",
+          "<img src=\"assets/images/three.png\" width=\"80\">",
+          "<img src=\"assets/images/six.png\" width=\"80\">",
+          "<img src=\"assets/images/four.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "hard"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Jack wants a pet with long ears.",
+        "chinese": "杰克想要一只有长耳朵的宠物。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+          "<img src=\"assets/images/monkey.png\" width=\"80\">",
+          "<img src=\"assets/images/tiger.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "feedback": "Rabbits have long ears!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Anna is small and wants a small pet.",
+        "chinese": "安娜很小，她想要一只小宠物。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">",
+          "<img src=\"assets/images/bear.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "feedback": "A mouse is very small!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Tom is at the pet shop. He wants a quiet pet.",
+        "chinese": "汤姆在宠物店，他想要一只安静的宠物。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/fish.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/monkey.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "feedback": "A fish is quiet!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Lily wants to play catch in the park.",
+        "chinese": "莉莉想在公园玩接球游戏。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/fish.png\" width=\"80\">",
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "feedback": "Dogs love playing catch!",
+        "difficulty": "medium"
       }
     ]
   },

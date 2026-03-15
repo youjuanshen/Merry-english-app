@@ -1,4 +1,3 @@
-// Auto-generated question bank UI Overhaul P2
 const unit3_lesson2 = {
   "id": "U3L2",
   "title": "How many birds?",
@@ -418,6 +417,114 @@ const unit3_lesson2 = {
           "<img src=\"assets/images/eight.png\" width=\"80\">"
         ],
         "correct": 0
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "十",
+        "options": [
+          "<img src=\"assets/images/nine.png\" width=\"80\">",
+          "<img src=\"assets/images/ten.png\" width=\"80\">",
+          "<img src=\"assets/images/eight.png\" width=\"80\">",
+          "<img src=\"assets/images/seven.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "easy"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "七",
+        "options": [
+          "<img src=\"assets/images/seven.png\" width=\"80\">",
+          "<img src=\"assets/images/six.png\" width=\"80\">",
+          "<img src=\"assets/images/eight.png\" width=\"80\">",
+          "<img src=\"assets/images/ten.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "medium"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "十",
+        "options": [
+          "<img src=\"assets/images/nine.png\" width=\"80\">",
+          "<img src=\"assets/images/ten.png\" width=\"80\">",
+          "<img src=\"assets/images/seven.png\" width=\"80\">",
+          "<img src=\"assets/images/eight.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "medium"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "十",
+        "options": [
+          "<img src=\"assets/images/ten.png\" width=\"80\">",
+          "<img src=\"assets/images/eight.png\" width=\"80\">",
+          "<img src=\"assets/images/seven.png\" width=\"80\">",
+          "<img src=\"assets/images/six.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "hard"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Tom is at the pet shop. He wants a quiet pet.",
+        "chinese": "汤姆在宠物店，他想要一只安静的宠物。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/fish.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/monkey.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "feedback": "A fish is quiet!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Lily wants to play catch in the park.",
+        "chinese": "莉莉想在公园玩接球游戏。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/fish.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "feedback": "Dogs love playing catch!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Sam is hungry. He wants a big fruit.",
+        "chinese": "山姆饿了。他想要一个大水果。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/fish.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "feedback": "An orange is a fruit!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Emma sees something flying in the sky.",
+        "chinese": "艾玛看到天上有东西在飞。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/bear.png\" width=\"80\">",
+          "<img src=\"assets/images/bird.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "feedback": "Birds can fly!",
+        "difficulty": "medium"
       }
     ]
   },

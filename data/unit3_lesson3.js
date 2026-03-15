@@ -1,4 +1,3 @@
-// Auto-generated question bank UI Overhaul P2
 const unit3_lesson3 = {
   "id": "U3L3",
   "title": "Two plus three is five.",
@@ -403,6 +402,114 @@ const unit3_lesson3 = {
         "difficulty": "easy",
         "image": "<img src=\"assets/images/four.png\" width=\"80\">",
         "correct": true
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "七",
+        "options": [
+          "<img src=\"assets/images/two.png\" width=\"80\">",
+          "<img src=\"assets/images/seven.png\" width=\"80\">",
+          "<img src=\"assets/images/four.png\" width=\"80\">",
+          "<img src=\"assets/images/five.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "easy"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "二",
+        "options": [
+          "<img src=\"assets/images/one.png\" width=\"80\">",
+          "<img src=\"assets/images/eight.png\" width=\"80\">",
+          "<img src=\"assets/images/five.png\" width=\"80\">",
+          "<img src=\"assets/images/two.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "difficulty": "medium"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "一",
+        "options": [
+          "<img src=\"assets/images/six.png\" width=\"80\">",
+          "<img src=\"assets/images/two.png\" width=\"80\">",
+          "<img src=\"assets/images/one.png\" width=\"80\">",
+          "<img src=\"assets/images/five.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "medium"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "五",
+        "options": [
+          "<img src=\"assets/images/two.png\" width=\"80\">",
+          "<img src=\"assets/images/six.png\" width=\"80\">",
+          "<img src=\"assets/images/five.png\" width=\"80\">",
+          "<img src=\"assets/images/one.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "hard"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Max is at the zoo. He sees a big, scary animal.",
+        "chinese": "麦克斯在动物园。他看到一只又大又可怕的动物。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/fish.png\" width=\"80\">",
+          "<img src=\"assets/images/tiger.png\" width=\"80\">",
+          "<img src=\"assets/images/duck.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "feedback": "Tigers are big and scary!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Mia is in the garden. She wants to smell something.",
+        "chinese": "米娅在花园里。她想闻闻什么东西。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/cat.png\" width=\"80\">",
+          "<img src=\"assets/images/pink_flower.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "feedback": "Flowers smell good!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Leo wants an animal that can climb trees.",
+        "chinese": "里奥想要一只会爬树的动物。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/monkey.png\" width=\"80\">",
+          "<img src=\"assets/images/fish.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "feedback": "Monkeys climb trees very well!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Sarah looks at the sky. It is very bright.",
+        "chinese": "莎拉看着天空。非常明亮。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
+          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
+          "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "feedback": "The sun is bright!",
+        "difficulty": "medium"
       }
     ]
   },

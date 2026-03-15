@@ -1,4 +1,3 @@
-// Auto-generated question bank UI Overhaul P2
 const unit1_lesson2 = {
   "id": "U1L2",
   "title": "I see a monkey.",
@@ -423,6 +422,58 @@ const unit1_lesson2 = {
           "<img src=\"assets/images/lion.png\" width=\"80\">"
         ],
         "correct": 0
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "狮子",
+        "options": [
+          "<img src=\"assets/images/elephant.png\" width=\"80\">",
+          "<img src=\"assets/images/lion.png\" width=\"80\">",
+          "<img src=\"assets/images/monkey.png\" width=\"80\">",
+          "<img src=\"assets/images/tiger.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "easy"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "老虎",
+        "options": [
+          "<img src=\"assets/images/elephant.png\" width=\"80\">",
+          "<img src=\"assets/images/tiger.png\" width=\"80\">",
+          "<img src=\"assets/images/monkey.png\" width=\"80\">",
+          "<img src=\"assets/images/lion.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "medium"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "狮子",
+        "options": [
+          "<img src=\"assets/images/lion.png\" width=\"80\">",
+          "<img src=\"assets/images/monkey.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">",
+          "<img src=\"assets/images/tiger.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "medium"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "老虎",
+        "options": [
+          "<img src=\"assets/images/lion.png\" width=\"80\">",
+          "<img src=\"assets/images/monkey.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">",
+          "<img src=\"assets/images/tiger.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "difficulty": "hard"
       }
     ]
   },

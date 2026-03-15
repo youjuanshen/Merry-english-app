@@ -1,4 +1,3 @@
-// Auto-generated question bank UI Overhaul P2
 const unit2_lesson4 = {
   "id": "U2L4",
   "title": "What color is it?",
@@ -408,6 +407,114 @@ const unit2_lesson4 = {
           "<img src=\"assets/images/orange_orange.png\" width=\"80\">"
         ],
         "correct": 3
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "黄色",
+        "options": [
+          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
+          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
+          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
+          "<img src=\"assets/images/purple_grape.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "easy"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "蓝色",
+        "options": [
+          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
+          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
+          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
+          "<img src=\"assets/images/orange_orange.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "medium"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "绿色",
+        "options": [
+          "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
+          "<img src=\"assets/images/brown_bear.png\" width=\"80\">",
+          "<img src=\"assets/images/black_cat.png\" width=\"80\">",
+          "<img src=\"assets/images/green_tree.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "difficulty": "medium"
+      },
+      {
+        "type": "balloon_pop",
+        "text": "Find the word",
+        "chinese": "粉色",
+        "options": [
+          "<img src=\"assets/images/pink_flower.png\" width=\"80\">",
+          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
+          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
+          "<img src=\"assets/images/green_tree.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "hard"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Sam is hungry. He wants a big fruit.",
+        "chinese": "山姆饿了。他想要一个大水果。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/fish.png\" width=\"80\">",
+          "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
+          "<img src=\"assets/images/mouse.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "feedback": "An orange is a fruit!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Emma sees something flying in the sky.",
+        "chinese": "艾玛看到天上有东西在飞。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/bear.png\" width=\"80\">",
+          "<img src=\"assets/images/bird.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "feedback": "Birds can fly!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Max is at the zoo. He sees a big, scary animal.",
+        "chinese": "麦克斯在动物园。他看到一只又大又可怕的动物。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/tiger.png\" width=\"80\">",
+          "<img src=\"assets/images/duck.png\" width=\"80\">",
+          "<img src=\"assets/images/fish.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "feedback": "Tigers are big and scary!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Mia is in the garden. She wants to smell something.",
+        "chinese": "米娅在花园里。她想闻闻什么东西。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/cat.png\" width=\"80\">",
+          "<img src=\"assets/images/pink_flower.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "feedback": "Flowers smell good!",
+        "difficulty": "medium"
       }
     ]
   },

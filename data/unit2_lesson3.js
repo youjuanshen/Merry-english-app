@@ -1,4 +1,3 @@
-// Auto-generated question bank UI Overhaul P2
 const unit2_lesson3 = {
   "id": "U2L3",
   "title": "The cat is black.",
@@ -361,6 +360,62 @@ const unit2_lesson3 = {
           "<img src=\"assets/images/black_cat.png\" width=\"80\">"
         ],
         "correct": 0
+      },
+      {
+        "type": "scenario",
+        "scenario": "Jack wants a pet with long ears.",
+        "chinese": "杰克想要一只有长耳朵的宠物。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/monkey.png\" width=\"80\">",
+          "<img src=\"assets/images/tiger.png\" width=\"80\">",
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "feedback": "Rabbits have long ears!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Anna is small and wants a small pet.",
+        "chinese": "安娜很小，她想要一只小宠物。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/elephant.png\" width=\"80\">",
+          "<img src=\"assets/images/bear.png\" width=\"80\">",
+          "<img src=\"assets/images/mouse.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "feedback": "A mouse is very small!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Tom is at the pet shop. He wants a quiet pet.",
+        "chinese": "汤姆在宠物店，他想要一只安静的宠物。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/monkey.png\" width=\"80\">",
+          "<img src=\"assets/images/fish.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "feedback": "A fish is quiet!",
+        "difficulty": "medium"
+      },
+      {
+        "type": "scenario",
+        "scenario": "Lily wants to play catch in the park.",
+        "chinese": "莉莉想在公园玩接球游戏。",
+        "question": "What should we pick?",
+        "options": [
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/fish.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "feedback": "Dogs love playing catch!",
+        "difficulty": "medium"
       }
     ]
   },
