@@ -37,10 +37,11 @@
 
 | # | 任务名称 | 状态 | 优先级 |
 |---|----------|------|--------|
-| 17 | 🔥 UI全面测试与修复 | ✅ **已修复（Claude）** | **完成** |
-| 18 | 实战题型渲染器开发 | ✅ 已完成 | - |
+| 19 | 🔥 真机UI测试验证 | 🚀 **立即开始** | **最高** |
+| 20 | 实现成就系统 | ⏳ 待开始 | 高 |
+| 21 | 实现每日任务 | ⏳ 待开始 | 高 |
 
-> ✅ **任务17已由Claude完成UI修复。** 详见下方修复记录。
+> ⚠️ **Gemini 请立即开始任务19！** 用Puppeteer测试Claude刚修复的UI。
 
 ### 已完成任务（续）
 
@@ -357,4 +358,145 @@ case 'scenario':
 
 ---
 
-*最后更新：2026-03-16 by Claude - 任务17已完成！6个UI问题已修复*
+---
+
+# 🔥 任务19：真机UI测试验证
+
+## 任务背景
+
+Claude刚修复了6个UI问题，需要用Puppeteer验证修复效果。
+
+## 测试步骤
+
+### 步骤1：用Puppeteer打开学生端
+
+```javascript
+// iPhone 7 Plus 尺寸
+await page.setViewport({ width: 414, height: 736 });
+await page.goto('https://youjuanshen.github.io/Merry-english-app/');
+```
+
+### 步骤2：测试学生选择页
+
+1. 等待3秒倒计时结束
+2. 截图检查学生卡片布局
+3. **验证点**：每页显示12人（3列x4行）
+4. 滑动翻页，确认27人分3页显示
+
+### 步骤3：测试判断题(listen_tf)
+
+1. 选择两个学生，点击"开始学习"
+2. 找到listen_tf类型的题目
+3. 截图检查：
+   - 喇叭按钮在最上面
+   - 图片在中间，不被遮挡
+   - YES/NO按钮在底部，与图片有间距
+
+### 步骤4：测试反馈面板
+
+1. 答对一道题
+2. **验证点**：底部滑出绿色反馈面板
+3. 点击"继续"按钮
+4. **验证点**：面板消失，进入下一题
+
+### 步骤5：输出测试报告
+
+创建 `/docs/测试报告-20260316.md`，包含：
+- 每个测试点的截图
+- 通过/失败状态
+- 发现的新问题（如果有）
+
+---
+
+# 🔥 任务20：实现成就系统
+
+## 任务背景
+
+参考 `/docs/新功能设计.md` 中的成就系统设计。
+
+## 你需要做的
+
+### 第1步：创建成就数据文件
+
+创建 `/data/achievements.js`：
+
+```javascript
+var achievementDefinitions = [
+    // 学习成就
+    { id: 'first_answer', name: '小小学徒', emoji: '🐣', condition: 'first_question', reward: 5 },
+    { id: 'ten_correct', name: '初露锋芒', emoji: '🐥', condition: 'correct_10', reward: 10 },
+    { id: 'fifty_correct', name: '小有成就', emoji: '🐤', condition: 'correct_50', reward: 20 },
+    // ... 更多成就
+];
+```
+
+### 第2步：在app.js添加成就检测逻辑
+
+在 `handleAnswer()` 函数中，答对后检查是否解锁新成就：
+
+```javascript
+function checkAchievements() {
+    var userData = JSON.parse(localStorage.getItem('merryUserData') || '{}');
+    var earned = userData.achievements || [];
+
+    // 检查各项成就条件
+    // ...
+}
+```
+
+### 第3步：添加成就弹窗UI
+
+答对后如果解锁新成就，显示庆祝弹窗。
+
+### 第4步：添加"我的成就"页面入口
+
+在学生选择页添加一个"🏆"按钮，点击查看已获得的成就。
+
+---
+
+# 🔥 任务21：实现每日任务
+
+## 任务背景
+
+参考 `/docs/新功能设计.md` 中的每日任务设计。
+
+## 你需要做的
+
+### 第1步：创建每日任务数据
+
+```javascript
+var dailyQuests = [
+    { id: 'daily_20', name: '今日练习', target: 20, reward: 10, icon: '🎯' },
+    { id: 'streak_5', name: '连胜挑战', target: 5, reward: 15, icon: '🔥' },
+    { id: 'duo_1', name: '找个搭档', target: 1, reward: 10, icon: '🤝' },
+    { id: 'review_1', name: '复习旧课', target: 1, reward: 5, icon: '📚' }
+];
+```
+
+### 第2步：每日重置逻辑
+
+每天0点重置任务进度：
+
+```javascript
+function checkDailyReset() {
+    var today = new Date().toDateString();
+    var lastDate = localStorage.getItem('lastQuestDate');
+    if (lastDate !== today) {
+        // 重置每日任务
+        localStorage.setItem('dailyQuestProgress', JSON.stringify({}));
+        localStorage.setItem('lastQuestDate', today);
+    }
+}
+```
+
+### 第3步：任务进度追踪
+
+在答题过程中更新任务进度。
+
+### 第4步：任务完成奖励
+
+任务完成时发放星星奖励。
+
+---
+
+*最后更新：2026-03-16 by Claude - 分配任务19-21给Gemini*
