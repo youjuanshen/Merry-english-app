@@ -75,10 +75,16 @@ h1 {
   letter-spacing: 20px;
   margin-bottom: 30px;
 }
-.welcome-loading {
-  font-size: 16px;
-  color: #888;
-  animation: pulse 1.5s infinite;
+.welcome-countdown {
+  font-size: 60px;
+  font-weight: bold;
+  color: #FF6B6B;
+  animation: countdownPop 1s infinite;
+}
+
+@keyframes countdownPop {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
 }
 
 @keyframes floatBounce {
@@ -138,23 +144,49 @@ h1 {
   animation: pulse 2s infinite;
 }
 
-/* Student List */
-.student-list {
+/* Student Pages Container - 分页滑动 */
+.student-pages-container {
   display: flex;
-  flex-direction: row;
   overflow-x: auto;
-  overflow-y: hidden;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  gap: 12px;
-  padding: 15px;
-  margin-bottom: 20px;
-  /* hide scrollbar but keep functionality */
   scrollbar-width: none;
   -ms-overflow-style: none;
+  margin-bottom: 10px;
 }
-.student-list::-webkit-scrollbar {
+.student-pages-container::-webkit-scrollbar {
   display: none;
+}
+
+/* 每一页 */
+.student-page {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+}
+
+/* 页码指示器 */
+.page-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+.page-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  transition: all 0.3s;
+}
+.page-dot.active {
+  background: #FF6B6B;
+  transform: scale(1.2);
 }
 
 .student-card {
@@ -617,9 +649,10 @@ h1 {
   background: #fff3cd;
   border: 2px solid #ffc107;
   border-radius: 12px;
-  padding: 15px 20px;
-  margin-top: 20px;
-  font-size: 18px;
+  padding: 12px 15px;
+  margin-top: 10px;
+  margin-bottom: 80px; /* 给下一题按钮留空间 */
+  font-size: 16px;
   text-align: center;
   color: #856404;
   -webkit-animation: hintSlide 0.3s ease-out;
@@ -720,12 +753,13 @@ h1 {
 /* 答对时显示正确答案+中文翻译 - 替换题目位置 */
 .correct-answer-display {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 15px;
   width: 100%;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 12px 20px;
   background: linear-gradient(135deg, #d7ffb8, #e8ffe0);
   border: 3px solid var(--primary);
   border-radius: 16px;
@@ -746,14 +780,15 @@ h1 {
 }
 
 .correct-answer-display .answer-english {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   color: var(--primary);
 }
 .correct-answer-display .answer-chinese {
   font-size: 16px;
   color: #666;
-  margin-top: 5px;
+  padding-left: 15px;
+  border-left: 2px solid var(--primary);
 }
 
 @-webkit-keyframes slideUp {

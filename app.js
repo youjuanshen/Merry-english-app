@@ -13,19 +13,30 @@ let currentPlayerIndex = 0;
 let currentQuestionIndex = 0;
 let isAnimating = false;
 
-// Welcome Screen Logic
+// Welcome Screen Logic - 3,2,1倒计时
 document.addEventListener('DOMContentLoaded', () => {
     const welcomeScreen = document.getElementById('welcome-screen');
     const loginScreen = document.getElementById('login-screen');
-    
-    if (welcomeScreen && loginScreen) {
-        setTimeout(() => {
-            welcomeScreen.style.opacity = '0';
-            setTimeout(() => {
-                welcomeScreen.classList.remove('active');
-                loginScreen.classList.add('active');
-            }, 500); // match transition duration in CSS
-        }, 2000); // Wait 2 seconds
+    const countdownEl = document.getElementById('countdown');
+
+    if (welcomeScreen && loginScreen && countdownEl) {
+        let count = 3;
+        const countdownInterval = setInterval(() => {
+            count--;
+            if (count > 0) {
+                countdownEl.textContent = count;
+            } else {
+                clearInterval(countdownInterval);
+                countdownEl.textContent = 'GO!';
+                setTimeout(() => {
+                    welcomeScreen.style.opacity = '0';
+                    setTimeout(() => {
+                        welcomeScreen.classList.remove('active');
+                        loginScreen.classList.add('active');
+                    }, 500);
+                }, 300);
+            }
+        }, 1000);
     }
 
     // Load current lesson from localStorage
@@ -421,14 +432,46 @@ function speakWord(word) {
     }
 }
 
-// Render student list
-const studentListEl = document.getElementById('student-list');
-students.forEach(name => {
-    const el = document.createElement('div');
-    el.className = 'student-card';
-    el.textContent = name;
-    el.onclick = () => toggleStudent(name, el);
-    studentListEl.appendChild(el);
+// Render student list - 分页形式（每页10人）
+const studentPagesEl = document.getElementById('student-pages');
+const pageDotsEl = document.getElementById('page-dots');
+const STUDENTS_PER_PAGE = 10;
+const totalPages = Math.ceil(students.length / STUDENTS_PER_PAGE);
+
+// 创建分页
+for (let page = 0; page < totalPages; page++) {
+    const pageEl = document.createElement('div');
+    pageEl.className = 'student-page';
+
+    const startIdx = page * STUDENTS_PER_PAGE;
+    const endIdx = Math.min(startIdx + STUDENTS_PER_PAGE, students.length);
+
+    for (let i = startIdx; i < endIdx; i++) {
+        const name = students[i];
+        const el = document.createElement('div');
+        el.className = 'student-card';
+        el.textContent = name.replace(/^\d+\.\s*/, ''); // 去掉序号
+        el.onclick = () => toggleStudent(name, el);
+        pageEl.appendChild(el);
+    }
+
+    studentPagesEl.appendChild(pageEl);
+
+    // 创建页码点
+    const dot = document.createElement('div');
+    dot.className = 'page-dot' + (page === 0 ? ' active' : '');
+    pageDotsEl.appendChild(dot);
+}
+
+// 监听滚动更新页码指示器
+studentPagesEl.addEventListener('scroll', () => {
+    const scrollLeft = studentPagesEl.scrollLeft;
+    const pageWidth = studentPagesEl.offsetWidth;
+    const currentPage = Math.round(scrollLeft / pageWidth);
+    const dots = pageDotsEl.querySelectorAll('.page-dot');
+    dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === currentPage);
+    });
 });
 
 const nextBtn = document.getElementById('next-btn');
