@@ -593,17 +593,17 @@ h1 {
 /* 答对时显示正确答案+中文翻译 - 横条形式，从左滑入 */
 .correct-answer-display {
   position: fixed;
-  top: 85px; /* 进度条下方，题目上方 */
-  left: 0;
-  right: 0;
+  top: 82px; /* 进度条下方，题目上方 */
+  left: 10px;
+  right: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
-  padding: 10px 20px;
+  gap: 10px;
+  padding: 5px 15px;
   background: linear-gradient(90deg, #d7ffb8, #b8ffd7, #d7ffb8);
-  border-top: 2px solid var(--primary);
-  border-bottom: 2px solid var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 8px;
   z-index: 50;
   -webkit-animation: slideInFromLeft 0.4s ease-out;
   animation: slideInFromLeft 0.4s ease-out;
@@ -632,15 +632,15 @@ h1 {
 }
 
 .correct-answer-display .answer-english {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   color: var(--primary);
 }
 .correct-answer-display .answer-chinese {
-  font-size: 16px;
+  font-size: 13px;
   color: #555;
-  padding-left: 10px;
-  border-left: 2px solid var(--primary);
+  padding-left: 8px;
+  border-left: 1px solid var(--primary);
 }
 
 @-webkit-keyframes slideUp {
