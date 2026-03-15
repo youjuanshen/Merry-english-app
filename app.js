@@ -15,8 +15,8 @@ let isAnimating = false;
 
 // 计时器相关
 let questionTimer = null;
-let timeLeft = 30; // 每题30秒
-const TIME_PER_QUESTION = 30;
+let timeLeft = 0;
+let currentTimeLimit = 0;
 
 // Student <-> Teacher Sync
 let lastTeacherCommandTime = 0;
@@ -40,6 +40,7 @@ function handleTeacherCommand(cmd) {
         if (modScreen.classList.contains('active') || gameScreen.classList.contains('active')) {
             currentModule = cmd.module;
             currentPhase = cmd.phase; // pretest or practice
+            currentTimeLimit = cmd.timeLimit || 0;
             
             // Skip directly to game screen
             document.getElementById('login-screen').classList.remove('active');
@@ -478,7 +479,7 @@ function renderQuestion() {
     document.getElementById('turn-indicator').innerHTML = `
         <span class="turn-progress">${progress}</span>
         <span class="turn-name">👉 请 <strong>${currentPlayerName}</strong> 同学回答</span>
-        <span class="turn-timer" id="question-timer">⏱️ ${TIME_PER_QUESTION}s</span>
+        <span class="turn-timer" id="question-timer">⏱️ ${currentTimeLimit ? currentTimeLimit + 's' : '无限制'}</span>
     `;
 
     // Update header progress (头像中间)
@@ -643,9 +644,19 @@ function startQuestionTimer() {
     // 清除之前的计时器
     if (questionTimer) {
         clearInterval(questionTimer);
+        questionTimer = null;
     }
 
-    timeLeft = TIME_PER_QUESTION;
+    if (!currentTimeLimit || currentTimeLimit === 0) {
+         const timerEl = document.getElementById('question-timer');
+         if (timerEl) {
+             timerEl.textContent = '⏱️ 无限制';
+             timerEl.style.color = '';
+         }
+         return;
+    }
+
+    timeLeft = currentTimeLimit;
     updateTimerDisplay();
 
     questionTimer = setInterval(() => {

@@ -242,5 +242,40 @@ function renderListeningQuestion(q, container) {
              raceArea.appendChild(playerArea);
         });
         container.appendChild(raceArea);
+    } else if (q.type === 'duo_listen_select') {
+        const title = document.createElement('h2');
+        title.style.color = '#ff4b4b';
+        title.innerHTML = '🎧 DUO LISTEN 🎧';
+        container.appendChild(title);
+        
+        const descEl = document.createElement('div');
+        descEl.style.marginBottom = '20px';
+        descEl.innerHTML = `<strong>Player 1</strong> 戴耳机听<br>告诉 <strong>Player 2</strong> 选答案！`;
+        container.appendChild(descEl);
+
+        const playBtn = document.createElement('button');
+        playBtn.className = 'play-sound-btn animate-pop';
+        playBtn.innerHTML = '🔊 听音频';
+        playBtn.style.padding = '15px 30px';
+        playBtn.style.fontSize = '24px';
+        playBtn.style.marginBottom = '25px';
+        playBtn.style.width = 'auto';
+        playBtn.style.height = 'auto';
+        playBtn.style.borderRadius = '30px';
+        playBtn.onclick = () => speakWord(q.audio);
+        container.appendChild(playBtn);
+
+        const grid = document.createElement('div');
+        grid.className = 'options-grid';
+        q.options.forEach((opt, idx) => {
+            const card = document.createElement('div');
+            card.className = 'option-card';
+            card.innerHTML = opt;
+            card.onclick = () => {
+                handleAnswer(idx === q.correct, card);
+            };
+            grid.appendChild(card);
+        });
+        container.appendChild(grid);
     }
 }

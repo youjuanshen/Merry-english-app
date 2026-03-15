@@ -273,5 +273,105 @@ function renderWritingQuestion(q, container) {
             grid.appendChild(card);
         });
         container.appendChild(grid);
+    } else if (q.type === 'duo_spell' || q.type === 'duo_sentence') {
+        const title = document.createElement('h2');
+        title.style.color = '#ff4b4b';
+        title.innerHTML = q.type === 'duo_spell' ? '🧩 合作拼词 🧩' : '🧩 合作造句 🧩';
+        container.appendChild(title);
+
+        const descEl = document.createElement('h3');
+        descEl.textContent = q.chinese || '合作完成！';
+        container.appendChild(descEl);
+
+        const turnInfo = document.createElement('div');
+        turnInfo.style.marginBottom = '20px';
+        turnInfo.style.color = 'var(--secondary)';
+        turnInfo.textContent = `一人一半，轮流拼！`;
+        container.appendChild(turnInfo);
+
+        if(q.image) {
+            const imgEl = document.createElement('div');
+            imgEl.style.marginBottom = '20px';
+            imgEl.innerHTML = q.image;
+            container.appendChild(imgEl);
+        }
+
+        const answerArea = document.createElement('div');
+        answerArea.style.display = 'flex';
+        answerArea.style.gap = '10px';
+        answerArea.style.justifyContent = 'center';
+        answerArea.style.marginBottom = '30px';
+        answerArea.style.minHeight = '60px';
+        answerArea.style.flexWrap = 'wrap';
+
+        const sourceArea = document.createElement('div');
+        sourceArea.style.display = 'flex';
+        sourceArea.style.gap = '10px';
+        sourceArea.style.justifyContent = 'center';
+        sourceArea.style.flexWrap = 'wrap';
+
+        let correctArr = q.type === 'duo_spell' ? q.parts : q.words;
+        let scrambledArr = q.scrambled;
+        
+        correctArr.forEach(() => {
+            const slot = document.createElement('div');
+            slot.className = 'puzzle-slot';
+            if(q.type === 'duo_sentence') {
+                slot.style.width = 'auto';
+                slot.style.minWidth = '50px';
+                slot.style.padding = '0 10px';
+                slot.style.fontSize = '24px';
+            }
+            answerArea.appendChild(slot);
+        });
+
+        let currentFilled = 0;
+
+        scrambledArr.forEach((item) => {
+             const piece = document.createElement('div');
+             piece.className = 'option-card';
+             piece.style.padding = q.type === 'duo_sentence' ? '10px 20px' : '10px';
+             piece.style.minHeight = 'auto';
+             piece.style.fontSize = q.type === 'duo_sentence' ? '24px' : '40px';
+             piece.textContent = item;
+             
+             piece.onclick = () => {
+                 if(isAnimating || piece.style.opacity === '0') return;
+                 piece.style.opacity = '0';
+                 
+                 const slot = answerArea.children[currentFilled];
+                 slot.textContent = item;
+                 
+                 slot.onclick = () => {
+                     if(slot.textContent === '') return;
+                     piece.style.opacity = '1';
+                     slot.textContent = '';
+                     slot.onclick = null;
+                     currentFilled--;
+                 };
+
+                 currentFilled++;
+                 if(currentFilled === correctArr.length) {
+                     let currentAns = Array.from(answerArea.children).map(s => s.textContent);
+                     if (currentAns.join('') === correctArr.join('')) {
+                         setTimeout(() => handleAnswer(true), 500);
+                     } else {
+                         setTimeout(() => {
+                             handleAnswer(false);
+                             Array.from(answerArea.children).forEach(s => {
+                                 s.textContent = '';
+                                 s.onclick = null;
+                             });
+                             Array.from(sourceArea.children).forEach(p => p.style.opacity = '1');
+                             currentFilled = 0;
+                         }, 500);
+                     }
+                 }
+             };
+             sourceArea.appendChild(piece);
+        });
+
+        container.appendChild(answerArea);
+        container.appendChild(sourceArea);
     }
 }

@@ -2,7 +2,7 @@
   "name": "Merry English",
   "short_name": "Merry英语",
   "description": "游戏化英语学习App",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#ffffff",

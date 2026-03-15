@@ -35,12 +35,14 @@ function initPreparePage() {
 
     // Start Class
     document.getElementById('btn-start-class').onclick = () => {
+        const timeLimit = parseInt(document.getElementById('time-limit-select')?.value) || 0;
         // Publish command to student app
         localStorage.setItem('teacherCommand', JSON.stringify({
             action: 'start',
             module: currentModule,
             phase: 'pretest', // Start with pretest by default
             lesson: currentLesson,
+            timeLimit: timeLimit,
             timestamp: Date.now()
         }));
         // Navigate to control
@@ -192,7 +194,16 @@ function updateCompletionDisplay(allProgress) {
     document.getElementById('completion-bar-fill').style.width = `${progressPercent}%`;
     document.getElementById('completion-text').textContent = `${completeCount}/${totalGroups}组`;
     
+    const completeContainer = document.getElementById('complete-list');
     const incompleteContainer = document.getElementById('incomplete-list');
+    
+    if (completeCount === 0) {
+        completeContainer.innerHTML = '<li>暂无小组完成</li>';
+    } else {
+        const compList = allProgress.filter(p => p.completed);
+        completeContainer.innerHTML = compList.map(p => `<li>• ${p.studentName}组 (⭐ ${p.stars || 0})</li>`).join('');
+    }
+
     if (incomplete.length === 0) {
         incompleteContainer.innerHTML = '<li>全部完成！🎉</li>';
     } else {
