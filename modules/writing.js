@@ -373,5 +373,77 @@ function renderWritingQuestion(q, container) {
 
         container.appendChild(answerArea);
         container.appendChild(sourceArea);
+    } else if (q.type === 'coop_relay_spell') {
+        const word = q.expected || q.word || 'APPLE';
+        const p1Name = players[currentPlayerIndex] ? players[currentPlayerIndex].name.replace(/^\d+\.\s*/, '') : 'Player 1';
+        const p2Name = players[1 - currentPlayerIndex] ? players[1 - currentPlayerIndex].name.replace(/^\d+\.\s*/, '') : 'Player 2';
+        
+        const splitIndex = Math.ceil(word.length / 2);
+        
+        container.innerHTML = `
+            <div style="font-size:20px; font-weight:bold; color:var(--primary); margin-bottom:10px;">
+                🤝 接力拼写: ${q.chinese || ''}
+            </div>
+            <div style="font-size:16px; color:var(--gray-shadow); margin-bottom:20px;">
+                <span id="p1-turn-indicator" style="color:var(--primary); font-weight:bold;">👉 ${p1Name}</span> 先拼前半部分，<span id="p2-turn-indicator" style="color:#aaa;">${p2Name}</span> 接着拼！
+            </div>
+            <div id="spell-display" style="font-size:60px; font-weight:bold; letter-spacing:10px; margin-bottom:30px;">
+                ${'_'.repeat(word.length)}
+            </div>
+        `;
+        
+        let currentInputIndex = 0;
+        let p1Done = false;
+        
+        const keyboard = document.createElement('div');
+        keyboard.className = 'options-grid';
+        keyboard.style.gridTemplateColumns = 'repeat(5, 1fr)';
+        keyboard.style.gap = '5px';
+        
+        const letters = q.options ? q.options : 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+        
+        letters.forEach(letter => {
+            const btn = document.createElement('div');
+            btn.className = 'option-card';
+            btn.style.fontSize = '30px';
+            btn.style.padding = '10px';
+            btn.style.minHeight = '50px';
+            btn.textContent = letter.toUpperCase();
+            
+            btn.onclick = () => {
+                if (letter.toLowerCase() === word[currentInputIndex].toLowerCase()) {
+                    playSuccessSound();
+                    currentInputIndex++;
+                    let displayStr = word.substring(0, currentInputIndex) + '_'.repeat(word.length - currentInputIndex);
+                    document.getElementById('spell-display').textContent = displayStr.toUpperCase();
+                    
+                    if (currentInputIndex === splitIndex && !p1Done) {
+                        p1Done = true;
+                        document.getElementById('p1-turn-indicator').style.color = '#aaa';
+                        document.getElementById('p1-turn-indicator').style.fontWeight = 'normal';
+                        document.getElementById('p2-turn-indicator').style.color = 'var(--secondary)';
+                        document.getElementById('p2-turn-indicator').style.fontWeight = 'bold';
+                        document.getElementById('p2-turn-indicator').innerHTML = `👉 ${p2Name}`;
+                        
+                        document.getElementById('spell-display').classList.add('animate-pop');
+                        setTimeout(() => document.getElementById('spell-display').classList.remove('animate-pop'), 300);
+                    }
+                    
+                    if (currentInputIndex === word.length) {
+                        document.getElementById('spell-display').style.color = 'var(--primary)';
+                        document.getElementById('spell-display').classList.add('animate-pop');
+                        setTimeout(() => handleAnswer(true), 1000);
+                    }
+                } else {
+                    playWrongSound();
+                    btn.classList.add('wrong');
+                    setTimeout(() => btn.classList.remove('wrong'), 500);
+                }
+            };
+            
+            keyboard.appendChild(btn);
+        });
+        
+        container.appendChild(keyboard);
     }
 }

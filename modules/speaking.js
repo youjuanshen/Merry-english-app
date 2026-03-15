@@ -17,6 +17,72 @@ function renderSpeakingQuestion(q, container) {
         imgEl.style.marginBottom = '20px';
         imgEl.innerHTML = q.image;
         container.appendChild(imgEl);
+    } else if (q.type === 'coop_speak_guess') {
+        // Dual interface in one container
+        container.style.display = 'flex';
+        container.style.flexDirection = 'column';
+        container.style.height = '100%';
+        container.style.padding = '10px';
+        
+        // Describer section
+        const describerName = players[currentPlayerIndex] ? players[currentPlayerIndex].name.replace(/^\d+\.\s*/, '') : 'Player 1';
+        const guesserName = players[1 - currentPlayerIndex] ? players[1 - currentPlayerIndex].name.replace(/^\d+\.\s*/, '') : 'Player 2';
+        
+        const topHalf = document.createElement('div');
+        topHalf.style.flex = '1';
+        topHalf.style.borderBottom = '3px dashed #ddd';
+        topHalf.style.paddingBottom = '10px';
+        topHalf.style.marginBottom = '15px';
+        topHalf.innerHTML = `
+            <div style="font-size:18px; color:var(--primary); font-weight:bold; margin-bottom:5px;">
+                🗣️ 描述方：${describerName}
+            </div>
+            <div style="font-size:14px; color:var(--gray-shadow); margin-bottom:10px;">
+                向下方的同学描述这个词的特征或读出音标：
+            </div>
+            <div style="font-size:45px; font-weight:bold; letter-spacing:2px; color:#333;">
+                ${q.word}
+            </div>
+            <div style="font-size:18px; color:#888; margin-top:5px;">
+                ${q.chinese}
+            </div>
+        `;
+        
+        // Guesser section
+        const bottomHalf = document.createElement('div');
+        bottomHalf.style.flex = '1';
+        bottomHalf.innerHTML = `
+            <div style="font-size:18px; color:var(--secondary); font-weight:bold; margin-bottom:10px;">
+                👆 猜图方：${guesserName}
+            </div>
+            <div style="font-size:14px; color:var(--gray-shadow); margin-bottom:10px;">
+                听搭档描述，快速点击正确图片！
+            </div>
+        `;
+        
+        const grid = document.createElement('div');
+        grid.className = 'options-grid';
+        grid.style.marginTop = '0';
+        
+        q.options.forEach((opt, idx) => {
+            const card = document.createElement('div');
+            card.className = 'option-card';
+            card.style.fontSize = '60px';
+            card.style.padding = '10px';
+            card.innerHTML = opt;
+            card.onclick = () => {
+                handleAnswer(idx === q.correct, card);
+            };
+            grid.appendChild(card);
+        });
+        
+        bottomHalf.appendChild(grid);
+        
+        container.appendChild(topHalf);
+        container.appendChild(bottomHalf);
+        
+        // Disable regular "play audio" button since this is a coop question
+        return;
     }
 
     // Play demo audio button

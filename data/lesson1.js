@@ -624,6 +624,16 @@ const lesson1 = {
     ],
     "practice": [
       {
+        "type": "coop_match_compete",
+        "chinese": "动物名称（抢答或合作）",
+        "pairs": [
+          {"word": "tiger", "image": "<img src='assets/images/tiger.png' width='80'>"},
+          {"word": "panda", "image": "<img src='assets/images/panda.png' width='80'>"},
+          {"word": "elephant", "image": "<img src='assets/images/elephant.png' width='80'>"},
+          {"word": "monkey", "image": "<img src='assets/images/monkey.png' width='80'>"}
+        ]
+      },
+      {
         "type": "word_match",
         "word": "tiger",
         "options": [
@@ -1232,6 +1242,11 @@ const lesson1 = {
     ],
     "practice": [
       {
+        "type": "coop_relay_spell",
+        "word": "PANDA",
+        "chinese": "熊猫"
+      },
+      {
         "type": "letter_select",
         "prompt": "rabbit begins with?",
         "image": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
@@ -1765,6 +1780,18 @@ const lesson1 = {
       }
     ],
     "practice": [
+      {
+        "type": "coop_speak_guess",
+        "word": "PANDA",
+        "chinese": "熊猫",
+        "options": [
+          "<img src='assets/images/mouse.png' width='80'>",
+          "<img src='assets/images/panda.png' width='80'>",
+          "<img src='assets/images/elephant.png' width='80'>",
+          "<img src='assets/images/horse.png' width='80'>"
+        ],
+        "correct": 1
+      },
       {
         "type": "repeat_word",
         "word": "tiger",

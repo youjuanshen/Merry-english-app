@@ -293,9 +293,13 @@ function renderReadingQuestion(q, container) {
         dragArea.appendChild(leftCol);
         dragArea.appendChild(rightCol);
         container.appendChild(dragArea);
-    } else if (q.type === 'memory_match') {
+    } else if (q.type === 'memory_match' || q.type === 'coop_match_compete') {
         const descEl = document.createElement('h3');
-        descEl.textContent = 'Match words and pictures! ' + (q.chinese || '');
+        if (q.type === 'coop_match_compete') {
+            descEl.innerHTML = '🔥 <span style="color:#e74c3c;">合作/抢答配对：双方同时开始，看谁找得快！</span> ' + (q.chinese || '');
+        } else {
+            descEl.textContent = 'Match words and pictures! ' + (q.chinese || '');
+        }
         container.appendChild(descEl);
 
         const grid = document.createElement('div');
