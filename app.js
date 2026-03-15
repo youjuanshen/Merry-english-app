@@ -19,6 +19,28 @@ let timeLeft = 0;
 let currentTimeLimit = 30; // 默认每题30秒
 const DEFAULT_TIME_LIMIT = 30;
 
+// ========== 自适应难度系统 ==========
+// 前测统计（用于计算学生水平）
+let pretestStats = {
+    player1: { correct: 0, total: 0, totalTime: 0 },
+    player2: { correct: 0, total: 0, totalTime: 0 }
+};
+let questionStartTime = 0; // 每题开始时间
+
+// 学生水平等级：A=基础好, B=基础中等, C=基础薄弱
+let studentLevel = 'B'; // 默认中等
+
+// 动态难度调整
+let consecutiveCorrect = 0; // 连续答对次数
+let consecutiveWrong = 0;   // 连续答错次数
+let currentDifficulty = 'medium'; // easy/medium/hard
+
+// 根据 Bloom Mastery Learning 理论设置阈值
+const MASTERY_THRESHOLD = 0.8;  // 80%正确率为掌握
+const STRUGGLE_THRESHOLD = 0.6; // 60%以下为薄弱
+const FAST_TIME_RATIO = 0.5;    // 标准时间的50%以内算快
+const SLOW_TIME_RATIO = 1.5;    // 标准时间的150%以上算慢
+
 // Student <-> Teacher Sync
 let lastTeacherCommandTime = 0;
 
@@ -393,7 +415,73 @@ function toggleStudent(name, el) {
 }
 
 function getQuestions(module, phase) {
-    return currentLessonData[module][phase] || [];
+    const allQuestions = currentLessonData[module][phase] || [];
+
+    // 前测：返回所有题目
+    if (phase === 'pretest') {
+        return allQuestions;
+    }
+
+    // 练习：根据学生水平筛选题目
+    return filterQuestionsByLevel(allQuestions, studentLevel);
+}
+
+// 根据学生水平筛选题目
+function filterQuestionsByLevel(questions, level) {
+    // 如果题目没有难度标签，根据水平分配比例
+    const difficultyMap = {
+        'A': { easy: 0.2, medium: 0.4, hard: 0.4 },  // 基础好：多给难题
+        'B': { easy: 0.3, medium: 0.5, hard: 0.2 },  // 基础中等：均衡
+        'C': { easy: 0.5, medium: 0.4, hard: 0.1 }   // 基础薄弱：多给简单题
+    };
+
+    const ratio = difficultyMap[level] || difficultyMap['B'];
+
+    // 按难度分组
+    const easy = questions.filter(q => q.difficulty === 'easy' || !q.difficulty);
+    const medium = questions.filter(q => q.difficulty === 'medium');
+    const hard = questions.filter(q => q.difficulty === 'hard');
+
+    // 如果题目都没有难度标签，按索引位置推断难度
+    if (medium.length === 0 && hard.length === 0) {
+        const total = questions.length;
+        const easyCount = Math.floor(total * 0.4);
+        const mediumCount = Math.floor(total * 0.4);
+
+        questions.forEach((q, i) => {
+            if (i < easyCount) q.difficulty = 'easy';
+            else if (i < easyCount + mediumCount) q.difficulty = 'medium';
+            else q.difficulty = 'hard';
+        });
+
+        return filterQuestionsByLevel(questions, level);
+    }
+
+    // 根据比例选择题目
+    const result = [];
+    const targetCount = Math.min(30, questions.length); // 最多30题
+
+    const easyTarget = Math.floor(targetCount * ratio.easy);
+    const mediumTarget = Math.floor(targetCount * ratio.medium);
+    const hardTarget = targetCount - easyTarget - mediumTarget;
+
+    // 随机选择
+    result.push(...shuffleArray(easy).slice(0, easyTarget));
+    result.push(...shuffleArray(medium).slice(0, mediumTarget));
+    result.push(...shuffleArray(hard).slice(0, hardTarget));
+
+    // 打乱顺序
+    return shuffleArray(result);
+}
+
+// 数组随机打乱
+function shuffleArray(arr) {
+    const result = [...arr];
+    for (let i = result.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [result[i], result[j]] = [result[j], result[i]];
+    }
+    return result;
 }
 
 // Step 1: Click "下一步" to go to module selection
@@ -417,6 +505,16 @@ document.querySelectorAll('.module-card').forEach(card => {
 function startGame() {
     document.getElementById('player1-ui').querySelector('.name').textContent = players[0].name;
     document.getElementById('player2-ui').querySelector('.name').textContent = players[1].name;
+
+    // 重置前测统计
+    pretestStats = {
+        player1: { correct: 0, total: 0, totalTime: 0 },
+        player2: { correct: 0, total: 0, totalTime: 0 }
+    };
+    studentLevel = 'B'; // 重置为默认中等
+    consecutiveCorrect = 0;
+    consecutiveWrong = 0;
+    currentDifficulty = 'medium';
 
     moduleQuestions = getQuestions(currentModule, currentPhase);
     currentQuestionIndex = 0;
@@ -466,7 +564,8 @@ function renderQuestion() {
     // Check if we reached the end of current phase
     if (currentQuestionIndex >= moduleQuestions.length) {
         if (currentPhase === 'pretest') {
-            // Pretest done, start practice
+            // Pretest done, calculate level and start practice
+            calculateStudentLevel();
             showTransition();
         } else {
             // Practice done, show finish
@@ -479,12 +578,24 @@ function renderQuestion() {
     const container = document.getElementById('question-container');
     container.innerHTML = '';
 
+    // 记录每题开始时间（用于计算答题用时）
+    questionStartTime = Date.now();
+
     // Update turn indicator with progress and timer (合并显示)
     const currentPlayerName = players[currentPlayerIndex].name.replace(/^\d+\.\s*/, '');
     const progress = `${currentQuestionIndex + 1}/${moduleQuestions.length}`;
+
+    // 练习阶段显示当前难度
+    let difficultyIndicator = '';
+    if (currentPhase === 'practice') {
+        const diffLabels = { easy: '🟢简单', medium: '🟡中等', hard: '🔴困难' };
+        difficultyIndicator = `<span class="difficulty-tag">${diffLabels[currentDifficulty] || ''}</span>`;
+    }
+
     document.getElementById('turn-indicator').innerHTML = `
         <span class="turn-progress">${progress}</span>
         <span class="turn-name">👉 请 <strong>${currentPlayerName}</strong> 同学回答</span>
+        ${difficultyIndicator}
         <span class="turn-timer" id="question-timer">⏱️ ${currentTimeLimit ? currentTimeLimit + 's' : '无限制'}</span>
     `;
 
@@ -517,23 +628,95 @@ function renderQuestion() {
 
 function showTransition() {
     const container = document.getElementById('question-container');
+
+    // 获取水平等级描述
+    const levelInfo = {
+        'A': { emoji: '🌟', label: '基础扎实', desc: '你们很棒！接下来挑战更难的题目！', color: '#58cc02' },
+        'B': { emoji: '👍', label: '基础中等', desc: '继续加油！练习会帮助你们进步！', color: '#1cb0f6' },
+        'C': { emoji: '💪', label: '需要加强', desc: '别担心！我们从简单的开始练习！', color: '#ff9500' }
+    };
+
+    const info = levelInfo[studentLevel] || levelInfo['B'];
+
+    // 计算统计数据
+    const p1 = pretestStats.player1;
+    const p2 = pretestStats.player2;
+    const totalCorrect = p1.correct + p2.correct;
+    const totalQuestions = p1.total + p2.total;
+    const accuracy = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0;
+
     container.innerHTML = `
-        <div style="text-align: center; padding: 40px;">
-            <div style="font-size: 60px; margin-bottom: 20px;">🎉</div>
+        <div style="text-align: center; padding: 30px;">
+            <div style="font-size: 60px; margin-bottom: 15px;">🎉</div>
             <h2>前测完成！</h2>
-            <p style="font-size: 20px; color: #666;">准备开始练习...</p>
+
+            <div style="background: linear-gradient(135deg, ${info.color}22, ${info.color}11);
+                        border: 2px solid ${info.color};
+                        border-radius: 16px;
+                        padding: 20px;
+                        margin: 20px 0;">
+                <div style="font-size: 40px;">${info.emoji}</div>
+                <div style="font-size: 24px; font-weight: bold; color: ${info.color};">
+                    ${info.label}
+                </div>
+                <div style="font-size: 18px; color: #666; margin-top: 10px;">
+                    正确率：${accuracy}%
+                </div>
+                <div style="font-size: 16px; color: #888; margin-top: 8px;">
+                    ${info.desc}
+                </div>
+            </div>
+
+            <p style="font-size: 18px; color: #666;">准备开始练习...</p>
         </div>
     `;
 
     createConfetti(30);
 
+    // 3秒后开始练习（给学生时间看结果）
     setTimeout(() => {
         currentPhase = 'practice';
         moduleQuestions = getQuestions(currentModule, currentPhase);
         currentQuestionIndex = 0;
+        currentDifficulty = studentLevel === 'A' ? 'medium' : (studentLevel === 'C' ? 'easy' : 'medium');
         updatePhaseIndicator();
         renderQuestion();
-    }, 2000);
+    }, 3000);
+}
+
+// 计算学生水平（基于前测表现）
+function calculateStudentLevel() {
+    const p1 = pretestStats.player1;
+    const p2 = pretestStats.player2;
+
+    // 综合两人的表现
+    const totalCorrect = p1.correct + p2.correct;
+    const totalQuestions = p1.total + p2.total;
+    const totalTime = p1.totalTime + p2.totalTime;
+
+    if (totalQuestions === 0) {
+        studentLevel = 'B';
+        return;
+    }
+
+    const accuracy = totalCorrect / totalQuestions;
+    const avgTimePerQuestion = totalTime / totalQuestions; // 毫秒
+    const standardTime = currentTimeLimit * 1000; // 转换为毫秒
+
+    // 根据 Bloom Mastery Learning 理论
+    // A级：正确率≥80% 且 平均用时≤标准时间
+    // B级：正确率60-80% 或 用时中等
+    // C级：正确率<60% 或 用时很长
+
+    if (accuracy >= MASTERY_THRESHOLD && avgTimePerQuestion <= standardTime) {
+        studentLevel = 'A';
+    } else if (accuracy < STRUGGLE_THRESHOLD || avgTimePerQuestion > standardTime * SLOW_TIME_RATIO) {
+        studentLevel = 'C';
+    } else {
+        studentLevel = 'B';
+    }
+
+    console.log(`学生水平评估: 正确率=${(accuracy*100).toFixed(1)}%, 平均用时=${(avgTimePerQuestion/1000).toFixed(1)}s, 等级=${studentLevel}`);
 }
 
 function updateHeader() {
@@ -546,6 +729,40 @@ function updateHeader() {
 function handleAnswer(isCorrect, cardEl = null, correctAnswer = null) {
     if(isAnimating) return;
     isAnimating = true;
+
+    // 记录答题时间
+    const responseTime = Date.now() - questionStartTime;
+
+    // 记录前测统计（用于计算学生水平）
+    if (currentPhase === 'pretest') {
+        const playerKey = currentPlayerIndex === 0 ? 'player1' : 'player2';
+        pretestStats[playerKey].total++;
+        pretestStats[playerKey].totalTime += responseTime;
+        if (isCorrect) {
+            pretestStats[playerKey].correct++;
+        }
+    }
+
+    // 动态难度调整（练习阶段）
+    if (currentPhase === 'practice') {
+        if (isCorrect) {
+            consecutiveCorrect++;
+            consecutiveWrong = 0;
+            // 连续3题正确，提升难度
+            if (consecutiveCorrect >= 3) {
+                adjustDifficulty('up');
+                consecutiveCorrect = 0;
+            }
+        } else {
+            consecutiveWrong++;
+            consecutiveCorrect = 0;
+            // 连续2题错误，降低难度
+            if (consecutiveWrong >= 2) {
+                adjustDifficulty('down');
+                consecutiveWrong = 0;
+            }
+        }
+    }
 
     if (isCorrect) {
         stopQuestionTimer(); // 答对停止计时
@@ -645,6 +862,43 @@ function hideCorrectAnswerDisplay() {
     if (display) {
         display.style.display = 'none';
     }
+}
+
+// ===== 动态难度调整 =====
+function adjustDifficulty(direction) {
+    const levels = ['easy', 'medium', 'hard'];
+    const currentIndex = levels.indexOf(currentDifficulty);
+
+    if (direction === 'up' && currentIndex < levels.length - 1) {
+        currentDifficulty = levels[currentIndex + 1];
+        showDifficultyChangeNotice('up');
+    } else if (direction === 'down' && currentIndex > 0) {
+        currentDifficulty = levels[currentIndex - 1];
+        showDifficultyChangeNotice('down');
+    }
+
+    console.log(`难度调整: ${direction} -> ${currentDifficulty}`);
+}
+
+function showDifficultyChangeNotice(direction) {
+    const notice = document.createElement('div');
+    notice.className = 'difficulty-notice';
+
+    if (direction === 'up') {
+        notice.innerHTML = '📈 难度提升！';
+        notice.style.background = 'linear-gradient(135deg, #ff9500, #ffb800)';
+    } else {
+        notice.innerHTML = '📉 难度降低';
+        notice.style.background = 'linear-gradient(135deg, #58cc02, #7ce000)';
+    }
+
+    document.body.appendChild(notice);
+
+    setTimeout(() => {
+        if (document.body.contains(notice)) {
+            document.body.removeChild(notice);
+        }
+    }, 1500);
 }
 
 // ===== 计时器功能 =====
