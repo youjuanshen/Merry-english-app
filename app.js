@@ -698,7 +698,14 @@ nextBtn.onclick = function() {
         currentLessonData = lesson1;
     }
     
-    currentPhase = 'pretest'; // Always start with pretest
+    // 检查教师端是否设置了阶段
+    const cmdStr = localStorage.getItem('teacherCommand');
+    if (cmdStr) {
+        const cmd = JSON.parse(cmdStr);
+        currentPhase = cmd.phase || 'pretest';
+    } else {
+        currentPhase = 'pretest';
+    }
     startGame();
 };
 
@@ -706,7 +713,14 @@ nextBtn.onclick = function() {
 document.querySelectorAll('.module-card').forEach(card => {
     card.onclick = function() {
         currentModule = this.dataset.module;
-        currentPhase = 'pretest'; // Always start with pretest
+        // 检查教师端是否设置了阶段
+        const cmdStr = localStorage.getItem('teacherCommand');
+        if (cmdStr) {
+            const cmd = JSON.parse(cmdStr);
+            currentPhase = cmd.phase || 'pretest';
+        } else {
+            currentPhase = 'pretest';
+        }
         startGame();
     };
 });
