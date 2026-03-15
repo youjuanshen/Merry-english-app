@@ -638,42 +638,69 @@ function showTransition() {
 
     const info = levelInfo[studentLevel] || levelInfo['B'];
 
-    // 计算统计数据
+    // 计算每位同学的统计数据
     const p1 = pretestStats.player1;
     const p2 = pretestStats.player2;
+
+    const p1Accuracy = p1.total > 0 ? Math.round((p1.correct / p1.total) * 100) : 0;
+    const p2Accuracy = p2.total > 0 ? Math.round((p2.correct / p2.total) * 100) : 0;
+    const p1AvgTime = p1.total > 0 ? (p1.totalTime / p1.total / 1000).toFixed(1) : 0;
+    const p2AvgTime = p2.total > 0 ? (p2.totalTime / p2.total / 1000).toFixed(1) : 0;
+
+    // 整体正确率
     const totalCorrect = p1.correct + p2.correct;
     const totalQuestions = p1.total + p2.total;
-    const accuracy = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0;
+    const totalAccuracy = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0;
 
     container.innerHTML = `
-        <div style="text-align: center; padding: 30px;">
-            <div style="font-size: 60px; margin-bottom: 15px;">🎉</div>
-            <h2>前测完成！</h2>
+        <div style="text-align: center; padding: 20px;">
+            <div style="font-size: 50px; margin-bottom: 10px;">🎉</div>
+            <h2 style="margin: 10px 0;">前测完成！</h2>
 
+            <!-- 两位同学的成绩 -->
+            <div style="display: flex; gap: 10px; margin: 15px 0;">
+                <!-- 玩家1 -->
+                <div style="flex: 1; background: #e3f4ff; border: 2px solid #1cb0f6; border-radius: 12px; padding: 12px;">
+                    <div style="font-size: 24px;">👦</div>
+                    <div style="font-size: 14px; font-weight: bold; color: #1cb0f6;">${player1Name}</div>
+                    <div style="font-size: 20px; font-weight: bold; margin: 5px 0;">${p1Accuracy}%</div>
+                    <div style="font-size: 12px; color: #666;">
+                        ${p1.correct}/${p1.total}题 · ${p1AvgTime}秒/题
+                    </div>
+                </div>
+                <!-- 玩家2 -->
+                <div style="flex: 1; background: #fff3e0; border: 2px solid #ff9500; border-radius: 12px; padding: 12px;">
+                    <div style="font-size: 24px;">👧</div>
+                    <div style="font-size: 14px; font-weight: bold; color: #ff9500;">${player2Name}</div>
+                    <div style="font-size: 20px; font-weight: bold; margin: 5px 0;">${p2Accuracy}%</div>
+                    <div style="font-size: 12px; color: #666;">
+                        ${p2.correct}/${p2.total}题 · ${p2AvgTime}秒/题
+                    </div>
+                </div>
+            </div>
+
+            <!-- 整体水平 -->
             <div style="background: linear-gradient(135deg, ${info.color}22, ${info.color}11);
                         border: 2px solid ${info.color};
-                        border-radius: 16px;
-                        padding: 20px;
-                        margin: 20px 0;">
-                <div style="font-size: 40px;">${info.emoji}</div>
-                <div style="font-size: 24px; font-weight: bold; color: ${info.color};">
-                    ${info.label}
+                        border-radius: 12px;
+                        padding: 12px;
+                        margin: 10px 0;">
+                <div style="font-size: 28px;">${info.emoji}</div>
+                <div style="font-size: 18px; font-weight: bold; color: ${info.color};">
+                    整体水平：${info.label}
                 </div>
-                <div style="font-size: 18px; color: #666; margin-top: 10px;">
-                    正确率：${accuracy}%
-                </div>
-                <div style="font-size: 16px; color: #888; margin-top: 8px;">
+                <div style="font-size: 14px; color: #888; margin-top: 5px;">
                     ${info.desc}
                 </div>
             </div>
 
-            <p style="font-size: 18px; color: #666;">准备开始练习...</p>
+            <p style="font-size: 16px; color: #666; margin-top: 15px;">准备开始练习...</p>
         </div>
     `;
 
     createConfetti(30);
 
-    // 3秒后开始练习（给学生时间看结果）
+    // 4秒后开始练习（给学生更多时间看结果）
     setTimeout(() => {
         currentPhase = 'practice';
         moduleQuestions = getQuestions(currentModule, currentPhase);
@@ -681,7 +708,7 @@ function showTransition() {
         currentDifficulty = studentLevel === 'A' ? 'medium' : (studentLevel === 'C' ? 'easy' : 'medium');
         updatePhaseIndicator();
         renderQuestion();
-    }, 3000);
+    }, 4000);
 }
 
 // 计算学生水平（基于前测表现）
