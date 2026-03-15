@@ -1124,18 +1124,9 @@ function showCorrectAnswerWithTranslation(q) {
         display.innerHTML = `<div class="answer-english">✓ ${english}</div>`;
     }
 
-    // 获取需要插入在它们之前的元素（第一个未被隐藏的受保护元素）
-    let insertBeforeElement = null;
-    for (let i = 0; i < container.children.length; i++) {
-        const child = container.children[i];
-        if (child.style.display !== 'none' && child !== display) {
-            insertBeforeElement = child;
-            break;
-        }
-    }
-
-    if (insertBeforeElement) {
-        container.insertBefore(display, insertBeforeElement);
+    // 直接插入到最前面，也就是原来题目的位置
+    if (container.firstChild) {
+        container.insertBefore(display, container.firstChild);
     } else {
         container.appendChild(display);
     }

@@ -381,6 +381,9 @@ h1 {
   justify-content: flex-start;
   padding-top: 15px;
   padding-bottom: 120px; /* 给下一题按钮留足够空间 */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
 }
 .play-sound-btn {
   background-color: var(--secondary);
