@@ -1186,6 +1186,65 @@ h1 {
   100% { transform: rotateY(0deg); }
 }
 
+/* ===== 成就系统样式 ===== */
+.achievements-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: #333;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 3px 0 #cc8800;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.achievements-btn:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+#achievements-screen {
+  background: linear-gradient(135deg, #FFF8E1 0%, #FFECB3 100%);
+  padding: 0;
+}
+
+.achievements-header {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.achievements-header h2 {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+  font-size: 20px;
+  color: #FF7043;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #666;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+#achievements-container {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 10px;
+}
+
 /* ===== 响应式设计 - 不同设备自动适配 ===== */
 
 /* iPhone 7 Plus (414px宽) - 3列x4行=12人/页 */

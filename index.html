@@ -10,7 +10,7 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="assets/icon-192.png">
   <title>Merry English</title>
-  <link rel="stylesheet" href="style.css?v=9">
+  <link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
   <div id="app">
@@ -50,6 +50,17 @@
       </div>
 
       <button id="next-btn" class="primary-btn start-btn" disabled>开始学习</button>
+
+      <button id="achievements-btn" class="achievements-btn">🏆 我的成就</button>
+    </div>
+
+    <!-- Achievements Screen -->
+    <div id="achievements-screen" class="screen">
+      <div class="achievements-header">
+        <button id="back-to-login" class="back-btn">← 返回</button>
+        <h2>🏆 我的成就</h2>
+      </div>
+      <div id="achievements-container"></div>
     </div>
 
     <!-- Module Select Screen: Step 2 - Choose Module -->
@@ -128,10 +139,11 @@
   <script src="data/unit4_lesson2.js?v=2"></script>
   <script src="data/unit4_lesson3.js?v=2"></script>
   <script src="data/unit4_lesson4.js?v=2"></script>
+  <script src="data/achievements.js?v=1"></script>
   <script src="modules/listening.js?v=3"></script>
   <script src="modules/reading.js?v=3"></script>
   <script src="modules/writing.js?v=2"></script>
   <script src="modules/speaking.js?v=2"></script>
-  <script src="app.js?v=11"></script>
+  <script src="app.js?v=12"></script>
 </body>
 </html>

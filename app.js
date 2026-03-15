@@ -1050,7 +1050,11 @@ function handleAnswer(isCorrect, cardEl = null, correctAnswer = null) {
     
     if (isCorrect) {
         targetStats.correct++;
+        // 处理成就
+        processAchievements(true);
     } else {
+        // 处理成就（答错也要记录）
+        processAchievements(false);
         const q = moduleQuestions[currentQuestionIndex];
         if (q && q.word && !targetStats.wrongWords.includes(q.word)) {
             // Store up to 10 unique wrong words per session
@@ -1468,11 +1472,61 @@ function showFinishScreen() {
     syncStudentProgress(true);
 }
 
-function createConfetti(count = 20) {
+// ===== 成就系统集成 =====
+
+// 成就按钮点击事件
+var achievementsBtn = document.getElementById('achievements-btn');
+if (achievementsBtn) {
+    achievementsBtn.onclick = function() {
+        document.getElementById('login-screen').classList.remove('active');
+        document.getElementById('achievements-screen').classList.add('active');
+        var container = document.getElementById('achievements-container');
+        if (typeof renderAchievementsPage === 'function') {
+            renderAchievementsPage(container);
+        }
+    };
+}
+
+// 返回按钮
+var backToLoginBtn = document.getElementById('back-to-login');
+if (backToLoginBtn) {
+    backToLoginBtn.onclick = function() {
+        document.getElementById('achievements-screen').classList.remove('active');
+        document.getElementById('login-screen').classList.add('active');
+    };
+}
+
+// 处理成就检测（在答题后调用）
+function processAchievements(isCorrect) {
+    if (typeof checkAndUpdateAchievements !== 'function') return;
+
+    // 获取搭档名称
+    var partnerName = null;
+    if (players && players.length > 1) {
+        var otherPlayerIndex = currentPlayerIndex === 0 ? 1 : 0;
+        partnerName = players[otherPlayerIndex].name;
+    }
+
+    var newAchievements = checkAndUpdateAchievements(isCorrect, partnerName);
+
+    // 显示新解锁的成就
+    if (newAchievements && newAchievements.length > 0) {
+        for (var i = 0; i < newAchievements.length; i++) {
+            setTimeout(function(ach) {
+                return function() {
+                    showAchievementUnlock(ach);
+                };
+            }(newAchievements[i]), i * 3500);
+        }
+    }
+}
+
+function createConfetti(count) {
+    if (count === undefined) count = 20;
     const container = document.getElementById('confetti-container');
-    const colors = ['#58cc02', '#1cb0f6', '#ffcb00', '#ff4b4b'];
-    for (let i = 0; i < count; i++) {
-        const el = document.createElement('div');
+    var colors = ['#58cc02', '#1cb0f6', '#ffcb00', '#ff4b4b'];
+    for (var i = 0; i < count; i++) {
+        var el = document.createElement('div');
         el.className = 'confetti';
         el.style.left = Math.random() * 100 + 'vw';
         el.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
