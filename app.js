@@ -432,6 +432,36 @@ function speakWord(word) {
     }
 }
 
+// 给选项卡片内的图片添加白色背景（用Canvas去除透明PNG的马赛克效果）
+function wrapImagesWithWhiteBg(container) {
+    const images = container.querySelectorAll('.option-card img');
+    images.forEach(img => {
+        // 等图片加载完成后用Canvas处理
+        const processImage = () => {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = img.naturalWidth || 100;
+            canvas.height = img.naturalHeight || 100;
+
+            // 先填充白色背景
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // 再绘制图片
+            ctx.drawImage(img, 0, 0);
+
+            // 替换原图片src
+            img.src = canvas.toDataURL('image/png');
+        };
+
+        if (img.complete) {
+            processImage();
+        } else {
+            img.onload = processImage;
+        }
+    });
+}
+
 // Render student list - 分页形式（每页10人）
 const studentPagesEl = document.getElementById('student-pages');
 const pageDotsEl = document.getElementById('page-dots');
@@ -674,6 +704,46 @@ function updatePhaseIndicator() {
     }
 }
 
+function showQuestionHint(type, container) {
+    const hints = {
+        'memory_match': '翻开两张卡片，找出相同的配对',
+        'drag_connect': '把左边的单词和右边的图片连起来',
+        'sentence_order': '把打乱的单词排成正确的句子',
+        'word_puzzle': '把字母拼成正确的单词',
+        'fill_blank': '在空格里填上正确的单词',
+        'duo_race': '双人抢答竞赛！',
+        'whack_mole': '打地鼠抢答！',
+        'word_match': '找到匹配的图片/单词',
+        'sentence_match': '根据句子选出匹配的图片',
+        'letter_select': '选出缺少的字母！',
+        'word_spell': '根据图片拼出正确的单词！',
+        'duo_spell': '接力拼写单词！',
+        'duo_sentence': '双人合作排列句子！',
+        'listen_select': '听录音，选出正确的图片',
+        'listen_tf': '判断录音与图片是否一致',
+        'duo_listen_select': '一人听音，一人选图！',
+        'listen_question': '听问题，选出合适的回答',
+        'read_sentence': '大声朗读这个句子',
+        'repeat_word': '大声跟读单词'
+    };
+
+    if (hints[type]) {
+        const hintEl = document.createElement('div');
+        hintEl.className = 'question-type-hint';
+        hintEl.textContent = hints[type];
+        container.appendChild(hintEl);
+
+        setTimeout(() => {
+            hintEl.style.opacity = '0';
+            setTimeout(() => {
+                 if (hintEl.parentNode === container) {
+                     hintEl.remove();
+                 }
+            }, 500);
+        }, 3000);
+    }
+}
+
 function renderQuestion() {
     isAnimating = false;
     updateHeader();
@@ -694,6 +764,9 @@ function renderQuestion() {
     const q = moduleQuestions[currentQuestionIndex];
     const container = document.getElementById('question-container');
     container.innerHTML = '';
+    
+    // Add dynamic question type hint
+    showQuestionHint(q.type, container);
 
     // 记录每题开始时间（用于计算答题用时）
     questionStartTime = Date.now();
@@ -732,6 +805,9 @@ function renderQuestion() {
     } else if (currentModule === 'speaking') {
         renderSpeakingQuestion(q, container);
     }
+
+    // 给所有选项卡片内的图片添加白色背景包装（去除透明马赛克）
+    wrapImagesWithWhiteBg(container);
 
     // 添加"下一题"按钮（默认禁用，答对后才启用）
     const skipBtn = document.createElement('button');
