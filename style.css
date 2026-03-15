@@ -898,6 +898,111 @@ h1 {
   to { transform: translateY(0); opacity: 1; }
 }
 
+/* ===== 多邻国风格底部反馈面板 ===== */
+.feedback-panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 20px 30px 20px;
+  z-index: 9998;
+  animation: panelSlideUp 0.3s ease-out;
+  -webkit-animation: panelSlideUp 0.3s ease-out;
+}
+
+.feedback-panel.correct {
+  background: linear-gradient(to top, #d7ffb8, #e8ffe0);
+  border-top: 4px solid #58cc02;
+}
+
+.feedback-panel.wrong {
+  background: linear-gradient(to top, #ffdfe0, #ffe8e8);
+  border-top: 4px solid #ff4b4b;
+}
+
+.feedback-panel-content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.feedback-icon {
+  font-size: 36px;
+  margin-right: 15px;
+}
+
+.feedback-text {
+  flex: 1;
+}
+
+.feedback-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.feedback-panel.correct .feedback-title {
+  color: #58cc02;
+}
+
+.feedback-panel.wrong .feedback-title {
+  color: #ff4b4b;
+}
+
+.feedback-answer {
+  font-size: 16px;
+  color: #666;
+}
+
+.feedback-answer .answer-word {
+  font-weight: bold;
+  color: #333;
+}
+
+.feedback-continue-btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+}
+
+.feedback-panel.correct .feedback-continue-btn {
+  background: #58cc02;
+  color: white;
+  box-shadow: 0 4px 0 #46a302;
+}
+
+.feedback-panel.wrong .feedback-continue-btn {
+  background: #ff4b4b;
+  color: white;
+  box-shadow: 0 4px 0 #cc3333;
+}
+
+.feedback-continue-btn:active {
+  transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+  box-shadow: none;
+}
+
+@keyframes panelSlideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+@-webkit-keyframes panelSlideUp {
+  from { -webkit-transform: translateY(100%); }
+  to { -webkit-transform: translateY(0); }
+}
+
+/* 隐藏原有的下一题按钮（当显示反馈面板时） */
+.feedback-panel-active .next-btn {
+  display: none !important;
+}
+
 /* ===== 自适应难度系统样式 ===== */
 
 /* 难度标签 */

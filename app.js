@@ -1054,38 +1054,33 @@ function handleAnswer(isCorrect, cardEl = null, correctAnswer = null) {
         }
     }
 
+    const q = moduleQuestions[currentQuestionIndex];
+
     if (isCorrect) {
         stopQuestionTimer(); // 答对停止计时
         if (cardEl) cardEl.classList.add('correct');
         playSuccessSound();
-        showFeedbackText(true);   // 屏幕显示中文
         speakFeedback(true);      // 语音说英文
         resetHintLevel();
 
         // 答对时显示正确答案+中文翻译（加深学习印象）
-        const q = moduleQuestions[currentQuestionIndex];
         if (q) {
             showCorrectAnswerWithTranslation(q);
         }
 
-        // 启用下一题按钮
-        const nextBtn = document.getElementById('next-question-btn');
-        if (nextBtn) {
-            nextBtn.disabled = false;
-        }
+        // 显示多邻国风格底部反馈面板
+        showFeedbackPanel(true, q);
 
-        // 答对后解锁交互，允许点击下一题按钮
+        // 答对后解锁交互
         isAnimating = false;
 
-        // 不再自动跳转，让学生点击下一题按钮
+        // 不再自动跳转，让学生点击继续按钮
     } else {
         if (cardEl) cardEl.classList.add('wrong');
         playWrongSound();
-        showFeedbackText(false);  // 屏幕显示中文
         speakFeedback(false);     // 语音说英文
 
         // 答错才显示提示（分层提示）
-        const q = moduleQuestions[currentQuestionIndex];
         if (q && q.audio) {
             const hint = getHint(q.audio);
             if (hint) {
@@ -1094,6 +1089,7 @@ function handleAnswer(isCorrect, cardEl = null, correctAnswer = null) {
         }
         increaseHintLevel();
 
+        // 答错后显示提示一段时间，但不显示底部面板（让学生继续尝试）
         setTimeout(() => {
             if (cardEl) cardEl.classList.remove('wrong');
             hideCorrectHint();
@@ -1209,6 +1205,71 @@ function hideCorrectAnswerDisplay() {
             }
         }
     }
+}
+
+// ===== 多邻国风格底部反馈面板 =====
+function showFeedbackPanel(isCorrect, question) {
+    // 移除旧的面板
+    hideFeedbackPanel();
+
+    // 添加标记类到body
+    document.body.classList.add('feedback-panel-active');
+
+    const panel = document.createElement('div');
+    panel.id = 'feedback-panel';
+    panel.className = `feedback-panel ${isCorrect ? 'correct' : 'wrong'}`;
+
+    // 获取鼓励语
+    const feedbackList = isCorrect ? feedbackMap.success : feedbackMap.encourage;
+    const feedback = feedbackList[Math.floor(Math.random() * feedbackList.length)];
+
+    // 获取正确答案
+    let answerWord = question?.audio || question?.word || question?.sentence || '';
+    let answerChinese = question?.chinese || '';
+
+    // 构建面板内容
+    let contentHTML = '';
+    if (isCorrect) {
+        contentHTML = `
+            <div class="feedback-panel-content">
+                <div class="feedback-icon">✓</div>
+                <div class="feedback-text">
+                    <div class="feedback-title">${feedback.cn}</div>
+                    ${answerWord ? `<div class="feedback-answer"><span class="answer-word">${answerWord}</span>${answerChinese ? ` = ${answerChinese}` : ''}</div>` : ''}
+                </div>
+            </div>
+            <button class="feedback-continue-btn" onclick="onFeedbackContinue()">继续</button>
+        `;
+    } else {
+        contentHTML = `
+            <div class="feedback-panel-content">
+                <div class="feedback-icon">✗</div>
+                <div class="feedback-text">
+                    <div class="feedback-title">${feedback.cn}</div>
+                    ${answerWord ? `<div class="feedback-answer">正确答案：<span class="answer-word">${answerWord}</span>${answerChinese ? ` (${answerChinese})` : ''}</div>` : ''}
+                </div>
+            </div>
+            <button class="feedback-continue-btn" onclick="onFeedbackContinue()">继续</button>
+        `;
+    }
+
+    panel.innerHTML = contentHTML;
+    document.body.appendChild(panel);
+}
+
+function hideFeedbackPanel() {
+    const panel = document.getElementById('feedback-panel');
+    if (panel) {
+        panel.remove();
+    }
+    document.body.classList.remove('feedback-panel-active');
+}
+
+function onFeedbackContinue() {
+    hideFeedbackPanel();
+    hideCorrectAnswerDisplay();
+    hideCorrectHint();
+    nextQuestion();
 }
 
 // ===== 动态难度调整 =====
