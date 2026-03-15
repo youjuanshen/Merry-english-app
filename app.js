@@ -16,7 +16,8 @@ let isAnimating = false;
 // 计时器相关
 let questionTimer = null;
 let timeLeft = 0;
-let currentTimeLimit = 0;
+let currentTimeLimit = 30; // 默认每题30秒
+const DEFAULT_TIME_LIMIT = 30;
 
 // Student <-> Teacher Sync
 let lastTeacherCommandTime = 0;
@@ -421,6 +422,11 @@ function startGame() {
     currentQuestionIndex = 0;
     currentPlayerIndex = 0;
 
+    // 如果没有设置时间限制，使用默认值
+    if (!currentTimeLimit || currentTimeLimit === 0) {
+        currentTimeLimit = DEFAULT_TIME_LIMIT;
+    }
+
     document.getElementById('module-screen').classList.remove('active');
     document.getElementById('game-screen').classList.add('active');
 
@@ -607,13 +613,15 @@ function showProgressiveHint(hint, level) {
 }
 
 // 答对时显示正确答案+中文翻译（让学生加深印象）
+// 显示在喇叭按钮的上方，而不是下一题按钮附近
 function showCorrectAnswerWithTranslation(q) {
     let display = document.getElementById('correct-answer-display');
+    const container = document.getElementById('question-container');
+
     if (!display) {
         display = document.createElement('div');
         display.id = 'correct-answer-display';
         display.className = 'correct-answer-display';
-        document.getElementById('question-container').appendChild(display);
     }
 
     // 获取英文内容和中文翻译
@@ -627,6 +635,13 @@ function showCorrectAnswerWithTranslation(q) {
         `;
     } else if (english) {
         display.innerHTML = `<div class="answer-english">${english}</div>`;
+    }
+
+    // 插入到容器的最前面（喇叭按钮上方）
+    if (container.firstChild) {
+        container.insertBefore(display, container.firstChild);
+    } else {
+        container.appendChild(display);
     }
 
     display.style.display = 'block';
