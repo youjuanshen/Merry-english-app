@@ -368,13 +368,13 @@ function renderReadingQuestion(q, container) {
         descEl.textContent = q.question;
         if(q.chinese) descEl.textContent += ` (${q.chinese})`;
         container.appendChild(descEl);
-        
+
         const grid = document.createElement('div');
         grid.style.display = 'flex';
         grid.style.justifyContent = 'space-around';
         grid.style.width = '100%';
         container.appendChild(grid);
-        
+
         [q.image1, q.image2].forEach((img, idx) => {
             const card = document.createElement('div');
             card.className = 'option-card';
@@ -383,5 +383,68 @@ function renderReadingQuestion(q, container) {
             card.onclick = () => handleAnswer(idx === q.correct, card);
             grid.appendChild(card);
         });
+
+    } else if (q.type === 'scenario') {
+        // 情境题 - Problem-Based Learning
+        const scenarioBox = document.createElement('div');
+        scenarioBox.style.background = '#FFF8E1';
+        scenarioBox.style.border = '2px solid #FFB74D';
+        scenarioBox.style.borderRadius = '16px';
+        scenarioBox.style.padding = '15px';
+        scenarioBox.style.marginBottom = '15px';
+        scenarioBox.style.textAlign = 'center';
+
+        // 情境图片/emoji
+        if (q.scenarioImage) {
+            const imgEl = document.createElement('div');
+            imgEl.style.fontSize = '48px';
+            imgEl.style.marginBottom = '10px';
+            imgEl.innerHTML = q.scenarioImage;
+            scenarioBox.appendChild(imgEl);
+        }
+
+        // 情境描述
+        const scenarioText = document.createElement('p');
+        scenarioText.style.fontSize = '16px';
+        scenarioText.style.margin = '0 0 5px 0';
+        scenarioText.style.fontWeight = 'bold';
+        scenarioText.textContent = q.scenario || '';
+        scenarioBox.appendChild(scenarioText);
+
+        // 中文提示
+        if (q.chinese) {
+            const chineseText = document.createElement('p');
+            chineseText.style.fontSize = '14px';
+            chineseText.style.color = '#666';
+            chineseText.style.margin = '0';
+            chineseText.textContent = q.chinese;
+            scenarioBox.appendChild(chineseText);
+        }
+
+        container.appendChild(scenarioBox);
+
+        // 问题
+        const questionEl = document.createElement('h3');
+        questionEl.style.textAlign = 'center';
+        questionEl.style.marginBottom = '15px';
+        questionEl.textContent = q.question || '';
+        container.appendChild(questionEl);
+
+        // 选项
+        const grid = document.createElement('div');
+        grid.className = 'options-grid';
+        q.options.forEach((opt, idx) => {
+            const card = document.createElement('div');
+            card.className = 'option-card';
+            card.style.fontSize = '18px';
+            card.style.padding = '15px';
+            card.textContent = opt;
+            card.onclick = () => {
+                const correctAnswer = q.options[q.correct];
+                handleAnswer(idx === q.correct, card, correctAnswer);
+            };
+            grid.appendChild(card);
+        });
+        container.appendChild(grid);
     }
 }
