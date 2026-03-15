@@ -36,6 +36,25 @@ function initPreparePage() {
     // Start Class
     document.getElementById('btn-start-class').onclick = () => {
         const timeLimit = parseInt(document.getElementById('time-limit-select')?.value) || 0;
+        
+        const unitVal = document.getElementById('unit-select')?.value || '1';
+        const lessonVal = document.getElementById('lesson-select')?.value || '1';
+        
+        const unitSelect = document.getElementById('unit-select');
+        const lessonSelect = document.getElementById('lesson-select');
+        const unitText = unitSelect ? unitSelect.options[unitSelect.selectedIndex].text : `Unit ${unitVal}`;
+        const lessonText = lessonSelect ? lessonSelect.options[lessonSelect.selectedIndex].text.split(':')[0] : `Lesson ${lessonVal}`;
+        const moduleText = getModuleChinese(currentModule);
+        
+        const currentLessonObj = {
+          unit: parseInt(unitVal),
+          lesson: parseInt(lessonVal),
+          module: currentModule,
+          displayName: `${unitText} ${lessonText} - ${moduleText}`
+        };
+        
+        localStorage.setItem('currentLesson', JSON.stringify(currentLessonObj));
+
         // Publish command to student app
         localStorage.setItem('teacherCommand', JSON.stringify({
             action: 'start',

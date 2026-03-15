@@ -14,17 +14,48 @@
 </head>
 <body>
   <div id="app">
+    <!-- Welcome Screen -->
+    <div id="welcome-screen" class="screen active">
+      <div class="welcome-content">
+        <h2 class="welcome-subtitle">🎉 欢迎来到 🎉</h2>
+        <div class="welcome-banner">
+          <h1 class="welcome-title">🌟 英语乐园 🌟</h1>
+          <p class="welcome-english">Let's Learn English!</p>
+        </div>
+        <div class="welcome-animals">
+          🐻 🐶 🐱 🐰 🦊
+        </div>
+        <p class="welcome-loading">自动跳转中...</p>
+      </div>
+    </div>
+
     <!-- Login Screen: Step 1 - Select Students -->
-    <div id="login-screen" class="screen active">
-      <h1>请选择你们的名字（选2人）</h1>
+    <div id="login-screen" class="screen">
+      <!-- Added Course Info Display -->
+      <div class="course-info-display" id="course-info-display" style="display:none;">
+        <h3>今日课程</h3>
+        <div class="course-card">
+           <div class="c-title">📚 <span id="display-lesson-title">第一单元第一课</span></div>
+           <div class="c-module">🎧 <span id="display-module-title">听力练习</span></div>
+        </div>
+      </div>
+
+      <h1 class="login-title">🌈 选择你们的名字 🌈</h1>
+      <p class="swipe-hint">← 左右滑动查看更多同学 →</p>
+      
       <div class="student-list" id="student-list">
         <!-- JS will populate -->
       </div>
-      <button id="next-btn" class="primary-btn" disabled>下一步</button>
+      
+      <div class="selected-students-display">
+        <p>已选择：<span id="selected-names">👦 ______  👧 ______</span></p>
+      </div>
+      
+      <button id="next-btn" class="primary-btn start-btn" disabled>🚀 开始学习 🚀</button>
     </div>
 
     <!-- Module Select Screen: Step 2 - Choose Module -->
-    <div id="module-screen" class="screen">
+    <div id="module-screen" class="screen" style="display:none;">
       <h1>选择今天的学习内容</h1>
       <div class="module-cards">
         <div class="module-card" data-module="listening">

@@ -13,6 +13,37 @@ let currentPlayerIndex = 0;
 let currentQuestionIndex = 0;
 let isAnimating = false;
 
+// Welcome Screen Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const welcomeScreen = document.getElementById('welcome-screen');
+    const loginScreen = document.getElementById('login-screen');
+    
+    if (welcomeScreen && loginScreen) {
+        setTimeout(() => {
+            welcomeScreen.style.opacity = '0';
+            setTimeout(() => {
+                welcomeScreen.classList.remove('active');
+                loginScreen.classList.add('active');
+            }, 500); // match transition duration in CSS
+        }, 2000); // Wait 2 seconds
+    }
+
+    // Load current lesson from localStorage
+    const currentLessonStr = localStorage.getItem('currentLesson');
+    if (currentLessonStr) {
+        const lesson = JSON.parse(currentLessonStr);
+        const courseInfoDisplay = document.getElementById('course-info-display');
+        const displayLessonTitle = document.getElementById('display-lesson-title');
+        const displayModuleTitle = document.getElementById('display-module-title');
+        
+        if (courseInfoDisplay && displayLessonTitle && displayModuleTitle) {
+            displayLessonTitle.textContent = lesson.displayName.split('-')[0].trim();
+            displayModuleTitle.textContent = lesson.displayName.split('-')[1] ? lesson.displayName.split('-')[1].trim() : '听力'; 
+            courseInfoDisplay.style.display = 'block';
+        }
+    }
+});
+
 // 计时器相关
 let questionTimer = null;
 let timeLeft = 0;
@@ -412,6 +443,18 @@ function toggleStudent(name, el) {
         el.classList.add('selected');
     }
     nextBtn.disabled = selectedStudents.length !== 2;
+    
+    // Update selected names display
+    const selectedNamesEl = document.getElementById('selected-names');
+    if (selectedNamesEl) {
+        if (selectedStudents.length === 0) {
+            selectedNamesEl.innerHTML = '👦 ______  👧 ______';
+        } else if (selectedStudents.length === 1) {
+            selectedNamesEl.innerHTML = `👦 ${selectedStudents[0].replace(/^\\d+\\.\\s*/, '')}  👧 ______`;
+        } else {
+            selectedNamesEl.innerHTML = `👦 ${selectedStudents[0].replace(/^\\d+\\.\\s*/, '')}  👧 ${selectedStudents[1].replace(/^\\d+\\.\\s*/, '')}`;
+        }
+    }
 }
 
 function getQuestions(module, phase) {
@@ -484,13 +527,23 @@ function shuffleArray(arr) {
     return result;
 }
 
-// Step 1: Click "下一步" to go to module selection
+// Step 1: Click "开始学习" to go directly to game-screen (skip module-screen)
 nextBtn.onclick = function() {
     if (audioCtx.state === 'suspended') audioCtx.resume();
     players = selectedStudents.map(n => ({ name: n, stars: 0 }));
 
     document.getElementById('login-screen').classList.remove('active');
-    document.getElementById('module-screen').classList.add('active');
+    
+    const lessonStr = localStorage.getItem('currentLesson');
+    if (lessonStr) {
+        const lesson = JSON.parse(lessonStr);
+        currentModule = lesson.module || 'listening';
+    } else {
+        currentModule = 'listening'; // fallback
+    }
+    currentPhase = 'pretest'; // Always start with pretest
+    
+    startGame();
 };
 
 // Step 2: Click module card to start pretest
@@ -543,18 +596,24 @@ function updatePhaseIndicator() {
         gameScreen.insertBefore(indicator, gameScreen.firstChild);
     }
 
-    const moduleNames = {
-        listening: '听力',
-        reading: '阅读',
-        writing: '写作',
-        speaking: '口语'
-    };
     const phaseNames = {
         pretest: '前测',
         practice: '练习'
     };
 
-    indicator.textContent = `${moduleNames[currentModule]} - ${phaseNames[currentPhase]}`;
+    const lessonStr = localStorage.getItem('currentLesson');
+    if (lessonStr) {
+        const lesson = JSON.parse(lessonStr);
+        indicator.textContent = `📚 ${lesson.displayName} · ${phaseNames[currentPhase]}`;
+    } else {
+        const moduleNames = {
+            listening: '听力',
+            reading: '阅读',
+            writing: '写作',
+            speaking: '口语'
+        };
+        indicator.textContent = `📚 ${moduleNames[currentModule]} - ${phaseNames[currentPhase]}`;
+    }
 }
 
 function renderQuestion() {
