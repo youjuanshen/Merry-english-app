@@ -613,15 +613,15 @@ function showProgressiveHint(hint, level) {
 }
 
 // 答对时显示正确答案+中文翻译（让学生加深印象）
-// 显示在喇叭按钮的上方，而不是下一题按钮附近
+// 使用固定定位，显示在屏幕顶部，不影响其他元素布局
 function showCorrectAnswerWithTranslation(q) {
     let display = document.getElementById('correct-answer-display');
-    const container = document.getElementById('question-container');
 
     if (!display) {
         display = document.createElement('div');
         display.id = 'correct-answer-display';
         display.className = 'correct-answer-display';
+        document.body.appendChild(display);
     }
 
     // 获取英文内容和中文翻译
@@ -635,13 +635,6 @@ function showCorrectAnswerWithTranslation(q) {
         `;
     } else if (english) {
         display.innerHTML = `<div class="answer-english">${english}</div>`;
-    }
-
-    // 插入到容器的最前面（喇叭按钮上方）
-    if (container.firstChild) {
-        container.insertBefore(display, container.firstChild);
-    } else {
-        container.appendChild(display);
     }
 
     display.style.display = 'block';

@@ -556,10 +556,13 @@ h1 {
   font-size: 13px;
 }
 
-/* 下一题按钮 - 大而醒目 */
+/* 下一题按钮 - 固定在底部，不受内容影响 */
 .next-btn {
-  display: block;
-  margin: 15px auto 0;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
   padding: 12px 40px;
   font-size: 18px;
   font-weight: bold;
@@ -570,23 +573,38 @@ h1 {
   cursor: pointer;
   box-shadow: 0 4px 0 #1899d6;
   min-width: 140px;
+  z-index: 100;
 }
 .next-btn:active {
-  -webkit-transform: translateY(4px);
-  transform: translateY(4px);
+  transform: translateX(-50%) translateY(4px);
+  -webkit-transform: translateX(-50%) translateY(4px);
   box-shadow: 0 0 0 #1899d6;
 }
 
-/* 答对时显示正确答案+中文翻译 */
+/* 答对时显示正确答案+中文翻译 - 固定在顶部，不影响布局 */
 .correct-answer-display {
+  position: fixed;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
   text-align: center;
-  padding: 15px 20px;
+  padding: 12px 25px;
   background: linear-gradient(135deg, #d7ffb8, #b8ffd7);
   border: 3px solid var(--primary);
   border-radius: 16px;
-  margin-top: 15px;
-  -webkit-animation: slideUp 0.3s ease-out;
-  animation: slideUp 0.3s ease-out;
+  z-index: 50;
+  -webkit-animation: fadeInScale 0.3s ease-out;
+  animation: fadeInScale 0.3s ease-out;
+}
+
+@-webkit-keyframes fadeInScale {
+  from { opacity: 0; transform: translateX(-50%) scale(0.8); }
+  to { opacity: 1; transform: translateX(-50%) scale(1); }
+}
+@keyframes fadeInScale {
+  from { opacity: 0; transform: translateX(-50%) scale(0.8); }
+  to { opacity: 1; transform: translateX(-50%) scale(1); }
 }
 .correct-answer-display .answer-english {
   font-size: 22px;
