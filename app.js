@@ -616,10 +616,12 @@ function renderQuestion() {
         renderSpeakingQuestion(q, container);
     }
 
-    // 添加"下一题"按钮
+    // 添加"下一题"按钮（默认禁用，答对后才启用）
     const skipBtn = document.createElement('button');
     skipBtn.className = 'next-btn';
+    skipBtn.id = 'next-question-btn';
     skipBtn.textContent = '下一题 ▶';
+    skipBtn.disabled = true; // 默认禁用
     skipBtn.onclick = skipToNextQuestion;
     container.appendChild(skipBtn);
 
@@ -805,11 +807,13 @@ function handleAnswer(isCorrect, cardEl = null, correctAnswer = null) {
             showCorrectAnswerWithTranslation(q);
         }
 
-        // 延迟进入下一题，让学生看清答案
-        setTimeout(() => {
-            hideCorrectAnswerDisplay();
-            onCorrect();
-        }, 2000);
+        // 启用下一题按钮
+        const nextBtn = document.getElementById('next-question-btn');
+        if (nextBtn) {
+            nextBtn.disabled = false;
+        }
+
+        // 不再自动跳转，让学生点击下一题按钮
     } else {
         if (cardEl) cardEl.classList.add('wrong');
         playWrongSound();
@@ -1021,6 +1025,7 @@ function forceNextQuestion() {
 function skipToNextQuestion() {
     if (isAnimating) return;
     stopQuestionTimer();
+    hideCorrectAnswerDisplay(); // 隐藏正确答案显示
     currentPlayerIndex = Math.random() < 0.5 ? 0 : 1;
     currentQuestionIndex++;
     resetHintLevel();

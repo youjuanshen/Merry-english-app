@@ -578,11 +578,19 @@ h1 {
   cursor: pointer;
   box-shadow: 0 4px 0 #1899d6;
   z-index: 100;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
 }
-.next-btn:active {
+.next-btn:active:not(:disabled) {
   transform: translateY(4px);
   -webkit-transform: translateY(4px);
   box-shadow: 0 0 0 #1899d6;
+}
+.next-btn:disabled {
+  background: linear-gradient(135deg, #ccc, #ddd);
+  color: #999;
+  box-shadow: 0 4px 0 #bbb;
+  cursor: not-allowed;
 }
 
 /* 答对时显示正确答案+中文翻译 - 替换题目位置 */
