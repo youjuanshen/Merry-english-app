@@ -698,27 +698,30 @@ nextBtn.onclick = function() {
         currentLessonData = lesson1;
     }
     
-    // 检查教师端是否设置了阶段
+    // 检查教师端是否设置了模块和阶段
     const cmdStr = localStorage.getItem('teacherCommand');
     if (cmdStr) {
         const cmd = JSON.parse(cmdStr);
-        currentPhase = cmd.phase || 'pretest';
+        currentModule = cmd.module || 'listening';  // 读取教师选择的模块
+        currentPhase = cmd.phase || 'pretest';       // 读取教师选择的阶段
     } else {
+        currentModule = 'listening';
         currentPhase = 'pretest';
     }
     startGame();
 };
 
-// Step 2: Click module card to start pretest
+// Step 2: Click module card to start (仅当没有教师指令时使用)
 document.querySelectorAll('.module-card').forEach(card => {
     card.onclick = function() {
-        currentModule = this.dataset.module;
-        // 检查教师端是否设置了阶段
+        // 检查教师端是否设置了模块和阶段
         const cmdStr = localStorage.getItem('teacherCommand');
         if (cmdStr) {
             const cmd = JSON.parse(cmdStr);
+            currentModule = cmd.module || this.dataset.module;
             currentPhase = cmd.phase || 'pretest';
         } else {
+            currentModule = this.dataset.module;
             currentPhase = 'pretest';
         }
         startGame();
