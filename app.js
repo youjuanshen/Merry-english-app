@@ -732,6 +732,11 @@ function startGame() {
     document.getElementById('player1-ui').querySelector('.name').textContent = players[0].name;
     document.getElementById('player2-ui').querySelector('.name').textContent = players[1].name;
 
+    // 标记双人练习完成（每日任务）
+    if (typeof markDuoPracticeComplete === 'function') {
+        markDuoPracticeComplete();
+    }
+
     // 重置前测统计
     pretestStats = {
         player1: { correct: 0, total: 0, totalTime: 0, wrongWords: [] },
@@ -1496,6 +1501,32 @@ if (backToLoginBtn) {
     };
 }
 
+// ===== 每日任务集成 =====
+
+// 任务按钮点击事件
+var questsBtn = document.getElementById('quests-btn');
+var questsContainer = document.getElementById('daily-quests-container');
+var questsVisible = false;
+
+if (questsBtn && questsContainer) {
+    questsBtn.onclick = function() {
+        questsVisible = !questsVisible;
+        if (questsVisible) {
+            if (typeof renderDailyQuestsPanel === 'function') {
+                questsContainer.innerHTML = renderDailyQuestsPanel();
+            }
+            questsContainer.style.display = 'block';
+        } else {
+            questsContainer.style.display = 'none';
+        }
+    };
+
+    // 初始化时检查重置
+    if (typeof checkDailyReset === 'function') {
+        checkDailyReset();
+    }
+}
+
 // 处理成就检测（在答题后调用）
 function processAchievements(isCorrect) {
     if (typeof checkAndUpdateAchievements !== 'function') return;
@@ -1518,6 +1549,11 @@ function processAchievements(isCorrect) {
                 };
             }(newAchievements[i]), i * 3500);
         }
+    }
+
+    // 处理每日任务
+    if (typeof processDailyQuests === 'function') {
+        processDailyQuests(isCorrect, consecutiveCorrect);
     }
 }
 

@@ -1186,24 +1186,35 @@ h1 {
   100% { transform: rotateY(0deg); }
 }
 
-/* ===== 成就系统样式 ===== */
-.achievements-btn {
+/* ===== 顶部按钮组 ===== */
+.top-buttons {
   position: absolute;
   top: 15px;
   right: 15px;
+  display: flex;
+  gap: 10px;
+  z-index: 100;
+}
+
+.achievements-btn, .quests-btn {
   background: linear-gradient(135deg, #FFD700, #FFA500);
   color: #333;
   border: none;
   border-radius: 20px;
-  padding: 8px 16px;
-  font-size: 14px;
+  padding: 8px 14px;
+  font-size: 13px;
   font-weight: bold;
   box-shadow: 0 3px 0 #cc8800;
   cursor: pointer;
-  z-index: 100;
 }
 
-.achievements-btn:active {
+.quests-btn {
+  background: linear-gradient(135deg, #1cb0f6, #4dc4f9);
+  box-shadow: 0 3px 0 #1899d6;
+  color: white;
+}
+
+.achievements-btn:active, .quests-btn:active {
   transform: translateY(3px);
   box-shadow: none;
 }
