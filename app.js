@@ -1224,8 +1224,8 @@ function showFeedbackPanel(isCorrect, question) {
     const feedback = feedbackList[Math.floor(Math.random() * feedbackList.length)];
 
     // 获取正确答案
-    let answerWord = question?.audio || question?.word || question?.sentence || '';
-    let answerChinese = question?.chinese || '';
+    let answerWord = (question && question.audio) || (question && question.word) || (question && question.sentence) || '';
+    let answerChinese = (question && question.chinese) || '';
 
     // 构建面板内容
     let contentHTML = '';

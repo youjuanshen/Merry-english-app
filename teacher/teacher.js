@@ -35,10 +35,13 @@ function initPreparePage() {
 
     // Start Class
     document.getElementById('btn-start-class').onclick = () => {
-        const timeLimit = parseInt(document.getElementById('time-limit-select')?.value) || 0;
-        
-        const unitVal = document.getElementById('unit-select')?.value || '1';
-        const lessonVal = document.getElementById('lesson-select')?.value || '1';
+        const timeLimitEl = document.getElementById('time-limit-select');
+        const timeLimit = parseInt(timeLimitEl ? timeLimitEl.value : 0) || 0;
+
+        const unitEl = document.getElementById('unit-select');
+        const lessonEl = document.getElementById('lesson-select');
+        const unitVal = unitEl ? unitEl.value : '1';
+        const lessonVal = lessonEl ? lessonEl.value : '1';
         
         const unitSelect = document.getElementById('unit-select');
         const lessonSelect = document.getElementById('lesson-select');
