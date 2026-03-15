@@ -227,6 +227,7 @@ h1 {
   align-items: center;
   justify-content: flex-start;
   padding-top: 20px;
+  padding-bottom: 80px; /* 给下一题按钮留出空间 */
 }
 .play-sound-btn {
   background-color: var(--secondary);
@@ -255,6 +256,7 @@ h1 {
   gap: 12px;
   width: 100%;
   flex: 1;
+  padding-bottom: 80px; /* 给下一题按钮留出空间 */
 }
 .option-card {
   border: 3px solid var(--gray);
@@ -301,6 +303,11 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+
+/* 整个游戏屏幕需要给底部按钮留空间 */
+#game-screen {
+  padding-bottom: 70px;
 }
 .sort-word {
   border: 2px solid var(--gray);
