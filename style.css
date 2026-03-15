@@ -158,15 +158,15 @@ h1 {
   display: none;
 }
 
-/* 每一页 */
+/* 每一页 - 默认小屏幕 iPhone 7 (375px): 3列x3行=9人 */
 .student-page {
   flex: 0 0 100%;
   scroll-snap-align: start;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 10px;
-  padding: 10px 15px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 8px;
+  padding: 8px 10px;
   box-sizing: border-box;
 }
 
@@ -191,22 +191,23 @@ h1 {
 
 .student-card {
   flex-shrink: 0;
-  width: 100px;
+  width: 100%;
   scroll-snap-align: start;
   border: 2px solid #B2DFDB;
   background-color: white;
-  border-radius: 16px;
-  padding: 15px 10px;
+  border-radius: 12px;
+  padding: 12px 6px;
   text-align: center;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
   color: var(--text);
-  min-height: 44px;
+  min-height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 0 rgba(0,0,0,0.05);
   transition: all 0.2s;
+  box-sizing: border-box;
 }
 .student-card.selected {
   border-color: #00ACC1;
@@ -1134,4 +1135,64 @@ h1 {
     color: #E65100;
     margin-bottom: 15px;
     transition: opacity 0.5s ease-out;
+}
+
+/* ===== 响应式设计 - 不同设备自动适配 ===== */
+
+/* iPhone 7 Plus (414px宽) - 3列x4行=12人/页 */
+@media screen and (min-width: 400px) {
+  .student-page {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 10px;
+    padding: 10px 15px;
+  }
+  .student-card {
+    font-size: 15px;
+    padding: 14px 8px;
+    border-radius: 14px;
+  }
+}
+
+/* iPad 竖屏 (768px宽) - 5列x4行=20人/页 */
+@media screen and (min-width: 700px) {
+  .student-page {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 12px;
+    padding: 15px 20px;
+  }
+  .student-card {
+    font-size: 18px;
+    padding: 18px 10px;
+    border-radius: 16px;
+    min-height: 50px;
+  }
+  .login-title {
+    font-size: 28px;
+  }
+  .swipe-hint {
+    font-size: 16px;
+  }
+  .selected-students-display {
+    font-size: 20px;
+  }
+  .primary-btn {
+    font-size: 22px;
+    padding: 18px 40px;
+  }
+}
+
+/* iPad 横屏 (1024px宽) - 6列x5行=30人/页，一页显示全部 */
+@media screen and (min-width: 1000px) {
+  .student-page {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, auto);
+    gap: 15px;
+    padding: 20px 30px;
+  }
+  .student-card {
+    font-size: 20px;
+    padding: 20px 12px;
+  }
 }

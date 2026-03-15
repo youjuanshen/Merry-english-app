@@ -520,10 +520,20 @@ function wrapImagesWithWhiteBg(container) {
     });
 }
 
-// Render student list - 分页形式（每页10人）
+// Render student list - 响应式分页
 const studentPagesEl = document.getElementById('student-pages');
 const pageDotsEl = document.getElementById('page-dots');
-const STUDENTS_PER_PAGE = 10;
+
+// 根据屏幕宽度计算每页学生数
+function getStudentsPerPage() {
+    const width = window.innerWidth;
+    if (width >= 1000) return 30;      // iPad横屏: 6列x5行
+    if (width >= 700) return 20;       // iPad竖屏: 5列x4行
+    if (width >= 400) return 12;       // iPhone 7 Plus: 3列x4行
+    return 9;                          // iPhone 7: 3列x3行
+}
+
+const STUDENTS_PER_PAGE = getStudentsPerPage();
 const totalPages = Math.ceil(students.length / STUDENTS_PER_PAGE);
 
 // 创建分页
