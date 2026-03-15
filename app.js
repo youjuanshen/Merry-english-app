@@ -861,17 +861,36 @@ function showProgressiveHint(hint, level) {
 }
 
 // 答对时显示正确答案+中文翻译（让学生加深印象）
-// 使用固定定位，显示在屏幕顶部，不影响其他元素布局
+// 替换原来的题目位置，只保留选项
 function showCorrectAnswerWithTranslation(q) {
     const container = document.getElementById('question-container');
 
-    // 隐藏原来的题目内容（播放按钮等）
-    const contentArea = container.querySelector('.content-area');
-    if (contentArea) {
-        contentArea.style.display = 'none';
+    // 隐藏原来的题目内容（除了选项区域和固定底部的按钮等）
+    const protectedClasses = ['options-grid', 'sort-area', 'whack-mole-grid', 'balloon-container', 'next-btn'];
+    
+    for (let i = 0; i < container.children.length; i++) {
+        const child = container.children[i];
+        let shouldHide = true;
+        
+        // 如果元素包含受保护的类之一，则不隐藏
+        for (const cls of protectedClasses) {
+            if (child.classList.contains(cls)) {
+                shouldHide = false;
+                break;
+            }
+        }
+        
+        if (child.id === 'correct-answer-display' || child.id === 'progressive-hint' || child.id === 'correct-hint') {
+            shouldHide = false;
+        }
+        
+        if (shouldHide) {
+            child.dataset.originalDisplay = getComputedStyle(child).display;
+            child.style.display = 'none';
+        }
     }
 
-    // 移除旧的正确答案显示
+    // 移除旧的正确答案显示（如果有）
     let display = document.getElementById('correct-answer-display');
     if (display) {
         display.remove();
@@ -895,10 +914,18 @@ function showCorrectAnswerWithTranslation(q) {
         display.innerHTML = `<div class="answer-english">✓ ${english}</div>`;
     }
 
-    // 插入到container顶部（选项上方）
-    const optionsGrid = container.querySelector('.options-grid');
-    if (optionsGrid) {
-        container.insertBefore(display, optionsGrid);
+    // 获取需要插入在它们之前的元素（第一个未被隐藏的受保护元素）
+    let insertBeforeElement = null;
+    for (let i = 0; i < container.children.length; i++) {
+        const child = container.children[i];
+        if (child.style.display !== 'none' && child !== display) {
+            insertBeforeElement = child;
+            break;
+        }
+    }
+
+    if (insertBeforeElement) {
+        container.insertBefore(display, insertBeforeElement);
     } else {
         container.appendChild(display);
     }
@@ -910,9 +937,15 @@ function hideCorrectAnswerDisplay() {
         display.remove();
     }
     // 恢复题目内容显示
-    const contentArea = document.querySelector('.content-area');
-    if (contentArea) {
-        contentArea.style.display = 'flex';
+    const container = document.getElementById('question-container');
+    if (container) {
+        for (let i = 0; i < container.children.length; i++) {
+            const child = container.children[i];
+            if (child.dataset.originalDisplay !== undefined) {
+                child.style.display = child.dataset.originalDisplay;
+                delete child.dataset.originalDisplay;
+            }
+        }
     }
 }
 
