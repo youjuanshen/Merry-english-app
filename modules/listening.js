@@ -41,23 +41,23 @@ function renderListeningQuestion(q, container) {
         container.appendChild(grid);
 
     } else if (q.type === 'listen_tf') {
+        // 对错题 - 充分利用空间，图片更大
         const imgEl = document.createElement('div');
-        imgEl.style.fontSize = '100px';  // 放大图片
-        imgEl.style.marginBottom = '20px';
+        imgEl.className = 'tf-image-container';
         imgEl.innerHTML = q.image;
         container.appendChild(imgEl);
 
-        // 提示只在答错时显示，不要一开始就显示
-
+        // 两个大按钮并排
         const grid = document.createElement('div');
-        grid.className = 'options-grid';
+        grid.className = 'tf-options-grid';
 
-        [['✔️ 对', true], ['❌ 错', false]].forEach(([label, value]) => {
+        [['对', true, '#58cc02'], ['错', false, '#ff4b4b']].forEach(([label, value, color]) => {
             const card = document.createElement('div');
-            card.className = 'option-card';
+            card.className = 'tf-option-card';
             card.innerHTML = label;
+            card.style.borderColor = color;
             card.onclick = () => {
-                const correctAnswer = q.correct ? '对 ✔️' : '错 ❌';
+                const correctAnswer = q.correct ? '对' : '错';
                 handleAnswer(value === q.correct, card, correctAnswer);
             };
             grid.appendChild(card);

@@ -14,17 +14,12 @@
 </head>
 <body>
   <div id="app">
-    <!-- Welcome Screen -->
+    <!-- Welcome Screen - 简洁大气 -->
     <div id="welcome-screen" class="screen active">
       <div class="welcome-content">
-        <h2 class="welcome-subtitle">🎉 欢迎来到 🎉</h2>
-        <div class="welcome-banner">
-          <h1 class="welcome-title">🌟 英语乐园 🌟</h1>
-          <p class="welcome-english">Let's Learn English!</p>
-        </div>
-        <div class="welcome-animals">
-          🐻 🐶 🐱 🐰 🦊
-        </div>
+        <p class="welcome-subtitle">欢迎来到</p>
+        <h1 class="welcome-title">英语乐园</h1>
+        <p class="welcome-english">Let's Learn English!</p>
         <p class="welcome-countdown" id="countdown">3</p>
       </div>
     </div>
@@ -40,8 +35,8 @@
         </div>
       </div>
 
-      <h1 class="login-title">🌈 选择你们的名字 🌈</h1>
-      <p class="swipe-hint">← 左右滑动查看更多同学 →</p>
+      <h1 class="login-title">选择你们的名字</h1>
+      <p class="swipe-hint">左右滑动查看更多同学</p>
 
       <div class="student-pages-container" id="student-pages">
         <!-- JS will populate with pages -->
@@ -49,12 +44,12 @@
       <div class="page-dots" id="page-dots">
         <!-- JS will populate -->
       </div>
-      
+
       <div class="selected-students-display">
-        <p>已选择：<span id="selected-names">👦 ______  👧 ______</span></p>
+        <p>已选择：<span id="selected-names">______ 和 ______</span></p>
       </div>
-      
-      <button id="next-btn" class="primary-btn start-btn" disabled>🚀 开始学习 🚀</button>
+
+      <button id="next-btn" class="primary-btn start-btn" disabled>开始学习</button>
     </div>
 
     <!-- Module Select Screen: Step 2 - Choose Module -->
@@ -80,25 +75,25 @@
       </div>
     </div>
 
-    <!-- Game Screen -->
+    <!-- Game Screen - 简洁设计 -->
     <div id="game-screen" class="screen">
       <div class="header">
         <div class="player-container active-player" id="player1-ui">
-          <div class="avatar">👨‍🎓</div>
+          <div class="avatar">A</div>
           <div class="name">Player 1</div>
-          <div class="stars">⭐ 0</div>
+          <div class="stars">0分</div>
         </div>
         <div class="question-progress" id="question-progress">1/12</div>
         <div class="player-container" id="player2-ui">
-          <div class="avatar">👩‍🎓</div>
+          <div class="avatar">B</div>
           <div class="name">Player 2</div>
-          <div class="stars">⭐ 0</div>
+          <div class="stars">0分</div>
         </div>
       </div>
 
       <div class="turn-indicator" id="turn-indicator">
         <span class="turn-progress">1/12</span>
-        <span class="turn-name">请 <strong>张宇豪</strong> 同学回答</span>
+        <span class="turn-name">请 <strong>张宇豪</strong> 回答</span>
       </div>
 
       <div class="content-area" id="question-container">

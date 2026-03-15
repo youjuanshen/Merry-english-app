@@ -426,13 +426,13 @@ h1 {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 .option-card img {
-  width: 90px;
-  height: 90px;
+  width: 100%;
+  height: auto;
+  max-width: 120px;
+  max-height: 120px;
   object-fit: contain;
   background-color: #ffffff;
-  border-radius: 12px;
-  padding: 8px;
-  box-sizing: border-box;
+  border-radius: 10px;
 }
 .option-card.correct {
   border-color: var(--primary);
@@ -447,6 +447,55 @@ h1 {
   color: #ff4b4b;
   -webkit-animation: shake 0.4s ease-out;
   animation: shake 0.4s ease-out;
+}
+
+/* 对错题专用样式 - 充分利用空间 */
+.tf-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 30px;
+}
+.tf-image-container img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.tf-options-grid {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  padding: 0 10px;
+}
+.tf-option-card {
+  flex: 1;
+  padding: 30px 20px;
+  border-radius: 16px;
+  border: 4px solid;
+  background: #fff;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.tf-option-card:active {
+  transform: scale(0.96);
+}
+.tf-option-card.correct {
+  background-color: #d7ffb8;
+  border-color: #58cc02;
+  color: #58cc02;
+}
+.tf-option-card.wrong {
+  background-color: #ffeded;
+  border-color: #ff4b4b;
+  color: #ff4b4b;
 }
 
 /* Sorting Area */

@@ -480,7 +480,7 @@ for (let page = 0; page < totalPages; page++) {
         const name = students[i];
         const el = document.createElement('div');
         el.className = 'student-card';
-        el.textContent = name.replace(/^\d+\.\s*/, ''); // 去掉序号
+        el.textContent = name; // 保留学号，如 "1. 张宇豪"
         el.onclick = () => toggleStudent(name, el);
         pageEl.appendChild(el);
     }
@@ -517,15 +517,15 @@ function toggleStudent(name, el) {
     }
     nextBtn.disabled = selectedStudents.length !== 2;
     
-    // Update selected names display
+    // Update selected names display - 简洁风格，保留学号
     const selectedNamesEl = document.getElementById('selected-names');
     if (selectedNamesEl) {
         if (selectedStudents.length === 0) {
-            selectedNamesEl.innerHTML = '👦 ______  👧 ______';
+            selectedNamesEl.textContent = '______ 和 ______';
         } else if (selectedStudents.length === 1) {
-            selectedNamesEl.innerHTML = `👦 ${selectedStudents[0].replace(/^\\d+\\.\\s*/, '')}  👧 ______`;
+            selectedNamesEl.textContent = `${selectedStudents[0]} 和 ______`;
         } else {
-            selectedNamesEl.innerHTML = `👦 ${selectedStudents[0].replace(/^\\d+\\.\\s*/, '')}  👧 ${selectedStudents[1].replace(/^\\d+\\.\\s*/, '')}`;
+            selectedNamesEl.textContent = `${selectedStudents[0]} 和 ${selectedStudents[1]}`;
         }
     }
 }
