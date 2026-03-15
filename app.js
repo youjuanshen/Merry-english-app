@@ -383,37 +383,91 @@ function speakEncouragement(isCorrect) {
 
 // Show floating feedback text (中文显示，配合英文语音)
 // 语音说英文，屏幕显示中文翻译，让学生知道英文意思
+// 多邻国风格鼓励语（更丰富、更有趣）
 const feedbackMap = {
     success: [
-        { en: 'Great!', cn: '🎉 太棒了！' },
-        { en: 'Awesome!', cn: '⭐ 真厉害！' },
-        { en: 'Good job!', cn: '👏 好极了！' },
-        { en: 'Perfect!', cn: '✨ 完美！' },
-        { en: 'Well done!', cn: '🌟 做得好！' },
-        { en: 'Excellent!', cn: '💯 太棒了！' }
+        { en: 'Great!', cn: '太棒了！' },
+        { en: 'Awesome!', cn: '真厉害！' },
+        { en: 'Good job!', cn: '好极了！' },
+        { en: 'Perfect!', cn: '完美！' },
+        { en: 'Well done!', cn: '做得好！' },
+        { en: 'Excellent!', cn: '太优秀了！' },
+        { en: 'Amazing!', cn: '泰裤辣！' },
+        { en: 'Brilliant!', cn: '聪明！' },
+        { en: 'Fantastic!', cn: '非常好！' },
+        { en: 'Super!', cn: '超级棒！' },
+        { en: 'Wonderful!', cn: '太厉害了！' },
+        { en: 'Incredible!', cn: '难以置信！' }
     ],
     encourage: [
-        { en: 'Try again!', cn: '💪 再试一次！' },
-        { en: 'Almost!', cn: '🤔 差一点！' },
-        { en: 'Keep going!', cn: '😊 继续加油！' },
-        { en: 'You can do it!', cn: '👊 你可以的！' }
+        { en: 'Try again!', cn: '再试一次！' },
+        { en: 'Almost!', cn: '差一点！' },
+        { en: 'Keep going!', cn: '继续加油！' },
+        { en: 'You can do it!', cn: '你可以的！' },
+        { en: 'Don\'t give up!', cn: '别放弃！' },
+        { en: 'So close!', cn: '很接近了！' }
+    ],
+    // 连击专用鼓励语
+    combo: [
+        { en: 'On fire!', cn: '火力全开！' },
+        { en: 'Unstoppable!', cn: '势不可挡！' },
+        { en: 'Keep it up!', cn: '保持下去！' },
+        { en: 'You\'re on a roll!', cn: '状态爆棚！' }
     ]
 };
 
 function showFeedbackText(isCorrect) {
-    const list = isCorrect ? feedbackMap.success : feedbackMap.encourage;
-    const item = list[Math.floor(Math.random() * list.length)];
+    let list, item;
+
+    // 连击时使用特殊鼓励语
+    if (isCorrect && consecutiveCorrect >= 2) {
+        // 混合使用普通成功语和连击语
+        if (Math.random() > 0.5) {
+            list = feedbackMap.combo;
+        } else {
+            list = feedbackMap.success;
+        }
+    } else {
+        list = isCorrect ? feedbackMap.success : feedbackMap.encourage;
+    }
+
+    item = list[Math.floor(Math.random() * list.length)];
 
     const feedback = document.createElement('div');
     feedback.className = 'floating-feedback ' + (isCorrect ? 'success' : 'encourage');
-    feedback.textContent = item.cn;  // 屏幕显示中文
+    feedback.textContent = item.cn;
     document.body.appendChild(feedback);
+
+    // 如果是连击，显示连击数
+    if (isCorrect && consecutiveCorrect >= 2) {
+        showComboIndicator(consecutiveCorrect);
+    }
 
     setTimeout(() => {
         if (document.body.contains(feedback)) {
             document.body.removeChild(feedback);
         }
     }, 1500);
+}
+
+// 显示连击Combo指示器
+function showComboIndicator(count) {
+    // 移除旧的连击指示器
+    const oldCombo = document.getElementById('combo-indicator');
+    if (oldCombo) oldCombo.remove();
+
+    const combo = document.createElement('div');
+    combo.id = 'combo-indicator';
+    combo.className = 'combo-indicator';
+    combo.innerHTML = `<span class="combo-fire">🔥</span> 连击 x ${count}`;
+    document.body.appendChild(combo);
+
+    setTimeout(() => {
+        if (document.body.contains(combo)) {
+            combo.classList.add('fade-out');
+            setTimeout(() => combo.remove(), 300);
+        }
+    }, 2000);
 }
 
 // 语音鼓励（说英文）

@@ -688,6 +688,46 @@ h1 {
   box-shadow: 0 2px 0 #1899d6;
 }
 
+/* 连击Combo指示器 - 多邻国风格 */
+.combo-indicator {
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #ff9600, #ffb800);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 8px 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 0 #cc7800, 0 6px 20px rgba(255, 150, 0, 0.4);
+  z-index: 2001;
+  animation: comboPopIn 0.3s ease-out;
+}
+
+.combo-indicator .combo-fire {
+  font-size: 24px;
+  margin-right: 5px;
+  animation: fireShake 0.5s infinite;
+}
+
+.combo-indicator.fade-out {
+  opacity: 0;
+  transform: translateX(-50%) scale(0.8);
+  transition: all 0.3s ease-out;
+}
+
+@keyframes comboPopIn {
+  0% { transform: translateX(-50%) scale(0.5); opacity: 0; }
+  70% { transform: translateX(-50%) scale(1.1); }
+  100% { transform: translateX(-50%) scale(1); opacity: 1; }
+}
+
+@keyframes fireShake {
+  0%, 100% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+}
+
 /* 只有淡入淡出，不移动位置 */
 @-webkit-keyframes feedbackFade {
   0% { opacity: 0; -webkit-transform: translateX(-50%) scale(0.8); }
