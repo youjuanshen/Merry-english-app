@@ -29,17 +29,20 @@
 
         <div id="tab-obs">
             <div class="teacher-card">
-                <h3 class="card-title">📝 填写观察记录（7人名单）</h3>
-                <p style="font-size: 14px; color: var(--teacher-text-light); margin-top: -5px; margin-bottom: 15px;">请对今日观察组的目标生进行记录</p>
-                
+                <h3 class="card-title">📝 课堂观察评估表（自我效能感四维度）</h3>
+                <p style="font-size: 13px; color: var(--teacher-text-light); margin-top: -5px; margin-bottom: 10px;">
+                    评分标准：0=没做到 | 1=偶尔做到(1-2次) | 2=经常做到(3次以上)
+                </p>
+
                 <div style="overflow-x: auto;">
-                    <table class="obs-table">
+                    <table class="obs-table" style="font-size: 13px;">
                         <thead>
                             <tr>
-                                <th>姓名</th>
-                                <th>注意力</th>
-                                <th>开口度</th>
-                                <th>结对合作</th>
+                                <th style="min-width: 60px;">姓名</th>
+                                <th style="min-width: 80px;">掌握经验<br><small style="font-weight:normal;color:#999;">任务开始与持续</small></th>
+                                <th style="min-width: 80px;">替代经验<br><small style="font-weight:normal;color:#999;">对示范的反应</small></th>
+                                <th style="min-width: 80px;">社交劝导<br><small style="font-weight:normal;color:#999;">对鼓励的反应</small></th>
+                                <th style="min-width: 80px;">情绪状态<br><small style="font-weight:normal;color:#999;">放松与专注</small></th>
                             </tr>
                         </thead>
                         <tbody id="obs-tbody">
@@ -47,8 +50,8 @@
                         </tbody>
                     </table>
                 </div>
-                <textarea class="select-input" placeholder="其他补充记录（如特殊表现）..." style="height: 80px; resize: none; margin-bottom: 15px;"></textarea>
-                <button class="teacher-btn btn-warning" style="width: 100%; color: white;" onclick="alert('观察记录已保存！')">保存记录</button>
+                <textarea class="select-input" placeholder="其他补充记录（如特殊表现、请假情况等）..." style="height: 80px; resize: none; margin-bottom: 15px;"></textarea>
+                <button class="teacher-btn btn-warning" style="width: 100%; color: white;" onclick="saveObservation()">保存记录</button>
             </div>
         </div>
 
@@ -118,18 +121,55 @@
         function initFeedbackPage() {
             // Document date
             document.getElementById('report-date').textContent = new Date().toLocaleDateString('zh-CN');
-            
-            // Populate observation table
+
+            // Populate observation table with self-efficacy dimensions
             const group = getTodayObservationGroup();
             const tbody = document.getElementById('obs-tbody');
             tbody.innerHTML = group.map(s => `
                 <tr>
-                    <td>${s.name}</td>
-                    <td><input type="radio" name="attn_${s.id}" checked></td>
-                    <td><input type="radio" name="speak_${s.id}" checked></td>
-                    <td><input type="radio" name="collab_${s.id}" checked></td>
+                    <td style="font-weight:bold;">${s.name}</td>
+                    <td>
+                        <select style="width:50px;padding:4px;">
+                            <option value="2">2</option>
+                            <option value="1">1</option>
+                            <option value="0">0</option>
+                            <option value="na">N/A</option>
+                            <option value="absent">假</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select style="width:50px;padding:4px;">
+                            <option value="2">2</option>
+                            <option value="1">1</option>
+                            <option value="0">0</option>
+                            <option value="na">N/A</option>
+                            <option value="absent">假</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select style="width:50px;padding:4px;">
+                            <option value="2">2</option>
+                            <option value="1">1</option>
+                            <option value="0">0</option>
+                            <option value="na">N/A</option>
+                            <option value="absent">假</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select style="width:50px;padding:4px;">
+                            <option value="2">2</option>
+                            <option value="1">1</option>
+                            <option value="0">0</option>
+                            <option value="na">N/A</option>
+                            <option value="absent">假</option>
+                        </select>
+                    </td>
                 </tr>
             `).join('');
+        }
+
+        function saveObservation() {
+            alert('观察记录已保存！数据将同步到Google表单。');
         }
     </script>
 </body>

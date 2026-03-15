@@ -162,6 +162,31 @@ body {
     background: #eef5fb;
 }
 
+/* 阶段选择 */
+.phase-select {
+    padding: 15px 10px;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--teacher-text-light);
+    transition: all 0.2s;
+}
+.phase-select small {
+    font-weight: normal;
+    font-size: 12px;
+    color: #999;
+}
+.phase-select.active {
+    border-color: var(--teacher-success);
+    color: var(--teacher-success);
+    background: #f0fff0;
+}
+.phase-select.active small {
+    color: var(--teacher-success);
+}
+
 /* 名单网格 */
 .name-grid {
     display: grid;

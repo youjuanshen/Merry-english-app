@@ -17,12 +17,16 @@
             <h3 class="card-title">📚 选择课程</h3>
             <div class="grid-2">
                 <select class="select-input" id="unit-select">
-                    <option value="1">Unit 1</option>
-                    <option value="2">Unit 2</option>
+                    <option value="1">Unit 1 动物</option>
+                    <option value="2">Unit 2 数字</option>
+                    <option value="3">Unit 3 颜色</option>
+                    <option value="4">Unit 4 身体</option>
                 </select>
                 <select class="select-input" id="lesson-select">
-                    <option value="1">Lesson 1: This is a bear.</option>
+                    <option value="1">Lesson 1</option>
                     <option value="2">Lesson 2</option>
+                    <option value="3">Lesson 3</option>
+                    <option value="4">Lesson 4</option>
                 </select>
             </div>
         </div>
@@ -34,6 +38,14 @@
                 <div class="module-select" data-mod="reading">阅读<br>&nbsp;</div>
                 <div class="module-select" data-mod="writing">写作<br>&nbsp;</div>
                 <div class="module-select" data-mod="speaking">口语<br>&nbsp;</div>
+            </div>
+        </div>
+
+        <div class="teacher-card">
+            <h3 class="card-title">📊 选择阶段</h3>
+            <div class="grid-2" id="phase-selector">
+                <div class="phase-select active" data-phase="pretest">📝 前测<br><small>诊断学生水平</small></div>
+                <div class="phase-select" data-phase="practice">🎮 实战<br><small>游戏化练习</small></div>
             </div>
         </div>
 
@@ -57,7 +69,7 @@
         </div>
 
         <div class="teacher-card">
-            <h3 class="card-title">⏳ 答题时间限制</h3>
+            <h3 class="card-title">⏳ 答题时间</h3>
             <select class="select-input" id="time-limit-select">
                 <option value="0">无限制 (推荐)</option>
                 <option value="10">10秒 / 题</option>

@@ -33,6 +33,16 @@ function initPreparePage() {
         };
     });
 
+    // Phase Selector Logic (前测/实战)
+    const phaseSelectors = document.querySelectorAll('.phase-select');
+    phaseSelectors.forEach(el => {
+        el.onclick = () => {
+            phaseSelectors.forEach(p => p.classList.remove('active'));
+            el.classList.add('active');
+            currentPhase = el.dataset.phase;
+        };
+    });
+
     // Start Class
     document.getElementById('btn-start-class').onclick = () => {
         const timeLimitEl = document.getElementById('time-limit-select');
@@ -62,7 +72,7 @@ function initPreparePage() {
         localStorage.setItem('teacherCommand', JSON.stringify({
             action: 'start',
             module: currentModule,
-            phase: 'pretest', // Start with pretest by default
+            phase: currentPhase, // 使用选择的阶段（前测/实战）
             lesson: currentLesson,
             timeLimit: timeLimit,
             timestamp: Date.now()
