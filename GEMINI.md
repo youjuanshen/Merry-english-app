@@ -38,9 +38,7 @@
 | # | 任务名称 | 状态 | 优先级 |
 |---|----------|------|--------|
 | 17 | 🔥 UI全面测试与修复 | ⏳ 待开始 | **最高** |
-| 14 | 扩展气球射击题目 | ⏳ 待开始 | 高 |
-| 15 | 添加情境题（问题导向） | ⏳ 待开始 | 高 |
-| 16 | 设计微项目题型数据 | ⏳ 待开始 | 中 |
+| 18 | 实战题型渲染器开发 | ⏳ 待开始 | 高 |
 
 ### 已完成任务（续）
 
@@ -51,6 +49,9 @@
 | 11 | 竞品深度分析+应用建议 | 2026-03-15 | 五个App深度对比 |
 | 12 | 题库和图片质量检查 | 2026-03-15 | 全部通过 |
 | 13 | 题型理论对齐检查 | 2026-03-15 | 发现3Ps缺失问题 |
+| 14 | 扩展气球射击题目 | 2026-03-15 | 12/16课已添加 ✓ Claude验收 |
+| 15 | 添加情境题（问题导向） | 2026-03-15 | 多课添加scenario ✓ Claude验收 |
+| 16 | 设计微项目题型数据 | 2026-03-15 | projects.js 3个项目 ✓ Claude验收 |
 
 ---
 
@@ -265,6 +266,63 @@ https://youjuanshen.github.io/Merry-english-app/
 
 ---
 
+# 🔥 任务18：实战题型渲染器开发
+
+## 任务背景
+
+任务14-16添加了新题型数据（balloon_pop、scenario、project_*），但 **app.js 可能还没有对应的渲染器**。需要确保这些题型能正确显示和交互。
+
+## 你需要做的
+
+### 第1步：检查现有渲染器
+
+在 `app.js` 搜索 `renderQuestion` 函数，看看已经支持哪些 type：
+- `listen_select` ✓
+- `true_false` ✓
+- `flip_card` ✓
+- `balloon_pop` ?
+- `scenario` ?
+- `project_card` ?
+
+### 第2步：开发缺失的渲染器
+
+如果缺少 scenario 渲染器，添加：
+
+```javascript
+case 'scenario':
+    return `
+        <div class="scenario-container">
+            <div class="scenario-scene">${q.scenarioImage}</div>
+            <p class="scenario-text">${q.scenario}</p>
+            <p class="scenario-chinese">${q.chinese}</p>
+            <p class="scenario-question">${q.question}</p>
+            <div class="options-grid">
+                ${q.options.map((opt, i) => `
+                    <button class="option-btn" data-index="${i}">${opt}</button>
+                `).join('')}
+            </div>
+        </div>
+    `;
+```
+
+### 第3步：添加对应CSS样式
+
+在 `style.css` 添加：
+
+```css
+.scenario-container { ... }
+.scenario-scene { font-size: 48px; text-align: center; }
+.scenario-text { ... }
+```
+
+### 第4步：测试新题型
+
+1. 在教师端选择"实战"阶段
+2. 进入学生端答题
+3. 确认 scenario 题目能正常显示和作答
+
+---
+
 ## 测试检查清单（每次修改代码后必测）
 
 - [ ] 选择学生 → 能选中两个人
@@ -290,4 +348,4 @@ https://youjuanshen.github.io/Merry-english-app/
 
 ---
 
-*最后更新：2026-03-15 by Claude*
+*最后更新：2026-03-15 22:50 by Claude - 验收任务14-16，新增任务18*
