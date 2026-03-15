@@ -1269,7 +1269,7 @@ function onFeedbackContinue() {
     hideFeedbackPanel();
     hideCorrectAnswerDisplay();
     hideCorrectHint();
-    nextQuestion();
+    skipToNextQuestion();
 }
 
 // ===== 动态难度调整 =====
