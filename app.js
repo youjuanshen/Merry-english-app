@@ -859,14 +859,24 @@ function showProgressiveHint(hint, level) {
 // 答对时显示正确答案+中文翻译（让学生加深印象）
 // 使用固定定位，显示在屏幕顶部，不影响其他元素布局
 function showCorrectAnswerWithTranslation(q) {
-    let display = document.getElementById('correct-answer-display');
+    const container = document.getElementById('question-container');
 
-    if (!display) {
-        display = document.createElement('div');
-        display.id = 'correct-answer-display';
-        display.className = 'correct-answer-display';
-        document.body.appendChild(display);
+    // 隐藏原来的题目内容（播放按钮等）
+    const contentArea = container.querySelector('.content-area');
+    if (contentArea) {
+        contentArea.style.display = 'none';
     }
+
+    // 移除旧的正确答案显示
+    let display = document.getElementById('correct-answer-display');
+    if (display) {
+        display.remove();
+    }
+
+    // 创建新的正确答案显示
+    display = document.createElement('div');
+    display.id = 'correct-answer-display';
+    display.className = 'correct-answer-display';
 
     // 获取英文内容和中文翻译
     let english = q.audio || q.word || q.sentence || '';
@@ -874,20 +884,31 @@ function showCorrectAnswerWithTranslation(q) {
 
     if (english && chinese) {
         display.innerHTML = `
-            <div class="answer-english">${english}</div>
+            <div class="answer-english">✓ ${english}</div>
             <div class="answer-chinese">${chinese}</div>
         `;
     } else if (english) {
-        display.innerHTML = `<div class="answer-english">${english}</div>`;
+        display.innerHTML = `<div class="answer-english">✓ ${english}</div>`;
     }
 
-    display.style.display = 'block';
+    // 插入到container顶部（选项上方）
+    const optionsGrid = container.querySelector('.options-grid');
+    if (optionsGrid) {
+        container.insertBefore(display, optionsGrid);
+    } else {
+        container.appendChild(display);
+    }
 }
 
 function hideCorrectAnswerDisplay() {
     const display = document.getElementById('correct-answer-display');
     if (display) {
-        display.style.display = 'none';
+        display.remove();
+    }
+    // 恢复题目内容显示
+    const contentArea = document.querySelector('.content-area');
+    if (contentArea) {
+        contentArea.style.display = 'flex';
     }
 }
 
