@@ -23,6 +23,9 @@
 | 33 | 作业检查"保存"按钮改为"提交" | ✅ | 已完成 |
 | 34 | 修复阅读模块题型渲染bug | ✅ | 已完成 |
 | 35 | 🔥 全量逐课逐模块测试+修复 | ✅ | 已完成 |
+| 36 | 🔥 真实语料引擎（题库对齐课本） | 🔴 最高 | 待办 |
+| 37 | 🔥 跨设备师生通信（替换localStorage） | 🔴 最高 | 待办 |
+| 38 | 音效系统（3-2-1-Go等） | 🟡 高 | 待办 |
 
 ---
 
@@ -295,7 +298,107 @@ if (q.type === 'sentence_match') {
 
 ---
 
-## 已完成任务归档（1-31）
+## 任务36：真实语料引擎（题库对齐课本）
+
+### 背景
+当前16课题库很多是占位数据，词汇和句型不完全贴合真实教案。需要根据Merry提供的课本内容重新生成真实题库。
+
+### 流程
+1. Merry提供每课的真实内容（词汇表、句型、对话）→ 放在 `03_课本原材与题库/`
+2. 读取课本内容，按现有 `data/*.js` 的格式生成真实题库
+3. 替换对应的 lesson 文件
+4. 逐课测试验证
+
+### 输出
+- 更新后的 `data/lesson1.js` ~ `data/unit4_lesson4.js`
+- 每课题目必须来自真实课本内容
+
+### 注意
+- 等Merry提供课本材料后再开始
+- 保持现有数据格式不变（题型、字段名等）
+- 图片仍用 `assets/images/` 下已有的42张
+
+---
+
+## 任务37：跨设备师生通信（替换localStorage）
+
+### 背景
+**关键事实**：教师端在Merry的iPhone 12上，学生端在13台iPhone 7上。不同设备之间 localStorage 无法通信！当前教师端的"开始上课"命令根本发不到学生手机上。
+
+### 推荐方案：Firebase Realtime Database
+- 免费额度：1GB存储 + 10GB/月流量（完全够用）
+- 改动最小：只需把 `localStorage.getItem/setItem` 替换为 Firebase 的 `ref.on/set`
+- 无需搭服务器，纯前端即可
+- 实时同步（毫秒级）
+
+### 实现步骤
+1. 创建 Firebase 项目（免费）
+2. 在 `index.html` 和 `teacher/*.html` 中引入 Firebase SDK
+3. 创建 `firebase-sync.js` 模块，封装读写操作：
+```javascript
+// 替换 localStorage 的读写
+// 写入（教师端）
+firebase.database().ref('teacherCommand').set({
+    action: 'start',
+    module: 'listening',
+    phase: 'pretest',
+    timestamp: Date.now()
+});
+
+// 监听（学生端）
+firebase.database().ref('teacherCommand').on('value', (snapshot) => {
+    const cmd = snapshot.val();
+    if (cmd) handleTeacherCommand(cmd);
+});
+```
+4. 需要替换的 localStorage key：
+   - `teacherCommand` → Firebase `/teacherCommand`
+   - `currentLesson` → Firebase `/currentLesson`
+   - `studentProgress` → Firebase `/students/{studentId}/progress`
+   - `homeworkIncomplete` → Firebase `/homework`
+5. 学生本地数据（成就、宠物等）仍保留在 localStorage（不需要跨设备）
+
+### 注意
+- 必须兼容 iOS 12（Firebase JS SDK v8 支持）
+- 网络断开时要有离线回退（先用localStorage缓存，恢复后同步）
+- Firebase 安全规则暂用开放模式（教学场景，非公开产品）
+
+### 测试方法
+- 在两个不同浏览器标签页模拟教师端和学生端
+- 教师端发命令 → 学生端秒级收到
+
+---
+
+## 任务38：音效系统
+
+### 需求
+给App添加音效，提升课堂体验感。
+
+### 需要的音效
+
+| 场景 | 音效 | 说明 |
+|------|------|------|
+| 欢迎页倒计时 | 3-2-1-GO! | 每秒一个"叮"，GO时一个"嘟嘟嘟" |
+| 答对 | 成功音 | 短促的"叮咚" |
+| 答错 | 失败音 | 温和的"嗡" |
+| 连击(combo) | 连击音 | 越来越高的音调 |
+| 成就解锁 | 庆祝音 | 胜利号角 |
+| 关卡完成 | 完成音 | 欢呼 |
+| 按钮点击 | 点击音 | 轻微的"哒" |
+
+### 实现方式
+- 使用 Web Audio API 生成简单音效（不需要音频文件）
+- 创建 `modules/sounds.js`，封装所有音效函数
+- 在对应的事件处理函数中调用
+
+### 注意
+- iOS 12 要求用户交互后才能播放音频（第一次点击时 `audioContext.resume()`）
+- 音效要短（<1秒），不影响流畅度
+- 提供静音开关
+
+---
+
+## 已完成任务归档（1-35）
 
 | # | 任务 | 完成时间 | 谁做的 |
 |---|------|----------|--------|
