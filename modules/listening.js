@@ -53,15 +53,16 @@ function renderListeningQuestion(q, container) {
         var tfGrid = document.createElement('div');
         tfGrid.className = 'tf-options-grid';
 
-        var tfOptions = [['Yes', true, '#58cc02'], ['No', false, '#ff4b4b']];
+        // 两个按钮初始都是蓝色边框，避免暗示正确答案
+        var tfOptions = [['Yes', true], ['No', false]];
         tfOptions.forEach(function(item) {
             var label = item[0];
             var value = item[1];
-            var color = item[2];
             var card = document.createElement('div');
             card.className = 'tf-option-card';
             card.innerHTML = label;
-            card.style.borderColor = color;
+            card.style.borderColor = '#1cb0f6';  // 统一蓝色边框
+            card.style.color = '#1cb0f6';        // 统一蓝色文字
             card.onclick = function() {
                 var correctAnswer = q.correct ? 'Yes' : 'No';
                 handleAnswer(value === q.correct, card, correctAnswer);

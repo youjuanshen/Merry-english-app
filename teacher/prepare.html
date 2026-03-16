@@ -61,11 +61,21 @@
         </div>
 
         <div class="teacher-card">
-            <h3 class="card-title">⚠️ 上节课遗留</h3>
-            <ul class="info-list">
-                <li><span style="color:var(--teacher-danger)">• 张睿渊：</span>正确率下降20%</li>
-                <li><span style="color:var(--teacher-warning)">• 张依彤：</span>未完成实战</li>
-            </ul>
+            <h3 class="card-title">📝 上节课未完成作业学生</h3>
+            <div id="last-homework-incomplete">
+                <p style="color:#888; font-size:14px;">暂无记录</p>
+            </div>
+        </div>
+
+        <div class="teacher-card">
+            <h3 class="card-title">✅ 本节课作业检查</h3>
+            <p style="color:#666; font-size:13px; margin-bottom:10px;">勾选未完成作业的学生：</p>
+            <div class="homework-check-grid" id="homework-check-list">
+                <!-- Rendered by JS -->
+            </div>
+            <button class="teacher-btn btn-secondary" id="btn-save-homework" style="margin-top:10px;">
+                💾 保存作业检查结果
+            </button>
         </div>
 
         <div class="teacher-card">

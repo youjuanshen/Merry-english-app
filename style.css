@@ -510,14 +510,14 @@ h1 {
   transform: scale(0.96);
 }
 .tf-option-card.correct {
-  background-color: #d7ffb8;
-  border-color: #58cc02;
-  color: #58cc02;
+  background-color: #d7ffb8 !important;
+  border-color: #58cc02 !important;
+  color: #58cc02 !important;
 }
 .tf-option-card.wrong {
-  background-color: #ffeded;
-  border-color: #ff4b4b;
-  color: #ff4b4b;
+  background-color: #ffeded !important;
+  border-color: #ff4b4b !important;
+  color: #ff4b4b !important;
 }
 
 /* Sorting Area */
