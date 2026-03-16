@@ -129,20 +129,30 @@ function handleTeacherCommand(cmd) {
             return;
         }
 
+        // 始终保存教师设置的模块和阶段（无论学生端处于什么状态）
+        currentModule = cmd.module;
+        currentPhase = cmd.phase;
+        currentTimeLimit = Math.max(0, Math.min(300, cmd.timeLimit || 0));
+
+        console.log(`教师命令: 模块=${currentModule}, 阶段=${currentPhase}`);
+
+        // 更新UI显示当前模块
+        const displayModuleTitle = document.getElementById('display-module-title');
+        if (displayModuleTitle) {
+            const moduleNames = { listening: '听力', reading: '阅读', writing: '写作', speaking: '口语' };
+            displayModuleTitle.textContent = moduleNames[currentModule] || '听力';
+        }
+
         const modScreen = document.getElementById('module-screen');
         const gameScreen = document.getElementById('game-screen');
 
+        // 如果已经在模块选择或游戏界面，直接开始
         if (modScreen.classList.contains('active') || gameScreen.classList.contains('active')) {
-            currentModule = cmd.module;
-            currentPhase = cmd.phase;
-            // 限制时间范围在0-300秒
-            currentTimeLimit = Math.max(0, Math.min(300, cmd.timeLimit || 0));
-            
-            // Skip directly to game screen
             document.getElementById('login-screen').classList.remove('active');
             modScreen.classList.remove('active');
             startGame();
         }
+        // 如果在登录界面，教师命令已保存，学生选择完成后会使用这些设置
     } else if (cmd.action === 'pause') {
         alert('👩‍🏫 老师已暂停活动，请注意听讲！');
     }
@@ -782,6 +792,42 @@ function startGame() {
     document.getElementById('player1-ui').querySelector('.name').textContent = players[0].name;
     document.getElementById('player2-ui').querySelector('.name').textContent = players[1].name;
 
+    // 重新读取教师设置的课程和模块（确保使用最新设置）
+    const lessonStr = localStorage.getItem('currentLesson');
+    if (lessonStr) {
+        try {
+            const lesson = JSON.parse(lessonStr);
+            // 加载对应的题库
+            const dataVarName = (lesson.unit === 1 && lesson.lesson === 1) ? 'lesson1' : `unit${lesson.unit}_lesson${lesson.lesson}`;
+            if (window[dataVarName]) {
+                currentLessonData = window[dataVarName];
+                console.log(`重新加载课程: ${dataVarName}`);
+            }
+        } catch (e) {
+            console.error('读取课程失败:', e);
+        }
+    }
+
+    // 重新读取教师命令（确保使用最新模块和阶段）
+    const cmdStr = localStorage.getItem('teacherCommand');
+    if (cmdStr) {
+        try {
+            const cmd = JSON.parse(cmdStr);
+            if (cmd.module && VALID_MODULES.includes(cmd.module)) {
+                currentModule = cmd.module;
+            }
+            if (cmd.phase && VALID_PHASES.includes(cmd.phase)) {
+                currentPhase = cmd.phase;
+            }
+            if (cmd.timeLimit) {
+                currentTimeLimit = Math.max(0, Math.min(300, cmd.timeLimit));
+            }
+            console.log(`使用教师设置: 模块=${currentModule}, 阶段=${currentPhase}`);
+        } catch (e) {
+            console.error('读取教师命令失败:', e);
+        }
+    }
+
     // 标记双人练习完成（每日任务）
     if (typeof markDuoPracticeComplete === 'function') {
         markDuoPracticeComplete();
@@ -798,6 +844,7 @@ function startGame() {
     currentDifficulty = 'medium';
 
     moduleQuestions = getQuestions(currentModule, currentPhase);
+    console.log(`题目数量: ${moduleQuestions.length}, 模块: ${currentModule}, 阶段: ${currentPhase}`);
     currentQuestionIndex = 0;
     currentPlayerIndex = 0;
 
@@ -892,6 +939,12 @@ function showQuestionHint(type, container) {
 
 function renderQuestion() {
     isAnimating = false;
+
+    // 清除上一题的反馈元素（防止遮挡）
+    hideFeedbackPanel();
+    hideCorrectAnswerDisplay();
+    hideCorrectHint();
+
     updateHeader();
 
     // Check if we reached the end of current phase
@@ -1035,21 +1088,43 @@ function showTransition() {
                 </div>
             </div>
 
-            <p style="font-size: 16px; color: #666; margin-top: 15px;">准备开始练习...</p>
+            <!-- 按钮区域 -->
+            <div style="display: flex; gap: 10px; margin-top: 20px;">
+                <button onclick="restartPretest()" style="flex: 1; padding: 15px; font-size: 16px; background: #fff; border: 2px solid #1cb0f6; color: #1cb0f6; border-radius: 12px; cursor: pointer;">
+                    🔄 再来一遍
+                </button>
+                <button onclick="startPractice()" style="flex: 1; padding: 15px; font-size: 16px; background: #58cc02; border: none; color: white; border-radius: 12px; cursor: pointer;">
+                    ▶️ 开始练习
+                </button>
+            </div>
         </div>
     `;
 
     createConfetti(30);
+}
 
-    // 4秒后开始练习（给学生更多时间看结果）
-    setTimeout(() => {
-        currentPhase = 'practice';
-        moduleQuestions = getQuestions(currentModule, currentPhase);
-        currentQuestionIndex = 0;
-        currentDifficulty = studentLevel === 'A' ? 'medium' : (studentLevel === 'C' ? 'easy' : 'medium');
-        updatePhaseIndicator();
-        renderQuestion();
-    }, 4000);
+// 重新开始前测
+function restartPretest() {
+    // 重置前测统计
+    pretestStats = {
+        player1: { correct: 0, total: 0, totalTime: 0, wrongWords: [] },
+        player2: { correct: 0, total: 0, totalTime: 0, wrongWords: [] }
+    };
+    currentPhase = 'pretest';
+    moduleQuestions = getQuestions(currentModule, currentPhase);
+    currentQuestionIndex = 0;
+    updatePhaseIndicator();
+    renderQuestion();
+}
+
+// 开始练习
+function startPractice() {
+    currentPhase = 'practice';
+    moduleQuestions = getQuestions(currentModule, currentPhase);
+    currentQuestionIndex = 0;
+    currentDifficulty = studentLevel === 'A' ? 'medium' : (studentLevel === 'C' ? 'easy' : 'medium');
+    updatePhaseIndicator();
+    renderQuestion();
 }
 
 // 计算学生水平（基于前测表现）
