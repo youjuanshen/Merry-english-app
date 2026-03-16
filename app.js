@@ -875,6 +875,12 @@ function updatePhaseIndicator() {
         pretest: '前测',
         practice: '练习'
     };
+    const moduleNames = {
+        listening: '听力',
+        reading: '阅读',
+        writing: '写作',
+        speaking: '口语'
+    };
 
     const lessonStr = localStorage.getItem('currentLesson');
     if (lessonStr) {
@@ -885,15 +891,11 @@ function updatePhaseIndicator() {
             console.error('Invalid lesson data:', e);
             lesson = { displayName: '未知课程' };
         }
-        indicator.textContent = `📚 ${lesson.displayName} · ${phaseNames[currentPhase]}`;
+        // 课程名取 displayName 的第一段（去掉模块部分，避免重复）
+        const lessonTitle = lesson.displayName ? lesson.displayName.split('-')[0].trim() : lesson.displayName;
+        indicator.textContent = `📚 ${lessonTitle} · ${moduleNames[currentModule] || ''} · ${phaseNames[currentPhase]}`;
     } else {
-        const moduleNames = {
-            listening: '听力',
-            reading: '阅读',
-            writing: '写作',
-            speaking: '口语'
-        };
-        indicator.textContent = `📚 ${moduleNames[currentModule]} - ${phaseNames[currentPhase]}`;
+        indicator.textContent = `📚 ${moduleNames[currentModule] || ''} · ${phaseNames[currentPhase]}`;
     }
 }
 
@@ -942,6 +944,10 @@ function renderQuestion() {
 
     // 清除上一题的反馈元素（防止遮挡）
     hideFeedbackPanel();
+    // 清除连击指示器
+    const combo = document.getElementById('combo-indicator');
+    if (combo) combo.remove();
+
     hideCorrectAnswerDisplay();
     hideCorrectHint();
 
@@ -1012,9 +1018,16 @@ function renderQuestion() {
     const skipBtn = document.createElement('button');
     skipBtn.className = 'next-btn';
     skipBtn.id = 'next-question-btn';
-    skipBtn.textContent = '下一题 ▶';
+    // 最后一题：显示「再来一次」
+    const isLastQuestion = (currentQuestionIndex >= moduleQuestions.length - 1);
+    if (isLastQuestion) {
+        skipBtn.textContent = '再来一次 ↩';
+        skipBtn.onclick = function() { location.reload(); };
+    } else {
+        skipBtn.textContent = '下一题 ▶';
+        skipBtn.onclick = skipToNextQuestion;
+    }
     skipBtn.disabled = true; // 默认禁用
-    skipBtn.onclick = skipToNextQuestion;
     container.appendChild(skipBtn);
 
     syncStudentProgress();

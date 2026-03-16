@@ -267,3 +267,47 @@ body {
     font-size: 14px;
     color: var(--teacher-text-light);
 }
+
+/* Homework Check Styles */
+.homework-check-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.hw-student-card {
+    background: #f0f0f0;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 8px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.2s;
+    user-select: none;
+}
+
+.hw-student-card:hover {
+    background: #e0e0e0;
+}
+
+.hw-student-card.incomplete {
+    background: #ffebee;
+    border-color: #ff5252;
+    color: #d32f2f;
+}
+
+.hw-incomplete-badge {
+    display: inline-block;
+    background: #ff5252;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}

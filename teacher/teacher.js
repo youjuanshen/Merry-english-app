@@ -75,15 +75,21 @@ function initPreparePage() {
 
     renderObjectives(currentLesson);
     renderObservationList();
+    renderHomeworkCheckList();
+    renderLastHomeworkIncomplete();
+    // 强制同步一次界面内容保证和 DOM element 绝对一致
+    updateCurrentLesson();
 
-    // 监听单元和课时选择变化，更新教学目标
+    // 监听单元和课时选择变化，更新教学目标（防止老设备兼容性问题，用 onchange + addEventListener 且加上 input）
     const unitSelect = document.getElementById('unit-select');
     const lessonSelect = document.getElementById('lesson-select');
     if (unitSelect) {
-        unitSelect.addEventListener('change', updateCurrentLesson);
+        unitSelect.onchange = updateCurrentLesson;
+        unitSelect.addEventListener('input', updateCurrentLesson);
     }
     if (lessonSelect) {
-        lessonSelect.addEventListener('change', updateCurrentLesson);
+        lessonSelect.onchange = updateCurrentLesson;
+        lessonSelect.addEventListener('input', updateCurrentLesson);
     }
 
     // Module Selector Logic
@@ -191,6 +197,77 @@ function renderObservationList() {
     `).join('');
 }
 
+// --- HOMEWORK CHECK ---
+function renderHomeworkCheckList() {
+    const container = document.getElementById('homework-check-list');
+    if (!container) return;
+    
+    // 获取所有的学生 (27人)
+    const allStudents = [];
+    if (typeof observationGroups !== 'undefined') {
+        observationGroups.forEach(group => {
+            group.forEach(s => allStudents.push(s));
+        });
+        allStudents.sort((a, b) => a.id - b.id); // 按学号排序
+    }
+
+    container.innerHTML = allStudents.map(student => `
+        <div class="hw-student-card" data-id="${student.id}" data-name="${student.name}" onclick="toggleHomeworkStatus(this)">
+            ${student.id}. ${student.name}
+        </div>
+    `).join('');
+
+    // 绑定保存按钮
+    const saveBtn = document.getElementById('btn-save-homework');
+    if (saveBtn) {
+        saveBtn.onclick = saveHomeworkCheck;
+    }
+}
+
+function toggleHomeworkStatus(element) {
+    element.classList.toggle('incomplete');
+}
+
+function saveHomeworkCheck() {
+    const incompleteCards = document.querySelectorAll('.hw-student-card.incomplete');
+    const incompleteStudents = Array.from(incompleteCards).map(card => ({
+        id: card.dataset.id,
+        name: card.dataset.name
+    }));
+
+    localStorage.setItem('homeworkIncomplete', JSON.stringify(incompleteStudents));
+    
+    // 视觉反馈
+    const btn = document.getElementById('btn-save-homework');
+    const originalText = btn.innerHTML;
+    btn.innerHTML = '✅ 保存成功！';
+    btn.style.backgroundColor = '#2ecc71';
+    
+    setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.style.backgroundColor = '';
+        renderLastHomeworkIncomplete(); // 更新上方显示
+    }, 2000);
+}
+
+function renderLastHomeworkIncomplete() {
+    const container = document.getElementById('last-homework-incomplete');
+    if (!container) return;
+
+    try {
+        const saved = JSON.parse(localStorage.getItem('homeworkIncomplete') || '[]');
+        if (saved.length === 0) {
+            container.innerHTML = '<p style="color:var(--teacher-success); font-size:14px; font-weight:bold;">🎉 上节课全班都交齐了作业！</p>';
+        } else {
+            container.innerHTML = saved.map(s => 
+                `<span class="hw-incomplete-badge">${s.id}. ${s.name}</span>`
+            ).join('');
+        }
+    } catch (e) {
+        container.innerHTML = '<p style="color:#888; font-size:14px;">暂无记录</p>';
+    }
+}
+
 // --- CONTROL PAGE ---
 function initControlPage() {
     const lastCmdStr = localStorage.getItem('teacherCommand');
@@ -210,6 +287,23 @@ function initControlPage() {
         const s = (seconds % 60).toString().padStart(2, '0');
         timerEl.textContent = `⏱️ ${m}:${s}`;
     }, 1000);
+
+    // 显示未交作业
+    const hwContainer = document.getElementById('control-homework-incomplete');
+    if (hwContainer) {
+        try {
+            const saved = JSON.parse(localStorage.getItem('homeworkIncomplete') || '[]');
+            if (saved.length === 0) {
+                hwContainer.innerHTML = '<div style="text-align:center; padding:10px;"><p style="color:var(--teacher-success); font-size:14px; font-weight:bold; margin:0;">🎉 全班交齐作业！</p></div>';
+            } else {
+                hwContainer.innerHTML = '<div style="display:flex; flex-wrap:wrap; gap:5px; justify-content:center; padding-top:10px;">' + 
+                    saved.map(s => `<span class="hw-incomplete-badge" style="margin-bottom:5px;">${s.id}. ${s.name}</span>`).join('') +
+                    '</div>';
+            }
+        } catch (e) {
+            hwContainer.innerHTML = '<p style="color:#888; font-size:14px; text-align:center;">暂无记录</p>';
+        }
+    }
 
     // Poll student progress
     setInterval(pollStudentProgress, 2000);
