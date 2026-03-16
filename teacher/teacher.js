@@ -21,11 +21,10 @@ let currentLesson = savedLesson.unit && savedLesson.lesson
 let currentModule = savedLesson.module || 'listening';
 let currentPhase = 'pretest';
 
-// 从teacherCommand恢复阶段
-try {
-    const savedCmd = JSON.parse(localStorage.getItem('teacherCommand') || '{}');
-    if (savedCmd.phase) currentPhase = savedCmd.phase;
-} catch (e) {}
+// 从 Sync 引擎拉取最近一次的教师指令
+Sync.listenTeacherCommand(cmd => {
+    if (cmd && cmd.phase) currentPhase = cmd.phase;
+});
 
 // 根据单元和课时更新 currentLesson ID
 function updateCurrentLesson() {
@@ -140,17 +139,18 @@ function initPreparePage() {
           displayName: `${unitText} ${lessonText} - ${moduleText}`
         };
         
-        localStorage.setItem('currentLesson', JSON.stringify(currentLessonObj));
+        Sync.setCurrentLesson(currentLessonObj);
 
-        // Publish command to student app
-        localStorage.setItem('teacherCommand', JSON.stringify({
+        // Publish command to student app via Sync engine
+        Sync.sendTeacherCommand({
             action: 'start',
             module: currentModule,
             phase: currentPhase, // 使用选择的阶段（前测/实战）
             lesson: currentLesson,
             timeLimit: timeLimit,
             timestamp: Date.now()
-        }));
+        });
+        
         // Navigate to control
         window.location.href = 'control.html';
     };
@@ -319,29 +319,50 @@ function renderLastHomeworkIncomplete() {
     const container = document.getElementById('last-homework-incomplete');
     if (!container) return;
 
-    try {
-        const saved = JSON.parse(localStorage.getItem('homeworkIncomplete') || '[]');
-        if (saved.length === 0) {
-            container.innerHTML = '<p style="color:var(--teacher-success); font-size:14px; font-weight:bold;">🎉 上节课全班都交齐了作业！</p>';
-        } else {
-            container.innerHTML = saved.map(s => 
-                `<span class="hw-incomplete-badge">${s.id}. ${s.name}</span>`
-            ).join('');
+    Sync.getHomeworkRecordsOnce().then(records => {
+        try {
+            // Find most recent homework check intuitively or return all flat array
+            // Here we assume it's simply an array if they didn't implement the date-key structure correctly yet
+            let saved = [];
+            if (Array.isArray(records)) {
+                saved = records;
+            } else {
+                // If it's an object, flatten to get the latest missing students
+                let latestDate = '';
+                for (let key in records) {
+                    if (key > latestDate) {
+                        latestDate = key;
+                        saved = records[key];
+                    }
+                }
+            }
+            // fallback structure compatibility
+            if (!Array.isArray(saved)) {
+                 saved = JSON.parse(localStorage.getItem('homeworkIncomplete') || '[]');
+            }
+            
+            if (saved.length === 0) {
+                container.innerHTML = '<p style="color:var(--teacher-success); font-size:14px; font-weight:bold;">🎉 上节课全班都交齐了作业！</p>';
+            } else {
+                container.innerHTML = saved.map(s => 
+                    `<span class="hw-incomplete-badge">${s.id}. ${s.name}</span>`
+                ).join('');
+            }
+        } catch (e) {
+            container.innerHTML = '<p style="color:#888; font-size:14px;">暂无记录</p>';
         }
-    } catch (e) {
-        container.innerHTML = '<p style="color:#888; font-size:14px;">暂无记录</p>';
-    }
+    });
 }
 
 // --- CONTROL PAGE ---
 function initControlPage() {
-    const lastCmdStr = localStorage.getItem('teacherCommand');
-    if (lastCmdStr) {
-        const cmd = JSON.parse(lastCmdStr);
-        document.getElementById('display-module').textContent = getModuleChinese(cmd.module) + ' - ' + (cmd.phase === 'pretest' ? '前测' : '实战');
-        currentModule = cmd.module;
-        currentPhase = cmd.phase;
-    }
+    Sync.listenTeacherCommand(cmd => {
+        if (cmd && cmd.module) {
+            document.getElementById('display-module').textContent = getModuleChinese(cmd.module) + ' - ' + (cmd.phase === 'pretest' ? '前测' : '实战');
+            currentModule = cmd.module;
+            currentPhase = cmd.phase;
+        }
+    });
 
     // Timer logic
     let seconds = 0;
@@ -377,30 +398,38 @@ function initControlPage() {
     // Pause button
     document.getElementById('btn-pause').onclick = function() {
         const isPaused = this.textContent.includes('继续');
-        const cmd = JSON.parse(localStorage.getItem('teacherCommand') || '{}');
-        cmd.action = isPaused ? 'start' : 'pause';
-        cmd.timestamp = Date.now();
-        localStorage.setItem('teacherCommand', JSON.stringify(cmd));
+        Sync.sendTeacherCommand({
+            action: isPaused ? 'start' : 'pause',
+            module: currentModule,
+            phase: currentPhase,
+            timestamp: Date.now()
+        });
         this.innerHTML = isPaused ? '📢 暂停' : '▶️ 继续';
         this.className = isPaused ? 'teacher-btn btn-warning' : 'teacher-btn btn-success';
     };
 
     // Next Phase Button
     document.getElementById('btn-next').onclick = () => {
-        const cmd = JSON.parse(localStorage.getItem('teacherCommand') || '{}');
-        cmd.phase = cmd.phase === 'pretest' ? 'practice' : 'pretest';
-        cmd.action = 'start';
-        cmd.timestamp = Date.now();
-        localStorage.setItem('teacherCommand', JSON.stringify(cmd));
+        currentPhase = currentPhase === 'pretest' ? 'practice' : 'pretest';
+        Sync.sendTeacherCommand({
+            action: 'start',
+            module: currentModule,
+            phase: currentPhase,
+            timestamp: Date.now()
+        });
         window.location.reload(); // Reload to update UI
     };
 }
 
-function pollStudentProgress() {
+async function pollStudentProgress() {
     const allProgress = [];
     for (let i = 1; i <= 27; i++) {
-        const p = localStorage.getItem(`studentProgress_${i}`);
-        if (p) allProgress.push(JSON.parse(p));
+        const p = await Sync.getDashboardDataOnce(`studentProgress_${i}`);
+        if (p) {
+            // Because previous raw storage was string but Firebase returns object directly,
+            // the Sync wrapper for localStorage also returns object.
+            allProgress.push(p);
+        }
     }
     
     // Group by active pairing (assuming progress contains names and identities)
@@ -478,31 +507,29 @@ function getModuleChinese(mod) {
 }
 
 // --- DASHBOARD PAGE ---
-function initDashboardPage() {
+async function initDashboardPage() {
     let allProgress = [];
-    if (typeof localStorage !== 'undefined') {
-        for (let i = 1; i <= 27; i++) {
-            const pStr = localStorage.getItem('studentProgress_' + i);
-            if (pStr) {
-                allProgress.push(JSON.parse(pStr));
-            } else {
-                let sName = 'Student ' + i;
-                if (typeof observationGroups !== 'undefined') {
-                    observationGroups.forEach(g => {
-                        const s = g.find(st => st.id === i);
-                        if (s) sName = s.name;
-                    });
-                }
-                allProgress.push({
-                    studentId: i,
-                    studentName: sName,
-                    completed: false,
-                    correct: 0,
-                    totalAnswered: 0,
-                    stars: 0,
-                    wrongWords: []
+    for (let i = 1; i <= 27; i++) {
+        const pObj = await Sync.getDashboardDataOnce('studentProgress_' + i);
+        if (pObj) {
+            allProgress.push(pObj);
+        } else {
+            let sName = 'Student ' + i;
+            if (typeof observationGroups !== 'undefined') {
+                observationGroups.forEach(g => {
+                    const s = g.find(st => st.id === i);
+                    if (s) sName = s.name;
                 });
             }
+            allProgress.push({
+                studentId: i,
+                studentName: sName,
+                completed: false,
+                correct: 0,
+                totalAnswered: 0,
+                stars: 0,
+                wrongWords: []
+            });
         }
     }
 

@@ -39,27 +39,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1000);
     }
 
-    // Load current lesson from localStorage
-    const currentLessonStr = localStorage.getItem('currentLesson');
-    if (currentLessonStr) {
-        let lesson;
-        try {
-            lesson = JSON.parse(currentLessonStr);
-        } catch (e) {
-            console.error('Invalid lesson data:', e);
-            localStorage.removeItem('currentLesson');
-            return;
+    // Load current lesson from Cloud/LocalStorage via Sync
+    Sync.getCurrentLessonOnce().then(lesson => {
+        if (lesson && lesson.displayName) {
+            const courseInfoDisplay = document.getElementById('course-info-display');
+            const displayLessonTitle = document.getElementById('display-lesson-title');
+            const displayModuleTitle = document.getElementById('display-module-title');
+            
+            if (courseInfoDisplay && displayLessonTitle && displayModuleTitle) {
+                displayLessonTitle.textContent = lesson.displayName.split('-')[0].trim();
+                displayModuleTitle.textContent = lesson.displayName.split('-')[1] ? lesson.displayName.split('-')[1].trim() : '听力'; 
+                courseInfoDisplay.style.display = 'block';
+            }
         }
-        const courseInfoDisplay = document.getElementById('course-info-display');
-        const displayLessonTitle = document.getElementById('display-lesson-title');
-        const displayModuleTitle = document.getElementById('display-module-title');
-        
-        if (courseInfoDisplay && displayLessonTitle && displayModuleTitle) {
-            displayLessonTitle.textContent = lesson.displayName.split('-')[0].trim();
-            displayModuleTitle.textContent = lesson.displayName.split('-')[1] ? lesson.displayName.split('-')[1].trim() : '听力'; 
-            courseInfoDisplay.style.display = 'block';
-        }
-    }
+    });
 });
 
 // 计时器相关
@@ -93,22 +86,12 @@ const SLOW_TIME_RATIO = 1.5;    // 标准时间的150%以上算慢
 // Student <-> Teacher Sync
 let lastTeacherCommandTime = 0;
 
-setInterval(() => {
-    const cmdStr = localStorage.getItem('teacherCommand');
-    if (cmdStr) {
-        let cmd;
-        try {
-            cmd = JSON.parse(cmdStr);
-        } catch (e) {
-            console.error('Invalid teacher command:', e);
-            return;
-        }
-        if (cmd && cmd.timestamp > lastTeacherCommandTime) {
-            lastTeacherCommandTime = cmd.timestamp;
-            handleTeacherCommand(cmd);
-        }
+Sync.listenTeacherCommand((cmd) => {
+    if (cmd && cmd.timestamp > lastTeacherCommandTime) {
+        lastTeacherCommandTime = cmd.timestamp;
+        handleTeacherCommand(cmd);
     }
-}, 1500);
+});
 
 // 有效的模块和阶段
 const VALID_MODULES = ['listening', 'reading', 'writing', 'speaking'];
@@ -194,7 +177,7 @@ function syncStudentProgress(isComplete = false) {
         wrongWords: [...new Set([...pretestStats.player1.wrongWords, ...(id2 ? pretestStats.player2.wrongWords : [])])]
     };
     
-    if (id1) localStorage.setItem(`studentProgress_${id1}`, JSON.stringify(progressData));
+    if (id1) Sync.setDashboardData(`studentProgress_${id1}`, progressData);
     if (id2) {
         const progressData2 = { 
             ...progressData, 
@@ -203,7 +186,7 @@ function syncStudentProgress(isComplete = false) {
             partnerId: id1, 
             partnerName: name1 
         };
-        localStorage.setItem(`studentProgress_${id2}`, JSON.stringify(progressData2));
+        Sync.setDashboardData(`studentProgress_${id2}`, progressData2);
     }
 }
 
@@ -718,33 +701,33 @@ nextBtn.onclick = function() {
     document.getElementById('login-screen').classList.remove('active');
     
     // Dynamic Course Loading System
-    const lessonStr = localStorage.getItem('currentLesson');
-    if (lessonStr) {
-        let lesson;
-        try {
-            lesson = JSON.parse(lessonStr);
-        } catch (e) {
-            console.error('Invalid lesson data:', e);
-            lesson = {};
-        }
-        currentModule = lesson.module || 'listening';
-        
-        // Construct the variable name based on unit and lesson
-        // Default to lesson1 (Unit 1 Lesson 1) for fallback tests
-        const dataVarName = (lesson.unit === 1 && lesson.lesson === 1) ? 'lesson1' : `unit${lesson.unit}_lesson${lesson.lesson}`;
-        
-        // Dynamically grab the loaded data object from window
-        if (window[dataVarName]) {
-            currentLessonData = window[dataVarName];
-            console.log(`Loaded course data: ${dataVarName}`);
+    // 检查教师端是否设置了模块和阶段
+    Sync.getCurrentLessonOnce().then(lesson => {
+        if (lesson) {
+            currentModule = lesson.module || 'listening';
+            const dataVarName = (lesson.unit === 1 && lesson.lesson === 1) ? 'lesson1' : `unit${lesson.unit}_lesson${lesson.lesson}`;
+            if (window[dataVarName]) {
+                currentLessonData = window[dataVarName];
+            } else {
+                currentLessonData = lesson1;
+            }
         } else {
-            console.warn(`Course data ${dataVarName} not found, falling back to lesson1.`);
+            currentModule = 'listening'; // fallback
             currentLessonData = lesson1;
         }
-    } else {
-        currentModule = 'listening'; // fallback
-        currentLessonData = lesson1;
-    }
+
+        Sync.listenTeacherCommand(cmd => {
+            if (cmd) {
+                currentModule = cmd.module || 'listening';
+                currentPhase = cmd.phase || 'pretest';
+            } else {
+                currentModule = 'listening';
+                currentPhase = 'pretest';
+            }
+            startGame();
+        });
+        startGame(); // 初始启动
+    });
     
     // 检查教师端是否设置了模块和阶段
     const cmdStr = localStorage.getItem('teacherCommand');
@@ -768,22 +751,9 @@ nextBtn.onclick = function() {
 // Step 2: Click module card to start (仅当没有教师指令时使用)
 document.querySelectorAll('.module-card').forEach(card => {
     card.onclick = function() {
-        // 检查教师端是否设置了模块和阶段
-        const cmdStr = localStorage.getItem('teacherCommand');
-        if (cmdStr) {
-            let cmd;
-            try {
-                cmd = JSON.parse(cmdStr);
-            } catch (e) {
-                console.error('Invalid teacher command:', e);
-                cmd = {};
-            }
-            currentModule = cmd.module || this.dataset.module;
-            currentPhase = cmd.phase || 'pretest';
-        } else {
-            currentModule = this.dataset.module;
-            currentPhase = 'pretest';
-        }
+        if (window.SoundSystem) SoundSystem.playClick();
+        currentModule = this.dataset.module;
+        currentPhase = 'pretest';
         startGame();
     };
 });
@@ -793,72 +763,45 @@ function startGame() {
     document.getElementById('player2-ui').querySelector('.name').textContent = players[1].name;
 
     // 重新读取教师设置的课程和模块（确保使用最新设置）
-    const lessonStr = localStorage.getItem('currentLesson');
-    if (lessonStr) {
-        try {
-            const lesson = JSON.parse(lessonStr);
-            // 加载对应的题库
+    Sync.getCurrentLessonOnce().then(lesson => {
+        if (lesson) {
             const dataVarName = (lesson.unit === 1 && lesson.lesson === 1) ? 'lesson1' : `unit${lesson.unit}_lesson${lesson.lesson}`;
             if (window[dataVarName]) {
                 currentLessonData = window[dataVarName];
-                console.log(`重新加载课程: ${dataVarName}`);
             }
-        } catch (e) {
-            console.error('读取课程失败:', e);
         }
-    }
 
-    // 重新读取教师命令（确保使用最新模块和阶段）
-    const cmdStr = localStorage.getItem('teacherCommand');
-    if (cmdStr) {
-        try {
-            const cmd = JSON.parse(cmdStr);
-            if (cmd.module && VALID_MODULES.includes(cmd.module)) {
-                currentModule = cmd.module;
-            }
-            if (cmd.phase && VALID_PHASES.includes(cmd.phase)) {
-                currentPhase = cmd.phase;
-            }
-            if (cmd.timeLimit) {
-                currentTimeLimit = Math.max(0, Math.min(300, cmd.timeLimit));
-            }
-            console.log(`使用教师设置: 模块=${currentModule}, 阶段=${currentPhase}`);
-        } catch (e) {
-            console.error('读取教师命令失败:', e);
+        // 标记双人练习完成（每日任务）
+        if (typeof markDuoPracticeComplete === 'function') {
+            markDuoPracticeComplete();
         }
-    }
 
-    // 标记双人练习完成（每日任务）
-    if (typeof markDuoPracticeComplete === 'function') {
-        markDuoPracticeComplete();
-    }
+        // 重置前测统计
+        pretestStats = {
+            player1: { correct: 0, total: 0, totalTime: 0, wrongWords: [] },
+            player2: { correct: 0, total: 0, totalTime: 0, wrongWords: [] }
+        };
+        studentLevel = 'B'; // 重置为默认中等
+        consecutiveCorrect = 0;
+        consecutiveWrong = 0;
+        currentDifficulty = 'medium';
 
-    // 重置前测统计
-    pretestStats = {
-        player1: { correct: 0, total: 0, totalTime: 0, wrongWords: [] },
-        player2: { correct: 0, total: 0, totalTime: 0, wrongWords: [] }
-    };
-    studentLevel = 'B'; // 重置为默认中等
-    consecutiveCorrect = 0;
-    consecutiveWrong = 0;
-    currentDifficulty = 'medium';
+        moduleQuestions = getQuestions(currentModule, currentPhase);
+        currentQuestionIndex = 0;
+        currentPlayerIndex = 0;
 
-    moduleQuestions = getQuestions(currentModule, currentPhase);
-    console.log(`题目数量: ${moduleQuestions.length}, 模块: ${currentModule}, 阶段: ${currentPhase}`);
-    currentQuestionIndex = 0;
-    currentPlayerIndex = 0;
+        // 如果没有设置时间限制，使用默认值
+        if (!currentTimeLimit || currentTimeLimit === 0) {
+            currentTimeLimit = DEFAULT_TIME_LIMIT;
+        }
 
-    // 如果没有设置时间限制，使用默认值
-    if (!currentTimeLimit || currentTimeLimit === 0) {
-        currentTimeLimit = DEFAULT_TIME_LIMIT;
-    }
+        document.getElementById('module-screen').classList.remove('active');
+        document.getElementById('game-screen').classList.add('active');
 
-    document.getElementById('module-screen').classList.remove('active');
-    document.getElementById('game-screen').classList.add('active');
-
-    // Show phase indicator
-    updatePhaseIndicator();
-    renderQuestion();
+        // Show phase indicator
+        updatePhaseIndicator();
+        renderQuestion();
+    });
 }
 
 function updatePhaseIndicator() {
@@ -1239,6 +1182,7 @@ function handleAnswer(isCorrect, cardEl = null, correctAnswer = null) {
     if (isCorrect) {
         stopQuestionTimer(); // 答对停止计时
         if (cardEl) cardEl.classList.add('correct');
+        if (window.SoundSystem) SoundSystem.playCorrect();
         playSuccessSound();
         speakFeedback(true);      // 语音说英文
         resetHintLevel();
@@ -1252,6 +1196,7 @@ function handleAnswer(isCorrect, cardEl = null, correctAnswer = null) {
         // 不再自动跳转，让学生点击继续按钮
     } else {
         if (cardEl) cardEl.classList.add('wrong');
+        if (window.SoundSystem) SoundSystem.playWrong();
         playWrongSound();
         speakFeedback(false);     // 语音说英文
 
@@ -1691,12 +1636,12 @@ function selectLessonFromMap(lessonId) {
 
     if (lessonMap[lessonId]) {
         // 保存选择的课程
-        localStorage.setItem('currentLesson', JSON.stringify({
+        Sync.setCurrentLesson({
             id: lessonId,
             displayName: lessonMap[lessonId].title + ' - 听力',
             module: 'listening',
             stage: 'practice'
-        }));
+        });
 
         // 刷新页面加载新课程
         location.reload();
@@ -1787,6 +1732,7 @@ function processAchievements(isCorrect) {
 
     // 显示新解锁的成就
     if (newAchievements && newAchievements.length > 0) {
+        if (window.SoundSystem) SoundSystem.playAchievement();
         for (var i = 0; i < newAchievements.length; i++) {
             setTimeout(function(ach) {
                 return function() {
