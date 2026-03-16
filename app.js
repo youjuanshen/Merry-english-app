@@ -492,7 +492,8 @@ function speakWord(word) {
 
 // 给选项卡片内的图片添加白色背景（用Canvas去除透明PNG的马赛克效果）
 function wrapImagesWithWhiteBg(container) {
-    const images = container.querySelectorAll('.option-card img');
+    // 扩大选择范围：option-card、tf-image-container、以及其他可能的图片容器
+    const images = container.querySelectorAll('.option-card img, .tf-image-container img, .question-image img, img[src*="png"], img[src*="PNG"]');
     images.forEach(img => {
         // 等图片加载完成后用Canvas处理
         const processImage = () => {
