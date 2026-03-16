@@ -42,7 +42,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Load current lesson from localStorage
     const currentLessonStr = localStorage.getItem('currentLesson');
     if (currentLessonStr) {
-        const lesson = JSON.parse(currentLessonStr);
+        let lesson;
+        try {
+            lesson = JSON.parse(currentLessonStr);
+        } catch (e) {
+            console.error('Invalid lesson data:', e);
+            localStorage.removeItem('currentLesson');
+            return;
+        }
         const courseInfoDisplay = document.getElementById('course-info-display');
         const displayLessonTitle = document.getElementById('display-lesson-title');
         const displayModuleTitle = document.getElementById('display-module-title');
@@ -89,23 +96,47 @@ let lastTeacherCommandTime = 0;
 setInterval(() => {
     const cmdStr = localStorage.getItem('teacherCommand');
     if (cmdStr) {
-        const cmd = JSON.parse(cmdStr);
-        if (cmd.timestamp > lastTeacherCommandTime) {
+        let cmd;
+        try {
+            cmd = JSON.parse(cmdStr);
+        } catch (e) {
+            console.error('Invalid teacher command:', e);
+            return;
+        }
+        if (cmd && cmd.timestamp > lastTeacherCommandTime) {
             lastTeacherCommandTime = cmd.timestamp;
             handleTeacherCommand(cmd);
         }
     }
 }, 1500);
 
+// 有效的模块和阶段
+const VALID_MODULES = ['listening', 'reading', 'writing', 'speaking'];
+const VALID_PHASES = ['pretest', 'practice'];
+
 function handleTeacherCommand(cmd) {
+    // 输入验证
+    if (!cmd || typeof cmd !== 'object') return;
+
     if (cmd.action === 'start') {
+        // 验证模块和阶段
+        if (!VALID_MODULES.includes(cmd.module)) {
+            console.error('Invalid module:', cmd.module);
+            return;
+        }
+        if (!VALID_PHASES.includes(cmd.phase)) {
+            console.error('Invalid phase:', cmd.phase);
+            return;
+        }
+
         const modScreen = document.getElementById('module-screen');
         const gameScreen = document.getElementById('game-screen');
-        
+
         if (modScreen.classList.contains('active') || gameScreen.classList.contains('active')) {
             currentModule = cmd.module;
-            currentPhase = cmd.phase; // pretest or practice
-            currentTimeLimit = cmd.timeLimit || 0;
+            currentPhase = cmd.phase;
+            // 限制时间范围在0-300秒
+            currentTimeLimit = Math.max(0, Math.min(300, cmd.timeLimit || 0));
             
             // Skip directly to game screen
             document.getElementById('login-screen').classList.remove('active');
@@ -392,7 +423,7 @@ const feedbackMap = {
         { en: 'Perfect!', cn: '完美！' },
         { en: 'Well done!', cn: '做得好！' },
         { en: 'Excellent!', cn: '太优秀了！' },
-        { en: 'Amazing!', cn: '泰裤辣！' },
+        { en: 'Amazing!', cn: '太厉害了！' },
         { en: 'Brilliant!', cn: '聪明！' },
         { en: 'Fantastic!', cn: '非常好！' },
         { en: 'Super!', cn: '超级棒！' },
@@ -679,7 +710,13 @@ nextBtn.onclick = function() {
     // Dynamic Course Loading System
     const lessonStr = localStorage.getItem('currentLesson');
     if (lessonStr) {
-        const lesson = JSON.parse(lessonStr);
+        let lesson;
+        try {
+            lesson = JSON.parse(lessonStr);
+        } catch (e) {
+            console.error('Invalid lesson data:', e);
+            lesson = {};
+        }
         currentModule = lesson.module || 'listening';
         
         // Construct the variable name based on unit and lesson
@@ -702,9 +739,15 @@ nextBtn.onclick = function() {
     // 检查教师端是否设置了模块和阶段
     const cmdStr = localStorage.getItem('teacherCommand');
     if (cmdStr) {
-        const cmd = JSON.parse(cmdStr);
-        currentModule = cmd.module || 'listening';  // 读取教师选择的模块
-        currentPhase = cmd.phase || 'pretest';       // 读取教师选择的阶段
+        let cmd;
+        try {
+            cmd = JSON.parse(cmdStr);
+        } catch (e) {
+            console.error('Invalid teacher command:', e);
+            cmd = {};
+        }
+        currentModule = cmd.module || 'listening';
+        currentPhase = cmd.phase || 'pretest';
     } else {
         currentModule = 'listening';
         currentPhase = 'pretest';
@@ -718,7 +761,13 @@ document.querySelectorAll('.module-card').forEach(card => {
         // 检查教师端是否设置了模块和阶段
         const cmdStr = localStorage.getItem('teacherCommand');
         if (cmdStr) {
-            const cmd = JSON.parse(cmdStr);
+            let cmd;
+            try {
+                cmd = JSON.parse(cmdStr);
+            } catch (e) {
+                console.error('Invalid teacher command:', e);
+                cmd = {};
+            }
             currentModule = cmd.module || this.dataset.module;
             currentPhase = cmd.phase || 'pretest';
         } else {
@@ -782,7 +831,13 @@ function updatePhaseIndicator() {
 
     const lessonStr = localStorage.getItem('currentLesson');
     if (lessonStr) {
-        const lesson = JSON.parse(lessonStr);
+        let lesson;
+        try {
+            lesson = JSON.parse(lessonStr);
+        } catch (e) {
+            console.error('Invalid lesson data:', e);
+            lesson = { displayName: '未知课程' };
+        }
         indicator.textContent = `📚 ${lesson.displayName} · ${phaseNames[currentPhase]}`;
     } else {
         const moduleNames = {
@@ -1245,7 +1300,13 @@ function hideCorrectAnswerDisplay() {
 }
 
 // ===== 多邻国风格底部反馈面板 =====
+// 记录当前答题是否正确（用于继续按钮判断是否加分）
+var lastAnswerCorrect = false;
+
 function showFeedbackPanel(isCorrect, question) {
+    // 记录本题是否答对
+    lastAnswerCorrect = isCorrect;
+
     // 移除旧的面板
     hideFeedbackPanel();
 
@@ -1306,7 +1367,13 @@ function onFeedbackContinue() {
     hideFeedbackPanel();
     hideCorrectAnswerDisplay();
     hideCorrectHint();
-    skipToNextQuestion();
+
+    // 如果上一题答对了，调用 onCorrect 加分；否则只跳到下一题
+    if (lastAnswerCorrect) {
+        onCorrect();
+    } else {
+        skipToNextQuestion();
+    }
 }
 
 // ===== 动态难度调整 =====
