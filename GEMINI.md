@@ -47,8 +47,13 @@
 | 26 | 🔥 测试进度地图+宠物 | ✅ 已完成 [报告](./代码/docs/测试报告-任务26.md) | **高** |
 | 27 | 音频资源检查 | 📋 待办 | 中 |
 | 28 | 多邻国风格优化建议 | 📋 待办 | 中 |
+| 29 | 🔥 图片空白+底部异常框修复 | 📋 待办 | **最高** |
+| 30 | 🔥 教师端教学目标不更新 | 📋 待办 | **最高** |
+| 31 | 🔥 教师端作业检查功能 | 📋 待办 | **高** |
 
-> ⚠️ **Gemini 测试任务22和任务26全部深度自测完毕并生成报告出库！请等待幼娟查阅！**
+> ⚠️ **2026-03-16 Claude 交接说明：**
+> Claude 本轮完成了安全加固、反馈遮挡修复、星星计分修复、前测/完成界面按钮、教师端课程恢复等。
+> 剩余 Bug 29-30 和新功能 31 请 Gemini 接手处理。详见下方任务说明。
 
 ### 已完成任务（续）
 
@@ -868,4 +873,135 @@ function checkDailyReset() {
 
 ---
 
-*最后更新：2026-03-16 by Claude - 完成任务23-25，添加任务26-28详细说明*
+---
+
+# 🔥 任务29：修复图片空白 + 底部异常颜色框
+
+## 问题描述
+
+### 问题A：部分图片在 iPhone 上显示空白
+- **现象**：某些题目的图片在 iPhone 12 上不显示（空白区域）
+- **排查结果**：所有图片文件都存在（assets/images/），路径引用正确，无404
+- **可能原因**：
+  - 部分 PNG 图片过大（bear.png 469KB, cat.png 372KB），iOS 可能加载超时
+  - 16课的 `<script>` 标签全部同步加载，阻塞了图片渲染
+  - 图片通过 innerHTML 中的 `<img>` 标签渲染，可能有 iOS Safari 兼容性问题
+- **建议修复方案**：
+  1. 压缩大图片（用 `sips` 命令缩小到 200x200，目标 <100KB）
+  2. 给所有题库中的 `<img>` 标签添加 `onerror="this.src='assets/images/placeholder.png'"` 回退
+  3. 创建一个 placeholder.png 作为图片加载失败时的占位图
+
+### 问题B：底部出现异常颜色框框
+- **现象**：学生端底部出现不同风格/颜色的框框
+- **可能原因**：
+  - CSS 样式冲突（反馈面板、成就弹窗、提示框叠加）
+  - `feedback-panel`、`correct-answer-display`、`progressive-hint` 等元素没有正确隐藏
+  - `feedback-panel-active` body class 残留
+- **排查方法**：
+  1. 在 Chrome DevTools 用 iPhone 模式（414x736）检查底部元素
+  2. 检查 `style.css` 中这些元素的 `position`、`z-index`、`display`
+  3. 确保 `renderQuestion()` 开始时清除所有残留面板
+
+## 测试方法
+
+```bash
+node test-gameplay.js  # 运行完整流程测试
+# 检查 test-screenshots/ 下的截图
+```
+
+---
+
+# 🔥 任务30：教师端教学目标不更新
+
+## 问题描述
+- **现象**：教师端课前准备页面，切换单元/课时后，教学目标始终显示 Unit 1 Lesson 1
+- **位置**：`teacher/teacher.js` → `initPreparePage()` 和 `renderObjectives()`
+
+## 排查重点
+1. `initPreparePage()` 中恢复了 savedLesson 的 unit/lesson 值到 `<select>` 元素
+2. 但恢复后可能没有触发 `renderObjectives(currentLesson)`
+3. 检查 `teacher/data.js` 中 `lessonObjectives` 对象是否包含 U1L1 ~ U4L4 所有16课的数据
+
+## 修复步骤
+1. 在 `initPreparePage()` 末尾确保调用 `updateCurrentLesson()`（而不是直接调用 `renderObjectives`）
+2. 确认 `lessonObjectives` 有完整数据（16课）
+3. 如果缺少数据，补充对应课程的教学目标
+
+---
+
+# 🔥 任务31：教师端作业检查功能（新功能）
+
+## 需求描述
+在教师端课前准备页面增加"本节课作业检查"功能。
+
+## 交互流程
+1. 在 `teacher/prepare.html` 添加新卡片"📝 作业检查"
+2. 显示学生名单（27人），类似学生端的网格布局（3列×9行 或 3列×4行分页）
+3. 教师点击学生名字 = 标记为**未交作业**（变红/灰色）
+4. 再次点击取消标记
+5. 底部显示"已标记 X 人未交"
+6. 选择结果**自动保存**到 localStorage
+
+## 数据格式
+```javascript
+// localStorage key: 'homeworkRecords'
+{
+    "2026-03-16_U1L1": {
+        date: "2026-03-16",
+        lesson: "U1L1",
+        missingStudents: [1, 5, 12],  // 未交作业的学生编号
+        timestamp: 1773650000000
+    },
+    "2026-03-15_U1L1": { ... }
+}
+```
+
+## 在其他页面显示
+- **课中控制页** (`control.html`)：顶部提示"上节课未交作业：张美茹、张志鹏、张智杰"
+- **课后反馈页** (`feedback.html`)：显示作业完成率统计
+
+## 学生名单（和 app.js 保持一致）
+```
+1.张宇豪, 2.张佳寒, 3.张睿渊, 4.张羽韬, 5.张美茹,
+6.张嘉钦, 7.卢梦婷, 8.张悦萱, 9.张语涵, 10.张英豪,
+11.张志鹏, 12.张智杰, 13.张梓婷, 14.张品琪, 15.张诺依,
+16.张雨泽, 17.张依彤, 18.张艺楠, 19.张思彤, 20.张子豪,
+21.张梓亦, 22.张皓鑫, 23.张雨欣, 24.张如欣, 25.张柏涵,
+26.张梓纯, 27.张泽鑫
+```
+
+## 实现位置
+- `teacher/prepare.html` - 新增卡片区域
+- `teacher/teacher.js` - 新增 `initHomeworkCheck()` 函数
+- `teacher/teacher.css` - 新增样式
+- `teacher/control.html` / `teacher/feedback.html` - 显示未交作业提示
+
+---
+
+## Claude 本轮修复总结（2026-03-16）
+
+| 提交 | 说明 |
+|------|------|
+| `bc4a08c` | 修复3处JS语法错误 + 添加PWA图标 |
+| `9d487d3` | 所有JSON.parse添加try-catch + 输入验证 |
+| `2c9aa31` | 前测"再来一遍"按钮 + 清除反馈遮挡 + 课程同步 |
+| `f2ac66d` | 移除绿色答案条 + 教师端课程恢复 |
+| `05f2cd5` | 完成界面"再来一次"按钮 |
+
+## 关键函数索引（app.js 更新版）
+
+| 函数 | 行号(约) | 作用 |
+|------|---------|------|
+| `handleTeacherCommand` | ~117 | 处理教师命令（含输入验证） |
+| `startGame` | ~791 | 开始游戏（重新读取课程+模块设置） |
+| `renderQuestion` | ~893 | 渲染题目（开始时清除反馈元素） |
+| `handleAnswer` | ~1172 | 处理答题（答对只显示底部面板） |
+| `showFeedbackPanel` | ~1381 | 底部反馈面板 |
+| `onCorrect` | ~1594 | 答对加星星 |
+| `showTransition` | ~1038 | 前测完成页（"再来一遍"+"开始练习"） |
+| `showFinishScreen` | ~1601 | 练习完成页（"再来一次"+"返回首页"） |
+| `restartPretest` | ~1072 | 重新开始前测 |
+| `startPractice` | ~1083 | 开始练习 |
+| `restartCurrentModule` | ~1618 | 重新开始当前模块 |
+
+*最后更新：2026-03-16 by Claude - 交接任务29-31给Gemini*
