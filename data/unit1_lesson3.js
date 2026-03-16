@@ -515,7 +515,7 @@ var unit1_lesson3 = {
       {
         "type": "scenario",
         "scenario": "An animal is swimming in the pond. It says 'quack quack'.",
-        "chinese": "一只动物在池塘里游泳。它说"嘎嘎嘎"。",
+        "chinese": "一只动物在池塘里游泳。它说'嘎嘎嘎'。",
         "question": "What animal is it?",
         "options": [
           "<img src=\"assets/images/fish.png\" width=\"80\">",

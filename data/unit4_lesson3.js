@@ -352,7 +352,7 @@ var unit4_lesson3 = {
       {
         "type": "scenario",
         "scenario": "Someone gives Tom a birthday gift. She says 'Happy Birthday, son!'",
-        "chinese": "有人送给汤姆生日礼物。她说"儿子，生日快乐！"",
+        "chinese": "有人送给汤姆生日礼物。她说'儿子，生日快乐！'",
         "question": "Who gives the gift?",
         "options": [
           "<img src=\"assets/images/mother.png\" width=\"80\">",

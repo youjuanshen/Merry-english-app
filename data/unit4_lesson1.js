@@ -487,7 +487,7 @@ var unit4_lesson1 = {
       {
         "type": "scenario",
         "scenario": "Someone is cooking dinner in the kitchen. She says 'Dinner is ready!'",
-        "chinese": "有人在厨房做饭。她说"晚饭好了！"",
+        "chinese": "有人在厨房做饭。她说'晚饭好了！'",
         "question": "Who is cooking?",
         "options": [
           "<img src=\"assets/images/mother.png\" width=\"80\">",
