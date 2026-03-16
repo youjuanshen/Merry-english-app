@@ -27,6 +27,7 @@ body {
   height: 100vh;
   padding: 20px;
   box-sizing: border-box;
+  position: relative;
 }
 .screen.active {
   display: flex;
@@ -1190,24 +1191,27 @@ h1 {
 
 /* ===== 顶部按钮组 ===== */
 .top-buttons {
-  position: absolute;
-  top: 15px;
-  right: 15px;
+  position: fixed;
+  top: 10px;
+  top: calc(10px + env(safe-area-inset-top, 0px));
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  gap: 10px;
-  z-index: 100;
+  gap: 8px;
+  z-index: 1000;
 }
 
-.achievements-btn, .quests-btn, .map-btn {
+.achievements-btn, .quests-btn, .map-btn, .pet-btn {
   background: linear-gradient(135deg, #FFD700, #FFA500);
   color: #333;
   border: none;
-  border-radius: 20px;
-  padding: 8px 14px;
-  font-size: 13px;
+  border-radius: 15px;
+  padding: 6px 10px;
+  font-size: 12px;
   font-weight: bold;
-  box-shadow: 0 3px 0 #cc8800;
+  box-shadow: 0 2px 0 #cc8800;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .map-btn {
