@@ -21,6 +21,7 @@
 | 31 | 教师端作业检查功能 | ✅ | 已完成 |
 | 32 | 教学目标按听说读写模块变化 | 🔴 最高 | 待办 |
 | 33 | 作业检查"保存"按钮改为"提交" | 🟢 简单 | 待办 |
+| 34 | 修复阅读模块题型渲染bug | 🔴 最高 | 待办 |
 
 ---
 
@@ -187,6 +188,42 @@ done
 ### 修改
 1. `teacher/prepare.html` - 按钮文字改为"提交"
 2. `teacher/teacher.js` - `saveHomeworkCheck` 函数中成功提示改为"✅ 提交成功！"
+
+---
+
+## 任务34：修复阅读模块题型渲染bug
+
+### Bug A：duo_race 和 whack_mole 在阅读模块显示空白
+- `modules/reading.js` 不支持 `duo_race` 和 `whack_mole` 题型
+- 但 `data/unit2_lesson1.js` 的 reading.practice 里有这两种题（约第836、866行）
+- **方案二选一**：
+  - 方案1（推荐）：在 `reading.js` 中添加 `duo_race` 和 `whack_mole` 的渲染逻辑（可以复用 `listening.js` 中的代码）
+  - 方案2：把阅读题库中的 `duo_race` 和 `whack_mole` 题目改为 `reading.js` 已支持的题型
+
+### Bug B：sentence_match 的 options 格式不匹配
+- 题库里 sentence_match 的 options 用的是对象格式：`{text: "<img...>", value: "red"}`
+- 但 `reading.js` 第17-31行直接 `card.innerHTML = opt`，对象会显示为 `[object Object]`
+- 而且判断正确的逻辑也错了：`idx === q.correct`，但 `q.correct` 是字符串（如 "red"）不是数字索引
+
+**修复方法**（reading.js 第6-31行）：
+```javascript
+// sentence_match 的 options 是 {text, value} 对象
+if (q.type === 'sentence_match') {
+    q.options.forEach((opt, idx) => {
+        const card = document.createElement('div');
+        card.className = 'option-card';
+        card.innerHTML = opt.text;  // 用 opt.text 而不是 opt
+        card.onclick = () => {
+            handleAnswer(opt.value === q.correct, card);  // 用 value 比较
+        };
+        grid.appendChild(card);
+    });
+}
+```
+
+### 检查范围
+- 不只是 U2L1，**所有16课的 reading 题库**都要检查是否有同样的问题
+- 搜索所有 `data/*.js` 中 reading 部分使用了 `duo_race`、`whack_mole`、`sentence_match` 的地方
 
 ---
 
