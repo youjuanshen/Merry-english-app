@@ -1606,13 +1606,28 @@ function showFinishScreen() {
     const finishStars = document.getElementById('finish-stars');
     finishStars.innerHTML = `
         <div style="margin-bottom: 20px;">
-            <div>${players[0].name}: ⭐ ${players[0].stars}</div>
-            <div>${players[1].name}: ⭐ ${players[1].stars}</div>
+            <div style="font-size: 24px; margin: 10px 0;">${players[0].name}: ⭐ ${players[0].stars}</div>
+            <div style="font-size: 24px; margin: 10px 0;">${players[1].name}: ⭐ ${players[1].stars}</div>
+        </div>
+        <div style="display: flex; gap: 10px; margin-top: 20px; padding: 0 20px;">
+            <button onclick="restartCurrentModule()" style="flex: 1; padding: 15px; font-size: 16px; background: #fff; border: 2px solid #1cb0f6; color: #1cb0f6; border-radius: 12px; cursor: pointer;">
+                🔄 再来一次
+            </button>
+            <button onclick="location.reload()" style="flex: 1; padding: 15px; font-size: 16px; background: #58cc02; border: none; color: white; border-radius: 12px; cursor: pointer;">
+                🏠 返回首页
+            </button>
         </div>
     `;
 
     createConfetti(50);
     syncStudentProgress(true);
+}
+
+// 重新开始当前模块
+function restartCurrentModule() {
+    document.getElementById('finish-screen').classList.remove('active');
+    document.getElementById('game-screen').classList.add('active');
+    startGame();
 }
 
 // ===== 宠物系统集成 =====
