@@ -311,3 +311,78 @@ body {
     margin-right: 8px;
     margin-bottom: 8px;
 }
+
+/* --- Homework Check Horizontal Sliding --- */
+.hw-pages-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.hw-pages-container::-webkit-scrollbar {
+    display: none;
+}
+
+.hw-page {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 8px;
+    padding: 5px;
+    box-sizing: border-box;
+    /* 4行，每行约36px加上gap，保证足够高度 */
+    min-height: 180px; 
+    align-content: start;
+}
+
+.hw-page-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 5px;
+}
+.hw-page-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ccc;
+    transition: all 0.3s;
+}
+.hw-page-dot.active {
+    background: var(--teacher-primary);
+    transform: scale(1.2);
+}
+
+.hw-student-card {
+    background: #f0f0f0;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 8px 4px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.2s;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    min-height: 38px;
+}
+.hw-student-card:active {
+    transform: scale(0.95);
+}
+.hw-student-card.incomplete {
+    background: #ffebee;
+    border-color: #ff5252;
+    color: #d32f2f;
+    box-shadow: 0 2px 0 #ff5252 inset, 0 -2px 0 #ff5252 inset;
+}

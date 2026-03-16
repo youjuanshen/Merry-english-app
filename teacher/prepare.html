@@ -69,12 +69,17 @@
 
         <div class="teacher-card">
             <h3 class="card-title">✅ 本节课作业检查</h3>
-            <p style="color:#666; font-size:13px; margin-bottom:10px;">勾选未完成作业的学生：</p>
-            <div class="homework-check-grid" id="homework-check-list">
-                <!-- Rendered by JS -->
+            <p style="font-size: 13px; color: var(--teacher-text-light); margin-bottom: 10px;">左右滑动勾选未完成作业的学生：</p>
+            
+            <div class="hw-pages-container" id="homework-check-list">
+                <!-- Data populated by JS (sliding pages) -->
             </div>
-            <button class="teacher-btn btn-secondary" id="btn-save-homework" style="margin-top:10px;">
-                💾 保存作业检查结果
+            <div class="hw-page-dots" id="hw-page-dots">
+                <!-- JS will populate -->
+            </div>
+
+            <button class="teacher-btn btn-success" style="width: 100%; margin-top:15px;" id="btn-save-homework">
+                💾 提交
             </button>
         </div>
 

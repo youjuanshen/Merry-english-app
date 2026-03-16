@@ -103,6 +103,7 @@ function initPreparePage() {
             el.classList.add('active');
             el.innerHTML = el.innerHTML.replace('<br>&nbsp;', '<br>✓');
             currentModule = el.dataset.mod;
+            renderObjectives(currentLesson); // 切换模块时重新渲染目标
         };
     });
 
@@ -159,13 +160,37 @@ function renderObjectives(lessonId) {
     const data = lessonObjectives[lessonId];
     if(!data) return;
 
+    const modNames = { listening: '听力', reading: '阅读', writing: '写作', speaking: '口语' };
+    const modName = modNames[currentModule] || '听力';
+    let moduleObjHtml = '';
+    
+    if (data.moduleObjectives && data.moduleObjectives[currentModule]) {
+        moduleObjHtml = `
+            <div style="margin-bottom: 10px; background-color: #f0f7ff; padding: 10px; border-radius: 8px; border-left: 4px solid var(--teacher-primary);">
+                <strong style="color: var(--teacher-primary);">📍 ${modName}模块目标：</strong>
+                <ol class="info-list" style="margin-top: 5px;">
+                    ${data.moduleObjectives[currentModule].map(o => `<li>${o}</li>`).join('')}
+                </ol>
+            </div>
+        `;
+    } else {
+        moduleObjHtml = `
+            <div style="margin-bottom: 10px; background-color: #f0f7ff; padding: 10px; border-radius: 8px; border-left: 4px solid var(--teacher-primary);">
+                <strong style="color: var(--teacher-primary);">📍 ${modName}模块目标：</strong>
+                <p style="margin: 5px 0 0 0; font-size: 14px; color: #666;">（掌握本课通用目标并进行${modName}专项训练）</p>
+            </div>
+        `;
+    }
+
     const container = document.getElementById('objectives-container');
     container.innerHTML = `
         <h3 class="card-title">📖 教学目标</h3>
         <h4 style="margin-top:0; color:var(--teacher-primary)">${data.title}</h4>
         
+        ${moduleObjHtml}
+
         <div style="margin-bottom: 10px;">
-            <strong>教学目标：</strong>
+            <strong>本课通用目标：</strong>
             <ol class="info-list">
                 ${data.objectives.map(o => `<li>${o}</li>`).join('')}
             </ol>
@@ -200,6 +225,7 @@ function renderObservationList() {
 // --- HOMEWORK CHECK ---
 function renderHomeworkCheckList() {
     const container = document.getElementById('homework-check-list');
+    const dotsContainer = document.getElementById('hw-page-dots');
     if (!container) return;
     
     // 获取所有的学生 (27人)
@@ -211,11 +237,50 @@ function renderHomeworkCheckList() {
         allStudents.sort((a, b) => a.id - b.id); // 按学号排序
     }
 
-    container.innerHTML = allStudents.map(student => `
-        <div class="hw-student-card" data-id="${student.id}" data-name="${student.name}" onclick="toggleHomeworkStatus(this)">
-            ${student.id}. ${student.name}
-        </div>
-    `).join('');
+    container.innerHTML = '';
+    if (dotsContainer) dotsContainer.innerHTML = '';
+
+    const STUDENTS_PER_PAGE = 12; // 3列x4行
+    const totalPages = Math.ceil(allStudents.length / STUDENTS_PER_PAGE);
+
+    for (let page = 0; page < totalPages; page++) {
+        const pageEl = document.createElement('div');
+        pageEl.className = 'hw-page';
+
+        const startIdx = page * STUDENTS_PER_PAGE;
+        const endIdx = Math.min(startIdx + STUDENTS_PER_PAGE, allStudents.length);
+
+        for (let i = startIdx; i < endIdx; i++) {
+            const student = allStudents[i];
+            const cardEl = document.createElement('div');
+            cardEl.className = 'hw-student-card';
+            cardEl.dataset.id = student.id;
+            cardEl.dataset.name = student.name;
+            cardEl.textContent = `${student.id}. ${student.name}`;
+            cardEl.onclick = () => toggleHomeworkStatus(cardEl);
+            pageEl.appendChild(cardEl);
+        }
+        
+        container.appendChild(pageEl);
+
+        // 创建页码点
+        if (dotsContainer) {
+            const dot = document.createElement('div');
+            dot.className = `hw-page-dot ${page === 0 ? 'active' : ''}`;
+            dotsContainer.appendChild(dot);
+        }
+    }
+
+    // 监听滑动更新点点
+    container.addEventListener('scroll', () => {
+        if (!dotsContainer) return;
+        const scrollLeft = container.scrollLeft;
+        const pageIndex = Math.round(scrollLeft / container.clientWidth);
+        const dots = dotsContainer.querySelectorAll('.hw-page-dot');
+        dots.forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === pageIndex);
+        });
+    });
 
     // 绑定保存按钮
     const saveBtn = document.getElementById('btn-save-homework');
@@ -240,7 +305,7 @@ function saveHomeworkCheck() {
     // 视觉反馈
     const btn = document.getElementById('btn-save-homework');
     const originalText = btn.innerHTML;
-    btn.innerHTML = '✅ 保存成功！';
+    btn.innerHTML = '✅ 提交成功！';
     btn.style.backgroundColor = '#2ecc71';
     
     setTimeout(() => {

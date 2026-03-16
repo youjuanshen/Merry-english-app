@@ -3,13 +3,13 @@
 let draggedEl = null;
 
 function renderReadingQuestion(q, container) {
-    if (q.type === 'word_match' || q.type === 'sentence_match') {
+    if (q.type === 'word_match') {
         const textEl = document.createElement('div');
-        textEl.style.fontSize = q.type === 'word_match' ? '60px' : '40px';
+        textEl.style.fontSize = '60px';
         textEl.style.fontWeight = 'bold';
         textEl.style.marginBottom = '30px';
         textEl.style.textAlign = 'center';
-        textEl.textContent = q.word || q.sentence;
+        textEl.textContent = q.word;
         container.appendChild(textEl);
 
         const grid = document.createElement('div');
@@ -17,15 +17,41 @@ function renderReadingQuestion(q, container) {
         q.options.forEach((opt, idx) => {
             const card = document.createElement('div');
             card.className = 'option-card';
-            if (opt.length > 2) {
-                 // Might be text (e.g emojis with modifiers + text)
-                 card.style.fontSize = '30px';
-            } else {
-                 card.style.fontSize = '60px'; // usually emoji
-            }
+            card.style.fontSize = opt.length > 2 ? '30px' : '60px';
             card.innerHTML = opt;
             card.onclick = () => {
                 handleAnswer(idx === q.correct, card);
+            };
+            grid.appendChild(card);
+        });
+        container.appendChild(grid);
+
+    } else if (q.type === 'sentence_match') {
+        const textEl = document.createElement('div');
+        textEl.style.fontSize = '40px';
+        textEl.style.fontWeight = 'bold';
+        textEl.style.marginBottom = '30px';
+        textEl.style.textAlign = 'center';
+        textEl.textContent = q.sentence;
+        container.appendChild(textEl);
+
+        const grid = document.createElement('div');
+        grid.className = 'options-grid';
+        q.options.forEach((opt, idx) => {
+            const card = document.createElement('div');
+            card.className = 'option-card';
+            card.style.fontSize = '30px';
+            
+            const isObj = typeof opt === 'object' && opt !== null;
+            card.innerHTML = isObj ? opt.text : opt;
+            
+            card.onclick = () => {
+                if (isObj) {
+                    const correctAnswer = q.options.find(o => o.value === q.correct);
+                    handleAnswer(opt.value === q.correct, card, correctAnswer ? correctAnswer.text : null);
+                } else {
+                    handleAnswer(idx === q.correct, card);
+                }
             };
             grid.appendChild(card);
         });
@@ -446,5 +472,98 @@ function renderReadingQuestion(q, container) {
             grid.appendChild(card);
         });
         container.appendChild(grid);
+    } else if (q.type === 'whack_mole') {
+        var descEl = document.createElement('h3');
+        descEl.textContent = 'Whack the correct one! ' + (q.chinese || '');
+        container.appendChild(descEl);
+
+        var wmGrid = document.createElement('div');
+        wmGrid.className = 'whack-mole-grid';
+        var moles = [];
+
+        q.options.forEach(function(opt, idx) {
+            var hole = document.createElement('div');
+            hole.className = 'whack-mole-hole';
+
+            var mole = document.createElement('div');
+            mole.className = 'whack-mole-item';
+            mole.innerHTML = opt;
+            moles.push(mole);
+
+            mole.onclick = function(e) {
+                 e.stopPropagation(); // prevent hole click
+                 if(!mole.classList.contains('up')) return;
+                 handleAnswer(idx === q.correct, hole);
+                 mole.classList.remove('up');
+            };
+
+            hole.appendChild(mole);
+            wmGrid.appendChild(hole);
+        });
+        container.appendChild(wmGrid);
+
+        // Mole logic
+        var moleInterval = setInterval(function() {
+            if(isAnimating) return;
+            moles.forEach(function(m) { m.classList.remove('up'); });
+            var randomMole = moles[Math.floor(Math.random() * moles.length)];
+            randomMole.classList.add('up');
+            setTimeout(function() { randomMole.classList.remove('up'); }, 1000);
+        }, 1200);
+
+        // clear interval on answer
+        var origHandleAnswer = handleAnswer;
+        handleAnswer = function(isCorrect, cardEl, fallback) {
+            clearInterval(moleInterval);
+            origHandleAnswer(isCorrect, cardEl, fallback);
+        }
+    } else if (q.type === 'duo_race') {
+        var drTitle = document.createElement('h2');
+        drTitle.style.color = '#ff4b4b';
+        drTitle.innerHTML = '⚡ DUO RACE ⚡';
+        container.appendChild(drTitle);
+
+        var drDescEl = document.createElement('div');
+        drDescEl.style.marginBottom = '20px';
+        drDescEl.textContent = 'Who is faster? ' + (q.chinese || '');
+        container.appendChild(drDescEl);
+
+        var raceArea = document.createElement('div');
+        raceArea.style.display = 'flex';
+        raceArea.style.justifyContent = 'space-between';
+        raceArea.style.width = '100%';
+
+        [0, 1].forEach(function(playerIdx) {
+             var playerArea = document.createElement('div');
+             playerArea.style.width = '45%';
+             playerArea.style.border = '2px dashed var(--gray)';
+             playerArea.style.padding = '10px';
+             playerArea.style.borderRadius = '16px';
+
+             // Safely check if players array is defined for the current index
+             var playerName = (typeof players !== 'undefined' && players && players[playerIdx]) ? players[playerIdx].name : ('Player ' + (playerIdx+1));
+             var pname = document.createElement('h4');
+             pname.textContent = playerName;
+             pname.style.textAlign = 'center';
+             playerArea.appendChild(pname);
+
+             q.options.forEach(function(opt, idx) {
+                 var card = document.createElement('div');
+                 card.className = 'option-card';
+                 card.style.marginBottom = '10px';
+                 card.style.minHeight = '60px';
+                 card.innerHTML = opt;
+                 card.onclick = function() {
+                     // Temporary override currentPlayerIndex so the correct player gets the star
+                     var originalPlayer = (typeof currentPlayerIndex !== 'undefined') ? currentPlayerIndex : 0;
+                     if (typeof currentPlayerIndex !== 'undefined') currentPlayerIndex = playerIdx;
+                     handleAnswer(idx === q.correct, card);
+                     if (typeof currentPlayerIndex !== 'undefined') currentPlayerIndex = originalPlayer;
+                 };
+                 playerArea.appendChild(card);
+             });
+             raceArea.appendChild(playerArea);
+        });
+        container.appendChild(raceArea);
     }
 }

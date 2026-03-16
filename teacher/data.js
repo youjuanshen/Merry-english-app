@@ -3,6 +3,7 @@
 const lessonObjectives = {
   // Unit 1: Animals 动物
   'U1L1': {
+
     title: 'Unit 1 Lesson 1: This is a bear.',
     vocabulary: [
       { word: 'animal', chinese: '动物' },
@@ -21,9 +22,17 @@ const lessonObjectives = {
       '能听懂并认读5个动物单词',
       '能用This is.../That is...介绍动物',
       '能用It\'s...描述动物特征'
-    ]
+    ],
+
+    moduleObjectives: {
+        listening: ['能听懂并辨认本课的核心动物词汇', '能根据录音选择正确的图片与对应场景'],
+        reading: ['能认读本课的核心动物词汇', '能理解简单句子含义并完成图文匹配'],
+        writing: ['能正确拼写核心动物单词', '能补全简单句子强化拼写记忆'],
+        speaking: ['能正确朗读核心动物词汇', '能跟读核心句型并进行简单的口语问答']
+    }
   },
   'U1L2': {
+
     title: 'Unit 1 Lesson 2: I see a monkey.',
     vocabulary: [
       { word: 'monkey', chinese: '猴子' },
@@ -40,9 +49,17 @@ const lessonObjectives = {
       '能听懂并认读4个动物单词',
       '能用I see...描述看到的动物',
       '能用形容词描述动物特征'
-    ]
+    ],
+
+    moduleObjectives: {
+        listening: ['能听懂并辨认本课的核心动物词汇', '能根据录音选择正确的图片与对应场景'],
+        reading: ['能认读本课的核心动物词汇', '能理解简单句子含义并完成图文匹配'],
+        writing: ['能正确拼写核心动物单词', '能补全简单句子强化拼写记忆'],
+        speaking: ['能正确朗读核心动物词汇', '能跟读核心句型并进行简单的口语问答']
+    }
   },
   'U1L3': {
+
     title: 'Unit 1 Lesson 3: The rabbit is small.',
     vocabulary: [
       { word: 'rabbit', chinese: '兔子' },
@@ -59,9 +76,17 @@ const lessonObjectives = {
       '能听懂并认读4个动物单词',
       '能用The...is...描述动物',
       '能用I like...表达喜好'
-    ]
+    ],
+
+    moduleObjectives: {
+        listening: ['能听懂并辨认本课的核心动物词汇', '能根据录音选择正确的图片与对应场景'],
+        reading: ['能认读本课的核心动物词汇', '能理解简单句子含义并完成图文匹配'],
+        writing: ['能正确拼写核心动物单词', '能补全简单句子强化拼写记忆'],
+        speaking: ['能正确朗读核心动物词汇', '能跟读核心句型并进行简单的口语问答']
+    }
   },
   'U1L4': {
+
     title: 'Unit 1 Lesson 4: What is this? It\'s a dog.',
     vocabulary: [
       { word: 'dog', chinese: '狗' },
@@ -77,10 +102,18 @@ const lessonObjectives = {
       '能听懂并认读dog, cat等单词',
       '能用What is this/that?提问',
       '能用It\'s a...回答'
-    ]
+    ],
+
+    moduleObjectives: {
+        listening: ['能听懂并辨认本课的核心动物词汇', '能根据录音选择正确的图片与对应场景'],
+        reading: ['能认读本课的核心动物词汇', '能理解简单句子含义并完成图文匹配'],
+        writing: ['能正确拼写核心动物单词', '能补全简单句子强化拼写记忆'],
+        speaking: ['能正确朗读核心动物词汇', '能跟读核心句型并进行简单的口语问答']
+    }
   },
   // Unit 2: Colors 颜色
   'U2L1': {
+
     title: 'Unit 2 Lesson 1: It\'s red.',
     vocabulary: [
       { word: 'red', chinese: '红色' },
@@ -97,9 +130,17 @@ const lessonObjectives = {
       '能听懂并认读4个颜色单词',
       '能用It\'s...描述颜色',
       '能用What color is it?提问'
-    ]
+    ],
+
+    moduleObjectives: {
+        listening: ['能听懂并辨认本课的核心颜色词汇', '能根据录音选择正确的图片与对应场景'],
+        reading: ['能认读本课的核心颜色词汇', '能理解简单句子含义并完成图文匹配'],
+        writing: ['能正确拼写核心颜色单词', '能补全简单句子强化拼写记忆'],
+        speaking: ['能正确朗读核心颜色词汇', '能跟读核心句型并进行简单的口语问答']
+    }
   },
   'U2L2': {
+
     title: 'Unit 2 Lesson 2: I like blue.',
     vocabulary: [
       { word: 'orange', chinese: '橙色' },
@@ -116,9 +157,17 @@ const lessonObjectives = {
       '能听懂并认读4个颜色单词',
       '能用I like...表达颜色喜好',
       '能用Do you like...?询问他人喜好'
-    ]
+    ],
+
+    moduleObjectives: {
+        listening: ['能听懂并辨认本课的核心颜色词汇', '能根据录音选择正确的图片与对应场景'],
+        reading: ['能认读本课的核心颜色词汇', '能理解简单句子含义并完成图文匹配'],
+        writing: ['能正确拼写核心颜色单词', '能补全简单句子强化拼写记忆'],
+        speaking: ['能正确朗读核心颜色词汇', '能跟读核心句型并进行简单的口语问答']
+    }
   },
   'U2L3': {
+
     title: 'Unit 2 Lesson 3: The sky is blue.',
     vocabulary: [
       { word: 'white', chinese: '白色' },
@@ -135,9 +184,17 @@ const lessonObjectives = {
       '能听懂并认读4个颜色单词',
       '能用The...is...描述事物颜色',
       '能描述自然界的颜色'
-    ]
+    ],
+
+    moduleObjectives: {
+        listening: ['能听懂并辨认本课的核心颜色词汇', '能根据录音选择正确的图片与对应场景'],
+        reading: ['能认读本课的核心颜色词汇', '能理解简单句子含义并完成图文匹配'],
+        writing: ['能正确拼写核心颜色单词', '能补全简单句子强化拼写记忆'],
+        speaking: ['能正确朗读核心颜色词汇', '能跟读核心句型并进行简单的口语问答']
+    }
   },
   'U2L4': {
+
     title: 'Unit 2 Lesson 4: Colors Review 颜色复习',
     vocabulary: [
       { word: 'rainbow', chinese: '彩虹' },
@@ -151,10 +208,18 @@ const lessonObjectives = {
       '能复习所有颜色单词',
       '能综合运用颜色词汇',
       '能描述彩虹的颜色'
-    ]
+    ],
+
+    moduleObjectives: {
+        listening: ['能听懂并辨认本课的核心颜色词汇', '能根据录音选择正确的图片与对应场景'],
+        reading: ['能认读本课的核心颜色词汇', '能理解简单句子含义并完成图文匹配'],
+        writing: ['能正确拼写核心颜色单词', '能补全简单句子强化拼写记忆'],
+        speaking: ['能正确朗读核心颜色词汇', '能跟读核心句型并进行简单的口语问答']
+    }
   },
   // Unit 3: Numbers 数字
   'U3L1': {
+
     title: 'Unit 3 Lesson 1: I have two apples.',
     vocabulary: [
       { word: 'one', chinese: '一' },
@@ -172,9 +237,17 @@ const lessonObjectives = {
       '能听懂并认读数字1-5',
       '能用I have...表达拥有',
       '能用How many?询问数量'
-    ]
+    ],
+
+    moduleObjectives: {
+        listening: ['能听懂并辨认本课的核心数字词汇', '能根据录音选择正确的图片与对应场景'],
+        reading: ['能认读本课的核心数字词汇', '能理解简单句子含义并完成图文匹配'],
+        writing: ['能正确拼写核心数字单词', '能补全简单句子强化拼写记忆'],
+        speaking: ['能正确朗读核心数字词汇', '能跟读核心句型并进行简单的口语问答']
+    }
   },
   'U3L2': {
+
     title: 'Unit 3 Lesson 2: Six little ducks.',
     vocabulary: [
       { word: 'six', chinese: '六' },
@@ -192,9 +265,17 @@ const lessonObjectives = {
       '能听懂并认读数字6-10',
       '能用There are...描述数量',
       '能流利地从1数到10'
-    ]
+    ],
+
+    moduleObjectives: {
+        listening: ['能听懂并辨认本课的核心数字词汇', '能根据录音选择正确的图片与对应场景'],
+        reading: ['能认读本课的核心数字词汇', '能理解简单句子含义并完成图文匹配'],
+        writing: ['能正确拼写核心数字单词', '能补全简单句子强化拼写记忆'],
+        speaking: ['能正确朗读核心数字词汇', '能跟读核心句型并进行简单的口语问答']
+    }
   },
   'U3L3': {
+
     title: 'Unit 3 Lesson 3: How old are you?',
     vocabulary: [
       { word: 'old', chinese: '岁/老的' },
@@ -209,9 +290,17 @@ const lessonObjectives = {
       '能用How old are you?询问年龄',
       '能用I\'m...years old.回答年龄',
       '能综合运用数字1-10'
-    ]
+    ],
+
+    moduleObjectives: {
+        listening: ['能听懂并辨认本课的核心数字词汇', '能根据录音选择正确的图片与对应场景'],
+        reading: ['能认读本课的核心数字词汇', '能理解简单句子含义并完成图文匹配'],
+        writing: ['能正确拼写核心数字单词', '能补全简单句子强化拼写记忆'],
+        speaking: ['能正确朗读核心数字词汇', '能跟读核心句型并进行简单的口语问答']
+    }
   },
   'U3L4': {
+
     title: 'Unit 3 Lesson 4: Numbers Review 数字复习',
     vocabulary: [
       { word: 'count', chinese: '数数' },
@@ -225,10 +314,18 @@ const lessonObjectives = {
       '能复习数字1-10',
       '能快速认读数字',
       '能在情境中运用数字'
-    ]
+    ],
+
+    moduleObjectives: {
+        listening: ['能听懂并辨认本课的核心数字词汇', '能根据录音选择正确的图片与对应场景'],
+        reading: ['能认读本课的核心数字词汇', '能理解简单句子含义并完成图文匹配'],
+        writing: ['能正确拼写核心数字单词', '能补全简单句子强化拼写记忆'],
+        speaking: ['能正确朗读核心数字词汇', '能跟读核心句型并进行简单的口语问答']
+    }
   },
   // Unit 4: Family 家庭
   'U4L1': {
+
     title: 'Unit 4 Lesson 1: This is my mother.',
     vocabulary: [
       { word: 'mother', chinese: '妈妈' },
@@ -245,9 +342,17 @@ const lessonObjectives = {
       '能听懂并认读4个家庭成员单词',
       '能用This is my...介绍家人',
       '能用Who is...?询问家人身份'
-    ]
+    ],
+
+    moduleObjectives: {
+        listening: ['能听懂并辨认本课的核心家庭词汇', '能根据录音选择正确的图片与对应场景'],
+        reading: ['能认读本课的核心家庭词汇', '能理解简单句子含义并完成图文匹配'],
+        writing: ['能正确拼写核心家庭单词', '能补全简单句子强化拼写记忆'],
+        speaking: ['能正确朗读核心家庭词汇', '能跟读核心句型并进行简单的口语问答']
+    }
   },
   'U4L2': {
+
     title: 'Unit 4 Lesson 2: She is my grandmother.',
     vocabulary: [
       { word: 'grandmother', chinese: '奶奶/外婆' },
@@ -264,9 +369,17 @@ const lessonObjectives = {
       '能听懂并认读祖父母称呼',
       '能用She/He is my...介绍家人',
       '能表达对家人的爱'
-    ]
+    ],
+
+    moduleObjectives: {
+        listening: ['能听懂并辨认本课的核心家庭词汇', '能根据录音选择正确的图片与对应场景'],
+        reading: ['能认读本课的核心家庭词汇', '能理解简单句子含义并完成图文匹配'],
+        writing: ['能正确拼写核心家庭单词', '能补全简单句子强化拼写记忆'],
+        speaking: ['能正确朗读核心家庭词汇', '能跟读核心句型并进行简单的口语问答']
+    }
   },
   'U4L3': {
+
     title: 'Unit 4 Lesson 3: How many people?',
     vocabulary: [
       { word: 'family', chinese: '家庭' },
@@ -282,9 +395,17 @@ const lessonObjectives = {
       '能询问家庭人数',
       '能用There are...回答人数',
       '能介绍自己的家庭'
-    ]
+    ],
+
+    moduleObjectives: {
+        listening: ['能听懂并辨认本课的核心家庭词汇', '能根据录音选择正确的图片与对应场景'],
+        reading: ['能认读本课的核心家庭词汇', '能理解简单句子含义并完成图文匹配'],
+        writing: ['能正确拼写核心家庭单词', '能补全简单句子强化拼写记忆'],
+        speaking: ['能正确朗读核心家庭词汇', '能跟读核心句型并进行简单的口语问答']
+    }
   },
   'U4L4': {
+
     title: 'Unit 4 Lesson 4: Family Review 家庭复习',
     vocabulary: [
       { word: 'love', chinese: '爱' },
@@ -298,7 +419,14 @@ const lessonObjectives = {
       '能复习所有家庭成员单词',
       '能完整介绍自己的家庭',
       '能表达家庭情感'
-    ]
+    ],
+
+    moduleObjectives: {
+        listening: ['能听懂并辨认本课的核心家庭词汇', '能根据录音选择正确的图片与对应场景'],
+        reading: ['能认读本课的核心家庭词汇', '能理解简单句子含义并完成图文匹配'],
+        writing: ['能正确拼写核心家庭单词', '能补全简单句子强化拼写记忆'],
+        speaking: ['能正确朗读核心家庭词汇', '能跟读核心句型并进行简单的口语问答']
+    }
   }
 };
 
