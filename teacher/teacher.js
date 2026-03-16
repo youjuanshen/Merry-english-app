@@ -14,10 +14,30 @@ let currentLesson = 'U1L1';
 let currentModule = 'listening';
 let currentPhase = 'pretest';
 
+// 根据单元和课时更新 currentLesson ID
+function updateCurrentLesson() {
+    const unitEl = document.getElementById('unit-select');
+    const lessonEl = document.getElementById('lesson-select');
+    const unitVal = unitEl ? unitEl.value : '1';
+    const lessonVal = lessonEl ? lessonEl.value : '1';
+    currentLesson = `U${unitVal}L${lessonVal}`;
+    renderObjectives(currentLesson);
+}
+
 // --- PREPARE PAGE ---
 function initPreparePage() {
     renderObjectives(currentLesson);
     renderObservationList();
+
+    // 监听单元和课时选择变化，更新教学目标
+    const unitSelect = document.getElementById('unit-select');
+    const lessonSelect = document.getElementById('lesson-select');
+    if (unitSelect) {
+        unitSelect.addEventListener('change', updateCurrentLesson);
+    }
+    if (lessonSelect) {
+        lessonSelect.addEventListener('change', updateCurrentLesson);
+    }
 
     // Module Selector Logic
     const modSelectors = document.querySelectorAll('.module-select');
