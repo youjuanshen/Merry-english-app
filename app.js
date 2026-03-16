@@ -1230,12 +1230,7 @@ function handleAnswer(isCorrect, cardEl = null, correctAnswer = null) {
         speakFeedback(true);      // 语音说英文
         resetHintLevel();
 
-        // 答对时显示正确答案+中文翻译（加深学习印象）
-        if (q) {
-            showCorrectAnswerWithTranslation(q);
-        }
-
-        // 显示多邻国风格底部反馈面板
+        // 只显示底部反馈面板（包含答案和鼓励语，不再重复显示绿色答案条）
         showFeedbackPanel(true, q);
 
         // 答对后解锁交互

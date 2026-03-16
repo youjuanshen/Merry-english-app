@@ -9,10 +9,23 @@ document.addEventListener('DOMContentLoaded', () => {
     if (page === 'dashboard') initDashboardPage();
 });
 
-// --- STATE ---
-let currentLesson = 'U1L1';
-let currentModule = 'listening';
+// --- STATE（从localStorage恢复上次选择）---
+let savedLesson = {};
+try {
+    savedLesson = JSON.parse(localStorage.getItem('currentLesson') || '{}');
+} catch (e) { savedLesson = {}; }
+
+let currentLesson = savedLesson.unit && savedLesson.lesson
+    ? `U${savedLesson.unit}L${savedLesson.lesson}`
+    : 'U1L1';
+let currentModule = savedLesson.module || 'listening';
 let currentPhase = 'pretest';
+
+// 从teacherCommand恢复阶段
+try {
+    const savedCmd = JSON.parse(localStorage.getItem('teacherCommand') || '{}');
+    if (savedCmd.phase) currentPhase = savedCmd.phase;
+} catch (e) {}
 
 // 根据单元和课时更新 currentLesson ID
 function updateCurrentLesson() {
@@ -26,6 +39,40 @@ function updateCurrentLesson() {
 
 // --- PREPARE PAGE ---
 function initPreparePage() {
+    // 恢复上次选择的单元和课时
+    if (savedLesson.unit) {
+        const unitEl = document.getElementById('unit-select');
+        if (unitEl) unitEl.value = String(savedLesson.unit);
+    }
+    if (savedLesson.lesson) {
+        const lessonEl = document.getElementById('lesson-select');
+        if (lessonEl) lessonEl.value = String(savedLesson.lesson);
+    }
+
+    // 恢复模块选择
+    if (currentModule) {
+        const modSelectors = document.querySelectorAll('.module-select');
+        modSelectors.forEach(el => {
+            el.classList.remove('active');
+            el.innerHTML = el.innerHTML.replace('<br>✓', '<br>&nbsp;');
+            if (el.dataset.mod === currentModule) {
+                el.classList.add('active');
+                el.innerHTML = el.innerHTML.replace('<br>&nbsp;', '<br>✓');
+            }
+        });
+    }
+
+    // 恢复阶段选择
+    if (currentPhase) {
+        const phaseSelectors = document.querySelectorAll('.phase-select');
+        phaseSelectors.forEach(el => {
+            el.classList.remove('active');
+            if (el.dataset.phase === currentPhase) {
+                el.classList.add('active');
+            }
+        });
+    }
+
     renderObjectives(currentLesson);
     renderObservationList();
 
