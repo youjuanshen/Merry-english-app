@@ -1,5 +1,5 @@
 // Auto-generated full question bank with difficulty levels
-const lesson1 = {
+var lesson1 = {
   "id": "U1L1",
   "title": "This is a bear.",
   "listening": {
