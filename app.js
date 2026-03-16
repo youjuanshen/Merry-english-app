@@ -1543,8 +1543,20 @@ function selectLessonFromMap(lessonId) {
 var achievementsBtn = document.getElementById('achievements-btn');
 if (achievementsBtn) {
     achievementsBtn.onclick = function() {
-        document.getElementById('login-screen').classList.remove('active');
-        document.getElementById('achievements-screen').classList.add('active');
+        // 隐藏登录页面
+        var loginScreen = document.getElementById('login-screen');
+        loginScreen.classList.remove('active');
+        loginScreen.style.display = 'none';
+
+        // 隐藏任务面板（如果打开的话）
+        var questsContainer = document.getElementById('daily-quests-container');
+        if (questsContainer) questsContainer.style.display = 'none';
+
+        // 显示成就页面
+        var achScreen = document.getElementById('achievements-screen');
+        achScreen.classList.add('active');
+        achScreen.style.display = 'flex';
+
         var container = document.getElementById('achievements-container');
         if (typeof renderAchievementsPage === 'function') {
             renderAchievementsPage(container);
@@ -1556,8 +1568,15 @@ if (achievementsBtn) {
 var backToLoginBtn = document.getElementById('back-to-login');
 if (backToLoginBtn) {
     backToLoginBtn.onclick = function() {
-        document.getElementById('achievements-screen').classList.remove('active');
-        document.getElementById('login-screen').classList.add('active');
+        // 隐藏成就页面
+        var achScreen = document.getElementById('achievements-screen');
+        achScreen.classList.remove('active');
+        achScreen.style.display = 'none';
+
+        // 显示登录页面
+        var loginScreen = document.getElementById('login-screen');
+        loginScreen.classList.add('active');
+        loginScreen.style.display = 'flex';
     };
 }
 
