@@ -1,520 +1,343 @@
 var unit2_lesson4 = {
   "id": "U2L4",
-  "title": "What color is it?",
+  "title": "Unit 2 Lesson 4: Put on your sports shoes.",
   "listening": {
     "pretest": [
       {
-        "type": "listen_tf",
-        "audio": "white",
-        "chinese": "白色",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-        "correct": true
-      },
-      {
         "type": "listen_select",
-        "audio": "orange",
-        "chinese": "橙色",
+        "audio": "sports shoes",
+        "chinese": "运动鞋",
         "options": [
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/orange_orange.png\" width=\"80\">"
+          "<img src=\"assets/images/shorts.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/skirt.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">"
         ],
-        "correct": 3
-      },
-      {
-        "type": "listen_select",
-        "audio": "yellow",
-        "chinese": "黄色",
-        "options": [
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/orange_orange.png\" width=\"80\">"
-        ],
-        "correct": 1
+        "correct": 1,
+        "image": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">"
       },
       {
         "type": "listen_tf",
-        "audio": "blue",
-        "chinese": "蓝色",
-        "image": "<img src=\"assets/images/brown_bear.png\" width=\"80\">",
-        "correct": false
+        "audio": "shorts",
+        "chinese": "短裤",
+        "options": [
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/skirt.png\" width=\"80\">",
+          "<img src=\"assets/images/shorts.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">"
+        ],
+        "correct": false,
+        "image": "<img src=\"assets/images/shorts.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_select",
+        "audio": "skirt",
+        "chinese": "裙子",
+        "options": [
+          "<img src=\"assets/images/skirt.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/shorts.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">"
+        ],
+        "correct": false,
+        "image": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_select",
+        "audio": "shoe",
+        "chinese": "鞋子",
+        "options": [
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/shorts.png\" width=\"80\">",
+          "<img src=\"assets/images/skirt.png\" width=\"80\">"
+        ],
+        "correct": true,
+        "image": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_select",
+        "audio": "sports shoes",
+        "chinese": "运动鞋",
+        "options": [
+          "<img src=\"assets/images/shorts.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/skirt.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "image": "<img src=\"assets/images/shorts.png\" width=\"80\">"
       },
       {
         "type": "listen_tf",
-        "audio": "green",
-        "chinese": "绿色",
-        "image": "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
-        "correct": false
+        "audio": "shorts",
+        "chinese": "短裤",
+        "options": [
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/shorts.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/skirt.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "image": "<img src=\"assets/images/shorts.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_select",
+        "audio": "skirt",
+        "chinese": "裙子",
+        "options": [
+          "<img src=\"assets/images/skirt.png\" width=\"80\">",
+          "<img src=\"assets/images/shorts.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "image": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">"
       },
       {
         "type": "listen_tf",
-        "audio": "brown",
-        "chinese": "棕色",
-        "image": "<img src=\"assets/images/brown_bear.png\" width=\"80\">",
-        "correct": true
+        "audio": "shoe",
+        "chinese": "鞋子",
+        "options": [
+          "<img src=\"assets/images/shorts.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/skirt.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "image": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "sports shoes",
+        "chinese": "运动鞋",
+        "options": [
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/shorts.png\" width=\"80\">",
+          "<img src=\"assets/images/skirt.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "image": "<img src=\"assets/images/shorts.png\" width=\"80\">"
       },
       {
         "type": "listen_select",
-        "audio": "red",
-        "chinese": "红色",
+        "audio": "shorts",
+        "chinese": "短裤",
         "options": [
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/purple_grape.png\" width=\"80\">"
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/skirt.png\" width=\"80\">",
+          "<img src=\"assets/images/shorts.png\" width=\"80\">"
         ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "black",
-        "chinese": "黑色",
-        "options": [
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-          "<img src=\"assets/images/purple_grape.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "purple",
-        "chinese": "紫色",
-        "options": [
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/purple_grape.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "listen_select",
-        "audio": "pink",
-        "chinese": "粉色",
-        "options": [
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/pink_flower.png\" width=\"80\">"
-        ],
-        "correct": 3
+        "correct": false,
+        "image": "<img src=\"assets/images/shorts.png\" width=\"80\">"
       }
     ],
     "practice": [
       {
-        "type": "listen_select",
-        "audio": "yellow",
-        "chinese": "黄色",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/purple_grape.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "listen_tf",
-        "audio": "yellow",
-        "chinese": "黄色",
-        "difficulty": "medium",
-        "image": "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "red",
-        "chinese": "红色",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
-          "<img src=\"assets/images/brown_bear.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "blue",
-        "chinese": "蓝色",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/orange_orange.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "red",
-        "chinese": "红色",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/pink_flower.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "green",
-        "chinese": "绿色",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
-          "<img src=\"assets/images/brown_bear.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "blue",
-        "chinese": "蓝色",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/purple_grape.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "listen_select",
-        "audio": "pink",
-        "chinese": "粉色",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/pink_flower.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "green",
-        "chinese": "绿色",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-          "<img src=\"assets/images/pink_flower.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "orange",
-        "chinese": "橙色",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-          "<img src=\"assets/images/pink_flower.png\" width=\"80\">",
-          "<img src=\"assets/images/purple_grape.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "red",
-        "chinese": "红色",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
-          "<img src=\"assets/images/brown_bear.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "listen_tf",
-        "audio": "brown",
-        "chinese": "棕色",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_select",
-        "audio": "yellow",
-        "chinese": "黄色",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/purple_grape.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "listen_tf",
-        "audio": "green",
-        "chinese": "绿色",
-        "difficulty": "medium",
-        "image": "<img src=\"assets/images/pink_flower.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_tf",
-        "audio": "black",
-        "chinese": "黑色",
-        "difficulty": "easy",
-        "image": "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_select",
-        "audio": "orange",
-        "chinese": "橙色",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "white",
-        "chinese": "白色",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "listen_select",
-        "audio": "pink",
-        "chinese": "粉色",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-          "<img src=\"assets/images/pink_flower.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "listen_tf",
-        "audio": "purple",
-        "chinese": "紫色",
-        "difficulty": "medium",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_tf",
-        "audio": "black",
-        "chinese": "黑色",
-        "difficulty": "easy",
-        "image": "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_tf",
-        "audio": "brown",
-        "chinese": "棕色",
-        "difficulty": "easy",
-        "image": "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_select",
-        "audio": "purple",
-        "chinese": "紫色",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/purple_grape.png\" width=\"80\">",
-          "<img src=\"assets/images/pink_flower.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "purple",
-        "chinese": "紫色",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/brown_bear.png\" width=\"80\">",
-          "<img src=\"assets/images/purple_grape.png\" width=\"80\">",
-          "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "listen_select",
-        "audio": "white",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
-          "<img src=\"assets/images/purple_grape.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "listen_select",
-        "audio": "blue",
-        "chinese": "蓝色",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/purple_grape.png\" width=\"80\">",
-          "<img src=\"assets/images/brown_bear.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "listen_select",
-        "audio": "orange",
-        "chinese": "橙色",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/purple_grape.png\" width=\"80\">",
-          "<img src=\"assets/images/orange_orange.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
         "type": "balloon_pop",
-        "text": "Find the word",
-        "chinese": "黄色",
+        "audio": "sports shoes",
+        "chinese": "运动鞋",
         "options": [
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/purple_grape.png\" width=\"80\">"
+          "<img src=\"assets/images/shorts.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/skirt.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "I want my sports shoes, too.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "scenario",
+        "audio": "shorts",
+        "chinese": "短裤",
+        "options": [
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/skirt.png\" width=\"80\">",
+          "<img src=\"assets/images/shorts.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">"
         ],
         "correct": 2,
-        "difficulty": "easy"
+        "difficulty": "medium",
+        "text": "Find the word",
+        "scenario": "I want my sports shoes, too.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       },
       {
-        "type": "balloon_pop",
-        "text": "Find the word",
-        "chinese": "蓝色",
+        "type": "listen_select",
+        "audio": "skirt",
+        "chinese": "裙子",
         "options": [
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/orange_orange.png\" width=\"80\">"
+          "<img src=\"assets/images/skirt.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/shorts.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">"
         ],
-        "correct": 2,
-        "difficulty": "medium"
+        "correct": 0,
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "Put on your sports shoes.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       },
       {
         "type": "balloon_pop",
-        "text": "Find the word",
-        "chinese": "绿色",
+        "audio": "shoe",
+        "chinese": "鞋子",
         "options": [
-          "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
-          "<img src=\"assets/images/brown_bear.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">"
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/shorts.png\" width=\"80\">",
+          "<img src=\"assets/images/skirt.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "I want my sports shoes, too.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "scenario",
+        "audio": "sports shoes",
+        "chinese": "运动鞋",
+        "options": [
+          "<img src=\"assets/images/shorts.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/skirt.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "I want my sports shoes, too.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "duo_listen_select",
+        "audio": "shorts",
+        "chinese": "短裤",
+        "options": [
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/shorts.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/skirt.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "Put on your sports shoes.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "balloon_pop",
+        "audio": "skirt",
+        "chinese": "裙子",
+        "options": [
+          "<img src=\"assets/images/skirt.png\" width=\"80\">",
+          "<img src=\"assets/images/shorts.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "I want my sports shoes, too.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "listen_select",
+        "audio": "shoe",
+        "chinese": "鞋子",
+        "options": [
+          "<img src=\"assets/images/shorts.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/skirt.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "I want my sports shoes, too.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "listen_select",
+        "audio": "sports shoes",
+        "chinese": "运动鞋",
+        "options": [
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/shorts.png\" width=\"80\">",
+          "<img src=\"assets/images/skirt.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "Put on your sports shoes.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "scenario",
+        "audio": "shorts",
+        "chinese": "短裤",
+        "options": [
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/skirt.png\" width=\"80\">",
+          "<img src=\"assets/images/shorts.png\" width=\"80\">"
         ],
         "correct": 3,
-        "difficulty": "medium"
-      },
-      {
-        "type": "balloon_pop",
+        "difficulty": "easy",
         "text": "Find the word",
-        "chinese": "粉色",
+        "scenario": "I want my sports shoes, too.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "listen_select",
+        "audio": "skirt",
+        "chinese": "裙子",
         "options": [
-          "<img src=\"assets/images/pink_flower.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">"
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/skirt.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/shorts.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "I want my sports shoes, too.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "listen_select",
+        "audio": "shoe",
+        "chinese": "鞋子",
+        "options": [
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/skirt.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/shorts.png\" width=\"80\">"
         ],
         "correct": 0,
-        "difficulty": "hard"
-      },
-      {
-        "type": "scenario",
-        "scenario": "Sam is hungry. He wants a big fruit.",
-        "chinese": "山姆饿了。他想要一个大水果。",
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "I want my sports shoes, too.",
         "question": "What should we pick?",
-        "options": [
-          "<img src=\"assets/images/fish.png\" width=\"80\">",
-          "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
-          "<img src=\"assets/images/mouse.png\" width=\"80\">"
-        ],
-        "correct": 1,
-        "feedback": "An orange is a fruit!",
-        "difficulty": "medium"
-      },
-      {
-        "type": "scenario",
-        "scenario": "Emma sees something flying in the sky.",
-        "chinese": "艾玛看到天上有东西在飞。",
-        "question": "What should we pick?",
-        "options": [
-          "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/bird.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">"
-        ],
-        "correct": 1,
-        "feedback": "Birds can fly!",
-        "difficulty": "medium"
-      },
-      {
-        "type": "scenario",
-        "scenario": "Max is at the zoo. He sees a big, scary animal.",
-        "chinese": "麦克斯在动物园。他看到一只又大又可怕的动物。",
-        "question": "What should we pick?",
-        "options": [
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/duck.png\" width=\"80\">",
-          "<img src=\"assets/images/fish.png\" width=\"80\">"
-        ],
-        "correct": 0,
-        "feedback": "Tigers are big and scary!",
-        "difficulty": "medium"
-      },
-      {
-        "type": "scenario",
-        "scenario": "Mia is in the garden. She wants to smell something.",
-        "chinese": "米娅在花园里。她想闻闻什么东西。",
-        "question": "What should we pick?",
-        "options": [
-          "<img src=\"assets/images/cat.png\" width=\"80\">",
-          "<img src=\"assets/images/pink_flower.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">"
-        ],
-        "correct": 1,
-        "feedback": "Flowers smell good!",
-        "difficulty": "medium"
+        "feedback": "Great choice!"
       }
     ]
   },
@@ -522,1411 +345,973 @@ var unit2_lesson4 = {
     "pretest": [
       {
         "type": "word_match",
-        "chinese": "蓝色",
-        "word": "blue",
+        "chinese": "运动鞋",
+        "word": "sports shoes",
+        "sentence": "I see a sports shoes.",
         "options": [
           {
-            "text": "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-            "value": "blue"
+            "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
+            "value": "skirt"
           },
           {
-            "text": "<img src=\"assets/images/pink_flower.png\" width=\"80\">",
-            "value": "pink"
-          }
-        ],
-        "correct": "blue"
-      },
-      {
-        "type": "word_match",
-        "chinese": "红色",
-        "word": "red",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-            "value": "blue"
+            "text": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+            "value": "shoe"
           },
           {
-            "text": "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-            "value": "red"
-          }
-        ],
-        "correct": "red"
-      },
-      {
-        "type": "word_match",
-        "chinese": "粉色",
-        "word": "pink",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
+            "text": "<img src=\"assets/images/shorts.png\" width=\"80\">",
+            "value": "shorts"
           },
           {
-            "text": "<img src=\"assets/images/pink_flower.png\" width=\"80\">",
-            "value": "pink"
+            "text": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+            "value": "sports shoes"
           }
         ],
-        "correct": "pink"
-      },
-      {
-        "type": "word_match",
-        "chinese": "白色",
-        "word": "white",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
-          },
-          {
-            "text": "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
-            "value": "orange"
-          }
-        ],
-        "correct": "white"
-      },
-      {
-        "type": "word_match",
-        "chinese": "蓝色",
-        "word": "blue",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-            "value": "red"
-          },
-          {
-            "text": "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-            "value": "blue"
-          }
-        ],
-        "correct": "blue"
-      },
-      {
-        "type": "word_match",
-        "chinese": "紫色",
-        "word": "purple",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/purple_grape.png\" width=\"80\">",
-            "value": "purple"
-          },
-          {
-            "text": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-            "value": "yellow"
-          }
-        ],
-        "correct": "purple"
-      },
-      {
-        "type": "word_match",
-        "chinese": "红色",
-        "word": "red",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
-          },
-          {
-            "text": "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-            "value": "red"
-          }
-        ],
-        "correct": "red"
-      },
-      {
-        "type": "word_match",
-        "chinese": "橙色",
-        "word": "orange",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-            "value": "yellow"
-          },
-          {
-            "text": "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
-            "value": "orange"
-          }
-        ],
-        "correct": "orange"
+        "correct": "sports shoes"
       },
       {
         "type": "sentence_match",
-        "chinese": "黑色",
-        "sentence": "I see a black.",
+        "chinese": "短裤",
+        "word": "shorts",
+        "sentence": "I see a shorts.",
         "options": [
           {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
+            "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
+            "value": "skirt"
           },
           {
-            "text": "<img src=\"assets/images/pink_flower.png\" width=\"80\">",
-            "value": "pink"
+            "text": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+            "value": "shoe"
           }
         ],
-        "correct": "black"
+        "correct": "shorts"
       },
       {
         "type": "word_match",
-        "chinese": "黄色",
-        "word": "yellow",
+        "chinese": "裙子",
+        "word": "skirt",
+        "sentence": "Put on your sports shoes.",
         "options": [
           {
-            "text": "<img src=\"assets/images/brown_bear.png\" width=\"80\">",
-            "value": "brown"
+            "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
+            "value": "skirt"
           },
           {
-            "text": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-            "value": "yellow"
+            "text": "<img src=\"assets/images/shorts.png\" width=\"80\">",
+            "value": "shorts"
+          },
+          {
+            "text": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+            "value": "sports shoes"
+          },
+          {
+            "text": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+            "value": "shoe"
           }
         ],
-        "correct": "yellow"
+        "correct": "skirt"
       },
       {
         "type": "word_match",
-        "chinese": "绿色",
-        "word": "green",
+        "chinese": "鞋子",
+        "word": "shoe",
+        "sentence": "Put on your sports shoes.",
         "options": [
           {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
+            "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
+            "value": "skirt"
           },
           {
-            "text": "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-            "value": "green"
+            "text": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+            "value": "sports shoes"
           }
         ],
-        "correct": "green"
+        "correct": "shoe"
       },
       {
         "type": "sentence_match",
-        "chinese": "棕色",
-        "sentence": "I see a brown.",
+        "chinese": "运动鞋",
+        "word": "sports shoes",
+        "sentence": "Put on your sports shoes.",
         "options": [
           {
-            "text": "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-            "value": "red"
+            "text": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+            "value": "shoe"
           },
           {
-            "text": "<img src=\"assets/images/brown_bear.png\" width=\"80\">",
-            "value": "brown"
+            "text": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+            "value": "sports shoes"
+          },
+          {
+            "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
+            "value": "skirt"
+          },
+          {
+            "text": "<img src=\"assets/images/shorts.png\" width=\"80\">",
+            "value": "shorts"
           }
         ],
-        "correct": "brown"
+        "correct": "sports shoes"
+      },
+      {
+        "type": "word_match",
+        "chinese": "短裤",
+        "word": "shorts",
+        "sentence": "Put on your sports shoes.",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+            "value": "shoe"
+          },
+          {
+            "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
+            "value": "skirt"
+          }
+        ],
+        "correct": "shorts"
+      },
+      {
+        "type": "sentence_match",
+        "chinese": "裙子",
+        "word": "skirt",
+        "sentence": "Put on your sports shoes.",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+            "value": "sports shoes"
+          },
+          {
+            "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
+            "value": "skirt"
+          }
+        ],
+        "correct": "skirt"
+      },
+      {
+        "type": "sentence_match",
+        "chinese": "鞋子",
+        "word": "shoe",
+        "sentence": "Put on your sports shoes.",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+            "value": "shoe"
+          },
+          {
+            "text": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+            "value": "sports shoes"
+          }
+        ],
+        "correct": "shoe"
+      },
+      {
+        "type": "word_match",
+        "chinese": "运动鞋",
+        "word": "sports shoes",
+        "sentence": "Put on your sports shoes.",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
+            "value": "skirt"
+          },
+          {
+            "text": "<img src=\"assets/images/shorts.png\" width=\"80\">",
+            "value": "shorts"
+          }
+        ],
+        "correct": "sports shoes"
+      },
+      {
+        "type": "word_match",
+        "chinese": "短裤",
+        "word": "shorts",
+        "sentence": "I see a shorts.",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
+            "value": "skirt"
+          },
+          {
+            "text": "<img src=\"assets/images/shorts.png\" width=\"80\">",
+            "value": "shorts"
+          }
+        ],
+        "correct": "shorts"
       }
     ],
     "practice": [
       {
-        "type": "word_match",
-        "chinese": "黑色",
-        "difficulty": "easy",
-        "word": "black",
+        "type": "sentence_match",
+        "chinese": "运动鞋",
+        "word": "sports shoes",
+        "sentence": "I want my sports shoes, too.",
         "options": [
-          {
-            "text": "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-            "value": "green"
-          },
-          {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
-          }
+          "<img src=\"assets/images/shorts.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/skirt.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">"
         ],
-        "correct": "black"
+        "correct": 1,
+        "difficulty": "hard"
+      },
+      {
+        "type": "word_match",
+        "chinese": "短裤",
+        "word": "shorts",
+        "sentence": "Look at the shorts.",
+        "options": [
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/skirt.png\" width=\"80\">",
+          "<img src=\"assets/images/shorts.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">"
+        ],
+        "correct": "shorts",
+        "difficulty": "easy"
       },
       {
         "type": "sentence_match",
-        "chinese": "黑色",
-        "difficulty": "hard",
-        "sentence": "I see a black.",
+        "chinese": "裙子",
+        "word": "skirt",
+        "sentence": "Look at the skirt.",
         "options": [
-          {
-            "text": "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-            "value": "red"
-          },
-          {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
-          }
+          "<img src=\"assets/images/skirt.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/shorts.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">"
         ],
-        "correct": "black"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "sentence": "I see a white.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
-          },
-          {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
-          }
-        ],
-        "correct": "white"
-      },
-      {
-        "type": "word_match",
-        "chinese": "橙色",
-        "difficulty": "medium",
-        "word": "orange",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
-            "value": "orange"
-          },
-          {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
-          }
-        ],
-        "correct": "orange"
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "红色",
-        "difficulty": "easy",
-        "word": "red",
-        "options": [
-          "<img src=\"assets/images/brown_bear.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "黄色",
-        "difficulty": "medium",
-        "word": "yellow",
-        "options": [
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/pink_flower.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/purple_grape.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "蓝色",
-        "difficulty": "hard",
-        "word": "blue",
-        "options": [
-          "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "word_match",
-        "chinese": "蓝色",
-        "difficulty": "medium",
-        "word": "blue",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-            "value": "blue"
-          },
-          {
-            "text": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-            "value": "yellow"
-          }
-        ],
-        "correct": "blue"
+        "correct": "skirt",
+        "difficulty": "hard"
       },
       {
         "type": "duo_race",
-        "chinese": "黄色",
-        "difficulty": "hard",
-        "word": "yellow",
+        "chinese": "鞋子",
+        "word": "shoe",
+        "sentence": "I want my sports shoes, too.",
         "options": [
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">"
+          {
+            "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
+            "value": "skirt"
+          },
+          {
+            "text": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+            "value": "sports shoes"
+          },
+          {
+            "text": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+            "value": "shoe"
+          },
+          {
+            "text": "<img src=\"assets/images/shorts.png\" width=\"80\">",
+            "value": "shorts"
+          }
         ],
-        "correct": 1
+        "correct": "shoe",
+        "difficulty": "easy"
       },
       {
         "type": "sentence_match",
-        "chinese": "棕色",
-        "difficulty": "hard",
-        "sentence": "I see a brown.",
+        "chinese": "运动鞋",
+        "word": "sports shoes",
+        "sentence": "Look at the sports shoes.",
         "options": [
-          {
-            "text": "<img src=\"assets/images/brown_bear.png\" width=\"80\">",
-            "value": "brown"
-          },
-          {
-            "text": "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-            "value": "red"
-          }
+          "<img src=\"assets/images/shorts.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/skirt.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">"
         ],
-        "correct": "brown"
+        "correct": "sports shoes",
+        "difficulty": "medium"
       },
       {
         "type": "sentence_match",
-        "chinese": "绿色",
-        "difficulty": "medium",
-        "sentence": "I see a green.",
+        "chinese": "短裤",
+        "word": "shorts",
+        "sentence": "I want my sports shoes, too.",
         "options": [
-          {
-            "text": "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-            "value": "green"
-          },
-          {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
-          }
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/shorts.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/skirt.png\" width=\"80\">"
         ],
-        "correct": "green"
-      },
-      {
-        "type": "word_match",
-        "chinese": "蓝色",
-        "difficulty": "medium",
-        "word": "blue",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-            "value": "blue"
-          },
-          {
-            "text": "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-            "value": "green"
-          }
-        ],
-        "correct": "blue"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "word": "white",
-        "options": [
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-          "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "word_match",
-        "chinese": "红色",
-        "difficulty": "hard",
-        "word": "red",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-            "value": "red"
-          },
-          {
-            "text": "<img src=\"assets/images/brown_bear.png\" width=\"80\">",
-            "value": "brown"
-          }
-        ],
-        "correct": "red"
-      },
-      {
-        "type": "word_match",
-        "chinese": "绿色",
-        "difficulty": "hard",
-        "word": "green",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-            "value": "green"
-          },
-          {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
-          }
-        ],
-        "correct": "green"
-      },
-      {
-        "type": "word_match",
-        "chinese": "红色",
-        "difficulty": "medium",
-        "word": "red",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
-          },
-          {
-            "text": "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-            "value": "red"
-          }
-        ],
-        "correct": "red"
+        "correct": "shorts",
+        "difficulty": "medium"
       },
       {
         "type": "sentence_match",
-        "chinese": "紫色",
-        "difficulty": "easy",
-        "sentence": "I see a purple.",
+        "chinese": "裙子",
+        "word": "skirt",
+        "sentence": "Look at the skirt.",
         "options": [
-          {
-            "text": "<img src=\"assets/images/purple_grape.png\" width=\"80\">",
-            "value": "purple"
-          },
-          {
-            "text": "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-            "value": "blue"
-          }
+          "<img src=\"assets/images/skirt.png\" width=\"80\">",
+          "<img src=\"assets/images/shorts.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">"
         ],
-        "correct": "purple"
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "粉色",
-        "difficulty": "hard",
-        "word": "pink",
-        "options": [
-          "<img src=\"assets/images/pink_flower.png\" width=\"80\">",
-          "<img src=\"assets/images/brown_bear.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "duo_race",
-        "chinese": "绿色",
-        "difficulty": "medium",
-        "word": "green",
-        "options": [
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-          "<img src=\"assets/images/orange_orange.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "紫色",
-        "difficulty": "easy",
-        "sentence": "I see a purple.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/purple_grape.png\" width=\"80\">",
-            "value": "purple"
-          },
-          {
-            "text": "<img src=\"assets/images/brown_bear.png\" width=\"80\">",
-            "value": "brown"
-          }
-        ],
-        "correct": "purple"
+        "correct": 0,
+        "difficulty": "easy"
       },
       {
         "type": "word_match",
-        "chinese": "黑色",
-        "difficulty": "easy",
-        "word": "black",
+        "chinese": "鞋子",
+        "word": "shoe",
+        "sentence": "Look at the shoe.",
         "options": [
-          {
-            "text": "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
-            "value": "orange"
-          },
-          {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
-          }
+          "<img src=\"assets/images/shorts.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+          "<img src=\"assets/images/skirt.png\" width=\"80\">"
         ],
-        "correct": "black"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "紫色",
-        "difficulty": "easy",
-        "sentence": "I see a purple.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/purple_grape.png\" width=\"80\">",
-            "value": "purple"
-          },
-          {
-            "text": "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
-            "value": "orange"
-          }
-        ],
-        "correct": "purple"
+        "correct": "shoe",
+        "difficulty": "hard"
       },
       {
         "type": "word_match",
-        "chinese": "粉色",
-        "difficulty": "easy",
-        "word": "pink",
+        "chinese": "运动鞋",
+        "word": "sports shoes",
+        "sentence": "Look at the sports shoes.",
         "options": [
           {
-            "text": "<img src=\"assets/images/pink_flower.png\" width=\"80\">",
-            "value": "pink"
+            "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
+            "value": "skirt"
           },
           {
-            "text": "<img src=\"assets/images/brown_bear.png\" width=\"80\">",
-            "value": "brown"
+            "text": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+            "value": "shoe"
+          },
+          {
+            "text": "<img src=\"assets/images/shorts.png\" width=\"80\">",
+            "value": "shorts"
+          },
+          {
+            "text": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+            "value": "sports shoes"
           }
         ],
-        "correct": "pink"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "棕色",
-        "difficulty": "hard",
-        "word": "brown",
-        "options": [
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/brown_bear.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-        ],
-        "correct": 2
+        "correct": "sports shoes",
+        "difficulty": "medium"
       },
       {
         "type": "word_match",
-        "chinese": "橙色",
-        "difficulty": "easy",
-        "word": "orange",
+        "chinese": "短裤",
+        "word": "shorts",
+        "sentence": "I want my sports shoes, too.",
         "options": [
           {
-            "text": "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
-            "value": "orange"
+            "text": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+            "value": "shoe"
           },
           {
-            "text": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-            "value": "yellow"
+            "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
+            "value": "skirt"
+          },
+          {
+            "text": "<img src=\"assets/images/shorts.png\" width=\"80\">",
+            "value": "shorts"
+          },
+          {
+            "text": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+            "value": "sports shoes"
           }
         ],
-        "correct": "orange"
+        "correct": 3,
+        "difficulty": "easy"
       },
       {
         "type": "word_match",
-        "chinese": "橙色",
-        "difficulty": "medium",
-        "word": "orange",
+        "chinese": "裙子",
+        "word": "skirt",
+        "sentence": "Look at the skirt.",
         "options": [
           {
-            "text": "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
-            "value": "orange"
+            "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
+            "value": "skirt"
           },
           {
-            "text": "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-            "value": "green"
-          }
-        ],
-        "correct": "orange"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "棕色",
-        "difficulty": "easy",
-        "word": "brown",
-        "options": [
-          "<img src=\"assets/images/brown_bear.png\" width=\"80\">",
-          "<img src=\"assets/images/pink_flower.png\" width=\"80\">",
-          "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "粉色",
-        "difficulty": "easy",
-        "word": "pink",
-        "options": [
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/pink_flower.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "黄色",
-        "difficulty": "easy",
-        "sentence": "I see a yellow.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/brown_bear.png\" width=\"80\">",
-            "value": "brown"
+            "text": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+            "value": "shoe"
           },
           {
-            "text": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-            "value": "yellow"
+            "text": "<img src=\"assets/images/shorts.png\" width=\"80\">",
+            "value": "shorts"
+          },
+          {
+            "text": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+            "value": "sports shoes"
           }
         ],
-        "correct": "yellow"
+        "correct": "skirt",
+        "difficulty": "easy"
       },
       {
-        "type": "duo_race",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "word": "white",
+        "type": "word_match",
+        "chinese": "鞋子",
+        "word": "shoe",
+        "sentence": "I want my sports shoes, too.",
         "options": [
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/pink_flower.png\" width=\"80\">",
-          "<img src=\"assets/images/purple_grape.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
+          {
+            "text": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+            "value": "shoe"
+          },
+          {
+            "text": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+            "value": "sports shoes"
+          },
+          {
+            "text": "<img src=\"assets/images/shorts.png\" width=\"80\">",
+            "value": "shorts"
+          },
+          {
+            "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
+            "value": "skirt"
+          }
         ],
-        "correct": 3
+        "correct": 0,
+        "difficulty": "hard"
       }
     ]
   },
   "writing": {
     "pretest": [
       {
-        "type": "letter_select",
-        "word": "orange",
-        "chinese": "橙色",
-        "display": "oran_e",
-        "options": [
-          "t",
-          "x",
-          "g",
-          "i"
-        ],
-        "correct": "g"
-      },
-      {
         "type": "word_spell",
-        "word": "brown",
-        "chinese": "棕色",
-        "image": "<img src=\"assets/images/brown_bear.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "green",
-        "chinese": "绿色",
-        "display": "gree_",
+        "word": "sports shoes",
+        "chinese": "运动鞋",
+        "image": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+        "display": "sports_shoes",
         "options": [
-          "e",
-          "d",
-          "s",
-          "n"
-        ],
-        "correct": "n"
-      },
-      {
-        "type": "letter_select",
-        "word": "blue",
-        "chinese": "蓝色",
-        "display": "b_ue",
-        "options": [
-          "p",
-          "l",
-          "b",
-          "z"
-        ],
-        "correct": "l"
-      },
-      {
-        "type": "word_spell",
-        "word": "black",
-        "chinese": "黑色",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "pink",
-        "chinese": "粉色",
-        "display": "_ink",
-        "options": [
-          "r",
-          "l",
-          "f",
+          "o",
+          "q",
+          " ",
           "p"
         ],
-        "correct": "p"
+        "correct": " "
       },
       {
         "type": "word_spell",
-        "word": "red",
-        "chinese": "红色",
-        "image": "<img src=\"assets/images/red_apple.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "yellow",
-        "chinese": "黄色",
-        "image": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "blue",
-        "chinese": "蓝色",
-        "image": "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "purple",
-        "chinese": "紫色",
-        "image": "<img src=\"assets/images/purple_grape.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "red",
-        "chinese": "红色",
-        "display": "r_d",
+        "word": "shorts",
+        "chinese": "短裤",
+        "image": "<img src=\"assets/images/shorts.png\" width=\"80\">",
+        "display": "_horts",
         "options": [
-          "j",
-          "e",
-          "y",
-          "b"
+          "t",
+          "v",
+          "u",
+          "s"
         ],
-        "correct": "e"
+        "correct": "s"
       },
       {
         "type": "letter_select",
-        "word": "white",
-        "chinese": "白色",
-        "display": "_hite",
+        "word": "skirt",
+        "chinese": "裙子",
+        "image": "<img src=\"assets/images/skirt.png\" width=\"80\">",
+        "display": "s_irt",
         "options": [
-          "e",
-          "w",
-          "y",
+          "k",
+          "l",
+          "n",
           "m"
         ],
-        "correct": "w"
+        "correct": "k"
+      },
+      {
+        "type": "letter_select",
+        "word": "shoe",
+        "chinese": "鞋子",
+        "image": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+        "display": "s_oe",
+        "options": [
+          "k",
+          "j",
+          "i",
+          "h"
+        ],
+        "correct": "h"
+      },
+      {
+        "type": "word_spell",
+        "word": "sports shoes",
+        "chinese": "运动鞋",
+        "image": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+        "display": "sports_shoes",
+        "options": [
+          "q",
+          "o",
+          " ",
+          "p"
+        ],
+        "correct": " "
+      },
+      {
+        "type": "word_spell",
+        "word": "shorts",
+        "chinese": "短裤",
+        "image": "<img src=\"assets/images/shorts.png\" width=\"80\">",
+        "display": "s_orts",
+        "options": [
+          "i",
+          "j",
+          "k",
+          "h"
+        ],
+        "correct": "h"
+      },
+      {
+        "type": "letter_select",
+        "word": "skirt",
+        "chinese": "裙子",
+        "image": "<img src=\"assets/images/skirt.png\" width=\"80\">",
+        "display": "s_irt",
+        "options": [
+          "k",
+          "l",
+          "m",
+          "n"
+        ],
+        "correct": "k"
+      },
+      {
+        "type": "letter_select",
+        "word": "shoe",
+        "chinese": "鞋子",
+        "image": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+        "display": "_hoe",
+        "options": [
+          "t",
+          "v",
+          "u",
+          "s"
+        ],
+        "correct": "s"
+      },
+      {
+        "type": "word_spell",
+        "word": "sports shoes",
+        "chinese": "运动鞋",
+        "image": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+        "display": "sports_shoes",
+        "options": [
+          "o",
+          " ",
+          "q",
+          "p"
+        ],
+        "correct": " "
+      },
+      {
+        "type": "word_spell",
+        "word": "shorts",
+        "chinese": "短裤",
+        "image": "<img src=\"assets/images/shorts.png\" width=\"80\">",
+        "display": "short_",
+        "options": [
+          "s",
+          "u",
+          "t",
+          "v"
+        ],
+        "correct": "s"
       }
     ],
     "practice": [
       {
         "type": "word_spell",
-        "word": "white",
-        "chinese": "白色",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "purple",
-        "chinese": "紫色",
-        "difficulty": "hard",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "purple"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/purple_grape.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "orange",
-        "chinese": "橙色",
-        "difficulty": "hard",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "orange"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/orange_orange.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_spell",
-        "word": "red",
-        "chinese": "红色",
-        "difficulty": "easy",
-        "parts": [
-          "r",
-          "ed"
-        ],
-        "image": "<img src=\"assets/images/red_apple.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "blue",
-        "chinese": "蓝色",
-        "difficulty": "easy",
-        "image": "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_spell",
-        "word": "white",
-        "chinese": "白色",
-        "difficulty": "easy",
-        "parts": [
-          "wh",
-          "ite"
-        ],
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "green",
-        "chinese": "绿色",
-        "difficulty": "medium",
-        "display": "gre_n",
+        "word": "sports shoes",
+        "chinese": "运动鞋",
+        "image": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+        "display": "sports_shoes",
         "options": [
           "o",
-          "e",
-          "w",
+          "q",
+          " ",
           "p"
         ],
-        "correct": "e"
-      },
-      {
-        "type": "duo_spell",
-        "word": "green",
-        "chinese": "绿色",
-        "difficulty": "medium",
+        "correct": " ",
+        "difficulty": "hard",
         "parts": [
-          "gr",
-          "een"
-        ],
-        "image": "<img src=\"assets/images/green_tree.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "pink",
-        "chinese": "粉色",
-        "difficulty": "medium",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "pink"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/pink_flower.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "orange",
-        "chinese": "橙色",
-        "difficulty": "medium",
-        "display": "oran_e",
-        "options": [
-          "a",
-          "g",
-          "b",
-          "k"
-        ],
-        "correct": "g"
+          "sports",
+          " shoes"
+        ]
       },
       {
         "type": "word_spell",
-        "word": "red",
-        "chinese": "红色",
+        "word": "shorts",
+        "chinese": "短裤",
+        "image": "<img src=\"assets/images/shorts.png\" width=\"80\">",
+        "display": "_horts",
+        "options": [
+          "t",
+          "v",
+          "u",
+          "s"
+        ],
+        "correct": "s",
         "difficulty": "easy",
-        "image": "<img src=\"assets/images/red_apple.png\" width=\"80\">"
+        "parts": [
+          "sho",
+          "rts"
+        ]
       },
       {
-        "type": "letter_select",
-        "word": "pink",
-        "chinese": "粉色",
-        "difficulty": "hard",
-        "display": "pin_",
+        "type": "word_spell",
+        "word": "skirt",
+        "chinese": "裙子",
+        "image": "<img src=\"assets/images/skirt.png\" width=\"80\">",
+        "display": "s_irt",
         "options": [
           "k",
-          "u",
-          "g",
-          "o"
+          "l",
+          "n",
+          "m"
         ],
-        "correct": "k"
+        "correct": "k",
+        "difficulty": "hard",
+        "parts": [
+          "sk",
+          "irt"
+        ]
       },
       {
-        "type": "duo_sentence",
-        "word": "blue",
-        "chinese": "蓝色",
-        "difficulty": "medium",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "blue"
+        "type": "word_spell",
+        "word": "shoe",
+        "chinese": "鞋子",
+        "image": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+        "display": "s_oe",
+        "options": [
+          "k",
+          "j",
+          "i",
+          "h"
         ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
+        "correct": "h",
+        "difficulty": "hard",
+        "parts": [
+          "sh",
+          "oe"
+        ]
       },
       {
         "type": "letter_select",
-        "word": "red",
-        "chinese": "红色",
-        "difficulty": "hard",
-        "display": "r_d",
+        "word": "sports shoes",
+        "chinese": "运动鞋",
+        "image": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+        "display": "sports_shoes",
         "options": [
-          "z",
-          "e",
+          "q",
           "o",
-          "y"
+          " ",
+          "p"
         ],
-        "correct": "e"
-      },
-      {
-        "type": "duo_spell",
-        "word": "brown",
-        "chinese": "棕色",
-        "difficulty": "medium",
-        "parts": [
-          "br",
-          "own"
-        ],
-        "image": "<img src=\"assets/images/brown_bear.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "yellow",
-        "chinese": "黄色",
-        "difficulty": "easy",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "yellow"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_spell",
-        "word": "orange",
-        "chinese": "橙色",
+        "correct": " ",
         "difficulty": "easy",
         "parts": [
-          "ora",
-          "nge"
-        ],
-        "image": "<img src=\"assets/images/orange_orange.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_spell",
-        "word": "brown",
-        "chinese": "棕色",
-        "difficulty": "medium",
-        "parts": [
-          "br",
-          "own"
-        ],
-        "image": "<img src=\"assets/images/brown_bear.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_spell",
-        "word": "yellow",
-        "chinese": "黄色",
-        "difficulty": "hard",
-        "parts": [
-          "yel",
-          "low"
-        ],
-        "image": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "purple",
-        "chinese": "紫色",
-        "difficulty": "easy",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "purple"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/purple_grape.png\" width=\"80\">"
+          "sports",
+          " shoes"
+        ]
       },
       {
         "type": "letter_select",
-        "word": "black",
-        "chinese": "黑色",
-        "difficulty": "easy",
-        "display": "blac_",
+        "word": "shorts",
+        "chinese": "短裤",
+        "image": "<img src=\"assets/images/shorts.png\" width=\"80\">",
+        "display": "s_orts",
         "options": [
-          "o",
+          "i",
           "j",
           "k",
-          "i"
+          "h"
         ],
-        "correct": "k"
+        "correct": "h",
+        "difficulty": "easy",
+        "parts": [
+          "sho",
+          "rts"
+        ]
       },
       {
         "type": "duo_spell",
-        "word": "green",
-        "chinese": "绿色",
-        "difficulty": "hard",
-        "parts": [
-          "gr",
-          "een"
-        ],
-        "image": "<img src=\"assets/images/green_tree.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "black",
-        "chinese": "黑色",
-        "difficulty": "medium",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "black"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "purple",
-        "chinese": "紫色",
-        "difficulty": "easy",
-        "display": "pu_ple",
+        "word": "skirt",
+        "chinese": "裙子",
+        "image": "<img src=\"assets/images/skirt.png\" width=\"80\">",
+        "display": "s_irt",
         "options": [
-          "r",
-          "c",
-          "x",
-          "e"
-        ],
-        "correct": "r"
-      },
-      {
-        "type": "letter_select",
-        "word": "yellow",
-        "chinese": "黄色",
-        "difficulty": "medium",
-        "display": "yel_ow",
-        "options": [
-          "l",
-          "d",
-          "f",
-          "a"
-        ],
-        "correct": "l"
-      },
-      {
-        "type": "letter_select",
-        "word": "blue",
-        "chinese": "蓝色",
-        "difficulty": "medium",
-        "display": "_lue",
-        "options": [
-          "p",
           "k",
           "l",
-          "b"
+          "m",
+          "n"
         ],
-        "correct": "b"
+        "correct": "k",
+        "difficulty": "medium",
+        "parts": [
+          "sk",
+          "irt"
+        ]
+      },
+      {
+        "type": "letter_select",
+        "word": "shoe",
+        "chinese": "鞋子",
+        "image": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+        "display": "_hoe",
+        "options": [
+          "t",
+          "v",
+          "u",
+          "s"
+        ],
+        "correct": "s",
+        "difficulty": "medium",
+        "parts": [
+          "sh",
+          "oe"
+        ]
+      },
+      {
+        "type": "word_spell",
+        "word": "sports shoes",
+        "chinese": "运动鞋",
+        "image": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+        "display": "sports_shoes",
+        "options": [
+          "o",
+          " ",
+          "q",
+          "p"
+        ],
+        "correct": " ",
+        "difficulty": "hard",
+        "parts": [
+          "sports",
+          " shoes"
+        ]
+      },
+      {
+        "type": "word_spell",
+        "word": "shorts",
+        "chinese": "短裤",
+        "image": "<img src=\"assets/images/shorts.png\" width=\"80\">",
+        "display": "short_",
+        "options": [
+          "s",
+          "u",
+          "t",
+          "v"
+        ],
+        "correct": "s",
+        "difficulty": "hard",
+        "parts": [
+          "sho",
+          "rts"
+        ]
+      },
+      {
+        "type": "word_spell",
+        "word": "skirt",
+        "chinese": "裙子",
+        "image": "<img src=\"assets/images/skirt.png\" width=\"80\">",
+        "display": "sk_rt",
+        "options": [
+          "i",
+          "k",
+          "j",
+          "l"
+        ],
+        "correct": "i",
+        "difficulty": "hard",
+        "parts": [
+          "sk",
+          "irt"
+        ]
+      },
+      {
+        "type": "letter_select",
+        "word": "shoe",
+        "chinese": "鞋子",
+        "image": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+        "display": "sho_",
+        "options": [
+          "g",
+          "e",
+          "h",
+          "f"
+        ],
+        "correct": "e",
+        "difficulty": "hard",
+        "parts": [
+          "sh",
+          "oe"
+        ]
       }
     ]
   },
   "speaking": {
     "pretest": [
       {
-        "type": "repeat_word",
-        "chinese": "紫色",
-        "word": "purple",
-        "image": "<img src=\"assets/images/purple_grape.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "sports shoes",
+        "chinese": "运动鞋",
+        "image": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+        "sentence": "Put on your sports shoes."
       },
       {
-        "type": "repeat_word",
-        "chinese": "橙色",
-        "word": "orange",
-        "image": "<img src=\"assets/images/orange_orange.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "shorts",
+        "chinese": "短裤",
+        "image": "<img src=\"assets/images/shorts.png\" width=\"80\">",
+        "sentence": "I like shorts."
       },
       {
-        "type": "read_sentence",
-        "chinese": "白色",
-        "sentence": "I see a white.",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "skirt",
+        "chinese": "裙子",
+        "image": "<img src=\"assets/images/skirt.png\" width=\"80\">",
+        "sentence": "I like skirt."
       },
       {
-        "type": "read_sentence",
-        "chinese": "黑色",
-        "sentence": "I see a black.",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "shoe",
+        "chinese": "鞋子",
+        "image": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+        "sentence": "Put on your sports shoes."
       },
       {
-        "type": "read_sentence",
-        "chinese": "绿色",
-        "sentence": "I see a green.",
-        "image": "<img src=\"assets/images/green_tree.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "sports shoes",
+        "chinese": "运动鞋",
+        "image": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+        "sentence": "Put on your sports shoes."
       },
       {
-        "type": "read_sentence",
-        "chinese": "红色",
-        "sentence": "I see a red.",
-        "image": "<img src=\"assets/images/red_apple.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "shorts",
+        "chinese": "短裤",
+        "image": "<img src=\"assets/images/shorts.png\" width=\"80\">",
+        "sentence": "Put on your sports shoes."
       },
       {
-        "type": "read_sentence",
-        "chinese": "蓝色",
-        "sentence": "I see a blue.",
-        "image": "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "skirt",
+        "chinese": "裙子",
+        "image": "<img src=\"assets/images/skirt.png\" width=\"80\">",
+        "sentence": "I like skirt."
       },
       {
-        "type": "read_sentence",
-        "chinese": "棕色",
-        "sentence": "I see a brown.",
-        "image": "<img src=\"assets/images/brown_bear.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "shoe",
+        "chinese": "鞋子",
+        "image": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+        "sentence": "Put on your sports shoes."
       },
       {
-        "type": "read_sentence",
-        "chinese": "粉色",
-        "sentence": "I see a pink.",
-        "image": "<img src=\"assets/images/pink_flower.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "sports shoes",
+        "chinese": "运动鞋",
+        "image": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+        "sentence": "Put on your sports shoes."
       },
       {
-        "type": "repeat_word",
-        "chinese": "黄色",
-        "word": "yellow",
-        "image": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "蓝色",
-        "word": "blue",
-        "image": "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "红色",
-        "word": "red",
-        "image": "<img src=\"assets/images/red_apple.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "shorts",
+        "chinese": "短裤",
+        "image": "<img src=\"assets/images/shorts.png\" width=\"80\">",
+        "sentence": "I like shorts."
       }
     ],
     "practice": [
       {
-        "type": "repeat_word",
-        "chinese": "绿色",
-        "difficulty": "medium",
-        "word": "green",
-        "image": "<img src=\"assets/images/green_tree.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "sports shoes",
+        "chinese": "运动鞋",
+        "image": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+        "sentence": "I want my sports shoes, too.",
+        "difficulty": "hard"
       },
       {
-        "type": "read_sentence",
-        "chinese": "白色",
-        "difficulty": "easy",
-        "sentence": "I see a white.",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "shorts",
+        "chinese": "短裤",
+        "image": "<img src=\"assets/images/shorts.png\" width=\"80\">",
+        "sentence": "This is a shorts.",
+        "difficulty": "easy"
       },
       {
-        "type": "read_sentence",
-        "chinese": "橙色",
-        "difficulty": "medium",
-        "sentence": "I see a orange.",
-        "image": "<img src=\"assets/images/orange_orange.png\" width=\"80\">"
+        "type": "debate",
+        "word": "skirt",
+        "chinese": "裙子",
+        "image": "<img src=\"assets/images/skirt.png\" width=\"80\">",
+        "sentence": "This is a skirt.",
+        "difficulty": "hard"
       },
       {
-        "type": "read_sentence",
-        "chinese": "粉色",
-        "difficulty": "easy",
-        "sentence": "I see a pink.",
-        "image": "<img src=\"assets/images/pink_flower.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "shoe",
+        "chinese": "鞋子",
+        "image": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+        "sentence": "This is a shoe.",
+        "difficulty": "easy"
       },
       {
-        "type": "repeat_word",
-        "chinese": "紫色",
-        "difficulty": "easy",
-        "word": "purple",
-        "image": "<img src=\"assets/images/purple_grape.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "sports shoes",
+        "chinese": "运动鞋",
+        "image": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+        "sentence": "This is a sports shoes.",
+        "difficulty": "easy"
       },
       {
-        "type": "read_sentence",
-        "chinese": "红色",
-        "difficulty": "medium",
-        "sentence": "I see a red.",
-        "image": "<img src=\"assets/images/red_apple.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "shorts",
+        "chinese": "短裤",
+        "image": "<img src=\"assets/images/shorts.png\" width=\"80\">",
+        "sentence": "This is a shorts.",
+        "difficulty": "medium"
       },
       {
-        "type": "read_sentence",
-        "chinese": "蓝色",
-        "difficulty": "hard",
-        "sentence": "I see a blue.",
-        "image": "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "skirt",
+        "chinese": "裙子",
+        "image": "<img src=\"assets/images/skirt.png\" width=\"80\">",
+        "sentence": "This is a skirt.",
+        "difficulty": "easy"
       },
       {
-        "type": "repeat_word",
-        "chinese": "粉色",
-        "difficulty": "medium",
-        "word": "pink",
-        "image": "<img src=\"assets/images/pink_flower.png\" width=\"80\">"
+        "type": "debate",
+        "word": "shoe",
+        "chinese": "鞋子",
+        "image": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+        "sentence": "This is a shoe.",
+        "difficulty": "hard"
       },
       {
-        "type": "repeat_word",
-        "chinese": "白色",
-        "difficulty": "hard",
-        "word": "white",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
+        "type": "debate",
+        "word": "sports shoes",
+        "chinese": "运动鞋",
+        "image": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+        "sentence": "This is a sports shoes.",
+        "difficulty": "easy"
       },
       {
-        "type": "read_sentence",
-        "chinese": "棕色",
-        "difficulty": "easy",
-        "sentence": "I see a brown.",
-        "image": "<img src=\"assets/images/brown_bear.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "shorts",
+        "chinese": "短裤",
+        "image": "<img src=\"assets/images/shorts.png\" width=\"80\">",
+        "sentence": "I want my sports shoes, too.",
+        "difficulty": "hard"
       },
       {
-        "type": "read_sentence",
-        "chinese": "黄色",
-        "difficulty": "hard",
-        "sentence": "I see a yellow.",
-        "image": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "skirt",
+        "chinese": "裙子",
+        "image": "<img src=\"assets/images/skirt.png\" width=\"80\">",
+        "sentence": "This is a skirt.",
+        "difficulty": "easy"
       },
       {
-        "type": "read_sentence",
-        "chinese": "绿色",
-        "difficulty": "medium",
-        "sentence": "I see a green.",
-        "image": "<img src=\"assets/images/green_tree.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "黑色",
-        "difficulty": "easy",
-        "sentence": "I see a black.",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "粉色",
-        "difficulty": "medium",
-        "sentence": "I see a pink.",
-        "image": "<img src=\"assets/images/pink_flower.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "蓝色",
-        "difficulty": "easy",
-        "sentence": "I see a blue.",
-        "image": "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "黄色",
-        "difficulty": "hard",
-        "word": "yellow",
-        "image": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "蓝色",
-        "difficulty": "hard",
-        "word": "blue",
-        "image": "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "黑色",
-        "difficulty": "medium",
-        "word": "black",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "紫色",
-        "difficulty": "hard",
-        "sentence": "I see a purple.",
-        "image": "<img src=\"assets/images/purple_grape.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "橙色",
-        "difficulty": "easy",
-        "word": "orange",
-        "image": "<img src=\"assets/images/orange_orange.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "黄色",
-        "difficulty": "medium",
-        "sentence": "I see a yellow.",
-        "image": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "橙色",
-        "difficulty": "easy",
-        "sentence": "I see a orange.",
-        "image": "<img src=\"assets/images/orange_orange.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "紫色",
-        "difficulty": "hard",
-        "sentence": "I see a purple.",
-        "image": "<img src=\"assets/images/purple_grape.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "红色",
-        "difficulty": "easy",
-        "sentence": "I see a red.",
-        "image": "<img src=\"assets/images/red_apple.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "红色",
-        "difficulty": "easy",
-        "word": "red",
-        "image": "<img src=\"assets/images/red_apple.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "棕色",
-        "difficulty": "medium",
-        "sentence": "I see a brown.",
-        "image": "<img src=\"assets/images/brown_bear.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "绿色",
-        "difficulty": "medium",
-        "sentence": "I see a green.",
-        "image": "<img src=\"assets/images/green_tree.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "棕色",
-        "difficulty": "medium",
-        "word": "brown",
-        "image": "<img src=\"assets/images/brown_bear.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "shoe",
+        "chinese": "鞋子",
+        "image": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
+        "sentence": "I want my sports shoes, too.",
+        "difficulty": "medium"
       }
     ]
   }

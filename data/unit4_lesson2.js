@@ -1,499 +1,343 @@
 var unit4_lesson2 = {
   "id": "U4L2",
-  "title": "I love my grandma.",
+  "title": "Unit 4 Lesson 2: Do you want some apple juice?",
   "listening": {
     "pretest": [
       {
-        "type": "listen_select",
-        "audio": "grandpa",
-        "chinese": "爷爷",
-        "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
         "type": "listen_tf",
-        "audio": "grandma",
-        "chinese": "奶奶",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
-        "correct": false
+        "audio": "hamburger",
+        "chinese": "汉堡",
+        "options": [
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/salad.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">"
+        ],
+        "correct": false,
+        "image": "<img src=\"assets/images/salad.png\" width=\"80\">"
       },
       {
         "type": "listen_select",
-        "audio": "grandma",
-        "chinese": "奶奶",
+        "audio": "salad",
+        "chinese": "沙拉",
         "options": [
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/salad.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">"
         ],
-        "correct": 0
+        "correct": false,
+        "image": "<img src=\"assets/images/salad.png\" width=\"80\">"
       },
       {
         "type": "listen_tf",
-        "audio": "grandpa",
-        "chinese": "爷爷",
-        "image": "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-        "correct": true
+        "audio": "apple juice",
+        "chinese": "苹果汁",
+        "options": [
+          "<img src=\"assets/images/salad.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "lunch",
+        "chinese": "午餐",
+        "options": [
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/salad.png\" width=\"80\">"
+        ],
+        "correct": true,
+        "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "hamburger",
+        "chinese": "汉堡",
+        "options": [
+          "<img src=\"assets/images/salad.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
+        ],
+        "correct": true,
+        "image": "<img src=\"assets/images/salad.png\" width=\"80\">"
       },
       {
         "type": "listen_select",
-        "audio": "grandma",
-        "chinese": "奶奶",
+        "audio": "salad",
+        "chinese": "沙拉",
         "options": [
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">"
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/salad.png\" width=\"80\">"
         ],
-        "correct": 2
-      },
-      {
-        "type": "listen_tf",
-        "audio": "baby",
-        "chinese": "宝宝",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
-        "correct": true
-      },
-      {
-        "type": "listen_tf",
-        "audio": "baby",
-        "chinese": "宝宝",
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">",
-        "correct": false
+        "correct": false,
+        "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
       },
       {
         "type": "listen_select",
-        "audio": "grandma",
-        "chinese": "奶奶",
+        "audio": "apple juice",
+        "chinese": "苹果汁",
         "options": [
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/salad.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">"
         ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "grandpa",
-        "chinese": "爷爷",
-        "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">"
-        ],
-        "correct": 1
+        "correct": 2,
+        "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
       },
       {
         "type": "listen_tf",
-        "audio": "baby",
-        "chinese": "宝宝",
-        "image": "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-        "correct": false
+        "audio": "lunch",
+        "chinese": "午餐",
+        "options": [
+          "<img src=\"assets/images/salad.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_select",
+        "audio": "hamburger",
+        "chinese": "汉堡",
+        "options": [
+          "<img src=\"assets/images/salad.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
+        ],
+        "correct": false,
+        "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_select",
+        "audio": "salad",
+        "chinese": "沙拉",
+        "options": [
+          "<img src=\"assets/images/salad.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
+        ],
+        "correct": false,
+        "image": "<img src=\"assets/images/salad.png\" width=\"80\">"
       }
     ],
     "practice": [
       {
-        "type": "listen_select",
-        "audio": "baby",
-        "chinese": "宝宝",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
         "type": "duo_listen_select",
-        "audio": "grandma",
-        "chinese": "奶奶",
-        "difficulty": "easy",
+        "audio": "hamburger",
+        "chinese": "汉堡",
         "options": [
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">"
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/salad.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">"
         ],
-        "correct": 2
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "grandma",
-        "chinese": "奶奶",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "listen_select",
-        "audio": "grandpa",
-        "chinese": "爷爷",
+        "correct": 1,
         "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "listen_select",
-        "audio": "grandma",
-        "chinese": "奶奶",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "listen_select",
-        "audio": "grandpa",
-        "chinese": "爷爷",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "grandma",
-        "chinese": "奶奶",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "listen_tf",
-        "audio": "grandma",
-        "chinese": "奶奶",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">",
-        "correct": true
-      },
-      {
-        "type": "listen_select",
-        "audio": "grandpa",
-        "chinese": "爷爷",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "listen_tf",
-        "audio": "grandma",
-        "chinese": "奶奶",
-        "difficulty": "medium",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_select",
-        "audio": "baby",
-        "chinese": "宝宝",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "baby",
-        "chinese": "宝宝",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "grandpa",
-        "chinese": "爷爷",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "grandma",
-        "chinese": "奶奶",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "baby",
-        "chinese": "宝宝",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "listen_select",
-        "audio": "grandpa",
-        "chinese": "爷爷",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "grandpa",
-        "chinese": "爷爷",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "baby",
-        "chinese": "宝宝",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "listen_tf",
-        "audio": "baby",
-        "chinese": "宝宝",
-        "difficulty": "easy",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
-        "correct": true
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "grandma",
-        "chinese": "奶奶",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "grandpa",
-        "chinese": "爷爷",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_tf",
-        "audio": "grandpa",
-        "chinese": "爷爷",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "baby",
-        "chinese": "宝宝",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "listen_select",
-        "audio": "grandpa",
-        "chinese": "爷爷",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "grandma",
-        "chinese": "奶奶",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "baby",
-        "chinese": "宝宝",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
-        ],
-        "correct": 2
+        "text": "Find the word",
+        "scenario": "What do you want to eat?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       },
       {
         "type": "balloon_pop",
-        "text": "Find the word",
-        "chinese": "宝宝",
+        "audio": "salad",
+        "chinese": "沙拉",
         "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">"
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/salad.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">"
         ],
-        "correct": 0,
-        "difficulty": "easy"
+        "correct": 1,
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "What do you want to eat?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "listen_select",
+        "audio": "apple juice",
+        "chinese": "苹果汁",
+        "options": [
+          "<img src=\"assets/images/salad.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "Do you want some apple juice?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       },
       {
         "type": "balloon_pop",
-        "text": "Find the word",
-        "chinese": "爷爷",
+        "audio": "lunch",
+        "chinese": "午餐",
         "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/salad.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "Do you want some apple juice?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "balloon_pop",
+        "audio": "hamburger",
+        "chinese": "汉堡",
+        "options": [
+          "<img src=\"assets/images/salad.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "What do you want to eat?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "listen_select",
+        "audio": "salad",
+        "chinese": "沙拉",
+        "options": [
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/salad.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "difficulty": "medium",
+        "text": "Find the word",
+        "scenario": "What do you want to eat?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "scenario",
+        "audio": "apple juice",
+        "chinese": "苹果汁",
+        "options": [
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/salad.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">"
         ],
         "correct": 2,
-        "difficulty": "medium"
+        "difficulty": "medium",
+        "text": "Find the word",
+        "scenario": "What do you want to eat?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       },
       {
         "type": "balloon_pop",
+        "audio": "lunch",
+        "chinese": "午餐",
+        "options": [
+          "<img src=\"assets/images/salad.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "medium",
         "text": "Find the word",
-        "chinese": "奶奶",
-        "options": [
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
-        ],
-        "correct": 1,
-        "difficulty": "medium"
+        "scenario": "What do you want to eat?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       },
       {
-        "type": "balloon_pop",
+        "type": "scenario",
+        "audio": "hamburger",
+        "chinese": "汉堡",
+        "options": [
+          "<img src=\"assets/images/salad.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "medium",
         "text": "Find the word",
-        "chinese": "爷爷",
-        "options": [
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
-        ],
-        "correct": 0,
-        "difficulty": "hard"
+        "scenario": "Do you want some apple juice?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       },
       {
-        "type": "scenario",
-        "scenario": "An old woman is telling stories to the children. She has white hair.",
-        "chinese": "一位老奶奶在给孩子们讲故事。她有白头发。",
-        "question": "Who is telling stories?",
+        "type": "duo_listen_select",
+        "audio": "salad",
+        "chinese": "沙拉",
         "options": [
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/mother.png\" width=\"80\">",
-          "<img src=\"assets/images/sister.png\" width=\"80\">"
+          "<img src=\"assets/images/salad.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
         ],
         "correct": 0,
-        "feedback": "Grandma tells stories!",
-        "difficulty": "easy"
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "What do you want to eat?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       },
       {
-        "type": "scenario",
-        "scenario": "A little one is crying. He wants milk.",
-        "chinese": "一个小宝宝在哭。他想喝奶。",
-        "question": "Who wants milk?",
+        "type": "listen_select",
+        "audio": "apple juice",
+        "chinese": "苹果汁",
         "options": [
-          "<img src=\"assets/images/father.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/brother.png\" width=\"80\">"
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/salad.png\" width=\"80\">"
         ],
         "correct": 1,
-        "feedback": "Baby wants milk!",
-        "difficulty": "easy"
+        "difficulty": "medium",
+        "text": "Find the word",
+        "scenario": "Do you want some apple juice?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       },
       {
-        "type": "scenario",
-        "scenario": "An old man is reading newspaper. He wears glasses.",
-        "chinese": "一位老爷爷在看报纸。他戴着眼镜。",
-        "question": "Who is reading?",
+        "type": "listen_select",
+        "audio": "lunch",
+        "chinese": "午餐",
         "options": [
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/father.png\" width=\"80\">",
-          "<img src=\"assets/images/brother.png\" width=\"80\">"
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/salad.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
         ],
         "correct": 0,
-        "feedback": "Grandpa reads the newspaper!",
-        "difficulty": "medium"
-      },
-      {
-        "type": "scenario",
-        "scenario": "The whole family is having dinner together. There are many people at the table.",
-        "chinese": "全家人一起吃晚饭。桌子旁有很多人。",
-        "question": "This is a...",
-        "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/family.png\" width=\"80\">",
-          "<img src=\"assets/images/father.png\" width=\"80\">"
-        ],
-        "correct": 1,
-        "feedback": "This is a family!",
-        "difficulty": "medium"
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "What do you want to eat?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       }
     ]
   },
@@ -501,1359 +345,977 @@ var unit4_lesson2 = {
     "pretest": [
       {
         "type": "sentence_match",
-        "chinese": "宝宝",
-        "sentence": "I see a baby.",
+        "chinese": "汉堡",
+        "word": "hamburger",
+        "sentence": "What do you want to eat?",
         "options": [
           {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "baby"
+            "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+            "value": "hamburger"
           },
           {
-            "text": "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-            "value": "grandpa"
+            "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+            "value": "lunch"
           }
         ],
-        "correct": "baby"
+        "correct": "hamburger"
       },
       {
         "type": "word_match",
-        "chinese": "爷爷",
-        "word": "grandpa",
+        "chinese": "沙拉",
+        "word": "salad",
+        "sentence": "I see a salad.",
         "options": [
           {
-            "text": "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-            "value": "grandpa"
+            "text": "<img src=\"assets/images/salad.png\" width=\"80\">",
+            "value": "salad"
           },
           {
-            "text": "<img src=\"assets/images/grandma.png\" width=\"80\">",
-            "value": "grandma"
+            "text": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+            "value": "apple juice"
+          },
+          {
+            "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+            "value": "lunch"
+          },
+          {
+            "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+            "value": "hamburger"
           }
         ],
-        "correct": "grandpa"
+        "correct": "salad"
+      },
+      {
+        "type": "word_match",
+        "chinese": "苹果汁",
+        "word": "apple juice",
+        "sentence": "I see a apple juice.",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+            "value": "hamburger"
+          },
+          {
+            "text": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+            "value": "apple juice"
+          }
+        ],
+        "correct": "apple juice"
       },
       {
         "type": "sentence_match",
-        "chinese": "宝宝",
-        "sentence": "I see a baby.",
+        "chinese": "午餐",
+        "word": "lunch",
+        "sentence": "What do you want to eat?",
         "options": [
           {
-            "text": "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-            "value": "grandpa"
+            "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+            "value": "lunch"
           },
           {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "baby"
+            "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+            "value": "hamburger"
           }
         ],
-        "correct": "baby"
+        "correct": "lunch"
       },
       {
         "type": "sentence_match",
-        "chinese": "宝宝",
-        "sentence": "I see a baby.",
+        "chinese": "汉堡",
+        "word": "hamburger",
+        "sentence": "What do you want to eat?",
         "options": [
           {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "baby"
+            "text": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+            "value": "apple juice"
           },
           {
-            "text": "<img src=\"assets/images/grandma.png\" width=\"80\">",
-            "value": "grandma"
+            "text": "<img src=\"assets/images/salad.png\" width=\"80\">",
+            "value": "salad"
+          },
+          {
+            "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+            "value": "lunch"
+          },
+          {
+            "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+            "value": "hamburger"
           }
         ],
-        "correct": "baby"
+        "correct": "hamburger"
       },
       {
         "type": "word_match",
-        "chinese": "奶奶",
-        "word": "grandma",
+        "chinese": "沙拉",
+        "word": "salad",
+        "sentence": "I see a salad.",
         "options": [
           {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "baby"
+            "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+            "value": "lunch"
           },
           {
-            "text": "<img src=\"assets/images/grandma.png\" width=\"80\">",
-            "value": "grandma"
+            "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+            "value": "hamburger"
           }
         ],
-        "correct": "grandma"
+        "correct": "salad"
       },
       {
         "type": "word_match",
-        "chinese": "奶奶",
-        "word": "grandma",
+        "chinese": "苹果汁",
+        "word": "apple juice",
+        "sentence": "What do you want to eat?",
         "options": [
           {
-            "text": "<img src=\"assets/images/grandma.png\" width=\"80\">",
-            "value": "grandma"
+            "text": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+            "value": "apple juice"
           },
           {
-            "text": "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-            "value": "grandpa"
-          }
-        ],
-        "correct": "grandma"
-      },
-      {
-        "type": "word_match",
-        "chinese": "奶奶",
-        "word": "grandma",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/grandma.png\" width=\"80\">",
-            "value": "grandma"
+            "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+            "value": "hamburger"
           },
           {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "baby"
-          }
-        ],
-        "correct": "grandma"
-      },
-      {
-        "type": "word_match",
-        "chinese": "爷爷",
-        "word": "grandpa",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-            "value": "grandpa"
+            "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+            "value": "lunch"
           },
           {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "baby"
+            "text": "<img src=\"assets/images/salad.png\" width=\"80\">",
+            "value": "salad"
           }
         ],
-        "correct": "grandpa"
+        "correct": "apple juice"
       },
       {
         "type": "sentence_match",
-        "chinese": "奶奶",
-        "sentence": "I see a grandma.",
+        "chinese": "午餐",
+        "word": "lunch",
+        "sentence": "I see a lunch.",
         "options": [
           {
-            "text": "<img src=\"assets/images/grandma.png\" width=\"80\">",
-            "value": "grandma"
+            "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+            "value": "hamburger"
           },
           {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "baby"
+            "text": "<img src=\"assets/images/salad.png\" width=\"80\">",
+            "value": "salad"
+          },
+          {
+            "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+            "value": "lunch"
+          },
+          {
+            "text": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+            "value": "apple juice"
           }
         ],
-        "correct": "grandma"
+        "correct": "lunch"
+      },
+      {
+        "type": "sentence_match",
+        "chinese": "汉堡",
+        "word": "hamburger",
+        "sentence": "I see a hamburger.",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/salad.png\" width=\"80\">",
+            "value": "salad"
+          },
+          {
+            "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+            "value": "lunch"
+          },
+          {
+            "text": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+            "value": "apple juice"
+          },
+          {
+            "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+            "value": "hamburger"
+          }
+        ],
+        "correct": "hamburger"
       },
       {
         "type": "word_match",
-        "chinese": "宝宝",
-        "word": "baby",
+        "chinese": "沙拉",
+        "word": "salad",
+        "sentence": "What do you want to eat?",
         "options": [
           {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "baby"
+            "text": "<img src=\"assets/images/salad.png\" width=\"80\">",
+            "value": "salad"
           },
           {
-            "text": "<img src=\"assets/images/grandma.png\" width=\"80\">",
-            "value": "grandma"
+            "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+            "value": "hamburger"
           }
         ],
-        "correct": "baby"
-      },
-      {
-        "type": "word_match",
-        "chinese": "爷爷",
-        "word": "grandpa",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-            "value": "grandpa"
-          },
-          {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "baby"
-          }
-        ],
-        "correct": "grandpa"
-      },
-      {
-        "type": "word_match",
-        "chinese": "爷爷",
-        "word": "grandpa",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-            "value": "grandpa"
-          },
-          {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "baby"
-          }
-        ],
-        "correct": "grandpa"
+        "correct": "salad"
       }
     ],
     "practice": [
       {
         "type": "word_match",
-        "chinese": "奶奶",
-        "difficulty": "hard",
-        "word": "grandma",
+        "chinese": "汉堡",
+        "word": "hamburger",
+        "sentence": "Look at the hamburger.",
         "options": [
-          {
-            "text": "<img src=\"assets/images/grandma.png\" width=\"80\">",
-            "value": "grandma"
-          },
-          {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "baby"
-          }
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/salad.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">"
         ],
-        "correct": "grandma"
-      },
-      {
-        "type": "word_match",
-        "chinese": "爷爷",
-        "difficulty": "medium",
-        "word": "grandpa",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-            "value": "grandpa"
-          },
-          {
-            "text": "<img src=\"assets/images/grandma.png\" width=\"80\">",
-            "value": "grandma"
-          }
-        ],
-        "correct": "grandpa"
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "爷爷",
-        "difficulty": "hard",
-        "word": "grandpa",
-        "options": [
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "奶奶",
-        "difficulty": "hard",
-        "word": "grandma",
-        "options": [
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "duo_race",
-        "chinese": "爷爷",
-        "difficulty": "medium",
-        "word": "grandpa",
-        "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "word_match",
-        "chinese": "奶奶",
-        "difficulty": "medium",
-        "word": "grandma",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/grandma.png\" width=\"80\">",
-            "value": "grandma"
-          },
-          {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "baby"
-          }
-        ],
-        "correct": "grandma"
-      },
-      {
-        "type": "word_match",
-        "chinese": "奶奶",
-        "difficulty": "medium",
-        "word": "grandma",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/grandma.png\" width=\"80\">",
-            "value": "grandma"
-          },
-          {
-            "text": "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-            "value": "grandpa"
-          }
-        ],
-        "correct": "grandma"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "爷爷",
-        "difficulty": "hard",
-        "word": "grandpa",
-        "options": [
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-        ],
-        "correct": 2
+        "correct": "hamburger",
+        "difficulty": "medium"
       },
       {
         "type": "sentence_match",
-        "chinese": "奶奶",
-        "difficulty": "medium",
-        "sentence": "I see a grandma.",
+        "chinese": "沙拉",
+        "word": "salad",
+        "sentence": "Do you want some apple juice?",
         "options": [
-          {
-            "text": "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-            "value": "grandpa"
-          },
-          {
-            "text": "<img src=\"assets/images/grandma.png\" width=\"80\">",
-            "value": "grandma"
-          }
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/salad.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">"
         ],
-        "correct": "grandma"
+        "correct": "salad",
+        "difficulty": "easy"
       },
       {
         "type": "duo_race",
-        "chinese": "奶奶",
-        "difficulty": "hard",
-        "word": "grandma",
+        "chinese": "苹果汁",
+        "word": "apple juice",
+        "sentence": "Look at the apple juice.",
         "options": [
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">"
+          "<img src=\"assets/images/salad.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
         ],
-        "correct": 2
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "奶奶",
-        "difficulty": "easy",
-        "word": "grandma",
-        "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-        ],
-        "correct": 1
+        "correct": "apple juice",
+        "difficulty": "hard"
       },
       {
         "type": "word_match",
-        "chinese": "奶奶",
-        "difficulty": "medium",
-        "word": "grandma",
+        "chinese": "午餐",
+        "word": "lunch",
+        "sentence": "Look at the lunch.",
         "options": [
           {
-            "text": "<img src=\"assets/images/grandma.png\" width=\"80\">",
-            "value": "grandma"
+            "text": "<img src=\"assets/images/salad.png\" width=\"80\">",
+            "value": "salad"
           },
           {
-            "text": "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-            "value": "grandpa"
+            "text": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+            "value": "apple juice"
+          },
+          {
+            "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+            "value": "lunch"
+          },
+          {
+            "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+            "value": "hamburger"
           }
         ],
-        "correct": "grandma"
+        "correct": "lunch",
+        "difficulty": "hard"
       },
       {
-        "type": "whack_mole",
-        "chinese": "爷爷",
-        "difficulty": "easy",
-        "word": "grandpa",
+        "type": "word_match",
+        "chinese": "汉堡",
+        "word": "hamburger",
+        "sentence": "Look at the hamburger.",
         "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
+          "<img src=\"assets/images/salad.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
         ],
-        "correct": 2
+        "correct": 1,
+        "difficulty": "medium"
       },
       {
         "type": "sentence_match",
-        "chinese": "宝宝",
-        "difficulty": "hard",
-        "sentence": "I see a baby.",
+        "chinese": "沙拉",
+        "word": "salad",
+        "sentence": "Do you want some apple juice?",
         "options": [
           {
-            "text": "<img src=\"assets/images/grandma.png\" width=\"80\">",
-            "value": "grandma"
+            "text": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+            "value": "apple juice"
           },
           {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "baby"
+            "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+            "value": "lunch"
+          },
+          {
+            "text": "<img src=\"assets/images/salad.png\" width=\"80\">",
+            "value": "salad"
+          },
+          {
+            "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+            "value": "hamburger"
           }
         ],
-        "correct": "baby"
+        "correct": "salad",
+        "difficulty": "easy"
+      },
+      {
+        "type": "word_match",
+        "chinese": "苹果汁",
+        "word": "apple juice",
+        "sentence": "Do you want some apple juice?",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+            "value": "apple juice"
+          },
+          {
+            "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+            "value": "hamburger"
+          },
+          {
+            "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+            "value": "lunch"
+          },
+          {
+            "text": "<img src=\"assets/images/salad.png\" width=\"80\">",
+            "value": "salad"
+          }
+        ],
+        "correct": 2,
+        "difficulty": "hard"
       },
       {
         "type": "sentence_match",
-        "chinese": "爷爷",
-        "difficulty": "easy",
-        "sentence": "I see a grandpa.",
+        "chinese": "午餐",
+        "word": "lunch",
+        "sentence": "Do you want some apple juice?",
         "options": [
-          {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "baby"
-          },
-          {
-            "text": "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-            "value": "grandpa"
-          }
+          "<img src=\"assets/images/salad.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">"
         ],
-        "correct": "grandpa"
+        "correct": 2,
+        "difficulty": "medium"
       },
       {
-        "type": "whack_mole",
-        "chinese": "爷爷",
-        "difficulty": "medium",
-        "word": "grandpa",
+        "type": "word_match",
+        "chinese": "汉堡",
+        "word": "hamburger",
+        "sentence": "Look at the hamburger.",
         "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">"
+          "<img src=\"assets/images/salad.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
         ],
-        "correct": 1
+        "correct": "hamburger",
+        "difficulty": "medium"
+      },
+      {
+        "type": "word_match",
+        "chinese": "沙拉",
+        "word": "salad",
+        "sentence": "Look at the salad.",
+        "options": [
+          "<img src=\"assets/images/salad.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "easy"
       },
       {
         "type": "duo_race",
-        "chinese": "宝宝",
-        "difficulty": "easy",
-        "word": "baby",
+        "chinese": "苹果汁",
+        "word": "apple juice",
+        "sentence": "Do you want some apple juice?",
         "options": [
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
+          {
+            "text": "<img src=\"assets/images/salad.png\" width=\"80\">",
+            "value": "salad"
+          },
+          {
+            "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+            "value": "hamburger"
+          },
+          {
+            "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+            "value": "lunch"
+          },
+          {
+            "text": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+            "value": "apple juice"
+          }
         ],
-        "correct": 2
+        "correct": 1,
+        "difficulty": "hard"
       },
       {
         "type": "word_match",
-        "chinese": "爷爷",
-        "difficulty": "easy",
-        "word": "grandpa",
+        "chinese": "午餐",
+        "word": "lunch",
+        "sentence": "Look at the lunch.",
         "options": [
-          {
-            "text": "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-            "value": "grandpa"
-          },
-          {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "baby"
-          }
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/salad.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
         ],
-        "correct": "grandpa"
-      },
-      {
-        "type": "word_match",
-        "chinese": "宝宝",
-        "difficulty": "hard",
-        "word": "baby",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/grandma.png\" width=\"80\">",
-            "value": "grandma"
-          },
-          {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "baby"
-          }
-        ],
-        "correct": "baby"
-      },
-      {
-        "type": "word_match",
-        "chinese": "宝宝",
-        "difficulty": "easy",
-        "word": "baby",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/grandma.png\" width=\"80\">",
-            "value": "grandma"
-          },
-          {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "baby"
-          }
-        ],
-        "correct": "baby"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "宝宝",
-        "difficulty": "hard",
-        "word": "baby",
-        "options": [
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "duo_race",
-        "chinese": "爷爷",
-        "difficulty": "medium",
-        "word": "grandpa",
-        "options": [
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "word_match",
-        "chinese": "奶奶",
-        "difficulty": "medium",
-        "word": "grandma",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-            "value": "grandpa"
-          },
-          {
-            "text": "<img src=\"assets/images/grandma.png\" width=\"80\">",
-            "value": "grandma"
-          }
-        ],
-        "correct": "grandma"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "奶奶",
-        "difficulty": "easy",
-        "sentence": "I see a grandma.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-            "value": "grandpa"
-          },
-          {
-            "text": "<img src=\"assets/images/grandma.png\" width=\"80\">",
-            "value": "grandma"
-          }
-        ],
-        "correct": "grandma"
-      },
-      {
-        "type": "word_match",
-        "chinese": "宝宝",
-        "difficulty": "medium",
-        "word": "baby",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-            "value": "grandpa"
-          },
-          {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "baby"
-          }
-        ],
-        "correct": "baby"
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "宝宝",
-        "difficulty": "easy",
-        "word": "baby",
-        "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "word_match",
-        "chinese": "宝宝",
-        "difficulty": "easy",
-        "word": "baby",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "baby"
-          },
-          {
-            "text": "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-            "value": "grandpa"
-          }
-        ],
-        "correct": "baby"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "宝宝",
-        "difficulty": "medium",
-        "word": "baby",
-        "options": [
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "爷爷",
-        "difficulty": "easy",
-        "sentence": "I see a grandpa.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-            "value": "grandpa"
-          },
-          {
-            "text": "<img src=\"assets/images/grandma.png\" width=\"80\">",
-            "value": "grandma"
-          }
-        ],
-        "correct": "grandpa"
-      },
-      {
-        "type": "word_match",
-        "chinese": "宝宝",
-        "difficulty": "easy",
-        "word": "baby",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "baby"
-          },
-          {
-            "text": "<img src=\"assets/images/grandma.png\" width=\"80\">",
-            "value": "grandma"
-          }
-        ],
-        "correct": "baby"
+        "correct": 0,
+        "difficulty": "hard"
       }
     ]
   },
   "writing": {
     "pretest": [
       {
-        "type": "word_spell",
-        "word": "grandma",
-        "chinese": "奶奶",
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">"
-      },
-      {
         "type": "letter_select",
-        "word": "grandpa",
-        "chinese": "爷爷",
-        "display": "grand_a",
+        "word": "hamburger",
+        "chinese": "汉堡",
+        "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+        "display": "hamb_rger",
         "options": [
-          "d",
-          "n",
-          "q",
-          "p"
-        ],
-        "correct": "p"
-      },
-      {
-        "type": "letter_select",
-        "word": "grandpa",
-        "chinese": "爷爷",
-        "display": "grand_a",
-        "options": [
-          "p",
-          "u",
-          "y",
-          "v"
-        ],
-        "correct": "p"
-      },
-      {
-        "type": "letter_select",
-        "word": "baby",
-        "chinese": "宝宝",
-        "display": "_aby",
-        "options": [
-          "b",
-          "r",
-          "m",
-          "d"
-        ],
-        "correct": "b"
-      },
-      {
-        "type": "word_spell",
-        "word": "baby",
-        "chinese": "宝宝",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "grandma",
-        "chinese": "奶奶",
-        "display": "gr_ndma",
-        "options": [
-          "f",
-          "k",
-          "d",
-          "a"
-        ],
-        "correct": "a"
-      },
-      {
-        "type": "letter_select",
-        "word": "grandpa",
-        "chinese": "爷爷",
-        "display": "gr_ndpa",
-        "options": [
-          "t",
-          "a",
-          "f",
-          "v"
-        ],
-        "correct": "a"
-      },
-      {
-        "type": "word_spell",
-        "word": "grandma",
-        "chinese": "奶奶",
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "grandpa",
-        "chinese": "爷爷",
-        "image": "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "baby",
-        "chinese": "宝宝",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "grandma",
-        "chinese": "奶奶",
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "baby",
-        "chinese": "宝宝",
-        "display": "_aby",
-        "options": [
-          "b",
-          "f",
-          "s",
-          "e"
-        ],
-        "correct": "b"
-      }
-    ],
-    "practice": [
-      {
-        "type": "letter_select",
-        "word": "grandpa",
-        "chinese": "爷爷",
-        "difficulty": "medium",
-        "display": "gr_ndpa",
-        "options": [
-          "a",
+          "v",
           "x",
-          "k",
+          "w",
           "u"
         ],
-        "correct": "a"
+        "correct": "u"
       },
       {
-        "type": "duo_sentence",
-        "word": "grandma",
-        "chinese": "奶奶",
-        "difficulty": "medium",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "grandma"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "grandma",
-        "chinese": "奶奶",
-        "difficulty": "medium",
-        "display": "gra_dma",
+        "type": "word_spell",
+        "word": "salad",
+        "chinese": "沙拉",
+        "image": "<img src=\"assets/images/salad.png\" width=\"80\">",
+        "display": "_alad",
         "options": [
-          "n",
-          "l",
-          "r",
+          "v",
+          "s",
+          "u",
           "t"
         ],
-        "correct": "n"
-      },
-      {
-        "type": "word_spell",
-        "word": "grandma",
-        "chinese": "奶奶",
-        "difficulty": "medium",
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "grandpa",
-        "chinese": "爷爷",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "baby",
-        "chinese": "宝宝",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
+        "correct": "s"
       },
       {
         "type": "letter_select",
-        "word": "grandma",
-        "chinese": "奶奶",
-        "difficulty": "medium",
-        "display": "gra_dma",
+        "word": "apple juice",
+        "chinese": "苹果汁",
+        "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+        "display": "appl_ juice",
         "options": [
+          "h",
+          "f",
+          "g",
+          "e"
+        ],
+        "correct": "e"
+      },
+      {
+        "type": "letter_select",
+        "word": "lunch",
+        "chinese": "午餐",
+        "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+        "display": "_unch",
+        "options": [
+          "l",
+          "n",
+          "m",
+          "o"
+        ],
+        "correct": "l"
+      },
+      {
+        "type": "letter_select",
+        "word": "hamburger",
+        "chinese": "汉堡",
+        "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+        "display": "hamburg_r",
+        "options": [
+          "g",
+          "h",
+          "f",
+          "e"
+        ],
+        "correct": "e"
+      },
+      {
+        "type": "letter_select",
+        "word": "salad",
+        "chinese": "沙拉",
+        "image": "<img src=\"assets/images/salad.png\" width=\"80\">",
+        "display": "_alad",
+        "options": [
+          "v",
           "s",
-          "h",
-          "j",
-          "n"
+          "u",
+          "t"
         ],
-        "correct": "n"
+        "correct": "s"
       },
       {
-        "type": "duo_spell",
-        "word": "grandpa",
-        "chinese": "爷爷",
-        "difficulty": "easy",
-        "parts": [
-          "gra",
-          "ndpa"
-        ],
-        "image": "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "baby",
-        "chinese": "宝宝",
-        "difficulty": "easy",
-        "display": "bab_",
+        "type": "word_spell",
+        "word": "apple juice",
+        "chinese": "苹果汁",
+        "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+        "display": "apple j_ice",
         "options": [
-          "p",
-          "h",
-          "e",
-          "y"
+          "w",
+          "u",
+          "x",
+          "v"
         ],
-        "correct": "y"
+        "correct": "u"
       },
       {
         "type": "word_spell",
-        "word": "grandma",
-        "chinese": "奶奶",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "grandpa",
-        "chinese": "爷爷",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "baby",
-        "chinese": "宝宝",
-        "difficulty": "easy",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "baby",
-        "chinese": "宝宝",
-        "difficulty": "medium",
-        "display": "bab_",
-        "options": [
-          "y",
-          "d",
-          "t",
-          "l"
-        ],
-        "correct": "y"
-      },
-      {
-        "type": "letter_select",
-        "word": "grandma",
-        "chinese": "奶奶",
-        "difficulty": "medium",
-        "display": "g_andma",
+        "word": "lunch",
+        "chinese": "午餐",
+        "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+        "display": "_unch",
         "options": [
           "o",
+          "n",
+          "m",
+          "l"
+        ],
+        "correct": "l"
+      },
+      {
+        "type": "letter_select",
+        "word": "hamburger",
+        "chinese": "汉堡",
+        "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+        "display": "hamburge_",
+        "options": [
           "r",
-          "w",
-          "g"
+          "t",
+          "s",
+          "u"
         ],
         "correct": "r"
       },
       {
-        "type": "duo_sentence",
-        "word": "grandpa",
-        "chinese": "爷爷",
-        "difficulty": "medium",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "grandpa"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-      },
-      {
         "type": "letter_select",
-        "word": "baby",
-        "chinese": "宝宝",
-        "difficulty": "hard",
-        "display": "_aby",
+        "word": "salad",
+        "chinese": "沙拉",
+        "image": "<img src=\"assets/images/salad.png\" width=\"80\">",
+        "display": "_alad",
         "options": [
-          "j",
-          "q",
-          "h",
-          "b"
-        ],
-        "correct": "b"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "baby",
-        "chinese": "宝宝",
-        "difficulty": "easy",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "baby"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_spell",
-        "word": "grandpa",
-        "chinese": "爷爷",
-        "difficulty": "hard",
-        "parts": [
-          "gra",
-          "ndpa"
-        ],
-        "image": "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "baby",
-        "chinese": "宝宝",
-        "difficulty": "easy",
-        "display": "_aby",
-        "options": [
-          "b",
-          "x",
-          "u",
-          "y"
-        ],
-        "correct": "b"
-      },
-      {
-        "type": "duo_spell",
-        "word": "grandma",
-        "chinese": "奶奶",
-        "difficulty": "easy",
-        "parts": [
-          "gra",
-          "ndma"
-        ],
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "grandpa",
-        "chinese": "爷爷",
-        "difficulty": "easy",
-        "display": "gr_ndpa",
-        "options": [
-          "a",
-          "r",
-          "s",
-          "g"
-        ],
-        "correct": "a"
-      },
-      {
-        "type": "letter_select",
-        "word": "grandpa",
-        "chinese": "爷爷",
-        "difficulty": "medium",
-        "display": "gra_dpa",
-        "options": [
-          "i",
-          "f",
           "v",
-          "n"
+          "u",
+          "s",
+          "t"
         ],
-        "correct": "n"
+        "correct": "s"
+      }
+    ],
+    "practice": [
+      {
+        "type": "duo_spell",
+        "word": "hamburger",
+        "chinese": "汉堡",
+        "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+        "display": "hamb_rger",
+        "options": [
+          "v",
+          "x",
+          "w",
+          "u"
+        ],
+        "correct": "u",
+        "difficulty": "hard",
+        "parts": [
+          "hamb",
+          "urger"
+        ]
       },
       {
         "type": "letter_select",
-        "word": "baby",
-        "chinese": "宝宝",
-        "difficulty": "easy",
-        "display": "_aby",
+        "word": "salad",
+        "chinese": "沙拉",
+        "image": "<img src=\"assets/images/salad.png\" width=\"80\">",
+        "display": "_alad",
         "options": [
-          "z",
-          "a",
-          "q",
-          "b"
+          "v",
+          "s",
+          "u",
+          "t"
         ],
-        "correct": "b"
+        "correct": "s",
+        "difficulty": "hard",
+        "parts": [
+          "sa",
+          "lad"
+        ]
       },
       {
-        "type": "duo_spell",
-        "word": "grandma",
-        "chinese": "奶奶",
+        "type": "letter_select",
+        "word": "apple juice",
+        "chinese": "苹果汁",
+        "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+        "display": "appl_ juice",
+        "options": [
+          "h",
+          "f",
+          "g",
+          "e"
+        ],
+        "correct": "e",
         "difficulty": "easy",
         "parts": [
-          "gra",
-          "ndma"
-        ],
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">"
+          "apple",
+          " juice"
+        ]
       },
       {
         "type": "word_spell",
-        "word": "grandma",
-        "chinese": "奶奶",
-        "difficulty": "medium",
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">"
+        "word": "lunch",
+        "chinese": "午餐",
+        "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+        "display": "_unch",
+        "options": [
+          "l",
+          "n",
+          "m",
+          "o"
+        ],
+        "correct": "l",
+        "difficulty": "easy",
+        "parts": [
+          "lu",
+          "nch"
+        ]
       },
       {
-        "type": "duo_sentence",
-        "word": "grandpa",
-        "chinese": "爷爷",
+        "type": "word_spell",
+        "word": "hamburger",
+        "chinese": "汉堡",
+        "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+        "display": "hamburg_r",
+        "options": [
+          "g",
+          "h",
+          "f",
+          "e"
+        ],
+        "correct": "e",
+        "difficulty": "easy",
+        "parts": [
+          "hamb",
+          "urger"
+        ]
+      },
+      {
+        "type": "word_spell",
+        "word": "salad",
+        "chinese": "沙拉",
+        "image": "<img src=\"assets/images/salad.png\" width=\"80\">",
+        "display": "_alad",
+        "options": [
+          "v",
+          "s",
+          "u",
+          "t"
+        ],
+        "correct": "s",
+        "difficulty": "easy",
+        "parts": [
+          "sa",
+          "lad"
+        ]
+      },
+      {
+        "type": "word_spell",
+        "word": "apple juice",
+        "chinese": "苹果汁",
+        "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+        "display": "apple j_ice",
+        "options": [
+          "w",
+          "u",
+          "x",
+          "v"
+        ],
+        "correct": "u",
         "difficulty": "hard",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "grandpa"
+        "parts": [
+          "apple",
+          " juice"
+        ]
+      },
+      {
+        "type": "letter_select",
+        "word": "lunch",
+        "chinese": "午餐",
+        "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+        "display": "_unch",
+        "options": [
+          "o",
+          "n",
+          "m",
+          "l"
         ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
+        "correct": "l",
+        "difficulty": "medium",
+        "parts": [
+          "lu",
+          "nch"
+        ]
+      },
+      {
+        "type": "word_spell",
+        "word": "hamburger",
+        "chinese": "汉堡",
+        "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+        "display": "hamburge_",
+        "options": [
+          "r",
+          "t",
+          "s",
+          "u"
         ],
-        "image": "<img src=\"assets/images/grandpa.png\" width=\"80\">"
+        "correct": "r",
+        "difficulty": "hard",
+        "parts": [
+          "hamb",
+          "urger"
+        ]
+      },
+      {
+        "type": "letter_select",
+        "word": "salad",
+        "chinese": "沙拉",
+        "image": "<img src=\"assets/images/salad.png\" width=\"80\">",
+        "display": "_alad",
+        "options": [
+          "v",
+          "u",
+          "s",
+          "t"
+        ],
+        "correct": "s",
+        "difficulty": "medium",
+        "parts": [
+          "sa",
+          "lad"
+        ]
+      },
+      {
+        "type": "letter_select",
+        "word": "apple juice",
+        "chinese": "苹果汁",
+        "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+        "display": "appl_ juice",
+        "options": [
+          "f",
+          "g",
+          "h",
+          "e"
+        ],
+        "correct": "e",
+        "difficulty": "easy",
+        "parts": [
+          "apple",
+          " juice"
+        ]
+      },
+      {
+        "type": "letter_select",
+        "word": "lunch",
+        "chinese": "午餐",
+        "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+        "display": "lunc_",
+        "options": [
+          "i",
+          "h",
+          "k",
+          "j"
+        ],
+        "correct": "h",
+        "difficulty": "easy",
+        "parts": [
+          "lu",
+          "nch"
+        ]
       }
     ]
   },
   "speaking": {
     "pretest": [
       {
-        "type": "repeat_word",
-        "chinese": "奶奶",
-        "word": "grandma",
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "hamburger",
+        "chinese": "汉堡",
+        "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+        "sentence": "I like hamburger."
       },
       {
-        "type": "repeat_word",
-        "chinese": "奶奶",
-        "word": "grandma",
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "salad",
+        "chinese": "沙拉",
+        "image": "<img src=\"assets/images/salad.png\" width=\"80\">",
+        "sentence": "I like salad."
       },
       {
-        "type": "repeat_word",
-        "chinese": "奶奶",
-        "word": "grandma",
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "apple juice",
+        "chinese": "苹果汁",
+        "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+        "sentence": "I like apple juice."
       },
       {
-        "type": "read_sentence",
-        "chinese": "宝宝",
-        "sentence": "I see a baby.",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "lunch",
+        "chinese": "午餐",
+        "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+        "sentence": "What do you want to eat?"
       },
       {
-        "type": "read_sentence",
-        "chinese": "宝宝",
-        "sentence": "I see a baby.",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "hamburger",
+        "chinese": "汉堡",
+        "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+        "sentence": "What do you want to eat?"
       },
       {
-        "type": "read_sentence",
-        "chinese": "爷爷",
-        "sentence": "I see a grandpa.",
-        "image": "<img src=\"assets/images/grandpa.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "salad",
+        "chinese": "沙拉",
+        "image": "<img src=\"assets/images/salad.png\" width=\"80\">",
+        "sentence": "What do you want to eat?"
       },
       {
-        "type": "read_sentence",
-        "chinese": "宝宝",
-        "sentence": "I see a baby.",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "apple juice",
+        "chinese": "苹果汁",
+        "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+        "sentence": "What do you want to eat?"
       },
       {
-        "type": "read_sentence",
-        "chinese": "爷爷",
-        "sentence": "I see a grandpa.",
-        "image": "<img src=\"assets/images/grandpa.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "lunch",
+        "chinese": "午餐",
+        "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+        "sentence": "I like lunch."
       },
       {
-        "type": "read_sentence",
-        "chinese": "奶奶",
-        "sentence": "I see a grandma.",
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "hamburger",
+        "chinese": "汉堡",
+        "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+        "sentence": "I like hamburger."
       },
       {
-        "type": "read_sentence",
-        "chinese": "爷爷",
-        "sentence": "I see a grandpa.",
-        "image": "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "爷爷",
-        "word": "grandpa",
-        "image": "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "宝宝",
-        "sentence": "I see a baby.",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "salad",
+        "chinese": "沙拉",
+        "image": "<img src=\"assets/images/salad.png\" width=\"80\">",
+        "sentence": "What do you want to eat?"
       }
     ],
     "practice": [
       {
-        "type": "read_sentence",
-        "chinese": "爷爷",
-        "difficulty": "easy",
-        "sentence": "I see a grandpa.",
-        "image": "<img src=\"assets/images/grandpa.png\" width=\"80\">"
+        "type": "debate",
+        "word": "hamburger",
+        "chinese": "汉堡",
+        "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+        "sentence": "Do you want some apple juice?",
+        "difficulty": "easy"
       },
       {
-        "type": "read_sentence",
-        "chinese": "奶奶",
-        "difficulty": "hard",
-        "sentence": "I see a grandma.",
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "salad",
+        "chinese": "沙拉",
+        "image": "<img src=\"assets/images/salad.png\" width=\"80\">",
+        "sentence": "Do you want some apple juice?",
+        "difficulty": "medium"
       },
       {
-        "type": "read_sentence",
-        "chinese": "宝宝",
-        "difficulty": "medium",
-        "sentence": "I see a baby.",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
+        "type": "debate",
+        "word": "apple juice",
+        "chinese": "苹果汁",
+        "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+        "sentence": "Do you want some apple juice?",
+        "difficulty": "medium"
       },
       {
-        "type": "repeat_word",
-        "chinese": "宝宝",
-        "difficulty": "medium",
-        "word": "baby",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "lunch",
+        "chinese": "午餐",
+        "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+        "sentence": "This is a lunch.",
+        "difficulty": "easy"
       },
       {
-        "type": "repeat_word",
-        "chinese": "宝宝",
-        "difficulty": "easy",
-        "word": "baby",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "hamburger",
+        "chinese": "汉堡",
+        "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+        "sentence": "This is a hamburger.",
+        "difficulty": "easy"
       },
       {
-        "type": "repeat_word",
-        "chinese": "奶奶",
-        "difficulty": "medium",
-        "word": "grandma",
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">"
+        "type": "debate",
+        "word": "salad",
+        "chinese": "沙拉",
+        "image": "<img src=\"assets/images/salad.png\" width=\"80\">",
+        "sentence": "Do you want some apple juice?",
+        "difficulty": "medium"
       },
       {
-        "type": "repeat_word",
-        "chinese": "宝宝",
-        "difficulty": "hard",
-        "word": "baby",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "apple juice",
+        "chinese": "苹果汁",
+        "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+        "sentence": "Do you want some apple juice?",
+        "difficulty": "medium"
       },
       {
-        "type": "read_sentence",
-        "chinese": "爷爷",
-        "difficulty": "easy",
-        "sentence": "I see a grandpa.",
-        "image": "<img src=\"assets/images/grandpa.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "lunch",
+        "chinese": "午餐",
+        "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+        "sentence": "Do you want some apple juice?",
+        "difficulty": "hard"
       },
       {
-        "type": "repeat_word",
-        "chinese": "奶奶",
-        "difficulty": "easy",
-        "word": "grandma",
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "hamburger",
+        "chinese": "汉堡",
+        "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+        "sentence": "This is a hamburger.",
+        "difficulty": "hard"
       },
       {
-        "type": "read_sentence",
-        "chinese": "奶奶",
-        "difficulty": "easy",
-        "sentence": "I see a grandma.",
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "salad",
+        "chinese": "沙拉",
+        "image": "<img src=\"assets/images/salad.png\" width=\"80\">",
+        "sentence": "Do you want some apple juice?",
+        "difficulty": "medium"
       },
       {
-        "type": "read_sentence",
-        "chinese": "宝宝",
-        "difficulty": "hard",
-        "sentence": "I see a baby.",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "apple juice",
+        "chinese": "苹果汁",
+        "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+        "sentence": "Do you want some apple juice?",
+        "difficulty": "medium"
       },
       {
-        "type": "read_sentence",
-        "chinese": "爷爷",
-        "difficulty": "hard",
-        "sentence": "I see a grandpa.",
-        "image": "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "爷爷",
-        "difficulty": "hard",
-        "sentence": "I see a grandpa.",
-        "image": "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "奶奶",
-        "difficulty": "medium",
-        "word": "grandma",
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "宝宝",
-        "difficulty": "medium",
-        "word": "baby",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "爷爷",
-        "difficulty": "medium",
-        "sentence": "I see a grandpa.",
-        "image": "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "宝宝",
-        "difficulty": "medium",
-        "sentence": "I see a baby.",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "爷爷",
-        "difficulty": "easy",
-        "word": "grandpa",
-        "image": "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "爷爷",
-        "difficulty": "medium",
-        "word": "grandpa",
-        "image": "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "爷爷",
-        "difficulty": "easy",
-        "word": "grandpa",
-        "image": "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "宝宝",
-        "difficulty": "hard",
-        "sentence": "I see a baby.",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "奶奶",
-        "difficulty": "easy",
-        "word": "grandma",
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "爷爷",
-        "difficulty": "easy",
-        "sentence": "I see a grandpa.",
-        "image": "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "奶奶",
-        "difficulty": "hard",
-        "word": "grandma",
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "奶奶",
-        "difficulty": "medium",
-        "word": "grandma",
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "奶奶",
-        "difficulty": "medium",
-        "sentence": "I see a grandma.",
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "宝宝",
-        "difficulty": "easy",
-        "sentence": "I see a baby.",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "奶奶",
-        "difficulty": "medium",
-        "word": "grandma",
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "lunch",
+        "chinese": "午餐",
+        "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+        "sentence": "This is a lunch.",
+        "difficulty": "medium"
       }
     ]
   }

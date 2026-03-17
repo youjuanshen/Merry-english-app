@@ -1,535 +1,343 @@
 var unit3_lesson4 = {
   "id": "U3L4",
-  "title": "Count the apples.",
+  "title": "Unit 3 Lesson 4: It's time to do my homework.",
   "listening": {
     "pretest": [
       {
-        "type": "listen_select",
-        "audio": "eight",
-        "chinese": "八",
+        "type": "listen_tf",
+        "audio": "homework",
+        "chinese": "作业",
         "options": [
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">"
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+          "<img src=\"assets/images/homework.png\" width=\"80\">"
         ],
-        "correct": 0
+        "correct": 3,
+        "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">"
       },
       {
         "type": "listen_tf",
-        "audio": "six",
-        "chinese": "六",
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">",
-        "correct": false
+        "audio": "sleep",
+        "chinese": "睡觉",
+        "options": [
+          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/homework.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_select",
+        "audio": "picture",
+        "chinese": "图片",
+        "options": [
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/homework.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "image": "<img src=\"assets/images/dog.png\" width=\"80\">"
       },
       {
         "type": "listen_tf",
-        "audio": "ten",
-        "chinese": "十",
-        "image": "<img src=\"assets/images/ten.png\" width=\"80\">",
-        "correct": true
+        "audio": "play",
+        "chinese": "玩耍",
+        "options": [
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/homework.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "image": "<img src=\"assets/images/homework.png\" width=\"80\">"
       },
       {
         "type": "listen_select",
-        "audio": "one",
-        "chinese": "一",
+        "audio": "homework",
+        "chinese": "作业",
         "options": [
-          "<img src=\"assets/images/four.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/one.png\" width=\"80\">"
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+          "<img src=\"assets/images/homework.png\" width=\"80\">"
         ],
-        "correct": 3
+        "correct": false,
+        "image": "<img src=\"assets/images/homework.png\" width=\"80\">"
       },
       {
         "type": "listen_select",
-        "audio": "seven",
-        "chinese": "七",
+        "audio": "sleep",
+        "chinese": "睡觉",
         "options": [
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">"
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+          "<img src=\"assets/images/homework.png\" width=\"80\">"
         ],
-        "correct": 1
+        "correct": 2,
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">"
       },
       {
         "type": "listen_select",
-        "audio": "five",
-        "chinese": "五",
+        "audio": "picture",
+        "chinese": "图片",
         "options": [
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/three.png\" width=\"80\">"
+          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/homework.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">"
         ],
-        "correct": 1
+        "correct": true,
+        "image": "<img src=\"assets/images/dog.png\" width=\"80\">"
       },
       {
         "type": "listen_select",
-        "audio": "two",
-        "chinese": "二",
+        "audio": "play",
+        "chinese": "玩耍",
         "options": [
-          "<img src=\"assets/images/one.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">"
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/homework.png\" width=\"80\">",
+          "<img src=\"assets/images/sleeping.png\" width=\"80\">"
         ],
-        "correct": 3
+        "correct": 1,
+        "image": "<img src=\"assets/images/dog.png\" width=\"80\">"
       },
       {
         "type": "listen_select",
-        "audio": "nine",
-        "chinese": "九",
+        "audio": "homework",
+        "chinese": "作业",
         "options": [
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/three.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">"
+          "<img src=\"assets/images/homework.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/sleeping.png\" width=\"80\">"
         ],
-        "correct": 0
+        "correct": true,
+        "image": "<img src=\"assets/images/homework.png\" width=\"80\">"
       },
       {
-        "type": "listen_select",
-        "audio": "three",
-        "chinese": "三",
+        "type": "listen_tf",
+        "audio": "sleep",
+        "chinese": "睡觉",
         "options": [
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/one.png\" width=\"80\">",
-          "<img src=\"assets/images/three.png\" width=\"80\">"
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/homework.png\" width=\"80\">"
         ],
-        "correct": 3
-      },
-      {
-        "type": "listen_select",
-        "audio": "four",
-        "chinese": "四",
-        "options": [
-          "<img src=\"assets/images/three.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/four.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">"
-        ],
-        "correct": 2
+        "correct": true,
+        "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">"
       }
     ],
     "practice": [
       {
-        "type": "listen_select",
-        "audio": "four",
-        "chinese": "四",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/three.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/four.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "one",
-        "chinese": "一",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/one.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "two",
-        "chinese": "二",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/one.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "listen_select",
-        "audio": "five",
-        "chinese": "五",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/one.png\" width=\"80\">",
-          "<img src=\"assets/images/four.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "listen_tf",
-        "audio": "eight",
-        "chinese": "八",
-        "difficulty": "medium",
-        "image": "<img src=\"assets/images/nine.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_select",
-        "audio": "two",
-        "chinese": "二",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/four.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "listen_select",
-        "audio": "three",
-        "chinese": "三",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/three.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/four.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "listen_select",
-        "audio": "six",
-        "chinese": "六",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/four.png\" width=\"80\">",
-          "<img src=\"assets/images/one.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "four",
-        "chinese": "四",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/four.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "listen_select",
-        "audio": "nine",
-        "chinese": "九",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/one.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "listen_select",
-        "audio": "one",
-        "chinese": "一",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/one.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "two",
-        "chinese": "二",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/four.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "three",
-        "chinese": "三",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/three.png\" width=\"80\">",
-          "<img src=\"assets/images/one.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "listen_tf",
-        "audio": "one",
-        "chinese": "一",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/one.png\" width=\"80\">",
-        "correct": true
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "seven",
-        "chinese": "七",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/one.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "listen_tf",
-        "audio": "five",
-        "chinese": "五",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/three.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_select",
-        "audio": "eight",
-        "chinese": "八",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/one.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "nine",
-        "chinese": "九",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/three.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "ten",
-        "chinese": "十",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/three.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "six",
-        "chinese": "六",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "listen_select",
-        "audio": "ten",
-        "chinese": "十",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/three.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "five",
-        "chinese": "五",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/four.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_tf",
-        "audio": "six",
-        "chinese": "六",
-        "difficulty": "medium",
-        "image": "<img src=\"assets/images/ten.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_tf",
-        "audio": "seven",
-        "chinese": "七",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/five.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_tf",
-        "audio": "three",
-        "chinese": "三",
-        "difficulty": "easy",
-        "image": "<img src=\"assets/images/nine.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_select",
-        "audio": "four",
-        "chinese": "四",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/one.png\" width=\"80\">",
-          "<img src=\"assets/images/three.png\" width=\"80\">",
-          "<img src=\"assets/images/four.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "balloon_pop",
-        "text": "Find the word",
-        "chinese": "四",
-        "options": [
-          "<img src=\"assets/images/three.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/four.png\" width=\"80\">"
-        ],
-        "correct": 3,
-        "difficulty": "easy"
-      },
-      {
-        "type": "balloon_pop",
-        "text": "Find the word",
-        "chinese": "五",
-        "options": [
-          "<img src=\"assets/images/one.png\" width=\"80\">",
-          "<img src=\"assets/images/four.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">"
-        ],
-        "correct": 3,
-        "difficulty": "medium"
-      },
-      {
-        "type": "balloon_pop",
-        "text": "Find the word",
-        "chinese": "二",
-        "options": [
-          "<img src=\"assets/images/four.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">"
-        ],
-        "correct": 3,
-        "difficulty": "medium"
-      },
-      {
-        "type": "balloon_pop",
-        "text": "Find the word",
-        "chinese": "三",
-        "options": [
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/three.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/four.png\" width=\"80\">"
-        ],
-        "correct": 1,
-        "difficulty": "hard"
-      },
-      {
         "type": "scenario",
-        "scenario": "Jack wants a pet with long ears.",
-        "chinese": "杰克想要一只有长耳朵的宠物。",
-        "question": "What should we pick?",
+        "audio": "homework",
+        "chinese": "作业",
         "options": [
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">"
-        ],
-        "correct": 0,
-        "feedback": "Rabbits have long ears!",
-        "difficulty": "medium"
-      },
-      {
-        "type": "scenario",
-        "scenario": "Anna is small and wants a small pet.",
-        "chinese": "安娜很小，她想要一只小宠物。",
-        "question": "What should we pick?",
-        "options": [
-          "<img src=\"assets/images/mouse.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/bear.png\" width=\"80\">"
-        ],
-        "correct": 0,
-        "feedback": "A mouse is very small!",
-        "difficulty": "medium"
-      },
-      {
-        "type": "scenario",
-        "scenario": "Tom is at the pet shop. He wants a quiet pet.",
-        "chinese": "汤姆在宠物店，他想要一只安静的宠物。",
-        "question": "What should we pick?",
-        "options": [
-          "<img src=\"assets/images/fish.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
           "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">"
+          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+          "<img src=\"assets/images/homework.png\" width=\"80\">"
         ],
-        "correct": 0,
-        "feedback": "A fish is quiet!",
-        "difficulty": "medium"
+        "correct": 3,
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "It's time to go to bed.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       },
       {
         "type": "scenario",
-        "scenario": "Lily wants to play catch in the park.",
-        "chinese": "莉莉想在公园玩接球游戏。",
-        "question": "What should we pick?",
+        "audio": "sleep",
+        "chinese": "睡觉",
         "options": [
-          "<img src=\"assets/images/fish.png\" width=\"80\">",
-          "<img src=\"assets/images/mouse.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">"
+          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/homework.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "It's time to go to bed.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "balloon_pop",
+        "audio": "picture",
+        "chinese": "图片",
+        "options": [
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/homework.png\" width=\"80\">"
         ],
         "correct": 2,
-        "feedback": "Dogs love playing catch!",
-        "difficulty": "medium"
+        "difficulty": "medium",
+        "text": "Find the word",
+        "scenario": "It's time to go to bed.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "listen_select",
+        "audio": "play",
+        "chinese": "玩耍",
+        "options": [
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/homework.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "medium",
+        "text": "Find the word",
+        "scenario": "It's time to do my homework.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "listen_select",
+        "audio": "homework",
+        "chinese": "作业",
+        "options": [
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+          "<img src=\"assets/images/homework.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "difficulty": "medium",
+        "text": "Find the word",
+        "scenario": "It's time to go to bed.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "scenario",
+        "audio": "sleep",
+        "chinese": "睡觉",
+        "options": [
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+          "<img src=\"assets/images/homework.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "It's time to do my homework.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "balloon_pop",
+        "audio": "picture",
+        "chinese": "图片",
+        "options": [
+          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/homework.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "It's time to do my homework.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "balloon_pop",
+        "audio": "play",
+        "chinese": "玩耍",
+        "options": [
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/homework.png\" width=\"80\">",
+          "<img src=\"assets/images/sleeping.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "medium",
+        "text": "Find the word",
+        "scenario": "It's time to do my homework.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "scenario",
+        "audio": "homework",
+        "chinese": "作业",
+        "options": [
+          "<img src=\"assets/images/homework.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/sleeping.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "medium",
+        "text": "Find the word",
+        "scenario": "It's time to do my homework.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "duo_listen_select",
+        "audio": "sleep",
+        "chinese": "睡觉",
+        "options": [
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/homework.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "It's time to go to bed.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "duo_listen_select",
+        "audio": "picture",
+        "chinese": "图片",
+        "options": [
+          "<img src=\"assets/images/homework.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "It's time to go to bed.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "scenario",
+        "audio": "play",
+        "chinese": "玩耍",
+        "options": [
+          "<img src=\"assets/images/homework.png\" width=\"80\">",
+          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "It's time to do my homework.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       }
     ]
   },
@@ -537,647 +345,499 @@ var unit3_lesson4 = {
     "pretest": [
       {
         "type": "word_match",
-        "chinese": "三",
-        "word": "three",
+        "chinese": "作业",
+        "word": "homework",
+        "sentence": "It's time to do my homework.",
         "options": [
           {
-            "text": "<img src=\"assets/images/nine.png\" width=\"80\">",
-            "value": "nine"
+            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+            "value": "sleep"
           },
           {
-            "text": "<img src=\"assets/images/three.png\" width=\"80\">",
-            "value": "three"
+            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
+            "value": "homework"
+          },
+          {
+            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
+            "value": "play"
+          },
+          {
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "picture"
           }
         ],
-        "correct": "three"
+        "correct": "homework"
       },
       {
         "type": "sentence_match",
-        "chinese": "四",
-        "sentence": "I see a four.",
+        "chinese": "睡觉",
+        "word": "sleep",
+        "sentence": "I see a sleep.",
         "options": [
           {
-            "text": "<img src=\"assets/images/three.png\" width=\"80\">",
-            "value": "three"
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "picture"
           },
           {
-            "text": "<img src=\"assets/images/four.png\" width=\"80\">",
-            "value": "four"
+            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
+            "value": "homework"
+          },
+          {
+            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+            "value": "sleep"
+          },
+          {
+            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
+            "value": "play"
           }
         ],
-        "correct": "four"
+        "correct": "sleep"
       },
       {
         "type": "word_match",
-        "chinese": "九",
-        "word": "nine",
+        "chinese": "图片",
+        "word": "picture",
+        "sentence": "I see a picture.",
         "options": [
           {
-            "text": "<img src=\"assets/images/nine.png\" width=\"80\">",
-            "value": "nine"
+            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
+            "value": "homework"
           },
           {
-            "text": "<img src=\"assets/images/two.png\" width=\"80\">",
-            "value": "two"
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "picture"
           }
         ],
-        "correct": "nine"
-      },
-      {
-        "type": "word_match",
-        "chinese": "六",
-        "word": "six",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/six.png\" width=\"80\">",
-            "value": "six"
-          },
-          {
-            "text": "<img src=\"assets/images/two.png\" width=\"80\">",
-            "value": "two"
-          }
-        ],
-        "correct": "six"
-      },
-      {
-        "type": "word_match",
-        "chinese": "十",
-        "word": "ten",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/five.png\" width=\"80\">",
-            "value": "five"
-          },
-          {
-            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
-            "value": "ten"
-          }
-        ],
-        "correct": "ten"
-      },
-      {
-        "type": "word_match",
-        "chinese": "一",
-        "word": "one",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/one.png\" width=\"80\">",
-            "value": "one"
-          },
-          {
-            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
-            "value": "eight"
-          }
-        ],
-        "correct": "one"
-      },
-      {
-        "type": "word_match",
-        "chinese": "八",
-        "word": "eight",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/three.png\" width=\"80\">",
-            "value": "three"
-          },
-          {
-            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
-            "value": "eight"
-          }
-        ],
-        "correct": "eight"
-      },
-      {
-        "type": "word_match",
-        "chinese": "七",
-        "word": "seven",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/seven.png\" width=\"80\">",
-            "value": "seven"
-          },
-          {
-            "text": "<img src=\"assets/images/six.png\" width=\"80\">",
-            "value": "six"
-          }
-        ],
-        "correct": "seven"
+        "correct": "picture"
       },
       {
         "type": "sentence_match",
-        "chinese": "五",
-        "sentence": "I see a five.",
+        "chinese": "玩耍",
+        "word": "play",
+        "sentence": "It's time to do my homework.",
         "options": [
           {
-            "text": "<img src=\"assets/images/three.png\" width=\"80\">",
-            "value": "three"
+            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
+            "value": "homework"
           },
           {
-            "text": "<img src=\"assets/images/five.png\" width=\"80\">",
-            "value": "five"
+            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
+            "value": "play"
+          },
+          {
+            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+            "value": "sleep"
+          },
+          {
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "picture"
           }
         ],
-        "correct": "five"
+        "correct": "play"
+      },
+      {
+        "type": "sentence_match",
+        "chinese": "作业",
+        "word": "homework",
+        "sentence": "I see a homework.",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+            "value": "sleep"
+          },
+          {
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "picture"
+          }
+        ],
+        "correct": "homework"
       },
       {
         "type": "word_match",
-        "chinese": "一",
-        "word": "one",
+        "chinese": "睡觉",
+        "word": "sleep",
+        "sentence": "I see a sleep.",
         "options": [
           {
-            "text": "<img src=\"assets/images/one.png\" width=\"80\">",
-            "value": "one"
+            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+            "value": "sleep"
           },
           {
-            "text": "<img src=\"assets/images/seven.png\" width=\"80\">",
-            "value": "seven"
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "picture"
+          },
+          {
+            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
+            "value": "homework"
+          },
+          {
+            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
+            "value": "play"
           }
         ],
-        "correct": "one"
+        "correct": "sleep"
+      },
+      {
+        "type": "sentence_match",
+        "chinese": "图片",
+        "word": "picture",
+        "sentence": "It's time to do my homework.",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+            "value": "sleep"
+          },
+          {
+            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
+            "value": "homework"
+          },
+          {
+            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
+            "value": "play"
+          },
+          {
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "picture"
+          }
+        ],
+        "correct": "picture"
       },
       {
         "type": "word_match",
-        "chinese": "二",
-        "word": "two",
+        "chinese": "玩耍",
+        "word": "play",
+        "sentence": "I see a play.",
         "options": [
           {
-            "text": "<img src=\"assets/images/five.png\" width=\"80\">",
-            "value": "five"
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "picture"
           },
           {
-            "text": "<img src=\"assets/images/two.png\" width=\"80\">",
-            "value": "two"
+            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
+            "value": "play"
           }
         ],
-        "correct": "two"
+        "correct": "play"
+      },
+      {
+        "type": "sentence_match",
+        "chinese": "作业",
+        "word": "homework",
+        "sentence": "It's time to do my homework.",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+            "value": "sleep"
+          },
+          {
+            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
+            "value": "play"
+          },
+          {
+            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
+            "value": "homework"
+          },
+          {
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "picture"
+          }
+        ],
+        "correct": "homework"
       },
       {
         "type": "word_match",
-        "chinese": "二",
-        "word": "two",
+        "chinese": "睡觉",
+        "word": "sleep",
+        "sentence": "It's time to do my homework.",
         "options": [
           {
-            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
-            "value": "ten"
+            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
+            "value": "homework"
           },
           {
-            "text": "<img src=\"assets/images/two.png\" width=\"80\">",
-            "value": "two"
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "picture"
           }
         ],
-        "correct": "two"
+        "correct": "sleep"
       }
     ],
     "practice": [
       {
-        "type": "duo_race",
-        "chinese": "一",
-        "difficulty": "hard",
-        "word": "one",
-        "options": [
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/one.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
         "type": "word_match",
-        "chinese": "十",
-        "difficulty": "easy",
-        "word": "ten",
+        "chinese": "作业",
+        "word": "homework",
+        "sentence": "It's time to go to bed.",
         "options": [
           {
-            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
-            "value": "ten"
+            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+            "value": "sleep"
           },
           {
-            "text": "<img src=\"assets/images/six.png\" width=\"80\">",
-            "value": "six"
+            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
+            "value": "homework"
+          },
+          {
+            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
+            "value": "play"
+          },
+          {
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "picture"
           }
         ],
-        "correct": "ten"
+        "correct": 3,
+        "difficulty": "easy"
       },
       {
         "type": "sentence_match",
-        "chinese": "四",
-        "difficulty": "medium",
-        "sentence": "I see a four.",
+        "chinese": "睡觉",
+        "word": "sleep",
+        "sentence": "It's time to go to bed.",
         "options": [
           {
-            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
-            "value": "eight"
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "picture"
           },
           {
-            "text": "<img src=\"assets/images/four.png\" width=\"80\">",
-            "value": "four"
-          }
-        ],
-        "correct": "four"
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "二",
-        "difficulty": "medium",
-        "word": "two",
-        "options": [
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/four.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "word_match",
-        "chinese": "八",
-        "difficulty": "hard",
-        "word": "eight",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/one.png\" width=\"80\">",
-            "value": "one"
+            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
+            "value": "homework"
           },
           {
-            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
-            "value": "eight"
+            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+            "value": "sleep"
+          },
+          {
+            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
+            "value": "play"
           }
         ],
-        "correct": "eight"
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "九",
-        "difficulty": "hard",
-        "word": "nine",
-        "options": [
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/four.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">"
-        ],
-        "correct": 2
+        "correct": "sleep",
+        "difficulty": "hard"
       },
       {
         "type": "duo_race",
-        "chinese": "二",
-        "difficulty": "medium",
-        "word": "two",
+        "chinese": "图片",
+        "word": "picture",
+        "sentence": "It's time to go to bed.",
         "options": [
-          "<img src=\"assets/images/three.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">"
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/homework.png\" width=\"80\">"
         ],
-        "correct": 1
+        "correct": "picture",
+        "difficulty": "hard"
       },
       {
         "type": "word_match",
-        "chinese": "五",
-        "difficulty": "hard",
-        "word": "five",
+        "chinese": "玩耍",
+        "word": "play",
+        "sentence": "It's time to go to bed.",
         "options": [
           {
-            "text": "<img src=\"assets/images/one.png\" width=\"80\">",
-            "value": "one"
+            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
+            "value": "homework"
           },
           {
-            "text": "<img src=\"assets/images/five.png\" width=\"80\">",
-            "value": "five"
-          }
-        ],
-        "correct": "five"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "八",
-        "difficulty": "easy",
-        "sentence": "I see a eight.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/nine.png\" width=\"80\">",
-            "value": "nine"
+            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
+            "value": "play"
           },
           {
-            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
-            "value": "eight"
-          }
-        ],
-        "correct": "eight"
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "六",
-        "difficulty": "easy",
-        "word": "six",
-        "options": [
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/three.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "五",
-        "difficulty": "easy",
-        "sentence": "I see a five.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/three.png\" width=\"80\">",
-            "value": "three"
+            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+            "value": "sleep"
           },
           {
-            "text": "<img src=\"assets/images/five.png\" width=\"80\">",
-            "value": "five"
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "picture"
           }
         ],
-        "correct": "five"
-      },
-      {
-        "type": "word_match",
-        "chinese": "三",
-        "difficulty": "medium",
-        "word": "three",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
-            "value": "eight"
-          },
-          {
-            "text": "<img src=\"assets/images/three.png\" width=\"80\">",
-            "value": "three"
-          }
-        ],
-        "correct": "three"
+        "correct": "play",
+        "difficulty": "medium"
       },
       {
         "type": "duo_race",
-        "chinese": "六",
-        "difficulty": "hard",
-        "word": "six",
+        "chinese": "作业",
+        "word": "homework",
+        "sentence": "It's time to go to bed.",
         "options": [
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">"
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+          "<img src=\"assets/images/homework.png\" width=\"80\">"
         ],
-        "correct": 0
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "九",
-        "difficulty": "easy",
-        "word": "nine",
-        "options": [
-          "<img src=\"assets/images/four.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/one.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "duo_race",
-        "chinese": "十",
-        "difficulty": "medium",
-        "word": "ten",
-        "options": [
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "duo_race",
-        "chinese": "八",
-        "difficulty": "easy",
-        "word": "eight",
-        "options": [
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "word_match",
-        "chinese": "四",
-        "difficulty": "easy",
-        "word": "four",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
-            "value": "eight"
-          },
-          {
-            "text": "<img src=\"assets/images/four.png\" width=\"80\">",
-            "value": "four"
-          }
-        ],
-        "correct": "four"
+        "correct": 3,
+        "difficulty": "hard"
       },
       {
         "type": "sentence_match",
-        "chinese": "七",
-        "difficulty": "easy",
-        "sentence": "I see a seven.",
+        "chinese": "睡觉",
+        "word": "sleep",
+        "sentence": "Look at the sleep.",
         "options": [
           {
-            "text": "<img src=\"assets/images/seven.png\" width=\"80\">",
-            "value": "seven"
+            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+            "value": "sleep"
           },
           {
-            "text": "<img src=\"assets/images/five.png\" width=\"80\">",
-            "value": "five"
-          }
-        ],
-        "correct": "seven"
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "一",
-        "difficulty": "easy",
-        "word": "one",
-        "options": [
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/one.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "word_match",
-        "chinese": "四",
-        "difficulty": "medium",
-        "word": "four",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/four.png\" width=\"80\">",
-            "value": "four"
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "picture"
           },
           {
-            "text": "<img src=\"assets/images/three.png\" width=\"80\">",
-            "value": "three"
-          }
-        ],
-        "correct": "four"
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "一",
-        "difficulty": "easy",
-        "word": "one",
-        "options": [
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/one.png\" width=\"80\">",
-          "<img src=\"assets/images/three.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "word_match",
-        "chinese": "三",
-        "difficulty": "medium",
-        "word": "three",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/one.png\" width=\"80\">",
-            "value": "one"
+            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
+            "value": "homework"
           },
           {
-            "text": "<img src=\"assets/images/three.png\" width=\"80\">",
-            "value": "three"
+            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
+            "value": "play"
           }
         ],
-        "correct": "three"
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "三",
-        "difficulty": "hard",
-        "word": "three",
-        "options": [
-          "<img src=\"assets/images/three.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/four.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "七",
-        "difficulty": "medium",
-        "word": "seven",
-        "options": [
-          "<img src=\"assets/images/one.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/three.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "十",
-        "difficulty": "hard",
-        "word": "ten",
-        "options": [
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">"
-        ],
-        "correct": 1
+        "correct": 2,
+        "difficulty": "hard"
       },
       {
         "type": "sentence_match",
-        "chinese": "二",
-        "difficulty": "hard",
-        "sentence": "I see a two.",
+        "chinese": "图片",
+        "word": "picture",
+        "sentence": "Look at the picture.",
         "options": [
           {
-            "text": "<img src=\"assets/images/six.png\" width=\"80\">",
-            "value": "six"
+            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+            "value": "sleep"
           },
           {
-            "text": "<img src=\"assets/images/two.png\" width=\"80\">",
-            "value": "two"
+            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
+            "value": "homework"
+          },
+          {
+            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
+            "value": "play"
+          },
+          {
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "picture"
           }
         ],
-        "correct": "two"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "六",
-        "difficulty": "medium",
-        "word": "six",
-        "options": [
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">"
-        ],
-        "correct": 0
+        "correct": "picture",
+        "difficulty": "easy"
       },
       {
         "type": "sentence_match",
-        "chinese": "九",
-        "difficulty": "medium",
-        "sentence": "I see a nine.",
+        "chinese": "玩耍",
+        "word": "play",
+        "sentence": "It's time to go to bed.",
         "options": [
           {
-            "text": "<img src=\"assets/images/nine.png\" width=\"80\">",
-            "value": "nine"
+            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
+            "value": "homework"
           },
           {
-            "text": "<img src=\"assets/images/four.png\" width=\"80\">",
-            "value": "four"
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "picture"
+          },
+          {
+            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
+            "value": "play"
+          },
+          {
+            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+            "value": "sleep"
           }
         ],
-        "correct": "nine"
+        "correct": "play",
+        "difficulty": "hard"
+      },
+      {
+        "type": "sentence_match",
+        "chinese": "作业",
+        "word": "homework",
+        "sentence": "Look at the homework.",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+            "value": "sleep"
+          },
+          {
+            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
+            "value": "play"
+          },
+          {
+            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
+            "value": "homework"
+          },
+          {
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "picture"
+          }
+        ],
+        "correct": 0,
+        "difficulty": "medium"
+      },
+      {
+        "type": "sentence_match",
+        "chinese": "睡觉",
+        "word": "sleep",
+        "sentence": "Look at the sleep.",
+        "options": [
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/homework.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "easy"
       },
       {
         "type": "word_match",
-        "chinese": "七",
-        "difficulty": "medium",
-        "word": "seven",
+        "chinese": "图片",
+        "word": "picture",
+        "sentence": "Look at the picture.",
         "options": [
           {
-            "text": "<img src=\"assets/images/nine.png\" width=\"80\">",
-            "value": "nine"
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "picture"
           },
           {
-            "text": "<img src=\"assets/images/seven.png\" width=\"80\">",
-            "value": "seven"
+            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
+            "value": "homework"
+          },
+          {
+            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
+            "value": "play"
+          },
+          {
+            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+            "value": "sleep"
           }
         ],
-        "correct": "seven"
+        "correct": "picture",
+        "difficulty": "hard"
       },
       {
         "type": "word_match",
-        "chinese": "五",
-        "difficulty": "easy",
-        "word": "five",
+        "chinese": "玩耍",
+        "word": "play",
+        "sentence": "Look at the play.",
         "options": [
           {
-            "text": "<img src=\"assets/images/five.png\" width=\"80\">",
-            "value": "five"
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "picture"
           },
           {
-            "text": "<img src=\"assets/images/nine.png\" width=\"80\">",
-            "value": "nine"
+            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
+            "value": "play"
+          },
+          {
+            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
+            "value": "homework"
+          },
+          {
+            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+            "value": "sleep"
           }
         ],
-        "correct": "five"
+        "correct": 3,
+        "difficulty": "medium"
       }
     ]
   },
@@ -1185,714 +845,545 @@ var unit3_lesson4 = {
     "pretest": [
       {
         "type": "word_spell",
-        "word": "two",
-        "chinese": "二",
-        "image": "<img src=\"assets/images/two.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "seven",
-        "chinese": "七",
-        "display": "_even",
+        "word": "homework",
+        "chinese": "作业",
+        "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
+        "display": "_omework",
         "options": [
-          "o",
-          "u",
-          "f",
-          "s"
-        ],
-        "correct": "s"
-      },
-      {
-        "type": "letter_select",
-        "word": "nine",
-        "chinese": "九",
-        "display": "n_ne",
-        "options": [
-          "r",
-          "a",
+          "j",
           "i",
-          "m"
+          "k",
+          "h"
         ],
-        "correct": "i"
-      },
-      {
-        "type": "word_spell",
-        "word": "ten",
-        "chinese": "十",
-        "image": "<img src=\"assets/images/ten.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "three",
-        "chinese": "三",
-        "image": "<img src=\"assets/images/three.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "two",
-        "chinese": "二",
-        "image": "<img src=\"assets/images/two.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "five",
-        "chinese": "五",
-        "image": "<img src=\"assets/images/five.png\" width=\"80\">"
+        "correct": "h"
       },
       {
         "type": "letter_select",
-        "word": "one",
-        "chinese": "一",
-        "display": "_ne",
+        "word": "sleep",
+        "chinese": "睡觉",
+        "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+        "display": "sl_ep",
+        "options": [
+          "f",
+          "g",
+          "h",
+          "e"
+        ],
+        "correct": "e"
+      },
+      {
+        "type": "word_spell",
+        "word": "picture",
+        "chinese": "图片",
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+        "display": "pictu_e",
+        "options": [
+          "s",
+          "t",
+          "u",
+          "r"
+        ],
+        "correct": "r"
+      },
+      {
+        "type": "letter_select",
+        "word": "play",
+        "chinese": "玩耍",
+        "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
+        "display": "pla_",
+        "options": [
+          "z",
+          "a",
+          "y",
+          "b"
+        ],
+        "correct": "y"
+      },
+      {
+        "type": "letter_select",
+        "word": "homework",
+        "chinese": "作业",
+        "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
+        "display": "homewor_",
+        "options": [
+          "l",
+          "m",
+          "n",
+          "k"
+        ],
+        "correct": "k"
+      },
+      {
+        "type": "word_spell",
+        "word": "sleep",
+        "chinese": "睡觉",
+        "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+        "display": "sle_p",
+        "options": [
+          "h",
+          "e",
+          "g",
+          "f"
+        ],
+        "correct": "e"
+      },
+      {
+        "type": "word_spell",
+        "word": "picture",
+        "chinese": "图片",
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+        "display": "pictu_e",
+        "options": [
+          "t",
+          "r",
+          "s",
+          "u"
+        ],
+        "correct": "r"
+      },
+      {
+        "type": "word_spell",
+        "word": "play",
+        "chinese": "玩耍",
+        "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
+        "display": "pl_y",
+        "options": [
+          "b",
+          "c",
+          "d",
+          "a"
+        ],
+        "correct": "a"
+      },
+      {
+        "type": "letter_select",
+        "word": "homework",
+        "chinese": "作业",
+        "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
+        "display": "homew_rk",
         "options": [
           "o",
-          "h",
-          "m",
-          "n"
+          "q",
+          "r",
+          "p"
         ],
         "correct": "o"
       },
       {
         "type": "word_spell",
-        "word": "one",
-        "chinese": "一",
-        "image": "<img src=\"assets/images/one.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "six",
-        "chinese": "六",
-        "image": "<img src=\"assets/images/six.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "eight",
-        "chinese": "八",
-        "image": "<img src=\"assets/images/eight.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "four",
-        "chinese": "四",
-        "image": "<img src=\"assets/images/four.png\" width=\"80\">"
+        "word": "sleep",
+        "chinese": "睡觉",
+        "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+        "display": "slee_",
+        "options": [
+          "p",
+          "r",
+          "s",
+          "q"
+        ],
+        "correct": "p"
       }
     ],
     "practice": [
       {
         "type": "duo_spell",
-        "word": "one",
-        "chinese": "一",
-        "difficulty": "hard",
-        "parts": [
-          "o",
-          "ne"
-        ],
-        "image": "<img src=\"assets/images/one.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "ten",
-        "chinese": "十",
-        "difficulty": "easy",
-        "display": "t_n",
+        "word": "homework",
+        "chinese": "作业",
+        "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
+        "display": "_omework",
         "options": [
-          "g",
-          "e",
-          "f",
-          "s"
-        ],
-        "correct": "e"
-      },
-      {
-        "type": "letter_select",
-        "word": "five",
-        "chinese": "五",
-        "difficulty": "easy",
-        "display": "f_ve",
-        "options": [
-          "v",
-          "i",
-          "u",
-          "k"
-        ],
-        "correct": "i"
-      },
-      {
-        "type": "word_spell",
-        "word": "ten",
-        "chinese": "十",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/ten.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "seven",
-        "chinese": "七",
-        "difficulty": "easy",
-        "display": "seve_",
-        "options": [
-          "k",
-          "n",
-          "g",
-          "p"
-        ],
-        "correct": "n"
-      },
-      {
-        "type": "letter_select",
-        "word": "eight",
-        "chinese": "八",
-        "difficulty": "medium",
-        "display": "eigh_",
-        "options": [
-          "z",
-          "t",
-          "w",
-          "l"
-        ],
-        "correct": "t"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "six",
-        "chinese": "六",
-        "difficulty": "easy",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "six"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/six.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "five",
-        "chinese": "五",
-        "difficulty": "medium",
-        "display": "fiv_",
-        "options": [
-          "q",
-          "c",
-          "l",
-          "e"
-        ],
-        "correct": "e"
-      },
-      {
-        "type": "letter_select",
-        "word": "six",
-        "chinese": "六",
-        "difficulty": "medium",
-        "display": "s_x",
-        "options": [
-          "t",
-          "s",
-          "i",
-          "m"
-        ],
-        "correct": "i"
-      },
-      {
-        "type": "letter_select",
-        "word": "six",
-        "chinese": "六",
-        "difficulty": "hard",
-        "display": "s_x",
-        "options": [
-          "i",
           "j",
-          "s",
-          "x"
+          "i",
+          "k",
+          "h"
         ],
-        "correct": "i"
-      },
-      {
-        "type": "duo_spell",
-        "word": "one",
-        "chinese": "一",
+        "correct": "h",
         "difficulty": "easy",
         "parts": [
-          "o",
-          "ne"
-        ],
-        "image": "<img src=\"assets/images/one.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "four",
-        "chinese": "四",
-        "difficulty": "hard",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "four"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/four.png\" width=\"80\">"
+          "home",
+          "work"
+        ]
       },
       {
         "type": "letter_select",
-        "word": "nine",
-        "chinese": "九",
-        "difficulty": "medium",
-        "display": "_ine",
+        "word": "sleep",
+        "chinese": "睡觉",
+        "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+        "display": "sl_ep",
         "options": [
-          "t",
-          "l",
-          "b",
-          "n"
-        ],
-        "correct": "n"
-      },
-      {
-        "type": "letter_select",
-        "word": "three",
-        "chinese": "三",
-        "difficulty": "medium",
-        "display": "thr_e",
-        "options": [
-          "a",
+          "f",
           "g",
-          "z",
+          "h",
           "e"
         ],
-        "correct": "e"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "seven",
-        "chinese": "七",
-        "difficulty": "easy",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "seven"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">"
+        "correct": "e",
+        "difficulty": "hard",
+        "parts": [
+          "sl",
+          "eep"
+        ]
       },
       {
         "type": "duo_spell",
-        "word": "five",
-        "chinese": "五",
-        "difficulty": "medium",
-        "parts": [
-          "fi",
-          "ve"
-        ],
-        "image": "<img src=\"assets/images/five.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_spell",
-        "word": "two",
-        "chinese": "二",
-        "difficulty": "medium",
-        "parts": [
+        "word": "picture",
+        "chinese": "图片",
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+        "display": "pictu_e",
+        "options": [
+          "s",
           "t",
-          "wo"
+          "u",
+          "r"
         ],
-        "image": "<img src=\"assets/images/two.png\" width=\"80\">"
+        "correct": "r",
+        "difficulty": "hard",
+        "parts": [
+          "pic",
+          "ture"
+        ]
       },
       {
         "type": "letter_select",
-        "word": "three",
-        "chinese": "三",
-        "difficulty": "medium",
-        "display": "t_ree",
+        "word": "play",
+        "chinese": "玩耍",
+        "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
+        "display": "pla_",
         "options": [
-          "h",
-          "w",
-          "r",
+          "z",
+          "a",
+          "y",
           "b"
         ],
-        "correct": "h"
+        "correct": "y",
+        "difficulty": "medium",
+        "parts": [
+          "pl",
+          "ay"
+        ]
       },
       {
-        "type": "duo_spell",
-        "word": "three",
-        "chinese": "三",
+        "type": "letter_select",
+        "word": "homework",
+        "chinese": "作业",
+        "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
+        "display": "homewor_",
+        "options": [
+          "l",
+          "m",
+          "n",
+          "k"
+        ],
+        "correct": "k",
         "difficulty": "easy",
         "parts": [
-          "th",
-          "ree"
+          "home",
+          "work"
+        ]
+      },
+      {
+        "type": "word_spell",
+        "word": "sleep",
+        "chinese": "睡觉",
+        "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+        "display": "sle_p",
+        "options": [
+          "h",
+          "e",
+          "g",
+          "f"
         ],
-        "image": "<img src=\"assets/images/three.png\" width=\"80\">"
+        "correct": "e",
+        "difficulty": "easy",
+        "parts": [
+          "sl",
+          "eep"
+        ]
       },
       {
         "type": "letter_select",
-        "word": "two",
-        "chinese": "二",
+        "word": "picture",
+        "chinese": "图片",
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+        "display": "pictu_e",
+        "options": [
+          "t",
+          "r",
+          "s",
+          "u"
+        ],
+        "correct": "r",
         "difficulty": "medium",
-        "display": "t_o",
-        "options": [
-          "o",
-          "l",
-          "x",
-          "w"
-        ],
-        "correct": "w"
+        "parts": [
+          "pic",
+          "ture"
+        ]
       },
       {
         "type": "letter_select",
-        "word": "four",
-        "chinese": "四",
-        "difficulty": "hard",
-        "display": "f_ur",
+        "word": "play",
+        "chinese": "玩耍",
+        "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
+        "display": "pl_y",
         "options": [
-          "o",
-          "l",
+          "b",
+          "c",
           "d",
-          "m"
+          "a"
         ],
-        "correct": "o"
-      },
-      {
-        "type": "word_spell",
-        "word": "eight",
-        "chinese": "八",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/eight.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_spell",
-        "word": "four",
-        "chinese": "四",
-        "difficulty": "easy",
-        "parts": [
-          "fo",
-          "ur"
-        ],
-        "image": "<img src=\"assets/images/four.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "one",
-        "chinese": "一",
+        "correct": "a",
         "difficulty": "medium",
-        "image": "<img src=\"assets/images/one.png\" width=\"80\">"
+        "parts": [
+          "pl",
+          "ay"
+        ]
       },
       {
         "type": "duo_spell",
-        "word": "nine",
-        "chinese": "九",
-        "difficulty": "hard",
-        "parts": [
-          "ni",
-          "ne"
+        "word": "homework",
+        "chinese": "作业",
+        "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
+        "display": "homew_rk",
+        "options": [
+          "o",
+          "q",
+          "r",
+          "p"
         ],
-        "image": "<img src=\"assets/images/nine.png\" width=\"80\">"
+        "correct": "o",
+        "difficulty": "medium",
+        "parts": [
+          "home",
+          "work"
+        ]
       },
       {
-        "type": "duo_sentence",
-        "word": "two",
-        "chinese": "二",
+        "type": "letter_select",
+        "word": "sleep",
+        "chinese": "睡觉",
+        "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+        "display": "slee_",
+        "options": [
+          "p",
+          "r",
+          "s",
+          "q"
+        ],
+        "correct": "p",
         "difficulty": "easy",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "two"
+        "parts": [
+          "sl",
+          "eep"
+        ]
+      },
+      {
+        "type": "word_spell",
+        "word": "picture",
+        "chinese": "图片",
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+        "display": "p_cture",
+        "options": [
+          "j",
+          "i",
+          "l",
+          "k"
         ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
+        "correct": "i",
+        "difficulty": "medium",
+        "parts": [
+          "pic",
+          "ture"
+        ]
+      },
+      {
+        "type": "word_spell",
+        "word": "play",
+        "chinese": "玩耍",
+        "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
+        "display": "_lay",
+        "options": [
+          "q",
+          "p",
+          "s",
+          "r"
         ],
-        "image": "<img src=\"assets/images/two.png\" width=\"80\">"
+        "correct": "p",
+        "difficulty": "easy",
+        "parts": [
+          "pl",
+          "ay"
+        ]
       }
     ]
   },
   "speaking": {
     "pretest": [
       {
-        "type": "read_sentence",
-        "chinese": "六",
-        "sentence": "I see a six.",
-        "image": "<img src=\"assets/images/six.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "homework",
+        "chinese": "作业",
+        "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
+        "sentence": "It's time to do my homework."
       },
       {
-        "type": "repeat_word",
-        "chinese": "一",
-        "word": "one",
-        "image": "<img src=\"assets/images/one.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "sleep",
+        "chinese": "睡觉",
+        "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+        "sentence": "It's time to do my homework."
       },
       {
-        "type": "repeat_word",
-        "chinese": "八",
-        "word": "eight",
-        "image": "<img src=\"assets/images/eight.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "picture",
+        "chinese": "图片",
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+        "sentence": "I like picture."
       },
       {
-        "type": "read_sentence",
-        "chinese": "一",
-        "sentence": "I see a one.",
-        "image": "<img src=\"assets/images/one.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "play",
+        "chinese": "玩耍",
+        "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
+        "sentence": "It's time to do my homework."
       },
       {
-        "type": "repeat_word",
-        "chinese": "二",
-        "word": "two",
-        "image": "<img src=\"assets/images/two.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "homework",
+        "chinese": "作业",
+        "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
+        "sentence": "I like homework."
       },
       {
-        "type": "read_sentence",
-        "chinese": "四",
-        "sentence": "I see a four.",
-        "image": "<img src=\"assets/images/four.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "sleep",
+        "chinese": "睡觉",
+        "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+        "sentence": "It's time to do my homework."
       },
       {
-        "type": "repeat_word",
-        "chinese": "三",
-        "word": "three",
-        "image": "<img src=\"assets/images/three.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "picture",
+        "chinese": "图片",
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+        "sentence": "It's time to do my homework."
       },
       {
-        "type": "read_sentence",
-        "chinese": "九",
-        "sentence": "I see a nine.",
-        "image": "<img src=\"assets/images/nine.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "play",
+        "chinese": "玩耍",
+        "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
+        "sentence": "It's time to do my homework."
       },
       {
-        "type": "read_sentence",
-        "chinese": "十",
-        "sentence": "I see a ten.",
-        "image": "<img src=\"assets/images/ten.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "homework",
+        "chinese": "作业",
+        "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
+        "sentence": "I like homework."
       },
       {
-        "type": "repeat_word",
-        "chinese": "五",
-        "word": "five",
-        "image": "<img src=\"assets/images/five.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "七",
-        "word": "seven",
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "二",
-        "sentence": "I see a two.",
-        "image": "<img src=\"assets/images/two.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "sleep",
+        "chinese": "睡觉",
+        "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+        "sentence": "It's time to do my homework."
       }
     ],
     "practice": [
       {
-        "type": "repeat_word",
-        "chinese": "二",
-        "difficulty": "medium",
-        "word": "two",
-        "image": "<img src=\"assets/images/two.png\" width=\"80\">"
+        "type": "debate",
+        "word": "homework",
+        "chinese": "作业",
+        "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
+        "sentence": "It's time to go to bed.",
+        "difficulty": "hard"
       },
       {
-        "type": "read_sentence",
-        "chinese": "一",
-        "difficulty": "medium",
-        "sentence": "I see a one.",
-        "image": "<img src=\"assets/images/one.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "sleep",
+        "chinese": "睡觉",
+        "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+        "sentence": "It's time to go to bed.",
+        "difficulty": "easy"
       },
       {
-        "type": "repeat_word",
-        "chinese": "九",
-        "difficulty": "hard",
-        "word": "nine",
-        "image": "<img src=\"assets/images/nine.png\" width=\"80\">"
+        "type": "debate",
+        "word": "picture",
+        "chinese": "图片",
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+        "sentence": "This is a picture.",
+        "difficulty": "easy"
       },
       {
-        "type": "repeat_word",
-        "chinese": "六",
-        "difficulty": "easy",
-        "word": "six",
-        "image": "<img src=\"assets/images/six.png\" width=\"80\">"
+        "type": "debate",
+        "word": "play",
+        "chinese": "玩耍",
+        "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
+        "sentence": "This is a play.",
+        "difficulty": "easy"
       },
       {
-        "type": "read_sentence",
-        "chinese": "四",
-        "difficulty": "medium",
-        "sentence": "I see a four.",
-        "image": "<img src=\"assets/images/four.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "homework",
+        "chinese": "作业",
+        "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
+        "sentence": "It's time to go to bed.",
+        "difficulty": "easy"
       },
       {
-        "type": "read_sentence",
-        "chinese": "十",
-        "difficulty": "medium",
-        "sentence": "I see a ten.",
-        "image": "<img src=\"assets/images/ten.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "sleep",
+        "chinese": "睡觉",
+        "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+        "sentence": "This is a sleep.",
+        "difficulty": "hard"
       },
       {
-        "type": "read_sentence",
-        "chinese": "六",
-        "difficulty": "easy",
-        "sentence": "I see a six.",
-        "image": "<img src=\"assets/images/six.png\" width=\"80\">"
+        "type": "debate",
+        "word": "picture",
+        "chinese": "图片",
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+        "sentence": "This is a picture.",
+        "difficulty": "easy"
       },
       {
-        "type": "repeat_word",
-        "chinese": "七",
-        "difficulty": "easy",
-        "word": "seven",
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "play",
+        "chinese": "玩耍",
+        "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
+        "sentence": "This is a play.",
+        "difficulty": "easy"
       },
       {
-        "type": "read_sentence",
-        "chinese": "二",
-        "difficulty": "easy",
-        "sentence": "I see a two.",
-        "image": "<img src=\"assets/images/two.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "homework",
+        "chinese": "作业",
+        "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
+        "sentence": "This is a homework.",
+        "difficulty": "easy"
       },
       {
-        "type": "read_sentence",
-        "chinese": "四",
-        "difficulty": "easy",
-        "sentence": "I see a four.",
-        "image": "<img src=\"assets/images/four.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "sleep",
+        "chinese": "睡觉",
+        "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+        "sentence": "This is a sleep.",
+        "difficulty": "easy"
       },
       {
-        "type": "read_sentence",
-        "chinese": "三",
-        "difficulty": "easy",
-        "sentence": "I see a three.",
-        "image": "<img src=\"assets/images/three.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "picture",
+        "chinese": "图片",
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+        "sentence": "It's time to go to bed.",
+        "difficulty": "hard"
       },
       {
-        "type": "repeat_word",
-        "chinese": "五",
-        "difficulty": "medium",
-        "word": "five",
-        "image": "<img src=\"assets/images/five.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "一",
-        "difficulty": "easy",
-        "word": "one",
-        "image": "<img src=\"assets/images/one.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "八",
-        "difficulty": "medium",
-        "sentence": "I see a eight.",
-        "image": "<img src=\"assets/images/eight.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "七",
-        "difficulty": "easy",
-        "word": "seven",
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "八",
-        "difficulty": "hard",
-        "word": "eight",
-        "image": "<img src=\"assets/images/eight.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "五",
-        "difficulty": "medium",
-        "sentence": "I see a five.",
-        "image": "<img src=\"assets/images/five.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "一",
-        "difficulty": "medium",
-        "word": "one",
-        "image": "<img src=\"assets/images/one.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "二",
-        "difficulty": "easy",
-        "word": "two",
-        "image": "<img src=\"assets/images/two.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "四",
-        "difficulty": "hard",
-        "sentence": "I see a four.",
-        "image": "<img src=\"assets/images/four.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "六",
-        "difficulty": "easy",
-        "word": "six",
-        "image": "<img src=\"assets/images/six.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "九",
-        "difficulty": "hard",
-        "word": "nine",
-        "image": "<img src=\"assets/images/nine.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "三",
-        "difficulty": "medium",
-        "sentence": "I see a three.",
-        "image": "<img src=\"assets/images/three.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "八",
-        "difficulty": "medium",
-        "sentence": "I see a eight.",
-        "image": "<img src=\"assets/images/eight.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "三",
-        "difficulty": "hard",
-        "word": "three",
-        "image": "<img src=\"assets/images/three.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "十",
-        "difficulty": "medium",
-        "word": "ten",
-        "image": "<img src=\"assets/images/ten.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "五",
-        "difficulty": "hard",
-        "sentence": "I see a five.",
-        "image": "<img src=\"assets/images/five.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "七",
-        "difficulty": "hard",
-        "sentence": "I see a seven.",
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "play",
+        "chinese": "玩耍",
+        "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
+        "sentence": "It's time to go to bed.",
+        "difficulty": "hard"
       }
     ]
   }

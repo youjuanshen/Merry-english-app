@@ -1,381 +1,343 @@
 var unit4_lesson3 = {
   "id": "U4L3",
-  "title": "My family has five.",
+  "title": "Unit 4 Lesson 3: What's your favorite drink?",
   "listening": {
     "pretest": [
       {
-        "type": "listen_tf",
-        "audio": "family",
-        "chinese": "家庭",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">",
-        "correct": false
+        "type": "listen_select",
+        "audio": "orange juice",
+        "chinese": "橙汁",
+        "options": [
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/water.png\" width=\"80\">",
+          "<img src=\"assets/images/banana.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "image": "<img src=\"assets/images/orange_juice.png\" width=\"80\">"
       },
       {
         "type": "listen_select",
-        "audio": "family",
-        "chinese": "家庭",
+        "audio": "banana",
+        "chinese": "香蕉",
         "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
+          "<img src=\"assets/images/water.png\" width=\"80\">",
+          "<img src=\"assets/images/banana.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/orange_juice.png\" width=\"80\">"
         ],
-        "correct": 0
+        "correct": 1,
+        "image": "<img src=\"assets/images/banana.png\" width=\"80\">"
       },
       {
         "type": "listen_select",
-        "audio": "family",
-        "chinese": "家庭",
+        "audio": "water",
+        "chinese": "水",
         "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/water.png\" width=\"80\">",
+          "<img src=\"assets/images/banana.png\" width=\"80\">",
+          "<img src=\"assets/images/orange_juice.png\" width=\"80\">"
         ],
-        "correct": 0
+        "correct": false,
+        "image": "<img src=\"assets/images/water.png\" width=\"80\">"
       },
       {
         "type": "listen_select",
-        "audio": "family",
-        "chinese": "家庭",
+        "audio": "fruit",
+        "chinese": "水果",
         "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
+          "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/water.png\" width=\"80\">",
+          "<img src=\"assets/images/banana.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
         ],
-        "correct": 0
+        "correct": 3,
+        "image": "<img src=\"assets/images/orange_juice.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "orange juice",
+        "chinese": "橙汁",
+        "options": [
+          "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/banana.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/water.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "image": "<img src=\"assets/images/orange_juice.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "banana",
+        "chinese": "香蕉",
+        "options": [
+          "<img src=\"assets/images/water.png\" width=\"80\">",
+          "<img src=\"assets/images/banana.png\" width=\"80\">",
+          "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
+        ],
+        "correct": false,
+        "image": "<img src=\"assets/images/banana.png\" width=\"80\">"
       },
       {
         "type": "listen_select",
-        "audio": "family",
-        "chinese": "家庭",
+        "audio": "water",
+        "chinese": "水",
         "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
+          "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/water.png\" width=\"80\">",
+          "<img src=\"assets/images/banana.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
         ],
-        "correct": 0
+        "correct": 1,
+        "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
       },
       {
         "type": "listen_tf",
-        "audio": "family",
-        "chinese": "家庭",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">",
-        "correct": true
-      },
-      {
-        "type": "listen_tf",
-        "audio": "family",
-        "chinese": "家庭",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">",
-        "correct": true
-      },
-      {
-        "type": "listen_select",
-        "audio": "family",
-        "chinese": "家庭",
+        "audio": "fruit",
+        "chinese": "水果",
         "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/water.png\" width=\"80\">",
+          "<img src=\"assets/images/banana.png\" width=\"80\">",
+          "<img src=\"assets/images/orange_juice.png\" width=\"80\">"
         ],
-        "correct": 0
+        "correct": 0,
+        "image": "<img src=\"assets/images/orange_juice.png\" width=\"80\">"
       },
       {
         "type": "listen_tf",
-        "audio": "family",
-        "chinese": "家庭",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">",
-        "correct": false
+        "audio": "orange juice",
+        "chinese": "橙汁",
+        "options": [
+          "<img src=\"assets/images/banana.png\" width=\"80\">",
+          "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/water.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "image": "<img src=\"assets/images/banana.png\" width=\"80\">"
       },
       {
         "type": "listen_tf",
-        "audio": "family",
-        "chinese": "家庭",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">",
-        "correct": true
+        "audio": "banana",
+        "chinese": "香蕉",
+        "options": [
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/banana.png\" width=\"80\">",
+          "<img src=\"assets/images/water.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "image": "<img src=\"assets/images/banana.png\" width=\"80\">"
       }
     ],
     "practice": [
       {
-        "type": "listen_select",
-        "audio": "family",
-        "chinese": "家庭",
-        "difficulty": "medium",
+        "type": "balloon_pop",
+        "audio": "orange juice",
+        "chinese": "橙汁",
         "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "family",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "family",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "family",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "family",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_tf",
-        "audio": "family",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_select",
-        "audio": "family",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "family",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "family",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_tf",
-        "audio": "family",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">",
-        "correct": true
-      },
-      {
-        "type": "listen_select",
-        "audio": "family",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_tf",
-        "audio": "family",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_select",
-        "audio": "family",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "family",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "family",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "family",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "family",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_tf",
-        "audio": "family",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_select",
-        "audio": "family",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "family",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "family",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "family",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "family",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_tf",
-        "audio": "family",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">",
-        "correct": true
-      },
-      {
-        "type": "listen_select",
-        "audio": "family",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "family",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "scenario",
-        "scenario": "Lily's younger girl plays dolls with her every day.",
-        "chinese": "莉莉的妹妹每天和她玩洋娃娃。",
-        "question": "Who plays with Lily?",
-        "options": [
-          "<img src=\"assets/images/brother.png\" width=\"80\">",
-          "<img src=\"assets/images/sister.png\" width=\"80\">",
-          "<img src=\"assets/images/father.png\" width=\"80\">"
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/water.png\" width=\"80\">",
+          "<img src=\"assets/images/banana.png\" width=\"80\">"
         ],
         "correct": 1,
-        "feedback": "Sister plays dolls!",
-        "difficulty": "easy"
+        "difficulty": "medium",
+        "text": "Find the word",
+        "scenario": "I like bananas.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       },
       {
         "type": "scenario",
-        "scenario": "Someone gives Tom a birthday gift. She says 'Happy Birthday, son!'",
-        "chinese": "有人送给汤姆生日礼物。她说'儿子，生日快乐！'",
-        "question": "Who gives the gift?",
+        "audio": "banana",
+        "chinese": "香蕉",
         "options": [
-          "<img src=\"assets/images/mother.png\" width=\"80\">",
-          "<img src=\"assets/images/sister.png\" width=\"80\">",
-          "<img src=\"assets/images/brother.png\" width=\"80\">"
+          "<img src=\"assets/images/water.png\" width=\"80\">",
+          "<img src=\"assets/images/banana.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/orange_juice.png\" width=\"80\">"
         ],
-        "correct": 0,
-        "feedback": "Mother gives birthday gifts to her son!",
-        "difficulty": "medium"
+        "correct": 1,
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "What's your favorite drink?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "duo_listen_select",
+        "audio": "water",
+        "chinese": "水",
+        "options": [
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/water.png\" width=\"80\">",
+          "<img src=\"assets/images/banana.png\" width=\"80\">",
+          "<img src=\"assets/images/orange_juice.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "medium",
+        "text": "Find the word",
+        "scenario": "I like bananas.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "balloon_pop",
+        "audio": "fruit",
+        "chinese": "水果",
+        "options": [
+          "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/water.png\" width=\"80\">",
+          "<img src=\"assets/images/banana.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "I like bananas.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       },
       {
         "type": "scenario",
-        "scenario": "It is raining. Someone comes with an umbrella to pick up Tom from school.",
-        "chinese": "下雨了。有人拿着雨伞来学校接汤姆。",
-        "question": "This can be Tom's...",
+        "audio": "orange juice",
+        "chinese": "橙汁",
         "options": [
-          "<img src=\"assets/images/mother.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">"
+          "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/banana.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/water.png\" width=\"80\">"
         ],
         "correct": 0,
-        "feedback": "Mother or family picks up children from school!",
-        "difficulty": "medium"
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "What's your favorite drink?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "listen_select",
+        "audio": "banana",
+        "chinese": "香蕉",
+        "options": [
+          "<img src=\"assets/images/water.png\" width=\"80\">",
+          "<img src=\"assets/images/banana.png\" width=\"80\">",
+          "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "medium",
+        "text": "Find the word",
+        "scenario": "What's your favorite drink?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "balloon_pop",
+        "audio": "water",
+        "chinese": "水",
+        "options": [
+          "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/water.png\" width=\"80\">",
+          "<img src=\"assets/images/banana.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "I like bananas.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "balloon_pop",
+        "audio": "fruit",
+        "chinese": "水果",
+        "options": [
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/water.png\" width=\"80\">",
+          "<img src=\"assets/images/banana.png\" width=\"80\">",
+          "<img src=\"assets/images/orange_juice.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "What's your favorite drink?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "listen_select",
+        "audio": "orange juice",
+        "chinese": "橙汁",
+        "options": [
+          "<img src=\"assets/images/banana.png\" width=\"80\">",
+          "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/water.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "medium",
+        "text": "Find the word",
+        "scenario": "What's your favorite drink?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "balloon_pop",
+        "audio": "banana",
+        "chinese": "香蕉",
+        "options": [
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/banana.png\" width=\"80\">",
+          "<img src=\"assets/images/water.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "What's your favorite drink?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "scenario",
+        "audio": "water",
+        "chinese": "水",
+        "options": [
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/banana.png\" width=\"80\">",
+          "<img src=\"assets/images/water.png\" width=\"80\">",
+          "<img src=\"assets/images/orange_juice.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "I like bananas.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "balloon_pop",
+        "audio": "fruit",
+        "chinese": "水果",
+        "options": [
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/water.png\" width=\"80\">",
+          "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/banana.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "medium",
+        "text": "Find the word",
+        "scenario": "What's your favorite drink?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       }
     ]
   },
@@ -383,1245 +345,1029 @@ var unit4_lesson3 = {
     "pretest": [
       {
         "type": "sentence_match",
-        "chinese": "家庭",
-        "sentence": "I see a family.",
+        "chinese": "橙汁",
+        "word": "orange juice",
+        "sentence": "What's your favorite drink?",
         "options": [
           {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
+            "text": "<img src=\"assets/images/water.png\" width=\"80\">",
+            "value": "water"
+          },
+          {
+            "text": "<img src=\"assets/images/banana.png\" width=\"80\">",
+            "value": "banana"
+          },
+          {
+            "text": "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+            "value": "orange juice"
+          },
+          {
+            "text": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+            "value": "fruit"
           }
         ],
-        "correct": "family"
+        "correct": "orange juice"
       },
       {
         "type": "word_match",
-        "chinese": "家庭",
-        "word": "family",
+        "chinese": "香蕉",
+        "word": "banana",
+        "sentence": "I see a banana.",
         "options": [
           {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
+            "text": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+            "value": "fruit"
+          },
+          {
+            "text": "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+            "value": "orange juice"
           }
         ],
-        "correct": "family"
+        "correct": "banana"
       },
       {
         "type": "word_match",
-        "chinese": "家庭",
-        "word": "family",
+        "chinese": "水",
+        "word": "water",
+        "sentence": "What's your favorite drink?",
         "options": [
           {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
+            "text": "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+            "value": "orange juice"
+          },
+          {
+            "text": "<img src=\"assets/images/banana.png\" width=\"80\">",
+            "value": "banana"
+          },
+          {
+            "text": "<img src=\"assets/images/water.png\" width=\"80\">",
+            "value": "water"
+          },
+          {
+            "text": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+            "value": "fruit"
           }
         ],
-        "correct": "family"
+        "correct": "water"
+      },
+      {
+        "type": "word_match",
+        "chinese": "水果",
+        "word": "fruit",
+        "sentence": "I see a fruit.",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/banana.png\" width=\"80\">",
+            "value": "banana"
+          },
+          {
+            "text": "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+            "value": "orange juice"
+          }
+        ],
+        "correct": "fruit"
+      },
+      {
+        "type": "word_match",
+        "chinese": "橙汁",
+        "word": "orange juice",
+        "sentence": "I see a orange juice.",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/banana.png\" width=\"80\">",
+            "value": "banana"
+          },
+          {
+            "text": "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+            "value": "orange juice"
+          }
+        ],
+        "correct": "orange juice"
+      },
+      {
+        "type": "word_match",
+        "chinese": "香蕉",
+        "word": "banana",
+        "sentence": "What's your favorite drink?",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+            "value": "orange juice"
+          },
+          {
+            "text": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+            "value": "fruit"
+          }
+        ],
+        "correct": "banana"
+      },
+      {
+        "type": "word_match",
+        "chinese": "水",
+        "word": "water",
+        "sentence": "I see a water.",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/banana.png\" width=\"80\">",
+            "value": "banana"
+          },
+          {
+            "text": "<img src=\"assets/images/water.png\" width=\"80\">",
+            "value": "water"
+          },
+          {
+            "text": "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+            "value": "orange juice"
+          },
+          {
+            "text": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+            "value": "fruit"
+          }
+        ],
+        "correct": "water"
+      },
+      {
+        "type": "word_match",
+        "chinese": "水果",
+        "word": "fruit",
+        "sentence": "What's your favorite drink?",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/water.png\" width=\"80\">",
+            "value": "water"
+          },
+          {
+            "text": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+            "value": "fruit"
+          },
+          {
+            "text": "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+            "value": "orange juice"
+          },
+          {
+            "text": "<img src=\"assets/images/banana.png\" width=\"80\">",
+            "value": "banana"
+          }
+        ],
+        "correct": "fruit"
+      },
+      {
+        "type": "word_match",
+        "chinese": "橙汁",
+        "word": "orange juice",
+        "sentence": "I see a orange juice.",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/banana.png\" width=\"80\">",
+            "value": "banana"
+          },
+          {
+            "text": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+            "value": "fruit"
+          }
+        ],
+        "correct": "orange juice"
       },
       {
         "type": "sentence_match",
-        "chinese": "家庭",
-        "sentence": "I see a family.",
+        "chinese": "香蕉",
+        "word": "banana",
+        "sentence": "What's your favorite drink?",
         "options": [
           {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
-          }
-        ],
-        "correct": "family"
-      },
-      {
-        "type": "word_match",
-        "chinese": "家庭",
-        "word": "family",
-        "options": [
+            "text": "<img src=\"assets/images/banana.png\" width=\"80\">",
+            "value": "banana"
+          },
           {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
+            "text": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+            "value": "fruit"
           }
         ],
-        "correct": "family"
-      },
-      {
-        "type": "word_match",
-        "chinese": "家庭",
-        "word": "family",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
-          }
-        ],
-        "correct": "family"
-      },
-      {
-        "type": "word_match",
-        "chinese": "家庭",
-        "word": "family",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
-          }
-        ],
-        "correct": "family"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "家庭",
-        "sentence": "I see a family.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
-          }
-        ],
-        "correct": "family"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "家庭",
-        "sentence": "I see a family.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
-          }
-        ],
-        "correct": "family"
-      },
-      {
-        "type": "word_match",
-        "chinese": "家庭",
-        "word": "family",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
-          }
-        ],
-        "correct": "family"
-      },
-      {
-        "type": "word_match",
-        "chinese": "家庭",
-        "word": "family",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
-          }
-        ],
-        "correct": "family"
-      },
-      {
-        "type": "word_match",
-        "chinese": "家庭",
-        "word": "family",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
-          }
-        ],
-        "correct": "family"
+        "correct": "banana"
       }
     ],
     "practice": [
       {
-        "type": "whack_mole",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "word": "family",
+        "type": "word_match",
+        "chinese": "橙汁",
+        "word": "orange juice",
+        "sentence": "I like bananas.",
         "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
+          {
+            "text": "<img src=\"assets/images/water.png\" width=\"80\">",
+            "value": "water"
+          },
+          {
+            "text": "<img src=\"assets/images/banana.png\" width=\"80\">",
+            "value": "banana"
+          },
+          {
+            "text": "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+            "value": "orange juice"
+          },
+          {
+            "text": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+            "value": "fruit"
+          }
         ],
-        "correct": 0
+        "correct": 1,
+        "difficulty": "easy"
       },
       {
         "type": "duo_race",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "word": "family",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "word": "family",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "word_match",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "word": "family",
+        "chinese": "香蕉",
+        "word": "banana",
+        "sentence": "Look at the banana.",
         "options": [
           {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
+            "text": "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+            "value": "orange juice"
+          },
+          {
+            "text": "<img src=\"assets/images/banana.png\" width=\"80\">",
+            "value": "banana"
+          },
+          {
+            "text": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+            "value": "fruit"
+          },
+          {
+            "text": "<img src=\"assets/images/water.png\" width=\"80\">",
+            "value": "water"
           }
         ],
-        "correct": "family"
+        "correct": 1,
+        "difficulty": "easy"
       },
       {
-        "type": "whack_mole",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "word": "family",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "word_match",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "word": "family",
+        "type": "duo_race",
+        "chinese": "水",
+        "word": "water",
+        "sentence": "I like bananas.",
         "options": [
           {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
-          }
-        ],
-        "correct": "family"
-      },
-      {
-        "type": "word_match",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "word": "family",
-        "options": [
+            "text": "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+            "value": "orange juice"
+          },
           {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
+            "text": "<img src=\"assets/images/banana.png\" width=\"80\">",
+            "value": "banana"
+          },
+          {
+            "text": "<img src=\"assets/images/water.png\" width=\"80\">",
+            "value": "water"
+          },
+          {
+            "text": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+            "value": "fruit"
           }
         ],
-        "correct": "family"
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "word": "family",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
+        "correct": 1,
+        "difficulty": "medium"
       },
       {
         "type": "sentence_match",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "sentence": "I see a family.",
+        "chinese": "水果",
+        "word": "fruit",
+        "sentence": "I like bananas.",
         "options": [
           {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
+            "text": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+            "value": "fruit"
+          },
+          {
+            "text": "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+            "value": "orange juice"
+          },
+          {
+            "text": "<img src=\"assets/images/water.png\" width=\"80\">",
+            "value": "water"
+          },
+          {
+            "text": "<img src=\"assets/images/banana.png\" width=\"80\">",
+            "value": "banana"
           }
         ],
-        "correct": "family"
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "word": "family",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
+        "correct": 3,
+        "difficulty": "easy"
       },
       {
         "type": "duo_race",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "word": "family",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "word_match",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "word": "family",
+        "chinese": "橙汁",
+        "word": "orange juice",
+        "sentence": "I like bananas.",
         "options": [
           {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
+            "text": "<img src=\"assets/images/water.png\" width=\"80\">",
+            "value": "water"
+          },
+          {
+            "text": "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+            "value": "orange juice"
+          },
+          {
+            "text": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+            "value": "fruit"
+          },
+          {
+            "text": "<img src=\"assets/images/banana.png\" width=\"80\">",
+            "value": "banana"
           }
         ],
-        "correct": "family"
+        "correct": "orange juice",
+        "difficulty": "easy"
+      },
+      {
+        "type": "duo_race",
+        "chinese": "香蕉",
+        "word": "banana",
+        "sentence": "Look at the banana.",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+            "value": "fruit"
+          },
+          {
+            "text": "<img src=\"assets/images/water.png\" width=\"80\">",
+            "value": "water"
+          },
+          {
+            "text": "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+            "value": "orange juice"
+          },
+          {
+            "text": "<img src=\"assets/images/banana.png\" width=\"80\">",
+            "value": "banana"
+          }
+        ],
+        "correct": "banana",
+        "difficulty": "hard"
       },
       {
         "type": "sentence_match",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "sentence": "I see a family.",
+        "chinese": "水",
+        "word": "water",
+        "sentence": "Look at the water.",
         "options": [
           {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
+            "text": "<img src=\"assets/images/banana.png\" width=\"80\">",
+            "value": "banana"
+          },
+          {
+            "text": "<img src=\"assets/images/water.png\" width=\"80\">",
+            "value": "water"
+          },
+          {
+            "text": "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+            "value": "orange juice"
+          },
+          {
+            "text": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+            "value": "fruit"
           }
         ],
-        "correct": "family"
+        "correct": "water",
+        "difficulty": "hard"
       },
       {
         "type": "word_match",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "word": "family",
+        "chinese": "水果",
+        "word": "fruit",
+        "sentence": "Look at the fruit.",
         "options": [
-          {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
-          }
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/water.png\" width=\"80\">",
+          "<img src=\"assets/images/banana.png\" width=\"80\">",
+          "<img src=\"assets/images/orange_juice.png\" width=\"80\">"
         ],
-        "correct": "family"
+        "correct": 0,
+        "difficulty": "easy"
       },
       {
         "type": "word_match",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "word": "family",
+        "chinese": "橙汁",
+        "word": "orange juice",
+        "sentence": "Look at the orange juice.",
+        "options": [
+          "<img src=\"assets/images/banana.png\" width=\"80\">",
+          "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/water.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
+        ],
+        "correct": "orange juice",
+        "difficulty": "hard"
+      },
+      {
+        "type": "duo_race",
+        "chinese": "香蕉",
+        "word": "banana",
+        "sentence": "Look at the banana.",
         "options": [
           {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
+            "text": "<img src=\"assets/images/banana.png\" width=\"80\">",
+            "value": "banana"
+          },
+          {
+            "text": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+            "value": "fruit"
+          },
+          {
+            "text": "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+            "value": "orange juice"
+          },
+          {
+            "text": "<img src=\"assets/images/water.png\" width=\"80\">",
+            "value": "water"
           }
         ],
-        "correct": "family"
+        "correct": "banana",
+        "difficulty": "easy"
+      },
+      {
+        "type": "duo_race",
+        "chinese": "水",
+        "word": "water",
+        "sentence": "I like bananas.",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+            "value": "fruit"
+          },
+          {
+            "text": "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+            "value": "orange juice"
+          },
+          {
+            "text": "<img src=\"assets/images/banana.png\" width=\"80\">",
+            "value": "banana"
+          },
+          {
+            "text": "<img src=\"assets/images/water.png\" width=\"80\">",
+            "value": "water"
+          }
+        ],
+        "correct": 2,
+        "difficulty": "hard"
       },
       {
         "type": "sentence_match",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "sentence": "I see a family.",
+        "chinese": "水果",
+        "word": "fruit",
+        "sentence": "I like bananas.",
         "options": [
-          {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
-          }
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/water.png\" width=\"80\">",
+          "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/banana.png\" width=\"80\">"
         ],
-        "correct": "family"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "word": "family",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "duo_race",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "word": "family",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "sentence": "I see a family.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
-          }
-        ],
-        "correct": "family"
-      },
-      {
-        "type": "word_match",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "word": "family",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
-          }
-        ],
-        "correct": "family"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "word": "family",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "word_match",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "word": "family",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
-          }
-        ],
-        "correct": "family"
-      },
-      {
-        "type": "word_match",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "word": "family",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
-          }
-        ],
-        "correct": "family"
-      },
-      {
-        "type": "word_match",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "word": "family",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
-          }
-        ],
-        "correct": "family"
-      },
-      {
-        "type": "word_match",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "word": "family",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
-          }
-        ],
-        "correct": "family"
-      },
-      {
-        "type": "word_match",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "word": "family",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
-          }
-        ],
-        "correct": "family"
-      },
-      {
-        "type": "word_match",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "word": "family",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
-          }
-        ],
-        "correct": "family"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "word": "family",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "duo_race",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "word": "family",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "duo_race",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "word": "family",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
+        "correct": "fruit",
+        "difficulty": "easy"
       }
     ]
   },
   "writing": {
     "pretest": [
       {
-        "type": "word_spell",
-        "word": "family",
-        "chinese": "家庭",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "type": "letter_select",
+        "word": "orange juice",
+        "chinese": "橙汁",
+        "image": "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+        "display": "orange j_ice",
+        "options": [
+          "v",
+          "w",
+          "u",
+          "x"
+        ],
+        "correct": "u"
       },
       {
         "type": "word_spell",
-        "word": "family",
-        "chinese": "家庭",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "word": "banana",
+        "chinese": "香蕉",
+        "image": "<img src=\"assets/images/banana.png\" width=\"80\">",
+        "display": "ban_na",
+        "options": [
+          "c",
+          "b",
+          "d",
+          "a"
+        ],
+        "correct": "a"
       },
       {
         "type": "word_spell",
-        "word": "family",
-        "chinese": "家庭",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "word": "water",
+        "chinese": "水",
+        "image": "<img src=\"assets/images/water.png\" width=\"80\">",
+        "display": "w_ter",
+        "options": [
+          "a",
+          "c",
+          "d",
+          "b"
+        ],
+        "correct": "a"
       },
       {
         "type": "word_spell",
-        "word": "family",
-        "chinese": "家庭",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "family",
-        "chinese": "家庭",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "family",
-        "chinese": "家庭",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "family",
-        "chinese": "家庭",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "family",
-        "chinese": "家庭",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "word": "fruit",
+        "chinese": "水果",
+        "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+        "display": "fr_it",
+        "options": [
+          "u",
+          "w",
+          "x",
+          "v"
+        ],
+        "correct": "u"
       },
       {
         "type": "letter_select",
-        "word": "family",
-        "chinese": "家庭",
-        "display": "fami_y",
+        "word": "orange juice",
+        "chinese": "橙汁",
+        "image": "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+        "display": "orange _uice",
         "options": [
+          "m",
+          "k",
           "j",
-          "o",
-          "c",
           "l"
         ],
-        "correct": "l"
-      },
-      {
-        "type": "word_spell",
-        "word": "family",
-        "chinese": "家庭",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "family",
-        "chinese": "家庭",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "correct": "j"
       },
       {
         "type": "letter_select",
-        "word": "family",
-        "chinese": "家庭",
-        "display": "_amily",
+        "word": "banana",
+        "chinese": "香蕉",
+        "image": "<img src=\"assets/images/banana.png\" width=\"80\">",
+        "display": "_anana",
         "options": [
-          "f",
+          "c",
           "d",
-          "e",
-          "p"
+          "b",
+          "e"
         ],
-        "correct": "f"
-      }
-    ],
-    "practice": [
-      {
-        "type": "duo_sentence",
-        "word": "family",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "family"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "family",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "family",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "family"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "correct": "b"
       },
       {
         "type": "letter_select",
-        "word": "family",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "display": "fam_ly",
+        "word": "water",
+        "chinese": "水",
+        "image": "<img src=\"assets/images/water.png\" width=\"80\">",
+        "display": "wate_",
         "options": [
-          "e",
           "u",
-          "o",
-          "i"
+          "r",
+          "s",
+          "t"
+        ],
+        "correct": "r"
+      },
+      {
+        "type": "word_spell",
+        "word": "fruit",
+        "chinese": "水果",
+        "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+        "display": "f_uit",
+        "options": [
+          "u",
+          "r",
+          "t",
+          "s"
+        ],
+        "correct": "r"
+      },
+      {
+        "type": "word_spell",
+        "word": "orange juice",
+        "chinese": "橙汁",
+        "image": "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+        "display": "orange ju_ce",
+        "options": [
+          "l",
+          "k",
+          "i",
+          "j"
         ],
         "correct": "i"
       },
       {
-        "type": "letter_select",
-        "word": "family",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "display": "fa_ily",
+        "type": "word_spell",
+        "word": "banana",
+        "chinese": "香蕉",
+        "image": "<img src=\"assets/images/banana.png\" width=\"80\">",
+        "display": "bana_a",
         "options": [
-          "k",
-          "z",
-          "s",
-          "m"
-        ],
-        "correct": "m"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "family",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "family"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "family",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "family"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "family",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "family"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_spell",
-        "word": "family",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "parts": [
-          "fam",
-          "ily"
-        ],
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "family",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "family"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "family",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "display": "f_mily",
-        "options": [
-          "s",
-          "a",
-          "r",
-          "k"
-        ],
-        "correct": "a"
-      },
-      {
-        "type": "letter_select",
-        "word": "family",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "display": "famil_",
-        "options": [
-          "o",
-          "y",
-          "a",
-          "w"
-        ],
-        "correct": "y"
-      },
-      {
-        "type": "letter_select",
-        "word": "family",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "display": "fami_y",
-        "options": [
-          "l",
-          "b",
           "q",
-          "i"
-        ],
-        "correct": "l"
-      },
-      {
-        "type": "word_spell",
-        "word": "family",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "family",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "display": "_amily",
-        "options": [
-          "x",
-          "t",
-          "f",
-          "e"
-        ],
-        "correct": "f"
-      },
-      {
-        "type": "letter_select",
-        "word": "family",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "display": "f_mily",
-        "options": [
-          "a",
-          "g",
-          "m",
-          "t"
-        ],
-        "correct": "a"
-      },
-      {
-        "type": "word_spell",
-        "word": "family",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "family",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "family"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "family",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "display": "f_mily",
-        "options": [
-          "r",
-          "c",
-          "a",
-          "i"
-        ],
-        "correct": "a"
-      },
-      {
-        "type": "letter_select",
-        "word": "family",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "display": "f_mily",
-        "options": [
-          "k",
-          "a",
-          "t",
-          "g"
-        ],
-        "correct": "a"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "family",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "family"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_spell",
-        "word": "family",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "parts": [
-          "fam",
-          "ily"
-        ],
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "family",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "display": "_amily",
-        "options": [
-          "g",
-          "b",
-          "f",
-          "k"
-        ],
-        "correct": "f"
-      },
-      {
-        "type": "duo_spell",
-        "word": "family",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "parts": [
-          "fam",
-          "ily"
-        ],
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "family",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "display": "famil_",
-        "options": [
-          "y",
           "o",
           "p",
-          "v"
+          "n"
         ],
-        "correct": "y"
+        "correct": "n"
+      }
+    ],
+    "practice": [
+      {
+        "type": "letter_select",
+        "word": "orange juice",
+        "chinese": "橙汁",
+        "image": "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+        "display": "orange j_ice",
+        "options": [
+          "v",
+          "w",
+          "u",
+          "x"
+        ],
+        "correct": "u",
+        "difficulty": "hard",
+        "parts": [
+          "orange",
+          " juice"
+        ]
       },
       {
-        "type": "duo_sentence",
-        "word": "family",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "words": [
-          "This",
-          "is",
+        "type": "duo_spell",
+        "word": "banana",
+        "chinese": "香蕉",
+        "image": "<img src=\"assets/images/banana.png\" width=\"80\">",
+        "display": "ban_na",
+        "options": [
+          "c",
+          "b",
+          "d",
+          "a"
+        ],
+        "correct": "a",
+        "difficulty": "easy",
+        "parts": [
+          "ban",
+          "ana"
+        ]
+      },
+      {
+        "type": "letter_select",
+        "word": "water",
+        "chinese": "水",
+        "image": "<img src=\"assets/images/water.png\" width=\"80\">",
+        "display": "w_ter",
+        "options": [
           "a",
-          "family"
+          "c",
+          "d",
+          "b"
         ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
+        "correct": "a",
+        "difficulty": "medium",
+        "parts": [
+          "wa",
+          "ter"
+        ]
+      },
+      {
+        "type": "word_spell",
+        "word": "fruit",
+        "chinese": "水果",
+        "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+        "display": "fr_it",
+        "options": [
+          "u",
+          "w",
+          "x",
+          "v"
         ],
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "correct": "u",
+        "difficulty": "hard",
+        "parts": [
+          "fr",
+          "uit"
+        ]
+      },
+      {
+        "type": "word_spell",
+        "word": "orange juice",
+        "chinese": "橙汁",
+        "image": "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+        "display": "orange _uice",
+        "options": [
+          "m",
+          "k",
+          "j",
+          "l"
+        ],
+        "correct": "j",
+        "difficulty": "easy",
+        "parts": [
+          "orange",
+          " juice"
+        ]
+      },
+      {
+        "type": "letter_select",
+        "word": "banana",
+        "chinese": "香蕉",
+        "image": "<img src=\"assets/images/banana.png\" width=\"80\">",
+        "display": "_anana",
+        "options": [
+          "c",
+          "d",
+          "b",
+          "e"
+        ],
+        "correct": "b",
+        "difficulty": "easy",
+        "parts": [
+          "ban",
+          "ana"
+        ]
+      },
+      {
+        "type": "word_spell",
+        "word": "water",
+        "chinese": "水",
+        "image": "<img src=\"assets/images/water.png\" width=\"80\">",
+        "display": "wate_",
+        "options": [
+          "u",
+          "r",
+          "s",
+          "t"
+        ],
+        "correct": "r",
+        "difficulty": "medium",
+        "parts": [
+          "wa",
+          "ter"
+        ]
+      },
+      {
+        "type": "duo_spell",
+        "word": "fruit",
+        "chinese": "水果",
+        "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+        "display": "f_uit",
+        "options": [
+          "u",
+          "r",
+          "t",
+          "s"
+        ],
+        "correct": "r",
+        "difficulty": "hard",
+        "parts": [
+          "fr",
+          "uit"
+        ]
+      },
+      {
+        "type": "duo_spell",
+        "word": "orange juice",
+        "chinese": "橙汁",
+        "image": "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+        "display": "orange ju_ce",
+        "options": [
+          "l",
+          "k",
+          "i",
+          "j"
+        ],
+        "correct": "i",
+        "difficulty": "easy",
+        "parts": [
+          "orange",
+          " juice"
+        ]
+      },
+      {
+        "type": "duo_spell",
+        "word": "banana",
+        "chinese": "香蕉",
+        "image": "<img src=\"assets/images/banana.png\" width=\"80\">",
+        "display": "bana_a",
+        "options": [
+          "q",
+          "o",
+          "p",
+          "n"
+        ],
+        "correct": "n",
+        "difficulty": "easy",
+        "parts": [
+          "ban",
+          "ana"
+        ]
+      },
+      {
+        "type": "duo_spell",
+        "word": "water",
+        "chinese": "水",
+        "image": "<img src=\"assets/images/water.png\" width=\"80\">",
+        "display": "wat_r",
+        "options": [
+          "h",
+          "e",
+          "g",
+          "f"
+        ],
+        "correct": "e",
+        "difficulty": "medium",
+        "parts": [
+          "wa",
+          "ter"
+        ]
+      },
+      {
+        "type": "duo_spell",
+        "word": "fruit",
+        "chinese": "水果",
+        "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+        "display": "_ruit",
+        "options": [
+          "i",
+          "g",
+          "h",
+          "f"
+        ],
+        "correct": "f",
+        "difficulty": "hard",
+        "parts": [
+          "fr",
+          "uit"
+        ]
       }
     ]
   },
   "speaking": {
     "pretest": [
       {
-        "type": "repeat_word",
-        "chinese": "家庭",
-        "word": "family",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "orange juice",
+        "chinese": "橙汁",
+        "image": "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+        "sentence": "I like orange juice."
       },
       {
-        "type": "read_sentence",
-        "chinese": "家庭",
-        "sentence": "I see a family.",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "banana",
+        "chinese": "香蕉",
+        "image": "<img src=\"assets/images/banana.png\" width=\"80\">",
+        "sentence": "I like banana."
       },
       {
-        "type": "read_sentence",
-        "chinese": "家庭",
-        "sentence": "I see a family.",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "water",
+        "chinese": "水",
+        "image": "<img src=\"assets/images/water.png\" width=\"80\">",
+        "sentence": "I like water."
       },
       {
-        "type": "read_sentence",
-        "chinese": "家庭",
-        "sentence": "I see a family.",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "fruit",
+        "chinese": "水果",
+        "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+        "sentence": "What's your favorite drink?"
       },
       {
-        "type": "read_sentence",
-        "chinese": "家庭",
-        "sentence": "I see a family.",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "orange juice",
+        "chinese": "橙汁",
+        "image": "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+        "sentence": "What's your favorite drink?"
       },
       {
-        "type": "repeat_word",
-        "chinese": "家庭",
-        "word": "family",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "banana",
+        "chinese": "香蕉",
+        "image": "<img src=\"assets/images/banana.png\" width=\"80\">",
+        "sentence": "What's your favorite drink?"
       },
       {
-        "type": "read_sentence",
-        "chinese": "家庭",
-        "sentence": "I see a family.",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "water",
+        "chinese": "水",
+        "image": "<img src=\"assets/images/water.png\" width=\"80\">",
+        "sentence": "What's your favorite drink?"
       },
       {
-        "type": "read_sentence",
-        "chinese": "家庭",
-        "sentence": "I see a family.",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "fruit",
+        "chinese": "水果",
+        "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+        "sentence": "I like fruit."
       },
       {
-        "type": "repeat_word",
-        "chinese": "家庭",
-        "word": "family",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "orange juice",
+        "chinese": "橙汁",
+        "image": "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+        "sentence": "I like orange juice."
       },
       {
-        "type": "read_sentence",
-        "chinese": "家庭",
-        "sentence": "I see a family.",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "家庭",
-        "word": "family",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "家庭",
-        "word": "family",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "banana",
+        "chinese": "香蕉",
+        "image": "<img src=\"assets/images/banana.png\" width=\"80\">",
+        "sentence": "I like banana."
       }
     ],
     "practice": [
       {
-        "type": "read_sentence",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "sentence": "I see a family.",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "orange juice",
+        "chinese": "橙汁",
+        "image": "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+        "sentence": "This is a orange juice.",
+        "difficulty": "easy"
       },
       {
-        "type": "repeat_word",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "word": "family",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "banana",
+        "chinese": "香蕉",
+        "image": "<img src=\"assets/images/banana.png\" width=\"80\">",
+        "sentence": "I like bananas.",
+        "difficulty": "hard"
       },
       {
-        "type": "repeat_word",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "word": "family",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "type": "debate",
+        "word": "water",
+        "chinese": "水",
+        "image": "<img src=\"assets/images/water.png\" width=\"80\">",
+        "sentence": "I like bananas.",
+        "difficulty": "hard"
       },
       {
-        "type": "read_sentence",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "sentence": "I see a family.",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "fruit",
+        "chinese": "水果",
+        "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+        "sentence": "I like bananas.",
+        "difficulty": "easy"
       },
       {
-        "type": "repeat_word",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "word": "family",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "type": "debate",
+        "word": "orange juice",
+        "chinese": "橙汁",
+        "image": "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+        "sentence": "I like bananas.",
+        "difficulty": "easy"
       },
       {
-        "type": "repeat_word",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "word": "family",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "banana",
+        "chinese": "香蕉",
+        "image": "<img src=\"assets/images/banana.png\" width=\"80\">",
+        "sentence": "I like bananas.",
+        "difficulty": "easy"
       },
       {
-        "type": "read_sentence",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "sentence": "I see a family.",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "water",
+        "chinese": "水",
+        "image": "<img src=\"assets/images/water.png\" width=\"80\">",
+        "sentence": "This is a water.",
+        "difficulty": "hard"
       },
       {
-        "type": "read_sentence",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "sentence": "I see a family.",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "fruit",
+        "chinese": "水果",
+        "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+        "sentence": "This is a fruit.",
+        "difficulty": "easy"
       },
       {
-        "type": "read_sentence",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "sentence": "I see a family.",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "orange juice",
+        "chinese": "橙汁",
+        "image": "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
+        "sentence": "This is a orange juice.",
+        "difficulty": "medium"
       },
       {
-        "type": "repeat_word",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "word": "family",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "banana",
+        "chinese": "香蕉",
+        "image": "<img src=\"assets/images/banana.png\" width=\"80\">",
+        "sentence": "I like bananas.",
+        "difficulty": "hard"
       },
       {
-        "type": "read_sentence",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "sentence": "I see a family.",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "water",
+        "chinese": "水",
+        "image": "<img src=\"assets/images/water.png\" width=\"80\">",
+        "sentence": "This is a water.",
+        "difficulty": "easy"
       },
       {
-        "type": "read_sentence",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "sentence": "I see a family.",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "sentence": "I see a family.",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "sentence": "I see a family.",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "sentence": "I see a family.",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "word": "family",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "word": "family",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "sentence": "I see a family.",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "sentence": "I see a family.",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "sentence": "I see a family.",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "word": "family",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "sentence": "I see a family.",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "word": "family",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "word": "family",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "sentence": "I see a family.",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "word": "family",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "sentence": "I see a family.",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "word": "family",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "fruit",
+        "chinese": "水果",
+        "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+        "sentence": "I like bananas.",
+        "difficulty": "medium"
       }
     ]
   }

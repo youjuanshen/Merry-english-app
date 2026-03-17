@@ -1,540 +1,343 @@
 var unit2_lesson1 = {
   "id": "U2L1",
-  "title": "It's red.",
+  "title": "Unit 2 Lesson 1: What size do you wear?",
   "listening": {
     "pretest": [
       {
         "type": "listen_select",
-        "audio": "yellow",
-        "chinese": "黄色",
+        "audio": "T-shirt",
+        "chinese": "T恤",
         "options": [
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">"
+          "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">",
+          "<img src=\"assets/images/shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/mouse.png\" width=\"80\">"
         ],
-        "correct": 2
+        "correct": 0,
+        "image": "<img src=\"assets/images/shirt.png\" width=\"80\">"
       },
       {
         "type": "listen_select",
-        "audio": "yellow",
-        "chinese": "黄色",
+        "audio": "wear",
+        "chinese": "穿戴",
         "options": [
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">"
+          "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">"
         ],
-        "correct": 1
+        "correct": 1,
+        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "big",
+        "chinese": "大的",
+        "options": [
+          "<img src=\"assets/images/shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">",
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/T-shirt.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "small",
+        "chinese": "小的",
+        "options": [
+          "<img src=\"assets/images/elephant.png\" width=\"80\">",
+          "<img src=\"assets/images/shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/mouse.png\" width=\"80\">"
+        ],
+        "correct": false,
+        "image": "<img src=\"assets/images/T-shirt.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "T-shirt",
+        "chinese": "T恤",
+        "options": [
+          "<img src=\"assets/images/shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "image": "<img src=\"assets/images/shirt.png\" width=\"80\">"
       },
       {
         "type": "listen_select",
-        "audio": "green",
-        "chinese": "绿色",
+        "audio": "wear",
+        "chinese": "穿戴",
         "options": [
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">"
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">",
+          "<img src=\"assets/images/shirt.png\" width=\"80\">"
         ],
-        "correct": 2
+        "correct": 3,
+        "image": "<img src=\"assets/images/shirt.png\" width=\"80\">"
       },
       {
         "type": "listen_tf",
-        "audio": "blue",
-        "chinese": "蓝色",
-        "image": "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-        "correct": false
+        "audio": "big",
+        "chinese": "大的",
+        "options": [
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">",
+          "<img src=\"assets/images/shirt.png\" width=\"80\">"
+        ],
+        "correct": true,
+        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">"
       },
       {
         "type": "listen_select",
-        "audio": "red",
-        "chinese": "红色",
+        "audio": "small",
+        "chinese": "小的",
         "options": [
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">"
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">",
+          "<img src=\"assets/images/T-shirt.png\" width=\"80\">"
         ],
-        "correct": 3
+        "correct": true,
+        "image": "<img src=\"assets/images/T-shirt.png\" width=\"80\">"
       },
       {
         "type": "listen_tf",
-        "audio": "blue",
-        "chinese": "蓝色",
-        "image": "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-        "correct": true
-      },
-      {
-        "type": "listen_tf",
-        "audio": "blue",
-        "chinese": "蓝色",
-        "image": "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-        "correct": true
-      },
-      {
-        "type": "listen_tf",
-        "audio": "red",
-        "chinese": "红色",
-        "image": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_select",
-        "audio": "green",
-        "chinese": "绿色",
+        "audio": "T-shirt",
+        "chinese": "T恤",
         "options": [
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">"
+          "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">"
         ],
-        "correct": 1
+        "correct": true,
+        "image": "<img src=\"assets/images/shirt.png\" width=\"80\">"
       },
       {
         "type": "listen_tf",
-        "audio": "red",
-        "chinese": "红色",
-        "image": "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-        "correct": true
+        "audio": "wear",
+        "chinese": "穿戴",
+        "options": [
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">"
+        ],
+        "correct": true,
+        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">"
       }
     ],
     "practice": [
       {
-        "type": "listen_select",
-        "audio": "yellow",
-        "chinese": "黄色",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
         "type": "duo_listen_select",
-        "audio": "yellow",
-        "chinese": "黄色",
-        "difficulty": "medium",
+        "audio": "T-shirt",
+        "chinese": "T恤",
         "options": [
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">"
+          "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">",
+          "<img src=\"assets/images/shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/mouse.png\" width=\"80\">"
         ],
-        "correct": 1
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "blue",
-        "chinese": "蓝色",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "green",
-        "chinese": "绿色",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "green",
-        "chinese": "绿色",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "blue",
-        "chinese": "蓝色",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "listen_select",
-        "audio": "red",
-        "chinese": "红色",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "green",
-        "chinese": "绿色",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "yellow",
-        "chinese": "黄色",
+        "correct": 0,
         "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "listen_select",
-        "audio": "blue",
-        "chinese": "蓝色",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "listen_select",
-        "audio": "green",
-        "chinese": "绿色",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "green",
-        "chinese": "绿色",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "red",
-        "chinese": "红色",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "red",
-        "chinese": "红色",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "red",
-        "chinese": "红色",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "blue",
-        "chinese": "蓝色",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "listen_select",
-        "audio": "yellow",
-        "chinese": "黄色",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "blue",
-        "chinese": "蓝色",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "listen_select",
-        "audio": "blue",
-        "chinese": "蓝色",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "yellow",
-        "chinese": "黄色",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "listen_select",
-        "audio": "yellow",
-        "chinese": "黄色",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "green",
-        "chinese": "绿色",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "listen_select",
-        "audio": "red",
-        "chinese": "红色",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "red",
-        "chinese": "红色",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "listen_tf",
-        "audio": "blue",
-        "chinese": "蓝色",
-        "difficulty": "easy",
-        "image": "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-        "correct": true
-      },
-      {
-        "type": "listen_tf",
-        "audio": "red",
-        "chinese": "红色",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "balloon_pop",
         "text": "Find the word",
-        "chinese": "黄色",
-        "options": [
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">"
-        ],
-        "correct": 2,
-        "difficulty": "easy"
-      },
-      {
-        "type": "balloon_pop",
-        "text": "Find the word",
-        "chinese": "红色",
-        "options": [
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">"
-        ],
-        "correct": 3,
-        "difficulty": "medium"
-      },
-      {
-        "type": "balloon_pop",
-        "text": "Find the word",
-        "chinese": "黄色",
-        "options": [
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">"
-        ],
-        "correct": 2,
-        "difficulty": "medium"
-      },
-      {
-        "type": "balloon_pop",
-        "text": "Find the word",
-        "chinese": "蓝色",
-        "options": [
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
-        ],
-        "correct": 2,
-        "difficulty": "hard"
+        "scenario": "It's too big.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       },
       {
         "type": "scenario",
-        "scenario": "Tom is at the pet shop. He wants a quiet pet.",
-        "chinese": "汤姆在宠物店，他想要一只安静的宠物。",
-        "question": "What should we pick?",
+        "audio": "wear",
+        "chinese": "穿戴",
         "options": [
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/fish.png\" width=\"80\">"
-        ],
-        "correct": 2,
-        "feedback": "A fish is quiet!",
-        "difficulty": "medium"
-      },
-      {
-        "type": "scenario",
-        "scenario": "Lily wants to play catch in the park.",
-        "chinese": "莉莉想在公园玩接球游戏。",
-        "question": "What should we pick?",
-        "options": [
-          "<img src=\"assets/images/fish.png\" width=\"80\">",
+          "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/shirt.png\" width=\"80\">",
           "<img src=\"assets/images/mouse.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">"
-        ],
-        "correct": 2,
-        "feedback": "Dogs love playing catch!",
-        "difficulty": "medium"
-      },
-      {
-        "type": "scenario",
-        "scenario": "Sam is hungry. He wants a big fruit.",
-        "chinese": "山姆饿了。他想要一个大水果。",
-        "question": "What should we pick?",
-        "options": [
-          "<img src=\"assets/images/mouse.png\" width=\"80\">",
-          "<img src=\"assets/images/fish.png\" width=\"80\">",
-          "<img src=\"assets/images/orange_orange.png\" width=\"80\">"
-        ],
-        "correct": 2,
-        "feedback": "An orange is a fruit!",
-        "difficulty": "medium"
-      },
-      {
-        "type": "scenario",
-        "scenario": "Emma sees something flying in the sky.",
-        "chinese": "艾玛看到天上有东西在飞。",
-        "question": "What should we pick?",
-        "options": [
-          "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/bird.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">"
+          "<img src=\"assets/images/elephant.png\" width=\"80\">"
         ],
         "correct": 1,
-        "feedback": "Birds can fly!",
-        "difficulty": "medium"
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "It's too big.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "duo_listen_select",
+        "audio": "big",
+        "chinese": "大的",
+        "options": [
+          "<img src=\"assets/images/shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">",
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/T-shirt.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "It's too big.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "balloon_pop",
+        "audio": "small",
+        "chinese": "小的",
+        "options": [
+          "<img src=\"assets/images/elephant.png\" width=\"80\">",
+          "<img src=\"assets/images/shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/mouse.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "It's too big.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "duo_listen_select",
+        "audio": "T-shirt",
+        "chinese": "T恤",
+        "options": [
+          "<img src=\"assets/images/shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "medium",
+        "text": "Find the word",
+        "scenario": "It's too big.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "listen_select",
+        "audio": "wear",
+        "chinese": "穿戴",
+        "options": [
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">",
+          "<img src=\"assets/images/shirt.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "difficulty": "medium",
+        "text": "Find the word",
+        "scenario": "What size do you wear?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "scenario",
+        "audio": "big",
+        "chinese": "大的",
+        "options": [
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">",
+          "<img src=\"assets/images/shirt.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "It's too big.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "duo_listen_select",
+        "audio": "small",
+        "chinese": "小的",
+        "options": [
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">",
+          "<img src=\"assets/images/T-shirt.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "medium",
+        "text": "Find the word",
+        "scenario": "It's too big.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "balloon_pop",
+        "audio": "T-shirt",
+        "chinese": "T恤",
+        "options": [
+          "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "medium",
+        "text": "Find the word",
+        "scenario": "It's too big.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "scenario",
+        "audio": "wear",
+        "chinese": "穿戴",
+        "options": [
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "What size do you wear?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "balloon_pop",
+        "audio": "big",
+        "chinese": "大的",
+        "options": [
+          "<img src=\"assets/images/shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">",
+          "<img src=\"assets/images/T-shirt.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "It's too big.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "balloon_pop",
+        "audio": "small",
+        "chinese": "小的",
+        "options": [
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">",
+          "<img src=\"assets/images/shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/T-shirt.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "It's too big.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       }
     ]
   },
@@ -542,663 +345,439 @@ var unit2_lesson1 = {
     "pretest": [
       {
         "type": "word_match",
-        "chinese": "红色",
-        "word": "red",
+        "chinese": "T恤",
+        "word": "T-shirt",
+        "sentence": "I see a T-shirt.",
         "options": [
           {
-            "text": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-            "value": "yellow"
+            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
+            "value": "big"
           },
           {
-            "text": "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-            "value": "red"
+            "text": "<img src=\"assets/images/mouse.png\" width=\"80\">",
+            "value": "small"
           }
         ],
-        "correct": "red"
-      },
-      {
-        "type": "word_match",
-        "chinese": "绿色",
-        "word": "green",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-            "value": "yellow"
-          },
-          {
-            "text": "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-            "value": "green"
-          }
-        ],
-        "correct": "green"
+        "correct": "T-shirt"
       },
       {
         "type": "sentence_match",
-        "chinese": "黄色",
-        "sentence": "I see a yellow.",
+        "chinese": "穿戴",
+        "word": "wear",
+        "sentence": "I see a wear.",
         "options": [
           {
-            "text": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-            "value": "yellow"
+            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
+            "value": "big"
           },
           {
-            "text": "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-            "value": "green"
+            "text": "<img src=\"assets/images/shirt.png\" width=\"80\">",
+            "value": "wear"
           }
         ],
-        "correct": "yellow"
-      },
-      {
-        "type": "word_match",
-        "chinese": "红色",
-        "word": "red",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-            "value": "yellow"
-          },
-          {
-            "text": "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-            "value": "red"
-          }
-        ],
-        "correct": "red"
+        "correct": "wear"
       },
       {
         "type": "sentence_match",
-        "chinese": "黄色",
-        "sentence": "I see a yellow.",
+        "chinese": "大的",
+        "word": "big",
+        "sentence": "What size do you wear?",
         "options": [
           {
-            "text": "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-            "value": "red"
+            "text": "<img src=\"assets/images/shirt.png\" width=\"80\">",
+            "value": "wear"
           },
           {
-            "text": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-            "value": "yellow"
+            "text": "<img src=\"assets/images/mouse.png\" width=\"80\">",
+            "value": "small"
+          },
+          {
+            "text": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+            "value": "T-shirt"
+          },
+          {
+            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
+            "value": "big"
           }
         ],
-        "correct": "yellow"
+        "correct": "big"
       },
       {
         "type": "sentence_match",
-        "chinese": "绿色",
-        "sentence": "I see a green.",
+        "chinese": "小的",
+        "word": "small",
+        "sentence": "What size do you wear?",
         "options": [
           {
-            "text": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-            "value": "yellow"
+            "text": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+            "value": "T-shirt"
           },
           {
-            "text": "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-            "value": "green"
+            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
+            "value": "big"
           }
         ],
-        "correct": "green"
-      },
-      {
-        "type": "word_match",
-        "chinese": "黄色",
-        "word": "yellow",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-            "value": "yellow"
-          },
-          {
-            "text": "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-            "value": "red"
-          }
-        ],
-        "correct": "yellow"
-      },
-      {
-        "type": "word_match",
-        "chinese": "蓝色",
-        "word": "blue",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-            "value": "red"
-          },
-          {
-            "text": "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-            "value": "blue"
-          }
-        ],
-        "correct": "blue"
-      },
-      {
-        "type": "word_match",
-        "chinese": "蓝色",
-        "word": "blue",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-            "value": "yellow"
-          },
-          {
-            "text": "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-            "value": "blue"
-          }
-        ],
-        "correct": "blue"
+        "correct": "small"
       },
       {
         "type": "sentence_match",
-        "chinese": "红色",
-        "sentence": "I see a red.",
+        "chinese": "T恤",
+        "word": "T-shirt",
+        "sentence": "I see a T-shirt.",
         "options": [
           {
-            "text": "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-            "value": "blue"
+            "text": "<img src=\"assets/images/mouse.png\" width=\"80\">",
+            "value": "small"
           },
           {
-            "text": "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-            "value": "red"
-          }
-        ],
-        "correct": "red"
-      },
-      {
-        "type": "word_match",
-        "chinese": "绿色",
-        "word": "green",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-            "value": "green"
+            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
+            "value": "big"
           },
           {
-            "text": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-            "value": "yellow"
+            "text": "<img src=\"assets/images/shirt.png\" width=\"80\">",
+            "value": "wear"
+          },
+          {
+            "text": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+            "value": "T-shirt"
           }
         ],
-        "correct": "green"
+        "correct": "T-shirt"
       },
       {
         "type": "sentence_match",
-        "chinese": "蓝色",
-        "sentence": "I see a blue.",
+        "chinese": "穿戴",
+        "word": "wear",
+        "sentence": "I see a wear.",
         "options": [
           {
-            "text": "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-            "value": "blue"
+            "text": "<img src=\"assets/images/shirt.png\" width=\"80\">",
+            "value": "wear"
           },
           {
-            "text": "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-            "value": "red"
+            "text": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+            "value": "T-shirt"
+          },
+          {
+            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
+            "value": "big"
+          },
+          {
+            "text": "<img src=\"assets/images/mouse.png\" width=\"80\">",
+            "value": "small"
           }
         ],
-        "correct": "blue"
+        "correct": "wear"
+      },
+      {
+        "type": "word_match",
+        "chinese": "大的",
+        "word": "big",
+        "sentence": "What size do you wear?",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
+            "value": "big"
+          },
+          {
+            "text": "<img src=\"assets/images/shirt.png\" width=\"80\">",
+            "value": "wear"
+          }
+        ],
+        "correct": "big"
+      },
+      {
+        "type": "sentence_match",
+        "chinese": "小的",
+        "word": "small",
+        "sentence": "What size do you wear?",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/shirt.png\" width=\"80\">",
+            "value": "wear"
+          },
+          {
+            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
+            "value": "big"
+          }
+        ],
+        "correct": "small"
+      },
+      {
+        "type": "word_match",
+        "chinese": "T恤",
+        "word": "T-shirt",
+        "sentence": "I see a T-shirt.",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/mouse.png\" width=\"80\">",
+            "value": "small"
+          },
+          {
+            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
+            "value": "big"
+          }
+        ],
+        "correct": "T-shirt"
+      },
+      {
+        "type": "word_match",
+        "chinese": "穿戴",
+        "word": "wear",
+        "sentence": "I see a wear.",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+            "value": "T-shirt"
+          },
+          {
+            "text": "<img src=\"assets/images/mouse.png\" width=\"80\">",
+            "value": "small"
+          }
+        ],
+        "correct": "wear"
       }
     ],
     "practice": [
       {
-        "type": "sentence_match",
-        "chinese": "绿色",
-        "difficulty": "hard",
-        "sentence": "I see a green.",
+        "type": "duo_race",
+        "chinese": "T恤",
+        "word": "T-shirt",
+        "sentence": "It's too big.",
         "options": [
           {
-            "text": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-            "value": "yellow"
+            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
+            "value": "big"
           },
           {
-            "text": "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-            "value": "green"
+            "text": "<img src=\"assets/images/mouse.png\" width=\"80\">",
+            "value": "small"
+          },
+          {
+            "text": "<img src=\"assets/images/shirt.png\" width=\"80\">",
+            "value": "wear"
+          },
+          {
+            "text": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+            "value": "T-shirt"
           }
         ],
-        "correct": "green"
+        "correct": 0,
+        "difficulty": "easy"
       },
       {
         "type": "word_match",
-        "chinese": "绿色",
-        "difficulty": "medium",
-        "word": "green",
+        "chinese": "穿戴",
+        "word": "wear",
+        "sentence": "It's too big.",
         "options": [
-          {
-            "text": "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-            "value": "green"
-          },
-          {
-            "text": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-            "value": "yellow"
-          }
+          "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">"
         ],
-        "correct": "green"
+        "correct": 1,
+        "difficulty": "easy"
       },
       {
         "type": "word_match",
-        "chinese": "蓝色",
-        "difficulty": "medium",
-        "word": "blue",
+        "chinese": "大的",
+        "word": "big",
+        "sentence": "Look at the big.",
         "options": [
-          {
-            "text": "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-            "value": "blue"
-          },
-          {
-            "text": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-            "value": "yellow"
-          }
+          "<img src=\"assets/images/shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">",
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/T-shirt.png\" width=\"80\">"
         ],
-        "correct": "blue"
+        "correct": 1,
+        "difficulty": "medium"
       },
       {
         "type": "word_match",
-        "chinese": "蓝色",
-        "difficulty": "easy",
-        "word": "blue",
+        "chinese": "小的",
+        "word": "small",
+        "sentence": "It's too big.",
         "options": [
           {
-            "text": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-            "value": "yellow"
+            "text": "<img src=\"assets/images/mouse.png\" width=\"80\">",
+            "value": "small"
           },
           {
-            "text": "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-            "value": "blue"
+            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
+            "value": "big"
+          },
+          {
+            "text": "<img src=\"assets/images/shirt.png\" width=\"80\">",
+            "value": "wear"
+          },
+          {
+            "text": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+            "value": "T-shirt"
           }
         ],
-        "correct": "blue"
+        "correct": "small",
+        "difficulty": "medium"
       },
       {
         "type": "word_match",
-        "chinese": "黄色",
-        "difficulty": "medium",
-        "word": "yellow",
+        "chinese": "T恤",
+        "word": "T-shirt",
+        "sentence": "It's too big.",
         "options": [
-          {
-            "text": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-            "value": "yellow"
-          },
-          {
-            "text": "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-            "value": "blue"
-          }
+          "<img src=\"assets/images/shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">"
         ],
-        "correct": "yellow"
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "蓝色",
-        "difficulty": "easy",
-        "word": "blue",
-        "options": [
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">"
-        ],
-        "correct": 2
+        "correct": "T-shirt",
+        "difficulty": "hard"
       },
       {
         "type": "duo_race",
-        "chinese": "红色",
-        "difficulty": "easy",
-        "word": "red",
-        "options": [
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "红色",
-        "difficulty": "easy",
-        "sentence": "I see a red.",
+        "chinese": "穿戴",
+        "word": "wear",
+        "sentence": "It's too big.",
         "options": [
           {
-            "text": "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-            "value": "red"
+            "text": "<img src=\"assets/images/shirt.png\" width=\"80\">",
+            "value": "wear"
           },
           {
-            "text": "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-            "value": "green"
+            "text": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+            "value": "T-shirt"
+          },
+          {
+            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
+            "value": "big"
+          },
+          {
+            "text": "<img src=\"assets/images/mouse.png\" width=\"80\">",
+            "value": "small"
           }
         ],
-        "correct": "red"
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "蓝色",
-        "difficulty": "easy",
-        "word": "blue",
-        "options": [
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "黄色",
-        "difficulty": "medium",
-        "word": "yellow",
-        "options": [
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
-        ],
-        "correct": 3
+        "correct": 3,
+        "difficulty": "medium"
       },
       {
         "type": "word_match",
-        "chinese": "绿色",
-        "difficulty": "medium",
-        "word": "green",
+        "chinese": "大的",
+        "word": "big",
+        "sentence": "Look at the big.",
         "options": [
           {
-            "text": "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-            "value": "blue"
+            "text": "<img src=\"assets/images/shirt.png\" width=\"80\">",
+            "value": "wear"
           },
           {
-            "text": "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-            "value": "green"
+            "text": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+            "value": "T-shirt"
+          },
+          {
+            "text": "<img src=\"assets/images/mouse.png\" width=\"80\">",
+            "value": "small"
+          },
+          {
+            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
+            "value": "big"
           }
         ],
-        "correct": "green"
+        "correct": 2,
+        "difficulty": "medium"
       },
       {
         "type": "word_match",
-        "chinese": "红色",
-        "difficulty": "hard",
-        "word": "red",
+        "chinese": "小的",
+        "word": "small",
+        "sentence": "It's too big.",
         "options": [
-          {
-            "text": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-            "value": "yellow"
-          },
-          {
-            "text": "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-            "value": "red"
-          }
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">",
+          "<img src=\"assets/images/T-shirt.png\" width=\"80\">"
         ],
-        "correct": "red"
-      },
-      {
-        "type": "word_match",
-        "chinese": "蓝色",
-        "difficulty": "medium",
-        "word": "blue",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-            "value": "yellow"
-          },
-          {
-            "text": "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-            "value": "blue"
-          }
-        ],
-        "correct": "blue"
+        "correct": 0,
+        "difficulty": "hard"
       },
       {
         "type": "duo_race",
-        "chinese": "绿色",
-        "difficulty": "medium",
-        "word": "green",
-        "options": [
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "word_match",
-        "chinese": "黄色",
-        "difficulty": "hard",
-        "word": "yellow",
+        "chinese": "T恤",
+        "word": "T-shirt",
+        "sentence": "Look at the T-shirt.",
         "options": [
           {
-            "text": "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-            "value": "red"
+            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
+            "value": "big"
           },
           {
-            "text": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-            "value": "yellow"
-          }
-        ],
-        "correct": "yellow"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "红色",
-        "difficulty": "easy",
-        "sentence": "I see a red.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-            "value": "blue"
+            "text": "<img src=\"assets/images/mouse.png\" width=\"80\">",
+            "value": "small"
           },
           {
-            "text": "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-            "value": "red"
+            "text": "<img src=\"assets/images/shirt.png\" width=\"80\">",
+            "value": "wear"
+          },
+          {
+            "text": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+            "value": "T-shirt"
           }
         ],
-        "correct": "red"
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "蓝色",
-        "difficulty": "easy",
-        "word": "blue",
-        "options": [
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
-        ],
-        "correct": 3
+        "correct": 0,
+        "difficulty": "easy"
       },
       {
         "type": "duo_race",
-        "chinese": "绿色",
-        "difficulty": "easy",
-        "word": "green",
+        "chinese": "穿戴",
+        "word": "wear",
+        "sentence": "Look at the wear.",
         "options": [
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">"
         ],
-        "correct": 0
+        "correct": 2,
+        "difficulty": "hard"
       },
       {
         "type": "duo_race",
-        "chinese": "黄色",
-        "difficulty": "hard",
-        "word": "yellow",
+        "chinese": "大的",
+        "word": "big",
+        "sentence": "Look at the big.",
         "options": [
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">"
+          "<img src=\"assets/images/shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/elephant.png\" width=\"80\">",
+          "<img src=\"assets/images/T-shirt.png\" width=\"80\">"
         ],
-        "correct": 0
-      },
-      {
-        "type": "word_match",
-        "chinese": "红色",
-        "difficulty": "easy",
-        "word": "red",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-            "value": "red"
-          },
-          {
-            "text": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-            "value": "yellow"
-          }
-        ],
-        "correct": "red"
-      },
-      {
-        "type": "word_match",
-        "chinese": "黄色",
-        "difficulty": "easy",
-        "word": "yellow",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-            "value": "yellow"
-          },
-          {
-            "text": "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-            "value": "blue"
-          }
-        ],
-        "correct": "yellow"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "红色",
-        "difficulty": "hard",
-        "sentence": "I see a red.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-            "value": "blue"
-          },
-          {
-            "text": "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-            "value": "red"
-          }
-        ],
-        "correct": "red"
+        "correct": 2,
+        "difficulty": "medium"
       },
       {
         "type": "duo_race",
-        "chinese": "绿色",
-        "difficulty": "hard",
-        "word": "green",
-        "options": [
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "word_match",
-        "chinese": "红色",
-        "difficulty": "medium",
-        "word": "red",
+        "chinese": "小的",
+        "word": "small",
+        "sentence": "Look at the small.",
         "options": [
           {
-            "text": "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-            "value": "red"
+            "text": "<img src=\"assets/images/mouse.png\" width=\"80\">",
+            "value": "small"
           },
           {
-            "text": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-            "value": "yellow"
-          }
-        ],
-        "correct": "red"
-      },
-      {
-        "type": "word_match",
-        "chinese": "黄色",
-        "difficulty": "easy",
-        "word": "yellow",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-            "value": "yellow"
+            "text": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+            "value": "T-shirt"
           },
           {
-            "text": "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-            "value": "green"
-          }
-        ],
-        "correct": "yellow"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "绿色",
-        "difficulty": "hard",
-        "word": "green",
-        "options": [
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "黄色",
-        "difficulty": "medium",
-        "sentence": "I see a yellow.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-            "value": "yellow"
+            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
+            "value": "big"
           },
           {
-            "text": "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-            "value": "blue"
+            "text": "<img src=\"assets/images/shirt.png\" width=\"80\">",
+            "value": "wear"
           }
         ],
-        "correct": "yellow"
-      },
-      {
-        "type": "word_match",
-        "chinese": "蓝色",
-        "difficulty": "hard",
-        "word": "blue",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-            "value": "blue"
-          },
-          {
-            "text": "<img src=\"assets/images/red_apple.png\" width=\"80\">",
-            "value": "red"
-          }
-        ],
-        "correct": "blue"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "蓝色",
-        "difficulty": "medium",
-        "sentence": "I see a blue.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-            "value": "yellow"
-          },
-          {
-            "text": "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-            "value": "blue"
-          }
-        ],
-        "correct": "blue"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "红色",
-        "difficulty": "medium",
-        "word": "red",
-        "options": [
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/green_tree.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/red_apple.png\" width=\"80\">"
-        ],
-        "correct": 3
+        "correct": 0,
+        "difficulty": "medium"
       }
     ]
   },
@@ -1206,742 +785,545 @@ var unit2_lesson1 = {
     "pretest": [
       {
         "type": "word_spell",
-        "word": "blue",
-        "chinese": "蓝色",
-        "image": "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "yellow",
-        "chinese": "黄色",
-        "display": "yel_ow",
+        "word": "T-shirt",
+        "chinese": "T恤",
+        "image": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+        "display": "T-_hirt",
         "options": [
-          "l",
+          "u",
           "s",
-          "k",
-          "u"
+          "t",
+          "v"
         ],
-        "correct": "l"
-      },
-      {
-        "type": "letter_select",
-        "word": "green",
-        "chinese": "绿色",
-        "display": "gr_en",
-        "options": [
-          "k",
-          "q",
-          "f",
-          "e"
-        ],
-        "correct": "e"
-      },
-      {
-        "type": "letter_select",
-        "word": "yellow",
-        "chinese": "黄色",
-        "display": "yell_w",
-        "options": [
-          "j",
-          "r",
-          "o",
-          "k"
-        ],
-        "correct": "o"
+        "correct": "s"
       },
       {
         "type": "word_spell",
-        "word": "red",
-        "chinese": "红色",
-        "image": "<img src=\"assets/images/red_apple.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "green",
-        "chinese": "绿色",
-        "display": "gree_",
+        "word": "wear",
+        "chinese": "穿戴",
+        "image": "<img src=\"assets/images/shirt.png\" width=\"80\">",
+        "display": "w_ar",
         "options": [
-          "n",
-          "p",
-          "m",
-          "h"
-        ],
-        "correct": "n"
-      },
-      {
-        "type": "letter_select",
-        "word": "yellow",
-        "chinese": "黄色",
-        "display": "yello_",
-        "options": [
-          "k",
-          "s",
-          "w",
-          "z"
-        ],
-        "correct": "w"
-      },
-      {
-        "type": "letter_select",
-        "word": "blue",
-        "chinese": "蓝色",
-        "display": "bl_e",
-        "options": [
-          "j",
-          "z",
-          "u",
-          "b"
-        ],
-        "correct": "u"
-      },
-      {
-        "type": "letter_select",
-        "word": "green",
-        "chinese": "绿色",
-        "display": "gre_n",
-        "options": [
-          "c",
           "g",
           "e",
-          "r"
+          "h",
+          "f"
         ],
         "correct": "e"
       },
       {
         "type": "word_spell",
-        "word": "red",
-        "chinese": "红色",
-        "image": "<img src=\"assets/images/red_apple.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "blue",
-        "chinese": "蓝色",
-        "display": "b_ue",
+        "word": "big",
+        "chinese": "大的",
+        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">",
+        "display": "bi_",
         "options": [
-          "l",
-          "e",
-          "s",
-          "y"
+          "h",
+          "j",
+          "i",
+          "g"
         ],
-        "correct": "l"
+        "correct": "g"
       },
       {
         "type": "word_spell",
-        "word": "red",
-        "chinese": "红色",
-        "image": "<img src=\"assets/images/red_apple.png\" width=\"80\">"
+        "word": "small",
+        "chinese": "小的",
+        "image": "<img src=\"assets/images/mouse.png\" width=\"80\">",
+        "display": "_mall",
+        "options": [
+          "s",
+          "u",
+          "t",
+          "v"
+        ],
+        "correct": "s"
+      },
+      {
+        "type": "word_spell",
+        "word": "T-shirt",
+        "chinese": "T恤",
+        "image": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+        "display": "T-s_irt",
+        "options": [
+          "j",
+          "h",
+          "k",
+          "i"
+        ],
+        "correct": "h"
+      },
+      {
+        "type": "letter_select",
+        "word": "wear",
+        "chinese": "穿戴",
+        "image": "<img src=\"assets/images/shirt.png\" width=\"80\">",
+        "display": "we_r",
+        "options": [
+          "d",
+          "a",
+          "c",
+          "b"
+        ],
+        "correct": "a"
+      },
+      {
+        "type": "letter_select",
+        "word": "big",
+        "chinese": "大的",
+        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">",
+        "display": "b_g",
+        "options": [
+          "k",
+          "l",
+          "i",
+          "j"
+        ],
+        "correct": "i"
+      },
+      {
+        "type": "letter_select",
+        "word": "small",
+        "chinese": "小的",
+        "image": "<img src=\"assets/images/mouse.png\" width=\"80\">",
+        "display": "s_all",
+        "options": [
+          "o",
+          "m",
+          "p",
+          "n"
+        ],
+        "correct": "m"
+      },
+      {
+        "type": "word_spell",
+        "word": "T-shirt",
+        "chinese": "T恤",
+        "image": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+        "display": "T-_hirt",
+        "options": [
+          "s",
+          "t",
+          "u",
+          "v"
+        ],
+        "correct": "s"
+      },
+      {
+        "type": "letter_select",
+        "word": "wear",
+        "chinese": "穿戴",
+        "image": "<img src=\"assets/images/shirt.png\" width=\"80\">",
+        "display": "_ear",
+        "options": [
+          "w",
+          "z",
+          "y",
+          "x"
+        ],
+        "correct": "w"
       }
     ],
     "practice": [
       {
-        "type": "word_spell",
-        "word": "green",
-        "chinese": "绿色",
-        "difficulty": "easy",
-        "image": "<img src=\"assets/images/green_tree.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "blue",
-        "chinese": "蓝色",
-        "difficulty": "medium",
-        "display": "b_ue",
+        "type": "duo_spell",
+        "word": "T-shirt",
+        "chinese": "T恤",
+        "image": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+        "display": "T-_hirt",
         "options": [
-          "y",
-          "x",
+          "u",
+          "s",
           "t",
-          "l"
+          "v"
         ],
-        "correct": "l"
-      },
-      {
-        "type": "word_spell",
-        "word": "green",
-        "chinese": "绿色",
+        "correct": "s",
         "difficulty": "easy",
-        "image": "<img src=\"assets/images/green_tree.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "red",
-        "chinese": "红色",
-        "difficulty": "medium",
-        "image": "<img src=\"assets/images/red_apple.png\" width=\"80\">"
+        "parts": [
+          "T-s",
+          "hirt"
+        ]
       },
       {
         "type": "duo_spell",
-        "word": "green",
-        "chinese": "绿色",
-        "difficulty": "hard",
-        "parts": [
-          "gr",
-          "een"
-        ],
-        "image": "<img src=\"assets/images/green_tree.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "blue",
-        "chinese": "蓝色",
-        "difficulty": "medium",
-        "image": "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "blue",
-        "chinese": "蓝色",
-        "difficulty": "hard",
-        "display": "blu_",
+        "word": "wear",
+        "chinese": "穿戴",
+        "image": "<img src=\"assets/images/shirt.png\" width=\"80\">",
+        "display": "w_ar",
         "options": [
+          "g",
           "e",
-          "t",
-          "k",
-          "m"
+          "h",
+          "f"
         ],
-        "correct": "e"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "yellow",
-        "chinese": "黄色",
-        "difficulty": "easy",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "yellow"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "yellow",
-        "chinese": "黄色",
-        "difficulty": "hard",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "yellow"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_spell",
-        "word": "green",
-        "chinese": "绿色",
-        "difficulty": "hard",
-        "parts": [
-          "gr",
-          "een"
-        ],
-        "image": "<img src=\"assets/images/green_tree.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "red",
-        "chinese": "红色",
-        "difficulty": "easy",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "red"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/red_apple.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_spell",
-        "word": "yellow",
-        "chinese": "黄色",
+        "correct": "e",
         "difficulty": "medium",
         "parts": [
-          "yel",
-          "low"
-        ],
-        "image": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "red",
-        "chinese": "红色",
-        "difficulty": "medium",
-        "image": "<img src=\"assets/images/red_apple.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "green",
-        "chinese": "绿色",
-        "difficulty": "easy",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "green"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/green_tree.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "red",
-        "chinese": "红色",
-        "difficulty": "medium",
-        "image": "<img src=\"assets/images/red_apple.png\" width=\"80\">"
+          "we",
+          "ar"
+        ]
       },
       {
         "type": "letter_select",
-        "word": "blue",
-        "chinese": "蓝色",
-        "difficulty": "medium",
-        "display": "b_ue",
+        "word": "big",
+        "chinese": "大的",
+        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">",
+        "display": "bi_",
         "options": [
+          "h",
           "j",
-          "f",
-          "d",
-          "l"
-        ],
-        "correct": "l"
-      },
-      {
-        "type": "word_spell",
-        "word": "blue",
-        "chinese": "蓝色",
-        "difficulty": "medium",
-        "image": "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_spell",
-        "word": "green",
-        "chinese": "绿色",
-        "difficulty": "easy",
-        "parts": [
-          "gr",
-          "een"
-        ],
-        "image": "<img src=\"assets/images/green_tree.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "yellow",
-        "chinese": "黄色",
-        "difficulty": "medium",
-        "display": "yell_w",
-        "options": [
-          "x",
           "i",
-          "o",
-          "b"
+          "g"
         ],
-        "correct": "o"
-      },
-      {
-        "type": "letter_select",
-        "word": "yellow",
-        "chinese": "黄色",
-        "difficulty": "easy",
-        "display": "_ellow",
-        "options": [
-          "y",
-          "l",
-          "v",
-          "s"
-        ],
-        "correct": "y"
+        "correct": "g",
+        "difficulty": "medium",
+        "parts": [
+          "b",
+          "ig"
+        ]
       },
       {
         "type": "duo_spell",
-        "word": "yellow",
-        "chinese": "黄色",
-        "difficulty": "hard",
-        "parts": [
-          "yel",
-          "low"
-        ],
-        "image": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "red",
-        "chinese": "红色",
-        "difficulty": "hard",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "red"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/red_apple.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "blue",
-        "chinese": "蓝色",
-        "difficulty": "hard",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "blue"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "blue",
-        "chinese": "蓝色",
-        "difficulty": "medium",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "blue"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "red",
-        "chinese": "红色",
-        "difficulty": "easy",
-        "display": "_ed",
+        "word": "small",
+        "chinese": "小的",
+        "image": "<img src=\"assets/images/mouse.png\" width=\"80\">",
+        "display": "_mall",
         "options": [
-          "r",
+          "s",
+          "u",
+          "t",
+          "v"
+        ],
+        "correct": "s",
+        "difficulty": "medium",
+        "parts": [
+          "sm",
+          "all"
+        ]
+      },
+      {
+        "type": "word_spell",
+        "word": "T-shirt",
+        "chinese": "T恤",
+        "image": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+        "display": "T-s_irt",
+        "options": [
           "j",
-          "n",
+          "h",
+          "k",
           "i"
         ],
-        "correct": "r"
+        "correct": "h",
+        "difficulty": "medium",
+        "parts": [
+          "T-s",
+          "hirt"
+        ]
+      },
+      {
+        "type": "word_spell",
+        "word": "wear",
+        "chinese": "穿戴",
+        "image": "<img src=\"assets/images/shirt.png\" width=\"80\">",
+        "display": "we_r",
+        "options": [
+          "d",
+          "a",
+          "c",
+          "b"
+        ],
+        "correct": "a",
+        "difficulty": "hard",
+        "parts": [
+          "we",
+          "ar"
+        ]
+      },
+      {
+        "type": "duo_spell",
+        "word": "big",
+        "chinese": "大的",
+        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">",
+        "display": "b_g",
+        "options": [
+          "k",
+          "l",
+          "i",
+          "j"
+        ],
+        "correct": "i",
+        "difficulty": "easy",
+        "parts": [
+          "b",
+          "ig"
+        ]
+      },
+      {
+        "type": "word_spell",
+        "word": "small",
+        "chinese": "小的",
+        "image": "<img src=\"assets/images/mouse.png\" width=\"80\">",
+        "display": "s_all",
+        "options": [
+          "o",
+          "m",
+          "p",
+          "n"
+        ],
+        "correct": "m",
+        "difficulty": "easy",
+        "parts": [
+          "sm",
+          "all"
+        ]
+      },
+      {
+        "type": "duo_spell",
+        "word": "T-shirt",
+        "chinese": "T恤",
+        "image": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+        "display": "T-_hirt",
+        "options": [
+          "s",
+          "t",
+          "u",
+          "v"
+        ],
+        "correct": "s",
+        "difficulty": "easy",
+        "parts": [
+          "T-s",
+          "hirt"
+        ]
       },
       {
         "type": "letter_select",
-        "word": "red",
-        "chinese": "红色",
-        "difficulty": "easy",
-        "display": "r_d",
+        "word": "wear",
+        "chinese": "穿戴",
+        "image": "<img src=\"assets/images/shirt.png\" width=\"80\">",
+        "display": "_ear",
         "options": [
-          "r",
-          "j",
-          "l",
-          "e"
+          "w",
+          "z",
+          "y",
+          "x"
         ],
-        "correct": "e"
+        "correct": "w",
+        "difficulty": "medium",
+        "parts": [
+          "we",
+          "ar"
+        ]
+      },
+      {
+        "type": "letter_select",
+        "word": "big",
+        "chinese": "大的",
+        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">",
+        "display": "_ig",
+        "options": [
+          "b",
+          "e",
+          "c",
+          "d"
+        ],
+        "correct": "b",
+        "difficulty": "hard",
+        "parts": [
+          "b",
+          "ig"
+        ]
+      },
+      {
+        "type": "word_spell",
+        "word": "small",
+        "chinese": "小的",
+        "image": "<img src=\"assets/images/mouse.png\" width=\"80\">",
+        "display": "smal_",
+        "options": [
+          "m",
+          "o",
+          "n",
+          "l"
+        ],
+        "correct": "l",
+        "difficulty": "hard",
+        "parts": [
+          "sm",
+          "all"
+        ]
       }
     ]
   },
   "speaking": {
     "pretest": [
       {
-        "type": "repeat_word",
-        "chinese": "绿色",
-        "word": "green",
-        "image": "<img src=\"assets/images/green_tree.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "T-shirt",
+        "chinese": "T恤",
+        "image": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+        "sentence": "What size do you wear?"
       },
       {
-        "type": "repeat_word",
-        "chinese": "红色",
-        "word": "red",
-        "image": "<img src=\"assets/images/red_apple.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "wear",
+        "chinese": "穿戴",
+        "image": "<img src=\"assets/images/shirt.png\" width=\"80\">",
+        "sentence": "I like wear."
       },
       {
-        "type": "repeat_word",
-        "chinese": "黄色",
-        "word": "yellow",
-        "image": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "big",
+        "chinese": "大的",
+        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">",
+        "sentence": "I like big."
       },
       {
-        "type": "read_sentence",
-        "chinese": "蓝色",
-        "sentence": "I see a blue.",
-        "image": "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "small",
+        "chinese": "小的",
+        "image": "<img src=\"assets/images/mouse.png\" width=\"80\">",
+        "sentence": "What size do you wear?"
       },
       {
-        "type": "read_sentence",
-        "chinese": "黄色",
-        "sentence": "I see a yellow.",
-        "image": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "T-shirt",
+        "chinese": "T恤",
+        "image": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+        "sentence": "I like T-shirt."
       },
       {
-        "type": "repeat_word",
-        "chinese": "蓝色",
-        "word": "blue",
-        "image": "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "wear",
+        "chinese": "穿戴",
+        "image": "<img src=\"assets/images/shirt.png\" width=\"80\">",
+        "sentence": "What size do you wear?"
       },
       {
-        "type": "read_sentence",
-        "chinese": "蓝色",
-        "sentence": "I see a blue.",
-        "image": "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "big",
+        "chinese": "大的",
+        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">",
+        "sentence": "What size do you wear?"
       },
       {
-        "type": "repeat_word",
-        "chinese": "红色",
-        "word": "red",
-        "image": "<img src=\"assets/images/red_apple.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "small",
+        "chinese": "小的",
+        "image": "<img src=\"assets/images/mouse.png\" width=\"80\">",
+        "sentence": "I like small."
       },
       {
-        "type": "read_sentence",
-        "chinese": "黄色",
-        "sentence": "I see a yellow.",
-        "image": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "T-shirt",
+        "chinese": "T恤",
+        "image": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+        "sentence": "I like T-shirt."
       },
       {
-        "type": "read_sentence",
-        "chinese": "绿色",
-        "sentence": "I see a green.",
-        "image": "<img src=\"assets/images/green_tree.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "绿色",
-        "word": "green",
-        "image": "<img src=\"assets/images/green_tree.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "红色",
-        "word": "red",
-        "image": "<img src=\"assets/images/red_apple.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "wear",
+        "chinese": "穿戴",
+        "image": "<img src=\"assets/images/shirt.png\" width=\"80\">",
+        "sentence": "I like wear."
       }
     ],
     "practice": [
       {
-        "type": "read_sentence",
-        "chinese": "红色",
-        "difficulty": "medium",
-        "sentence": "I see a red.",
-        "image": "<img src=\"assets/images/red_apple.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "T-shirt",
+        "chinese": "T恤",
+        "image": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+        "sentence": "It's too big.",
+        "difficulty": "hard"
       },
       {
-        "type": "repeat_word",
-        "chinese": "红色",
-        "difficulty": "medium",
-        "word": "red",
-        "image": "<img src=\"assets/images/red_apple.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "wear",
+        "chinese": "穿戴",
+        "image": "<img src=\"assets/images/shirt.png\" width=\"80\">",
+        "sentence": "It's too big.",
+        "difficulty": "medium"
       },
       {
-        "type": "read_sentence",
-        "chinese": "红色",
-        "difficulty": "hard",
-        "sentence": "I see a red.",
-        "image": "<img src=\"assets/images/red_apple.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "big",
+        "chinese": "大的",
+        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">",
+        "sentence": "This is a big.",
+        "difficulty": "easy"
       },
       {
-        "type": "read_sentence",
-        "chinese": "黄色",
-        "difficulty": "hard",
-        "sentence": "I see a yellow.",
-        "image": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "small",
+        "chinese": "小的",
+        "image": "<img src=\"assets/images/mouse.png\" width=\"80\">",
+        "sentence": "This is a small.",
+        "difficulty": "easy"
       },
       {
-        "type": "read_sentence",
-        "chinese": "黄色",
-        "difficulty": "easy",
-        "sentence": "I see a yellow.",
-        "image": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
+        "type": "debate",
+        "word": "T-shirt",
+        "chinese": "T恤",
+        "image": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+        "sentence": "This is a T-shirt.",
+        "difficulty": "easy"
       },
       {
-        "type": "repeat_word",
-        "chinese": "红色",
-        "difficulty": "hard",
-        "word": "red",
-        "image": "<img src=\"assets/images/red_apple.png\" width=\"80\">"
+        "type": "debate",
+        "word": "wear",
+        "chinese": "穿戴",
+        "image": "<img src=\"assets/images/shirt.png\" width=\"80\">",
+        "sentence": "It's too big.",
+        "difficulty": "hard"
       },
       {
-        "type": "repeat_word",
-        "chinese": "黄色",
-        "difficulty": "hard",
-        "word": "yellow",
-        "image": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "big",
+        "chinese": "大的",
+        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">",
+        "sentence": "This is a big.",
+        "difficulty": "medium"
       },
       {
-        "type": "read_sentence",
-        "chinese": "绿色",
-        "difficulty": "medium",
-        "sentence": "I see a green.",
-        "image": "<img src=\"assets/images/green_tree.png\" width=\"80\">"
+        "type": "debate",
+        "word": "small",
+        "chinese": "小的",
+        "image": "<img src=\"assets/images/mouse.png\" width=\"80\">",
+        "sentence": "It's too big.",
+        "difficulty": "easy"
       },
       {
-        "type": "repeat_word",
-        "chinese": "黄色",
-        "difficulty": "medium",
-        "word": "yellow",
-        "image": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "T-shirt",
+        "chinese": "T恤",
+        "image": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
+        "sentence": "It's too big.",
+        "difficulty": "medium"
       },
       {
-        "type": "read_sentence",
-        "chinese": "蓝色",
-        "difficulty": "medium",
-        "sentence": "I see a blue.",
-        "image": "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "wear",
+        "chinese": "穿戴",
+        "image": "<img src=\"assets/images/shirt.png\" width=\"80\">",
+        "sentence": "This is a wear.",
+        "difficulty": "hard"
       },
       {
-        "type": "repeat_word",
-        "chinese": "黄色",
-        "difficulty": "easy",
-        "word": "yellow",
-        "image": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "big",
+        "chinese": "大的",
+        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">",
+        "sentence": "This is a big.",
+        "difficulty": "medium"
       },
       {
-        "type": "read_sentence",
-        "chinese": "红色",
-        "difficulty": "medium",
-        "sentence": "I see a red.",
-        "image": "<img src=\"assets/images/red_apple.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "蓝色",
-        "difficulty": "hard",
-        "sentence": "I see a blue.",
-        "image": "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "黄色",
-        "difficulty": "easy",
-        "word": "yellow",
-        "image": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "绿色",
-        "difficulty": "easy",
-        "sentence": "I see a green.",
-        "image": "<img src=\"assets/images/green_tree.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "蓝色",
-        "difficulty": "easy",
-        "sentence": "I see a blue.",
-        "image": "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "红色",
-        "difficulty": "easy",
-        "sentence": "I see a red.",
-        "image": "<img src=\"assets/images/red_apple.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "绿色",
-        "difficulty": "medium",
-        "sentence": "I see a green.",
-        "image": "<img src=\"assets/images/green_tree.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "蓝色",
-        "difficulty": "medium",
-        "word": "blue",
-        "image": "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "绿色",
-        "difficulty": "medium",
-        "word": "green",
-        "image": "<img src=\"assets/images/green_tree.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "蓝色",
-        "difficulty": "hard",
-        "sentence": "I see a blue.",
-        "image": "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "绿色",
-        "difficulty": "easy",
-        "word": "green",
-        "image": "<img src=\"assets/images/green_tree.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "蓝色",
-        "difficulty": "easy",
-        "sentence": "I see a blue.",
-        "image": "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "蓝色",
-        "difficulty": "easy",
-        "word": "blue",
-        "image": "<img src=\"assets/images/blue_sky.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "黄色",
-        "difficulty": "medium",
-        "word": "yellow",
-        "image": "<img src=\"assets/images/yellow_sun.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "绿色",
-        "difficulty": "hard",
-        "sentence": "I see a green.",
-        "image": "<img src=\"assets/images/green_tree.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "红色",
-        "difficulty": "medium",
-        "word": "red",
-        "image": "<img src=\"assets/images/red_apple.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "绿色",
-        "difficulty": "easy",
-        "sentence": "I see a green.",
-        "image": "<img src=\"assets/images/green_tree.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "small",
+        "chinese": "小的",
+        "image": "<img src=\"assets/images/mouse.png\" width=\"80\">",
+        "sentence": "It's too big.",
+        "difficulty": "easy"
       }
     ]
   }

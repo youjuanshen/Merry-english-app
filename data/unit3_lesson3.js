@@ -1,1163 +1,803 @@
 var unit3_lesson3 = {
   "id": "U3L3",
-  "title": "Two plus three is five.",
+  "title": "Unit 3 Lesson 3: It's five twenty.",
   "listening": {
     "pretest": [
       {
-        "type": "listen_tf",
-        "audio": "ten",
-        "chinese": "十",
-        "image": "<img src=\"assets/images/ten.png\" width=\"80\">",
-        "correct": true
+        "type": "listen_select",
+        "audio": "cook",
+        "chinese": "做饭",
+        "options": [
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">"
+        ],
+        "correct": false,
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">"
       },
       {
         "type": "listen_tf",
-        "audio": "four",
-        "chinese": "四",
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_tf",
-        "audio": "six",
-        "chinese": "六",
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">",
-        "correct": false
+        "audio": "dinner",
+        "chinese": "晚餐",
+        "options": [
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">"
       },
       {
         "type": "listen_select",
-        "audio": "two",
-        "chinese": "二",
+        "audio": "draw",
+        "chinese": "画画",
         "options": [
-          "<img src=\"assets/images/one.png\" width=\"80\">",
-          "<img src=\"assets/images/three.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">"
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">"
         ],
-        "correct": 3
+        "correct": true,
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">"
       },
       {
         "type": "listen_select",
-        "audio": "nine",
-        "chinese": "九",
+        "audio": "twenty",
+        "chinese": "二十",
         "options": [
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">"
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">"
         ],
-        "correct": 0
-      },
-      {
-        "type": "listen_tf",
-        "audio": "eight",
-        "chinese": "八",
-        "image": "<img src=\"assets/images/two.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_tf",
-        "audio": "one",
-        "chinese": "一",
-        "image": "<img src=\"assets/images/three.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_tf",
-        "audio": "three",
-        "chinese": "三",
-        "image": "<img src=\"assets/images/three.png\" width=\"80\">",
-        "correct": true
+        "correct": true,
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">"
       },
       {
         "type": "listen_select",
-        "audio": "five",
-        "chinese": "五",
+        "audio": "cook",
+        "chinese": "做饭",
         "options": [
-          "<img src=\"assets/images/three.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">"
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/clock.png\" width=\"80\">"
         ],
-        "correct": 3
+        "correct": 0,
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">"
       },
       {
         "type": "listen_select",
-        "audio": "seven",
-        "chinese": "七",
+        "audio": "dinner",
+        "chinese": "晚餐",
         "options": [
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/one.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/three.png\" width=\"80\">"
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/clock.png\" width=\"80\">"
         ],
-        "correct": 0
+        "correct": true,
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "draw",
+        "chinese": "画画",
+        "options": [
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "twenty",
+        "chinese": "二十",
+        "options": [
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">"
+        ],
+        "correct": false,
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "cook",
+        "chinese": "做饭",
+        "options": [
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/clock.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_select",
+        "audio": "dinner",
+        "chinese": "晚餐",
+        "options": [
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">"
+        ],
+        "correct": false,
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">"
       }
     ],
     "practice": [
       {
-        "type": "listen_select",
-        "audio": "seven",
-        "chinese": "七",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/four.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "listen_select",
-        "audio": "two",
-        "chinese": "二",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/one.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "listen_tf",
-        "audio": "nine",
-        "chinese": "九",
-        "difficulty": "medium",
-        "image": "<img src=\"assets/images/three.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "three",
-        "chinese": "三",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/three.png\" width=\"80\">",
-          "<img src=\"assets/images/four.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "three",
-        "chinese": "三",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/one.png\" width=\"80\">",
-          "<img src=\"assets/images/three.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "two",
-        "chinese": "二",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/three.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "one",
-        "chinese": "一",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/one.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "listen_select",
-        "audio": "five",
-        "chinese": "五",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/one.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "listen_tf",
-        "audio": "nine",
-        "chinese": "九",
-        "difficulty": "medium",
-        "image": "<img src=\"assets/images/five.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_select",
-        "audio": "five",
-        "chinese": "五",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "six",
-        "chinese": "六",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/one.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_tf",
-        "audio": "one",
-        "chinese": "一",
-        "difficulty": "medium",
-        "image": "<img src=\"assets/images/one.png\" width=\"80\">",
-        "correct": true
-      },
-      {
-        "type": "listen_select",
-        "audio": "ten",
-        "chinese": "十",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "four",
-        "chinese": "四",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/four.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "listen_select",
-        "audio": "six",
-        "chinese": "六",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/one.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/three.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "listen_select",
-        "audio": "eight",
-        "chinese": "八",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "listen_select",
-        "audio": "three",
-        "chinese": "三",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/three.png\" width=\"80\">",
-          "<img src=\"assets/images/one.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "one",
-        "chinese": "一",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/three.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/one.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "listen_select",
-        "audio": "seven",
-        "chinese": "七",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/three.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/one.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "listen_tf",
-        "audio": "six",
-        "chinese": "六",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/six.png\" width=\"80\">",
-        "correct": true
-      },
-      {
-        "type": "listen_select",
-        "audio": "eight",
-        "chinese": "八",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/three.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/four.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_tf",
-        "audio": "four",
-        "chinese": "四",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/four.png\" width=\"80\">",
-        "correct": true
-      },
-      {
-        "type": "listen_select",
-        "audio": "five",
-        "chinese": "五",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/three.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "two",
-        "chinese": "二",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/one.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "listen_select",
-        "audio": "ten",
-        "chinese": "十",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/three.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_tf",
-        "audio": "four",
-        "chinese": "四",
-        "difficulty": "easy",
-        "image": "<img src=\"assets/images/four.png\" width=\"80\">",
-        "correct": true
-      },
-      {
-        "type": "balloon_pop",
-        "text": "Find the word",
-        "chinese": "七",
-        "options": [
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/four.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">"
-        ],
-        "correct": 1,
-        "difficulty": "easy"
-      },
-      {
-        "type": "balloon_pop",
-        "text": "Find the word",
-        "chinese": "二",
-        "options": [
-          "<img src=\"assets/images/one.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">"
-        ],
-        "correct": 3,
-        "difficulty": "medium"
-      },
-      {
-        "type": "balloon_pop",
-        "text": "Find the word",
-        "chinese": "一",
-        "options": [
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/one.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">"
-        ],
-        "correct": 2,
-        "difficulty": "medium"
-      },
-      {
-        "type": "balloon_pop",
-        "text": "Find the word",
-        "chinese": "五",
-        "options": [
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/one.png\" width=\"80\">"
-        ],
-        "correct": 2,
-        "difficulty": "hard"
-      },
-      {
         "type": "scenario",
-        "scenario": "Max is at the zoo. He sees a big, scary animal.",
-        "chinese": "麦克斯在动物园。他看到一只又大又可怕的动物。",
-        "question": "What should we pick?",
+        "audio": "cook",
+        "chinese": "做饭",
         "options": [
-          "<img src=\"assets/images/fish.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/duck.png\" width=\"80\">"
-        ],
-        "correct": 1,
-        "feedback": "Tigers are big and scary!",
-        "difficulty": "medium"
-      },
-      {
-        "type": "scenario",
-        "scenario": "Mia is in the garden. She wants to smell something.",
-        "chinese": "米娅在花园里。她想闻闻什么东西。",
-        "question": "What should we pick?",
-        "options": [
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/cat.png\" width=\"80\">",
-          "<img src=\"assets/images/pink_flower.png\" width=\"80\">"
-        ],
-        "correct": 2,
-        "feedback": "Flowers smell good!",
-        "difficulty": "medium"
-      },
-      {
-        "type": "scenario",
-        "scenario": "Leo wants an animal that can climb trees.",
-        "chinese": "里奥想要一只会爬树的动物。",
-        "question": "What should we pick?",
-        "options": [
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/fish.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">"
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">"
         ],
         "correct": 0,
-        "feedback": "Monkeys climb trees very well!",
-        "difficulty": "medium"
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "What are you doing?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "listen_select",
+        "audio": "dinner",
+        "chinese": "晚餐",
+        "options": [
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "What are you doing?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       },
       {
         "type": "scenario",
-        "scenario": "Sarah looks at the sky. It is very bright.",
-        "chinese": "莎拉看着天空。非常明亮。",
-        "question": "What should we pick?",
+        "audio": "draw",
+        "chinese": "画画",
         "options": [
-          "<img src=\"assets/images/yellow_sun.png\" width=\"80\">",
-          "<img src=\"assets/images/blue_sky.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "I'm cooking.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "scenario",
+        "audio": "twenty",
+        "chinese": "二十",
+        "options": [
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">"
         ],
         "correct": 0,
-        "feedback": "The sun is bright!",
-        "difficulty": "medium"
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "I'm cooking.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "balloon_pop",
+        "audio": "cook",
+        "chinese": "做饭",
+        "options": [
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/clock.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "medium",
+        "text": "Find the word",
+        "scenario": "I'm cooking.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "duo_listen_select",
+        "audio": "dinner",
+        "chinese": "晚餐",
+        "options": [
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/clock.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "medium",
+        "text": "Find the word",
+        "scenario": "What are you doing?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "balloon_pop",
+        "audio": "draw",
+        "chinese": "画画",
+        "options": [
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "medium",
+        "text": "Find the word",
+        "scenario": "What are you doing?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "scenario",
+        "audio": "twenty",
+        "chinese": "二十",
+        "options": [
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "What are you doing?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "duo_listen_select",
+        "audio": "cook",
+        "chinese": "做饭",
+        "options": [
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/clock.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "What are you doing?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "scenario",
+        "audio": "dinner",
+        "chinese": "晚餐",
+        "options": [
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "What are you doing?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "scenario",
+        "audio": "draw",
+        "chinese": "画画",
+        "options": [
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "I'm cooking.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "listen_select",
+        "audio": "twenty",
+        "chinese": "二十",
+        "options": [
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "I'm cooking.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       }
     ]
   },
   "reading": {
     "pretest": [
       {
-        "type": "word_match",
-        "chinese": "三",
-        "word": "three",
+        "type": "sentence_match",
+        "chinese": "做饭",
+        "word": "cook",
+        "sentence": "What are you doing?",
         "options": [
           {
-            "text": "<img src=\"assets/images/three.png\" width=\"80\">",
-            "value": "three"
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "twenty"
           },
           {
-            "text": "<img src=\"assets/images/two.png\" width=\"80\">",
-            "value": "two"
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "draw"
           }
         ],
-        "correct": "three"
-      },
-      {
-        "type": "word_match",
-        "chinese": "九",
-        "word": "nine",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/five.png\" width=\"80\">",
-            "value": "five"
-          },
-          {
-            "text": "<img src=\"assets/images/nine.png\" width=\"80\">",
-            "value": "nine"
-          }
-        ],
-        "correct": "nine"
-      },
-      {
-        "type": "word_match",
-        "chinese": "七",
-        "word": "seven",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/three.png\" width=\"80\">",
-            "value": "three"
-          },
-          {
-            "text": "<img src=\"assets/images/seven.png\" width=\"80\">",
-            "value": "seven"
-          }
-        ],
-        "correct": "seven"
-      },
-      {
-        "type": "word_match",
-        "chinese": "六",
-        "word": "six",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
-            "value": "ten"
-          },
-          {
-            "text": "<img src=\"assets/images/six.png\" width=\"80\">",
-            "value": "six"
-          }
-        ],
-        "correct": "six"
+        "correct": "cook"
       },
       {
         "type": "sentence_match",
-        "chinese": "十",
-        "sentence": "I see a ten.",
+        "chinese": "晚餐",
+        "word": "dinner",
+        "sentence": "What are you doing?",
         "options": [
           {
-            "text": "<img src=\"assets/images/six.png\" width=\"80\">",
-            "value": "six"
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "twenty"
           },
           {
-            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
-            "value": "ten"
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "draw"
+          },
+          {
+            "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+            "value": "cook"
+          },
+          {
+            "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+            "value": "dinner"
           }
         ],
-        "correct": "ten"
+        "correct": "dinner"
+      },
+      {
+        "type": "word_match",
+        "chinese": "画画",
+        "word": "draw",
+        "sentence": "What are you doing?",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "draw"
+          },
+          {
+            "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+            "value": "dinner"
+          },
+          {
+            "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+            "value": "cook"
+          },
+          {
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "twenty"
+          }
+        ],
+        "correct": "draw"
+      },
+      {
+        "type": "word_match",
+        "chinese": "二十",
+        "word": "twenty",
+        "sentence": "I see a twenty.",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+            "value": "cook"
+          },
+          {
+            "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+            "value": "dinner"
+          },
+          {
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "draw"
+          },
+          {
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "twenty"
+          }
+        ],
+        "correct": "twenty"
       },
       {
         "type": "sentence_match",
-        "chinese": "八",
-        "sentence": "I see a eight.",
+        "chinese": "做饭",
+        "word": "cook",
+        "sentence": "What are you doing?",
         "options": [
           {
-            "text": "<img src=\"assets/images/one.png\" width=\"80\">",
-            "value": "one"
+            "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+            "value": "cook"
           },
           {
-            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
-            "value": "eight"
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "twenty"
+          },
+          {
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "draw"
+          },
+          {
+            "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+            "value": "dinner"
           }
         ],
-        "correct": "eight"
+        "correct": "cook"
+      },
+      {
+        "type": "sentence_match",
+        "chinese": "晚餐",
+        "word": "dinner",
+        "sentence": "I see a dinner.",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "draw"
+          },
+          {
+            "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+            "value": "dinner"
+          }
+        ],
+        "correct": "dinner"
       },
       {
         "type": "word_match",
-        "chinese": "二",
-        "word": "two",
+        "chinese": "画画",
+        "word": "draw",
+        "sentence": "I see a draw.",
         "options": [
           {
-            "text": "<img src=\"assets/images/seven.png\" width=\"80\">",
-            "value": "seven"
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "draw"
           },
           {
-            "text": "<img src=\"assets/images/two.png\" width=\"80\">",
-            "value": "two"
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "twenty"
           }
         ],
-        "correct": "two"
+        "correct": "draw"
       },
       {
         "type": "word_match",
-        "chinese": "四",
-        "word": "four",
+        "chinese": "二十",
+        "word": "twenty",
+        "sentence": "What are you doing?",
         "options": [
           {
-            "text": "<img src=\"assets/images/four.png\" width=\"80\">",
-            "value": "four"
+            "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+            "value": "cook"
           },
           {
-            "text": "<img src=\"assets/images/seven.png\" width=\"80\">",
-            "value": "seven"
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "twenty"
           }
         ],
-        "correct": "four"
+        "correct": "twenty"
       },
       {
         "type": "word_match",
-        "chinese": "二",
-        "word": "two",
+        "chinese": "做饭",
+        "word": "cook",
+        "sentence": "I see a cook.",
         "options": [
           {
-            "text": "<img src=\"assets/images/five.png\" width=\"80\">",
-            "value": "five"
+            "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+            "value": "dinner"
           },
           {
-            "text": "<img src=\"assets/images/two.png\" width=\"80\">",
-            "value": "two"
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "twenty"
           }
         ],
-        "correct": "two"
+        "correct": "cook"
       },
       {
-        "type": "word_match",
-        "chinese": "五",
-        "word": "five",
+        "type": "sentence_match",
+        "chinese": "晚餐",
+        "word": "dinner",
+        "sentence": "What are you doing?",
         "options": [
           {
-            "text": "<img src=\"assets/images/six.png\" width=\"80\">",
-            "value": "six"
+            "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+            "value": "cook"
           },
           {
-            "text": "<img src=\"assets/images/five.png\" width=\"80\">",
-            "value": "five"
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "twenty"
           }
         ],
-        "correct": "five"
-      },
-      {
-        "type": "word_match",
-        "chinese": "一",
-        "word": "one",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
-            "value": "eight"
-          },
-          {
-            "text": "<img src=\"assets/images/one.png\" width=\"80\">",
-            "value": "one"
-          }
-        ],
-        "correct": "one"
-      },
-      {
-        "type": "word_match",
-        "chinese": "一",
-        "word": "one",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
-            "value": "eight"
-          },
-          {
-            "text": "<img src=\"assets/images/one.png\" width=\"80\">",
-            "value": "one"
-          }
-        ],
-        "correct": "one"
+        "correct": "dinner"
       }
     ],
     "practice": [
       {
-        "type": "word_match",
-        "chinese": "一",
-        "difficulty": "hard",
-        "word": "one",
+        "type": "duo_race",
+        "chinese": "做饭",
+        "word": "cook",
+        "sentence": "Look at the cook.",
         "options": [
           {
-            "text": "<img src=\"assets/images/four.png\" width=\"80\">",
-            "value": "four"
+            "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+            "value": "cook"
           },
           {
-            "text": "<img src=\"assets/images/one.png\" width=\"80\">",
-            "value": "one"
-          }
-        ],
-        "correct": "one"
-      },
-      {
-        "type": "word_match",
-        "chinese": "三",
-        "difficulty": "easy",
-        "word": "three",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/four.png\" width=\"80\">",
-            "value": "four"
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "draw"
           },
           {
-            "text": "<img src=\"assets/images/three.png\" width=\"80\">",
-            "value": "three"
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "twenty"
+          },
+          {
+            "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+            "value": "dinner"
           }
         ],
-        "correct": "three"
+        "correct": 0,
+        "difficulty": "medium"
       },
       {
         "type": "sentence_match",
-        "chinese": "四",
-        "difficulty": "medium",
-        "sentence": "I see a four.",
+        "chinese": "晚餐",
+        "word": "dinner",
+        "sentence": "Look at the dinner.",
         "options": [
           {
-            "text": "<img src=\"assets/images/five.png\" width=\"80\">",
-            "value": "five"
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "twenty"
           },
           {
-            "text": "<img src=\"assets/images/four.png\" width=\"80\">",
-            "value": "four"
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "draw"
+          },
+          {
+            "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+            "value": "cook"
+          },
+          {
+            "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+            "value": "dinner"
           }
         ],
-        "correct": "four"
+        "correct": "dinner",
+        "difficulty": "hard"
       },
       {
         "type": "word_match",
-        "chinese": "八",
-        "difficulty": "medium",
-        "word": "eight",
+        "chinese": "画画",
+        "word": "draw",
+        "sentence": "Look at the draw.",
         "options": [
           {
-            "text": "<img src=\"assets/images/three.png\" width=\"80\">",
-            "value": "three"
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "draw"
           },
           {
-            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
-            "value": "eight"
+            "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+            "value": "dinner"
+          },
+          {
+            "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+            "value": "cook"
+          },
+          {
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "twenty"
           }
         ],
-        "correct": "eight"
+        "correct": 1,
+        "difficulty": "medium"
       },
       {
         "type": "duo_race",
-        "chinese": "八",
-        "difficulty": "easy",
-        "word": "eight",
+        "chinese": "二十",
+        "word": "twenty",
+        "sentence": "I'm cooking.",
         "options": [
-          "<img src=\"assets/images/one.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/four.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">"
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">"
         ],
-        "correct": 3
+        "correct": "twenty",
+        "difficulty": "hard"
       },
       {
         "type": "word_match",
-        "chinese": "二",
-        "difficulty": "hard",
-        "word": "two",
+        "chinese": "做饭",
+        "word": "cook",
+        "sentence": "I'm cooking.",
         "options": [
-          {
-            "text": "<img src=\"assets/images/two.png\" width=\"80\">",
-            "value": "two"
-          },
-          {
-            "text": "<img src=\"assets/images/five.png\" width=\"80\">",
-            "value": "five"
-          }
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/clock.png\" width=\"80\">"
         ],
-        "correct": "two"
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "一",
-        "difficulty": "easy",
-        "word": "one",
-        "options": [
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/one.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "duo_race",
-        "chinese": "三",
-        "difficulty": "easy",
-        "word": "three",
-        "options": [
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/three.png\" width=\"80\">",
-          "<img src=\"assets/images/four.png\" width=\"80\">",
-          "<img src=\"assets/images/one.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "duo_race",
-        "chinese": "七",
-        "difficulty": "medium",
-        "word": "seven",
-        "options": [
-          "<img src=\"assets/images/one.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "word_match",
-        "chinese": "七",
-        "difficulty": "hard",
-        "word": "seven",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/seven.png\" width=\"80\">",
-            "value": "seven"
-          },
-          {
-            "text": "<img src=\"assets/images/one.png\" width=\"80\">",
-            "value": "one"
-          }
-        ],
-        "correct": "seven"
-      },
-      {
-        "type": "word_match",
-        "chinese": "三",
-        "difficulty": "easy",
-        "word": "three",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/one.png\" width=\"80\">",
-            "value": "one"
-          },
-          {
-            "text": "<img src=\"assets/images/three.png\" width=\"80\">",
-            "value": "three"
-          }
-        ],
-        "correct": "three"
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "四",
-        "difficulty": "medium",
-        "word": "four",
-        "options": [
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/four.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "九",
-        "difficulty": "medium",
-        "word": "nine",
-        "options": [
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "duo_race",
-        "chinese": "九",
-        "difficulty": "easy",
-        "word": "nine",
-        "options": [
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/three.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "word_match",
-        "chinese": "七",
-        "difficulty": "medium",
-        "word": "seven",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
-            "value": "eight"
-          },
-          {
-            "text": "<img src=\"assets/images/seven.png\" width=\"80\">",
-            "value": "seven"
-          }
-        ],
-        "correct": "seven"
-      },
-      {
-        "type": "word_match",
-        "chinese": "五",
-        "difficulty": "hard",
-        "word": "five",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
-            "value": "ten"
-          },
-          {
-            "text": "<img src=\"assets/images/five.png\" width=\"80\">",
-            "value": "five"
-          }
-        ],
-        "correct": "five"
-      },
-      {
-        "type": "word_match",
-        "chinese": "一",
-        "difficulty": "easy",
-        "word": "one",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/five.png\" width=\"80\">",
-            "value": "five"
-          },
-          {
-            "text": "<img src=\"assets/images/one.png\" width=\"80\">",
-            "value": "one"
-          }
-        ],
-        "correct": "one"
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "八",
-        "difficulty": "medium",
-        "word": "eight",
-        "options": [
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/three.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "六",
-        "difficulty": "easy",
-        "word": "six",
-        "options": [
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/one.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "十",
-        "difficulty": "hard",
-        "word": "ten",
-        "options": [
-          "<img src=\"assets/images/four.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">"
-        ],
-        "correct": 3
+        "correct": "cook",
+        "difficulty": "hard"
       },
       {
         "type": "sentence_match",
-        "chinese": "四",
-        "difficulty": "hard",
-        "sentence": "I see a four.",
+        "chinese": "晚餐",
+        "word": "dinner",
+        "sentence": "Look at the dinner.",
         "options": [
           {
-            "text": "<img src=\"assets/images/four.png\" width=\"80\">",
-            "value": "four"
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "draw"
           },
           {
-            "text": "<img src=\"assets/images/five.png\" width=\"80\">",
-            "value": "five"
+            "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+            "value": "cook"
+          },
+          {
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "twenty"
+          },
+          {
+            "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+            "value": "dinner"
           }
         ],
-        "correct": "four"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "九",
-        "difficulty": "easy",
-        "word": "nine",
-        "options": [
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">"
-        ],
-        "correct": 3
+        "correct": 0,
+        "difficulty": "medium"
       },
       {
         "type": "word_match",
-        "chinese": "五",
-        "difficulty": "medium",
-        "word": "five",
+        "chinese": "画画",
+        "word": "draw",
+        "sentence": "Look at the draw.",
         "options": [
-          {
-            "text": "<img src=\"assets/images/one.png\" width=\"80\">",
-            "value": "one"
-          },
-          {
-            "text": "<img src=\"assets/images/five.png\" width=\"80\">",
-            "value": "five"
-          }
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">"
         ],
-        "correct": "five"
+        "correct": "draw",
+        "difficulty": "medium"
       },
       {
         "type": "duo_race",
-        "chinese": "十",
-        "difficulty": "medium",
-        "word": "ten",
+        "chinese": "二十",
+        "word": "twenty",
+        "sentence": "I'm cooking.",
         "options": [
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/one.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">"
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">"
         ],
-        "correct": 3
-      },
-      {
-        "type": "duo_race",
-        "chinese": "十",
-        "difficulty": "easy",
-        "word": "ten",
-        "options": [
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/three.png\" width=\"80\">"
-        ],
-        "correct": 1
+        "correct": 1,
+        "difficulty": "hard"
       },
       {
         "type": "word_match",
-        "chinese": "二",
-        "difficulty": "hard",
-        "word": "two",
+        "chinese": "做饭",
+        "word": "cook",
+        "sentence": "I'm cooking.",
+        "options": [
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/cooking.png\" width=\"80\">",
+          "<img src=\"assets/images/clock.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "medium"
+      },
+      {
+        "type": "sentence_match",
+        "chinese": "晚餐",
+        "word": "dinner",
+        "sentence": "Look at the dinner.",
         "options": [
           {
-            "text": "<img src=\"assets/images/two.png\" width=\"80\">",
-            "value": "two"
+            "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+            "value": "cook"
           },
           {
-            "text": "<img src=\"assets/images/six.png\" width=\"80\">",
-            "value": "six"
+            "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+            "value": "dinner"
+          },
+          {
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "twenty"
+          },
+          {
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "draw"
           }
         ],
-        "correct": "two"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "五",
-        "difficulty": "hard",
-        "word": "five",
-        "options": [
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/two.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "duo_race",
-        "chinese": "六",
-        "difficulty": "medium",
-        "word": "six",
-        "options": [
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/four.png\" width=\"80\">",
-          "<img src=\"assets/images/five.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">"
-        ],
-        "correct": 3
+        "correct": "dinner",
+        "difficulty": "hard"
       },
       {
         "type": "word_match",
-        "chinese": "二",
-        "difficulty": "medium",
-        "word": "two",
+        "chinese": "画画",
+        "word": "draw",
+        "sentence": "Look at the draw.",
         "options": [
           {
-            "text": "<img src=\"assets/images/two.png\" width=\"80\">",
-            "value": "two"
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "twenty"
           },
           {
-            "text": "<img src=\"assets/images/seven.png\" width=\"80\">",
-            "value": "seven"
+            "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+            "value": "cook"
+          },
+          {
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "draw"
+          },
+          {
+            "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+            "value": "dinner"
           }
         ],
-        "correct": "two"
+        "correct": 1,
+        "difficulty": "hard"
       },
       {
         "type": "word_match",
-        "chinese": "六",
-        "difficulty": "easy",
-        "word": "six",
+        "chinese": "二十",
+        "word": "twenty",
+        "sentence": "Look at the twenty.",
         "options": [
           {
-            "text": "<img src=\"assets/images/six.png\" width=\"80\">",
-            "value": "six"
+            "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+            "value": "cook"
           },
           {
-            "text": "<img src=\"assets/images/seven.png\" width=\"80\">",
-            "value": "seven"
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "draw"
+          },
+          {
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "twenty"
+          },
+          {
+            "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+            "value": "dinner"
           }
         ],
-        "correct": "six"
+        "correct": 1,
+        "difficulty": "hard"
       }
     ]
   },
@@ -1165,741 +805,545 @@ var unit3_lesson3 = {
     "pretest": [
       {
         "type": "word_spell",
-        "word": "three",
-        "chinese": "三",
-        "image": "<img src=\"assets/images/three.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "eight",
-        "chinese": "八",
-        "image": "<img src=\"assets/images/eight.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "seven",
-        "chinese": "七",
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "two",
-        "chinese": "二",
-        "display": "tw_",
+        "word": "cook",
+        "chinese": "做饭",
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+        "display": "co_k",
         "options": [
-          "o",
-          "v",
-          "h",
-          "a"
+          "r",
+          "q",
+          "p",
+          "o"
         ],
         "correct": "o"
       },
       {
-        "type": "word_spell",
-        "word": "four",
-        "chinese": "四",
-        "image": "<img src=\"assets/images/four.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "five",
-        "chinese": "五",
-        "image": "<img src=\"assets/images/five.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "two",
-        "chinese": "二",
-        "image": "<img src=\"assets/images/two.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "nine",
-        "chinese": "九",
-        "image": "<img src=\"assets/images/nine.png\" width=\"80\">"
-      },
-      {
         "type": "letter_select",
-        "word": "one",
-        "chinese": "一",
-        "display": "on_",
+        "word": "dinner",
+        "chinese": "晚餐",
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+        "display": "d_nner",
         "options": [
-          "e",
-          "t",
-          "m",
-          "q"
-        ],
-        "correct": "e"
-      },
-      {
-        "type": "word_spell",
-        "word": "one",
-        "chinese": "一",
-        "image": "<img src=\"assets/images/one.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "ten",
-        "chinese": "十",
-        "image": "<img src=\"assets/images/ten.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "six",
-        "chinese": "六",
-        "image": "<img src=\"assets/images/six.png\" width=\"80\">"
-      }
-    ],
-    "practice": [
-      {
-        "type": "letter_select",
-        "word": "eight",
-        "chinese": "八",
-        "difficulty": "medium",
-        "display": "eig_t",
-        "options": [
-          "h",
-          "n",
-          "c",
-          "o"
-        ],
-        "correct": "h"
-      },
-      {
-        "type": "duo_spell",
-        "word": "five",
-        "chinese": "五",
-        "difficulty": "easy",
-        "parts": [
-          "fi",
-          "ve"
-        ],
-        "image": "<img src=\"assets/images/five.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "seven",
-        "chinese": "七",
-        "difficulty": "hard",
-        "display": "sev_n",
-        "options": [
-          "e",
-          "i",
           "k",
-          "u"
-        ],
-        "correct": "e"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "nine",
-        "chinese": "九",
-        "difficulty": "hard",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "nine"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/nine.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "six",
-        "chinese": "六",
-        "difficulty": "hard",
-        "display": "si_",
-        "options": [
-          "f",
-          "x",
-          "k",
-          "h"
-        ],
-        "correct": "x"
-      },
-      {
-        "type": "letter_select",
-        "word": "five",
-        "chinese": "五",
-        "difficulty": "hard",
-        "display": "fiv_",
-        "options": [
-          "z",
-          "e",
-          "r",
-          "w"
-        ],
-        "correct": "e"
-      },
-      {
-        "type": "letter_select",
-        "word": "nine",
-        "chinese": "九",
-        "difficulty": "easy",
-        "display": "n_ne",
-        "options": [
-          "o",
-          "i",
-          "g",
-          "a"
+          "l",
+          "j",
+          "i"
         ],
         "correct": "i"
       },
       {
-        "type": "letter_select",
-        "word": "four",
-        "chinese": "四",
-        "difficulty": "medium",
-        "display": "fo_r",
+        "type": "word_spell",
+        "word": "draw",
+        "chinese": "画画",
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+        "display": "dr_w",
         "options": [
-          "u",
-          "o",
-          "q",
-          "d"
-        ],
-        "correct": "u"
-      },
-      {
-        "type": "letter_select",
-        "word": "four",
-        "chinese": "四",
-        "difficulty": "medium",
-        "display": "_our",
-        "options": [
-          "f",
-          "y",
-          "t",
-          "i"
-        ],
-        "correct": "f"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "two",
-        "chinese": "二",
-        "difficulty": "hard",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "two"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/two.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "one",
-        "chinese": "一",
-        "difficulty": "medium",
-        "display": "o_e",
-        "options": [
-          "n",
-          "i",
-          "j",
-          "p"
-        ],
-        "correct": "n"
-      },
-      {
-        "type": "letter_select",
-        "word": "two",
-        "chinese": "二",
-        "difficulty": "easy",
-        "display": "_wo",
-        "options": [
-          "t",
-          "l",
-          "h",
-          "c"
-        ],
-        "correct": "t"
-      },
-      {
-        "type": "letter_select",
-        "word": "three",
-        "chinese": "三",
-        "difficulty": "easy",
-        "display": "t_ree",
-        "options": [
-          "e",
-          "h",
-          "q",
-          "s"
-        ],
-        "correct": "h"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "five",
-        "chinese": "五",
-        "difficulty": "easy",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "five"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/five.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "three",
-        "chinese": "三",
-        "difficulty": "hard",
-        "display": "t_ree",
-        "options": [
-          "h",
-          "b",
-          "f",
-          "s"
-        ],
-        "correct": "h"
-      },
-      {
-        "type": "letter_select",
-        "word": "eight",
-        "chinese": "八",
-        "difficulty": "medium",
-        "display": "eigh_",
-        "options": [
-          "q",
-          "y",
-          "o",
-          "t"
-        ],
-        "correct": "t"
-      },
-      {
-        "type": "letter_select",
-        "word": "ten",
-        "chinese": "十",
-        "difficulty": "medium",
-        "display": "te_",
-        "options": [
-          "b",
-          "n",
           "c",
-          "z"
+          "d",
+          "a",
+          "b"
         ],
-        "correct": "n"
+        "correct": "a"
       },
       {
         "type": "letter_select",
-        "word": "one",
-        "chinese": "一",
-        "difficulty": "easy",
-        "display": "_ne",
+        "word": "twenty",
+        "chinese": "二十",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "display": "twent_",
         "options": [
+          "a",
+          "y",
+          "z",
+          "b"
+        ],
+        "correct": "y"
+      },
+      {
+        "type": "letter_select",
+        "word": "cook",
+        "chinese": "做饭",
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+        "display": "c_ok",
+        "options": [
+          "q",
           "o",
-          "m",
-          "k",
-          "i"
+          "r",
+          "p"
         ],
         "correct": "o"
       },
       {
         "type": "letter_select",
-        "word": "ten",
-        "chinese": "十",
-        "difficulty": "easy",
-        "display": "te_",
+        "word": "dinner",
+        "chinese": "晚餐",
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+        "display": "_inner",
         "options": [
-          "f",
-          "j",
-          "k",
-          "n"
+          "d",
+          "e",
+          "g",
+          "f"
         ],
-        "correct": "n"
+        "correct": "d"
       },
       {
         "type": "word_spell",
-        "word": "seven",
-        "chinese": "七",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">"
+        "word": "draw",
+        "chinese": "画画",
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+        "display": "d_aw",
+        "options": [
+          "t",
+          "r",
+          "s",
+          "u"
+        ],
+        "correct": "r"
       },
       {
-        "type": "letter_select",
-        "word": "two",
-        "chinese": "二",
-        "difficulty": "medium",
-        "display": "t_o",
+        "type": "word_spell",
+        "word": "twenty",
+        "chinese": "二十",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "display": "t_enty",
         "options": [
           "w",
-          "e",
-          "o",
-          "m"
+          "x",
+          "z",
+          "y"
         ],
         "correct": "w"
       },
       {
-        "type": "duo_sentence",
-        "word": "six",
-        "chinese": "六",
-        "difficulty": "medium",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "six"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/six.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_spell",
-        "word": "six",
-        "chinese": "六",
-        "difficulty": "easy",
-        "parts": [
-          "s",
-          "ix"
-        ],
-        "image": "<img src=\"assets/images/six.png\" width=\"80\">"
-      },
-      {
         "type": "letter_select",
-        "word": "three",
-        "chinese": "三",
-        "difficulty": "medium",
-        "display": "thr_e",
+        "word": "cook",
+        "chinese": "做饭",
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+        "display": "c_ok",
         "options": [
-          "j",
-          "e",
-          "h",
-          "f"
-        ],
-        "correct": "e"
-      },
-      {
-        "type": "letter_select",
-        "word": "one",
-        "chinese": "一",
-        "difficulty": "easy",
-        "display": "_ne",
-        "options": [
-          "c",
-          "t",
+          "p",
           "o",
-          "b"
+          "q",
+          "r"
         ],
         "correct": "o"
       },
       {
-        "type": "duo_sentence",
-        "word": "four",
-        "chinese": "四",
+        "type": "letter_select",
+        "word": "dinner",
+        "chinese": "晚餐",
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+        "display": "dinne_",
+        "options": [
+          "u",
+          "s",
+          "t",
+          "r"
+        ],
+        "correct": "r"
+      }
+    ],
+    "practice": [
+      {
+        "type": "duo_spell",
+        "word": "cook",
+        "chinese": "做饭",
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+        "display": "co_k",
+        "options": [
+          "r",
+          "q",
+          "p",
+          "o"
+        ],
+        "correct": "o",
         "difficulty": "medium",
-        "words": [
-          "This",
-          "is",
+        "parts": [
+          "co",
+          "ok"
+        ]
+      },
+      {
+        "type": "duo_spell",
+        "word": "dinner",
+        "chinese": "晚餐",
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+        "display": "d_nner",
+        "options": [
+          "k",
+          "l",
+          "j",
+          "i"
+        ],
+        "correct": "i",
+        "difficulty": "medium",
+        "parts": [
+          "din",
+          "ner"
+        ]
+      },
+      {
+        "type": "word_spell",
+        "word": "draw",
+        "chinese": "画画",
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+        "display": "dr_w",
+        "options": [
+          "c",
+          "d",
           "a",
-          "four"
+          "b"
         ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
+        "correct": "a",
+        "difficulty": "medium",
+        "parts": [
+          "dr",
+          "aw"
+        ]
+      },
+      {
+        "type": "letter_select",
+        "word": "twenty",
+        "chinese": "二十",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "display": "twent_",
+        "options": [
+          "a",
+          "y",
+          "z",
+          "b"
         ],
-        "image": "<img src=\"assets/images/four.png\" width=\"80\">"
+        "correct": "y",
+        "difficulty": "easy",
+        "parts": [
+          "twe",
+          "nty"
+        ]
+      },
+      {
+        "type": "letter_select",
+        "word": "cook",
+        "chinese": "做饭",
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+        "display": "c_ok",
+        "options": [
+          "q",
+          "o",
+          "r",
+          "p"
+        ],
+        "correct": "o",
+        "difficulty": "easy",
+        "parts": [
+          "co",
+          "ok"
+        ]
+      },
+      {
+        "type": "letter_select",
+        "word": "dinner",
+        "chinese": "晚餐",
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+        "display": "_inner",
+        "options": [
+          "d",
+          "e",
+          "g",
+          "f"
+        ],
+        "correct": "d",
+        "difficulty": "easy",
+        "parts": [
+          "din",
+          "ner"
+        ]
+      },
+      {
+        "type": "word_spell",
+        "word": "draw",
+        "chinese": "画画",
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+        "display": "d_aw",
+        "options": [
+          "t",
+          "r",
+          "s",
+          "u"
+        ],
+        "correct": "r",
+        "difficulty": "medium",
+        "parts": [
+          "dr",
+          "aw"
+        ]
+      },
+      {
+        "type": "duo_spell",
+        "word": "twenty",
+        "chinese": "二十",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "display": "t_enty",
+        "options": [
+          "w",
+          "x",
+          "z",
+          "y"
+        ],
+        "correct": "w",
+        "difficulty": "easy",
+        "parts": [
+          "twe",
+          "nty"
+        ]
+      },
+      {
+        "type": "letter_select",
+        "word": "cook",
+        "chinese": "做饭",
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+        "display": "c_ok",
+        "options": [
+          "p",
+          "o",
+          "q",
+          "r"
+        ],
+        "correct": "o",
+        "difficulty": "medium",
+        "parts": [
+          "co",
+          "ok"
+        ]
+      },
+      {
+        "type": "duo_spell",
+        "word": "dinner",
+        "chinese": "晚餐",
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+        "display": "dinne_",
+        "options": [
+          "u",
+          "s",
+          "t",
+          "r"
+        ],
+        "correct": "r",
+        "difficulty": "easy",
+        "parts": [
+          "din",
+          "ner"
+        ]
+      },
+      {
+        "type": "duo_spell",
+        "word": "draw",
+        "chinese": "画画",
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+        "display": "dra_",
+        "options": [
+          "w",
+          "z",
+          "x",
+          "y"
+        ],
+        "correct": "w",
+        "difficulty": "hard",
+        "parts": [
+          "dr",
+          "aw"
+        ]
+      },
+      {
+        "type": "duo_spell",
+        "word": "twenty",
+        "chinese": "二十",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "display": "t_enty",
+        "options": [
+          "w",
+          "z",
+          "y",
+          "x"
+        ],
+        "correct": "w",
+        "difficulty": "medium",
+        "parts": [
+          "twe",
+          "nty"
+        ]
       }
     ]
   },
   "speaking": {
     "pretest": [
       {
-        "type": "repeat_word",
-        "chinese": "二",
-        "word": "two",
-        "image": "<img src=\"assets/images/two.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "cook",
+        "chinese": "做饭",
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+        "sentence": "What are you doing?"
       },
       {
-        "type": "repeat_word",
-        "chinese": "七",
-        "word": "seven",
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "dinner",
+        "chinese": "晚餐",
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+        "sentence": "What are you doing?"
       },
       {
-        "type": "repeat_word",
-        "chinese": "五",
-        "word": "five",
-        "image": "<img src=\"assets/images/five.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "draw",
+        "chinese": "画画",
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+        "sentence": "What are you doing?"
       },
       {
-        "type": "read_sentence",
-        "chinese": "十",
-        "sentence": "I see a ten.",
-        "image": "<img src=\"assets/images/ten.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "twenty",
+        "chinese": "二十",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "sentence": "I like twenty."
       },
       {
-        "type": "read_sentence",
-        "chinese": "六",
-        "sentence": "I see a six.",
-        "image": "<img src=\"assets/images/six.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "cook",
+        "chinese": "做饭",
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+        "sentence": "I like cook."
       },
       {
-        "type": "read_sentence",
-        "chinese": "二",
-        "sentence": "I see a two.",
-        "image": "<img src=\"assets/images/two.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "dinner",
+        "chinese": "晚餐",
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+        "sentence": "I like dinner."
       },
       {
-        "type": "read_sentence",
-        "chinese": "三",
-        "sentence": "I see a three.",
-        "image": "<img src=\"assets/images/three.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "draw",
+        "chinese": "画画",
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+        "sentence": "I like draw."
       },
       {
-        "type": "read_sentence",
-        "chinese": "一",
-        "sentence": "I see a one.",
-        "image": "<img src=\"assets/images/one.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "twenty",
+        "chinese": "二十",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "sentence": "I like twenty."
       },
       {
-        "type": "repeat_word",
-        "chinese": "八",
-        "word": "eight",
-        "image": "<img src=\"assets/images/eight.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "cook",
+        "chinese": "做饭",
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+        "sentence": "What are you doing?"
       },
       {
-        "type": "repeat_word",
-        "chinese": "一",
-        "word": "one",
-        "image": "<img src=\"assets/images/one.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "九",
-        "sentence": "I see a nine.",
-        "image": "<img src=\"assets/images/nine.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "四",
-        "sentence": "I see a four.",
-        "image": "<img src=\"assets/images/four.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "dinner",
+        "chinese": "晚餐",
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+        "sentence": "What are you doing?"
       }
     ],
     "practice": [
       {
-        "type": "read_sentence",
-        "chinese": "一",
-        "difficulty": "easy",
-        "sentence": "I see a one.",
-        "image": "<img src=\"assets/images/one.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "cook",
+        "chinese": "做饭",
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+        "sentence": "I'm cooking.",
+        "difficulty": "easy"
       },
       {
-        "type": "repeat_word",
-        "chinese": "三",
-        "difficulty": "easy",
-        "word": "three",
-        "image": "<img src=\"assets/images/three.png\" width=\"80\">"
+        "type": "debate",
+        "word": "dinner",
+        "chinese": "晚餐",
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+        "sentence": "I'm cooking.",
+        "difficulty": "easy"
       },
       {
-        "type": "repeat_word",
-        "chinese": "一",
-        "difficulty": "medium",
-        "word": "one",
-        "image": "<img src=\"assets/images/one.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "draw",
+        "chinese": "画画",
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+        "sentence": "This is a draw.",
+        "difficulty": "hard"
       },
       {
-        "type": "repeat_word",
-        "chinese": "四",
-        "difficulty": "medium",
-        "word": "four",
-        "image": "<img src=\"assets/images/four.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "twenty",
+        "chinese": "二十",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "sentence": "This is a twenty.",
+        "difficulty": "easy"
       },
       {
-        "type": "repeat_word",
-        "chinese": "二",
-        "difficulty": "hard",
-        "word": "two",
-        "image": "<img src=\"assets/images/two.png\" width=\"80\">"
+        "type": "debate",
+        "word": "cook",
+        "chinese": "做饭",
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+        "sentence": "This is a cook.",
+        "difficulty": "hard"
       },
       {
-        "type": "repeat_word",
-        "chinese": "七",
-        "difficulty": "medium",
-        "word": "seven",
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "dinner",
+        "chinese": "晚餐",
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+        "sentence": "I'm cooking.",
+        "difficulty": "easy"
       },
       {
-        "type": "repeat_word",
-        "chinese": "二",
-        "difficulty": "hard",
-        "word": "two",
-        "image": "<img src=\"assets/images/two.png\" width=\"80\">"
+        "type": "debate",
+        "word": "draw",
+        "chinese": "画画",
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+        "sentence": "This is a draw.",
+        "difficulty": "easy"
       },
       {
-        "type": "repeat_word",
-        "chinese": "五",
-        "difficulty": "medium",
-        "word": "five",
-        "image": "<img src=\"assets/images/five.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "twenty",
+        "chinese": "二十",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "sentence": "I'm cooking.",
+        "difficulty": "hard"
       },
       {
-        "type": "repeat_word",
-        "chinese": "四",
-        "difficulty": "hard",
-        "word": "four",
-        "image": "<img src=\"assets/images/four.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "cook",
+        "chinese": "做饭",
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+        "sentence": "This is a cook.",
+        "difficulty": "hard"
       },
       {
-        "type": "repeat_word",
-        "chinese": "四",
-        "difficulty": "medium",
-        "word": "four",
-        "image": "<img src=\"assets/images/four.png\" width=\"80\">"
+        "type": "debate",
+        "word": "dinner",
+        "chinese": "晚餐",
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+        "sentence": "This is a dinner.",
+        "difficulty": "medium"
       },
       {
-        "type": "repeat_word",
-        "chinese": "六",
-        "difficulty": "medium",
-        "word": "six",
-        "image": "<img src=\"assets/images/six.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "draw",
+        "chinese": "画画",
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+        "sentence": "This is a draw.",
+        "difficulty": "hard"
       },
       {
-        "type": "read_sentence",
-        "chinese": "九",
-        "difficulty": "easy",
-        "sentence": "I see a nine.",
-        "image": "<img src=\"assets/images/nine.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "六",
-        "difficulty": "easy",
-        "sentence": "I see a six.",
-        "image": "<img src=\"assets/images/six.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "七",
-        "difficulty": "medium",
-        "sentence": "I see a seven.",
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "十",
-        "difficulty": "medium",
-        "sentence": "I see a ten.",
-        "image": "<img src=\"assets/images/ten.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "五",
-        "difficulty": "hard",
-        "sentence": "I see a five.",
-        "image": "<img src=\"assets/images/five.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "三",
-        "difficulty": "easy",
-        "word": "three",
-        "image": "<img src=\"assets/images/three.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "七",
-        "difficulty": "easy",
-        "word": "seven",
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "九",
-        "difficulty": "easy",
-        "sentence": "I see a nine.",
-        "image": "<img src=\"assets/images/nine.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "八",
-        "difficulty": "medium",
-        "word": "eight",
-        "image": "<img src=\"assets/images/eight.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "三",
-        "difficulty": "hard",
-        "sentence": "I see a three.",
-        "image": "<img src=\"assets/images/three.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "五",
-        "difficulty": "easy",
-        "word": "five",
-        "image": "<img src=\"assets/images/five.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "二",
-        "difficulty": "easy",
-        "word": "two",
-        "image": "<img src=\"assets/images/two.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "十",
-        "difficulty": "hard",
-        "word": "ten",
-        "image": "<img src=\"assets/images/ten.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "八",
-        "difficulty": "medium",
-        "sentence": "I see a eight.",
-        "image": "<img src=\"assets/images/eight.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "六",
-        "difficulty": "medium",
-        "sentence": "I see a six.",
-        "image": "<img src=\"assets/images/six.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "八",
-        "difficulty": "easy",
-        "word": "eight",
-        "image": "<img src=\"assets/images/eight.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "一",
-        "difficulty": "hard",
-        "word": "one",
-        "image": "<img src=\"assets/images/one.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "twenty",
+        "chinese": "二十",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "sentence": "This is a twenty.",
+        "difficulty": "hard"
       }
     ]
   }

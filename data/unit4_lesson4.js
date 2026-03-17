@@ -1,530 +1,343 @@
 var unit4_lesson4 = {
   "id": "U4L4",
-  "title": "Who is this?",
+  "title": "Unit 4 Lesson 4: What's for dinner?",
   "listening": {
     "pretest": [
       {
         "type": "listen_tf",
-        "audio": "family",
-        "chinese": "家庭",
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_select",
-        "audio": "grandma",
-        "chinese": "奶奶",
+        "audio": "rice",
+        "chinese": "米饭",
         "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/family.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
+          "<img src=\"assets/images/soup.png\" width=\"80\">",
+          "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+          "<img src=\"assets/images/rice.png\" width=\"80\">",
+          "<img src=\"assets/images/chicken.png\" width=\"80\">"
         ],
-        "correct": 1
-      },
-      {
-        "type": "listen_select",
-        "audio": "brother",
-        "chinese": "哥哥",
-        "options": [
-          "<img src=\"assets/images/brother.png\" width=\"80\">",
-          "<img src=\"assets/images/father.png\" width=\"80\">",
-          "<img src=\"assets/images/family.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-        ],
-        "correct": 0
+        "correct": 2,
+        "image": "<img src=\"assets/images/soup.png\" width=\"80\">"
       },
       {
         "type": "listen_tf",
-        "audio": "grandpa",
-        "chinese": "爷爷",
-        "image": "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-        "correct": true
+        "audio": "soup",
+        "chinese": "汤",
+        "options": [
+          "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+          "<img src=\"assets/images/chicken.png\" width=\"80\">",
+          "<img src=\"assets/images/rice.png\" width=\"80\">",
+          "<img src=\"assets/images/soup.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "image": "<img src=\"assets/images/soup.png\" width=\"80\">"
       },
       {
         "type": "listen_select",
-        "audio": "sister",
-        "chinese": "姐姐",
+        "audio": "chicken",
+        "chinese": "鸡肉",
         "options": [
-          "<img src=\"assets/images/mother.png\" width=\"80\">",
-          "<img src=\"assets/images/father.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/sister.png\" width=\"80\">"
+          "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+          "<img src=\"assets/images/soup.png\" width=\"80\">",
+          "<img src=\"assets/images/rice.png\" width=\"80\">",
+          "<img src=\"assets/images/chicken.png\" width=\"80\">"
         ],
-        "correct": 3
+        "correct": false,
+        "image": "<img src=\"assets/images/vegetable.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "vegetable",
+        "chinese": "蔬菜",
+        "options": [
+          "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+          "<img src=\"assets/images/rice.png\" width=\"80\">",
+          "<img src=\"assets/images/chicken.png\" width=\"80\">",
+          "<img src=\"assets/images/soup.png\" width=\"80\">"
+        ],
+        "correct": false,
+        "image": "<img src=\"assets/images/rice.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "rice",
+        "chinese": "米饭",
+        "options": [
+          "<img src=\"assets/images/chicken.png\" width=\"80\">",
+          "<img src=\"assets/images/rice.png\" width=\"80\">",
+          "<img src=\"assets/images/soup.png\" width=\"80\">",
+          "<img src=\"assets/images/vegetable.png\" width=\"80\">"
+        ],
+        "correct": true,
+        "image": "<img src=\"assets/images/rice.png\" width=\"80\">"
       },
       {
         "type": "listen_select",
-        "audio": "mother",
-        "chinese": "妈妈",
+        "audio": "soup",
+        "chinese": "汤",
         "options": [
-          "<img src=\"assets/images/mother.png\" width=\"80\">",
-          "<img src=\"assets/images/family.png\" width=\"80\">",
-          "<img src=\"assets/images/sister.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
+          "<img src=\"assets/images/rice.png\" width=\"80\">",
+          "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+          "<img src=\"assets/images/soup.png\" width=\"80\">",
+          "<img src=\"assets/images/chicken.png\" width=\"80\">"
         ],
-        "correct": 0
+        "correct": false,
+        "image": "<img src=\"assets/images/soup.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "chicken",
+        "chinese": "鸡肉",
+        "options": [
+          "<img src=\"assets/images/rice.png\" width=\"80\">",
+          "<img src=\"assets/images/soup.png\" width=\"80\">",
+          "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+          "<img src=\"assets/images/chicken.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "image": "<img src=\"assets/images/vegetable.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "vegetable",
+        "chinese": "蔬菜",
+        "options": [
+          "<img src=\"assets/images/soup.png\" width=\"80\">",
+          "<img src=\"assets/images/chicken.png\" width=\"80\">",
+          "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+          "<img src=\"assets/images/rice.png\" width=\"80\">"
+        ],
+        "correct": false,
+        "image": "<img src=\"assets/images/rice.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "rice",
+        "chinese": "米饭",
+        "options": [
+          "<img src=\"assets/images/soup.png\" width=\"80\">",
+          "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+          "<img src=\"assets/images/rice.png\" width=\"80\">",
+          "<img src=\"assets/images/chicken.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "image": "<img src=\"assets/images/rice.png\" width=\"80\">"
       },
       {
         "type": "listen_select",
-        "audio": "father",
-        "chinese": "爸爸",
+        "audio": "soup",
+        "chinese": "汤",
         "options": [
-          "<img src=\"assets/images/father.png\" width=\"80\">",
-          "<img src=\"assets/images/mother.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
+          "<img src=\"assets/images/rice.png\" width=\"80\">",
+          "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+          "<img src=\"assets/images/soup.png\" width=\"80\">",
+          "<img src=\"assets/images/chicken.png\" width=\"80\">"
         ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "mother",
-        "chinese": "妈妈",
-        "options": [
-          "<img src=\"assets/images/brother.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/mother.png\" width=\"80\">",
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "listen_select",
-        "audio": "father",
-        "chinese": "爸爸",
-        "options": [
-          "<img src=\"assets/images/mother.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/father.png\" width=\"80\">",
-          "<img src=\"assets/images/brother.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "listen_select",
-        "audio": "baby",
-        "chinese": "宝宝",
-        "options": [
-          "<img src=\"assets/images/mother.png\" width=\"80\">",
-          "<img src=\"assets/images/sister.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-        ],
-        "correct": 2
+        "correct": 2,
+        "image": "<img src=\"assets/images/chicken.png\" width=\"80\">"
       }
     ],
     "practice": [
       {
-        "type": "listen_tf",
-        "audio": "mother",
-        "chinese": "妈妈",
-        "difficulty": "easy",
-        "image": "<img src=\"assets/images/brother.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_select",
-        "audio": "sister",
-        "chinese": "姐姐",
-        "difficulty": "easy",
+        "type": "scenario",
+        "audio": "rice",
+        "chinese": "米饭",
         "options": [
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/sister.png\" width=\"80\">",
-          "<img src=\"assets/images/father.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "listen_tf",
-        "audio": "mother",
-        "chinese": "妈妈",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_select",
-        "audio": "grandma",
-        "chinese": "奶奶",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/mother.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/father.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "mother",
-        "chinese": "妈妈",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/mother.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/brother.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "grandpa",
-        "chinese": "爷爷",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/brother.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "listen_tf",
-        "audio": "brother",
-        "chinese": "哥哥",
-        "difficulty": "easy",
-        "image": "<img src=\"assets/images/brother.png\" width=\"80\">",
-        "correct": true
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "grandpa",
-        "chinese": "爷爷",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/sister.png\" width=\"80\">",
-          "<img src=\"assets/images/mother.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "father",
-        "chinese": "爸爸",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/father.png\" width=\"80\">",
-          "<img src=\"assets/images/sister.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "brother",
-        "chinese": "哥哥",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">",
-          "<img src=\"assets/images/brother.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/sister.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "listen_select",
-        "audio": "brother",
-        "chinese": "哥哥",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">",
-          "<img src=\"assets/images/brother.png\" width=\"80\">",
-          "<img src=\"assets/images/sister.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "listen_select",
-        "audio": "sister",
-        "chinese": "姐姐",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/sister.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/family.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "baby",
-        "chinese": "宝宝",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/mother.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/sister.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "listen_select",
-        "audio": "father",
-        "chinese": "爸爸",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/brother.png\" width=\"80\">",
-          "<img src=\"assets/images/father.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "father",
-        "chinese": "爸爸",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/father.png\" width=\"80\">",
-          "<img src=\"assets/images/sister.png\" width=\"80\">",
-          "<img src=\"assets/images/mother.png\" width=\"80\">",
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "family",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/brother.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/father.png\" width=\"80\">",
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "listen_select",
-        "audio": "family",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">",
-          "<img src=\"assets/images/brother.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/sister.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_tf",
-        "audio": "sister",
-        "chinese": "姐姐",
-        "difficulty": "easy",
-        "image": "<img src=\"assets/images/sister.png\" width=\"80\">",
-        "correct": true
-      },
-      {
-        "type": "listen_tf",
-        "audio": "mother",
-        "chinese": "妈妈",
-        "difficulty": "medium",
-        "image": "<img src=\"assets/images/sister.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_select",
-        "audio": "grandpa",
-        "chinese": "爷爷",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/sister.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "listen_select",
-        "audio": "grandma",
-        "chinese": "奶奶",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/brother.png\" width=\"80\">",
-          "<img src=\"assets/images/family.png\" width=\"80\">",
-          "<img src=\"assets/images/mother.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "listen_select",
-        "audio": "father",
-        "chinese": "爸爸",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/father.png\" width=\"80\">",
-          "<img src=\"assets/images/family.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/brother.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "grandma",
-        "chinese": "奶奶",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/family.png\" width=\"80\">",
-          "<img src=\"assets/images/brother.png\" width=\"80\">",
-          "<img src=\"assets/images/father.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_tf",
-        "audio": "family",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_select",
-        "audio": "baby",
-        "chinese": "宝宝",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/family.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/brother.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_tf",
-        "audio": "baby",
-        "chinese": "宝宝",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/brother.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "balloon_pop",
-        "text": "Find the word",
-        "chinese": "姐姐",
-        "options": [
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/sister.png\" width=\"80\">",
-          "<img src=\"assets/images/father.png\" width=\"80\">"
+          "<img src=\"assets/images/soup.png\" width=\"80\">",
+          "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+          "<img src=\"assets/images/rice.png\" width=\"80\">",
+          "<img src=\"assets/images/chicken.png\" width=\"80\">"
         ],
         "correct": 2,
-        "difficulty": "easy"
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "What's for dinner today?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       },
       {
-        "type": "balloon_pop",
-        "text": "Find the word",
-        "chinese": "奶奶",
+        "type": "listen_select",
+        "audio": "soup",
+        "chinese": "汤",
         "options": [
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/mother.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/father.png\" width=\"80\">"
+          "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+          "<img src=\"assets/images/chicken.png\" width=\"80\">",
+          "<img src=\"assets/images/rice.png\" width=\"80\">",
+          "<img src=\"assets/images/soup.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "What's for dinner today?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "listen_select",
+        "audio": "chicken",
+        "chinese": "鸡肉",
+        "options": [
+          "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+          "<img src=\"assets/images/soup.png\" width=\"80\">",
+          "<img src=\"assets/images/rice.png\" width=\"80\">",
+          "<img src=\"assets/images/chicken.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "How about some Chinese food?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "scenario",
+        "audio": "vegetable",
+        "chinese": "蔬菜",
+        "options": [
+          "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+          "<img src=\"assets/images/rice.png\" width=\"80\">",
+          "<img src=\"assets/images/chicken.png\" width=\"80\">",
+          "<img src=\"assets/images/soup.png\" width=\"80\">"
         ],
         "correct": 0,
-        "difficulty": "medium"
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "How about some Chinese food?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       },
       {
-        "type": "balloon_pop",
-        "text": "Find the word",
-        "chinese": "妈妈",
+        "type": "scenario",
+        "audio": "rice",
+        "chinese": "米饭",
         "options": [
-          "<img src=\"assets/images/mother.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/brother.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-        ],
-        "correct": 0,
-        "difficulty": "medium"
-      },
-      {
-        "type": "balloon_pop",
-        "text": "Find the word",
-        "chinese": "爷爷",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/brother.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">"
+          "<img src=\"assets/images/chicken.png\" width=\"80\">",
+          "<img src=\"assets/images/rice.png\" width=\"80\">",
+          "<img src=\"assets/images/soup.png\" width=\"80\">",
+          "<img src=\"assets/images/vegetable.png\" width=\"80\">"
         ],
         "correct": 1,
-        "difficulty": "hard"
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "What's for dinner today?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       },
       {
-        "type": "scenario",
-        "scenario": "There is a photo on the wall. It has Mom, Dad, and two children.",
-        "chinese": "墙上有一张照片。有妈妈、爸爸和两个孩子。",
-        "question": "What is in the photo?",
+        "type": "balloon_pop",
+        "audio": "soup",
+        "chinese": "汤",
         "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/father.png\" width=\"80\">"
-        ],
-        "correct": 0,
-        "feedback": "This is a family photo!",
-        "difficulty": "easy"
-      },
-      {
-        "type": "scenario",
-        "scenario": "Someone takes care of the baby at home. She is very kind.",
-        "chinese": "有人在家照顾宝宝。她很慈祥。",
-        "question": "Who takes care of the baby?",
-        "options": [
-          "<img src=\"assets/images/brother.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/father.png\" width=\"80\">"
-        ],
-        "correct": 1,
-        "feedback": "Grandma takes care of baby!",
-        "difficulty": "easy"
-      },
-      {
-        "type": "scenario",
-        "scenario": "Tom's older boy teaches him to play basketball.",
-        "chinese": "汤姆的哥哥教他打篮球。",
-        "question": "Who teaches Tom?",
-        "options": [
-          "<img src=\"assets/images/sister.png\" width=\"80\">",
-          "<img src=\"assets/images/mother.png\" width=\"80\">",
-          "<img src=\"assets/images/brother.png\" width=\"80\">"
+          "<img src=\"assets/images/rice.png\" width=\"80\">",
+          "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+          "<img src=\"assets/images/soup.png\" width=\"80\">",
+          "<img src=\"assets/images/chicken.png\" width=\"80\">"
         ],
         "correct": 2,
-        "feedback": "Brother teaches basketball!",
-        "difficulty": "medium"
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "How about some Chinese food?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       },
       {
         "type": "scenario",
-        "scenario": "On Sunday, everyone goes to the park together. They have a picnic.",
-        "chinese": "星期天，大家一起去公园。他们野餐。",
-        "question": "Who goes to the park?",
+        "audio": "chicken",
+        "chinese": "鸡肉",
         "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/family.png\" width=\"80\">",
-          "<img src=\"assets/images/father.png\" width=\"80\">"
+          "<img src=\"assets/images/rice.png\" width=\"80\">",
+          "<img src=\"assets/images/soup.png\" width=\"80\">",
+          "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+          "<img src=\"assets/images/chicken.png\" width=\"80\">"
         ],
-        "correct": 1,
-        "feedback": "The whole family goes to the park!",
-        "difficulty": "medium"
+        "correct": 3,
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "How about some Chinese food?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "balloon_pop",
+        "audio": "vegetable",
+        "chinese": "蔬菜",
+        "options": [
+          "<img src=\"assets/images/soup.png\" width=\"80\">",
+          "<img src=\"assets/images/chicken.png\" width=\"80\">",
+          "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+          "<img src=\"assets/images/rice.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "medium",
+        "text": "Find the word",
+        "scenario": "How about some Chinese food?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "balloon_pop",
+        "audio": "rice",
+        "chinese": "米饭",
+        "options": [
+          "<img src=\"assets/images/soup.png\" width=\"80\">",
+          "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+          "<img src=\"assets/images/rice.png\" width=\"80\">",
+          "<img src=\"assets/images/chicken.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "How about some Chinese food?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "listen_select",
+        "audio": "soup",
+        "chinese": "汤",
+        "options": [
+          "<img src=\"assets/images/rice.png\" width=\"80\">",
+          "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+          "<img src=\"assets/images/soup.png\" width=\"80\">",
+          "<img src=\"assets/images/chicken.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "medium",
+        "text": "Find the word",
+        "scenario": "What's for dinner today?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "listen_select",
+        "audio": "chicken",
+        "chinese": "鸡肉",
+        "options": [
+          "<img src=\"assets/images/chicken.png\" width=\"80\">",
+          "<img src=\"assets/images/soup.png\" width=\"80\">",
+          "<img src=\"assets/images/rice.png\" width=\"80\">",
+          "<img src=\"assets/images/vegetable.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "medium",
+        "text": "Find the word",
+        "scenario": "How about some Chinese food?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "scenario",
+        "audio": "vegetable",
+        "chinese": "蔬菜",
+        "options": [
+          "<img src=\"assets/images/soup.png\" width=\"80\">",
+          "<img src=\"assets/images/chicken.png\" width=\"80\">",
+          "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+          "<img src=\"assets/images/rice.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "How about some Chinese food?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       }
     ]
   },
@@ -532,1353 +345,973 @@ var unit4_lesson4 = {
     "pretest": [
       {
         "type": "sentence_match",
-        "chinese": "哥哥",
-        "sentence": "I see a brother.",
+        "chinese": "米饭",
+        "word": "rice",
+        "sentence": "What's for dinner today?",
         "options": [
           {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "baby"
+            "text": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+            "value": "vegetable"
           },
           {
-            "text": "<img src=\"assets/images/brother.png\" width=\"80\">",
-            "value": "brother"
+            "text": "<img src=\"assets/images/soup.png\" width=\"80\">",
+            "value": "soup"
+          },
+          {
+            "text": "<img src=\"assets/images/chicken.png\" width=\"80\">",
+            "value": "chicken"
+          },
+          {
+            "text": "<img src=\"assets/images/rice.png\" width=\"80\">",
+            "value": "rice"
           }
         ],
-        "correct": "brother"
+        "correct": "rice"
       },
       {
         "type": "word_match",
-        "chinese": "奶奶",
-        "word": "grandma",
+        "chinese": "汤",
+        "word": "soup",
+        "sentence": "What's for dinner today?",
         "options": [
           {
-            "text": "<img src=\"assets/images/grandma.png\" width=\"80\">",
-            "value": "grandma"
+            "text": "<img src=\"assets/images/chicken.png\" width=\"80\">",
+            "value": "chicken"
           },
           {
-            "text": "<img src=\"assets/images/brother.png\" width=\"80\">",
-            "value": "brother"
+            "text": "<img src=\"assets/images/rice.png\" width=\"80\">",
+            "value": "rice"
           }
         ],
-        "correct": "grandma"
+        "correct": "soup"
       },
       {
         "type": "word_match",
-        "chinese": "爸爸",
-        "word": "father",
+        "chinese": "鸡肉",
+        "word": "chicken",
+        "sentence": "What's for dinner today?",
         "options": [
           {
-            "text": "<img src=\"assets/images/father.png\" width=\"80\">",
-            "value": "father"
+            "text": "<img src=\"assets/images/rice.png\" width=\"80\">",
+            "value": "rice"
           },
           {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
+            "text": "<img src=\"assets/images/chicken.png\" width=\"80\">",
+            "value": "chicken"
           }
         ],
-        "correct": "father"
+        "correct": "chicken"
       },
       {
         "type": "word_match",
-        "chinese": "姐姐",
-        "word": "sister",
+        "chinese": "蔬菜",
+        "word": "vegetable",
+        "sentence": "What's for dinner today?",
         "options": [
           {
-            "text": "<img src=\"assets/images/sister.png\" width=\"80\">",
-            "value": "sister"
+            "text": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+            "value": "vegetable"
           },
           {
-            "text": "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-            "value": "grandpa"
+            "text": "<img src=\"assets/images/soup.png\" width=\"80\">",
+            "value": "soup"
+          },
+          {
+            "text": "<img src=\"assets/images/rice.png\" width=\"80\">",
+            "value": "rice"
+          },
+          {
+            "text": "<img src=\"assets/images/chicken.png\" width=\"80\">",
+            "value": "chicken"
           }
         ],
-        "correct": "sister"
+        "correct": "vegetable"
       },
       {
         "type": "word_match",
-        "chinese": "妈妈",
-        "word": "mother",
+        "chinese": "米饭",
+        "word": "rice",
+        "sentence": "I see a rice.",
         "options": [
           {
-            "text": "<img src=\"assets/images/mother.png\" width=\"80\">",
-            "value": "mother"
+            "text": "<img src=\"assets/images/rice.png\" width=\"80\">",
+            "value": "rice"
           },
           {
-            "text": "<img src=\"assets/images/sister.png\" width=\"80\">",
-            "value": "sister"
+            "text": "<img src=\"assets/images/soup.png\" width=\"80\">",
+            "value": "soup"
           }
         ],
-        "correct": "mother"
+        "correct": "rice"
       },
       {
         "type": "word_match",
-        "chinese": "家庭",
-        "word": "family",
+        "chinese": "汤",
+        "word": "soup",
+        "sentence": "I see a soup.",
         "options": [
           {
-            "text": "<img src=\"assets/images/sister.png\" width=\"80\">",
-            "value": "sister"
+            "text": "<img src=\"assets/images/rice.png\" width=\"80\">",
+            "value": "rice"
           },
           {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
+            "text": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+            "value": "vegetable"
           }
         ],
-        "correct": "family"
-      },
-      {
-        "type": "word_match",
-        "chinese": "爸爸",
-        "word": "father",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/father.png\" width=\"80\">",
-            "value": "father"
-          },
-          {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
-          }
-        ],
-        "correct": "father"
-      },
-      {
-        "type": "word_match",
-        "chinese": "哥哥",
-        "word": "brother",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/sister.png\" width=\"80\">",
-            "value": "sister"
-          },
-          {
-            "text": "<img src=\"assets/images/brother.png\" width=\"80\">",
-            "value": "brother"
-          }
-        ],
-        "correct": "brother"
-      },
-      {
-        "type": "word_match",
-        "chinese": "妈妈",
-        "word": "mother",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/brother.png\" width=\"80\">",
-            "value": "brother"
-          },
-          {
-            "text": "<img src=\"assets/images/mother.png\" width=\"80\">",
-            "value": "mother"
-          }
-        ],
-        "correct": "mother"
+        "correct": "soup"
       },
       {
         "type": "sentence_match",
-        "chinese": "姐姐",
-        "sentence": "I see a sister.",
+        "chinese": "鸡肉",
+        "word": "chicken",
+        "sentence": "I see a chicken.",
         "options": [
           {
-            "text": "<img src=\"assets/images/sister.png\" width=\"80\">",
-            "value": "sister"
+            "text": "<img src=\"assets/images/soup.png\" width=\"80\">",
+            "value": "soup"
           },
           {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "baby"
+            "text": "<img src=\"assets/images/chicken.png\" width=\"80\">",
+            "value": "chicken"
           }
         ],
-        "correct": "sister"
+        "correct": "chicken"
       },
       {
         "type": "word_match",
-        "chinese": "爷爷",
-        "word": "grandpa",
+        "chinese": "蔬菜",
+        "word": "vegetable",
+        "sentence": "I see a vegetable.",
         "options": [
           {
-            "text": "<img src=\"assets/images/sister.png\" width=\"80\">",
-            "value": "sister"
+            "text": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+            "value": "vegetable"
           },
           {
-            "text": "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-            "value": "grandpa"
+            "text": "<img src=\"assets/images/soup.png\" width=\"80\">",
+            "value": "soup"
           }
         ],
-        "correct": "grandpa"
+        "correct": "vegetable"
+      },
+      {
+        "type": "sentence_match",
+        "chinese": "米饭",
+        "word": "rice",
+        "sentence": "I see a rice.",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/soup.png\" width=\"80\">",
+            "value": "soup"
+          },
+          {
+            "text": "<img src=\"assets/images/chicken.png\" width=\"80\">",
+            "value": "chicken"
+          },
+          {
+            "text": "<img src=\"assets/images/rice.png\" width=\"80\">",
+            "value": "rice"
+          },
+          {
+            "text": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+            "value": "vegetable"
+          }
+        ],
+        "correct": "rice"
       },
       {
         "type": "word_match",
-        "chinese": "宝宝",
-        "word": "baby",
+        "chinese": "汤",
+        "word": "soup",
+        "sentence": "What's for dinner today?",
         "options": [
           {
-            "text": "<img src=\"assets/images/father.png\" width=\"80\">",
-            "value": "father"
+            "text": "<img src=\"assets/images/rice.png\" width=\"80\">",
+            "value": "rice"
           },
           {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "baby"
+            "text": "<img src=\"assets/images/chicken.png\" width=\"80\">",
+            "value": "chicken"
           }
         ],
-        "correct": "baby"
+        "correct": "soup"
       }
     ],
     "practice": [
       {
         "type": "duo_race",
-        "chinese": "宝宝",
-        "difficulty": "hard",
-        "word": "baby",
-        "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/sister.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/family.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "word_match",
-        "chinese": "妈妈",
-        "difficulty": "easy",
-        "word": "mother",
+        "chinese": "米饭",
+        "word": "rice",
+        "sentence": "How about some Chinese food?",
         "options": [
           {
-            "text": "<img src=\"assets/images/mother.png\" width=\"80\">",
-            "value": "mother"
+            "text": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+            "value": "vegetable"
           },
           {
-            "text": "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-            "value": "grandpa"
-          }
-        ],
-        "correct": "mother"
-      },
-      {
-        "type": "word_match",
-        "chinese": "姐姐",
-        "difficulty": "hard",
-        "word": "sister",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-            "value": "grandpa"
+            "text": "<img src=\"assets/images/soup.png\" width=\"80\">",
+            "value": "soup"
           },
           {
-            "text": "<img src=\"assets/images/sister.png\" width=\"80\">",
-            "value": "sister"
+            "text": "<img src=\"assets/images/chicken.png\" width=\"80\">",
+            "value": "chicken"
+          },
+          {
+            "text": "<img src=\"assets/images/rice.png\" width=\"80\">",
+            "value": "rice"
           }
         ],
-        "correct": "sister"
+        "correct": 2,
+        "difficulty": "easy"
       },
       {
         "type": "sentence_match",
-        "chinese": "爸爸",
-        "difficulty": "medium",
-        "sentence": "I see a father.",
+        "chinese": "汤",
+        "word": "soup",
+        "sentence": "How about some Chinese food?",
         "options": [
           {
-            "text": "<img src=\"assets/images/father.png\" width=\"80\">",
-            "value": "father"
+            "text": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+            "value": "vegetable"
           },
           {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "baby"
+            "text": "<img src=\"assets/images/rice.png\" width=\"80\">",
+            "value": "rice"
+          },
+          {
+            "text": "<img src=\"assets/images/chicken.png\" width=\"80\">",
+            "value": "chicken"
+          },
+          {
+            "text": "<img src=\"assets/images/soup.png\" width=\"80\">",
+            "value": "soup"
           }
         ],
-        "correct": "father"
+        "correct": "soup",
+        "difficulty": "medium"
       },
       {
-        "type": "whack_mole",
-        "chinese": "哥哥",
-        "difficulty": "medium",
-        "word": "brother",
+        "type": "word_match",
+        "chinese": "鸡肉",
+        "word": "chicken",
+        "sentence": "How about some Chinese food?",
         "options": [
-          "<img src=\"assets/images/brother.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/family.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
+          "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+          "<img src=\"assets/images/soup.png\" width=\"80\">",
+          "<img src=\"assets/images/rice.png\" width=\"80\">",
+          "<img src=\"assets/images/chicken.png\" width=\"80\">"
         ],
-        "correct": 0
+        "correct": "chicken",
+        "difficulty": "hard"
       },
       {
-        "type": "whack_mole",
-        "chinese": "爸爸",
-        "difficulty": "easy",
-        "word": "father",
+        "type": "word_match",
+        "chinese": "蔬菜",
+        "word": "vegetable",
+        "sentence": "How about some Chinese food?",
         "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/sister.png\" width=\"80\">",
-          "<img src=\"assets/images/father.png\" width=\"80\">",
-          "<img src=\"assets/images/family.png\" width=\"80\">"
+          {
+            "text": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+            "value": "vegetable"
+          },
+          {
+            "text": "<img src=\"assets/images/soup.png\" width=\"80\">",
+            "value": "soup"
+          },
+          {
+            "text": "<img src=\"assets/images/rice.png\" width=\"80\">",
+            "value": "rice"
+          },
+          {
+            "text": "<img src=\"assets/images/chicken.png\" width=\"80\">",
+            "value": "chicken"
+          }
         ],
-        "correct": 2
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "爷爷",
-        "difficulty": "hard",
-        "word": "grandpa",
-        "options": [
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/mother.png\" width=\"80\">"
-        ],
-        "correct": 0
+        "correct": 0,
+        "difficulty": "hard"
       },
       {
         "type": "duo_race",
-        "chinese": "哥哥",
-        "difficulty": "easy",
-        "word": "brother",
+        "chinese": "米饭",
+        "word": "rice",
+        "sentence": "How about some Chinese food?",
         "options": [
-          "<img src=\"assets/images/brother.png\" width=\"80\">",
-          "<img src=\"assets/images/family.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/sister.png\" width=\"80\">"
+          "<img src=\"assets/images/chicken.png\" width=\"80\">",
+          "<img src=\"assets/images/rice.png\" width=\"80\">",
+          "<img src=\"assets/images/soup.png\" width=\"80\">",
+          "<img src=\"assets/images/vegetable.png\" width=\"80\">"
         ],
-        "correct": 0
+        "correct": "rice",
+        "difficulty": "easy"
+      },
+      {
+        "type": "duo_race",
+        "chinese": "汤",
+        "word": "soup",
+        "sentence": "How about some Chinese food?",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/rice.png\" width=\"80\">",
+            "value": "rice"
+          },
+          {
+            "text": "<img src=\"assets/images/chicken.png\" width=\"80\">",
+            "value": "chicken"
+          },
+          {
+            "text": "<img src=\"assets/images/soup.png\" width=\"80\">",
+            "value": "soup"
+          },
+          {
+            "text": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+            "value": "vegetable"
+          }
+        ],
+        "correct": 2,
+        "difficulty": "easy"
       },
       {
         "type": "sentence_match",
-        "chinese": "爸爸",
-        "difficulty": "medium",
-        "sentence": "I see a father.",
+        "chinese": "鸡肉",
+        "word": "chicken",
+        "sentence": "Look at the chicken.",
+        "options": [
+          "<img src=\"assets/images/rice.png\" width=\"80\">",
+          "<img src=\"assets/images/soup.png\" width=\"80\">",
+          "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+          "<img src=\"assets/images/chicken.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "difficulty": "hard"
+      },
+      {
+        "type": "duo_race",
+        "chinese": "蔬菜",
+        "word": "vegetable",
+        "sentence": "Look at the vegetable.",
         "options": [
           {
-            "text": "<img src=\"assets/images/grandma.png\" width=\"80\">",
-            "value": "grandma"
+            "text": "<img src=\"assets/images/rice.png\" width=\"80\">",
+            "value": "rice"
           },
           {
-            "text": "<img src=\"assets/images/father.png\" width=\"80\">",
-            "value": "father"
+            "text": "<img src=\"assets/images/soup.png\" width=\"80\">",
+            "value": "soup"
+          },
+          {
+            "text": "<img src=\"assets/images/chicken.png\" width=\"80\">",
+            "value": "chicken"
+          },
+          {
+            "text": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+            "value": "vegetable"
           }
         ],
-        "correct": "father"
+        "correct": 2,
+        "difficulty": "hard"
+      },
+      {
+        "type": "word_match",
+        "chinese": "米饭",
+        "word": "rice",
+        "sentence": "How about some Chinese food?",
+        "options": [
+          "<img src=\"assets/images/soup.png\" width=\"80\">",
+          "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+          "<img src=\"assets/images/rice.png\" width=\"80\">",
+          "<img src=\"assets/images/chicken.png\" width=\"80\">"
+        ],
+        "correct": "rice",
+        "difficulty": "hard"
       },
       {
         "type": "sentence_match",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "sentence": "I see a family.",
+        "chinese": "汤",
+        "word": "soup",
+        "sentence": "Look at the soup.",
         "options": [
-          {
-            "text": "<img src=\"assets/images/grandma.png\" width=\"80\">",
-            "value": "grandma"
-          },
-          {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
-          }
+          "<img src=\"assets/images/rice.png\" width=\"80\">",
+          "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+          "<img src=\"assets/images/soup.png\" width=\"80\">",
+          "<img src=\"assets/images/chicken.png\" width=\"80\">"
         ],
-        "correct": "family"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "妈妈",
-        "difficulty": "medium",
-        "word": "mother",
-        "options": [
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/mother.png\" width=\"80\">",
-          "<img src=\"assets/images/father.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "爷爷",
-        "difficulty": "easy",
-        "word": "grandpa",
-        "options": [
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/brother.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "word_match",
-        "chinese": "奶奶",
-        "difficulty": "hard",
-        "word": "grandma",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/grandma.png\" width=\"80\">",
-            "value": "grandma"
-          },
-          {
-            "text": "<img src=\"assets/images/father.png\" width=\"80\">",
-            "value": "father"
-          }
-        ],
-        "correct": "grandma"
-      },
-      {
-        "type": "word_match",
-        "chinese": "姐姐",
-        "difficulty": "medium",
-        "word": "sister",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/sister.png\" width=\"80\">",
-            "value": "sister"
-          },
-          {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "baby"
-          }
-        ],
-        "correct": "sister"
-      },
-      {
-        "type": "word_match",
-        "chinese": "宝宝",
-        "difficulty": "medium",
-        "word": "baby",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "baby"
-          },
-          {
-            "text": "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-            "value": "grandpa"
-          }
-        ],
-        "correct": "baby"
+        "correct": "soup",
+        "difficulty": "medium"
       },
       {
         "type": "sentence_match",
-        "chinese": "奶奶",
-        "difficulty": "medium",
-        "sentence": "I see a grandma.",
+        "chinese": "鸡肉",
+        "word": "chicken",
+        "sentence": "How about some Chinese food?",
         "options": [
-          {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "baby"
-          },
-          {
-            "text": "<img src=\"assets/images/grandma.png\" width=\"80\">",
-            "value": "grandma"
-          }
+          "<img src=\"assets/images/chicken.png\" width=\"80\">",
+          "<img src=\"assets/images/soup.png\" width=\"80\">",
+          "<img src=\"assets/images/rice.png\" width=\"80\">",
+          "<img src=\"assets/images/vegetable.png\" width=\"80\">"
         ],
-        "correct": "grandma"
-      },
-      {
-        "type": "word_match",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "word": "family",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
-          },
-          {
-            "text": "<img src=\"assets/images/mother.png\" width=\"80\">",
-            "value": "mother"
-          }
-        ],
-        "correct": "family"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "妈妈",
-        "difficulty": "medium",
-        "word": "mother",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/mother.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "word_match",
-        "chinese": "哥哥",
-        "difficulty": "easy",
-        "word": "brother",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/brother.png\" width=\"80\">",
-            "value": "brother"
-          },
-          {
-            "text": "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-            "value": "grandpa"
-          }
-        ],
-        "correct": "brother"
-      },
-      {
-        "type": "word_match",
-        "chinese": "爸爸",
-        "difficulty": "easy",
-        "word": "father",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "baby"
-          },
-          {
-            "text": "<img src=\"assets/images/father.png\" width=\"80\">",
-            "value": "father"
-          }
-        ],
-        "correct": "father"
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "爷爷",
-        "difficulty": "hard",
-        "word": "grandpa",
-        "options": [
-          "<img src=\"assets/images/grandma.png\" width=\"80\">",
-          "<img src=\"assets/images/mother.png\" width=\"80\">",
-          "<img src=\"assets/images/brother.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "duo_race",
-        "chinese": "姐姐",
-        "difficulty": "easy",
-        "word": "sister",
-        "options": [
-          "<img src=\"assets/images/family.png\" width=\"80\">",
-          "<img src=\"assets/images/brother.png\" width=\"80\">",
-          "<img src=\"assets/images/sister.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">"
-        ],
-        "correct": 2
+        "correct": "chicken",
+        "difficulty": "hard"
       },
       {
         "type": "sentence_match",
-        "chinese": "哥哥",
-        "difficulty": "medium",
-        "sentence": "I see a brother.",
+        "chinese": "蔬菜",
+        "word": "vegetable",
+        "sentence": "Look at the vegetable.",
         "options": [
-          {
-            "text": "<img src=\"assets/images/brother.png\" width=\"80\">",
-            "value": "brother"
-          },
-          {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
-          }
+          "<img src=\"assets/images/soup.png\" width=\"80\">",
+          "<img src=\"assets/images/chicken.png\" width=\"80\">",
+          "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+          "<img src=\"assets/images/rice.png\" width=\"80\">"
         ],
-        "correct": "brother"
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "奶奶",
-        "difficulty": "hard",
-        "word": "grandma",
-        "options": [
-          "<img src=\"assets/images/mother.png\" width=\"80\">",
-          "<img src=\"assets/images/family.png\" width=\"80\">",
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/grandma.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "word_match",
-        "chinese": "妈妈",
-        "difficulty": "medium",
-        "word": "mother",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/brother.png\" width=\"80\">",
-            "value": "brother"
-          },
-          {
-            "text": "<img src=\"assets/images/mother.png\" width=\"80\">",
-            "value": "mother"
-          }
-        ],
-        "correct": "mother"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "宝宝",
-        "difficulty": "easy",
-        "word": "baby",
-        "options": [
-          "<img src=\"assets/images/mother.png\" width=\"80\">",
-          "<img src=\"assets/images/father.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/sister.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "爷爷",
-        "difficulty": "easy",
-        "sentence": "I see a grandpa.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-            "value": "grandpa"
-          },
-          {
-            "text": "<img src=\"assets/images/sister.png\" width=\"80\">",
-            "value": "sister"
-          }
-        ],
-        "correct": "grandpa"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "姐姐",
-        "difficulty": "easy",
-        "word": "sister",
-        "options": [
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/family.png\" width=\"80\">",
-          "<img src=\"assets/images/sister.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "word": "family",
-        "options": [
-          "<img src=\"assets/images/grandpa.png\" width=\"80\">",
-          "<img src=\"assets/images/mother.png\" width=\"80\">",
-          "<img src=\"assets/images/family.png\" width=\"80\">",
-          "<img src=\"assets/images/father.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "word_match",
-        "chinese": "奶奶",
-        "difficulty": "medium",
-        "word": "grandma",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/grandma.png\" width=\"80\">",
-            "value": "grandma"
-          },
-          {
-            "text": "<img src=\"assets/images/family.png\" width=\"80\">",
-            "value": "family"
-          }
-        ],
-        "correct": "grandma"
+        "correct": 2,
+        "difficulty": "easy"
       }
     ]
   },
   "writing": {
     "pretest": [
       {
-        "type": "word_spell",
-        "word": "brother",
-        "chinese": "哥哥",
-        "image": "<img src=\"assets/images/brother.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "baby",
-        "chinese": "宝宝",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "mother",
-        "chinese": "妈妈",
-        "image": "<img src=\"assets/images/mother.png\" width=\"80\">"
+        "type": "letter_select",
+        "word": "rice",
+        "chinese": "米饭",
+        "image": "<img src=\"assets/images/rice.png\" width=\"80\">",
+        "display": "ric_",
+        "options": [
+          "g",
+          "f",
+          "h",
+          "e"
+        ],
+        "correct": "e"
       },
       {
         "type": "letter_select",
-        "word": "mother",
-        "chinese": "妈妈",
-        "display": "moth_r",
+        "word": "soup",
+        "chinese": "汤",
+        "image": "<img src=\"assets/images/soup.png\" width=\"80\">",
+        "display": "s_up",
         "options": [
-          "b",
-          "x",
+          "r",
+          "q",
+          "o",
+          "p"
+        ],
+        "correct": "o"
+      },
+      {
+        "type": "word_spell",
+        "word": "chicken",
+        "chinese": "鸡肉",
+        "image": "<img src=\"assets/images/chicken.png\" width=\"80\">",
+        "display": "chi_ken",
+        "options": [
+          "c",
+          "d",
           "e",
-          "m"
+          "f"
+        ],
+        "correct": "c"
+      },
+      {
+        "type": "word_spell",
+        "word": "vegetable",
+        "chinese": "蔬菜",
+        "image": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+        "display": "v_getable",
+        "options": [
+          "f",
+          "h",
+          "g",
+          "e"
         ],
         "correct": "e"
       },
       {
         "type": "word_spell",
-        "word": "father",
-        "chinese": "爸爸",
-        "image": "<img src=\"assets/images/father.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "brother",
-        "chinese": "哥哥",
-        "image": "<img src=\"assets/images/brother.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "grandma",
-        "chinese": "奶奶",
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "family",
-        "chinese": "家庭",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "sister",
-        "chinese": "姐姐",
-        "image": "<img src=\"assets/images/sister.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "father",
-        "chinese": "爸爸",
-        "image": "<img src=\"assets/images/father.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "sister",
-        "chinese": "姐姐",
-        "image": "<img src=\"assets/images/sister.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "grandpa",
-        "chinese": "爷爷",
-        "display": "gr_ndpa",
+        "word": "rice",
+        "chinese": "米饭",
+        "image": "<img src=\"assets/images/rice.png\" width=\"80\">",
+        "display": "ric_",
         "options": [
-          "a",
-          "x",
-          "m",
-          "d"
+          "f",
+          "e",
+          "g",
+          "h"
         ],
-        "correct": "a"
-      }
-    ],
-    "practice": [
-      {
-        "type": "duo_sentence",
-        "word": "baby",
-        "chinese": "宝宝",
-        "difficulty": "easy",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "baby"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_spell",
-        "word": "brother",
-        "chinese": "哥哥",
-        "difficulty": "medium",
-        "parts": [
-          "bro",
-          "ther"
-        ],
-        "image": "<img src=\"assets/images/brother.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "grandpa",
-        "chinese": "爷爷",
-        "difficulty": "hard",
-        "display": "gr_ndpa",
-        "options": [
-          "m",
-          "j",
-          "p",
-          "a"
-        ],
-        "correct": "a"
+        "correct": "e"
       },
       {
         "type": "word_spell",
-        "word": "sister",
-        "chinese": "姐姐",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/sister.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "family",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "family"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "family",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "display": "f_mily",
+        "word": "soup",
+        "chinese": "汤",
+        "image": "<img src=\"assets/images/soup.png\" width=\"80\">",
+        "display": "_oup",
         "options": [
-          "a",
-          "k",
-          "y",
-          "e"
-        ],
-        "correct": "a"
-      },
-      {
-        "type": "word_spell",
-        "word": "father",
-        "chinese": "爸爸",
-        "difficulty": "easy",
-        "image": "<img src=\"assets/images/father.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "grandpa",
-        "chinese": "爷爷",
-        "difficulty": "easy",
-        "image": "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "mother",
-        "chinese": "妈妈",
-        "difficulty": "easy",
-        "display": "mo_her",
-        "options": [
-          "a",
-          "i",
-          "w",
-          "t"
-        ],
-        "correct": "t"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "brother",
-        "chinese": "哥哥",
-        "difficulty": "medium",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "brother"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/brother.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_spell",
-        "word": "baby",
-        "chinese": "宝宝",
-        "difficulty": "medium",
-        "parts": [
-          "ba",
-          "by"
-        ],
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_spell",
-        "word": "grandpa",
-        "chinese": "爷爷",
-        "difficulty": "easy",
-        "parts": [
-          "gra",
-          "ndpa"
-        ],
-        "image": "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_spell",
-        "word": "father",
-        "chinese": "爸爸",
-        "difficulty": "hard",
-        "parts": [
-          "fat",
-          "her"
-        ],
-        "image": "<img src=\"assets/images/father.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "baby",
-        "chinese": "宝宝",
-        "difficulty": "medium",
-        "display": "ba_y",
-        "options": [
-          "b",
-          "a",
-          "n",
-          "m"
-        ],
-        "correct": "b"
-      },
-      {
-        "type": "letter_select",
-        "word": "sister",
-        "chinese": "姐姐",
-        "difficulty": "medium",
-        "display": "_ister",
-        "options": [
+          "u",
           "s",
-          "d",
-          "n",
-          "j"
+          "t",
+          "v"
         ],
         "correct": "s"
       },
       {
         "type": "letter_select",
-        "word": "mother",
-        "chinese": "妈妈",
-        "difficulty": "hard",
-        "display": "mothe_",
+        "word": "chicken",
+        "chinese": "鸡肉",
+        "image": "<img src=\"assets/images/chicken.png\" width=\"80\">",
+        "display": "_hicken",
         "options": [
-          "g",
-          "r",
+          "d",
           "c",
-          "u"
+          "e",
+          "f"
         ],
-        "correct": "r"
-      },
-      {
-        "type": "word_spell",
-        "word": "brother",
-        "chinese": "哥哥",
-        "difficulty": "medium",
-        "image": "<img src=\"assets/images/brother.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "grandma",
-        "chinese": "奶奶",
-        "difficulty": "easy",
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">"
+        "correct": "c"
       },
       {
         "type": "letter_select",
-        "word": "father",
-        "chinese": "爸爸",
-        "difficulty": "easy",
-        "display": "fat_er",
+        "word": "vegetable",
+        "chinese": "蔬菜",
+        "image": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+        "display": "vegetabl_",
         "options": [
           "h",
-          "m",
-          "c",
-          "q"
+          "f",
+          "e",
+          "g"
         ],
-        "correct": "h"
+        "correct": "e"
+      },
+      {
+        "type": "word_spell",
+        "word": "rice",
+        "chinese": "米饭",
+        "image": "<img src=\"assets/images/rice.png\" width=\"80\">",
+        "display": "ric_",
+        "options": [
+          "h",
+          "g",
+          "e",
+          "f"
+        ],
+        "correct": "e"
       },
       {
         "type": "letter_select",
-        "word": "family",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "display": "famil_",
+        "word": "soup",
+        "chinese": "汤",
+        "image": "<img src=\"assets/images/soup.png\" width=\"80\">",
+        "display": "so_p",
         "options": [
-          "o",
           "u",
-          "k",
-          "y"
-        ],
-        "correct": "y"
-      },
-      {
-        "type": "duo_spell",
-        "word": "father",
-        "chinese": "爸爸",
-        "difficulty": "hard",
-        "parts": [
-          "fat",
-          "her"
-        ],
-        "image": "<img src=\"assets/images/father.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "mother",
-        "chinese": "妈妈",
-        "difficulty": "easy",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "mother"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/mother.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_spell",
-        "word": "grandma",
-        "chinese": "奶奶",
-        "difficulty": "easy",
-        "parts": [
-          "gra",
-          "ndma"
-        ],
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "grandma",
-        "chinese": "奶奶",
-        "difficulty": "medium",
-        "display": "gr_ndma",
-        "options": [
           "v",
-          "b",
-          "a",
-          "t"
+          "x",
+          "w"
         ],
-        "correct": "a"
+        "correct": "u"
+      }
+    ],
+    "practice": [
+      {
+        "type": "duo_spell",
+        "word": "rice",
+        "chinese": "米饭",
+        "image": "<img src=\"assets/images/rice.png\" width=\"80\">",
+        "display": "ric_",
+        "options": [
+          "g",
+          "f",
+          "h",
+          "e"
+        ],
+        "correct": "e",
+        "difficulty": "medium",
+        "parts": [
+          "ri",
+          "ce"
+        ]
       },
       {
-        "type": "duo_sentence",
-        "word": "mother",
-        "chinese": "妈妈",
-        "difficulty": "hard",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "mother"
+        "type": "word_spell",
+        "word": "soup",
+        "chinese": "汤",
+        "image": "<img src=\"assets/images/soup.png\" width=\"80\">",
+        "display": "s_up",
+        "options": [
+          "r",
+          "q",
+          "o",
+          "p"
         ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
+        "correct": "o",
+        "difficulty": "medium",
+        "parts": [
+          "so",
+          "up"
+        ]
+      },
+      {
+        "type": "word_spell",
+        "word": "chicken",
+        "chinese": "鸡肉",
+        "image": "<img src=\"assets/images/chicken.png\" width=\"80\">",
+        "display": "chi_ken",
+        "options": [
+          "c",
+          "d",
+          "e",
+          "f"
         ],
-        "image": "<img src=\"assets/images/mother.png\" width=\"80\">"
+        "correct": "c",
+        "difficulty": "easy",
+        "parts": [
+          "chi",
+          "cken"
+        ]
+      },
+      {
+        "type": "duo_spell",
+        "word": "vegetable",
+        "chinese": "蔬菜",
+        "image": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+        "display": "v_getable",
+        "options": [
+          "f",
+          "h",
+          "g",
+          "e"
+        ],
+        "correct": "e",
+        "difficulty": "medium",
+        "parts": [
+          "vege",
+          "table"
+        ]
       },
       {
         "type": "letter_select",
-        "word": "sister",
-        "chinese": "姐姐",
-        "difficulty": "hard",
-        "display": "sis_er",
+        "word": "rice",
+        "chinese": "米饭",
+        "image": "<img src=\"assets/images/rice.png\" width=\"80\">",
+        "display": "ric_",
         "options": [
-          "m",
-          "t",
-          "i",
-          "z"
+          "f",
+          "e",
+          "g",
+          "h"
         ],
-        "correct": "t"
+        "correct": "e",
+        "difficulty": "easy",
+        "parts": [
+          "ri",
+          "ce"
+        ]
+      },
+      {
+        "type": "duo_spell",
+        "word": "soup",
+        "chinese": "汤",
+        "image": "<img src=\"assets/images/soup.png\" width=\"80\">",
+        "display": "_oup",
+        "options": [
+          "u",
+          "s",
+          "t",
+          "v"
+        ],
+        "correct": "s",
+        "difficulty": "easy",
+        "parts": [
+          "so",
+          "up"
+        ]
+      },
+      {
+        "type": "word_spell",
+        "word": "chicken",
+        "chinese": "鸡肉",
+        "image": "<img src=\"assets/images/chicken.png\" width=\"80\">",
+        "display": "_hicken",
+        "options": [
+          "d",
+          "c",
+          "e",
+          "f"
+        ],
+        "correct": "c",
+        "difficulty": "easy",
+        "parts": [
+          "chi",
+          "cken"
+        ]
+      },
+      {
+        "type": "word_spell",
+        "word": "vegetable",
+        "chinese": "蔬菜",
+        "image": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+        "display": "vegetabl_",
+        "options": [
+          "h",
+          "f",
+          "e",
+          "g"
+        ],
+        "correct": "e",
+        "difficulty": "easy",
+        "parts": [
+          "vege",
+          "table"
+        ]
+      },
+      {
+        "type": "word_spell",
+        "word": "rice",
+        "chinese": "米饭",
+        "image": "<img src=\"assets/images/rice.png\" width=\"80\">",
+        "display": "ric_",
+        "options": [
+          "h",
+          "g",
+          "e",
+          "f"
+        ],
+        "correct": "e",
+        "difficulty": "medium",
+        "parts": [
+          "ri",
+          "ce"
+        ]
+      },
+      {
+        "type": "word_spell",
+        "word": "soup",
+        "chinese": "汤",
+        "image": "<img src=\"assets/images/soup.png\" width=\"80\">",
+        "display": "so_p",
+        "options": [
+          "u",
+          "v",
+          "x",
+          "w"
+        ],
+        "correct": "u",
+        "difficulty": "easy",
+        "parts": [
+          "so",
+          "up"
+        ]
+      },
+      {
+        "type": "letter_select",
+        "word": "chicken",
+        "chinese": "鸡肉",
+        "image": "<img src=\"assets/images/chicken.png\" width=\"80\">",
+        "display": "_hicken",
+        "options": [
+          "d",
+          "e",
+          "f",
+          "c"
+        ],
+        "correct": "c",
+        "difficulty": "easy",
+        "parts": [
+          "chi",
+          "cken"
+        ]
+      },
+      {
+        "type": "duo_spell",
+        "word": "vegetable",
+        "chinese": "蔬菜",
+        "image": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+        "display": "veg_table",
+        "options": [
+          "e",
+          "h",
+          "g",
+          "f"
+        ],
+        "correct": "e",
+        "difficulty": "medium",
+        "parts": [
+          "vege",
+          "table"
+        ]
       }
     ]
   },
   "speaking": {
     "pretest": [
       {
-        "type": "repeat_word",
-        "chinese": "哥哥",
-        "word": "brother",
-        "image": "<img src=\"assets/images/brother.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "rice",
+        "chinese": "米饭",
+        "image": "<img src=\"assets/images/rice.png\" width=\"80\">",
+        "sentence": "I like rice."
       },
       {
-        "type": "read_sentence",
-        "chinese": "姐姐",
-        "sentence": "I see a sister.",
-        "image": "<img src=\"assets/images/sister.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "soup",
+        "chinese": "汤",
+        "image": "<img src=\"assets/images/soup.png\" width=\"80\">",
+        "sentence": "I like soup."
       },
       {
-        "type": "read_sentence",
-        "chinese": "妈妈",
-        "sentence": "I see a mother.",
-        "image": "<img src=\"assets/images/mother.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "chicken",
+        "chinese": "鸡肉",
+        "image": "<img src=\"assets/images/chicken.png\" width=\"80\">",
+        "sentence": "What's for dinner today?"
       },
       {
-        "type": "repeat_word",
-        "chinese": "爸爸",
-        "word": "father",
-        "image": "<img src=\"assets/images/father.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "vegetable",
+        "chinese": "蔬菜",
+        "image": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+        "sentence": "I like vegetable."
       },
       {
-        "type": "read_sentence",
-        "chinese": "宝宝",
-        "sentence": "I see a baby.",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "rice",
+        "chinese": "米饭",
+        "image": "<img src=\"assets/images/rice.png\" width=\"80\">",
+        "sentence": "What's for dinner today?"
       },
       {
-        "type": "read_sentence",
-        "chinese": "哥哥",
-        "sentence": "I see a brother.",
-        "image": "<img src=\"assets/images/brother.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "soup",
+        "chinese": "汤",
+        "image": "<img src=\"assets/images/soup.png\" width=\"80\">",
+        "sentence": "I like soup."
       },
       {
-        "type": "read_sentence",
-        "chinese": "奶奶",
-        "sentence": "I see a grandma.",
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "chicken",
+        "chinese": "鸡肉",
+        "image": "<img src=\"assets/images/chicken.png\" width=\"80\">",
+        "sentence": "I like chicken."
       },
       {
-        "type": "repeat_word",
-        "chinese": "姐姐",
-        "word": "sister",
-        "image": "<img src=\"assets/images/sister.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "vegetable",
+        "chinese": "蔬菜",
+        "image": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+        "sentence": "I like vegetable."
       },
       {
-        "type": "repeat_word",
-        "chinese": "家庭",
-        "word": "family",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "rice",
+        "chinese": "米饭",
+        "image": "<img src=\"assets/images/rice.png\" width=\"80\">",
+        "sentence": "I like rice."
       },
       {
-        "type": "read_sentence",
-        "chinese": "爸爸",
-        "sentence": "I see a father.",
-        "image": "<img src=\"assets/images/father.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "爷爷",
-        "word": "grandpa",
-        "image": "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "妈妈",
-        "word": "mother",
-        "image": "<img src=\"assets/images/mother.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "soup",
+        "chinese": "汤",
+        "image": "<img src=\"assets/images/soup.png\" width=\"80\">",
+        "sentence": "I like soup."
       }
     ],
     "practice": [
       {
-        "type": "read_sentence",
-        "chinese": "爸爸",
-        "difficulty": "hard",
-        "sentence": "I see a father.",
-        "image": "<img src=\"assets/images/father.png\" width=\"80\">"
+        "type": "debate",
+        "word": "rice",
+        "chinese": "米饭",
+        "image": "<img src=\"assets/images/rice.png\" width=\"80\">",
+        "sentence": "How about some Chinese food?",
+        "difficulty": "medium"
       },
       {
-        "type": "repeat_word",
-        "chinese": "妈妈",
-        "difficulty": "hard",
-        "word": "mother",
-        "image": "<img src=\"assets/images/mother.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "soup",
+        "chinese": "汤",
+        "image": "<img src=\"assets/images/soup.png\" width=\"80\">",
+        "sentence": "This is a soup.",
+        "difficulty": "medium"
       },
       {
-        "type": "repeat_word",
-        "chinese": "宝宝",
-        "difficulty": "medium",
-        "word": "baby",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
+        "type": "debate",
+        "word": "chicken",
+        "chinese": "鸡肉",
+        "image": "<img src=\"assets/images/chicken.png\" width=\"80\">",
+        "sentence": "How about some Chinese food?",
+        "difficulty": "easy"
       },
       {
-        "type": "read_sentence",
-        "chinese": "奶奶",
-        "difficulty": "medium",
-        "sentence": "I see a grandma.",
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "vegetable",
+        "chinese": "蔬菜",
+        "image": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+        "sentence": "How about some Chinese food?",
+        "difficulty": "medium"
       },
       {
-        "type": "repeat_word",
-        "chinese": "家庭",
-        "difficulty": "easy",
-        "word": "family",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "rice",
+        "chinese": "米饭",
+        "image": "<img src=\"assets/images/rice.png\" width=\"80\">",
+        "sentence": "This is a rice.",
+        "difficulty": "easy"
       },
       {
-        "type": "repeat_word",
-        "chinese": "宝宝",
-        "difficulty": "hard",
-        "word": "baby",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "soup",
+        "chinese": "汤",
+        "image": "<img src=\"assets/images/soup.png\" width=\"80\">",
+        "sentence": "How about some Chinese food?",
+        "difficulty": "medium"
       },
       {
-        "type": "read_sentence",
-        "chinese": "家庭",
-        "difficulty": "hard",
-        "sentence": "I see a family.",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "chicken",
+        "chinese": "鸡肉",
+        "image": "<img src=\"assets/images/chicken.png\" width=\"80\">",
+        "sentence": "How about some Chinese food?",
+        "difficulty": "easy"
       },
       {
-        "type": "repeat_word",
-        "chinese": "哥哥",
-        "difficulty": "hard",
-        "word": "brother",
-        "image": "<img src=\"assets/images/brother.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "vegetable",
+        "chinese": "蔬菜",
+        "image": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+        "sentence": "This is a vegetable.",
+        "difficulty": "easy"
       },
       {
-        "type": "read_sentence",
-        "chinese": "爷爷",
-        "difficulty": "easy",
-        "sentence": "I see a grandpa.",
-        "image": "<img src=\"assets/images/grandpa.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "rice",
+        "chinese": "米饭",
+        "image": "<img src=\"assets/images/rice.png\" width=\"80\">",
+        "sentence": "How about some Chinese food?",
+        "difficulty": "hard"
       },
       {
-        "type": "repeat_word",
-        "chinese": "哥哥",
-        "difficulty": "easy",
-        "word": "brother",
-        "image": "<img src=\"assets/images/brother.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "soup",
+        "chinese": "汤",
+        "image": "<img src=\"assets/images/soup.png\" width=\"80\">",
+        "sentence": "How about some Chinese food?",
+        "difficulty": "easy"
       },
       {
-        "type": "read_sentence",
-        "chinese": "爷爷",
-        "difficulty": "easy",
-        "sentence": "I see a grandpa.",
-        "image": "<img src=\"assets/images/grandpa.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "chicken",
+        "chinese": "鸡肉",
+        "image": "<img src=\"assets/images/chicken.png\" width=\"80\">",
+        "sentence": "This is a chicken.",
+        "difficulty": "hard"
       },
       {
-        "type": "read_sentence",
-        "chinese": "妈妈",
-        "difficulty": "medium",
-        "sentence": "I see a mother.",
-        "image": "<img src=\"assets/images/mother.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "妈妈",
-        "difficulty": "easy",
-        "word": "mother",
-        "image": "<img src=\"assets/images/mother.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "奶奶",
-        "difficulty": "medium",
-        "word": "grandma",
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "宝宝",
-        "difficulty": "easy",
-        "word": "baby",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "爸爸",
-        "difficulty": "medium",
-        "word": "father",
-        "image": "<img src=\"assets/images/father.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "爸爸",
-        "difficulty": "medium",
-        "word": "father",
-        "image": "<img src=\"assets/images/father.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "爸爸",
-        "difficulty": "easy",
-        "sentence": "I see a father.",
-        "image": "<img src=\"assets/images/father.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "奶奶",
-        "difficulty": "hard",
-        "sentence": "I see a grandma.",
-        "image": "<img src=\"assets/images/grandma.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "哥哥",
-        "difficulty": "hard",
-        "word": "brother",
-        "image": "<img src=\"assets/images/brother.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "哥哥",
-        "difficulty": "medium",
-        "word": "brother",
-        "image": "<img src=\"assets/images/brother.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "爷爷",
-        "difficulty": "easy",
-        "sentence": "I see a grandpa.",
-        "image": "<img src=\"assets/images/grandpa.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "家庭",
-        "difficulty": "medium",
-        "sentence": "I see a family.",
-        "image": "<img src=\"assets/images/family.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "姐姐",
-        "difficulty": "easy",
-        "sentence": "I see a sister.",
-        "image": "<img src=\"assets/images/sister.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "姐姐",
-        "difficulty": "medium",
-        "sentence": "I see a sister.",
-        "image": "<img src=\"assets/images/sister.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "妈妈",
-        "difficulty": "easy",
-        "word": "mother",
-        "image": "<img src=\"assets/images/mother.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "姐姐",
-        "difficulty": "medium",
-        "sentence": "I see a sister.",
-        "image": "<img src=\"assets/images/sister.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "姐姐",
-        "difficulty": "medium",
-        "sentence": "I see a sister.",
-        "image": "<img src=\"assets/images/sister.png\" width=\"80\">"
+        "type": "debate",
+        "word": "vegetable",
+        "chinese": "蔬菜",
+        "image": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
+        "sentence": "How about some Chinese food?",
+        "difficulty": "hard"
       }
     ]
   }

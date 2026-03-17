@@ -1,1893 +1,1289 @@
 var unit3_lesson2 = {
   "id": "U3L2",
-  "title": "How many birds?",
+  "title": "Unit 3 Lesson 2: What's the time in New York?",
   "listening": {
     "pretest": [
       {
         "type": "listen_tf",
-        "audio": "nine",
-        "chinese": "九",
-        "image": "<img src=\"assets/images/nine.png\" width=\"80\">",
-        "correct": true
+        "audio": "read",
+        "chinese": "阅读",
+        "options": [
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+          "<img src=\"assets/images/reading.png\" width=\"80\">",
+          "<img src=\"assets/images/baby.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">"
       },
       {
         "type": "listen_tf",
-        "audio": "ten",
-        "chinese": "十",
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">",
-        "correct": false
+        "audio": "watch TV",
+        "chinese": "看电视",
+        "options": [
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+          "<img src=\"assets/images/reading.png\" width=\"80\">",
+          "<img src=\"assets/images/baby.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">"
       },
       {
         "type": "listen_tf",
-        "audio": "ten",
-        "chinese": "十",
-        "image": "<img src=\"assets/images/eight.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_select",
-        "audio": "six",
-        "chinese": "六",
+        "audio": "kid",
+        "chinese": "小孩",
         "options": [
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">"
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+          "<img src=\"assets/images/reading.png\" width=\"80\">",
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+          "<img src=\"assets/images/baby.png\" width=\"80\">"
         ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "nine",
-        "chinese": "九",
-        "options": [
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">"
-        ],
-        "correct": 0
+        "correct": true,
+        "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">"
       },
       {
         "type": "listen_tf",
-        "audio": "eight",
-        "chinese": "八",
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_select",
-        "audio": "seven",
-        "chinese": "七",
+        "audio": "three",
+        "chinese": "三",
         "options": [
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">"
+          "<img src=\"assets/images/baby.png\" width=\"80\">",
+          "<img src=\"assets/images/reading.png\" width=\"80\">",
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">"
         ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "six",
-        "chinese": "六",
-        "options": [
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "listen_select",
-        "audio": "eight",
-        "chinese": "八",
-        "options": [
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">"
-        ],
-        "correct": 0
+        "correct": false,
+        "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">"
       },
       {
         "type": "listen_tf",
-        "audio": "seven",
-        "chinese": "七",
-        "image": "<img src=\"assets/images/ten.png\" width=\"80\">",
-        "correct": false
+        "audio": "read",
+        "chinese": "阅读",
+        "options": [
+          "<img src=\"assets/images/baby.png\" width=\"80\">",
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+          "<img src=\"assets/images/reading.png\" width=\"80\">",
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">"
+        ],
+        "correct": true,
+        "image": "<img src=\"assets/images/reading.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "watch TV",
+        "chinese": "看电视",
+        "options": [
+          "<img src=\"assets/images/reading.png\" width=\"80\">",
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+          "<img src=\"assets/images/baby.png\" width=\"80\">"
+        ],
+        "correct": true,
+        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_select",
+        "audio": "kid",
+        "chinese": "小孩",
+        "options": [
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+          "<img src=\"assets/images/reading.png\" width=\"80\">",
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+          "<img src=\"assets/images/baby.png\" width=\"80\">"
+        ],
+        "correct": false,
+        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "three",
+        "chinese": "三",
+        "options": [
+          "<img src=\"assets/images/baby.png\" width=\"80\">",
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+          "<img src=\"assets/images/reading.png\" width=\"80\">"
+        ],
+        "correct": true,
+        "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "read",
+        "chinese": "阅读",
+        "options": [
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+          "<img src=\"assets/images/reading.png\" width=\"80\">",
+          "<img src=\"assets/images/baby.png\" width=\"80\">",
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">"
+        ],
+        "correct": false,
+        "image": "<img src=\"assets/images/reading.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_select",
+        "audio": "watch TV",
+        "chinese": "看电视",
+        "options": [
+          "<img src=\"assets/images/baby.png\" width=\"80\">",
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+          "<img src=\"assets/images/reading.png\" width=\"80\">",
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">"
+        ],
+        "correct": false,
+        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
       }
     ],
     "practice": [
       {
-        "type": "listen_select",
-        "audio": "ten",
-        "chinese": "十",
+        "type": "scenario",
+        "audio": "read",
+        "chinese": "阅读",
+        "options": [
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+          "<img src=\"assets/images/reading.png\" width=\"80\">",
+          "<img src=\"assets/images/baby.png\" width=\"80\">"
+        ],
+        "correct": 2,
         "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "seven",
-        "chinese": "七",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "listen_select",
-        "audio": "seven",
-        "chinese": "七",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "ten",
-        "chinese": "十",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "listen_select",
-        "audio": "ten",
-        "chinese": "十",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "nine",
-        "chinese": "九",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "listen_select",
-        "audio": "eight",
-        "chinese": "八",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_tf",
-        "audio": "seven",
-        "chinese": "七",
-        "difficulty": "easy",
-        "image": "<img src=\"assets/images/six.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_select",
-        "audio": "nine",
-        "chinese": "九",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "nine",
-        "chinese": "九",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "eight",
-        "chinese": "八",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "nine",
-        "chinese": "九",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "eight",
-        "chinese": "八",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "six",
-        "chinese": "六",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "listen_select",
-        "audio": "six",
-        "chinese": "六",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "six",
-        "chinese": "六",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "ten",
-        "chinese": "十",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "listen_select",
-        "audio": "six",
-        "chinese": "六",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "seven",
-        "chinese": "七",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "seven",
-        "chinese": "七",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "eight",
-        "chinese": "八",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_tf",
-        "audio": "six",
-        "chinese": "六",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/six.png\" width=\"80\">",
-        "correct": true
-      },
-      {
-        "type": "listen_select",
-        "audio": "ten",
-        "chinese": "十",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_tf",
-        "audio": "eight",
-        "chinese": "八",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/eight.png\" width=\"80\">",
-        "correct": true
-      },
-      {
-        "type": "listen_tf",
-        "audio": "nine",
-        "chinese": "九",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/eight.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_select",
-        "audio": "six",
-        "chinese": "六",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">"
-        ],
-        "correct": 0
+        "text": "Find the word",
+        "scenario": "What's the time in New York?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       },
       {
         "type": "balloon_pop",
-        "text": "Find the word",
-        "chinese": "十",
+        "audio": "watch TV",
+        "chinese": "看电视",
         "options": [
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">"
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+          "<img src=\"assets/images/reading.png\" width=\"80\">",
+          "<img src=\"assets/images/baby.png\" width=\"80\">"
         ],
         "correct": 1,
-        "difficulty": "easy"
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "What's the time in New York?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       },
       {
         "type": "balloon_pop",
-        "text": "Find the word",
-        "chinese": "七",
+        "audio": "kid",
+        "chinese": "小孩",
         "options": [
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">"
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+          "<img src=\"assets/images/reading.png\" width=\"80\">",
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+          "<img src=\"assets/images/baby.png\" width=\"80\">"
         ],
-        "correct": 0,
-        "difficulty": "medium"
+        "correct": 3,
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "I'm reading.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "scenario",
+        "audio": "three",
+        "chinese": "三",
+        "options": [
+          "<img src=\"assets/images/baby.png\" width=\"80\">",
+          "<img src=\"assets/images/reading.png\" width=\"80\">",
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "What's the time in New York?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "scenario",
+        "audio": "read",
+        "chinese": "阅读",
+        "options": [
+          "<img src=\"assets/images/baby.png\" width=\"80\">",
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+          "<img src=\"assets/images/reading.png\" width=\"80\">",
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "I'm reading.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "listen_select",
+        "audio": "watch TV",
+        "chinese": "看电视",
+        "options": [
+          "<img src=\"assets/images/reading.png\" width=\"80\">",
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+          "<img src=\"assets/images/baby.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "I'm reading.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       },
       {
         "type": "balloon_pop",
-        "text": "Find the word",
-        "chinese": "十",
+        "audio": "kid",
+        "chinese": "小孩",
         "options": [
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">"
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+          "<img src=\"assets/images/reading.png\" width=\"80\">",
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+          "<img src=\"assets/images/baby.png\" width=\"80\">"
         ],
-        "correct": 1,
-        "difficulty": "medium"
+        "correct": 3,
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "What's the time in New York?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       },
       {
         "type": "balloon_pop",
+        "audio": "three",
+        "chinese": "三",
+        "options": [
+          "<img src=\"assets/images/baby.png\" width=\"80\">",
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+          "<img src=\"assets/images/reading.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "difficulty": "hard",
         "text": "Find the word",
-        "chinese": "十",
-        "options": [
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">"
-        ],
-        "correct": 0,
-        "difficulty": "hard"
+        "scenario": "I'm reading.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       },
       {
         "type": "scenario",
-        "scenario": "Tom is at the pet shop. He wants a quiet pet.",
-        "chinese": "汤姆在宠物店，他想要一只安静的宠物。",
-        "question": "What should we pick?",
+        "audio": "read",
+        "chinese": "阅读",
         "options": [
-          "<img src=\"assets/images/fish.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">"
-        ],
-        "correct": 0,
-        "feedback": "A fish is quiet!",
-        "difficulty": "medium"
-      },
-      {
-        "type": "scenario",
-        "scenario": "Lily wants to play catch in the park.",
-        "chinese": "莉莉想在公园玩接球游戏。",
-        "question": "What should we pick?",
-        "options": [
-          "<img src=\"assets/images/mouse.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/fish.png\" width=\"80\">"
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+          "<img src=\"assets/images/reading.png\" width=\"80\">",
+          "<img src=\"assets/images/baby.png\" width=\"80\">",
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">"
         ],
         "correct": 1,
-        "feedback": "Dogs love playing catch!",
-        "difficulty": "medium"
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "I'm reading.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "listen_select",
+        "audio": "watch TV",
+        "chinese": "看电视",
+        "options": [
+          "<img src=\"assets/images/baby.png\" width=\"80\">",
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+          "<img src=\"assets/images/reading.png\" width=\"80\">",
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "difficulty": "medium",
+        "text": "Find the word",
+        "scenario": "What's the time in New York?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "listen_select",
+        "audio": "kid",
+        "chinese": "小孩",
+        "options": [
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+          "<img src=\"assets/images/reading.png\" width=\"80\">",
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+          "<img src=\"assets/images/baby.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "I'm reading.",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       },
       {
         "type": "scenario",
-        "scenario": "Sam is hungry. He wants a big fruit.",
-        "chinese": "山姆饿了。他想要一个大水果。",
-        "question": "What should we pick?",
+        "audio": "three",
+        "chinese": "三",
         "options": [
-          "<img src=\"assets/images/orange_orange.png\" width=\"80\">",
-          "<img src=\"assets/images/mouse.png\" width=\"80\">",
-          "<img src=\"assets/images/fish.png\" width=\"80\">"
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+          "<img src=\"assets/images/baby.png\" width=\"80\">",
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+          "<img src=\"assets/images/reading.png\" width=\"80\">"
         ],
-        "correct": 0,
-        "feedback": "An orange is a fruit!",
-        "difficulty": "medium"
-      },
-      {
-        "type": "scenario",
-        "scenario": "Emma sees something flying in the sky.",
-        "chinese": "艾玛看到天上有东西在飞。",
+        "correct": 2,
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "I'm reading.",
         "question": "What should we pick?",
-        "options": [
-          "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/bird.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">"
-        ],
-        "correct": 1,
-        "feedback": "Birds can fly!",
-        "difficulty": "medium"
+        "feedback": "Great choice!"
       }
     ]
   },
   "reading": {
     "pretest": [
       {
-        "type": "word_match",
-        "chinese": "六",
-        "word": "six",
+        "type": "sentence_match",
+        "chinese": "阅读",
+        "word": "read",
+        "sentence": "What's the time in New York?",
         "options": [
           {
-            "text": "<img src=\"assets/images/seven.png\" width=\"80\">",
-            "value": "seven"
+            "text": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+            "value": "watch TV"
           },
           {
-            "text": "<img src=\"assets/images/six.png\" width=\"80\">",
-            "value": "six"
+            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
+            "value": "kid"
           }
         ],
-        "correct": "six"
+        "correct": "read"
       },
       {
         "type": "sentence_match",
-        "chinese": "六",
-        "sentence": "I see a six.",
+        "chinese": "看电视",
+        "word": "watch TV",
+        "sentence": "I see a watch TV.",
         "options": [
           {
-            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
-            "value": "ten"
+            "text": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+            "value": "three"
           },
           {
-            "text": "<img src=\"assets/images/six.png\" width=\"80\">",
-            "value": "six"
+            "text": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+            "value": "watch TV"
           }
         ],
-        "correct": "six"
-      },
-      {
-        "type": "word_match",
-        "chinese": "六",
-        "word": "six",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
-            "value": "ten"
-          },
-          {
-            "text": "<img src=\"assets/images/six.png\" width=\"80\">",
-            "value": "six"
-          }
-        ],
-        "correct": "six"
+        "correct": "watch TV"
       },
       {
         "type": "sentence_match",
-        "chinese": "十",
-        "sentence": "I see a ten.",
+        "chinese": "小孩",
+        "word": "kid",
+        "sentence": "What's the time in New York?",
         "options": [
           {
-            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
-            "value": "ten"
+            "text": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+            "value": "three"
           },
           {
-            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
-            "value": "eight"
+            "text": "<img src=\"assets/images/reading.png\" width=\"80\">",
+            "value": "read"
           }
         ],
-        "correct": "ten"
+        "correct": "kid"
       },
       {
         "type": "word_match",
-        "chinese": "九",
-        "word": "nine",
+        "chinese": "三",
+        "word": "three",
+        "sentence": "What's the time in New York?",
         "options": [
           {
-            "text": "<img src=\"assets/images/nine.png\" width=\"80\">",
-            "value": "nine"
+            "text": "<img src=\"assets/images/reading.png\" width=\"80\">",
+            "value": "read"
           },
           {
-            "text": "<img src=\"assets/images/seven.png\" width=\"80\">",
-            "value": "seven"
+            "text": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+            "value": "three"
           }
         ],
-        "correct": "nine"
+        "correct": "three"
+      },
+      {
+        "type": "sentence_match",
+        "chinese": "阅读",
+        "word": "read",
+        "sentence": "What's the time in New York?",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
+            "value": "kid"
+          },
+          {
+            "text": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+            "value": "three"
+          },
+          {
+            "text": "<img src=\"assets/images/reading.png\" width=\"80\">",
+            "value": "read"
+          },
+          {
+            "text": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+            "value": "watch TV"
+          }
+        ],
+        "correct": "read"
       },
       {
         "type": "word_match",
-        "chinese": "七",
-        "word": "seven",
+        "chinese": "看电视",
+        "word": "watch TV",
+        "sentence": "What's the time in New York?",
         "options": [
           {
-            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
-            "value": "ten"
+            "text": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+            "value": "three"
           },
           {
-            "text": "<img src=\"assets/images/seven.png\" width=\"80\">",
-            "value": "seven"
+            "text": "<img src=\"assets/images/reading.png\" width=\"80\">",
+            "value": "read"
           }
         ],
-        "correct": "seven"
+        "correct": "watch TV"
+      },
+      {
+        "type": "sentence_match",
+        "chinese": "小孩",
+        "word": "kid",
+        "sentence": "What's the time in New York?",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+            "value": "three"
+          },
+          {
+            "text": "<img src=\"assets/images/reading.png\" width=\"80\">",
+            "value": "read"
+          },
+          {
+            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
+            "value": "kid"
+          },
+          {
+            "text": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+            "value": "watch TV"
+          }
+        ],
+        "correct": "kid"
       },
       {
         "type": "word_match",
-        "chinese": "七",
-        "word": "seven",
+        "chinese": "三",
+        "word": "three",
+        "sentence": "What's the time in New York?",
         "options": [
           {
-            "text": "<img src=\"assets/images/seven.png\" width=\"80\">",
-            "value": "seven"
+            "text": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+            "value": "watch TV"
           },
           {
-            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
-            "value": "ten"
+            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
+            "value": "kid"
+          },
+          {
+            "text": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+            "value": "three"
+          },
+          {
+            "text": "<img src=\"assets/images/reading.png\" width=\"80\">",
+            "value": "read"
           }
         ],
-        "correct": "seven"
+        "correct": "three"
+      },
+      {
+        "type": "sentence_match",
+        "chinese": "阅读",
+        "word": "read",
+        "sentence": "What's the time in New York?",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/reading.png\" width=\"80\">",
+            "value": "read"
+          },
+          {
+            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
+            "value": "kid"
+          }
+        ],
+        "correct": "read"
       },
       {
         "type": "word_match",
-        "chinese": "九",
-        "word": "nine",
+        "chinese": "看电视",
+        "word": "watch TV",
+        "sentence": "I see a watch TV.",
         "options": [
           {
-            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
-            "value": "ten"
+            "text": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+            "value": "watch TV"
           },
           {
-            "text": "<img src=\"assets/images/nine.png\" width=\"80\">",
-            "value": "nine"
-          }
-        ],
-        "correct": "nine"
-      },
-      {
-        "type": "word_match",
-        "chinese": "十",
-        "word": "ten",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
-            "value": "ten"
+            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
+            "value": "kid"
           },
           {
-            "text": "<img src=\"assets/images/six.png\" width=\"80\">",
-            "value": "six"
-          }
-        ],
-        "correct": "ten"
-      },
-      {
-        "type": "word_match",
-        "chinese": "八",
-        "word": "eight",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
-            "value": "ten"
+            "text": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+            "value": "three"
           },
           {
-            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
-            "value": "eight"
+            "text": "<img src=\"assets/images/reading.png\" width=\"80\">",
+            "value": "read"
           }
         ],
-        "correct": "eight"
-      },
-      {
-        "type": "word_match",
-        "chinese": "八",
-        "word": "eight",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/six.png\" width=\"80\">",
-            "value": "six"
-          },
-          {
-            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
-            "value": "eight"
-          }
-        ],
-        "correct": "eight"
-      },
-      {
-        "type": "word_match",
-        "chinese": "七",
-        "word": "seven",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/seven.png\" width=\"80\">",
-            "value": "seven"
-          },
-          {
-            "text": "<img src=\"assets/images/six.png\" width=\"80\">",
-            "value": "six"
-          }
-        ],
-        "correct": "seven"
+        "correct": "watch TV"
       }
     ],
     "practice": [
       {
-        "type": "word_match",
-        "chinese": "九",
-        "difficulty": "medium",
-        "word": "nine",
+        "type": "duo_race",
+        "chinese": "阅读",
+        "word": "read",
+        "sentence": "Look at the read.",
         "options": [
           {
-            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
-            "value": "ten"
+            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
+            "value": "kid"
           },
           {
-            "text": "<img src=\"assets/images/nine.png\" width=\"80\">",
-            "value": "nine"
+            "text": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+            "value": "watch TV"
+          },
+          {
+            "text": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+            "value": "three"
+          },
+          {
+            "text": "<img src=\"assets/images/reading.png\" width=\"80\">",
+            "value": "read"
           }
         ],
-        "correct": "nine"
+        "correct": 2,
+        "difficulty": "hard"
+      },
+      {
+        "type": "sentence_match",
+        "chinese": "看电视",
+        "word": "watch TV",
+        "sentence": "I'm reading.",
+        "options": [
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+          "<img src=\"assets/images/reading.png\" width=\"80\">",
+          "<img src=\"assets/images/baby.png\" width=\"80\">"
+        ],
+        "correct": "watch TV",
+        "difficulty": "hard"
       },
       {
         "type": "duo_race",
-        "chinese": "八",
-        "difficulty": "medium",
-        "word": "eight",
+        "chinese": "小孩",
+        "word": "kid",
+        "sentence": "Look at the kid.",
         "options": [
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">"
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+          "<img src=\"assets/images/reading.png\" width=\"80\">",
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+          "<img src=\"assets/images/baby.png\" width=\"80\">"
         ],
-        "correct": 2
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "九",
-        "difficulty": "easy",
-        "word": "nine",
-        "options": [
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "七",
-        "difficulty": "easy",
-        "word": "seven",
-        "options": [
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">"
-        ],
-        "correct": 1
+        "correct": "kid",
+        "difficulty": "easy"
       },
       {
         "type": "word_match",
-        "chinese": "八",
-        "difficulty": "easy",
-        "word": "eight",
+        "chinese": "三",
+        "word": "three",
+        "sentence": "Look at the three.",
         "options": [
-          {
-            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
-            "value": "eight"
-          },
-          {
-            "text": "<img src=\"assets/images/seven.png\" width=\"80\">",
-            "value": "seven"
-          }
+          "<img src=\"assets/images/baby.png\" width=\"80\">",
+          "<img src=\"assets/images/reading.png\" width=\"80\">",
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">"
         ],
-        "correct": "eight"
+        "correct": 2,
+        "difficulty": "easy"
       },
       {
         "type": "sentence_match",
-        "chinese": "十",
-        "difficulty": "medium",
-        "sentence": "I see a ten.",
+        "chinese": "阅读",
+        "word": "read",
+        "sentence": "Look at the read.",
         "options": [
-          {
-            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
-            "value": "eight"
-          },
-          {
-            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
-            "value": "ten"
-          }
+          "<img src=\"assets/images/baby.png\" width=\"80\">",
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+          "<img src=\"assets/images/reading.png\" width=\"80\">",
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">"
         ],
-        "correct": "ten"
+        "correct": "read",
+        "difficulty": "medium"
       },
       {
-        "type": "whack_mole",
-        "chinese": "八",
-        "difficulty": "medium",
-        "word": "eight",
+        "type": "sentence_match",
+        "chinese": "看电视",
+        "word": "watch TV",
+        "sentence": "I'm reading.",
         "options": [
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">"
+          "<img src=\"assets/images/reading.png\" width=\"80\">",
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+          "<img src=\"assets/images/baby.png\" width=\"80\">"
         ],
-        "correct": 2
+        "correct": "watch TV",
+        "difficulty": "medium"
+      },
+      {
+        "type": "sentence_match",
+        "chinese": "小孩",
+        "word": "kid",
+        "sentence": "Look at the kid.",
+        "options": [
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+          "<img src=\"assets/images/reading.png\" width=\"80\">",
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+          "<img src=\"assets/images/baby.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "difficulty": "hard"
       },
       {
         "type": "word_match",
-        "chinese": "六",
-        "difficulty": "medium",
-        "word": "six",
+        "chinese": "三",
+        "word": "three",
+        "sentence": "I'm reading.",
         "options": [
-          {
-            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
-            "value": "eight"
-          },
-          {
-            "text": "<img src=\"assets/images/six.png\" width=\"80\">",
-            "value": "six"
-          }
+          "<img src=\"assets/images/baby.png\" width=\"80\">",
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+          "<img src=\"assets/images/reading.png\" width=\"80\">"
         ],
-        "correct": "six"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "十",
-        "difficulty": "hard",
-        "sentence": "I see a ten.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
-            "value": "ten"
-          },
-          {
-            "text": "<img src=\"assets/images/nine.png\" width=\"80\">",
-            "value": "nine"
-          }
-        ],
-        "correct": "ten"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "六",
-        "difficulty": "hard",
-        "sentence": "I see a six.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/nine.png\" width=\"80\">",
-            "value": "nine"
-          },
-          {
-            "text": "<img src=\"assets/images/six.png\" width=\"80\">",
-            "value": "six"
-          }
-        ],
-        "correct": "six"
+        "correct": 1,
+        "difficulty": "hard"
       },
       {
         "type": "duo_race",
-        "chinese": "八",
-        "difficulty": "hard",
-        "word": "eight",
+        "chinese": "阅读",
+        "word": "read",
+        "sentence": "Look at the read.",
         "options": [
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">"
+          {
+            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
+            "value": "kid"
+          },
+          {
+            "text": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+            "value": "three"
+          },
+          {
+            "text": "<img src=\"assets/images/reading.png\" width=\"80\">",
+            "value": "read"
+          },
+          {
+            "text": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+            "value": "watch TV"
+          }
         ],
-        "correct": 3
+        "correct": "read",
+        "difficulty": "easy"
       },
       {
         "type": "word_match",
-        "chinese": "八",
-        "difficulty": "easy",
-        "word": "eight",
+        "chinese": "看电视",
+        "word": "watch TV",
+        "sentence": "I'm reading.",
         "options": [
-          {
-            "text": "<img src=\"assets/images/six.png\" width=\"80\">",
-            "value": "six"
-          },
-          {
-            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
-            "value": "eight"
-          }
+          "<img src=\"assets/images/baby.png\" width=\"80\">",
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+          "<img src=\"assets/images/reading.png\" width=\"80\">",
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">"
         ],
-        "correct": "eight"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "六",
-        "difficulty": "easy",
-        "word": "six",
-        "options": [
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/eight.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "word_match",
-        "chinese": "七",
-        "difficulty": "hard",
-        "word": "seven",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/seven.png\" width=\"80\">",
-            "value": "seven"
-          },
-          {
-            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
-            "value": "eight"
-          }
-        ],
-        "correct": "seven"
-      },
-      {
-        "type": "word_match",
-        "chinese": "九",
-        "difficulty": "easy",
-        "word": "nine",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
-            "value": "ten"
-          },
-          {
-            "text": "<img src=\"assets/images/nine.png\" width=\"80\">",
-            "value": "nine"
-          }
-        ],
-        "correct": "nine"
-      },
-      {
-        "type": "word_match",
-        "chinese": "六",
-        "difficulty": "easy",
-        "word": "six",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/six.png\" width=\"80\">",
-            "value": "six"
-          },
-          {
-            "text": "<img src=\"assets/images/seven.png\" width=\"80\">",
-            "value": "seven"
-          }
-        ],
-        "correct": "six"
+        "correct": 3,
+        "difficulty": "hard"
       },
       {
         "type": "sentence_match",
-        "chinese": "七",
-        "difficulty": "medium",
-        "sentence": "I see a seven.",
+        "chinese": "小孩",
+        "word": "kid",
+        "sentence": "I'm reading.",
         "options": [
-          {
-            "text": "<img src=\"assets/images/six.png\" width=\"80\">",
-            "value": "six"
-          },
-          {
-            "text": "<img src=\"assets/images/seven.png\" width=\"80\">",
-            "value": "seven"
-          }
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+          "<img src=\"assets/images/reading.png\" width=\"80\">",
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+          "<img src=\"assets/images/baby.png\" width=\"80\">"
         ],
-        "correct": "seven"
-      },
-      {
-        "type": "word_match",
-        "chinese": "六",
-        "difficulty": "hard",
-        "word": "six",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
-            "value": "eight"
-          },
-          {
-            "text": "<img src=\"assets/images/six.png\" width=\"80\">",
-            "value": "six"
-          }
-        ],
-        "correct": "six"
-      },
-      {
-        "type": "word_match",
-        "chinese": "八",
-        "difficulty": "medium",
-        "word": "eight",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
-            "value": "eight"
-          },
-          {
-            "text": "<img src=\"assets/images/nine.png\" width=\"80\">",
-            "value": "nine"
-          }
-        ],
-        "correct": "eight"
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "九",
-        "difficulty": "easy",
-        "word": "nine",
-        "options": [
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "word_match",
-        "chinese": "十",
-        "difficulty": "medium",
-        "word": "ten",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
-            "value": "ten"
-          },
-          {
-            "text": "<img src=\"assets/images/seven.png\" width=\"80\">",
-            "value": "seven"
-          }
-        ],
-        "correct": "ten"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "九",
-        "difficulty": "hard",
-        "word": "nine",
-        "options": [
-          "<img src=\"assets/images/eight.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "word_match",
-        "chinese": "十",
-        "difficulty": "medium",
-        "word": "ten",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
-            "value": "ten"
-          },
-          {
-            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
-            "value": "eight"
-          }
-        ],
-        "correct": "ten"
-      },
-      {
-        "type": "word_match",
-        "chinese": "七",
-        "difficulty": "medium",
-        "word": "seven",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/seven.png\" width=\"80\">",
-            "value": "seven"
-          },
-          {
-            "text": "<img src=\"assets/images/nine.png\" width=\"80\">",
-            "value": "nine"
-          }
-        ],
-        "correct": "seven"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "九",
-        "difficulty": "easy",
-        "word": "nine",
-        "options": [
-          "<img src=\"assets/images/ten.png\" width=\"80\">",
-          "<img src=\"assets/images/six.png\" width=\"80\">",
-          "<img src=\"assets/images/seven.png\" width=\"80\">",
-          "<img src=\"assets/images/nine.png\" width=\"80\">"
-        ],
-        "correct": 3
+        "correct": "kid",
+        "difficulty": "medium"
       },
       {
         "type": "sentence_match",
-        "chinese": "七",
-        "difficulty": "easy",
-        "sentence": "I see a seven.",
+        "chinese": "三",
+        "word": "three",
+        "sentence": "I'm reading.",
         "options": [
-          {
-            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
-            "value": "eight"
-          },
-          {
-            "text": "<img src=\"assets/images/seven.png\" width=\"80\">",
-            "value": "seven"
-          }
+          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+          "<img src=\"assets/images/baby.png\" width=\"80\">",
+          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+          "<img src=\"assets/images/reading.png\" width=\"80\">"
         ],
-        "correct": "seven"
-      },
-      {
-        "type": "word_match",
-        "chinese": "六",
-        "difficulty": "hard",
-        "word": "six",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/nine.png\" width=\"80\">",
-            "value": "nine"
-          },
-          {
-            "text": "<img src=\"assets/images/six.png\" width=\"80\">",
-            "value": "six"
-          }
-        ],
-        "correct": "six"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "十",
-        "difficulty": "medium",
-        "sentence": "I see a ten.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
-            "value": "ten"
-          },
-          {
-            "text": "<img src=\"assets/images/nine.png\" width=\"80\">",
-            "value": "nine"
-          }
-        ],
-        "correct": "ten"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "七",
-        "difficulty": "easy",
-        "sentence": "I see a seven.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/seven.png\" width=\"80\">",
-            "value": "seven"
-          },
-          {
-            "text": "<img src=\"assets/images/six.png\" width=\"80\">",
-            "value": "six"
-          }
-        ],
-        "correct": "seven"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "十",
-        "difficulty": "hard",
-        "sentence": "I see a ten.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
-            "value": "ten"
-          },
-          {
-            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
-            "value": "eight"
-          }
-        ],
-        "correct": "ten"
+        "correct": "three",
+        "difficulty": "medium"
       }
     ]
   },
   "writing": {
     "pretest": [
       {
-        "type": "letter_select",
-        "word": "eight",
-        "chinese": "八",
-        "display": "eig_t",
+        "type": "word_spell",
+        "word": "read",
+        "chinese": "阅读",
+        "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
+        "display": "rea_",
         "options": [
+          "e",
+          "d",
           "f",
-          "c",
-          "h",
-          "b"
+          "g"
         ],
-        "correct": "h"
-      },
-      {
-        "type": "word_spell",
-        "word": "nine",
-        "chinese": "九",
-        "image": "<img src=\"assets/images/nine.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "six",
-        "chinese": "六",
-        "image": "<img src=\"assets/images/six.png\" width=\"80\">"
+        "correct": "d"
       },
       {
         "type": "letter_select",
-        "word": "eight",
-        "chinese": "八",
-        "display": "eig_t",
+        "word": "watch TV",
+        "chinese": "看电视",
+        "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+        "display": "wa_ch TV",
         "options": [
-          "c",
+          "t",
+          "v",
+          "u",
+          "w"
+        ],
+        "correct": "t"
+      },
+      {
+        "type": "word_spell",
+        "word": "kid",
+        "chinese": "小孩",
+        "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
+        "display": "ki_",
+        "options": [
+          "e",
+          "d",
+          "g",
+          "f"
+        ],
+        "correct": "d"
+      },
+      {
+        "type": "letter_select",
+        "word": "three",
+        "chinese": "三",
+        "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+        "display": "t_ree",
+        "options": [
           "h",
           "k",
-          "x"
+          "i",
+          "j"
         ],
         "correct": "h"
       },
       {
         "type": "word_spell",
-        "word": "ten",
-        "chinese": "十",
-        "image": "<img src=\"assets/images/ten.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "ten",
-        "chinese": "十",
-        "image": "<img src=\"assets/images/ten.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "seven",
-        "chinese": "七",
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">"
+        "word": "read",
+        "chinese": "阅读",
+        "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
+        "display": "r_ad",
+        "options": [
+          "g",
+          "e",
+          "h",
+          "f"
+        ],
+        "correct": "e"
       },
       {
         "type": "letter_select",
-        "word": "seven",
-        "chinese": "七",
-        "display": "_even",
+        "word": "watch TV",
+        "chinese": "看电视",
+        "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+        "display": "w_tch TV",
         "options": [
-          "s",
-          "t",
+          "d",
+          "c",
+          "b",
+          "a"
+        ],
+        "correct": "a"
+      },
+      {
+        "type": "word_spell",
+        "word": "kid",
+        "chinese": "小孩",
+        "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
+        "display": "ki_",
+        "options": [
+          "g",
+          "f",
+          "e",
+          "d"
+        ],
+        "correct": "d"
+      },
+      {
+        "type": "letter_select",
+        "word": "three",
+        "chinese": "三",
+        "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+        "display": "t_ree",
+        "options": [
+          "j",
           "i",
-          "e"
+          "k",
+          "h"
         ],
-        "correct": "s"
-      },
-      {
-        "type": "word_spell",
-        "word": "seven",
-        "chinese": "七",
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">"
+        "correct": "h"
       },
       {
         "type": "letter_select",
-        "word": "nine",
-        "chinese": "九",
-        "display": "ni_e",
+        "word": "read",
+        "chinese": "阅读",
+        "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
+        "display": "rea_",
         "options": [
-          "r",
-          "n",
-          "o",
-          "i"
+          "d",
+          "e",
+          "g",
+          "f"
         ],
-        "correct": "n"
+        "correct": "d"
       },
       {
         "type": "word_spell",
-        "word": "six",
-        "chinese": "六",
-        "image": "<img src=\"assets/images/six.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "six",
-        "chinese": "六",
-        "image": "<img src=\"assets/images/six.png\" width=\"80\">"
+        "word": "watch TV",
+        "chinese": "看电视",
+        "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+        "display": "watch_TV",
+        "options": [
+          "o",
+          " ",
+          "p",
+          "q"
+        ],
+        "correct": " "
       }
     ],
     "practice": [
       {
-        "type": "duo_sentence",
-        "word": "six",
-        "chinese": "六",
-        "difficulty": "hard",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "six"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/six.png\" width=\"80\">"
-      },
-      {
         "type": "word_spell",
-        "word": "ten",
-        "chinese": "十",
-        "difficulty": "easy",
-        "image": "<img src=\"assets/images/ten.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_spell",
-        "word": "nine",
-        "chinese": "九",
-        "difficulty": "easy",
+        "word": "read",
+        "chinese": "阅读",
+        "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
+        "display": "rea_",
+        "options": [
+          "e",
+          "d",
+          "f",
+          "g"
+        ],
+        "correct": "d",
+        "difficulty": "medium",
         "parts": [
-          "ni",
-          "ne"
-        ],
-        "image": "<img src=\"assets/images/nine.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "seven",
-        "chinese": "七",
-        "difficulty": "medium",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "seven"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">"
+          "re",
+          "ad"
+        ]
       },
       {
         "type": "word_spell",
-        "word": "nine",
-        "chinese": "九",
-        "difficulty": "medium",
-        "image": "<img src=\"assets/images/nine.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "nine",
-        "chinese": "九",
-        "difficulty": "easy",
-        "display": "ni_e",
+        "word": "watch TV",
+        "chinese": "看电视",
+        "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+        "display": "wa_ch TV",
         "options": [
+          "t",
+          "v",
           "u",
-          "n",
-          "b",
-          "i"
-        ],
-        "correct": "n"
-      },
-      {
-        "type": "word_spell",
-        "word": "eight",
-        "chinese": "八",
-        "difficulty": "easy",
-        "image": "<img src=\"assets/images/eight.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "ten",
-        "chinese": "十",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/ten.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "seven",
-        "chinese": "七",
-        "difficulty": "medium",
-        "display": "seve_",
-        "options": [
-          "c",
-          "n",
-          "s",
           "w"
         ],
-        "correct": "n"
-      },
-      {
-        "type": "word_spell",
-        "word": "six",
-        "chinese": "六",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/six.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "eight",
-        "chinese": "八",
+        "correct": "t",
         "difficulty": "medium",
-        "image": "<img src=\"assets/images/eight.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "ten",
-        "chinese": "十",
-        "difficulty": "medium",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "ten"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/ten.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "six",
-        "chinese": "六",
-        "difficulty": "medium",
-        "display": "si_",
-        "options": [
-          "b",
-          "p",
-          "t",
-          "x"
-        ],
-        "correct": "x"
-      },
-      {
-        "type": "word_spell",
-        "word": "seven",
-        "chinese": "七",
-        "difficulty": "medium",
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "six",
-        "chinese": "六",
-        "difficulty": "hard",
-        "display": "_ix",
-        "options": [
-          "y",
-          "q",
-          "c",
-          "s"
-        ],
-        "correct": "s"
-      },
-      {
-        "type": "word_spell",
-        "word": "eight",
-        "chinese": "八",
-        "difficulty": "medium",
-        "image": "<img src=\"assets/images/eight.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_spell",
-        "word": "nine",
-        "chinese": "九",
-        "difficulty": "easy",
         "parts": [
-          "ni",
-          "ne"
-        ],
-        "image": "<img src=\"assets/images/nine.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "seven",
-        "chinese": "七",
-        "difficulty": "medium",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "seven"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">"
+          "watc",
+          "h TV"
+        ]
       },
       {
         "type": "word_spell",
-        "word": "ten",
-        "chinese": "十",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/ten.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "six",
-        "chinese": "六",
-        "difficulty": "easy",
-        "display": "si_",
+        "word": "kid",
+        "chinese": "小孩",
+        "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
+        "display": "ki_",
         "options": [
-          "x",
-          "c",
-          "l",
-          "b"
-        ],
-        "correct": "x"
-      },
-      {
-        "type": "duo_spell",
-        "word": "eight",
-        "chinese": "八",
-        "difficulty": "hard",
-        "parts": [
-          "ei",
-          "ght"
-        ],
-        "image": "<img src=\"assets/images/eight.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_spell",
-        "word": "seven",
-        "chinese": "七",
-        "difficulty": "easy",
-        "parts": [
-          "se",
-          "ven"
-        ],
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "ten",
-        "chinese": "十",
-        "difficulty": "medium",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "ten"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/ten.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "nine",
-        "chinese": "九",
-        "difficulty": "hard",
-        "display": "_ine",
-        "options": [
-          "n",
+          "e",
           "d",
-          "i",
-          "v"
+          "g",
+          "f"
         ],
-        "correct": "n"
-      },
-      {
-        "type": "duo_spell",
-        "word": "eight",
-        "chinese": "八",
+        "correct": "d",
         "difficulty": "easy",
         "parts": [
-          "ei",
-          "ght"
-        ],
-        "image": "<img src=\"assets/images/eight.png\" width=\"80\">"
+          "k",
+          "id"
+        ]
       },
       {
         "type": "letter_select",
-        "word": "six",
-        "chinese": "六",
-        "difficulty": "easy",
-        "display": "s_x",
+        "word": "three",
+        "chinese": "三",
+        "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+        "display": "t_ree",
         "options": [
-          "z",
+          "h",
+          "k",
           "i",
-          "s",
+          "j"
+        ],
+        "correct": "h",
+        "difficulty": "medium",
+        "parts": [
+          "th",
+          "ree"
+        ]
+      },
+      {
+        "type": "duo_spell",
+        "word": "read",
+        "chinese": "阅读",
+        "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
+        "display": "r_ad",
+        "options": [
+          "g",
+          "e",
+          "h",
+          "f"
+        ],
+        "correct": "e",
+        "difficulty": "hard",
+        "parts": [
+          "re",
+          "ad"
+        ]
+      },
+      {
+        "type": "letter_select",
+        "word": "watch TV",
+        "chinese": "看电视",
+        "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+        "display": "w_tch TV",
+        "options": [
+          "d",
+          "c",
+          "b",
+          "a"
+        ],
+        "correct": "a",
+        "difficulty": "hard",
+        "parts": [
+          "watc",
+          "h TV"
+        ]
+      },
+      {
+        "type": "letter_select",
+        "word": "kid",
+        "chinese": "小孩",
+        "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
+        "display": "ki_",
+        "options": [
+          "g",
+          "f",
+          "e",
+          "d"
+        ],
+        "correct": "d",
+        "difficulty": "easy",
+        "parts": [
+          "k",
+          "id"
+        ]
+      },
+      {
+        "type": "letter_select",
+        "word": "three",
+        "chinese": "三",
+        "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+        "display": "t_ree",
+        "options": [
+          "j",
+          "i",
+          "k",
+          "h"
+        ],
+        "correct": "h",
+        "difficulty": "easy",
+        "parts": [
+          "th",
+          "ree"
+        ]
+      },
+      {
+        "type": "duo_spell",
+        "word": "read",
+        "chinese": "阅读",
+        "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
+        "display": "rea_",
+        "options": [
+          "d",
+          "e",
+          "g",
+          "f"
+        ],
+        "correct": "d",
+        "difficulty": "medium",
+        "parts": [
+          "re",
+          "ad"
+        ]
+      },
+      {
+        "type": "letter_select",
+        "word": "watch TV",
+        "chinese": "看电视",
+        "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+        "display": "watch_TV",
+        "options": [
+          "o",
+          " ",
+          "p",
+          "q"
+        ],
+        "correct": " ",
+        "difficulty": "easy",
+        "parts": [
+          "watc",
+          "h TV"
+        ]
+      },
+      {
+        "type": "letter_select",
+        "word": "kid",
+        "chinese": "小孩",
+        "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
+        "display": "k_d",
+        "options": [
+          "j",
+          "i",
+          "k",
           "l"
         ],
-        "correct": "i"
+        "correct": "i",
+        "difficulty": "medium",
+        "parts": [
+          "k",
+          "id"
+        ]
+      },
+      {
+        "type": "duo_spell",
+        "word": "three",
+        "chinese": "三",
+        "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+        "display": "t_ree",
+        "options": [
+          "i",
+          "h",
+          "k",
+          "j"
+        ],
+        "correct": "h",
+        "difficulty": "hard",
+        "parts": [
+          "th",
+          "ree"
+        ]
       }
     ]
   },
   "speaking": {
     "pretest": [
       {
-        "type": "read_sentence",
-        "chinese": "十",
-        "sentence": "I see a ten.",
-        "image": "<img src=\"assets/images/ten.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "read",
+        "chinese": "阅读",
+        "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
+        "sentence": "What's the time in New York?"
       },
       {
-        "type": "repeat_word",
-        "chinese": "六",
-        "word": "six",
-        "image": "<img src=\"assets/images/six.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "watch TV",
+        "chinese": "看电视",
+        "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+        "sentence": "What's the time in New York?"
       },
       {
-        "type": "repeat_word",
-        "chinese": "六",
-        "word": "six",
-        "image": "<img src=\"assets/images/six.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "kid",
+        "chinese": "小孩",
+        "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
+        "sentence": "I like kid."
       },
       {
-        "type": "repeat_word",
-        "chinese": "九",
-        "word": "nine",
-        "image": "<img src=\"assets/images/nine.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "three",
+        "chinese": "三",
+        "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+        "sentence": "I like three."
       },
       {
-        "type": "read_sentence",
-        "chinese": "六",
-        "sentence": "I see a six.",
-        "image": "<img src=\"assets/images/six.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "read",
+        "chinese": "阅读",
+        "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
+        "sentence": "I like read."
       },
       {
-        "type": "read_sentence",
-        "chinese": "九",
-        "sentence": "I see a nine.",
-        "image": "<img src=\"assets/images/nine.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "watch TV",
+        "chinese": "看电视",
+        "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+        "sentence": "I like watch TV."
       },
       {
-        "type": "read_sentence",
-        "chinese": "十",
-        "sentence": "I see a ten.",
-        "image": "<img src=\"assets/images/ten.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "kid",
+        "chinese": "小孩",
+        "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
+        "sentence": "What's the time in New York?"
       },
       {
-        "type": "read_sentence",
-        "chinese": "七",
-        "sentence": "I see a seven.",
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "three",
+        "chinese": "三",
+        "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+        "sentence": "I like three."
       },
       {
-        "type": "read_sentence",
-        "chinese": "八",
-        "sentence": "I see a eight.",
-        "image": "<img src=\"assets/images/eight.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "read",
+        "chinese": "阅读",
+        "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
+        "sentence": "I like read."
       },
       {
-        "type": "read_sentence",
-        "chinese": "八",
-        "sentence": "I see a eight.",
-        "image": "<img src=\"assets/images/eight.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "七",
-        "word": "seven",
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "七",
-        "word": "seven",
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "watch TV",
+        "chinese": "看电视",
+        "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+        "sentence": "What's the time in New York?"
       }
     ],
     "practice": [
       {
-        "type": "repeat_word",
-        "chinese": "七",
-        "difficulty": "easy",
-        "word": "seven",
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "read",
+        "chinese": "阅读",
+        "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
+        "sentence": "This is a read.",
+        "difficulty": "hard"
       },
       {
-        "type": "read_sentence",
-        "chinese": "九",
-        "difficulty": "medium",
-        "sentence": "I see a nine.",
-        "image": "<img src=\"assets/images/nine.png\" width=\"80\">"
+        "type": "debate",
+        "word": "watch TV",
+        "chinese": "看电视",
+        "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+        "sentence": "This is a watch TV.",
+        "difficulty": "hard"
       },
       {
-        "type": "read_sentence",
-        "chinese": "九",
-        "difficulty": "medium",
-        "sentence": "I see a nine.",
-        "image": "<img src=\"assets/images/nine.png\" width=\"80\">"
+        "type": "debate",
+        "word": "kid",
+        "chinese": "小孩",
+        "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
+        "sentence": "I'm reading.",
+        "difficulty": "medium"
       },
       {
-        "type": "repeat_word",
-        "chinese": "十",
-        "difficulty": "hard",
-        "word": "ten",
-        "image": "<img src=\"assets/images/ten.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "three",
+        "chinese": "三",
+        "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+        "sentence": "This is a three.",
+        "difficulty": "hard"
       },
       {
-        "type": "repeat_word",
-        "chinese": "八",
-        "difficulty": "easy",
-        "word": "eight",
-        "image": "<img src=\"assets/images/eight.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "read",
+        "chinese": "阅读",
+        "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
+        "sentence": "This is a read.",
+        "difficulty": "medium"
       },
       {
-        "type": "read_sentence",
-        "chinese": "七",
-        "difficulty": "hard",
-        "sentence": "I see a seven.",
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "watch TV",
+        "chinese": "看电视",
+        "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+        "sentence": "I'm reading.",
+        "difficulty": "hard"
       },
       {
-        "type": "read_sentence",
-        "chinese": "七",
-        "difficulty": "easy",
-        "sentence": "I see a seven.",
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "kid",
+        "chinese": "小孩",
+        "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
+        "sentence": "I'm reading.",
+        "difficulty": "easy"
       },
       {
-        "type": "read_sentence",
-        "chinese": "七",
-        "difficulty": "easy",
-        "sentence": "I see a seven.",
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">"
+        "type": "debate",
+        "word": "three",
+        "chinese": "三",
+        "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+        "sentence": "I'm reading.",
+        "difficulty": "hard"
       },
       {
-        "type": "repeat_word",
-        "chinese": "六",
-        "difficulty": "hard",
-        "word": "six",
-        "image": "<img src=\"assets/images/six.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "read",
+        "chinese": "阅读",
+        "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
+        "sentence": "I'm reading.",
+        "difficulty": "medium"
       },
       {
-        "type": "read_sentence",
-        "chinese": "六",
-        "difficulty": "easy",
-        "sentence": "I see a six.",
-        "image": "<img src=\"assets/images/six.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "watch TV",
+        "chinese": "看电视",
+        "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+        "sentence": "This is a watch TV.",
+        "difficulty": "medium"
       },
       {
-        "type": "repeat_word",
-        "chinese": "十",
-        "difficulty": "medium",
-        "word": "ten",
-        "image": "<img src=\"assets/images/ten.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "kid",
+        "chinese": "小孩",
+        "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
+        "sentence": "I'm reading.",
+        "difficulty": "easy"
       },
       {
-        "type": "repeat_word",
-        "chinese": "八",
-        "difficulty": "easy",
-        "word": "eight",
-        "image": "<img src=\"assets/images/eight.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "六",
-        "difficulty": "medium",
-        "word": "six",
-        "image": "<img src=\"assets/images/six.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "七",
-        "difficulty": "easy",
-        "sentence": "I see a seven.",
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "十",
-        "difficulty": "easy",
-        "sentence": "I see a ten.",
-        "image": "<img src=\"assets/images/ten.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "六",
-        "difficulty": "medium",
-        "word": "six",
-        "image": "<img src=\"assets/images/six.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "七",
-        "difficulty": "hard",
-        "word": "seven",
-        "image": "<img src=\"assets/images/seven.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "十",
-        "difficulty": "easy",
-        "sentence": "I see a ten.",
-        "image": "<img src=\"assets/images/ten.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "六",
-        "difficulty": "medium",
-        "word": "six",
-        "image": "<img src=\"assets/images/six.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "九",
-        "difficulty": "medium",
-        "sentence": "I see a nine.",
-        "image": "<img src=\"assets/images/nine.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "八",
-        "difficulty": "easy",
-        "word": "eight",
-        "image": "<img src=\"assets/images/eight.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "八",
-        "difficulty": "hard",
-        "word": "eight",
-        "image": "<img src=\"assets/images/eight.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "八",
-        "difficulty": "hard",
-        "word": "eight",
-        "image": "<img src=\"assets/images/eight.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "九",
-        "difficulty": "medium",
-        "sentence": "I see a nine.",
-        "image": "<img src=\"assets/images/nine.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "十",
-        "difficulty": "medium",
-        "word": "ten",
-        "image": "<img src=\"assets/images/ten.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "六",
-        "difficulty": "medium",
-        "sentence": "I see a six.",
-        "image": "<img src=\"assets/images/six.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "九",
-        "difficulty": "hard",
-        "sentence": "I see a nine.",
-        "image": "<img src=\"assets/images/nine.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "八",
-        "difficulty": "medium",
-        "word": "eight",
-        "image": "<img src=\"assets/images/eight.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "three",
+        "chinese": "三",
+        "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+        "sentence": "This is a three.",
+        "difficulty": "medium"
       }
     ]
   }

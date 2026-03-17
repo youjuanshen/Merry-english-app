@@ -1,421 +1,343 @@
 var unit2_lesson3 = {
   "id": "U2L3",
-  "title": "The cat is black.",
+  "title": "Unit 2 Lesson 3: Where is my sweater?",
   "listening": {
     "pretest": [
       {
-        "type": "listen_tf",
-        "audio": "black",
-        "chinese": "黑色",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-        "correct": false
+        "type": "listen_select",
+        "audio": "sweater",
+        "chinese": "毛衣",
+        "options": [
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">"
+        ],
+        "correct": true,
+        "image": "<img src=\"assets/images/sweater.png\" width=\"80\">"
       },
       {
         "type": "listen_tf",
-        "audio": "white",
-        "chinese": "白色",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-        "correct": true
+        "audio": "bed",
+        "chinese": "床",
+        "options": [
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "image": "<img src=\"assets/images/chair.png\" width=\"80\">"
       },
       {
         "type": "listen_select",
-        "audio": "black",
-        "chinese": "黑色",
+        "audio": "chair",
+        "chinese": "椅子",
         "options": [
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">"
         ],
-        "correct": 0
+        "correct": 0,
+        "image": "<img src=\"assets/images/chair.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "schoolbag",
+        "chinese": "书包",
+        "options": [
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "image": "<img src=\"assets/images/sweater.png\" width=\"80\">"
       },
       {
         "type": "listen_select",
-        "audio": "white",
-        "chinese": "白色",
+        "audio": "sweater",
+        "chinese": "毛衣",
         "options": [
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">"
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
         ],
-        "correct": 0
+        "correct": true,
+        "image": "<img src=\"assets/images/bed.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "bed",
+        "chinese": "床",
+        "options": [
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">"
+        ],
+        "correct": true,
+        "image": "<img src=\"assets/images/chair.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "chair",
+        "chinese": "椅子",
+        "options": [
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "image": "<img src=\"assets/images/chair.png\" width=\"80\">"
       },
       {
         "type": "listen_select",
-        "audio": "black",
-        "chinese": "黑色",
+        "audio": "schoolbag",
+        "chinese": "书包",
         "options": [
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">"
         ],
-        "correct": 0
+        "correct": false,
+        "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
       },
       {
         "type": "listen_tf",
-        "audio": "white",
-        "chinese": "白色",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_tf",
-        "audio": "black",
-        "chinese": "黑色",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_tf",
-        "audio": "white",
-        "chinese": "白色",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-        "correct": true
-      },
-      {
-        "type": "listen_tf",
-        "audio": "black",
-        "chinese": "黑色",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-        "correct": false
+        "audio": "sweater",
+        "chinese": "毛衣",
+        "options": [
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
+        ],
+        "correct": false,
+        "image": "<img src=\"assets/images/bed.png\" width=\"80\">"
       },
       {
         "type": "listen_select",
-        "audio": "white",
-        "chinese": "白色",
+        "audio": "bed",
+        "chinese": "床",
         "options": [
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">"
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">"
         ],
-        "correct": 0
+        "correct": 2,
+        "image": "<img src=\"assets/images/chair.png\" width=\"80\">"
       }
     ],
     "practice": [
       {
-        "type": "duo_listen_select",
-        "audio": "black",
-        "chinese": "黑色",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "white",
-        "chinese": "白色",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "black",
-        "chinese": "黑色",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "listen_tf",
-        "audio": "white",
-        "chinese": "白色",
-        "difficulty": "easy",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-        "correct": true
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "white",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "black",
-        "chinese": "黑色",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "listen_select",
-        "audio": "black",
-        "chinese": "黑色",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "black",
-        "chinese": "黑色",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "listen_select",
-        "audio": "white",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "black",
-        "chinese": "黑色",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "listen_select",
-        "audio": "white",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "white",
-        "chinese": "白色",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "black",
-        "chinese": "黑色",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "black",
-        "chinese": "黑色",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "white",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_tf",
-        "audio": "white",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-        "correct": true
-      },
-      {
-        "type": "listen_select",
-        "audio": "white",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "white",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "white",
-        "chinese": "白色",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "listen_select",
-        "audio": "black",
-        "chinese": "黑色",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "listen_select",
-        "audio": "white",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "listen_select",
-        "audio": "black",
-        "chinese": "黑色",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_tf",
-        "audio": "black",
-        "chinese": "黑色",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-        "correct": true
-      },
-      {
-        "type": "listen_select",
-        "audio": "black",
-        "chinese": "黑色",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "listen_tf",
-        "audio": "black",
-        "chinese": "黑色",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-        "correct": true
-      },
-      {
-        "type": "listen_select",
-        "audio": "white",
-        "chinese": "白色",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
         "type": "scenario",
-        "scenario": "Jack wants a pet with long ears.",
-        "chinese": "杰克想要一只有长耳朵的宠物。",
-        "question": "What should we pick?",
+        "audio": "sweater",
+        "chinese": "毛衣",
         "options": [
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">"
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">"
         ],
         "correct": 2,
-        "feedback": "Rabbits have long ears!",
-        "difficulty": "medium"
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "Where is my sweater?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       },
       {
-        "type": "scenario",
-        "scenario": "Anna is small and wants a small pet.",
-        "chinese": "安娜很小，她想要一只小宠物。",
-        "question": "What should we pick?",
+        "type": "balloon_pop",
+        "audio": "bed",
+        "chinese": "床",
         "options": [
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/mouse.png\" width=\"80\">"
-        ],
-        "correct": 2,
-        "feedback": "A mouse is very small!",
-        "difficulty": "medium"
-      },
-      {
-        "type": "scenario",
-        "scenario": "Tom is at the pet shop. He wants a quiet pet.",
-        "chinese": "汤姆在宠物店，他想要一只安静的宠物。",
-        "question": "What should we pick?",
-        "options": [
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/fish.png\" width=\"80\">"
-        ],
-        "correct": 2,
-        "feedback": "A fish is quiet!",
-        "difficulty": "medium"
-      },
-      {
-        "type": "scenario",
-        "scenario": "Lily wants to play catch in the park.",
-        "chinese": "莉莉想在公园玩接球游戏。",
-        "question": "What should we pick?",
-        "options": [
-          "<img src=\"assets/images/mouse.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/fish.png\" width=\"80\">"
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">"
         ],
         "correct": 1,
-        "feedback": "Dogs love playing catch!",
-        "difficulty": "medium"
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "Look! Your sweater is in your schoolbag!",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "duo_listen_select",
+        "audio": "chair",
+        "chinese": "椅子",
+        "options": [
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "Look! Your sweater is in your schoolbag!",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "balloon_pop",
+        "audio": "schoolbag",
+        "chinese": "书包",
+        "options": [
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "medium",
+        "text": "Find the word",
+        "scenario": "Look! Your sweater is in your schoolbag!",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "scenario",
+        "audio": "sweater",
+        "chinese": "毛衣",
+        "options": [
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "Look! Your sweater is in your schoolbag!",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "duo_listen_select",
+        "audio": "bed",
+        "chinese": "床",
+        "options": [
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "Look! Your sweater is in your schoolbag!",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "scenario",
+        "audio": "chair",
+        "chinese": "椅子",
+        "options": [
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "Where is my sweater?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "scenario",
+        "audio": "schoolbag",
+        "chinese": "书包",
+        "options": [
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "hard",
+        "text": "Find the word",
+        "scenario": "Where is my sweater?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "scenario",
+        "audio": "sweater",
+        "chinese": "毛衣",
+        "options": [
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "difficulty": "easy",
+        "text": "Find the word",
+        "scenario": "Where is my sweater?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "duo_listen_select",
+        "audio": "bed",
+        "chinese": "床",
+        "options": [
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "medium",
+        "text": "Find the word",
+        "scenario": "Where is my sweater?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "scenario",
+        "audio": "chair",
+        "chinese": "椅子",
+        "options": [
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "medium",
+        "text": "Find the word",
+        "scenario": "Where is my sweater?",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
+      },
+      {
+        "type": "balloon_pop",
+        "audio": "schoolbag",
+        "chinese": "书包",
+        "options": [
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "difficulty": "medium",
+        "text": "Find the word",
+        "scenario": "Look! Your sweater is in your schoolbag!",
+        "question": "What should we pick?",
+        "feedback": "Great choice!"
       }
     ]
   },
@@ -423,1366 +345,1005 @@ var unit2_lesson3 = {
     "pretest": [
       {
         "type": "word_match",
-        "chinese": "白色",
-        "word": "white",
+        "chinese": "毛衣",
+        "word": "sweater",
+        "sentence": "Where is my sweater?",
         "options": [
           {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
           },
           {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
-          }
-        ],
-        "correct": "white"
-      },
-      {
-        "type": "word_match",
-        "chinese": "黑色",
-        "word": "black",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
+            "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+            "value": "sweater"
           },
           {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
-          }
-        ],
-        "correct": "black"
-      },
-      {
-        "type": "word_match",
-        "chinese": "黑色",
-        "word": "black",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "chair"
           },
           {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
+            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+            "value": "schoolbag"
           }
         ],
-        "correct": "black"
-      },
-      {
-        "type": "word_match",
-        "chinese": "黑色",
-        "word": "black",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
-          },
-          {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
-          }
-        ],
-        "correct": "black"
-      },
-      {
-        "type": "word_match",
-        "chinese": "白色",
-        "word": "white",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
-          },
-          {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
-          }
-        ],
-        "correct": "white"
-      },
-      {
-        "type": "word_match",
-        "chinese": "白色",
-        "word": "white",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
-          },
-          {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
-          }
-        ],
-        "correct": "white"
-      },
-      {
-        "type": "word_match",
-        "chinese": "黑色",
-        "word": "black",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
-          },
-          {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
-          }
-        ],
-        "correct": "black"
+        "correct": "sweater"
       },
       {
         "type": "sentence_match",
-        "chinese": "白色",
-        "sentence": "I see a white.",
+        "chinese": "床",
+        "word": "bed",
+        "sentence": "I see a bed.",
         "options": [
           {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "chair"
           },
           {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
           }
         ],
-        "correct": "white"
-      },
-      {
-        "type": "word_match",
-        "chinese": "白色",
-        "word": "white",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
-          },
-          {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
-          }
-        ],
-        "correct": "white"
-      },
-      {
-        "type": "word_match",
-        "chinese": "白色",
-        "word": "white",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
-          },
-          {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
-          }
-        ],
-        "correct": "white"
-      },
-      {
-        "type": "word_match",
-        "chinese": "黑色",
-        "word": "black",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
-          },
-          {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
-          }
-        ],
-        "correct": "black"
+        "correct": "bed"
       },
       {
         "type": "sentence_match",
-        "chinese": "黑色",
-        "sentence": "I see a black.",
+        "chinese": "椅子",
+        "word": "chair",
+        "sentence": "Where is my sweater?",
         "options": [
           {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
+            "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+            "value": "sweater"
           },
           {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "chair"
+          },
+          {
+            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+            "value": "schoolbag"
+          },
+          {
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
           }
         ],
-        "correct": "black"
+        "correct": "chair"
+      },
+      {
+        "type": "word_match",
+        "chinese": "书包",
+        "word": "schoolbag",
+        "sentence": "I see a schoolbag.",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+            "value": "sweater"
+          },
+          {
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "chair"
+          },
+          {
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
+          },
+          {
+            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+            "value": "schoolbag"
+          }
+        ],
+        "correct": "schoolbag"
+      },
+      {
+        "type": "sentence_match",
+        "chinese": "毛衣",
+        "word": "sweater",
+        "sentence": "I see a sweater.",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
+          },
+          {
+            "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+            "value": "sweater"
+          }
+        ],
+        "correct": "sweater"
+      },
+      {
+        "type": "sentence_match",
+        "chinese": "床",
+        "word": "bed",
+        "sentence": "I see a bed.",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
+          },
+          {
+            "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+            "value": "sweater"
+          },
+          {
+            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+            "value": "schoolbag"
+          },
+          {
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "chair"
+          }
+        ],
+        "correct": "bed"
+      },
+      {
+        "type": "word_match",
+        "chinese": "椅子",
+        "word": "chair",
+        "sentence": "Where is my sweater?",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+            "value": "schoolbag"
+          },
+          {
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
+          },
+          {
+            "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+            "value": "sweater"
+          },
+          {
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "chair"
+          }
+        ],
+        "correct": "chair"
+      },
+      {
+        "type": "word_match",
+        "chinese": "书包",
+        "word": "schoolbag",
+        "sentence": "I see a schoolbag.",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+            "value": "schoolbag"
+          },
+          {
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
+          },
+          {
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "chair"
+          },
+          {
+            "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+            "value": "sweater"
+          }
+        ],
+        "correct": "schoolbag"
+      },
+      {
+        "type": "word_match",
+        "chinese": "毛衣",
+        "word": "sweater",
+        "sentence": "Where is my sweater?",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
+          },
+          {
+            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+            "value": "schoolbag"
+          }
+        ],
+        "correct": "sweater"
+      },
+      {
+        "type": "word_match",
+        "chinese": "床",
+        "word": "bed",
+        "sentence": "Where is my sweater?",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+            "value": "sweater"
+          },
+          {
+            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+            "value": "schoolbag"
+          },
+          {
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "chair"
+          },
+          {
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
+          }
+        ],
+        "correct": "bed"
       }
     ],
     "practice": [
       {
-        "type": "whack_mole",
-        "chinese": "白色",
-        "difficulty": "easy",
-        "word": "white",
-        "options": [
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "黑色",
-        "difficulty": "medium",
-        "word": "black",
-        "options": [
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "word_match",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "word": "white",
+        "type": "duo_race",
+        "chinese": "毛衣",
+        "word": "sweater",
+        "sentence": "Look! Your sweater is in your schoolbag!",
         "options": [
           {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
           },
           {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
-          }
-        ],
-        "correct": "white"
-      },
-      {
-        "type": "word_match",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "word": "white",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
+            "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+            "value": "sweater"
           },
           {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
-          }
-        ],
-        "correct": "white"
-      },
-      {
-        "type": "word_match",
-        "chinese": "黑色",
-        "difficulty": "hard",
-        "word": "black",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "chair"
           },
           {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
+            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+            "value": "schoolbag"
           }
         ],
-        "correct": "black"
-      },
-      {
-        "type": "word_match",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "word": "white",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
-          },
-          {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
-          }
-        ],
-        "correct": "white"
+        "correct": 2,
+        "difficulty": "hard"
       },
       {
         "type": "duo_race",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "word": "white",
+        "chinese": "床",
+        "word": "bed",
+        "sentence": "Look! Your sweater is in your schoolbag!",
         "options": [
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">"
         ],
-        "correct": 1
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "黑色",
-        "difficulty": "easy",
-        "sentence": "I see a black.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
-          },
-          {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
-          }
-        ],
-        "correct": "black"
+        "correct": "bed",
+        "difficulty": "hard"
       },
       {
         "type": "duo_race",
-        "chinese": "黑色",
-        "difficulty": "easy",
-        "word": "black",
+        "chinese": "椅子",
+        "word": "chair",
+        "sentence": "Look at the chair.",
         "options": [
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
+          {
+            "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+            "value": "sweater"
+          },
+          {
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "chair"
+          },
+          {
+            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+            "value": "schoolbag"
+          },
+          {
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
+          }
         ],
-        "correct": 0
+        "correct": "chair",
+        "difficulty": "hard"
       },
       {
-        "type": "whack_mole",
-        "chinese": "黑色",
-        "difficulty": "medium",
-        "word": "black",
+        "type": "word_match",
+        "chinese": "书包",
+        "word": "schoolbag",
+        "sentence": "Look! Your sweater is in your schoolbag!",
         "options": [
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">"
+          {
+            "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+            "value": "sweater"
+          },
+          {
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "chair"
+          },
+          {
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
+          },
+          {
+            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+            "value": "schoolbag"
+          }
         ],
-        "correct": 1
+        "correct": 0,
+        "difficulty": "easy"
       },
       {
         "type": "duo_race",
-        "chinese": "黑色",
-        "difficulty": "easy",
-        "word": "black",
+        "chinese": "毛衣",
+        "word": "sweater",
+        "sentence": "Look! Your sweater is in your schoolbag!",
         "options": [
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">"
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
         ],
-        "correct": 1
+        "correct": "sweater",
+        "difficulty": "hard"
       },
       {
-        "type": "whack_mole",
-        "chinese": "白色",
-        "difficulty": "easy",
-        "word": "white",
+        "type": "word_match",
+        "chinese": "床",
+        "word": "bed",
+        "sentence": "Look! Your sweater is in your schoolbag!",
         "options": [
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">"
         ],
-        "correct": 1
+        "correct": 3,
+        "difficulty": "easy"
       },
       {
-        "type": "whack_mole",
-        "chinese": "白色",
-        "difficulty": "hard",
-        "word": "white",
+        "type": "word_match",
+        "chinese": "椅子",
+        "word": "chair",
+        "sentence": "Look! Your sweater is in your schoolbag!",
         "options": [
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">"
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">"
         ],
-        "correct": 0
+        "correct": 3,
+        "difficulty": "hard"
+      },
+      {
+        "type": "sentence_match",
+        "chinese": "书包",
+        "word": "schoolbag",
+        "sentence": "Look! Your sweater is in your schoolbag!",
+        "options": [
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">"
+        ],
+        "correct": "schoolbag",
+        "difficulty": "medium"
       },
       {
         "type": "duo_race",
-        "chinese": "黑色",
-        "difficulty": "easy",
-        "word": "black",
+        "chinese": "毛衣",
+        "word": "sweater",
+        "sentence": "Look! Your sweater is in your schoolbag!",
         "options": [
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">"
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
         ],
-        "correct": 1
-      },
-      {
-        "type": "word_match",
-        "chinese": "白色",
-        "difficulty": "hard",
-        "word": "white",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
-          },
-          {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
-          }
-        ],
-        "correct": "white"
-      },
-      {
-        "type": "word_match",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "word": "white",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
-          },
-          {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
-          }
-        ],
-        "correct": "white"
+        "correct": 0,
+        "difficulty": "easy"
       },
       {
         "type": "sentence_match",
-        "chinese": "白色",
-        "difficulty": "easy",
-        "sentence": "I see a white.",
+        "chinese": "床",
+        "word": "bed",
+        "sentence": "Look at the bed.",
         "options": [
           {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
+            "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+            "value": "sweater"
           },
           {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
+            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+            "value": "schoolbag"
+          },
+          {
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "chair"
+          },
+          {
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
           }
         ],
-        "correct": "white"
+        "correct": 2,
+        "difficulty": "hard"
       },
       {
         "type": "word_match",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "word": "white",
+        "chinese": "椅子",
+        "word": "chair",
+        "sentence": "Look at the chair.",
         "options": [
           {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
           },
           {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
-          }
-        ],
-        "correct": "white"
-      },
-      {
-        "type": "word_match",
-        "chinese": "黑色",
-        "difficulty": "hard",
-        "word": "black",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
+            "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+            "value": "sweater"
           },
           {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
-          }
-        ],
-        "correct": "black"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "黑色",
-        "difficulty": "hard",
-        "sentence": "I see a black.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "chair"
           },
           {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
+            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+            "value": "schoolbag"
           }
         ],
-        "correct": "black"
-      },
-      {
-        "type": "word_match",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "word": "white",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
-          },
-          {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
-          }
-        ],
-        "correct": "white"
-      },
-      {
-        "type": "word_match",
-        "chinese": "黑色",
-        "difficulty": "easy",
-        "word": "black",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
-          },
-          {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
-          }
-        ],
-        "correct": "black"
-      },
-      {
-        "type": "word_match",
-        "chinese": "黑色",
-        "difficulty": "easy",
-        "word": "black",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
-          },
-          {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
-          }
-        ],
-        "correct": "black"
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "白色",
-        "difficulty": "easy",
-        "word": "white",
-        "options": [
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "黑色",
-        "difficulty": "medium",
-        "word": "black",
-        "options": [
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "word_match",
-        "chinese": "黑色",
-        "difficulty": "hard",
-        "word": "black",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
-          },
-          {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
-          }
-        ],
-        "correct": "black"
-      },
-      {
-        "type": "word_match",
-        "chinese": "黑色",
-        "difficulty": "hard",
-        "word": "black",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
-          },
-          {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
-          }
-        ],
-        "correct": "black"
+        "correct": 2,
+        "difficulty": "hard"
       },
       {
         "type": "duo_race",
-        "chinese": "黑色",
-        "difficulty": "easy",
-        "word": "black",
+        "chinese": "书包",
+        "word": "schoolbag",
+        "sentence": "Look! Your sweater is in your schoolbag!",
         "options": [
-          "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-          "<img src=\"assets/images/black_cat.png\" width=\"80\">"
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">"
         ],
-        "correct": 1
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "sentence": "I see a white.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
-          },
-          {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
-          }
-        ],
-        "correct": "white"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "白色",
-        "difficulty": "hard",
-        "sentence": "I see a white.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/white_cloud.png\" width=\"80\">",
-            "value": "white"
-          },
-          {
-            "text": "<img src=\"assets/images/black_cat.png\" width=\"80\">",
-            "value": "black"
-          }
-        ],
-        "correct": "white"
+        "correct": 2,
+        "difficulty": "easy"
       }
     ]
   },
   "writing": {
     "pretest": [
       {
-        "type": "word_spell",
-        "word": "white",
-        "chinese": "白色",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-      },
-      {
         "type": "letter_select",
-        "word": "white",
-        "chinese": "白色",
-        "display": "wh_te",
+        "word": "sweater",
+        "chinese": "毛衣",
+        "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+        "display": "s_eater",
         "options": [
-          "i",
-          "s",
-          "r",
-          "t"
-        ],
-        "correct": "i"
-      },
-      {
-        "type": "word_spell",
-        "word": "black",
-        "chinese": "黑色",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "white",
-        "chinese": "白色",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "white",
-        "chinese": "白色",
-        "display": "wh_te",
-        "options": [
-          "i",
-          "x",
-          "v",
-          "p"
-        ],
-        "correct": "i"
-      },
-      {
-        "type": "word_spell",
-        "word": "black",
-        "chinese": "黑色",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "black",
-        "chinese": "黑色",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "black",
-        "chinese": "黑色",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "white",
-        "chinese": "白色",
-        "display": "whi_e",
-        "options": [
-          "o",
-          "m",
-          "t",
-          "f"
-        ],
-        "correct": "t"
-      },
-      {
-        "type": "word_spell",
-        "word": "white",
-        "chinese": "白色",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "black",
-        "chinese": "黑色",
-        "display": "blac_",
-        "options": [
-          "k",
-          "u",
-          "m",
-          "j"
-        ],
-        "correct": "k"
-      },
-      {
-        "type": "letter_select",
-        "word": "black",
-        "chinese": "黑色",
-        "display": "blac_",
-        "options": [
-          "v",
-          "i",
-          "c",
-          "k"
-        ],
-        "correct": "k"
-      }
-    ],
-    "practice": [
-      {
-        "type": "duo_spell",
-        "word": "white",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "parts": [
-          "wh",
-          "ite"
-        ],
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "white",
-        "chinese": "白色",
-        "difficulty": "easy",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "white"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "black",
-        "chinese": "黑色",
-        "difficulty": "easy",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "black",
-        "chinese": "黑色",
-        "difficulty": "hard",
-        "display": "blac_",
-        "options": [
-          "g",
-          "r",
-          "t",
-          "k"
-        ],
-        "correct": "k"
-      },
-      {
-        "type": "duo_spell",
-        "word": "black",
-        "chinese": "黑色",
-        "difficulty": "medium",
-        "parts": [
-          "bl",
-          "ack"
-        ],
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "black",
-        "chinese": "黑色",
-        "difficulty": "hard",
-        "display": "blac_",
-        "options": [
-          "b",
-          "r",
-          "s",
-          "k"
-        ],
-        "correct": "k"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "black",
-        "chinese": "黑色",
-        "difficulty": "easy",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "black"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "black",
-        "chinese": "黑色",
-        "difficulty": "medium",
-        "display": "bl_ck",
-        "options": [
-          "s",
-          "o",
-          "q",
-          "a"
-        ],
-        "correct": "a"
-      },
-      {
-        "type": "duo_spell",
-        "word": "white",
-        "chinese": "白色",
-        "difficulty": "hard",
-        "parts": [
-          "wh",
-          "ite"
-        ],
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_spell",
-        "word": "black",
-        "chinese": "黑色",
-        "difficulty": "easy",
-        "parts": [
-          "bl",
-          "ack"
-        ],
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "white",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "display": "whi_e",
-        "options": [
-          "a",
-          "j",
-          "t",
-          "i"
-        ],
-        "correct": "t"
-      },
-      {
-        "type": "duo_spell",
-        "word": "white",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "parts": [
-          "wh",
-          "ite"
-        ],
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_spell",
-        "word": "white",
-        "chinese": "白色",
-        "difficulty": "easy",
-        "parts": [
-          "wh",
-          "ite"
-        ],
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "black",
-        "chinese": "黑色",
-        "difficulty": "easy",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "black"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "white",
-        "chinese": "白色",
-        "difficulty": "easy",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "white",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "display": "wh_te",
-        "options": [
-          "i",
-          "x",
           "w",
-          "y"
+          "x",
+          "y",
+          "z"
         ],
-        "correct": "i"
+        "correct": "w"
       },
       {
         "type": "letter_select",
-        "word": "black",
-        "chinese": "黑色",
-        "difficulty": "medium",
-        "display": "_lack",
+        "word": "bed",
+        "chinese": "床",
+        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
+        "display": "_ed",
         "options": [
-          "b",
-          "x",
-          "g",
-          "t"
+          "c",
+          "e",
+          "d",
+          "b"
         ],
         "correct": "b"
       },
       {
-        "type": "letter_select",
-        "word": "white",
-        "chinese": "白色",
-        "difficulty": "hard",
-        "display": "wh_te",
-        "options": [
-          "a",
-          "l",
-          "i",
-          "g"
-        ],
-        "correct": "i"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "black",
-        "chinese": "黑色",
-        "difficulty": "medium",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "black"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-      },
-      {
         "type": "word_spell",
-        "word": "white",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "white",
-        "chinese": "白色",
-        "difficulty": "hard",
-        "display": "w_ite",
+        "word": "chair",
+        "chinese": "椅子",
+        "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
+        "display": "c_air",
         "options": [
-          "c",
-          "s",
+          "j",
+          "k",
           "h",
-          "a"
+          "i"
         ],
         "correct": "h"
       },
       {
         "type": "letter_select",
-        "word": "white",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "display": "whi_e",
+        "word": "schoolbag",
+        "chinese": "书包",
+        "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+        "display": "sch_olbag",
         "options": [
-          "i",
+          "r",
           "o",
-          "a",
-          "t"
+          "q",
+          "p"
         ],
-        "correct": "t"
-      },
-      {
-        "type": "duo_spell",
-        "word": "black",
-        "chinese": "黑色",
-        "difficulty": "easy",
-        "parts": [
-          "bl",
-          "ack"
-        ],
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "black",
-        "chinese": "黑色",
-        "difficulty": "easy",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "black"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_spell",
-        "word": "black",
-        "chinese": "黑色",
-        "difficulty": "hard",
-        "parts": [
-          "bl",
-          "ack"
-        ],
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
+        "correct": "o"
       },
       {
         "type": "letter_select",
-        "word": "white",
-        "chinese": "白色",
-        "difficulty": "hard",
-        "display": "whit_",
+        "word": "sweater",
+        "chinese": "毛衣",
+        "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+        "display": "s_eater",
         "options": [
-          "e",
+          "x",
           "y",
-          "q",
-          "c"
+          "w",
+          "z"
+        ],
+        "correct": "w"
+      },
+      {
+        "type": "letter_select",
+        "word": "bed",
+        "chinese": "床",
+        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
+        "display": "be_",
+        "options": [
+          "d",
+          "g",
+          "f",
+          "e"
+        ],
+        "correct": "d"
+      },
+      {
+        "type": "letter_select",
+        "word": "chair",
+        "chinese": "椅子",
+        "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
+        "display": "_hair",
+        "options": [
+          "c",
+          "f",
+          "e",
+          "d"
+        ],
+        "correct": "c"
+      },
+      {
+        "type": "letter_select",
+        "word": "schoolbag",
+        "chinese": "书包",
+        "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+        "display": "schoo_bag",
+        "options": [
+          "l",
+          "n",
+          "m",
+          "o"
+        ],
+        "correct": "l"
+      },
+      {
+        "type": "letter_select",
+        "word": "sweater",
+        "chinese": "毛衣",
+        "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+        "display": "_weater",
+        "options": [
+          "t",
+          "v",
+          "s",
+          "u"
+        ],
+        "correct": "s"
+      },
+      {
+        "type": "letter_select",
+        "word": "bed",
+        "chinese": "床",
+        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
+        "display": "b_d",
+        "options": [
+          "g",
+          "h",
+          "e",
+          "f"
         ],
         "correct": "e"
+      }
+    ],
+    "practice": [
+      {
+        "type": "duo_spell",
+        "word": "sweater",
+        "chinese": "毛衣",
+        "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+        "display": "s_eater",
+        "options": [
+          "w",
+          "x",
+          "y",
+          "z"
+        ],
+        "correct": "w",
+        "difficulty": "medium",
+        "parts": [
+          "swe",
+          "ater"
+        ]
+      },
+      {
+        "type": "duo_spell",
+        "word": "bed",
+        "chinese": "床",
+        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
+        "display": "_ed",
+        "options": [
+          "c",
+          "e",
+          "d",
+          "b"
+        ],
+        "correct": "b",
+        "difficulty": "easy",
+        "parts": [
+          "b",
+          "ed"
+        ]
+      },
+      {
+        "type": "duo_spell",
+        "word": "chair",
+        "chinese": "椅子",
+        "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
+        "display": "c_air",
+        "options": [
+          "j",
+          "k",
+          "h",
+          "i"
+        ],
+        "correct": "h",
+        "difficulty": "hard",
+        "parts": [
+          "ch",
+          "air"
+        ]
+      },
+      {
+        "type": "duo_spell",
+        "word": "schoolbag",
+        "chinese": "书包",
+        "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+        "display": "sch_olbag",
+        "options": [
+          "r",
+          "o",
+          "q",
+          "p"
+        ],
+        "correct": "o",
+        "difficulty": "hard",
+        "parts": [
+          "scho",
+          "olbag"
+        ]
+      },
+      {
+        "type": "letter_select",
+        "word": "sweater",
+        "chinese": "毛衣",
+        "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+        "display": "s_eater",
+        "options": [
+          "x",
+          "y",
+          "w",
+          "z"
+        ],
+        "correct": "w",
+        "difficulty": "easy",
+        "parts": [
+          "swe",
+          "ater"
+        ]
+      },
+      {
+        "type": "duo_spell",
+        "word": "bed",
+        "chinese": "床",
+        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
+        "display": "be_",
+        "options": [
+          "d",
+          "g",
+          "f",
+          "e"
+        ],
+        "correct": "d",
+        "difficulty": "hard",
+        "parts": [
+          "b",
+          "ed"
+        ]
+      },
+      {
+        "type": "letter_select",
+        "word": "chair",
+        "chinese": "椅子",
+        "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
+        "display": "_hair",
+        "options": [
+          "c",
+          "f",
+          "e",
+          "d"
+        ],
+        "correct": "c",
+        "difficulty": "medium",
+        "parts": [
+          "ch",
+          "air"
+        ]
+      },
+      {
+        "type": "duo_spell",
+        "word": "schoolbag",
+        "chinese": "书包",
+        "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+        "display": "schoo_bag",
+        "options": [
+          "l",
+          "n",
+          "m",
+          "o"
+        ],
+        "correct": "l",
+        "difficulty": "medium",
+        "parts": [
+          "scho",
+          "olbag"
+        ]
+      },
+      {
+        "type": "duo_spell",
+        "word": "sweater",
+        "chinese": "毛衣",
+        "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+        "display": "_weater",
+        "options": [
+          "t",
+          "v",
+          "s",
+          "u"
+        ],
+        "correct": "s",
+        "difficulty": "hard",
+        "parts": [
+          "swe",
+          "ater"
+        ]
+      },
+      {
+        "type": "duo_spell",
+        "word": "bed",
+        "chinese": "床",
+        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
+        "display": "b_d",
+        "options": [
+          "g",
+          "h",
+          "e",
+          "f"
+        ],
+        "correct": "e",
+        "difficulty": "easy",
+        "parts": [
+          "b",
+          "ed"
+        ]
+      },
+      {
+        "type": "duo_spell",
+        "word": "chair",
+        "chinese": "椅子",
+        "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
+        "display": "_hair",
+        "options": [
+          "c",
+          "d",
+          "f",
+          "e"
+        ],
+        "correct": "c",
+        "difficulty": "medium",
+        "parts": [
+          "ch",
+          "air"
+        ]
+      },
+      {
+        "type": "letter_select",
+        "word": "schoolbag",
+        "chinese": "书包",
+        "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+        "display": "sch_olbag",
+        "options": [
+          "r",
+          "p",
+          "o",
+          "q"
+        ],
+        "correct": "o",
+        "difficulty": "medium",
+        "parts": [
+          "scho",
+          "olbag"
+        ]
       }
     ]
   },
   "speaking": {
     "pretest": [
       {
-        "type": "repeat_word",
-        "chinese": "黑色",
-        "word": "black",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "sweater",
+        "chinese": "毛衣",
+        "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+        "sentence": "Where is my sweater?"
       },
       {
-        "type": "repeat_word",
-        "chinese": "白色",
-        "word": "white",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "bed",
+        "chinese": "床",
+        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
+        "sentence": "I like bed."
       },
       {
-        "type": "read_sentence",
-        "chinese": "白色",
-        "sentence": "I see a white.",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "chair",
+        "chinese": "椅子",
+        "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
+        "sentence": "I like chair."
       },
       {
-        "type": "repeat_word",
-        "chinese": "黑色",
-        "word": "black",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "schoolbag",
+        "chinese": "书包",
+        "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+        "sentence": "Where is my sweater?"
       },
       {
-        "type": "repeat_word",
-        "chinese": "白色",
-        "word": "white",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "sweater",
+        "chinese": "毛衣",
+        "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+        "sentence": "I like sweater."
       },
       {
-        "type": "repeat_word",
-        "chinese": "黑色",
-        "word": "black",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "bed",
+        "chinese": "床",
+        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
+        "sentence": "I like bed."
       },
       {
-        "type": "read_sentence",
-        "chinese": "白色",
-        "sentence": "I see a white.",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "chair",
+        "chinese": "椅子",
+        "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
+        "sentence": "Where is my sweater?"
       },
       {
-        "type": "read_sentence",
-        "chinese": "黑色",
-        "sentence": "I see a black.",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "schoolbag",
+        "chinese": "书包",
+        "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+        "sentence": "Where is my sweater?"
       },
       {
-        "type": "repeat_word",
-        "chinese": "白色",
-        "word": "white",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "sweater",
+        "chinese": "毛衣",
+        "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+        "sentence": "Where is my sweater?"
       },
       {
-        "type": "repeat_word",
-        "chinese": "白色",
-        "word": "white",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "黑色",
-        "sentence": "I see a black.",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "黑色",
-        "word": "black",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "bed",
+        "chinese": "床",
+        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
+        "sentence": "I like bed."
       }
     ],
     "practice": [
       {
-        "type": "repeat_word",
-        "chinese": "黑色",
-        "difficulty": "medium",
-        "word": "black",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "sweater",
+        "chinese": "毛衣",
+        "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+        "sentence": "This is a sweater.",
+        "difficulty": "hard"
       },
       {
-        "type": "read_sentence",
-        "chinese": "白色",
-        "difficulty": "hard",
-        "sentence": "I see a white.",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
+        "type": "debate",
+        "word": "bed",
+        "chinese": "床",
+        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
+        "sentence": "Look! Your sweater is in your schoolbag!",
+        "difficulty": "easy"
       },
       {
-        "type": "repeat_word",
-        "chinese": "黑色",
-        "difficulty": "medium",
-        "word": "black",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
+        "type": "debate",
+        "word": "chair",
+        "chinese": "椅子",
+        "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
+        "sentence": "This is a chair.",
+        "difficulty": "medium"
       },
       {
-        "type": "repeat_word",
-        "chinese": "黑色",
-        "difficulty": "easy",
-        "word": "black",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "schoolbag",
+        "chinese": "书包",
+        "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+        "sentence": "This is a schoolbag.",
+        "difficulty": "medium"
       },
       {
-        "type": "read_sentence",
-        "chinese": "黑色",
-        "difficulty": "medium",
-        "sentence": "I see a black.",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "sweater",
+        "chinese": "毛衣",
+        "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+        "sentence": "This is a sweater.",
+        "difficulty": "medium"
       },
       {
-        "type": "read_sentence",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "sentence": "I see a white.",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "bed",
+        "chinese": "床",
+        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
+        "sentence": "This is a bed.",
+        "difficulty": "easy"
       },
       {
-        "type": "repeat_word",
-        "chinese": "黑色",
-        "difficulty": "medium",
-        "word": "black",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "chair",
+        "chinese": "椅子",
+        "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
+        "sentence": "This is a chair.",
+        "difficulty": "hard"
       },
       {
-        "type": "repeat_word",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "word": "white",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
+        "type": "roleplay",
+        "word": "schoolbag",
+        "chinese": "书包",
+        "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+        "sentence": "Look! Your sweater is in your schoolbag!",
+        "difficulty": "easy"
       },
       {
-        "type": "repeat_word",
-        "chinese": "白色",
-        "difficulty": "easy",
-        "word": "white",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "sweater",
+        "chinese": "毛衣",
+        "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+        "sentence": "This is a sweater.",
+        "difficulty": "easy"
       },
       {
-        "type": "repeat_word",
-        "chinese": "白色",
-        "difficulty": "hard",
-        "word": "white",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
+        "type": "shadowing",
+        "word": "bed",
+        "chinese": "床",
+        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
+        "sentence": "Look! Your sweater is in your schoolbag!",
+        "difficulty": "easy"
       },
       {
-        "type": "read_sentence",
-        "chinese": "黑色",
-        "difficulty": "easy",
-        "sentence": "I see a black.",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "chair",
+        "chinese": "椅子",
+        "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
+        "sentence": "This is a chair.",
+        "difficulty": "easy"
       },
       {
-        "type": "read_sentence",
-        "chinese": "黑色",
-        "difficulty": "medium",
-        "sentence": "I see a black.",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "word": "white",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "黑色",
-        "difficulty": "hard",
-        "sentence": "I see a black.",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "白色",
-        "difficulty": "hard",
-        "word": "white",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "sentence": "I see a white.",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "白色",
-        "difficulty": "easy",
-        "sentence": "I see a white.",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "白色",
-        "difficulty": "easy",
-        "word": "white",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "黑色",
-        "difficulty": "hard",
-        "sentence": "I see a black.",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "白色",
-        "difficulty": "medium",
-        "word": "white",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "白色",
-        "difficulty": "hard",
-        "word": "white",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "黑色",
-        "difficulty": "hard",
-        "sentence": "I see a black.",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "白色",
-        "difficulty": "easy",
-        "word": "white",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "白色",
-        "difficulty": "easy",
-        "sentence": "I see a white.",
-        "image": "<img src=\"assets/images/white_cloud.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "黑色",
-        "difficulty": "easy",
-        "sentence": "I see a black.",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "黑色",
-        "difficulty": "medium",
-        "sentence": "I see a black.",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "黑色",
-        "difficulty": "easy",
-        "word": "black",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "黑色",
-        "difficulty": "easy",
-        "word": "black",
-        "image": "<img src=\"assets/images/black_cat.png\" width=\"80\">"
+        "type": "read_word",
+        "word": "schoolbag",
+        "chinese": "书包",
+        "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+        "sentence": "Look! Your sweater is in your schoolbag!",
+        "difficulty": "medium"
       }
     ]
   }

@@ -114,318 +114,304 @@ const lessonObjectives = {
   // Unit 2: Colors 颜色
   'U2L1': {
 
-    title: 'Unit 2 Lesson 1: It\'s red.',
+    title: "Unit 2 Lesson 1: What size do you wear?",
     vocabulary: [
-      { word: 'red', chinese: '红色' },
-      { word: 'yellow', chinese: '黄色' },
-      { word: 'blue', chinese: '蓝色' },
-      { word: 'green', chinese: '绿色' }
+      { word: 'T-shirt', chinese: 'T恤' },
+      { word: 'wear', chinese: '穿戴' },
+      { word: 'big', chinese: '大的' },
+      { word: 'small', chinese: '小的' }
     ],
     sentences: [
-      { en: "It's red.", cn: '它是红色的。' },
-      { en: 'The apple is red.', cn: '苹果是红色的。' },
-      { en: 'What color is it?', cn: '它是什么颜色？' }
+      { en: "What size do you wear?", cn: '你穿多大码？' },
+      { en: "It's too big.", cn: '它太大了。' }
     ],
     objectives: [
-      '能听懂并认读4个颜色单词',
-      '能用It\'s...描述颜色',
-      '能用What color is it?提问'
+      "能听懂并认读4个单词",
+      "能用常用句型交流",
+      "掌握相关模块应用"
     ],
-
     moduleObjectives: {
-        listening: ['能听懂并辨认本课的核心颜色词汇', '能根据录音选择正确的图片与对应场景'],
-        reading: ['能认读本课的核心颜色词汇', '能理解简单句子含义并完成图文匹配'],
-        writing: ['能正确拼写核心颜色单词', '能补全简单句子强化拼写记忆'],
-        speaking: ['能正确朗读核心颜色词汇', '能跟读核心句型并进行简单的口语问答']
+        "listening": ["能听懂衣服尺码及评价大小的表达", "根据录音选择对应的衣服图片"],
+        "reading": ["能认读 T-shirt, size, big, small 等词句", "能将短语句子与服饰及动物特征图匹配"],
+        "writing": ["能拼写常用衣物和形容词词汇", "补全What size... 句式"],
+        "speaking": ["能朗读并对话询问衣服尺码", "能口头表达 It's too big/small"]
     }
   },
   'U2L2': {
 
-    title: 'Unit 2 Lesson 2: I like blue.',
+    title: "Unit 2 Lesson 2: Whose shirt is this?",
     vocabulary: [
-      { word: 'orange', chinese: '橙色' },
-      { word: 'purple', chinese: '紫色' },
-      { word: 'pink', chinese: '粉色' },
-      { word: 'black', chinese: '黑色' }
+      { word: 'shirt', chinese: '衬衫' },
+      { word: 'jacket', chinese: '夹克' },
+      { word: 'whose', chinese: '谁的' },
+      { word: 'clothes', chinese: '衣服' }
     ],
     sentences: [
-      { en: 'I like blue.', cn: '我喜欢蓝色。' },
-      { en: 'Do you like pink?', cn: '你喜欢粉色吗？' },
-      { en: 'Yes, I do. / No, I don\'t.', cn: '是的/不是。' }
+      { en: "Whose shirt is this?", cn: '这是谁的衬衫？' },
+      { en: "It's Yang Ming's shirt.", cn: '它是杨明的衬衫。' }
     ],
     objectives: [
-      '能听懂并认读4个颜色单词',
-      '能用I like...表达颜色喜好',
-      '能用Do you like...?询问他人喜好'
+      "能听懂并认读4个单词",
+      "能用常用句型交流",
+      "掌握相关模块应用"
     ],
-
     moduleObjectives: {
-        listening: ['能听懂并辨认本课的核心颜色词汇', '能根据录音选择正确的图片与对应场景'],
-        reading: ['能认读本课的核心颜色词汇', '能理解简单句子含义并完成图文匹配'],
-        writing: ['能正确拼写核心颜色单词', '能补全简单句子强化拼写记忆'],
-        speaking: ['能正确朗读核心颜色词汇', '能跟读核心句型并进行简单的口语问答']
+        "listening": ["能听懂询问物品归属的表达", "能根据录音选择对应的衣物"],
+        "reading": ["能认读 shirt, jacket 等词", "理解 Whose...is this? 含义"],
+        "writing": ["能拼写 shirt, jacket 等单词", "会写物品归属短语"],
+        "speaking": ["能用口语询问物品主人", "能礼貌表达感谢"]
     }
   },
   'U2L3': {
 
-    title: 'Unit 2 Lesson 3: The sky is blue.',
+    title: "Unit 2 Lesson 3: Where is my sweater?",
     vocabulary: [
-      { word: 'white', chinese: '白色' },
-      { word: 'brown', chinese: '棕色' },
-      { word: 'sky', chinese: '天空' },
-      { word: 'sun', chinese: '太阳' }
+      { word: 'sweater', chinese: '毛衣' },
+      { word: 'bed', chinese: '床' },
+      { word: 'chair', chinese: '椅子' },
+      { word: 'schoolbag', chinese: '书包' }
     ],
     sentences: [
-      { en: 'The sky is blue.', cn: '天空是蓝色的。' },
-      { en: 'The sun is yellow.', cn: '太阳是黄色的。' },
-      { en: 'Look at the rainbow!', cn: '看那道彩虹！' }
+      { en: "Where is my sweater?", cn: '我的毛衣在哪里？' },
+      { en: "Look! Your sweater is in your schoolbag!", cn: '看！你的毛衣在书包里！' }
     ],
     objectives: [
-      '能听懂并认读4个颜色单词',
-      '能用The...is...描述事物颜色',
-      '能描述自然界的颜色'
+      "能听懂并认读4个单词",
+      "能用常用句型交流",
+      "掌握相关模块应用"
     ],
-
     moduleObjectives: {
-        listening: ['能听懂并辨认本课的核心颜色词汇', '能根据录音选择正确的图片与对应场景'],
-        reading: ['能认读本课的核心颜色词汇', '能理解简单句子含义并完成图文匹配'],
-        writing: ['能正确拼写核心颜色单词', '能补全简单句子强化拼写记忆'],
-        speaking: ['能正确朗读核心颜色词汇', '能跟读核心句型并进行简单的口语问答']
+        "listening": ["能听懂表示位置的介词短语", "根据录音匹配房间陈设"],
+        "reading": ["能认读 sweater, bed, chair, schoolbag等词", "能理解表示方位的句子"],
+        "writing": ["能拼写房间家具及方位词", "能书写方位问答句子"],
+        "speaking": ["能口头询问物品位置", "能用在/下/里描述位置"]
     }
   },
   'U2L4': {
 
-    title: 'Unit 2 Lesson 4: Colors Review 颜色复习',
+    title: "Unit 2 Lesson 4: Put on your sports shoes.",
     vocabulary: [
-      { word: 'rainbow', chinese: '彩虹' },
-      { word: 'color', chinese: '颜色' }
+      { word: 'sports shoes', chinese: '运动鞋' },
+      { word: 'shorts', chinese: '短裤' },
+      { word: 'skirt', chinese: '裙子' },
+      { word: 'shoe', chinese: '鞋子' }
     ],
     sentences: [
-      { en: 'How many colors?', cn: '有多少种颜色？' },
-      { en: 'I can see seven colors.', cn: '我能看到七种颜色。' }
+      { en: "Put on your sports shoes.", cn: '穿上你的运动鞋。' },
+      { en: "I want my sports shoes, too.", cn: '我也想要我的运动鞋。' }
     ],
     objectives: [
-      '能复习所有颜色单词',
-      '能综合运用颜色词汇',
-      '能描述彩虹的颜色'
+      "能听懂并认读4个单词",
+      "能用常用句型交流",
+      "掌握相关模块应用"
     ],
-
     moduleObjectives: {
-        listening: ['能听懂并辨认本课的核心颜色词汇', '能根据录音选择正确的图片与对应场景'],
-        reading: ['能认读本课的核心颜色词汇', '能理解简单句子含义并完成图文匹配'],
-        writing: ['能正确拼写核心颜色单词', '能补全简单句子强化拼写记忆'],
-        speaking: ['能正确朗读核心颜色词汇', '能跟读核心句型并进行简单的口语问答']
+        "listening": ["能听懂下达穿戴衣物的指令", "能听懂衣物搭配表达"],
+        "reading": ["能认读 sports shoes, shorts, skirt等", "理解 Put on... 祈使句"],
+        "writing": ["能拼写常见下装及鞋类单词", "能拼写简单的衣物名称"],
+        "speaking": ["能发出穿衣服的指令", "能描述自己想要穿什么"]
     }
   },
   // Unit 3: Numbers 数字
   'U3L1': {
 
-    title: 'Unit 3 Lesson 1: I have two apples.',
+    title: "Unit 3 Lesson 1: It's eleven o'clock in Beijing.",
     vocabulary: [
-      { word: 'one', chinese: '一' },
-      { word: 'two', chinese: '二' },
-      { word: 'three', chinese: '三' },
-      { word: 'four', chinese: '四' },
-      { word: 'five', chinese: '五' }
+      { word: 'clock', chinese: '时钟' },
+      { word: 'eleven', chinese: '十一' },
+      { word: 'twelve', chinese: '十二' },
+      { word: 'time', chinese: '时间' }
     ],
     sentences: [
-      { en: 'I have two apples.', cn: '我有两个苹果。' },
-      { en: 'How many?', cn: '有多少？' },
-      { en: 'One, two, three...', cn: '一，二，三……' }
+      { en: "What's the time, Mom?", cn: '几点了，妈妈？' },
+      { en: "It's eleven o'clock.", cn: '十一点钟了。' }
     ],
     objectives: [
-      '能听懂并认读数字1-5',
-      '能用I have...表达拥有',
-      '能用How many?询问数量'
+      "能听懂并认读4个单词",
+      "能用常用句型交流",
+      "掌握相关模块应用"
     ],
-
     moduleObjectives: {
-        listening: ['能听懂并辨认本课的核心数字词汇', '能根据录音选择正确的图片与对应场景'],
-        reading: ['能认读本课的核心数字词汇', '能理解简单句子含义并完成图文匹配'],
-        writing: ['能正确拼写核心数字单词', '能补全简单句子强化拼写记忆'],
-        speaking: ['能正确朗读核心数字词汇', '能跟读核心句型并进行简单的口语问答']
+        "listening": ["能听懂整点时间的英文表达", "能根据录音选择正确的时钟"],
+        "reading": ["能认读 clock及数字11、12等", "能理解时区及时间差异"],
+        "writing": ["能拼写 time, clock等基础时间词汇", "能根据钟面写出时间"],
+        "speaking": ["能口头提问并回答时间", "能报出整点时间"]
     }
   },
   'U3L2': {
 
-    title: 'Unit 3 Lesson 2: Six little ducks.',
+    title: "Unit 3 Lesson 2: What's the time in New York?",
     vocabulary: [
-      { word: 'six', chinese: '六' },
-      { word: 'seven', chinese: '七' },
-      { word: 'eight', chinese: '八' },
-      { word: 'nine', chinese: '九' },
-      { word: 'ten', chinese: '十' }
+      { word: 'read', chinese: '阅读' },
+      { word: 'watch TV', chinese: '看电视' },
+      { word: 'kid', chinese: '小孩' },
+      { word: 'three', chinese: '三' }
     ],
     sentences: [
-      { en: 'Six little ducks.', cn: '六只小鸭子。' },
-      { en: 'Count with me!', cn: '跟我一起数！' },
-      { en: 'There are ten birds.', cn: '有十只鸟。' }
+      { en: "What's the time in New York?", cn: '纽约现在几点？' },
+      { en: "I'm reading.", cn: '我正在读书。' }
     ],
     objectives: [
-      '能听懂并认读数字6-10',
-      '能用There are...描述数量',
-      '能流利地从1数到10'
+      "能听懂并认读4个单词",
+      "能用常用句型交流",
+      "掌握相关模块应用"
     ],
-
     moduleObjectives: {
-        listening: ['能听懂并辨认本课的核心数字词汇', '能根据录音选择正确的图片与对应场景'],
-        reading: ['能认读本课的核心数字词汇', '能理解简单句子含义并完成图文匹配'],
-        writing: ['能正确拼写核心数字单词', '能补全简单句子强化拼写记忆'],
-        speaking: ['能正确朗读核心数字词汇', '能跟读核心句型并进行简单的口语问答']
+        "listening": ["能听懂带有地名的时间提问", "听懂现在进行时动作"],
+        "reading": ["能认读 read, watch TV等动作词组", "能理解正在发生的行为讲述"],
+        "writing": ["能拼写动作相关动词", "能写出现进行时的句子"],
+        "speaking": ["能进行跨时区对话角色扮演", "能说出自己正在做的事"]
     }
   },
   'U3L3': {
 
-    title: 'Unit 3 Lesson 3: How old are you?',
+    title: "Unit 3 Lesson 3: It's five twenty.",
     vocabulary: [
-      { word: 'old', chinese: '岁/老的' },
-      { word: 'years old', chinese: '岁' }
+      { word: 'cook', chinese: '做饭' },
+      { word: 'dinner', chinese: '晚餐' },
+      { word: 'draw', chinese: '画画' },
+      { word: 'twenty', chinese: '二十' }
     ],
     sentences: [
-      { en: 'How old are you?', cn: '你几岁了？' },
-      { en: "I'm eight years old.", cn: '我八岁了。' },
-      { en: 'Happy birthday!', cn: '生日快乐！' }
+      { en: "What are you doing?", cn: '你在做什么？' },
+      { en: "I'm cooking.", cn: '我在做饭。' }
     ],
     objectives: [
-      '能用How old are you?询问年龄',
-      '能用I\'m...years old.回答年龄',
-      '能综合运用数字1-10'
+      "能听懂并认读4个单词",
+      "能用常用句型交流",
+      "掌握相关模块应用"
     ],
-
     moduleObjectives: {
-        listening: ['能听懂并辨认本课的核心数字词汇', '能根据录音选择正确的图片与对应场景'],
-        reading: ['能认读本课的核心数字词汇', '能理解简单句子含义并完成图文匹配'],
-        writing: ['能正确拼写核心数字单词', '能补全简单句子强化拼写记忆'],
-        speaking: ['能正确朗读核心数字词汇', '能跟读核心句型并进行简单的口语问答']
+        "listening": ["能听懂非整点时间", "能听懂做饭、吃饭等日常动词"],
+        "reading": ["认读 cook, dinner及十三到二十等数字", "区分各种正在进行的动作"],
+        "writing": ["能拼写常用数字", "能用现在进行时造短句"],
+        "speaking": ["能流利报出具体时分", "能回答 What are you doing?"]
     }
   },
   'U3L4': {
 
-    title: 'Unit 3 Lesson 4: Numbers Review 数字复习',
+    title: "Unit 3 Lesson 4: It's time to do my homework.",
     vocabulary: [
-      { word: 'count', chinese: '数数' },
-      { word: 'number', chinese: '数字' }
+      { word: 'homework', chinese: '作业' },
+      { word: 'sleep', chinese: '睡觉' },
+      { word: 'picture', chinese: '图片' },
+      { word: 'play', chinese: '玩耍' }
     ],
     sentences: [
-      { en: 'Let\'s count!', cn: '让我们数数！' },
-      { en: 'What number is it?', cn: '这是什么数字？' }
+      { en: "It's time to do my homework.", cn: '该做作业了。' },
+      { en: "It's time to go to bed.", cn: '该上床睡觉了。' }
     ],
     objectives: [
-      '能复习数字1-10',
-      '能快速认读数字',
-      '能在情境中运用数字'
+      "能听懂并认读4个单词",
+      "能用常用句型交流",
+      "掌握相关模块应用"
     ],
-
     moduleObjectives: {
-        listening: ['能听懂并辨认本课的核心数字词汇', '能根据录音选择正确的图片与对应场景'],
-        reading: ['能认读本课的核心数字词汇', '能理解简单句子含义并完成图文匹配'],
-        writing: ['能正确拼写核心数字单词', '能补全简单句子强化拼写记忆'],
-        speaking: ['能正确朗读核心数字词汇', '能跟读核心句型并进行简单的口语问答']
+        "listening": ["能听懂该做什么事的句型表达", "听懂如睡觉、做作业的指令"],
+        "reading": ["能认读 homework, play等", "能理解 It's time to... 句型"],
+        "writing": ["能拼写 homework 等词汇", "能根据时间表写动作安排"],
+        "speaking": ["能用 It's time to... 提示他人", "能描述自己的作息"]
     }
   },
   // Unit 4: Family 家庭
   'U4L1': {
 
-    title: 'Unit 4 Lesson 1: This is my mother.',
+    title: "Unit 4 Lesson 1: What do you like for breakfast?",
     vocabulary: [
-      { word: 'mother', chinese: '妈妈' },
-      { word: 'father', chinese: '爸爸' },
-      { word: 'brother', chinese: '哥哥/弟弟' },
-      { word: 'sister', chinese: '姐姐/妹妹' }
+      { word: 'milk', chinese: '牛奶' },
+      { word: 'bread', chinese: '面包' },
+      { word: 'egg', chinese: '鸡蛋' },
+      { word: 'noodle', chinese: '面条' }
     ],
     sentences: [
-      { en: 'This is my mother.', cn: '这是我妈妈。' },
-      { en: 'I love my family.', cn: '我爱我的家人。' },
-      { en: 'Who is she?', cn: '她是谁？' }
+      { en: "I'm hungry.", cn: '我饿了。' },
+      { en: "What do you like for breakfast?", cn: '你早饭喜欢吃什么？' }
     ],
     objectives: [
-      '能听懂并认读4个家庭成员单词',
-      '能用This is my...介绍家人',
-      '能用Who is...?询问家人身份'
+      "能听懂并认读4个单词",
+      "能用常用句型交流",
+      "掌握相关模块应用"
     ],
-
     moduleObjectives: {
-        listening: ['能听懂并辨认本课的核心家庭词汇', '能根据录音选择正确的图片与对应场景'],
-        reading: ['能认读本课的核心家庭词汇', '能理解简单句子含义并完成图文匹配'],
-        writing: ['能正确拼写核心家庭单词', '能补全简单句子强化拼写记忆'],
-        speaking: ['能正确朗读核心家庭词汇', '能跟读核心句型并进行简单的口语问答']
+        "listening": ["能听懂早餐食物词汇", "听懂有关饥饿及喜好的询问"],
+        "reading": ["能认读 milk, bread, egg, noodle等", "能理解对于喜好的问答语"],
+        "writing": ["能拼写四种以上基础食物", "能补全早餐喜好句型"],
+        "speaking": ["能口头说出自己喜欢的早餐", "能表达我饿了"]
     }
   },
   'U4L2': {
 
-    title: 'Unit 4 Lesson 2: She is my grandmother.',
+    title: "Unit 4 Lesson 2: Do you want some apple juice?",
     vocabulary: [
-      { word: 'grandmother', chinese: '奶奶/外婆' },
-      { word: 'grandfather', chinese: '爷爷/外公' },
-      { word: 'grandma', chinese: '奶奶/外婆' },
-      { word: 'grandpa', chinese: '爷爷/外公' }
+      { word: 'hamburger', chinese: '汉堡' },
+      { word: 'salad', chinese: '沙拉' },
+      { word: 'apple juice', chinese: '苹果汁' },
+      { word: 'lunch', chinese: '午餐' }
     ],
     sentences: [
-      { en: 'She is my grandmother.', cn: '她是我奶奶。' },
-      { en: 'He is my grandfather.', cn: '他是我爷爷。' },
-      { en: 'I love grandma!', cn: '我爱奶奶！' }
+      { en: "What do you want to eat?", cn: '你想吃什么？' },
+      { en: "Do you want some apple juice?", cn: '你想要些苹果汁吗？' }
     ],
     objectives: [
-      '能听懂并认读祖父母称呼',
-      '能用She/He is my...介绍家人',
-      '能表达对家人的爱'
+      "能听懂并认读4个单词",
+      "能用常用句型交流",
+      "掌握相关模块应用"
     ],
-
     moduleObjectives: {
-        listening: ['能听懂并辨认本课的核心家庭词汇', '能根据录音选择正确的图片与对应场景'],
-        reading: ['能认读本课的核心家庭词汇', '能理解简单句子含义并完成图文匹配'],
-        writing: ['能正确拼写核心家庭单词', '能补全简单句子强化拼写记忆'],
-        speaking: ['能正确朗读核心家庭词汇', '能跟读核心句型并进行简单的口语问答']
+        "listening": ["能听懂饮料种类和午餐食物词汇", "能听懂别人对于点单的确认语"],
+        "reading": ["能认读 hamburger, salad, juice等词", "能分辨需要什么和吃什么的表达差异"],
+        "writing": ["能拼写果汁及西式快餐单词", "能书写点单需求句子"],
+        "speaking": ["能用口语点单食物和饮料", "能得体应答他人的询问"]
     }
   },
   'U4L3': {
 
-    title: 'Unit 4 Lesson 3: How many people?',
+    title: "Unit 4 Lesson 3: What's your favorite drink?",
     vocabulary: [
-      { word: 'family', chinese: '家庭' },
-      { word: 'people', chinese: '人' },
-      { word: 'baby', chinese: '宝宝' }
+      { word: 'orange juice', chinese: '橙汁' },
+      { word: 'banana', chinese: '香蕉' },
+      { word: 'water', chinese: '水' },
+      { word: 'fruit', chinese: '水果' }
     ],
     sentences: [
-      { en: 'How many people in your family?', cn: '你家有几口人？' },
-      { en: 'There are five people.', cn: '有五口人。' },
-      { en: 'This is my baby sister.', cn: '这是我的小妹妹。' }
+      { en: "What's your favorite drink?", cn: '你最喜欢的饮料是什么？' },
+      { en: "I like bananas.", cn: '我喜欢香蕉。' }
     ],
     objectives: [
-      '能询问家庭人数',
-      '能用There are...回答人数',
-      '能介绍自己的家庭'
+      "能听懂并认读4个单词",
+      "能用常用句型交流",
+      "掌握相关模块应用"
     ],
-
     moduleObjectives: {
-        listening: ['能听懂并辨认本课的核心家庭词汇', '能根据录音选择正确的图片与对应场景'],
-        reading: ['能认读本课的核心家庭词汇', '能理解简单句子含义并完成图文匹配'],
-        writing: ['能正确拼写核心家庭单词', '能补全简单句子强化拼写记忆'],
-        speaking: ['能正确朗读核心家庭词汇', '能跟读核心句型并进行简单的口语问答']
+        "listening": ["能听懂最喜爱事物的句点询问", "听懂水果词汇"],
+        "reading": ["能认读 favorite, fruit, orange, banana", "能理解喜好强度的描述"],
+        "writing": ["能拼写水果名词及 sweet 等形容词", "能用 favorite 造句"],
+        "speaking": ["能口语交流最喜欢的食物", "能赞美食物味道"]
     }
   },
   'U4L4': {
 
-    title: 'Unit 4 Lesson 4: Family Review 家庭复习',
+    title: "Unit 4 Lesson 4: What's for dinner?",
     vocabulary: [
-      { word: 'love', chinese: '爱' },
-      { word: 'happy', chinese: '快乐的' }
+      { word: 'rice', chinese: '米饭' },
+      { word: 'soup', chinese: '汤' },
+      { word: 'chicken', chinese: '鸡肉' },
+      { word: 'vegetable', chinese: '蔬菜' }
     ],
     sentences: [
-      { en: 'My family is happy.', cn: '我的家庭很幸福。' },
-      { en: 'We love each other.', cn: '我们彼此相爱。' }
+      { en: "What's for dinner today?", cn: '今天晚饭吃什么？' },
+      { en: "How about some Chinese food?", cn: '来点中餐怎么样？' }
     ],
     objectives: [
-      '能复习所有家庭成员单词',
-      '能完整介绍自己的家庭',
-      '能表达家庭情感'
+      "能听懂并认读4个单词",
+      "能用常用句型交流",
+      "掌握相关模块应用"
     ],
-
     moduleObjectives: {
-        listening: ['能听懂并辨认本课的核心家庭词汇', '能根据录音选择正确的图片与对应场景'],
-        reading: ['能认读本课的核心家庭词汇', '能理解简单句子含义并完成图文匹配'],
-        writing: ['能正确拼写核心家庭单词', '能补全简单句子强化拼写记忆'],
-        speaking: ['能正确朗读核心家庭词汇', '能跟读核心句型并进行简单的口语问答']
+        "listening": ["能听懂中餐及晚餐特色食物", "能听懂征求意见的句式"],
+        "reading": ["能认读 rice, soup, chicken, vegetable", "能读懂晚餐有关的小短文"],
+        "writing": ["能熟练拼写多类肉类及蔬菜单词", "能罗列出丰盛的晚餐清单"],
+        "speaking": ["能用口语报出中餐菜名", "能询问今晚吃什么"]
     }
   }
 };
