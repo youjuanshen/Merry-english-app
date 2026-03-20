@@ -330,7 +330,7 @@ function renderReadingQuestion(q, container) {
         if (q.type === 'coop_match_compete') {
             descEl.innerHTML = '🔥 <span style="color:#e74c3c;">合作/抢答配对：双方同时开始，看谁找得快！</span> ' + (q.chinese || '');
         } else {
-            descEl.textContent = 'Match words and pictures! ' + (q.chinese || '');
+            descEl.textContent = '🧩 配对单词和图片！ ' + (q.chinese || '');
         }
         container.appendChild(descEl);
 
@@ -480,7 +480,7 @@ function renderReadingQuestion(q, container) {
         container.appendChild(grid);
     } else if (q.type === 'whack_mole') {
         var descEl = document.createElement('h3');
-        descEl.textContent = 'Whack the correct one! ' + (q.chinese || '');
+        descEl.textContent = '🔨 打中正确的！ ' + (q.chinese || '');
         container.appendChild(descEl);
 
         var wmGrid = document.createElement('div');
@@ -527,12 +527,12 @@ function renderReadingQuestion(q, container) {
     } else if (q.type === 'duo_race') {
         var drTitle = document.createElement('h2');
         drTitle.style.color = '#ff4b4b';
-        drTitle.innerHTML = '⚡ DUO RACE ⚡';
+        drTitle.innerHTML = '⚡ 比比谁更快 ⚡';
         container.appendChild(drTitle);
 
         var drDescEl = document.createElement('div');
         drDescEl.style.marginBottom = '20px';
-        drDescEl.textContent = 'Who is faster? ' + (q.chinese || '');
+        drDescEl.textContent = '谁先找到正确答案？ ' + (q.chinese || '');
         container.appendChild(drDescEl);
 
         var raceArea = document.createElement('div');

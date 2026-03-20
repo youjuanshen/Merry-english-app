@@ -139,7 +139,7 @@ function renderListeningQuestion(q, container) {
         container.appendChild(wordsContainer);
     } else if (q.type === 'whack_mole') {
         var descEl = document.createElement('h3');
-        descEl.textContent = 'Whack the correct one! ' + (q.chinese || '');
+        descEl.textContent = '🔨 打中正确的！ ' + (q.chinese || '');
         container.appendChild(descEl);
 
         var wmGrid = document.createElement('div');
@@ -210,12 +210,12 @@ function renderListeningQuestion(q, container) {
     } else if (q.type === 'duo_race') {
         var drTitle = document.createElement('h2');
         drTitle.style.color = '#ff4b4b';
-        drTitle.innerHTML = '⚡ DUO RACE ⚡';
+        drTitle.innerHTML = '⚡ 比比谁更快 ⚡';
         container.appendChild(drTitle);
 
         var drDescEl = document.createElement('div');
         drDescEl.style.marginBottom = '20px';
-        drDescEl.textContent = 'Who is faster? ' + (q.chinese || '');
+        drDescEl.textContent = '谁先找到正确答案？ ' + (q.chinese || '');
         container.appendChild(drDescEl);
 
         var raceArea = document.createElement('div');
