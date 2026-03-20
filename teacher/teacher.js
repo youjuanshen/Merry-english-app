@@ -382,7 +382,7 @@ function initControlPage() {
             if (saved.length === 0) {
                 hwContainer.innerHTML = '<div style="text-align:center; padding:10px;"><p style="color:var(--teacher-success); font-size:14px; font-weight:bold; margin:0;">🎉 全班交齐作业！</p></div>';
             } else {
-                hwContainer.innerHTML = '<div style="display:flex; flex-wrap:wrap; gap:5px; justify-content:center; padding-top:10px;">' + 
+                hwContainer.innerHTML = '<div style="display:flex; flex-wrap:wrap; justify-content:center; padding-top:10px;">' + 
                     saved.map(s => `<span class="hw-incomplete-badge" style="margin-bottom:5px;">${s.id}. ${s.name}</span>`).join('') +
                     '</div>';
             }
@@ -571,7 +571,7 @@ async function initDashboardPage() {
             <div class="teacher-card">
                 <h3 class="card-title">📖 薄弱词汇预警</h3>
                 <p style="font-size:14px; color:var(--teacher-text-light);">（建议下一节课重点复习）</p>
-                <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:10px;">
+                <div style="display:flex; flex-wrap:wrap; margin-top:10px; margin:-5px;">
                     ${weakWordsHtml}
                 </div>
             </div>
@@ -605,11 +605,27 @@ async function initDashboardPage() {
     }
 }
 
-function downloadCSV() {
+async function downloadCSV() {
     let allProgress = [];
     for (let i = 1; i <= 27; i++) {
-        const p = localStorage.getItem('studentProgress_' + i);
-        if (p) allProgress.push(JSON.parse(p));
+        let pObj = null;
+        if (Sync && typeof Sync.getDashboardDataOnce === 'function') {
+            try {
+                pObj = await Sync.getDashboardDataOnce('studentProgress_' + i);
+            } catch (e) {
+                pObj = null;
+            }
+        } else {
+            const p = localStorage.getItem('studentProgress_' + i);
+            if (p) {
+                try {
+                    pObj = JSON.parse(p);
+                } catch (e) {
+                    pObj = null;
+                }
+            }
+        }
+        if (pObj) allProgress.push(pObj);
     }
     
     if (allProgress.length === 0) {

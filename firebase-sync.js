@@ -16,6 +16,10 @@ const firebaseConfig = {
 
 let useFirebase = false;
 let db = null;
+const _cache = {
+    teacherCommand: null,
+    currentLesson: null
+};
 
 if (firebaseConfig.apiKey !== "YOUR_API_KEY" && typeof firebase !== 'undefined') {
     firebase.initializeApp(firebaseConfig);
@@ -35,6 +39,7 @@ const Sync = {
         if (useFirebase) {
             db.ref('teacherCommand').on('value', snapshot => {
                 const val = snapshot.val();
+                _cache.teacherCommand = val || null;
                 if (val) callback(val);
             });
         } else {
@@ -46,6 +51,7 @@ const Sync = {
                     try {
                         const cmd = JSON.parse(cmdStr);
                         lastCommandHash = cmdStr;
+                        _cache.teacherCommand = cmd || null;
                         callback(cmd);
                     } catch(e) {}
                 }
@@ -62,6 +68,7 @@ const Sync = {
         } else {
             localStorage.setItem('teacherCommand', JSON.stringify(cmdObj));
         }
+        _cache.teacherCommand = cmdObj || null;
     },
 
     /**
@@ -73,15 +80,52 @@ const Sync = {
         } else {
             localStorage.setItem('currentLesson', JSON.stringify(lessonObj));
         }
+        _cache.currentLesson = lessonObj || null;
     },
     
     getCurrentLessonOnce: async () => {
         if (useFirebase) {
             const snap = await db.ref('currentLesson').once('value');
-            return snap.val();
+            const val = snap.val();
+            _cache.currentLesson = val || null;
+            return val;
         } else {
             const str = localStorage.getItem('currentLesson');
-            if(str) return JSON.parse(str);
+            if (str) {
+                try {
+                    const parsed = JSON.parse(str);
+                    _cache.currentLesson = parsed || null;
+                    return parsed;
+                } catch (e) {
+                    return null;
+                }
+            }
+            return null;
+        }
+    },
+    
+    getCurrentLessonOnceSync: () => {
+        if (_cache.currentLesson) return _cache.currentLesson;
+        const str = localStorage.getItem('currentLesson');
+        if (!str) return null;
+        try {
+            const parsed = JSON.parse(str);
+            _cache.currentLesson = parsed || null;
+            return parsed;
+        } catch (e) {
+            return null;
+        }
+    },
+
+    getTeacherCommandOnce: () => {
+        if (_cache.teacherCommand) return _cache.teacherCommand;
+        const str = localStorage.getItem('teacherCommand');
+        if (!str) return null;
+        try {
+            const parsed = JSON.parse(str);
+            _cache.teacherCommand = parsed || null;
+            return parsed;
+        } catch (e) {
             return null;
         }
     },
@@ -93,7 +137,12 @@ const Sync = {
         if (useFirebase) {
             db.ref('homeworkRecords/' + key).set(data);
         } else {
-            const currentObj = JSON.parse(localStorage.getItem('homeworkRecords') || '{}');
+            let currentObj = {};
+            try {
+                currentObj = JSON.parse(localStorage.getItem('homeworkRecords') || '{}');
+            } catch (e) {
+                currentObj = {};
+            }
             currentObj[key] = data;
             localStorage.setItem('homeworkRecords', JSON.stringify(currentObj));
         }
@@ -104,7 +153,11 @@ const Sync = {
             const snap = await db.ref('homeworkRecords').once('value');
             return snap.val() || {};
         } else {
-            return JSON.parse(localStorage.getItem('homeworkRecords') || '{}');
+            try {
+                return JSON.parse(localStorage.getItem('homeworkRecords') || '{}');
+            } catch (e) {
+                return {};
+            }
         }
     },
 
@@ -124,7 +177,11 @@ const Sync = {
             const snap = await db.ref('dashboard/' + key).once('value');
             return snap.val();
         } else {
-            return JSON.parse(localStorage.getItem(key) || 'null');
+            try {
+                return JSON.parse(localStorage.getItem(key) || 'null');
+            } catch (e) {
+                return null;
+            }
         }
     }
 };

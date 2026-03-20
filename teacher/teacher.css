@@ -35,6 +35,7 @@ body {
     padding: 15px 20px;
     display: flex;
     align-items: center;
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -75,7 +76,12 @@ body {
     padding-bottom: 10px;
     display: flex;
     align-items: center;
-    gap: 8px;
+}
+.card-title > * {
+    margin-right: 8px;
+}
+.card-title > *:last-child {
+    margin-right: 0;
 }
 
 /* 按钮样式 */
@@ -90,9 +96,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
   box-sizing: border-box;
   text-decoration: none;
+}
+.teacher-btn > * {
+  margin-right: 8px;
+}
+.teacher-btn > *:last-child {
+  margin-right: 0;
 }
 
 .btn-primary {
@@ -138,11 +149,13 @@ body {
 .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
     gap: 15px;
 }
 .grid-4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
     gap: 10px;
 }
 
@@ -191,6 +204,7 @@ body {
 .name-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
     gap: 10px;
 }
 .name-item {
@@ -272,6 +286,7 @@ body {
 .homework-check-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    grid-gap: 8px;
     gap: 8px;
     margin-top: 10px;
 }
@@ -287,6 +302,7 @@ body {
     color: #555;
     cursor: pointer;
     transition: all 0.2s;
+    -webkit-user-select: none;
     user-select: none;
 }
 
@@ -316,6 +332,7 @@ body {
 .hw-pages-container {
     display: flex;
     overflow-x: auto;
+    -webkit-scroll-snap-type: mandatory;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
@@ -329,10 +346,12 @@ body {
 
 .hw-page {
     flex: 0 0 100%;
+    -webkit-scroll-snap-align: start;
     scroll-snap-align: start;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
+    grid-gap: 8px;
     gap: 8px;
     padding: 5px;
     box-sizing: border-box;
@@ -344,8 +363,13 @@ body {
 .hw-page-dots {
     display: flex;
     justify-content: center;
-    gap: 6px;
     margin-bottom: 5px;
+}
+.hw-page-dots > * {
+    margin-right: 6px;
+}
+.hw-page-dots > *:last-child {
+    margin-right: 0;
 }
 .hw-page-dot {
     width: 8px;
@@ -370,6 +394,7 @@ body {
     color: #555;
     cursor: pointer;
     transition: all 0.2s;
+    -webkit-user-select: none;
     user-select: none;
     display: flex;
     align-items: center;

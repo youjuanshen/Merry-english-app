@@ -15,9 +15,9 @@ lessons_config = [
         },
         "vocab": [
             {"word": "T-shirt", "cn": "T恤", "img": "T-shirt"},
-            {"word": "wear", "cn": "穿戴", "img": "shirt"},
-            {"word": "big", "cn": "大的", "img": "elephant"},
-            {"word": "small", "cn": "小的", "img": "mouse"}
+            {"word": "size", "cn": "尺码", "img": "shirt"},
+            {"word": "do", "cn": "做/助动词", "img": "skirt"},
+            {"word": "wear", "cn": "穿戴", "img": "jacket"}
         ],
         "sentences": [
             {"en": "What size do you wear?", "cn": "你穿多大码？"},
@@ -97,7 +97,7 @@ lessons_config = [
             {"word": "clock", "cn": "时钟", "img": "clock"},
             {"word": "eleven", "cn": "十一", "img": "clock_11"},
             {"word": "twelve", "cn": "十二", "img": "clock_12"},
-            {"word": "time", "cn": "时间", "img": "clock"}
+            {"word": "o'clock", "cn": "点钟", "img": "clock"}
         ],
         "sentences": [
             {"en": "What's the time, Mom?", "cn": "几点了，妈妈？"},
@@ -174,10 +174,10 @@ lessons_config = [
             "speaking": ["能口头说出自己喜欢的早餐", "能表达我饿了"]
         },
         "vocab": [
+            {"word": "breakfast", "cn": "早餐", "img": "bread"},
+            {"word": "hungry", "cn": "饥饿的", "img": "hamburger"},
             {"word": "milk", "cn": "牛奶", "img": "milk"},
-            {"word": "bread", "cn": "面包", "img": "bread"},
-            {"word": "egg", "cn": "鸡蛋", "img": "egg"},
-            {"word": "noodle", "cn": "面条", "img": "noodle"}
+            {"word": "about", "cn": "关于", "img": "egg"}
         ],
         "sentences": [
             {"en": "I'm hungry.", "cn": "我饿了。"},
@@ -246,7 +246,7 @@ lessons_config = [
     }
 ]
 
-def generate_question_pool(v1, v2, v3, v4, cn1, cn2, cn3, cn4, i1, i2, i3, i4, s1_en, s1_cn, s2_en, s2_cn):
+def generate_question_pool(v1, v2, v3, v4, cn1, cn2, cn3, cn4, i1, i2, i3, i4, s1_en, s1_cn, s2_en, s2_cn, unit):
     # 辅助工具：提取 img url
     def iu(name):
         return f'<img src="assets/images/{name}.png" width="80">'
@@ -284,36 +284,70 @@ def generate_question_pool(v1, v2, v3, v4, cn1, cn2, cn3, cn4, i1, i2, i3, i4, s
         random.shuffle(shuffled_words)
         
         # Listening
-        listening_pretest.append({
-            "type": "listen_select" if random.random() > 0.5 else "listen_tf",
+        is_select = random.random() > 0.5
+        listen_pre_node = {
+            "type": "listen_select" if is_select else "listen_tf",
+            "audio": word,
+            "chinese": cn
+        }
+        if is_select:
+            listen_pre_node["options"] = shuffled
+            listen_pre_node["correct"] = correct_idx
+        else:
+            is_true = random.random() > 0.5
+            listen_pre_node["image"] = iu(image_name) if is_true else iu([i1, i2, i3, i4][(target_idx+1)%4])
+            listen_pre_node["correct"] = is_true
+            
+        listening_pretest.append(listen_pre_node)
+        
+        prac_type = random.choice(["listen_select", "duo_listen_select", "balloon_pop", "scenario"])
+        prac_node = {
+            "type": prac_type,
             "audio": word,
             "chinese": cn,
-            "options": shuffled,
-            "correct": correct_idx if random.random() > 0.5 else (True if random.random() > 0.5 else False),
-            "image": iu(image_name) if random.random() > 0.5 else iu([i1, i2, i3, i4][(target_idx+1)%4])
-        })
+            "difficulty": random.choice(["easy", "medium", "hard"])
+        }
+        if prac_type in ["listen_select", "duo_listen_select"]:
+            prac_node["options"] = shuffled
+            prac_node["correct"] = correct_idx
+        elif prac_type == "balloon_pop":
+            prac_node["options"] = shuffled
+            prac_node["correct"] = correct_idx
+            prac_node["text"] = f"Find the word"
+        elif prac_type == "scenario":
+            prac_node["options"] = shuffled[:3]
+            if iu(image_name) not in prac_node["options"]:
+                prac_node["options"][0] = iu(image_name)
+            random.shuffle(prac_node["options"])
+            prac_node["correct"] = prac_node["options"].index(iu(image_name))
+            prac_node["scenario"] = s1_en if random.random() > 0.5 else s2_en
+            prac_node["question"] = "What should we pick?"
+            prac_node["feedback"] = "Great choice!"
         
-        listening_practice.extend([
-            {
-                "type": random.choice(["listen_select", "duo_listen_select", "balloon_pop", "scenario"]),
-                "audio": word,
-                "chinese": cn,
-                "options": shuffled,
-                "correct": correct_idx,
-                "difficulty": random.choice(["easy", "medium", "hard"]),
-                "text": "Find the word",
-                "scenario": s1_en if random.random() > 0.5 else s2_en,
-                "question": "What should we pick?",
-                "feedback": "Great choice!"
-            }
-        ])
+        listening_practice.append(prac_node)
         
-        # Reading
+        # Reading sentence generation based on unit
+        if unit == "1":
+            sent_str = f"This is a {word}." if word[0] not in 'aeiou' else f"This is an {word}."
+        elif unit == "2":
+            if word in ["shorts", "sports shoes", "clothes"]: sent_str = f"I wear {word}."
+            elif word in ["size", "do", "whose"]: sent_str = s1_en
+            else: sent_str = f"I wear a {word}." if word[0] not in 'aeiou' else f"I wear an {word}."
+        elif unit == "3":
+            if word in ["clock", "time"]: sent_str = f"What's the {word}?"
+            else: sent_str = f"It's {word} o'clock."
+        elif unit == "4":
+            if word in ["egg", "apple", "orange", "banana", "hamburger"]: sent_str = f"I like {word}s."
+            elif word in ["about", "hungry", "breakfast", "lunch", "dinner"]: sent_str = s1_en
+            else: sent_str = f"I like {word}."
+        else:
+            sent_str = f"Look at the {word}."
+
         reading_pretest.append({
             "type": random.choice(["word_match", "sentence_match"]),
             "chinese": cn,
             "word": word,
-            "sentence": f"I see a {word}." if random.random() > 0.5 else s1_en,
+            "sentence": sent_str,
             "options": random.sample(shuffled_words, 2) if random.random() > 0.5 else shuffled_words,
             "correct": word
         })
@@ -322,7 +356,7 @@ def generate_question_pool(v1, v2, v3, v4, cn1, cn2, cn3, cn4, i1, i2, i3, i4, s
             "type": random.choice(["word_match", "sentence_match", "duo_race"]),
             "chinese": cn,
             "word": word,
-            "sentence": f"Look at the {word}." if random.random() > 0.5 else s2_en,
+            "sentence": sent_str,
             "options": shuffled_words if random.random() > 0.5 else shuffled,
             "correct": word if random.random() > 0.5 else correct_idx,
             "difficulty": random.choice(["easy", "medium", "hard"])
@@ -443,7 +477,7 @@ def main():
         s1_en, s1_cn = l['sentences'][0]['en'], l['sentences'][0]['cn']
         s2_en, s2_cn = l['sentences'][1]['en'], l['sentences'][1]['cn']
         
-        pools = generate_question_pool(v1,v2,v3,v4, cn1,cn2,cn3,cn4, i1,i2,i3,i4, s1_en,s1_cn,s2_en,s2_cn)
+        pools = generate_question_pool(v1,v2,v3,v4, cn1,cn2,cn3,cn4, i1,i2,i3,i4, s1_en,s1_cn,s2_en,s2_cn, unit)
         
         js_obj = {
             "id": lid,

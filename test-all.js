@@ -120,8 +120,8 @@ async function runTests() {
                         
                         while (!isFinished && questionCount < 30) {
                             // Check finish screens
-                            const isTransition = await page.evaluate(() => document.getElementById('transition-screen')?.classList.contains('active'));
-                            const isFinish = await page.evaluate(() => document.getElementById('finish-screen')?.classList.contains('active'));
+                            const isTransition = await page.evaluate(() => (() => { const el = document.getElementById('transition-screen'); return el && el.classList.contains('active'); })());
+                            const isFinish = await page.evaluate(() => (() => { const el = document.getElementById('finish-screen'); return el && el.classList.contains('active'); })());
                             
                             if (isTransition) {
                                 await page.click('#btn-start-practice');
@@ -150,8 +150,9 @@ async function runTests() {
                                 window.setTimeout = (cb, ms) => cb(); 
                                 window.isAnimating = false; // force unlock
                                 
-                                if (document.getElementById('feedback-panel')?.classList.contains('active')) {
-                                    document.getElementById('feedback-next-btn')?.click();
+                                if (document.getElementById('feedback-panel') && document.getElementById('feedback-panel').classList.contains('active')) {
+                                    const nextBtn = document.getElementById('feedback-next-btn');
+                                    if (nextBtn) nextBtn.click();
                                 } else if (typeof handleAnswer === 'function') {
                                     handleAnswer(true, document.querySelector('.option-card'));
                                 }

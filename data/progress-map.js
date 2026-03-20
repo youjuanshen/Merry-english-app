@@ -218,11 +218,11 @@ function addProgressMapStyles() {
         '.progress-map { padding: 15px; background: linear-gradient(180deg, #e8f5e9 0%, #c8e6c9 100%); min-height: 100vh; }' +
         '.map-header { text-align: center; margin-bottom: 20px; }' +
         '.map-header h2 { color: #2e7d32; margin-bottom: 10px; }' +
-        '.total-progress { display: flex; align-items: center; justify-content: center; gap: 10px; }' +
+        '.total-progress { display: flex; align-items: center; justify-content: center; } .total-progress > *:not(:last-child) { margin-right: 10px; }' +
         '.progress-bar-container { width: 150px; height: 12px; background: #ddd; border-radius: 6px; overflow: hidden; }' +
         '.progress-bar-fill { height: 100%; background: linear-gradient(90deg, #58cc02, #7ce800); transition: width 0.5s; }' +
         '.map-unit { background: white; border-radius: 16px; padding: 15px; margin-bottom: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }' +
-        '.unit-header { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px dashed #e0e0e0; }' +
+        '.unit-header { display: flex; align-items: center; margin-bottom: 15px; } .unit-header > *:not(:last-child) { margin-right: 12px; padding-bottom: 10px; border-bottom: 2px dashed #e0e0e0; }' +
         '.unit-icon { font-size: 36px; }' +
         '.unit-info { display: flex; flex-direction: column; }' +
         '.unit-name { font-weight: bold; color: #333; }' +

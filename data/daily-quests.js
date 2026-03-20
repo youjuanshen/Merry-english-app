@@ -183,8 +183,8 @@ function renderDailyQuestsPanel() {
         html += '<span style="font-size:20px;margin-right:8px;">' + quest.icon + '</span>';
         html += '<span style="font-weight:bold;">' + quest.name + '</span>';
         html += '</div>';
-        html += '<div style="display:flex;align-items:center;gap:8px;">';
-        html += '<span style="color:#58cc02;font-weight:bold;">⭐+' + quest.reward + '</span>';
+        html += '<div style="display:flex;align-items:center;">';
+        html += '<span style="color:#58cc02;font-weight:bold;margin-right:8px;">⭐+' + quest.reward + '</span>';
         html += '<span>' + statusIcon + '</span>';
         html += '</div></div>';
 

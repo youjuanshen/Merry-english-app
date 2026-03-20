@@ -307,14 +307,14 @@ function addPetStyles() {
         '.pet-name { font-size: 20px; font-weight: bold; color: #333; }' +
         '.pet-mood { font-size: 16px; color: #666; margin-top: 5px; }' +
         '.pet-stats { background: white; border-radius: 16px; padding: 15px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }' +
-        '.stat-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }' +
+        '.stat-row { display: flex; align-items: center; margin-bottom: 10px; } .stat-row > *:not(:last-child) { margin-right: 10px; }' +
         '.energy-bar { flex: 1; height: 12px; background: #e0e0e0; border-radius: 6px; overflow: hidden; }' +
         '.energy-fill { height: 100%; border-radius: 6px; transition: width 0.5s; }' +
         '.next-evolution { font-size: 14px; color: #888; margin-top: 10px; }' +
         '.max-level { font-size: 16px; color: #58cc02; font-weight: bold; }' +
         '.feed-section { background: white; border-radius: 16px; padding: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }' +
         '.feed-section h3 { margin: 0 0 15px 0; color: #333; }' +
-        '.food-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }' +
+        '.food-grid { display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 10px; }' +
         '.food-btn { display: flex; flex-direction: column; align-items: center; padding: 12px; border: 2px solid #58cc02; border-radius: 12px; background: #f9fff9; cursor: pointer; }' +
         '.food-btn:active { transform: scale(0.95); background: #e8f5e9; }' +
         '.food-btn.disabled { border-color: #ddd; background: #f5f5f5; opacity: 0.6; cursor: not-allowed; }' +

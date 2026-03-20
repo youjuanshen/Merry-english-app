@@ -730,15 +730,8 @@ nextBtn.onclick = function() {
     });
     
     // 检查教师端是否设置了模块和阶段
-    const cmdStr = localStorage.getItem('teacherCommand');
-    if (cmdStr) {
-        let cmd;
-        try {
-            cmd = JSON.parse(cmdStr);
-        } catch (e) {
-            console.error('Invalid teacher command:', e);
-            cmd = {};
-        }
+    const cmd = Sync.getTeacherCommandOnce ? Sync.getTeacherCommandOnce() : null;
+    if (cmd) {
         currentModule = cmd.module || 'listening';
         currentPhase = cmd.phase || 'pretest';
     } else {
@@ -825,15 +818,8 @@ function updatePhaseIndicator() {
         speaking: '口语'
     };
 
-    const lessonStr = localStorage.getItem('currentLesson');
-    if (lessonStr) {
-        let lesson;
-        try {
-            lesson = JSON.parse(lessonStr);
-        } catch (e) {
-            console.error('Invalid lesson data:', e);
-            lesson = { displayName: '未知课程' };
-        }
+    const lesson = Sync.getCurrentLessonOnceSync ? Sync.getCurrentLessonOnceSync() : null;
+    if (lesson) {
         // 课程名取 displayName 的第一段（去掉模块部分，避免重复）
         const lessonTitle = lesson.displayName ? lesson.displayName.split('-')[0].trim() : lesson.displayName;
         indicator.textContent = `📚 ${lessonTitle} · ${moduleNames[currentModule] || ''} · ${phaseNames[currentPhase]}`;
@@ -1008,9 +994,9 @@ function showTransition() {
             <h2 style="margin: 10px 0;">前测完成！</h2>
 
             <!-- 两位同学的成绩 -->
-            <div style="display: flex; gap: 10px; margin: 15px 0;">
+            <div style="display: flex; margin: 15px 0;">
                 <!-- 玩家1 -->
-                <div style="flex: 1; background: #e3f4ff; border: 2px solid #1cb0f6; border-radius: 12px; padding: 12px;">
+                <div style="flex: 1; margin-right: 10px; background: #e3f4ff; border: 2px solid #1cb0f6; border-radius: 12px; padding: 12px;">
                     <div style="font-size: 24px;">👦</div>
                     <div style="font-size: 14px; font-weight: bold; color: #1cb0f6;">${player1Name}</div>
                     <div style="font-size: 20px; font-weight: bold; margin: 5px 0;">${p1Accuracy}%</div>
@@ -1045,8 +1031,8 @@ function showTransition() {
             </div>
 
             <!-- 按钮区域 -->
-            <div style="display: flex; gap: 10px; margin-top: 20px;">
-                <button onclick="restartPretest()" style="flex: 1; padding: 15px; font-size: 16px; background: #fff; border: 2px solid #1cb0f6; color: #1cb0f6; border-radius: 12px; cursor: pointer;">
+            <div style="display: flex; margin-top: 20px;">
+                <button onclick="restartPretest()" style="flex: 1; margin-right: 10px; padding: 15px; font-size: 16px; background: #fff; border: 2px solid #1cb0f6; color: #1cb0f6; border-radius: 12px; cursor: pointer;">
                     🔄 再来一遍
                 </button>
                 <button onclick="startPractice()" style="flex: 1; padding: 15px; font-size: 16px; background: #58cc02; border: none; color: white; border-radius: 12px; cursor: pointer;">
@@ -1567,8 +1553,8 @@ function showFinishScreen() {
             <div style="font-size: 24px; margin: 10px 0;">${players[0].name}: ⭐ ${players[0].stars}</div>
             <div style="font-size: 24px; margin: 10px 0;">${players[1].name}: ⭐ ${players[1].stars}</div>
         </div>
-        <div style="display: flex; gap: 10px; margin-top: 20px; padding: 0 20px;">
-            <button onclick="restartCurrentModule()" style="flex: 1; padding: 15px; font-size: 16px; background: #fff; border: 2px solid #1cb0f6; color: #1cb0f6; border-radius: 12px; cursor: pointer;">
+        <div style="display: flex; margin-top: 20px; padding: 0 20px;">
+            <button onclick="restartCurrentModule()" style="flex: 1; margin-right: 10px; padding: 15px; font-size: 16px; background: #fff; border: 2px solid #1cb0f6; color: #1cb0f6; border-radius: 12px; cursor: pointer;">
                 🔄 再来一次
             </button>
             <button onclick="location.reload()" style="flex: 1; padding: 15px; font-size: 16px; background: #58cc02; border: none; color: white; border-radius: 12px; cursor: pointer;">

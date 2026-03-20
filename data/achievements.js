@@ -367,7 +367,7 @@ function renderAchievementsPage(container) {
         '<div style="text-align:center;margin-bottom:20px;font-size:18px;">总星星：⭐ ' + data.totalStars + '</div>';
 
     // 已获得的成就
-    html += '<h3 style="color:#58cc02;">⭐ 已获得</h3><div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px;">';
+    html += '<h3 style="color:#58cc02;">⭐ 已获得</h3><div style="display:flex;flex-wrap:wrap;margin-bottom:20px;margin: -5px;">';
 
     var hasEarned = false;
     for (var i = 0; i < achievementDefinitions.length; i++) {
@@ -385,7 +385,7 @@ function renderAchievementsPage(container) {
     html += '</div>';
 
     // 待解锁的成就
-    html += '<h3 style="color:#999;">🔒 待解锁</h3><div style="display:flex;flex-wrap:wrap;gap:10px;">';
+    html += '<h3 style="color:#999;">🔒 待解锁</h3><div style="display:flex;flex-wrap:wrap;margin: -5px;">';
 
     for (var j = 0; j < achievementDefinitions.length; j++) {
         var ach2 = achievementDefinitions[j];
