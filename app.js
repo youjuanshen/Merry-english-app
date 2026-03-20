@@ -1724,7 +1724,7 @@ function processAchievements(isCorrect) {
                 return function() {
                     showAchievementUnlock(ach);
                 };
-            }(newAchievements[i]), i * 3500);
+            }(newAchievements[i]), i * 2000);
         }
     }
 

@@ -266,42 +266,41 @@ function showAchievementUnlock(achievement) {
 
     var popup = document.createElement('div');
     popup.id = 'achievement-popup';
-    popup.style.cssText = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);' +
-        'background:linear-gradient(135deg,#FFD700,#FFA500);padding:30px;border-radius:20px;' +
-        'text-align:center;z-index:10000;box-shadow:0 10px 40px rgba(0,0,0,0.3);' +
-        'animation:achievementPop 0.5s ease-out;min-width:250px;';
+    popup.style.cssText = 'position:fixed;top:10px;left:50%;transform:translateX(-50%);' +
+        'background:linear-gradient(135deg,#FFD700,#FFA500);padding:10px 20px;border-radius:12px;' +
+        'text-align:center;z-index:10000;box-shadow:0 4px 15px rgba(0,0,0,0.2);' +
+        'animation:achievementSlide 0.3s ease-out;display:flex;align-items:center;gap:10px;';
 
     popup.innerHTML =
-        '<div style="font-size:60px;margin-bottom:10px;">' + achievement.emoji + '</div>' +
-        '<div style="font-size:14px;color:#333;margin-bottom:5px;">🎉 成就解锁！</div>' +
-        '<div style="font-size:24px;font-weight:bold;color:#333;margin-bottom:10px;">' + achievement.name + '</div>' +
-        '<div style="font-size:14px;color:#666;margin-bottom:15px;">' + achievement.description + '</div>' +
-        '<div style="font-size:18px;color:#58cc02;font-weight:bold;">+' + achievement.reward + ' ⭐</div>';
+        '<span style="font-size:30px;">' + achievement.emoji + '</span>' +
+        '<div style="text-align:left;">' +
+        '<div style="font-size:14px;font-weight:bold;color:#333;">' + achievement.name + '</div>' +
+        '<div style="font-size:12px;color:#666;">' + achievement.description + ' +' + achievement.reward + '⭐</div>' +
+        '</div>';
 
     document.body.appendChild(popup);
 
-    // 添加动画样式
     if (!document.getElementById('achievement-styles')) {
         var style = document.createElement('style');
         style.id = 'achievement-styles';
-        style.textContent = '@keyframes achievementPop{0%{transform:translate(-50%,-50%) scale(0);opacity:0}' +
-            '50%{transform:translate(-50%,-50%) scale(1.1)}100%{transform:translate(-50%,-50%) scale(1);opacity:1}}';
+        style.textContent = '@keyframes achievementSlide{0%{transform:translateX(-50%) translateY(-100%);opacity:0}' +
+            '100%{transform:translateX(-50%) translateY(0);opacity:1}}';
         document.head.appendChild(style);
     }
 
-    // 3秒后自动消失
+    // 1.5秒后自动消失（从3秒缩短）
     setTimeout(function() {
         if (popup.parentNode) {
             popup.style.transition = 'opacity 0.3s, transform 0.3s';
             popup.style.opacity = '0';
-            popup.style.transform = 'translate(-50%, -50%) scale(0.8)';
+            popup.style.transform = 'translateX(-50%) translateY(-100%)';
             setTimeout(function() {
                 if (popup.parentNode) {
                     popup.remove();
                 }
             }, 300);
         }
-    }, 3000);
+    }, 1500);
 }
 
 // 获取成就进度（用于显示）
