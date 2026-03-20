@@ -39,7 +39,7 @@ var unit2_lesson1 = {
           "<img src=\"assets/images/mouse.png\" width=\"80\">",
           "<img src=\"assets/images/T-shirt.png\" width=\"80\">"
         ],
-        "correct": 1,
+        "correct": false,
         "image": "<img src=\"assets/images/elephant.png\" width=\"80\">"
       },
       {
@@ -65,7 +65,7 @@ var unit2_lesson1 = {
           "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
           "<img src=\"assets/images/elephant.png\" width=\"80\">"
         ],
-        "correct": 2,
+        "correct": false,
         "image": "<img src=\"assets/images/shirt.png\" width=\"80\">"
       },
       {
@@ -104,7 +104,7 @@ var unit2_lesson1 = {
           "<img src=\"assets/images/elephant.png\" width=\"80\">",
           "<img src=\"assets/images/T-shirt.png\" width=\"80\">"
         ],
-        "correct": true,
+        "correct": 1,
         "image": "<img src=\"assets/images/T-shirt.png\" width=\"80\">"
       },
       {
@@ -347,7 +347,7 @@ var unit2_lesson1 = {
         "type": "word_match",
         "chinese": "T恤",
         "word": "T-shirt",
-        "sentence": "I see a T-shirt.",
+        "sentence": "I wear a t-shirt.",
         "options": [
           {
             "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
@@ -364,7 +364,7 @@ var unit2_lesson1 = {
         "type": "sentence_match",
         "chinese": "穿戴",
         "word": "wear",
-        "sentence": "I see a wear.",
+        "sentence": "What size do you wear?",
         "options": [
           {
             "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
@@ -423,7 +423,7 @@ var unit2_lesson1 = {
         "type": "sentence_match",
         "chinese": "T恤",
         "word": "T-shirt",
-        "sentence": "I see a T-shirt.",
+        "sentence": "I wear a t-shirt.",
         "options": [
           {
             "text": "<img src=\"assets/images/mouse.png\" width=\"80\">",
@@ -448,7 +448,7 @@ var unit2_lesson1 = {
         "type": "sentence_match",
         "chinese": "穿戴",
         "word": "wear",
-        "sentence": "I see a wear.",
+        "sentence": "What size do you wear?",
         "options": [
           {
             "text": "<img src=\"assets/images/shirt.png\" width=\"80\">",
@@ -507,7 +507,7 @@ var unit2_lesson1 = {
         "type": "word_match",
         "chinese": "T恤",
         "word": "T-shirt",
-        "sentence": "I see a T-shirt.",
+        "sentence": "I wear a t-shirt.",
         "options": [
           {
             "text": "<img src=\"assets/images/mouse.png\" width=\"80\">",
@@ -524,7 +524,7 @@ var unit2_lesson1 = {
         "type": "word_match",
         "chinese": "穿戴",
         "word": "wear",
-        "sentence": "I see a wear.",
+        "sentence": "What size do you wear?",
         "options": [
           {
             "text": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
@@ -583,7 +583,7 @@ var unit2_lesson1 = {
         "type": "word_match",
         "chinese": "大的",
         "word": "big",
-        "sentence": "Look at the big.",
+        "sentence": "It's too big.",
         "options": [
           "<img src=\"assets/images/shirt.png\" width=\"80\">",
           "<img src=\"assets/images/elephant.png\" width=\"80\">",
@@ -663,7 +663,7 @@ var unit2_lesson1 = {
         "type": "word_match",
         "chinese": "大的",
         "word": "big",
-        "sentence": "Look at the big.",
+        "sentence": "It's too big.",
         "options": [
           {
             "text": "<img src=\"assets/images/shirt.png\" width=\"80\">",
@@ -703,7 +703,7 @@ var unit2_lesson1 = {
         "type": "duo_race",
         "chinese": "T恤",
         "word": "T-shirt",
-        "sentence": "Look at the T-shirt.",
+        "sentence": "I wear a t-shirt.",
         "options": [
           {
             "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
@@ -729,7 +729,7 @@ var unit2_lesson1 = {
         "type": "duo_race",
         "chinese": "穿戴",
         "word": "wear",
-        "sentence": "Look at the wear.",
+        "sentence": "What size do you wear?",
         "options": [
           "<img src=\"assets/images/mouse.png\" width=\"80\">",
           "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
@@ -743,7 +743,7 @@ var unit2_lesson1 = {
         "type": "duo_race",
         "chinese": "大的",
         "word": "big",
-        "sentence": "Look at the big.",
+        "sentence": "It's too big.",
         "options": [
           "<img src=\"assets/images/shirt.png\" width=\"80\">",
           "<img src=\"assets/images/mouse.png\" width=\"80\">",
@@ -757,7 +757,7 @@ var unit2_lesson1 = {
         "type": "duo_race",
         "chinese": "小的",
         "word": "small",
-        "sentence": "Look at the small.",
+        "sentence": "It's too small.",
         "options": [
           {
             "text": "<img src=\"assets/images/mouse.png\" width=\"80\">",

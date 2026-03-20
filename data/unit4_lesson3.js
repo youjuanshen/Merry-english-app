@@ -39,7 +39,7 @@ var unit4_lesson3 = {
           "<img src=\"assets/images/banana.png\" width=\"80\">",
           "<img src=\"assets/images/orange_juice.png\" width=\"80\">"
         ],
-        "correct": false,
+        "correct": 1,
         "image": "<img src=\"assets/images/water.png\" width=\"80\">"
       },
       {
@@ -65,7 +65,7 @@ var unit4_lesson3 = {
           "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
           "<img src=\"assets/images/water.png\" width=\"80\">"
         ],
-        "correct": 0,
+        "correct": true,
         "image": "<img src=\"assets/images/orange_juice.png\" width=\"80\">"
       },
       {
@@ -104,7 +104,7 @@ var unit4_lesson3 = {
           "<img src=\"assets/images/banana.png\" width=\"80\">",
           "<img src=\"assets/images/orange_juice.png\" width=\"80\">"
         ],
-        "correct": 0,
+        "correct": false,
         "image": "<img src=\"assets/images/orange_juice.png\" width=\"80\">"
       },
       {
@@ -117,7 +117,7 @@ var unit4_lesson3 = {
           "<img src=\"assets/images/water.png\" width=\"80\">",
           "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
         ],
-        "correct": 1,
+        "correct": false,
         "image": "<img src=\"assets/images/banana.png\" width=\"80\">"
       },
       {
@@ -130,7 +130,7 @@ var unit4_lesson3 = {
           "<img src=\"assets/images/banana.png\" width=\"80\">",
           "<img src=\"assets/images/water.png\" width=\"80\">"
         ],
-        "correct": 2,
+        "correct": true,
         "image": "<img src=\"assets/images/banana.png\" width=\"80\">"
       }
     ],
@@ -372,7 +372,7 @@ var unit4_lesson3 = {
         "type": "word_match",
         "chinese": "香蕉",
         "word": "banana",
-        "sentence": "I see a banana.",
+        "sentence": "I like bananas.",
         "options": [
           {
             "text": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
@@ -414,7 +414,7 @@ var unit4_lesson3 = {
         "type": "word_match",
         "chinese": "水果",
         "word": "fruit",
-        "sentence": "I see a fruit.",
+        "sentence": "What's your favorite fruit?",
         "options": [
           {
             "text": "<img src=\"assets/images/banana.png\" width=\"80\">",
@@ -431,7 +431,7 @@ var unit4_lesson3 = {
         "type": "word_match",
         "chinese": "橙汁",
         "word": "orange juice",
-        "sentence": "I see a orange juice.",
+        "sentence": "I like orange juice.",
         "options": [
           {
             "text": "<img src=\"assets/images/banana.png\" width=\"80\">",
@@ -465,7 +465,7 @@ var unit4_lesson3 = {
         "type": "word_match",
         "chinese": "水",
         "word": "water",
-        "sentence": "I see a water.",
+        "sentence": "I like water.",
         "options": [
           {
             "text": "<img src=\"assets/images/banana.png\" width=\"80\">",
@@ -515,7 +515,7 @@ var unit4_lesson3 = {
         "type": "word_match",
         "chinese": "橙汁",
         "word": "orange juice",
-        "sentence": "I see a orange juice.",
+        "sentence": "I like orange juice.",
         "options": [
           {
             "text": "<img src=\"assets/images/banana.png\" width=\"80\">",
@@ -577,7 +577,7 @@ var unit4_lesson3 = {
         "type": "duo_race",
         "chinese": "香蕉",
         "word": "banana",
-        "sentence": "Look at the banana.",
+        "sentence": "I like bananas.",
         "options": [
           {
             "text": "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
@@ -674,14 +674,14 @@ var unit4_lesson3 = {
             "value": "banana"
           }
         ],
-        "correct": "orange juice",
+        "correct": 1,
         "difficulty": "easy"
       },
       {
         "type": "duo_race",
         "chinese": "香蕉",
         "word": "banana",
-        "sentence": "Look at the banana.",
+        "sentence": "I like bananas.",
         "options": [
           {
             "text": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
@@ -700,14 +700,14 @@ var unit4_lesson3 = {
             "value": "banana"
           }
         ],
-        "correct": "banana",
+        "correct": 3,
         "difficulty": "hard"
       },
       {
         "type": "sentence_match",
         "chinese": "水",
         "word": "water",
-        "sentence": "Look at the water.",
+        "sentence": "I like water.",
         "options": [
           {
             "text": "<img src=\"assets/images/banana.png\" width=\"80\">",
@@ -733,7 +733,7 @@ var unit4_lesson3 = {
         "type": "word_match",
         "chinese": "水果",
         "word": "fruit",
-        "sentence": "Look at the fruit.",
+        "sentence": "What's your favorite fruit?",
         "options": [
           "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
           "<img src=\"assets/images/water.png\" width=\"80\">",
@@ -747,7 +747,7 @@ var unit4_lesson3 = {
         "type": "word_match",
         "chinese": "橙汁",
         "word": "orange juice",
-        "sentence": "Look at the orange juice.",
+        "sentence": "I like orange juice.",
         "options": [
           "<img src=\"assets/images/banana.png\" width=\"80\">",
           "<img src=\"assets/images/orange_juice.png\" width=\"80\">",
@@ -761,7 +761,7 @@ var unit4_lesson3 = {
         "type": "duo_race",
         "chinese": "香蕉",
         "word": "banana",
-        "sentence": "Look at the banana.",
+        "sentence": "I like bananas.",
         "options": [
           {
             "text": "<img src=\"assets/images/banana.png\" width=\"80\">",
@@ -780,7 +780,7 @@ var unit4_lesson3 = {
             "value": "water"
           }
         ],
-        "correct": "banana",
+        "correct": 0,
         "difficulty": "easy"
       },
       {

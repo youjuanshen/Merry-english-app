@@ -26,7 +26,7 @@ var unit4_lesson1 = {
           "<img src=\"assets/images/noodle.png\" width=\"80\">",
           "<img src=\"assets/images/bread.png\" width=\"80\">"
         ],
-        "correct": 3,
+        "correct": true,
         "image": "<img src=\"assets/images/bread.png\" width=\"80\">"
       },
       {
@@ -52,7 +52,7 @@ var unit4_lesson1 = {
           "<img src=\"assets/images/egg.png\" width=\"80\">",
           "<img src=\"assets/images/bread.png\" width=\"80\">"
         ],
-        "correct": false,
+        "correct": 1,
         "image": "<img src=\"assets/images/noodle.png\" width=\"80\">"
       },
       {
@@ -65,7 +65,7 @@ var unit4_lesson1 = {
           "<img src=\"assets/images/milk.png\" width=\"80\">",
           "<img src=\"assets/images/bread.png\" width=\"80\">"
         ],
-        "correct": 2,
+        "correct": true,
         "image": "<img src=\"assets/images/milk.png\" width=\"80\">"
       },
       {
@@ -91,7 +91,7 @@ var unit4_lesson1 = {
           "<img src=\"assets/images/milk.png\" width=\"80\">",
           "<img src=\"assets/images/noodle.png\" width=\"80\">"
         ],
-        "correct": 0,
+        "correct": false,
         "image": "<img src=\"assets/images/noodle.png\" width=\"80\">"
       },
       {
@@ -117,7 +117,7 @@ var unit4_lesson1 = {
           "<img src=\"assets/images/milk.png\" width=\"80\">",
           "<img src=\"assets/images/bread.png\" width=\"80\">"
         ],
-        "correct": false,
+        "correct": 2,
         "image": "<img src=\"assets/images/bread.png\" width=\"80\">"
       },
       {
@@ -347,7 +347,7 @@ var unit4_lesson1 = {
         "type": "sentence_match",
         "chinese": "牛奶",
         "word": "milk",
-        "sentence": "I see a milk.",
+        "sentence": "I like milk.",
         "options": [
           {
             "text": "<img src=\"assets/images/milk.png\" width=\"80\">",
@@ -364,7 +364,7 @@ var unit4_lesson1 = {
         "type": "sentence_match",
         "chinese": "面包",
         "word": "bread",
-        "sentence": "I see a bread.",
+        "sentence": "I like bread.",
         "options": [
           {
             "text": "<img src=\"assets/images/milk.png\" width=\"80\">",
@@ -457,7 +457,7 @@ var unit4_lesson1 = {
         "type": "sentence_match",
         "chinese": "鸡蛋",
         "word": "egg",
-        "sentence": "I see a egg.",
+        "sentence": "I like eggs.",
         "options": [
           {
             "text": "<img src=\"assets/images/egg.png\" width=\"80\">",
@@ -482,7 +482,7 @@ var unit4_lesson1 = {
         "type": "word_match",
         "chinese": "面条",
         "word": "noodle",
-        "sentence": "I see a noodle.",
+        "sentence": "I like noodles.",
         "options": [
           {
             "text": "<img src=\"assets/images/egg.png\" width=\"80\">",
@@ -507,7 +507,7 @@ var unit4_lesson1 = {
         "type": "sentence_match",
         "chinese": "牛奶",
         "word": "milk",
-        "sentence": "I see a milk.",
+        "sentence": "I like milk.",
         "options": [
           {
             "text": "<img src=\"assets/images/egg.png\" width=\"80\">",
@@ -524,7 +524,7 @@ var unit4_lesson1 = {
         "type": "word_match",
         "chinese": "面包",
         "word": "bread",
-        "sentence": "I see a bread.",
+        "sentence": "I like bread.",
         "options": [
           {
             "text": "<img src=\"assets/images/egg.png\" width=\"80\">",
@@ -673,7 +673,7 @@ var unit4_lesson1 = {
         "type": "word_match",
         "chinese": "面条",
         "word": "noodle",
-        "sentence": "Look at the noodle.",
+        "sentence": "I like noodles.",
         "options": [
           "<img src=\"assets/images/egg.png\" width=\"80\">",
           "<img src=\"assets/images/noodle.png\" width=\"80\">",
@@ -713,7 +713,7 @@ var unit4_lesson1 = {
         "type": "sentence_match",
         "chinese": "面包",
         "word": "bread",
-        "sentence": "Look at the bread.",
+        "sentence": "I like bread.",
         "options": [
           {
             "text": "<img src=\"assets/images/egg.png\" width=\"80\">",
@@ -739,7 +739,7 @@ var unit4_lesson1 = {
         "type": "word_match",
         "chinese": "鸡蛋",
         "word": "egg",
-        "sentence": "Look at the egg.",
+        "sentence": "I like eggs.",
         "options": [
           "<img src=\"assets/images/bread.png\" width=\"80\">",
           "<img src=\"assets/images/noodle.png\" width=\"80\">",

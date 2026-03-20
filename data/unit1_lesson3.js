@@ -597,7 +597,7 @@ var unit1_lesson3 = {
       {
         "type": "sentence_match",
         "chinese": "老鼠",
-        "sentence": "I see a mouse.",
+        "sentence": "This is a mouse.",
         "options": [
           {
             "text": "<img src=\"assets/images/mouse.png\" width=\"80\">",
@@ -661,7 +661,7 @@ var unit1_lesson3 = {
       {
         "type": "sentence_match",
         "chinese": "老鼠",
-        "sentence": "I see a mouse.",
+        "sentence": "This is a mouse.",
         "options": [
           {
             "text": "<img src=\"assets/images/mouse.png\" width=\"80\">",
@@ -677,7 +677,7 @@ var unit1_lesson3 = {
       {
         "type": "sentence_match",
         "chinese": "兔子",
-        "sentence": "I see a rabbit.",
+        "sentence": "This is a rabbit.",
         "options": [
           {
             "text": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
@@ -831,7 +831,7 @@ var unit1_lesson3 = {
         "type": "sentence_match",
         "chinese": "老鼠",
         "difficulty": "medium",
-        "sentence": "I see a mouse.",
+        "sentence": "This is a mouse.",
         "options": [
           {
             "text": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
@@ -955,7 +955,7 @@ var unit1_lesson3 = {
         "type": "sentence_match",
         "chinese": "鱼",
         "difficulty": "easy",
-        "sentence": "I see a fish.",
+        "sentence": "This is a fish.",
         "options": [
           {
             "text": "<img src=\"assets/images/fish.png\" width=\"80\">",
@@ -972,7 +972,7 @@ var unit1_lesson3 = {
         "type": "sentence_match",
         "chinese": "兔子",
         "difficulty": "easy",
-        "sentence": "I see a rabbit.",
+        "sentence": "This is a rabbit.",
         "options": [
           {
             "text": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
@@ -1019,7 +1019,7 @@ var unit1_lesson3 = {
         "type": "sentence_match",
         "chinese": "鸭子",
         "difficulty": "medium",
-        "sentence": "I see a duck.",
+        "sentence": "This is a duck.",
         "options": [
           {
             "text": "<img src=\"assets/images/mouse.png\" width=\"80\">",
@@ -1164,7 +1164,7 @@ var unit1_lesson3 = {
         "type": "sentence_match",
         "chinese": "鸭子",
         "difficulty": "easy",
-        "sentence": "I see a duck.",
+        "sentence": "This is a duck.",
         "options": [
           {
             "text": "<img src=\"assets/images/fish.png\" width=\"80\">",

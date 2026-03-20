@@ -26,7 +26,7 @@ var unit4_lesson2 = {
           "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
           "<img src=\"assets/images/hamburger.png\" width=\"80\">"
         ],
-        "correct": false,
+        "correct": 1,
         "image": "<img src=\"assets/images/salad.png\" width=\"80\">"
       },
       {
@@ -38,47 +38,47 @@ var unit4_lesson2 = {
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
           "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
+        ],
+        "correct": false,
+        "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "lunch",
+        "chinese": "午餐",
+        "options": [
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/salad.png\" width=\"80\">"
+        ],
+        "correct": true,
+        "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "hamburger",
+        "chinese": "汉堡",
+        "options": [
+          "<img src=\"assets/images/salad.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
+        ],
+        "correct": true,
+        "image": "<img src=\"assets/images/salad.png\" width=\"80\">"
+      },
+      {
+        "type": "listen_select",
+        "audio": "salad",
+        "chinese": "沙拉",
+        "options": [
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
+          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+          "<img src=\"assets/images/salad.png\" width=\"80\">"
         ],
         "correct": 3,
-        "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "lunch",
-        "chinese": "午餐",
-        "options": [
-          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
-          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
-          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
-          "<img src=\"assets/images/salad.png\" width=\"80\">"
-        ],
-        "correct": true,
-        "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "hamburger",
-        "chinese": "汉堡",
-        "options": [
-          "<img src=\"assets/images/salad.png\" width=\"80\">",
-          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
-          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
-          "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
-        ],
-        "correct": true,
-        "image": "<img src=\"assets/images/salad.png\" width=\"80\">"
-      },
-      {
-        "type": "listen_select",
-        "audio": "salad",
-        "chinese": "沙拉",
-        "options": [
-          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
-          "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
-          "<img src=\"assets/images/hamburger.png\" width=\"80\">",
-          "<img src=\"assets/images/salad.png\" width=\"80\">"
-        ],
-        "correct": false,
         "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
       },
       {
@@ -104,7 +104,7 @@ var unit4_lesson2 = {
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
           "<img src=\"assets/images/hamburger.png\" width=\"80\">"
         ],
-        "correct": 2,
+        "correct": false,
         "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">"
       },
       {
@@ -117,7 +117,7 @@ var unit4_lesson2 = {
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
           "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
         ],
-        "correct": false,
+        "correct": 1,
         "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">"
       },
       {
@@ -130,7 +130,7 @@ var unit4_lesson2 = {
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
           "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
         ],
-        "correct": false,
+        "correct": 0,
         "image": "<img src=\"assets/images/salad.png\" width=\"80\">"
       }
     ],
@@ -364,7 +364,7 @@ var unit4_lesson2 = {
         "type": "word_match",
         "chinese": "沙拉",
         "word": "salad",
-        "sentence": "I see a salad.",
+        "sentence": "I want a salad.",
         "options": [
           {
             "text": "<img src=\"assets/images/salad.png\" width=\"80\">",
@@ -389,7 +389,7 @@ var unit4_lesson2 = {
         "type": "word_match",
         "chinese": "苹果汁",
         "word": "apple juice",
-        "sentence": "I see a apple juice.",
+        "sentence": "I like apple juice.",
         "options": [
           {
             "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
@@ -448,7 +448,7 @@ var unit4_lesson2 = {
         "type": "word_match",
         "chinese": "沙拉",
         "word": "salad",
-        "sentence": "I see a salad.",
+        "sentence": "I want a salad.",
         "options": [
           {
             "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
@@ -490,7 +490,7 @@ var unit4_lesson2 = {
         "type": "sentence_match",
         "chinese": "午餐",
         "word": "lunch",
-        "sentence": "I see a lunch.",
+        "sentence": "What's for lunch?",
         "options": [
           {
             "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
@@ -515,7 +515,7 @@ var unit4_lesson2 = {
         "type": "sentence_match",
         "chinese": "汉堡",
         "word": "hamburger",
-        "sentence": "I see a hamburger.",
+        "sentence": "I want a hamburger.",
         "options": [
           {
             "text": "<img src=\"assets/images/salad.png\" width=\"80\">",
@@ -559,7 +559,7 @@ var unit4_lesson2 = {
         "type": "word_match",
         "chinese": "汉堡",
         "word": "hamburger",
-        "sentence": "Look at the hamburger.",
+        "sentence": "I want a hamburger.",
         "options": [
           "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
@@ -587,21 +587,21 @@ var unit4_lesson2 = {
         "type": "duo_race",
         "chinese": "苹果汁",
         "word": "apple juice",
-        "sentence": "Look at the apple juice.",
+        "sentence": "I like apple juice.",
         "options": [
           "<img src=\"assets/images/salad.png\" width=\"80\">",
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
           "<img src=\"assets/images/apple_juice.png\" width=\"80\">"
         ],
-        "correct": "apple juice",
+        "correct": 0,
         "difficulty": "hard"
       },
       {
         "type": "word_match",
         "chinese": "午餐",
         "word": "lunch",
-        "sentence": "Look at the lunch.",
+        "sentence": "What's for lunch?",
         "options": [
           {
             "text": "<img src=\"assets/images/salad.png\" width=\"80\">",
@@ -627,7 +627,7 @@ var unit4_lesson2 = {
         "type": "word_match",
         "chinese": "汉堡",
         "word": "hamburger",
-        "sentence": "Look at the hamburger.",
+        "sentence": "I want a hamburger.",
         "options": [
           "<img src=\"assets/images/salad.png\" width=\"80\">",
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
@@ -707,7 +707,7 @@ var unit4_lesson2 = {
         "type": "word_match",
         "chinese": "汉堡",
         "word": "hamburger",
-        "sentence": "Look at the hamburger.",
+        "sentence": "I want a hamburger.",
         "options": [
           "<img src=\"assets/images/salad.png\" width=\"80\">",
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
@@ -721,7 +721,7 @@ var unit4_lesson2 = {
         "type": "word_match",
         "chinese": "沙拉",
         "word": "salad",
-        "sentence": "Look at the salad.",
+        "sentence": "I want a salad.",
         "options": [
           "<img src=\"assets/images/salad.png\" width=\"80\">",
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
@@ -761,7 +761,7 @@ var unit4_lesson2 = {
         "type": "word_match",
         "chinese": "午餐",
         "word": "lunch",
-        "sentence": "Look at the lunch.",
+        "sentence": "What's for lunch?",
         "options": [
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",

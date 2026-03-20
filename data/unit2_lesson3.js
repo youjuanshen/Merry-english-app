@@ -13,7 +13,7 @@ var unit2_lesson3 = {
           "<img src=\"assets/images/sweater.png\" width=\"80\">",
           "<img src=\"assets/images/bed.png\" width=\"80\">"
         ],
-        "correct": true,
+        "correct": 2,
         "image": "<img src=\"assets/images/sweater.png\" width=\"80\">"
       },
       {
@@ -26,7 +26,7 @@ var unit2_lesson3 = {
           "<img src=\"assets/images/sweater.png\" width=\"80\">",
           "<img src=\"assets/images/chair.png\" width=\"80\">"
         ],
-        "correct": 1,
+        "correct": false,
         "image": "<img src=\"assets/images/chair.png\" width=\"80\">"
       },
       {
@@ -52,7 +52,7 @@ var unit2_lesson3 = {
           "<img src=\"assets/images/chair.png\" width=\"80\">",
           "<img src=\"assets/images/bed.png\" width=\"80\">"
         ],
-        "correct": 0,
+        "correct": false,
         "image": "<img src=\"assets/images/sweater.png\" width=\"80\">"
       },
       {
@@ -65,7 +65,7 @@ var unit2_lesson3 = {
           "<img src=\"assets/images/chair.png\" width=\"80\">",
           "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
         ],
-        "correct": true,
+        "correct": 0,
         "image": "<img src=\"assets/images/bed.png\" width=\"80\">"
       },
       {
@@ -91,7 +91,7 @@ var unit2_lesson3 = {
           "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
           "<img src=\"assets/images/chair.png\" width=\"80\">"
         ],
-        "correct": 3,
+        "correct": true,
         "image": "<img src=\"assets/images/chair.png\" width=\"80\">"
       },
       {
@@ -104,7 +104,7 @@ var unit2_lesson3 = {
           "<img src=\"assets/images/sweater.png\" width=\"80\">",
           "<img src=\"assets/images/chair.png\" width=\"80\">"
         ],
-        "correct": false,
+        "correct": 0,
         "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
       },
       {
@@ -372,7 +372,7 @@ var unit2_lesson3 = {
         "type": "sentence_match",
         "chinese": "床",
         "word": "bed",
-        "sentence": "I see a bed.",
+        "sentence": "I wear a bed.",
         "options": [
           {
             "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
@@ -414,7 +414,7 @@ var unit2_lesson3 = {
         "type": "word_match",
         "chinese": "书包",
         "word": "schoolbag",
-        "sentence": "I see a schoolbag.",
+        "sentence": "I wear a schoolbag.",
         "options": [
           {
             "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
@@ -439,7 +439,7 @@ var unit2_lesson3 = {
         "type": "sentence_match",
         "chinese": "毛衣",
         "word": "sweater",
-        "sentence": "I see a sweater.",
+        "sentence": "I wear a sweater.",
         "options": [
           {
             "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
@@ -456,7 +456,7 @@ var unit2_lesson3 = {
         "type": "sentence_match",
         "chinese": "床",
         "word": "bed",
-        "sentence": "I see a bed.",
+        "sentence": "I wear a bed.",
         "options": [
           {
             "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
@@ -506,7 +506,7 @@ var unit2_lesson3 = {
         "type": "word_match",
         "chinese": "书包",
         "word": "schoolbag",
-        "sentence": "I see a schoolbag.",
+        "sentence": "I wear a schoolbag.",
         "options": [
           {
             "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
@@ -608,14 +608,14 @@ var unit2_lesson3 = {
           "<img src=\"assets/images/sweater.png\" width=\"80\">",
           "<img src=\"assets/images/chair.png\" width=\"80\">"
         ],
-        "correct": "bed",
+        "correct": 1,
         "difficulty": "hard"
       },
       {
         "type": "duo_race",
         "chinese": "椅子",
         "word": "chair",
-        "sentence": "Look at the chair.",
+        "sentence": "I wear a chair.",
         "options": [
           {
             "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
@@ -634,7 +634,7 @@ var unit2_lesson3 = {
             "value": "bed"
           }
         ],
-        "correct": "chair",
+        "correct": 1,
         "difficulty": "hard"
       },
       {
@@ -674,7 +674,7 @@ var unit2_lesson3 = {
           "<img src=\"assets/images/chair.png\" width=\"80\">",
           "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
         ],
-        "correct": "sweater",
+        "correct": 0,
         "difficulty": "hard"
       },
       {
@@ -737,7 +737,7 @@ var unit2_lesson3 = {
         "type": "sentence_match",
         "chinese": "床",
         "word": "bed",
-        "sentence": "Look at the bed.",
+        "sentence": "I wear a bed.",
         "options": [
           {
             "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
@@ -763,7 +763,7 @@ var unit2_lesson3 = {
         "type": "word_match",
         "chinese": "椅子",
         "word": "chair",
-        "sentence": "Look at the chair.",
+        "sentence": "I wear a chair.",
         "options": [
           {
             "text": "<img src=\"assets/images/bed.png\" width=\"80\">",

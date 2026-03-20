@@ -13,7 +13,7 @@ var unit3_lesson3 = {
           "<img src=\"assets/images/clock.png\" width=\"80\">",
           "<img src=\"assets/images/cooking.png\" width=\"80\">"
         ],
-        "correct": false,
+        "correct": 0,
         "image": "<img src=\"assets/images/cooking.png\" width=\"80\">"
       },
       {
@@ -26,7 +26,7 @@ var unit3_lesson3 = {
           "<img src=\"assets/images/cooking.png\" width=\"80\">",
           "<img src=\"assets/images/cooking.png\" width=\"80\">"
         ],
-        "correct": 2,
+        "correct": false,
         "image": "<img src=\"assets/images/cooking.png\" width=\"80\">"
       },
       {
@@ -39,7 +39,7 @@ var unit3_lesson3 = {
           "<img src=\"assets/images/cooking.png\" width=\"80\">",
           "<img src=\"assets/images/cooking.png\" width=\"80\">"
         ],
-        "correct": true,
+        "correct": 1,
         "image": "<img src=\"assets/images/drawing.png\" width=\"80\">"
       },
       {
@@ -52,7 +52,7 @@ var unit3_lesson3 = {
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
           "<img src=\"assets/images/cooking.png\" width=\"80\">"
         ],
-        "correct": true,
+        "correct": 1,
         "image": "<img src=\"assets/images/cooking.png\" width=\"80\">"
       },
       {
@@ -78,7 +78,7 @@ var unit3_lesson3 = {
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
           "<img src=\"assets/images/clock.png\" width=\"80\">"
         ],
-        "correct": true,
+        "correct": 1,
         "image": "<img src=\"assets/images/cooking.png\" width=\"80\">"
       },
       {
@@ -91,7 +91,7 @@ var unit3_lesson3 = {
           "<img src=\"assets/images/cooking.png\" width=\"80\">",
           "<img src=\"assets/images/cooking.png\" width=\"80\">"
         ],
-        "correct": 1,
+        "correct": true,
         "image": "<img src=\"assets/images/drawing.png\" width=\"80\">"
       },
       {
@@ -117,7 +117,7 @@ var unit3_lesson3 = {
           "<img src=\"assets/images/cooking.png\" width=\"80\">",
           "<img src=\"assets/images/clock.png\" width=\"80\">"
         ],
-        "correct": 1,
+        "correct": true,
         "image": "<img src=\"assets/images/cooking.png\" width=\"80\">"
       },
       {
@@ -130,7 +130,7 @@ var unit3_lesson3 = {
           "<img src=\"assets/images/clock.png\" width=\"80\">",
           "<img src=\"assets/images/cooking.png\" width=\"80\">"
         ],
-        "correct": false,
+        "correct": 0,
         "image": "<img src=\"assets/images/cooking.png\" width=\"80\">"
       }
     ],
@@ -414,7 +414,7 @@ var unit3_lesson3 = {
         "type": "word_match",
         "chinese": "二十",
         "word": "twenty",
-        "sentence": "I see a twenty.",
+        "sentence": "It's twenty o'clock.",
         "options": [
           {
             "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
@@ -464,7 +464,7 @@ var unit3_lesson3 = {
         "type": "sentence_match",
         "chinese": "晚餐",
         "word": "dinner",
-        "sentence": "I see a dinner.",
+        "sentence": "It's time for dinner.",
         "options": [
           {
             "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
@@ -481,7 +481,7 @@ var unit3_lesson3 = {
         "type": "word_match",
         "chinese": "画画",
         "word": "draw",
-        "sentence": "I see a draw.",
+        "sentence": "I'm drawing.",
         "options": [
           {
             "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
@@ -515,7 +515,7 @@ var unit3_lesson3 = {
         "type": "word_match",
         "chinese": "做饭",
         "word": "cook",
-        "sentence": "I see a cook.",
+        "sentence": "I'm cooking.",
         "options": [
           {
             "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
@@ -551,7 +551,7 @@ var unit3_lesson3 = {
         "type": "duo_race",
         "chinese": "做饭",
         "word": "cook",
-        "sentence": "Look at the cook.",
+        "sentence": "I'm cooking.",
         "options": [
           {
             "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
@@ -577,7 +577,7 @@ var unit3_lesson3 = {
         "type": "sentence_match",
         "chinese": "晚餐",
         "word": "dinner",
-        "sentence": "Look at the dinner.",
+        "sentence": "It's time for dinner.",
         "options": [
           {
             "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
@@ -603,7 +603,7 @@ var unit3_lesson3 = {
         "type": "word_match",
         "chinese": "画画",
         "word": "draw",
-        "sentence": "Look at the draw.",
+        "sentence": "I'm drawing.",
         "options": [
           {
             "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
@@ -636,7 +636,7 @@ var unit3_lesson3 = {
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
           "<img src=\"assets/images/cooking.png\" width=\"80\">"
         ],
-        "correct": "twenty",
+        "correct": 0,
         "difficulty": "hard"
       },
       {
@@ -657,7 +657,7 @@ var unit3_lesson3 = {
         "type": "sentence_match",
         "chinese": "晚餐",
         "word": "dinner",
-        "sentence": "Look at the dinner.",
+        "sentence": "It's time for dinner.",
         "options": [
           {
             "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
@@ -683,7 +683,7 @@ var unit3_lesson3 = {
         "type": "word_match",
         "chinese": "画画",
         "word": "draw",
-        "sentence": "Look at the draw.",
+        "sentence": "I'm drawing.",
         "options": [
           "<img src=\"assets/images/clock.png\" width=\"80\">",
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
@@ -725,7 +725,7 @@ var unit3_lesson3 = {
         "type": "sentence_match",
         "chinese": "晚餐",
         "word": "dinner",
-        "sentence": "Look at the dinner.",
+        "sentence": "It's time for dinner.",
         "options": [
           {
             "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
@@ -751,7 +751,7 @@ var unit3_lesson3 = {
         "type": "word_match",
         "chinese": "画画",
         "word": "draw",
-        "sentence": "Look at the draw.",
+        "sentence": "I'm drawing.",
         "options": [
           {
             "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
@@ -777,7 +777,7 @@ var unit3_lesson3 = {
         "type": "word_match",
         "chinese": "二十",
         "word": "twenty",
-        "sentence": "Look at the twenty.",
+        "sentence": "It's twenty o'clock.",
         "options": [
           {
             "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",

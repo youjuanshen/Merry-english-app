@@ -13,7 +13,7 @@ var unit3_lesson2 = {
           "<img src=\"assets/images/reading.png\" width=\"80\">",
           "<img src=\"assets/images/baby.png\" width=\"80\">"
         ],
-        "correct": 2,
+        "correct": false,
         "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">"
       },
       {
@@ -26,7 +26,7 @@ var unit3_lesson2 = {
           "<img src=\"assets/images/reading.png\" width=\"80\">",
           "<img src=\"assets/images/baby.png\" width=\"80\">"
         ],
-        "correct": 1,
+        "correct": true,
         "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">"
       },
       {
@@ -91,7 +91,7 @@ var unit3_lesson2 = {
           "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
           "<img src=\"assets/images/baby.png\" width=\"80\">"
         ],
-        "correct": false,
+        "correct": 3,
         "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
       },
       {
@@ -130,7 +130,7 @@ var unit3_lesson2 = {
           "<img src=\"assets/images/reading.png\" width=\"80\">",
           "<img src=\"assets/images/watching_tv.png\" width=\"80\">"
         ],
-        "correct": false,
+        "correct": 3,
         "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
       }
     ],
@@ -364,7 +364,7 @@ var unit3_lesson2 = {
         "type": "sentence_match",
         "chinese": "看电视",
         "word": "watch TV",
-        "sentence": "I see a watch TV.",
+        "sentence": "I'm watching TV.",
         "options": [
           {
             "text": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
@@ -524,7 +524,7 @@ var unit3_lesson2 = {
         "type": "word_match",
         "chinese": "看电视",
         "word": "watch TV",
-        "sentence": "I see a watch TV.",
+        "sentence": "I'm watching TV.",
         "options": [
           {
             "text": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
@@ -551,7 +551,7 @@ var unit3_lesson2 = {
         "type": "duo_race",
         "chinese": "阅读",
         "word": "read",
-        "sentence": "Look at the read.",
+        "sentence": "I'm reading.",
         "options": [
           {
             "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
@@ -591,21 +591,21 @@ var unit3_lesson2 = {
         "type": "duo_race",
         "chinese": "小孩",
         "word": "kid",
-        "sentence": "Look at the kid.",
+        "sentence": "What are the kids doing?",
         "options": [
           "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
           "<img src=\"assets/images/reading.png\" width=\"80\">",
           "<img src=\"assets/images/clock_3.png\" width=\"80\">",
           "<img src=\"assets/images/baby.png\" width=\"80\">"
         ],
-        "correct": "kid",
+        "correct": 0,
         "difficulty": "easy"
       },
       {
         "type": "word_match",
         "chinese": "三",
         "word": "three",
-        "sentence": "Look at the three.",
+        "sentence": "It's three o'clock.",
         "options": [
           "<img src=\"assets/images/baby.png\" width=\"80\">",
           "<img src=\"assets/images/reading.png\" width=\"80\">",
@@ -619,7 +619,7 @@ var unit3_lesson2 = {
         "type": "sentence_match",
         "chinese": "阅读",
         "word": "read",
-        "sentence": "Look at the read.",
+        "sentence": "I'm reading.",
         "options": [
           "<img src=\"assets/images/baby.png\" width=\"80\">",
           "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
@@ -647,7 +647,7 @@ var unit3_lesson2 = {
         "type": "sentence_match",
         "chinese": "小孩",
         "word": "kid",
-        "sentence": "Look at the kid.",
+        "sentence": "What are the kids doing?",
         "options": [
           "<img src=\"assets/images/clock_3.png\" width=\"80\">",
           "<img src=\"assets/images/reading.png\" width=\"80\">",
@@ -675,7 +675,7 @@ var unit3_lesson2 = {
         "type": "duo_race",
         "chinese": "阅读",
         "word": "read",
-        "sentence": "Look at the read.",
+        "sentence": "I'm reading.",
         "options": [
           {
             "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
@@ -694,7 +694,7 @@ var unit3_lesson2 = {
             "value": "watch TV"
           }
         ],
-        "correct": "read",
+        "correct": 2,
         "difficulty": "easy"
       },
       {

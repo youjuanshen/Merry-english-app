@@ -26,7 +26,7 @@ var unit3_lesson1 = {
           "<img src=\"assets/images/clock_11.png\" width=\"80\">",
           "<img src=\"assets/images/clock_12.png\" width=\"80\">"
         ],
-        "correct": false,
+        "correct": 2,
         "image": "<img src=\"assets/images/clock_11.png\" width=\"80\">"
       },
       {
@@ -39,7 +39,7 @@ var unit3_lesson1 = {
           "<img src=\"assets/images/clock_12.png\" width=\"80\">",
           "<img src=\"assets/images/clock_11.png\" width=\"80\">"
         ],
-        "correct": false,
+        "correct": 2,
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">"
       },
       {
@@ -52,7 +52,7 @@ var unit3_lesson1 = {
           "<img src=\"assets/images/clock.png\" width=\"80\">",
           "<img src=\"assets/images/clock_12.png\" width=\"80\">"
         ],
-        "correct": 0,
+        "correct": false,
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">"
       },
       {
@@ -65,7 +65,7 @@ var unit3_lesson1 = {
           "<img src=\"assets/images/clock.png\" width=\"80\">",
           "<img src=\"assets/images/clock_12.png\" width=\"80\">"
         ],
-        "correct": false,
+        "correct": 0,
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">"
       },
       {
@@ -91,7 +91,7 @@ var unit3_lesson1 = {
           "<img src=\"assets/images/clock.png\" width=\"80\">",
           "<img src=\"assets/images/clock_11.png\" width=\"80\">"
         ],
-        "correct": true,
+        "correct": 0,
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">"
       },
       {
@@ -117,7 +117,7 @@ var unit3_lesson1 = {
           "<img src=\"assets/images/clock_12.png\" width=\"80\">",
           "<img src=\"assets/images/clock.png\" width=\"80\">"
         ],
-        "correct": true,
+        "correct": 0,
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">"
       },
       {
@@ -364,7 +364,7 @@ var unit3_lesson1 = {
         "type": "word_match",
         "chinese": "十一",
         "word": "eleven",
-        "sentence": "I see a eleven.",
+        "sentence": "It's eleven o'clock.",
         "options": [
           {
             "text": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
@@ -406,7 +406,7 @@ var unit3_lesson1 = {
         "type": "sentence_match",
         "chinese": "时间",
         "word": "time",
-        "sentence": "I see a time.",
+        "sentence": "What's the time?",
         "options": [
           {
             "text": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
@@ -423,7 +423,7 @@ var unit3_lesson1 = {
         "type": "sentence_match",
         "chinese": "时钟",
         "word": "clock",
-        "sentence": "I see a clock.",
+        "sentence": "What's the time?",
         "options": [
           {
             "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
@@ -448,7 +448,7 @@ var unit3_lesson1 = {
         "type": "sentence_match",
         "chinese": "十一",
         "word": "eleven",
-        "sentence": "I see a eleven.",
+        "sentence": "It's eleven o'clock.",
         "options": [
           {
             "text": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
@@ -532,7 +532,7 @@ var unit3_lesson1 = {
         "type": "word_match",
         "chinese": "十一",
         "word": "eleven",
-        "sentence": "I see a eleven.",
+        "sentence": "It's eleven o'clock.",
         "options": [
           {
             "text": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
@@ -565,7 +565,7 @@ var unit3_lesson1 = {
         "type": "duo_race",
         "chinese": "十一",
         "word": "eleven",
-        "sentence": "Look at the eleven.",
+        "sentence": "It's eleven o'clock.",
         "options": [
           "<img src=\"assets/images/clock.png\" width=\"80\">",
           "<img src=\"assets/images/clock.png\" width=\"80\">",
@@ -579,7 +579,7 @@ var unit3_lesson1 = {
         "type": "duo_race",
         "chinese": "十二",
         "word": "twelve",
-        "sentence": "Look at the twelve.",
+        "sentence": "It's twelve o'clock.",
         "options": [
           {
             "text": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
@@ -598,7 +598,7 @@ var unit3_lesson1 = {
             "value": "time"
           }
         ],
-        "correct": "twelve",
+        "correct": 0,
         "difficulty": "hard"
       },
       {
@@ -713,7 +713,7 @@ var unit3_lesson1 = {
         "type": "duo_race",
         "chinese": "十一",
         "word": "eleven",
-        "sentence": "Look at the eleven.",
+        "sentence": "It's eleven o'clock.",
         "options": [
           "<img src=\"assets/images/clock.png\" width=\"80\">",
           "<img src=\"assets/images/clock_12.png\" width=\"80\">",
@@ -727,7 +727,7 @@ var unit3_lesson1 = {
         "type": "duo_race",
         "chinese": "十二",
         "word": "twelve",
-        "sentence": "Look at the twelve.",
+        "sentence": "It's twelve o'clock.",
         "options": [
           "<img src=\"assets/images/clock_11.png\" width=\"80\">",
           "<img src=\"assets/images/clock.png\" width=\"80\">",

@@ -39,7 +39,7 @@ var unit2_lesson4 = {
           "<img src=\"assets/images/shorts.png\" width=\"80\">",
           "<img src=\"assets/images/sports_shoes.png\" width=\"80\">"
         ],
-        "correct": false,
+        "correct": 0,
         "image": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">"
       },
       {
@@ -52,7 +52,7 @@ var unit2_lesson4 = {
           "<img src=\"assets/images/shorts.png\" width=\"80\">",
           "<img src=\"assets/images/skirt.png\" width=\"80\">"
         ],
-        "correct": true,
+        "correct": 0,
         "image": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">"
       },
       {
@@ -78,7 +78,7 @@ var unit2_lesson4 = {
           "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
           "<img src=\"assets/images/skirt.png\" width=\"80\">"
         ],
-        "correct": 1,
+        "correct": true,
         "image": "<img src=\"assets/images/shorts.png\" width=\"80\">"
       },
       {
@@ -104,7 +104,7 @@ var unit2_lesson4 = {
           "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
           "<img src=\"assets/images/skirt.png\" width=\"80\">"
         ],
-        "correct": 1,
+        "correct": true,
         "image": "<img src=\"assets/images/sports_shoes.png\" width=\"80\">"
       },
       {
@@ -117,7 +117,7 @@ var unit2_lesson4 = {
           "<img src=\"assets/images/skirt.png\" width=\"80\">",
           "<img src=\"assets/images/sports_shoes.png\" width=\"80\">"
         ],
-        "correct": 0,
+        "correct": false,
         "image": "<img src=\"assets/images/shorts.png\" width=\"80\">"
       },
       {
@@ -130,7 +130,7 @@ var unit2_lesson4 = {
           "<img src=\"assets/images/skirt.png\" width=\"80\">",
           "<img src=\"assets/images/shorts.png\" width=\"80\">"
         ],
-        "correct": false,
+        "correct": 3,
         "image": "<img src=\"assets/images/shorts.png\" width=\"80\">"
       }
     ],
@@ -347,7 +347,7 @@ var unit2_lesson4 = {
         "type": "word_match",
         "chinese": "运动鞋",
         "word": "sports shoes",
-        "sentence": "I see a sports shoes.",
+        "sentence": "Put on your sports shoes.",
         "options": [
           {
             "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
@@ -372,7 +372,7 @@ var unit2_lesson4 = {
         "type": "sentence_match",
         "chinese": "短裤",
         "word": "shorts",
-        "sentence": "I see a shorts.",
+        "sentence": "I wear shorts.",
         "options": [
           {
             "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
@@ -524,7 +524,7 @@ var unit2_lesson4 = {
         "type": "word_match",
         "chinese": "短裤",
         "word": "shorts",
-        "sentence": "I see a shorts.",
+        "sentence": "I wear shorts.",
         "options": [
           {
             "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
@@ -557,7 +557,7 @@ var unit2_lesson4 = {
         "type": "word_match",
         "chinese": "短裤",
         "word": "shorts",
-        "sentence": "Look at the shorts.",
+        "sentence": "I wear shorts.",
         "options": [
           "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
           "<img src=\"assets/images/skirt.png\" width=\"80\">",
@@ -571,7 +571,7 @@ var unit2_lesson4 = {
         "type": "sentence_match",
         "chinese": "裙子",
         "word": "skirt",
-        "sentence": "Look at the skirt.",
+        "sentence": "I wear a skirt.",
         "options": [
           "<img src=\"assets/images/skirt.png\" width=\"80\">",
           "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
@@ -604,14 +604,14 @@ var unit2_lesson4 = {
             "value": "shorts"
           }
         ],
-        "correct": "shoe",
+        "correct": 1,
         "difficulty": "easy"
       },
       {
         "type": "sentence_match",
         "chinese": "运动鞋",
         "word": "sports shoes",
-        "sentence": "Look at the sports shoes.",
+        "sentence": "Put on your sports shoes.",
         "options": [
           "<img src=\"assets/images/shorts.png\" width=\"80\">",
           "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
@@ -639,7 +639,7 @@ var unit2_lesson4 = {
         "type": "sentence_match",
         "chinese": "裙子",
         "word": "skirt",
-        "sentence": "Look at the skirt.",
+        "sentence": "I wear a skirt.",
         "options": [
           "<img src=\"assets/images/skirt.png\" width=\"80\">",
           "<img src=\"assets/images/shorts.png\" width=\"80\">",
@@ -653,7 +653,7 @@ var unit2_lesson4 = {
         "type": "word_match",
         "chinese": "鞋子",
         "word": "shoe",
-        "sentence": "Look at the shoe.",
+        "sentence": "Put on your sports shoes.",
         "options": [
           "<img src=\"assets/images/shorts.png\" width=\"80\">",
           "<img src=\"assets/images/sports_shoes.png\" width=\"80\">",
@@ -667,7 +667,7 @@ var unit2_lesson4 = {
         "type": "word_match",
         "chinese": "运动鞋",
         "word": "sports shoes",
-        "sentence": "Look at the sports shoes.",
+        "sentence": "Put on your sports shoes.",
         "options": [
           {
             "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
@@ -719,7 +719,7 @@ var unit2_lesson4 = {
         "type": "word_match",
         "chinese": "裙子",
         "word": "skirt",
-        "sentence": "Look at the skirt.",
+        "sentence": "I wear a skirt.",
         "options": [
           {
             "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",

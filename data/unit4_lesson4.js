@@ -13,7 +13,7 @@ var unit4_lesson4 = {
           "<img src=\"assets/images/rice.png\" width=\"80\">",
           "<img src=\"assets/images/chicken.png\" width=\"80\">"
         ],
-        "correct": 2,
+        "correct": false,
         "image": "<img src=\"assets/images/soup.png\" width=\"80\">"
       },
       {
@@ -26,7 +26,7 @@ var unit4_lesson4 = {
           "<img src=\"assets/images/rice.png\" width=\"80\">",
           "<img src=\"assets/images/soup.png\" width=\"80\">"
         ],
-        "correct": 3,
+        "correct": true,
         "image": "<img src=\"assets/images/soup.png\" width=\"80\">"
       },
       {
@@ -39,7 +39,7 @@ var unit4_lesson4 = {
           "<img src=\"assets/images/rice.png\" width=\"80\">",
           "<img src=\"assets/images/chicken.png\" width=\"80\">"
         ],
-        "correct": false,
+        "correct": 3,
         "image": "<img src=\"assets/images/vegetable.png\" width=\"80\">"
       },
       {
@@ -78,7 +78,7 @@ var unit4_lesson4 = {
           "<img src=\"assets/images/soup.png\" width=\"80\">",
           "<img src=\"assets/images/chicken.png\" width=\"80\">"
         ],
-        "correct": false,
+        "correct": 2,
         "image": "<img src=\"assets/images/soup.png\" width=\"80\">"
       },
       {
@@ -91,7 +91,7 @@ var unit4_lesson4 = {
           "<img src=\"assets/images/vegetable.png\" width=\"80\">",
           "<img src=\"assets/images/chicken.png\" width=\"80\">"
         ],
-        "correct": 3,
+        "correct": false,
         "image": "<img src=\"assets/images/vegetable.png\" width=\"80\">"
       },
       {
@@ -117,7 +117,7 @@ var unit4_lesson4 = {
           "<img src=\"assets/images/rice.png\" width=\"80\">",
           "<img src=\"assets/images/chicken.png\" width=\"80\">"
         ],
-        "correct": 2,
+        "correct": true,
         "image": "<img src=\"assets/images/rice.png\" width=\"80\">"
       },
       {
@@ -431,7 +431,7 @@ var unit4_lesson4 = {
         "type": "word_match",
         "chinese": "米饭",
         "word": "rice",
-        "sentence": "I see a rice.",
+        "sentence": "I like rice.",
         "options": [
           {
             "text": "<img src=\"assets/images/rice.png\" width=\"80\">",
@@ -448,7 +448,7 @@ var unit4_lesson4 = {
         "type": "word_match",
         "chinese": "汤",
         "word": "soup",
-        "sentence": "I see a soup.",
+        "sentence": "I like soup.",
         "options": [
           {
             "text": "<img src=\"assets/images/rice.png\" width=\"80\">",
@@ -465,7 +465,7 @@ var unit4_lesson4 = {
         "type": "sentence_match",
         "chinese": "鸡肉",
         "word": "chicken",
-        "sentence": "I see a chicken.",
+        "sentence": "I like chicken.",
         "options": [
           {
             "text": "<img src=\"assets/images/soup.png\" width=\"80\">",
@@ -482,7 +482,7 @@ var unit4_lesson4 = {
         "type": "word_match",
         "chinese": "蔬菜",
         "word": "vegetable",
-        "sentence": "I see a vegetable.",
+        "sentence": "I like vegetables.",
         "options": [
           {
             "text": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
@@ -499,7 +499,7 @@ var unit4_lesson4 = {
         "type": "sentence_match",
         "chinese": "米饭",
         "word": "rice",
-        "sentence": "I see a rice.",
+        "sentence": "I like rice.",
         "options": [
           {
             "text": "<img src=\"assets/images/soup.png\" width=\"80\">",
@@ -642,7 +642,7 @@ var unit4_lesson4 = {
           "<img src=\"assets/images/soup.png\" width=\"80\">",
           "<img src=\"assets/images/vegetable.png\" width=\"80\">"
         ],
-        "correct": "rice",
+        "correct": 1,
         "difficulty": "easy"
       },
       {
@@ -675,7 +675,7 @@ var unit4_lesson4 = {
         "type": "sentence_match",
         "chinese": "鸡肉",
         "word": "chicken",
-        "sentence": "Look at the chicken.",
+        "sentence": "I like chicken.",
         "options": [
           "<img src=\"assets/images/rice.png\" width=\"80\">",
           "<img src=\"assets/images/soup.png\" width=\"80\">",
@@ -689,7 +689,7 @@ var unit4_lesson4 = {
         "type": "duo_race",
         "chinese": "蔬菜",
         "word": "vegetable",
-        "sentence": "Look at the vegetable.",
+        "sentence": "I like vegetables.",
         "options": [
           {
             "text": "<img src=\"assets/images/rice.png\" width=\"80\">",
@@ -729,7 +729,7 @@ var unit4_lesson4 = {
         "type": "sentence_match",
         "chinese": "汤",
         "word": "soup",
-        "sentence": "Look at the soup.",
+        "sentence": "I like soup.",
         "options": [
           "<img src=\"assets/images/rice.png\" width=\"80\">",
           "<img src=\"assets/images/vegetable.png\" width=\"80\">",
@@ -757,7 +757,7 @@ var unit4_lesson4 = {
         "type": "sentence_match",
         "chinese": "蔬菜",
         "word": "vegetable",
-        "sentence": "Look at the vegetable.",
+        "sentence": "I like vegetables.",
         "options": [
           "<img src=\"assets/images/soup.png\" width=\"80\">",
           "<img src=\"assets/images/chicken.png\" width=\"80\">",

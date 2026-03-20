@@ -548,7 +548,7 @@ var unit1_lesson4 = {
       {
         "type": "sentence_match",
         "chinese": "狗",
-        "sentence": "I see a dog.",
+        "sentence": "This is a dog.",
         "options": [
           {
             "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
@@ -644,7 +644,7 @@ var unit1_lesson4 = {
       {
         "type": "sentence_match",
         "chinese": "大象",
-        "sentence": "I see a elephant.",
+        "sentence": "This is a elephant.",
         "options": [
           {
             "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
@@ -743,7 +743,7 @@ var unit1_lesson4 = {
         "type": "sentence_match",
         "chinese": "熊",
         "difficulty": "easy",
-        "sentence": "I see a bear.",
+        "sentence": "This is a bear.",
         "options": [
           {
             "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
@@ -914,7 +914,7 @@ var unit1_lesson4 = {
         "type": "sentence_match",
         "chinese": "老虎",
         "difficulty": "hard",
-        "sentence": "I see a tiger.",
+        "sentence": "This is a tiger.",
         "options": [
           {
             "text": "<img src=\"assets/images/mouse.png\" width=\"80\">",
@@ -995,7 +995,7 @@ var unit1_lesson4 = {
         "type": "sentence_match",
         "chinese": "狗",
         "difficulty": "medium",
-        "sentence": "I see a dog.",
+        "sentence": "This is a dog.",
         "options": [
           {
             "text": "<img src=\"assets/images/cat.png\" width=\"80\">",
@@ -1072,7 +1072,7 @@ var unit1_lesson4 = {
         "type": "sentence_match",
         "chinese": "鱼",
         "difficulty": "medium",
-        "sentence": "I see a fish.",
+        "sentence": "This is a fish.",
         "options": [
           {
             "text": "<img src=\"assets/images/fish.png\" width=\"80\">",
@@ -1089,7 +1089,7 @@ var unit1_lesson4 = {
         "type": "sentence_match",
         "chinese": "老鼠",
         "difficulty": "hard",
-        "sentence": "I see a mouse.",
+        "sentence": "This is a mouse.",
         "options": [
           {
             "text": "<img src=\"assets/images/cat.png\" width=\"80\">",
@@ -1119,7 +1119,7 @@ var unit1_lesson4 = {
         "type": "sentence_match",
         "chinese": "猫",
         "difficulty": "easy",
-        "sentence": "I see a cat.",
+        "sentence": "This is a cat.",
         "options": [
           {
             "text": "<img src=\"assets/images/mouse.png\" width=\"80\">",
@@ -1149,7 +1149,7 @@ var unit1_lesson4 = {
         "type": "sentence_match",
         "chinese": "狮子",
         "difficulty": "easy",
-        "sentence": "I see a lion.",
+        "sentence": "This is a lion.",
         "options": [
           {
             "text": "<img src=\"assets/images/duck.png\" width=\"80\">",
@@ -1196,7 +1196,7 @@ var unit1_lesson4 = {
         "type": "sentence_match",
         "chinese": "熊",
         "difficulty": "medium",
-        "sentence": "I see a bear.",
+        "sentence": "This is a bear.",
         "options": [
           {
             "text": "<img src=\"assets/images/lion.png\" width=\"80\">",

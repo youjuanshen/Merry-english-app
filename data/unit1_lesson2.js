@@ -538,7 +538,7 @@ var unit1_lesson2 = {
       {
         "type": "sentence_match",
         "chinese": "猴子",
-        "sentence": "I see a monkey.",
+        "sentence": "This is a monkey.",
         "options": [
           {
             "text": "<img src=\"assets/images/lion.png\" width=\"80\">",
@@ -586,7 +586,7 @@ var unit1_lesson2 = {
       {
         "type": "sentence_match",
         "chinese": "老虎",
-        "sentence": "I see a tiger.",
+        "sentence": "This is a tiger.",
         "options": [
           {
             "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
@@ -618,7 +618,7 @@ var unit1_lesson2 = {
       {
         "type": "sentence_match",
         "chinese": "大象",
-        "sentence": "I see a elephant.",
+        "sentence": "This is a elephant.",
         "options": [
           {
             "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
@@ -682,7 +682,7 @@ var unit1_lesson2 = {
       {
         "type": "sentence_match",
         "chinese": "猴子",
-        "sentence": "I see a monkey.",
+        "sentence": "This is a monkey.",
         "options": [
           {
             "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
@@ -750,7 +750,7 @@ var unit1_lesson2 = {
         "type": "sentence_match",
         "chinese": "猴子",
         "difficulty": "hard",
-        "sentence": "I see a monkey.",
+        "sentence": "This is a monkey.",
         "options": [
           {
             "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
@@ -767,7 +767,7 @@ var unit1_lesson2 = {
         "type": "sentence_match",
         "chinese": "大象",
         "difficulty": "easy",
-        "sentence": "I see a elephant.",
+        "sentence": "This is a elephant.",
         "options": [
           {
             "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
@@ -835,7 +835,7 @@ var unit1_lesson2 = {
         "type": "sentence_match",
         "chinese": "猴子",
         "difficulty": "medium",
-        "sentence": "I see a monkey.",
+        "sentence": "This is a monkey.",
         "options": [
           {
             "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
@@ -942,7 +942,7 @@ var unit1_lesson2 = {
         "type": "sentence_match",
         "chinese": "狮子",
         "difficulty": "easy",
-        "sentence": "I see a lion.",
+        "sentence": "This is a lion.",
         "options": [
           {
             "text": "<img src=\"assets/images/lion.png\" width=\"80\">",
@@ -989,7 +989,7 @@ var unit1_lesson2 = {
         "type": "sentence_match",
         "chinese": "老虎",
         "difficulty": "easy",
-        "sentence": "I see a tiger.",
+        "sentence": "This is a tiger.",
         "options": [
           {
             "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
@@ -1019,7 +1019,7 @@ var unit1_lesson2 = {
         "type": "sentence_match",
         "chinese": "狮子",
         "difficulty": "medium",
-        "sentence": "I see a lion.",
+        "sentence": "This is a lion.",
         "options": [
           {
             "text": "<img src=\"assets/images/lion.png\" width=\"80\">",
@@ -1096,7 +1096,7 @@ var unit1_lesson2 = {
         "type": "sentence_match",
         "chinese": "老虎",
         "difficulty": "hard",
-        "sentence": "I see a tiger.",
+        "sentence": "This is a tiger.",
         "options": [
           {
             "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",

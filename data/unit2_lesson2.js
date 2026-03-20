@@ -39,7 +39,7 @@ var unit2_lesson2 = {
           "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
           "<img src=\"assets/images/jacket.png\" width=\"80\">"
         ],
-        "correct": true,
+        "correct": 1,
         "image": "<img src=\"assets/images/T-shirt.png\" width=\"80\">"
       },
       {
@@ -117,7 +117,7 @@ var unit2_lesson2 = {
           "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
           "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
         ],
-        "correct": 1,
+        "correct": false,
         "image": "<img src=\"assets/images/jacket.png\" width=\"80\">"
       },
       {
@@ -347,7 +347,7 @@ var unit2_lesson2 = {
         "type": "sentence_match",
         "chinese": "衬衫",
         "word": "shirt",
-        "sentence": "I see a shirt.",
+        "sentence": "I wear a shirt.",
         "options": [
           {
             "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
@@ -372,7 +372,7 @@ var unit2_lesson2 = {
         "type": "word_match",
         "chinese": "夹克",
         "word": "jacket",
-        "sentence": "I see a jacket.",
+        "sentence": "I wear a jacket.",
         "options": [
           {
             "text": "<img src=\"assets/images/jacket.png\" width=\"80\">",
@@ -422,7 +422,7 @@ var unit2_lesson2 = {
         "type": "word_match",
         "chinese": "衣服",
         "word": "clothes",
-        "sentence": "I see a clothes.",
+        "sentence": "Is this your clothes?",
         "options": [
           {
             "text": "<img src=\"assets/images/shirt.png\" width=\"80\">",
@@ -447,7 +447,7 @@ var unit2_lesson2 = {
         "type": "word_match",
         "chinese": "衬衫",
         "word": "shirt",
-        "sentence": "I see a shirt.",
+        "sentence": "I wear a shirt.",
         "options": [
           {
             "text": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
@@ -464,7 +464,7 @@ var unit2_lesson2 = {
         "type": "sentence_match",
         "chinese": "夹克",
         "word": "jacket",
-        "sentence": "I see a jacket.",
+        "sentence": "I wear a jacket.",
         "options": [
           {
             "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
@@ -481,7 +481,7 @@ var unit2_lesson2 = {
         "type": "word_match",
         "chinese": "谁的",
         "word": "whose",
-        "sentence": "I see a whose.",
+        "sentence": "Is this your whose?",
         "options": [
           {
             "text": "<img src=\"assets/images/jacket.png\" width=\"80\">",
@@ -498,7 +498,7 @@ var unit2_lesson2 = {
         "type": "sentence_match",
         "chinese": "衣服",
         "word": "clothes",
-        "sentence": "I see a clothes.",
+        "sentence": "Is this your clothes?",
         "options": [
           {
             "text": "<img src=\"assets/images/shirt.png\" width=\"80\">",
@@ -540,7 +540,7 @@ var unit2_lesson2 = {
         "type": "word_match",
         "chinese": "夹克",
         "word": "jacket",
-        "sentence": "I see a jacket.",
+        "sentence": "I wear a jacket.",
         "options": [
           {
             "text": "<img src=\"assets/images/shirt.png\" width=\"80\">",
@@ -559,7 +559,7 @@ var unit2_lesson2 = {
         "type": "sentence_match",
         "chinese": "衬衫",
         "word": "shirt",
-        "sentence": "Look at the shirt.",
+        "sentence": "I wear a shirt.",
         "options": [
           {
             "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
@@ -585,7 +585,7 @@ var unit2_lesson2 = {
         "type": "sentence_match",
         "chinese": "夹克",
         "word": "jacket",
-        "sentence": "Look at the jacket.",
+        "sentence": "I wear a jacket.",
         "options": [
           {
             "text": "<img src=\"assets/images/jacket.png\" width=\"80\">",
@@ -611,7 +611,7 @@ var unit2_lesson2 = {
         "type": "sentence_match",
         "chinese": "谁的",
         "word": "whose",
-        "sentence": "Look at the whose.",
+        "sentence": "Is this your whose?",
         "options": [
           "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
           "<img src=\"assets/images/shirt.png\" width=\"80\">",
@@ -625,7 +625,7 @@ var unit2_lesson2 = {
         "type": "sentence_match",
         "chinese": "衣服",
         "word": "clothes",
-        "sentence": "Look at the clothes.",
+        "sentence": "Is this your clothes?",
         "options": [
           "<img src=\"assets/images/jacket.png\" width=\"80\">",
           "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
@@ -639,21 +639,21 @@ var unit2_lesson2 = {
         "type": "duo_race",
         "chinese": "衬衫",
         "word": "shirt",
-        "sentence": "Look at the shirt.",
+        "sentence": "I wear a shirt.",
         "options": [
           "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
           "<img src=\"assets/images/jacket.png\" width=\"80\">",
           "<img src=\"assets/images/shirt.png\" width=\"80\">",
           "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
         ],
-        "correct": "shirt",
+        "correct": 0,
         "difficulty": "medium"
       },
       {
         "type": "duo_race",
         "chinese": "夹克",
         "word": "jacket",
-        "sentence": "Look at the jacket.",
+        "sentence": "I wear a jacket.",
         "options": [
           {
             "text": "<img src=\"assets/images/jacket.png\" width=\"80\">",
@@ -672,14 +672,14 @@ var unit2_lesson2 = {
             "value": "clothes"
           }
         ],
-        "correct": "jacket",
+        "correct": 0,
         "difficulty": "hard"
       },
       {
         "type": "word_match",
         "chinese": "谁的",
         "word": "whose",
-        "sentence": "Look at the whose.",
+        "sentence": "Is this your whose?",
         "options": [
           "<img src=\"assets/images/shirt.png\" width=\"80\">",
           "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
@@ -752,14 +752,14 @@ var unit2_lesson2 = {
             "value": "shirt"
           }
         ],
-        "correct": "jacket",
+        "correct": 0,
         "difficulty": "easy"
       },
       {
         "type": "sentence_match",
         "chinese": "谁的",
         "word": "whose",
-        "sentence": "Look at the whose.",
+        "sentence": "Is this your whose?",
         "options": [
           "<img src=\"assets/images/jacket.png\" width=\"80\">",
           "<img src=\"assets/images/T-shirt.png\" width=\"80\">",

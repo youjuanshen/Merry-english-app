@@ -13,7 +13,7 @@ var unit3_lesson4 = {
           "<img src=\"assets/images/sleeping.png\" width=\"80\">",
           "<img src=\"assets/images/homework.png\" width=\"80\">"
         ],
-        "correct": 3,
+        "correct": false,
         "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">"
       },
       {
@@ -26,7 +26,7 @@ var unit3_lesson4 = {
           "<img src=\"assets/images/dog.png\" width=\"80\">",
           "<img src=\"assets/images/homework.png\" width=\"80\">"
         ],
-        "correct": 0,
+        "correct": false,
         "image": "<img src=\"assets/images/drawing.png\" width=\"80\">"
       },
       {
@@ -52,7 +52,7 @@ var unit3_lesson4 = {
           "<img src=\"assets/images/dog.png\" width=\"80\">",
           "<img src=\"assets/images/homework.png\" width=\"80\">"
         ],
-        "correct": 2,
+        "correct": false,
         "image": "<img src=\"assets/images/homework.png\" width=\"80\">"
       },
       {
@@ -65,7 +65,7 @@ var unit3_lesson4 = {
           "<img src=\"assets/images/sleeping.png\" width=\"80\">",
           "<img src=\"assets/images/homework.png\" width=\"80\">"
         ],
-        "correct": false,
+        "correct": 3,
         "image": "<img src=\"assets/images/homework.png\" width=\"80\">"
       },
       {
@@ -91,7 +91,7 @@ var unit3_lesson4 = {
           "<img src=\"assets/images/homework.png\" width=\"80\">",
           "<img src=\"assets/images/drawing.png\" width=\"80\">"
         ],
-        "correct": true,
+        "correct": 1,
         "image": "<img src=\"assets/images/dog.png\" width=\"80\">"
       },
       {
@@ -117,7 +117,7 @@ var unit3_lesson4 = {
           "<img src=\"assets/images/dog.png\" width=\"80\">",
           "<img src=\"assets/images/sleeping.png\" width=\"80\">"
         ],
-        "correct": true,
+        "correct": 0,
         "image": "<img src=\"assets/images/homework.png\" width=\"80\">"
       },
       {
@@ -372,7 +372,7 @@ var unit3_lesson4 = {
         "type": "sentence_match",
         "chinese": "睡觉",
         "word": "sleep",
-        "sentence": "I see a sleep.",
+        "sentence": "I'm sleeping.",
         "options": [
           {
             "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
@@ -397,7 +397,7 @@ var unit3_lesson4 = {
         "type": "word_match",
         "chinese": "图片",
         "word": "picture",
-        "sentence": "I see a picture.",
+        "sentence": "I draw a picture.",
         "options": [
           {
             "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
@@ -439,7 +439,7 @@ var unit3_lesson4 = {
         "type": "sentence_match",
         "chinese": "作业",
         "word": "homework",
-        "sentence": "I see a homework.",
+        "sentence": "I'm doing my homework.",
         "options": [
           {
             "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
@@ -456,7 +456,7 @@ var unit3_lesson4 = {
         "type": "word_match",
         "chinese": "睡觉",
         "word": "sleep",
-        "sentence": "I see a sleep.",
+        "sentence": "I'm sleeping.",
         "options": [
           {
             "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
@@ -506,7 +506,7 @@ var unit3_lesson4 = {
         "type": "word_match",
         "chinese": "玩耍",
         "word": "play",
-        "sentence": "I see a play.",
+        "sentence": "I'm playing.",
         "options": [
           {
             "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
@@ -626,7 +626,7 @@ var unit3_lesson4 = {
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
           "<img src=\"assets/images/homework.png\" width=\"80\">"
         ],
-        "correct": "picture",
+        "correct": 0,
         "difficulty": "hard"
       },
       {
@@ -673,7 +673,7 @@ var unit3_lesson4 = {
         "type": "sentence_match",
         "chinese": "睡觉",
         "word": "sleep",
-        "sentence": "Look at the sleep.",
+        "sentence": "I'm sleeping.",
         "options": [
           {
             "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
@@ -699,7 +699,7 @@ var unit3_lesson4 = {
         "type": "sentence_match",
         "chinese": "图片",
         "word": "picture",
-        "sentence": "Look at the picture.",
+        "sentence": "I draw a picture.",
         "options": [
           {
             "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
@@ -751,7 +751,7 @@ var unit3_lesson4 = {
         "type": "sentence_match",
         "chinese": "作业",
         "word": "homework",
-        "sentence": "Look at the homework.",
+        "sentence": "I'm doing my homework.",
         "options": [
           {
             "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
@@ -777,7 +777,7 @@ var unit3_lesson4 = {
         "type": "sentence_match",
         "chinese": "睡觉",
         "word": "sleep",
-        "sentence": "Look at the sleep.",
+        "sentence": "I'm sleeping.",
         "options": [
           "<img src=\"assets/images/dog.png\" width=\"80\">",
           "<img src=\"assets/images/sleeping.png\" width=\"80\">",
@@ -791,7 +791,7 @@ var unit3_lesson4 = {
         "type": "word_match",
         "chinese": "图片",
         "word": "picture",
-        "sentence": "Look at the picture.",
+        "sentence": "I draw a picture.",
         "options": [
           {
             "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
@@ -817,7 +817,7 @@ var unit3_lesson4 = {
         "type": "word_match",
         "chinese": "玩耍",
         "word": "play",
-        "sentence": "Look at the play.",
+        "sentence": "I'm playing.",
         "options": [
           {
             "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
