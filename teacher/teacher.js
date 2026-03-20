@@ -355,12 +355,33 @@ function renderLastHomeworkIncomplete() {
 }
 
 // --- CONTROL PAGE ---
+function updateControlTitle(mod, phase) {
+    var lessonInfo = Sync.getCurrentLessonOnceSync();
+    var unitLesson = lessonInfo ? ('U' + lessonInfo.unit + 'L' + lessonInfo.lesson + ' ') : '';
+    var phaseText = phase === 'pretest' ? '前测' : '实战';
+    document.getElementById('display-module').textContent = unitLesson + getModuleChinese(mod) + ' - ' + phaseText;
+}
+
 function initControlPage() {
+    // 页面加载时立即显示当前课程信息
+    var initCmd = Sync.getTeacherCommandOnce();
+    if (initCmd && initCmd.module) {
+        currentModule = initCmd.module;
+        currentPhase = initCmd.phase || 'pretest';
+        updateControlTitle(currentModule, currentPhase);
+    } else {
+        // 没有指令时也尝试从课程信息更新标题
+        var lessonInfo = Sync.getCurrentLessonOnceSync();
+        if (lessonInfo) {
+            updateControlTitle(currentModule, currentPhase);
+        }
+    }
+
     Sync.listenTeacherCommand(cmd => {
         if (cmd && cmd.module) {
-            document.getElementById('display-module').textContent = getModuleChinese(cmd.module) + ' - ' + (cmd.phase === 'pretest' ? '前测' : '实战');
             currentModule = cmd.module;
             currentPhase = cmd.phase;
+            updateControlTitle(currentModule, currentPhase);
         }
     });
 

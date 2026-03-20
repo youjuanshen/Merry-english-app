@@ -17,10 +17,16 @@ function renderReadingQuestion(q, container) {
         q.options.forEach((opt, idx) => {
             const card = document.createElement('div');
             card.className = 'option-card';
-            card.style.fontSize = opt.length > 2 ? '30px' : '60px';
-            card.innerHTML = opt;
+            const isObj = typeof opt === 'object' && opt !== null;
+            const displayText = isObj ? opt.text : opt;
+            card.style.fontSize = (typeof displayText === 'string' && displayText.length > 2) ? '30px' : '60px';
+            card.innerHTML = displayText;
             card.onclick = () => {
-                handleAnswer(idx === q.correct, card);
+                if (isObj) {
+                    handleAnswer(opt.value === q.correct || opt.value === q.word, card);
+                } else {
+                    handleAnswer(idx === q.correct, card);
+                }
             };
             grid.appendChild(card);
         });
@@ -487,7 +493,8 @@ function renderReadingQuestion(q, container) {
 
             var mole = document.createElement('div');
             mole.className = 'whack-mole-item';
-            mole.innerHTML = opt;
+            var isOptObj = typeof opt === 'object' && opt !== null;
+            mole.innerHTML = isOptObj ? opt.text : opt;
             moles.push(mole);
 
             mole.onclick = function(e) {
@@ -552,7 +559,8 @@ function renderReadingQuestion(q, container) {
                  card.className = 'option-card';
                  card.style.marginBottom = '10px';
                  card.style.minHeight = '60px';
-                 card.innerHTML = opt;
+                 var isOptObj = typeof opt === 'object' && opt !== null;
+                 card.innerHTML = isOptObj ? opt.text : opt;
                  card.onclick = function() {
                      // Temporary override currentPlayerIndex so the correct player gets the star
                      var originalPlayer = (typeof currentPlayerIndex !== 'undefined') ? currentPlayerIndex : 0;

@@ -28,10 +28,12 @@ function renderListeningQuestion(q, container) {
         q.options.forEach(function(opt, idx) {
             var card = document.createElement('div');
             card.className = 'option-card';
-            card.innerHTML = opt;
+            var isOptObj = typeof opt === 'object' && opt !== null;
+            card.innerHTML = isOptObj ? opt.text : opt;
             card.onclick = function() {
                 var correctAnswer = q.options[q.correct];
-                handleAnswer(idx === q.correct, card, correctAnswer);
+                var correctDisplay = (typeof correctAnswer === 'object' && correctAnswer !== null) ? correctAnswer.text : correctAnswer;
+                handleAnswer(idx === q.correct, card, correctDisplay);
             };
             grid.appendChild(card);
         });
@@ -150,7 +152,7 @@ function renderListeningQuestion(q, container) {
 
             var mole = document.createElement('div');
             mole.className = 'whack-mole-item';
-            mole.innerHTML = opt;
+            mole.innerHTML = (typeof opt === 'object' && opt !== null) ? opt.text : opt;
             moles.push(mole);
 
             mole.onclick = function(e) {
@@ -194,7 +196,7 @@ function renderListeningQuestion(q, container) {
         q.options.forEach(function(opt, idx) {
             var bal = document.createElement('div');
             bal.className = 'balloon';
-            bal.innerHTML = opt;
+            bal.innerHTML = (typeof opt === 'object' && opt !== null) ? opt.text : opt;
             bal.style.left = (10 + idx * 22) + '%';
             bal.style.animationDelay = (Math.random() * 2) + 's';
 
@@ -238,7 +240,7 @@ function renderListeningQuestion(q, container) {
                  card.className = 'option-card';
                  card.style.marginBottom = '10px';
                  card.style.minHeight = '60px';
-                 card.innerHTML = opt;
+                 card.innerHTML = (typeof opt === 'object' && opt !== null) ? opt.text : opt;
                  card.onclick = function() {
                      // Temporary override currentPlayerIndex so the correct player gets the star
                      var originalPlayer = currentPlayerIndex;
@@ -279,7 +281,7 @@ function renderListeningQuestion(q, container) {
         q.options.forEach(function(opt, idx) {
             var card = document.createElement('div');
             card.className = 'option-card';
-            card.innerHTML = opt;
+            card.innerHTML = (typeof opt === 'object' && opt !== null) ? opt.text : opt;
             card.onclick = function() {
                 handleAnswer(idx === q.correct, card);
             };

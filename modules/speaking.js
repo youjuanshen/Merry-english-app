@@ -69,13 +69,13 @@ function renderSpeakingQuestion(q, container) {
             card.className = 'option-card';
             card.style.fontSize = '60px';
             card.style.padding = '10px';
-            card.innerHTML = opt;
+            card.innerHTML = (typeof opt === 'object' && opt !== null) ? opt.text : opt;
             card.onclick = () => {
                 handleAnswer(idx === q.correct, card);
             };
             grid.appendChild(card);
         });
-        
+
         bottomHalf.appendChild(grid);
         
         container.appendChild(topHalf);
