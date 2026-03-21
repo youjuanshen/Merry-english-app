@@ -14,14 +14,14 @@ var lesson1 = {
           "<img src=\"assets/images/tiger.png\" width=\"80\">"
         ],
         "correct": 0,
-        "chinese": "马"
+        "chinese": "这是一只马。"
       },
       {
         "type": "listen_tf",
         "audio": "cat",
         "image": "<img src=\"assets/images/elephant.png\" width=\"80\">",
         "correct": false,
-        "chinese": "猫"
+        "chinese": "这是一只猫。"
       },
       {
         "type": "listen_select",
@@ -33,14 +33,14 @@ var lesson1 = {
           "<img src=\"assets/images/panda.png\" width=\"80\">"
         ],
         "correct": 3,
-        "chinese": "熊猫"
+        "chinese": "这是一只熊猫。"
       },
       {
         "type": "listen_tf",
         "audio": "mouse",
         "image": "<img src=\"assets/images/elephant.png\" width=\"80\">",
         "correct": false,
-        "chinese": "老鼠"
+        "chinese": "这是一只老鼠。"
       },
       {
         "type": "listen_select",
@@ -52,14 +52,14 @@ var lesson1 = {
           "<img src=\"assets/images/panda.png\" width=\"80\">"
         ],
         "correct": 3,
-        "chinese": "熊猫"
+        "chinese": "这是一只熊猫。"
       },
       {
         "type": "listen_tf",
         "audio": "dog",
         "image": "<img src=\"assets/images/cat.png\" width=\"80\">",
         "correct": false,
-        "chinese": "狗"
+        "chinese": "这是一只狗。"
       },
       {
         "type": "listen_select",
@@ -71,14 +71,14 @@ var lesson1 = {
           "<img src=\"assets/images/panda.png\" width=\"80\">"
         ],
         "correct": 2,
-        "chinese": "老虎"
+        "chinese": "这是一只老虎。"
       },
       {
         "type": "listen_tf",
         "audio": "mouse",
         "image": "<img src=\"assets/images/mouse.png\" width=\"80\">",
         "correct": true,
-        "chinese": "老鼠"
+        "chinese": "这是一只老鼠。"
       },
       {
         "type": "listen_select",
@@ -90,14 +90,14 @@ var lesson1 = {
           "<img src=\"assets/images/bird.png\" width=\"80\">"
         ],
         "correct": 1,
-        "chinese": "老鼠"
+        "chinese": "这是一只老鼠。"
       },
       {
         "type": "listen_tf",
         "audio": "panda",
         "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
         "correct": true,
-        "chinese": "熊猫"
+        "chinese": "这是一只熊猫。"
       },
       {
         "type": "listen_select",
@@ -109,14 +109,14 @@ var lesson1 = {
           "<img src=\"assets/images/tiger.png\" width=\"80\">"
         ],
         "correct": 0,
-        "chinese": "猫"
+        "chinese": "这是一只猫。"
       },
       {
         "type": "listen_tf",
         "audio": "tiger",
         "image": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
         "correct": false,
-        "chinese": "老虎"
+        "chinese": "这是一只老虎。"
       }
     ],
     "practice": [
@@ -130,7 +130,7 @@ var lesson1 = {
           "<img src=\"assets/images/tiger.png\" width=\"80\">"
         ],
         "correct": 0,
-        "chinese": "熊",
+        "chinese": "这是一只熊。",
         "difficulty": "easy"
       },
       {
@@ -138,7 +138,7 @@ var lesson1 = {
         "audio": "tiger",
         "image": "<img src=\"assets/images/tiger.png\" width=\"80\">",
         "correct": true,
-        "chinese": "老虎",
+        "chinese": "这是一只老虎。",
         "difficulty": "easy"
       },
       {
@@ -152,7 +152,7 @@ var lesson1 = {
           "<img src=\"assets/images/panda.png\" width=\"80\">"
         ],
         "correct": 0,
-        "chinese": "狗",
+        "chinese": "这是一只狗。",
         "difficulty": "easy"
       },
       {
@@ -190,7 +190,7 @@ var lesson1 = {
           "<img src=\"assets/images/bear.png\" width=\"80\">"
         ],
         "correct": 1,
-        "chinese": "老虎",
+        "chinese": "这是一只老虎。",
         "difficulty": "easy"
       },
       {
@@ -203,7 +203,7 @@ var lesson1 = {
           "<img src=\"assets/images/panda.png\" width=\"80\">"
         ],
         "correct": 2,
-        "chinese": "鸟",
+        "chinese": "这是一只鸟。",
         "difficulty": "easy"
       },
       {
@@ -211,7 +211,7 @@ var lesson1 = {
         "audio": "bear",
         "image": "<img src=\"assets/images/bear.png\" width=\"80\">",
         "correct": true,
-        "chinese": "熊",
+        "chinese": "这是一只熊。",
         "difficulty": "easy"
       },
       {
@@ -225,13 +225,13 @@ var lesson1 = {
           "<img src=\"assets/images/dog.png\" width=\"80\">"
         ],
         "correct": 2,
-        "chinese": "老鼠",
+        "chinese": "这是一只老鼠。",
         "difficulty": "easy"
       },
       {
         "type": "balloon_pop",
         "text": "Find the bear",
-        "chinese": "找到 熊",
+        "chinese": "这是一只Find the bear。",
         "options": [
           "<img src=\"assets/images/tiger.png\" width=\"80\">",
           "<img src=\"assets/images/bird.png\" width=\"80\">",
@@ -263,7 +263,7 @@ var lesson1 = {
           "<img src=\"assets/images/rabbit.png\" width=\"80\">"
         ],
         "correct": 1,
-        "chinese": "老鼠",
+        "chinese": "这是一只老鼠。",
         "difficulty": "medium"
       },
       {
@@ -276,7 +276,7 @@ var lesson1 = {
           "<img src=\"assets/images/cat.png\" width=\"80\">"
         ],
         "correct": 2,
-        "chinese": "狗",
+        "chinese": "这是一只狗。",
         "difficulty": "medium"
       },
       {
@@ -284,7 +284,7 @@ var lesson1 = {
         "audio": "mouse",
         "image": "<img src=\"assets/images/mouse.png\" width=\"80\">",
         "correct": true,
-        "chinese": "老鼠",
+        "chinese": "这是一只老鼠。",
         "difficulty": "medium"
       },
       {
@@ -298,13 +298,13 @@ var lesson1 = {
           "<img src=\"assets/images/rabbit.png\" width=\"80\">"
         ],
         "correct": 1,
-        "chinese": "熊猫",
+        "chinese": "这是一只熊猫。",
         "difficulty": "medium"
       },
       {
         "type": "balloon_pop",
         "text": "Find the horse",
-        "chinese": "找到 马",
+        "chinese": "这是一只Find the horse。",
         "options": [
           "<img src=\"assets/images/horse.png\" width=\"80\">",
           "<img src=\"assets/images/bear.png\" width=\"80\">",
@@ -336,7 +336,7 @@ var lesson1 = {
           "<img src=\"assets/images/cat.png\" width=\"80\">"
         ],
         "correct": 3,
-        "chinese": "猫",
+        "chinese": "这是一只猫。",
         "difficulty": "medium"
       },
       {
@@ -349,7 +349,7 @@ var lesson1 = {
           "<img src=\"assets/images/tiger.png\" width=\"80\">"
         ],
         "correct": 0,
-        "chinese": "老鼠",
+        "chinese": "这是一只老鼠。",
         "difficulty": "medium"
       },
       {
@@ -357,7 +357,7 @@ var lesson1 = {
         "audio": "elephant",
         "image": "<img src=\"assets/images/bird.png\" width=\"80\">",
         "correct": false,
-        "chinese": "大象",
+        "chinese": "这是一只大象。",
         "difficulty": "medium"
       },
       {
@@ -371,13 +371,13 @@ var lesson1 = {
           "<img src=\"assets/images/panda.png\" width=\"80\">"
         ],
         "correct": 1,
-        "chinese": "鸟",
+        "chinese": "这是一只鸟。",
         "difficulty": "medium"
       },
       {
         "type": "balloon_pop",
         "text": "Find the bird",
-        "chinese": "找到 鸟",
+        "chinese": "这是一只Find the bird。",
         "options": [
           "<img src=\"assets/images/bird.png\" width=\"80\">",
           "<img src=\"assets/images/bird.png\" width=\"80\">",
@@ -409,7 +409,7 @@ var lesson1 = {
           "<img src=\"assets/images/bear.png\" width=\"80\">"
         ],
         "correct": 2,
-        "chinese": "狗",
+        "chinese": "这是一只狗。",
         "difficulty": "hard"
       },
       {
@@ -422,7 +422,7 @@ var lesson1 = {
           "<img src=\"assets/images/panda.png\" width=\"80\">"
         ],
         "correct": 2,
-        "chinese": "狗",
+        "chinese": "这是一只狗。",
         "difficulty": "hard"
       },
       {
@@ -430,7 +430,7 @@ var lesson1 = {
         "audio": "bird",
         "image": "<img src=\"assets/images/bear.png\" width=\"80\">",
         "correct": false,
-        "chinese": "鸟",
+        "chinese": "这是一只鸟。",
         "difficulty": "hard"
       },
       {
@@ -444,13 +444,13 @@ var lesson1 = {
           "<img src=\"assets/images/mouse.png\" width=\"80\">"
         ],
         "correct": 0,
-        "chinese": "熊猫",
+        "chinese": "这是一只熊猫。",
         "difficulty": "hard"
       },
       {
         "type": "balloon_pop",
         "text": "Find the dog",
-        "chinese": "找到 狗",
+        "chinese": "这是一只Find the dog。",
         "options": [
           "<img src=\"assets/images/dog.png\" width=\"80\">",
           "<img src=\"assets/images/bird.png\" width=\"80\">",
@@ -482,7 +482,7 @@ var lesson1 = {
           "<img src=\"assets/images/horse.png\" width=\"80\">"
         ],
         "correct": 0,
-        "chinese": "熊",
+        "chinese": "这是一只熊。",
         "difficulty": "hard"
       },
       {
@@ -493,7 +493,8 @@ var lesson1 = {
         "options": [
           "<img src=\"assets/images/cat.png\" width=\"80\">",
           "<img src=\"assets/images/bird.png\" width=\"80\">",
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">"
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+          "<img src=\"assets/images/horse.png\" width=\"80\">"
         ],
         "correct": 0,
         "feedback": "Cats catch mice!",
@@ -507,7 +508,8 @@ var lesson1 = {
         "options": [
           "<img src=\"assets/images/tiger.png\" width=\"80\">",
           "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/bear.png\" width=\"80\">"
+          "<img src=\"assets/images/bear.png\" width=\"80\">",
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">"
         ],
         "correct": 1,
         "feedback": "Elephants have long noses!",
@@ -521,7 +523,8 @@ var lesson1 = {
         "options": [
           "<img src=\"assets/images/mouse.png\" width=\"80\">",
           "<img src=\"assets/images/horse.png\" width=\"80\">",
-          "<img src=\"assets/images/panda.png\" width=\"80\">"
+          "<img src=\"assets/images/panda.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">"
         ],
         "correct": 1,
         "feedback": "Horses run very fast!",
@@ -535,7 +538,8 @@ var lesson1 = {
         "options": [
           "<img src=\"assets/images/dog.png\" width=\"80\">",
           "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/bird.png\" width=\"80\">"
+          "<img src=\"assets/images/bird.png\" width=\"80\">",
+          "<img src=\"assets/images/panda.png\" width=\"80\">"
         ],
         "correct": 2,
         "feedback": "Birds sing beautiful songs!",
@@ -555,14 +559,16 @@ var lesson1 = {
           "<img src=\"assets/images/horse.png\" width=\"80\">"
         ],
         "correct": 3,
-        "chinese": "马"
+        "chinese": "这是一只马。"
       },
       {
         "type": "sentence_match",
         "sentence": "This is a panda.",
         "options": [
           "<img src=\"assets/images/panda.png\" width=\"80\">",
-          "<img src=\"assets/images/cat.png\" width=\"80\">"
+          "<img src=\"assets/images/cat.png\" width=\"80\">",
+          "<img src=\"assets/images/lion.png\" width=\"80\">",
+          "<img src=\"assets/images/horse.png\" width=\"80\">"
         ],
         "correct": 0,
         "chinese": "这是一只熊猫。"
@@ -577,14 +583,16 @@ var lesson1 = {
           "<img src=\"assets/images/mouse.png\" width=\"80\">"
         ],
         "correct": 3,
-        "chinese": "老鼠"
+        "chinese": "这是一只老鼠。"
       },
       {
         "type": "sentence_match",
         "sentence": "This is a mouse.",
         "options": [
           "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/mouse.png\" width=\"80\">"
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/cat.png\" width=\"80\">",
+          "<img src=\"assets/images/horse.png\" width=\"80\">"
         ],
         "correct": 1,
         "chinese": "这是一只老鼠。"
@@ -599,14 +607,16 @@ var lesson1 = {
           "<img src=\"assets/images/elephant.png\" width=\"80\">"
         ],
         "correct": 1,
-        "chinese": "老鼠"
+        "chinese": "这是一只老鼠。"
       },
       {
         "type": "sentence_match",
         "sentence": "This is a rabbit.",
         "options": [
           "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-          "<img src=\"assets/images/mouse.png\" width=\"80\">"
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/bear.png\" width=\"80\">",
+          "<img src=\"assets/images/cat.png\" width=\"80\">"
         ],
         "correct": 0,
         "chinese": "这是一只兔子。"
@@ -621,14 +631,16 @@ var lesson1 = {
           "<img src=\"assets/images/rabbit.png\" width=\"80\">"
         ],
         "correct": 1,
-        "chinese": "马"
+        "chinese": "这是一只马。"
       },
       {
         "type": "sentence_match",
         "sentence": "This is a cat.",
         "options": [
           "<img src=\"assets/images/bird.png\" width=\"80\">",
-          "<img src=\"assets/images/cat.png\" width=\"80\">"
+          "<img src=\"assets/images/cat.png\" width=\"80\">",
+          "<img src=\"assets/images/lion.png\" width=\"80\">",
+          "<img src=\"assets/images/tiger.png\" width=\"80\">"
         ],
         "correct": 1,
         "chinese": "这是一只猫。"
@@ -643,14 +655,16 @@ var lesson1 = {
           "<img src=\"assets/images/dog.png\" width=\"80\">"
         ],
         "correct": 3,
-        "chinese": "狗"
+        "chinese": "这是一只狗。"
       },
       {
         "type": "sentence_match",
         "sentence": "This is a dog.",
         "options": [
           "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">"
+          "<img src=\"assets/images/tiger.png\" width=\"80\">",
+          "<img src=\"assets/images/cat.png\" width=\"80\">",
+          "<img src=\"assets/images/bird.png\" width=\"80\">"
         ],
         "correct": 0,
         "chinese": "这是一只狗。"
@@ -665,14 +679,16 @@ var lesson1 = {
           "<img src=\"assets/images/horse.png\" width=\"80\">"
         ],
         "correct": 1,
-        "chinese": "鸟"
+        "chinese": "这是一只鸟。"
       },
       {
         "type": "sentence_match",
         "sentence": "This is a bear.",
         "options": [
           "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/bear.png\" width=\"80\">"
+          "<img src=\"assets/images/bear.png\" width=\"80\">",
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+          "<img src=\"assets/images/lion.png\" width=\"80\">"
         ],
         "correct": 1,
         "chinese": "这是一只熊。"
@@ -683,10 +699,22 @@ var lesson1 = {
         "type": "coop_match_compete",
         "chinese": "动物名称（抢答或合作）",
         "pairs": [
-          {"word": "tiger", "image": "<img src='assets/images/tiger.png' width='80'>"},
-          {"word": "panda", "image": "<img src='assets/images/panda.png' width='80'>"},
-          {"word": "elephant", "image": "<img src='assets/images/elephant.png' width='80'>"},
-          {"word": "monkey", "image": "<img src='assets/images/monkey.png' width='80'>"}
+          {
+            "word": "tiger",
+            "image": "<img src='assets/images/tiger.png' width='80'>"
+          },
+          {
+            "word": "panda",
+            "image": "<img src='assets/images/panda.png' width='80'>"
+          },
+          {
+            "word": "elephant",
+            "image": "<img src='assets/images/elephant.png' width='80'>"
+          },
+          {
+            "word": "monkey",
+            "image": "<img src='assets/images/monkey.png' width='80'>"
+          }
         ]
       },
       {
@@ -699,7 +727,7 @@ var lesson1 = {
           "<img src=\"assets/images/horse.png\" width=\"80\">"
         ],
         "correct": 2,
-        "chinese": "老虎",
+        "chinese": "这是一只老虎。",
         "difficulty": "easy"
       },
       {
@@ -707,7 +735,9 @@ var lesson1 = {
         "sentence": "This is a horse.",
         "options": [
           "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/horse.png\" width=\"80\">"
+          "<img src=\"assets/images/horse.png\" width=\"80\">",
+          "<img src=\"assets/images/monkey.png\" width=\"80\">",
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">"
         ],
         "correct": 1,
         "chinese": "这是一只马。",
@@ -734,7 +764,7 @@ var lesson1 = {
       },
       {
         "type": "memory_match",
-        "chinese": "翻牌配对",
+        "chinese": "这是一只翻牌配对。",
         "pairs": [
           {
             "word": "dog",
@@ -761,7 +791,7 @@ var lesson1 = {
           "<img src=\"assets/images/mouse.png\" width=\"80\">"
         ],
         "correct": 0,
-        "chinese": "狗",
+        "chinese": "这是一只狗。",
         "difficulty": "easy"
       },
       {
@@ -769,7 +799,9 @@ var lesson1 = {
         "sentence": "This is a cat.",
         "options": [
           "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/cat.png\" width=\"80\">"
+          "<img src=\"assets/images/cat.png\" width=\"80\">",
+          "<img src=\"assets/images/tiger.png\" width=\"80\">",
+          "<img src=\"assets/images/horse.png\" width=\"80\">"
         ],
         "correct": 1,
         "chinese": "这是一只猫。",
@@ -796,7 +828,7 @@ var lesson1 = {
       },
       {
         "type": "memory_match",
-        "chinese": "翻牌配对",
+        "chinese": "这是一只翻牌配对。",
         "pairs": [
           {
             "word": "cat",
@@ -823,7 +855,7 @@ var lesson1 = {
           "<img src=\"assets/images/cat.png\" width=\"80\">"
         ],
         "correct": 0,
-        "chinese": "兔子",
+        "chinese": "这是一只兔子。",
         "difficulty": "easy"
       },
       {
@@ -831,7 +863,9 @@ var lesson1 = {
         "sentence": "This is a tiger.",
         "options": [
           "<img src=\"assets/images/horse.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">"
+          "<img src=\"assets/images/tiger.png\" width=\"80\">",
+          "<img src=\"assets/images/lion.png\" width=\"80\">",
+          "<img src=\"assets/images/panda.png\" width=\"80\">"
         ],
         "correct": 1,
         "chinese": "这是一只老虎。",
@@ -858,7 +892,7 @@ var lesson1 = {
       },
       {
         "type": "memory_match",
-        "chinese": "翻牌配对",
+        "chinese": "这是一只翻牌配对。",
         "pairs": [
           {
             "word": "bear",
@@ -885,7 +919,7 @@ var lesson1 = {
           "<img src=\"assets/images/panda.png\" width=\"80\">"
         ],
         "correct": 0,
-        "chinese": "老鼠",
+        "chinese": "这是一只老鼠。",
         "difficulty": "medium"
       },
       {
@@ -893,7 +927,9 @@ var lesson1 = {
         "sentence": "This is a mouse.",
         "options": [
           "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/mouse.png\" width=\"80\">"
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/horse.png\" width=\"80\">",
+          "<img src=\"assets/images/cat.png\" width=\"80\">"
         ],
         "correct": 1,
         "chinese": "这是一只老鼠。",
@@ -920,7 +956,7 @@ var lesson1 = {
       },
       {
         "type": "memory_match",
-        "chinese": "翻牌配对",
+        "chinese": "这是一只翻牌配对。",
         "pairs": [
           {
             "word": "cat",
@@ -947,7 +983,7 @@ var lesson1 = {
           "<img src=\"assets/images/tiger.png\" width=\"80\">"
         ],
         "correct": 2,
-        "chinese": "兔子",
+        "chinese": "这是一只兔子。",
         "difficulty": "medium"
       },
       {
@@ -955,7 +991,9 @@ var lesson1 = {
         "sentence": "This is a mouse.",
         "options": [
           "<img src=\"assets/images/mouse.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">"
+          "<img src=\"assets/images/elephant.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/tiger.png\" width=\"80\">"
         ],
         "correct": 0,
         "chinese": "这是一只老鼠。",
@@ -982,7 +1020,7 @@ var lesson1 = {
       },
       {
         "type": "memory_match",
-        "chinese": "翻牌配对",
+        "chinese": "这是一只翻牌配对。",
         "pairs": [
           {
             "word": "elephant",
@@ -1009,7 +1047,7 @@ var lesson1 = {
           "<img src=\"assets/images/bear.png\" width=\"80\">"
         ],
         "correct": 0,
-        "chinese": "兔子",
+        "chinese": "这是一只兔子。",
         "difficulty": "medium"
       },
       {
@@ -1017,7 +1055,9 @@ var lesson1 = {
         "sentence": "This is a bear.",
         "options": [
           "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/panda.png\" width=\"80\">"
+          "<img src=\"assets/images/panda.png\" width=\"80\">",
+          "<img src=\"assets/images/dog.png\" width=\"80\">",
+          "<img src=\"assets/images/monkey.png\" width=\"80\">"
         ],
         "correct": 0,
         "chinese": "这是一只熊。",
@@ -1044,7 +1084,7 @@ var lesson1 = {
       },
       {
         "type": "memory_match",
-        "chinese": "翻牌配对",
+        "chinese": "这是一只翻牌配对。",
         "pairs": [
           {
             "word": "mouse",
@@ -1071,7 +1111,7 @@ var lesson1 = {
           "<img src=\"assets/images/rabbit.png\" width=\"80\">"
         ],
         "correct": 2,
-        "chinese": "老鼠",
+        "chinese": "这是一只老鼠。",
         "difficulty": "hard"
       },
       {
@@ -1079,7 +1119,9 @@ var lesson1 = {
         "sentence": "This is a mouse.",
         "options": [
           "<img src=\"assets/images/bird.png\" width=\"80\">",
-          "<img src=\"assets/images/mouse.png\" width=\"80\">"
+          "<img src=\"assets/images/mouse.png\" width=\"80\">",
+          "<img src=\"assets/images/horse.png\" width=\"80\">",
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">"
         ],
         "correct": 1,
         "chinese": "这是一只老鼠。",
@@ -1106,7 +1148,7 @@ var lesson1 = {
       },
       {
         "type": "memory_match",
-        "chinese": "翻牌配对",
+        "chinese": "这是一只翻牌配对。",
         "pairs": [
           {
             "word": "cat",
@@ -1133,7 +1175,7 @@ var lesson1 = {
           "<img src=\"assets/images/dog.png\" width=\"80\">"
         ],
         "correct": 2,
-        "chinese": "熊猫",
+        "chinese": "这是一只熊猫。",
         "difficulty": "hard"
       },
       {
@@ -1141,7 +1183,9 @@ var lesson1 = {
         "sentence": "This is a bird.",
         "options": [
           "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/bird.png\" width=\"80\">"
+          "<img src=\"assets/images/bird.png\" width=\"80\">",
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+          "<img src=\"assets/images/cat.png\" width=\"80\">"
         ],
         "correct": 1,
         "chinese": "这是一只鸟。",
@@ -1158,10 +1202,11 @@ var lesson1 = {
         "options": [
           "m",
           "b",
-          "e"
+          "e",
+          "rabbit"
         ],
         "correct": 0,
-        "chinese": "老鼠"
+        "chinese": "这是一只老鼠。"
       },
       {
         "type": "fill_blank",
@@ -1170,10 +1215,11 @@ var lesson1 = {
         "options": [
           "cat",
           "tiger",
-          "bird"
+          "bird",
+          "panda"
         ],
         "correct": 0,
-        "chinese": "猫"
+        "chinese": "这是一只猫。"
       },
       {
         "type": "letter_select",
@@ -1182,10 +1228,11 @@ var lesson1 = {
         "options": [
           "p",
           "r",
-          "b"
+          "b",
+          "panda"
         ],
         "correct": 1,
-        "chinese": "兔子"
+        "chinese": "这是一只兔子。"
       },
       {
         "type": "fill_blank",
@@ -1194,10 +1241,11 @@ var lesson1 = {
         "options": [
           "elephant",
           "bird",
-          "horse"
+          "horse",
+          "tiger"
         ],
         "correct": 1,
-        "chinese": "鸟"
+        "chinese": "这是一只鸟。"
       },
       {
         "type": "letter_select",
@@ -1206,10 +1254,11 @@ var lesson1 = {
         "options": [
           "e",
           "t",
-          "d"
+          "d",
+          "panda"
         ],
         "correct": 2,
-        "chinese": "狗"
+        "chinese": "这是一只狗。"
       },
       {
         "type": "fill_blank",
@@ -1218,10 +1267,11 @@ var lesson1 = {
         "options": [
           "horse",
           "mouse",
-          "cat"
+          "cat",
+          "tiger"
         ],
         "correct": 2,
-        "chinese": "猫"
+        "chinese": "这是一只猫。"
       },
       {
         "type": "letter_select",
@@ -1230,10 +1280,11 @@ var lesson1 = {
         "options": [
           "p",
           "r",
-          "e"
+          "e",
+          "dog"
         ],
         "correct": 0,
-        "chinese": "熊猫"
+        "chinese": "这是一只熊猫。"
       },
       {
         "type": "fill_blank",
@@ -1242,10 +1293,11 @@ var lesson1 = {
         "options": [
           "panda",
           "cat",
-          "mouse"
+          "mouse",
+          "monkey"
         ],
         "correct": 1,
-        "chinese": "猫"
+        "chinese": "这是一只猫。"
       },
       {
         "type": "letter_select",
@@ -1254,10 +1306,11 @@ var lesson1 = {
         "options": [
           "e",
           "c",
-          "p"
+          "p",
+          "bird"
         ],
         "correct": 0,
-        "chinese": "大象"
+        "chinese": "这是一只大象。"
       },
       {
         "type": "fill_blank",
@@ -1266,10 +1319,11 @@ var lesson1 = {
         "options": [
           "dog",
           "rabbit",
-          "tiger"
+          "tiger",
+          "bird"
         ],
         "correct": 2,
-        "chinese": "老虎"
+        "chinese": "这是一只老虎。"
       },
       {
         "type": "letter_select",
@@ -1278,10 +1332,11 @@ var lesson1 = {
         "options": [
           "d",
           "b",
-          "b"
+          "b",
+          "bird"
         ],
         "correct": 0,
-        "chinese": "狗"
+        "chinese": "这是一只狗。"
       },
       {
         "type": "fill_blank",
@@ -1290,17 +1345,18 @@ var lesson1 = {
         "options": [
           "dog",
           "tiger",
-          "rabbit"
+          "rabbit",
+          "lion"
         ],
         "correct": 1,
-        "chinese": "老虎"
+        "chinese": "这是一只老虎。"
       }
     ],
     "practice": [
       {
         "type": "coop_relay_spell",
         "word": "PANDA",
-        "chinese": "熊猫"
+        "chinese": "这是一只熊猫。"
       },
       {
         "type": "letter_select",
@@ -1309,10 +1365,11 @@ var lesson1 = {
         "options": [
           "r",
           "b",
-          "b"
+          "b",
+          "tiger"
         ],
         "correct": 0,
-        "chinese": "兔子",
+        "chinese": "这是一只兔子。",
         "difficulty": "easy"
       },
       {
@@ -1322,15 +1379,16 @@ var lesson1 = {
         "options": [
           "bear",
           "tiger",
-          "mouse"
+          "mouse",
+          "panda"
         ],
         "correct": 0,
-        "chinese": "熊",
+        "chinese": "这是一只熊。",
         "difficulty": "easy"
       },
       {
         "type": "word_puzzle",
-        "chinese": "狗",
+        "chinese": "这是一只狗。",
         "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
         "letters": [
           "d",
@@ -1364,13 +1422,14 @@ var lesson1 = {
       },
       {
         "type": "pinyin_fill",
-        "chinese": "兔子",
+        "chinese": "这是一只兔子。",
         "image": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
         "hint": "r_bbit",
         "options": [
           "a",
           "o",
-          "e"
+          "e",
+          "dog"
         ],
         "correct": 0,
         "difficulty": "easy"
@@ -1414,10 +1473,11 @@ var lesson1 = {
         "options": [
           "e",
           "t",
-          "c"
+          "c",
+          "lion"
         ],
         "correct": 1,
-        "chinese": "老虎",
+        "chinese": "这是一只老虎。",
         "difficulty": "easy"
       },
       {
@@ -1427,15 +1487,16 @@ var lesson1 = {
         "options": [
           "bird",
           "panda",
-          "mouse"
+          "mouse",
+          "cat"
         ],
         "correct": 1,
-        "chinese": "熊猫",
+        "chinese": "这是一只熊猫。",
         "difficulty": "easy"
       },
       {
         "type": "word_puzzle",
-        "chinese": "鸟",
+        "chinese": "这是一只鸟。",
         "image": "<img src=\"assets/images/bird.png\" width=\"80\">",
         "letters": [
           "b",
@@ -1471,13 +1532,14 @@ var lesson1 = {
       },
       {
         "type": "pinyin_fill",
-        "chinese": "兔子",
+        "chinese": "这是一只兔子。",
         "image": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
         "hint": "r_bbit",
         "options": [
           "o",
           "a",
-          "e"
+          "e",
+          "rabbit"
         ],
         "correct": 1,
         "difficulty": "medium"
@@ -1521,10 +1583,11 @@ var lesson1 = {
         "options": [
           "c",
           "e",
-          "b"
+          "b",
+          "bear"
         ],
         "correct": 0,
-        "chinese": "猫",
+        "chinese": "这是一只猫。",
         "difficulty": "medium"
       },
       {
@@ -1534,15 +1597,16 @@ var lesson1 = {
         "options": [
           "bear",
           "mouse",
-          "dog"
+          "dog",
+          "lion"
         ],
         "correct": 2,
-        "chinese": "狗",
+        "chinese": "这是一只狗。",
         "difficulty": "medium"
       },
       {
         "type": "word_puzzle",
-        "chinese": "鸟",
+        "chinese": "这是一只鸟。",
         "image": "<img src=\"assets/images/bird.png\" width=\"80\">",
         "letters": [
           "b",
@@ -1578,13 +1642,14 @@ var lesson1 = {
       },
       {
         "type": "pinyin_fill",
-        "chinese": "老虎",
+        "chinese": "这是一只老虎。",
         "image": "<img src=\"assets/images/tiger.png\" width=\"80\">",
         "hint": "t_ger",
         "options": [
           "a",
           "i",
-          "o"
+          "o",
+          "monkey"
         ],
         "correct": 1,
         "difficulty": "medium"
@@ -1628,10 +1693,11 @@ var lesson1 = {
         "options": [
           "h",
           "e",
-          "r"
+          "r",
+          "rabbit"
         ],
         "correct": 0,
-        "chinese": "马",
+        "chinese": "这是一只马。",
         "difficulty": "medium"
       },
       {
@@ -1641,15 +1707,16 @@ var lesson1 = {
         "options": [
           "bear",
           "panda",
-          "bird"
+          "bird",
+          "lion"
         ],
         "correct": 0,
-        "chinese": "熊",
+        "chinese": "这是一只熊。",
         "difficulty": "medium"
       },
       {
         "type": "word_puzzle",
-        "chinese": "兔子",
+        "chinese": "这是一只兔子。",
         "image": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
         "letters": [
           "r",
@@ -1689,13 +1756,14 @@ var lesson1 = {
       },
       {
         "type": "pinyin_fill",
-        "chinese": "兔子",
+        "chinese": "这是一只兔子。",
         "image": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
         "hint": "r_bbit",
         "options": [
           "o",
           "e",
-          "a"
+          "a",
+          "bear"
         ],
         "correct": 2,
         "difficulty": "hard"
@@ -1739,10 +1807,11 @@ var lesson1 = {
         "options": [
           "m",
           "b",
-          "r"
+          "r",
+          "dog"
         ],
         "correct": 1,
-        "chinese": "鸟",
+        "chinese": "这是一只鸟。",
         "difficulty": "hard"
       },
       {
@@ -1752,10 +1821,11 @@ var lesson1 = {
         "options": [
           "panda",
           "bear",
-          "bird"
+          "bird",
+          "lion"
         ],
         "correct": 2,
-        "chinese": "鸟",
+        "chinese": "这是一只鸟。",
         "difficulty": "hard"
       }
     ]
@@ -1766,7 +1836,7 @@ var lesson1 = {
         "type": "repeat_word",
         "word": "tiger",
         "image": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-        "chinese": "老虎"
+        "chinese": "这是一只老虎。"
       },
       {
         "type": "repeat_sentence",
@@ -1778,13 +1848,13 @@ var lesson1 = {
         "type": "picture_speak",
         "image": "<img src=\"assets/images/mouse.png\" width=\"80\">",
         "expected": "mouse",
-        "chinese": "老鼠"
+        "chinese": "这是一只老鼠。"
       },
       {
         "type": "repeat_word",
         "word": "horse",
         "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
-        "chinese": "马"
+        "chinese": "这是一只马。"
       },
       {
         "type": "repeat_sentence",
@@ -1796,13 +1866,13 @@ var lesson1 = {
         "type": "picture_speak",
         "image": "<img src=\"assets/images/cat.png\" width=\"80\">",
         "expected": "cat",
-        "chinese": "猫"
+        "chinese": "这是一只猫。"
       },
       {
         "type": "repeat_word",
         "word": "dog",
         "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
-        "chinese": "狗"
+        "chinese": "这是一只狗。"
       },
       {
         "type": "repeat_sentence",
@@ -1814,13 +1884,13 @@ var lesson1 = {
         "type": "picture_speak",
         "image": "<img src=\"assets/images/tiger.png\" width=\"80\">",
         "expected": "tiger",
-        "chinese": "老虎"
+        "chinese": "这是一只老虎。"
       },
       {
         "type": "repeat_word",
         "word": "mouse",
         "image": "<img src=\"assets/images/mouse.png\" width=\"80\">",
-        "chinese": "老鼠"
+        "chinese": "这是一只老鼠。"
       },
       {
         "type": "repeat_sentence",
@@ -1832,14 +1902,14 @@ var lesson1 = {
         "type": "picture_speak",
         "image": "<img src=\"assets/images/cat.png\" width=\"80\">",
         "expected": "cat",
-        "chinese": "猫"
+        "chinese": "这是一只猫。"
       }
     ],
     "practice": [
       {
         "type": "coop_speak_guess",
         "word": "PANDA",
-        "chinese": "熊猫",
+        "chinese": "这是一只熊猫。",
         "options": [
           "<img src='assets/images/mouse.png' width='80'>",
           "<img src='assets/images/panda.png' width='80'>",
@@ -1852,7 +1922,7 @@ var lesson1 = {
         "type": "repeat_word",
         "word": "tiger",
         "image": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-        "chinese": "老虎",
+        "chinese": "这是一只老虎。",
         "difficulty": "easy"
       },
       {
@@ -1866,13 +1936,13 @@ var lesson1 = {
         "type": "picture_speak",
         "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
         "expected": "panda",
-        "chinese": "熊猫",
+        "chinese": "这是一只熊猫。",
         "difficulty": "easy"
       },
       {
         "type": "wheel_spin",
         "type_embedded": "repeat_word",
-        "chinese": "转盘抽词",
+        "chinese": "这是一只转盘抽词。",
         "options": [
           "horse",
           "rabbit",
@@ -1885,7 +1955,7 @@ var lesson1 = {
         "type": "repeat_word",
         "word": "panda",
         "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
-        "chinese": "熊猫",
+        "chinese": "这是一只熊猫。",
         "difficulty": "easy"
       },
       {
@@ -1899,13 +1969,13 @@ var lesson1 = {
         "type": "picture_speak",
         "image": "<img src=\"assets/images/cat.png\" width=\"80\">",
         "expected": "cat",
-        "chinese": "猫",
+        "chinese": "这是一只猫。",
         "difficulty": "easy"
       },
       {
         "type": "wheel_spin",
         "type_embedded": "repeat_word",
-        "chinese": "转盘抽词",
+        "chinese": "这是一只转盘抽词。",
         "options": [
           "tiger",
           "bird",
@@ -1918,7 +1988,7 @@ var lesson1 = {
         "type": "repeat_word",
         "word": "horse",
         "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
-        "chinese": "马",
+        "chinese": "这是一只马。",
         "difficulty": "easy"
       },
       {
@@ -1932,13 +2002,13 @@ var lesson1 = {
         "type": "picture_speak",
         "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
         "expected": "panda",
-        "chinese": "熊猫",
+        "chinese": "这是一只熊猫。",
         "difficulty": "easy"
       },
       {
         "type": "wheel_spin",
         "type_embedded": "repeat_word",
-        "chinese": "转盘抽词",
+        "chinese": "这是一只转盘抽词。",
         "options": [
           "horse",
           "bird",
@@ -1951,7 +2021,7 @@ var lesson1 = {
         "type": "repeat_word",
         "word": "dog",
         "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
-        "chinese": "狗",
+        "chinese": "这是一只狗。",
         "difficulty": "medium"
       },
       {
@@ -1965,13 +2035,13 @@ var lesson1 = {
         "type": "picture_speak",
         "image": "<img src=\"assets/images/bird.png\" width=\"80\">",
         "expected": "bird",
-        "chinese": "鸟",
+        "chinese": "这是一只鸟。",
         "difficulty": "medium"
       },
       {
         "type": "wheel_spin",
         "type_embedded": "repeat_word",
-        "chinese": "转盘抽词",
+        "chinese": "这是一只转盘抽词。",
         "options": [
           "panda",
           "bird",
@@ -1984,7 +2054,7 @@ var lesson1 = {
         "type": "repeat_word",
         "word": "mouse",
         "image": "<img src=\"assets/images/mouse.png\" width=\"80\">",
-        "chinese": "老鼠",
+        "chinese": "这是一只老鼠。",
         "difficulty": "medium"
       },
       {
@@ -1998,13 +2068,13 @@ var lesson1 = {
         "type": "picture_speak",
         "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
         "expected": "horse",
-        "chinese": "马",
+        "chinese": "这是一只马。",
         "difficulty": "medium"
       },
       {
         "type": "wheel_spin",
         "type_embedded": "repeat_word",
-        "chinese": "转盘抽词",
+        "chinese": "这是一只转盘抽词。",
         "options": [
           "panda",
           "elephant",
@@ -2017,7 +2087,7 @@ var lesson1 = {
         "type": "repeat_word",
         "word": "cat",
         "image": "<img src=\"assets/images/cat.png\" width=\"80\">",
-        "chinese": "猫",
+        "chinese": "这是一只猫。",
         "difficulty": "medium"
       },
       {
@@ -2031,13 +2101,13 @@ var lesson1 = {
         "type": "picture_speak",
         "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
         "expected": "dog",
-        "chinese": "狗",
+        "chinese": "这是一只狗。",
         "difficulty": "medium"
       },
       {
         "type": "wheel_spin",
         "type_embedded": "repeat_word",
-        "chinese": "转盘抽词",
+        "chinese": "这是一只转盘抽词。",
         "options": [
           "panda",
           "tiger",
@@ -2050,7 +2120,7 @@ var lesson1 = {
         "type": "repeat_word",
         "word": "rabbit",
         "image": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-        "chinese": "兔子",
+        "chinese": "这是一只兔子。",
         "difficulty": "hard"
       },
       {
@@ -2064,13 +2134,13 @@ var lesson1 = {
         "type": "picture_speak",
         "image": "<img src=\"assets/images/cat.png\" width=\"80\">",
         "expected": "cat",
-        "chinese": "猫",
+        "chinese": "这是一只猫。",
         "difficulty": "hard"
       },
       {
         "type": "wheel_spin",
         "type_embedded": "repeat_word",
-        "chinese": "转盘抽词",
+        "chinese": "这是一只转盘抽词。",
         "options": [
           "mouse",
           "horse",
@@ -2083,7 +2153,7 @@ var lesson1 = {
         "type": "repeat_word",
         "word": "panda",
         "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
-        "chinese": "熊猫",
+        "chinese": "这是一只熊猫。",
         "difficulty": "hard"
       },
       {

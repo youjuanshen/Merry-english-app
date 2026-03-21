@@ -6,7 +6,7 @@ var unit3_lesson2 = {
       {
         "type": "listen_tf",
         "audio": "read",
-        "chinese": "阅读",
+        "chinese": "我正在看书。",
         "options": [
           "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
           "<img src=\"assets/images/clock_3.png\" width=\"80\">",
@@ -19,7 +19,7 @@ var unit3_lesson2 = {
       {
         "type": "listen_tf",
         "audio": "watch TV",
-        "chinese": "看电视",
+        "chinese": "现在是watch TV点。",
         "options": [
           "<img src=\"assets/images/clock_3.png\" width=\"80\">",
           "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
@@ -32,7 +32,7 @@ var unit3_lesson2 = {
       {
         "type": "listen_tf",
         "audio": "kid",
-        "chinese": "小孩",
+        "chinese": "现在是kid点。",
         "options": [
           "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
           "<img src=\"assets/images/reading.png\" width=\"80\">",
@@ -45,7 +45,7 @@ var unit3_lesson2 = {
       {
         "type": "listen_tf",
         "audio": "three",
-        "chinese": "三",
+        "chinese": "现在是三点。",
         "options": [
           "<img src=\"assets/images/baby.png\" width=\"80\">",
           "<img src=\"assets/images/reading.png\" width=\"80\">",
@@ -58,7 +58,7 @@ var unit3_lesson2 = {
       {
         "type": "listen_tf",
         "audio": "read",
-        "chinese": "阅读",
+        "chinese": "我正在看书。",
         "options": [
           "<img src=\"assets/images/baby.png\" width=\"80\">",
           "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
@@ -71,7 +71,7 @@ var unit3_lesson2 = {
       {
         "type": "listen_tf",
         "audio": "watch TV",
-        "chinese": "看电视",
+        "chinese": "现在是watch TV点。",
         "options": [
           "<img src=\"assets/images/reading.png\" width=\"80\">",
           "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
@@ -84,7 +84,7 @@ var unit3_lesson2 = {
       {
         "type": "listen_select",
         "audio": "kid",
-        "chinese": "小孩",
+        "chinese": "现在是kid点。",
         "options": [
           "<img src=\"assets/images/clock_3.png\" width=\"80\">",
           "<img src=\"assets/images/reading.png\" width=\"80\">",
@@ -97,7 +97,7 @@ var unit3_lesson2 = {
       {
         "type": "listen_tf",
         "audio": "three",
-        "chinese": "三",
+        "chinese": "现在是三点。",
         "options": [
           "<img src=\"assets/images/baby.png\" width=\"80\">",
           "<img src=\"assets/images/clock_3.png\" width=\"80\">",
@@ -110,7 +110,7 @@ var unit3_lesson2 = {
       {
         "type": "listen_tf",
         "audio": "read",
-        "chinese": "阅读",
+        "chinese": "我正在看书。",
         "options": [
           "<img src=\"assets/images/clock_3.png\" width=\"80\">",
           "<img src=\"assets/images/reading.png\" width=\"80\">",
@@ -123,7 +123,7 @@ var unit3_lesson2 = {
       {
         "type": "listen_select",
         "audio": "watch TV",
-        "chinese": "看电视",
+        "chinese": "现在是watch TV点。",
         "options": [
           "<img src=\"assets/images/baby.png\" width=\"80\">",
           "<img src=\"assets/images/clock_3.png\" width=\"80\">",
@@ -138,7 +138,7 @@ var unit3_lesson2 = {
       {
         "type": "scenario",
         "audio": "read",
-        "chinese": "阅读",
+        "chinese": "我正在看书。",
         "options": [
           "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
           "<img src=\"assets/images/clock_3.png\" width=\"80\">",
@@ -155,7 +155,7 @@ var unit3_lesson2 = {
       {
         "type": "balloon_pop",
         "audio": "watch TV",
-        "chinese": "看电视",
+        "chinese": "现在是watch TV点。",
         "options": [
           "<img src=\"assets/images/clock_3.png\" width=\"80\">",
           "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
@@ -172,7 +172,7 @@ var unit3_lesson2 = {
       {
         "type": "balloon_pop",
         "audio": "kid",
-        "chinese": "小孩",
+        "chinese": "现在是kid点。",
         "options": [
           "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
           "<img src=\"assets/images/reading.png\" width=\"80\">",
@@ -189,7 +189,7 @@ var unit3_lesson2 = {
       {
         "type": "scenario",
         "audio": "three",
-        "chinese": "三",
+        "chinese": "现在是三点。",
         "options": [
           "<img src=\"assets/images/baby.png\" width=\"80\">",
           "<img src=\"assets/images/reading.png\" width=\"80\">",
@@ -206,7 +206,7 @@ var unit3_lesson2 = {
       {
         "type": "scenario",
         "audio": "read",
-        "chinese": "阅读",
+        "chinese": "我正在看书。",
         "options": [
           "<img src=\"assets/images/baby.png\" width=\"80\">",
           "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
@@ -223,7 +223,7 @@ var unit3_lesson2 = {
       {
         "type": "listen_select",
         "audio": "watch TV",
-        "chinese": "看电视",
+        "chinese": "现在是watch TV点。",
         "options": [
           "<img src=\"assets/images/reading.png\" width=\"80\">",
           "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
@@ -240,7 +240,7 @@ var unit3_lesson2 = {
       {
         "type": "balloon_pop",
         "audio": "kid",
-        "chinese": "小孩",
+        "chinese": "现在是kid点。",
         "options": [
           "<img src=\"assets/images/clock_3.png\" width=\"80\">",
           "<img src=\"assets/images/reading.png\" width=\"80\">",
@@ -257,7 +257,7 @@ var unit3_lesson2 = {
       {
         "type": "balloon_pop",
         "audio": "three",
-        "chinese": "三",
+        "chinese": "现在是三点。",
         "options": [
           "<img src=\"assets/images/baby.png\" width=\"80\">",
           "<img src=\"assets/images/clock_3.png\" width=\"80\">",
@@ -274,7 +274,7 @@ var unit3_lesson2 = {
       {
         "type": "scenario",
         "audio": "read",
-        "chinese": "阅读",
+        "chinese": "我正在看书。",
         "options": [
           "<img src=\"assets/images/clock_3.png\" width=\"80\">",
           "<img src=\"assets/images/reading.png\" width=\"80\">",
@@ -291,7 +291,7 @@ var unit3_lesson2 = {
       {
         "type": "listen_select",
         "audio": "watch TV",
-        "chinese": "看电视",
+        "chinese": "现在是watch TV点。",
         "options": [
           "<img src=\"assets/images/baby.png\" width=\"80\">",
           "<img src=\"assets/images/clock_3.png\" width=\"80\">",
@@ -308,7 +308,7 @@ var unit3_lesson2 = {
       {
         "type": "listen_select",
         "audio": "kid",
-        "chinese": "小孩",
+        "chinese": "现在是kid点。",
         "options": [
           "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
           "<img src=\"assets/images/reading.png\" width=\"80\">",
@@ -325,7 +325,7 @@ var unit3_lesson2 = {
       {
         "type": "scenario",
         "audio": "three",
-        "chinese": "三",
+        "chinese": "现在是三点。",
         "options": [
           "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
           "<img src=\"assets/images/baby.png\" width=\"80\">",
@@ -345,7 +345,7 @@ var unit3_lesson2 = {
     "pretest": [
       {
         "type": "sentence_match",
-        "chinese": "阅读",
+        "chinese": "这是阅读。",
         "word": "read",
         "sentence": "What's the time in New York?",
         "options": [
@@ -356,13 +356,21 @@ var unit3_lesson2 = {
           {
             "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
             "value": "kid"
+          },
+          {
+            "text": "<img src=\"assets/images/one.png\" width=\"80\">",
+            "value": "one"
+          },
+          {
+            "text": "<img src=\"assets/images/eleven.png\" width=\"80\">",
+            "value": "eleven"
           }
         ],
         "correct": "read"
       },
       {
         "type": "sentence_match",
-        "chinese": "看电视",
+        "chinese": "我正在看电视。",
         "word": "watch TV",
         "sentence": "I'm watching TV.",
         "options": [
@@ -373,13 +381,21 @@ var unit3_lesson2 = {
           {
             "text": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
             "value": "watch TV"
+          },
+          {
+            "text": "<img src=\"assets/images/five.png\" width=\"80\">",
+            "value": "five"
+          },
+          {
+            "text": "<img src=\"assets/images/twelve.png\" width=\"80\">",
+            "value": "twelve"
           }
         ],
         "correct": "watch TV"
       },
       {
         "type": "sentence_match",
-        "chinese": "小孩",
+        "chinese": "这是小孩。",
         "word": "kid",
         "sentence": "What's the time in New York?",
         "options": [
@@ -390,13 +406,21 @@ var unit3_lesson2 = {
           {
             "text": "<img src=\"assets/images/reading.png\" width=\"80\">",
             "value": "read"
+          },
+          {
+            "text": "<img src=\"assets/images/three.png\" width=\"80\">",
+            "value": "three"
+          },
+          {
+            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
+            "value": "ten"
           }
         ],
         "correct": "kid"
       },
       {
         "type": "word_match",
-        "chinese": "三",
+        "chinese": "这是三。",
         "word": "three",
         "sentence": "What's the time in New York?",
         "options": [
@@ -407,13 +431,21 @@ var unit3_lesson2 = {
           {
             "text": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
             "value": "three"
+          },
+          {
+            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
+            "value": "eight"
+          },
+          {
+            "text": "<img src=\"assets/images/four.png\" width=\"80\">",
+            "value": "four"
           }
         ],
         "correct": "three"
       },
       {
         "type": "sentence_match",
-        "chinese": "阅读",
+        "chinese": "这是阅读。",
         "word": "read",
         "sentence": "What's the time in New York?",
         "options": [
@@ -438,7 +470,7 @@ var unit3_lesson2 = {
       },
       {
         "type": "word_match",
-        "chinese": "看电视",
+        "chinese": "这是看电视。",
         "word": "watch TV",
         "sentence": "What's the time in New York?",
         "options": [
@@ -449,13 +481,21 @@ var unit3_lesson2 = {
           {
             "text": "<img src=\"assets/images/reading.png\" width=\"80\">",
             "value": "read"
+          },
+          {
+            "text": "<img src=\"assets/images/eleven.png\" width=\"80\">",
+            "value": "eleven"
+          },
+          {
+            "text": "<img src=\"assets/images/three.png\" width=\"80\">",
+            "value": "three"
           }
         ],
         "correct": "watch TV"
       },
       {
         "type": "sentence_match",
-        "chinese": "小孩",
+        "chinese": "这是小孩。",
         "word": "kid",
         "sentence": "What's the time in New York?",
         "options": [
@@ -480,7 +520,7 @@ var unit3_lesson2 = {
       },
       {
         "type": "word_match",
-        "chinese": "三",
+        "chinese": "这是三。",
         "word": "three",
         "sentence": "What's the time in New York?",
         "options": [
@@ -505,7 +545,7 @@ var unit3_lesson2 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "阅读",
+        "chinese": "这是阅读。",
         "word": "read",
         "sentence": "What's the time in New York?",
         "options": [
@@ -516,13 +556,21 @@ var unit3_lesson2 = {
           {
             "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
             "value": "kid"
+          },
+          {
+            "text": "<img src=\"assets/images/seven.png\" width=\"80\">",
+            "value": "seven"
+          },
+          {
+            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
+            "value": "ten"
           }
         ],
         "correct": "read"
       },
       {
         "type": "word_match",
-        "chinese": "看电视",
+        "chinese": "我正在看电视。",
         "word": "watch TV",
         "sentence": "I'm watching TV.",
         "options": [
@@ -549,7 +597,7 @@ var unit3_lesson2 = {
     "practice": [
       {
         "type": "duo_race",
-        "chinese": "阅读",
+        "chinese": "我正在看书。",
         "word": "read",
         "sentence": "I'm reading.",
         "options": [
@@ -575,7 +623,7 @@ var unit3_lesson2 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "看电视",
+        "chinese": "我正在看书。",
         "word": "watch TV",
         "sentence": "I'm reading.",
         "options": [
@@ -589,7 +637,7 @@ var unit3_lesson2 = {
       },
       {
         "type": "duo_race",
-        "chinese": "小孩",
+        "chinese": "孩子们在做什么？",
         "word": "kid",
         "sentence": "What are the kids doing?",
         "options": [
@@ -603,7 +651,7 @@ var unit3_lesson2 = {
       },
       {
         "type": "word_match",
-        "chinese": "三",
+        "chinese": "现在是三点。",
         "word": "three",
         "sentence": "It's three o'clock.",
         "options": [
@@ -617,7 +665,7 @@ var unit3_lesson2 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "阅读",
+        "chinese": "我正在看书。",
         "word": "read",
         "sentence": "I'm reading.",
         "options": [
@@ -631,7 +679,7 @@ var unit3_lesson2 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "看电视",
+        "chinese": "我正在看书。",
         "word": "watch TV",
         "sentence": "I'm reading.",
         "options": [
@@ -645,7 +693,7 @@ var unit3_lesson2 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "小孩",
+        "chinese": "孩子们在做什么？",
         "word": "kid",
         "sentence": "What are the kids doing?",
         "options": [
@@ -659,7 +707,7 @@ var unit3_lesson2 = {
       },
       {
         "type": "word_match",
-        "chinese": "三",
+        "chinese": "我正在看书。",
         "word": "three",
         "sentence": "I'm reading.",
         "options": [
@@ -673,7 +721,7 @@ var unit3_lesson2 = {
       },
       {
         "type": "duo_race",
-        "chinese": "阅读",
+        "chinese": "我正在看书。",
         "word": "read",
         "sentence": "I'm reading.",
         "options": [
@@ -699,7 +747,7 @@ var unit3_lesson2 = {
       },
       {
         "type": "word_match",
-        "chinese": "看电视",
+        "chinese": "我正在看书。",
         "word": "watch TV",
         "sentence": "I'm reading.",
         "options": [
@@ -713,7 +761,7 @@ var unit3_lesson2 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "小孩",
+        "chinese": "我正在看书。",
         "word": "kid",
         "sentence": "I'm reading.",
         "options": [
@@ -727,7 +775,7 @@ var unit3_lesson2 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "三",
+        "chinese": "我正在看书。",
         "word": "three",
         "sentence": "I'm reading.",
         "options": [
@@ -746,7 +794,7 @@ var unit3_lesson2 = {
       {
         "type": "word_spell",
         "word": "read",
-        "chinese": "阅读",
+        "chinese": "我正在看书。",
         "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
         "display": "rea_",
         "options": [
@@ -760,7 +808,7 @@ var unit3_lesson2 = {
       {
         "type": "letter_select",
         "word": "watch TV",
-        "chinese": "看电视",
+        "chinese": "现在是watch TV点。",
         "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
         "display": "wa_ch TV",
         "options": [
@@ -774,7 +822,7 @@ var unit3_lesson2 = {
       {
         "type": "word_spell",
         "word": "kid",
-        "chinese": "小孩",
+        "chinese": "现在是kid点。",
         "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
         "display": "ki_",
         "options": [
@@ -788,7 +836,7 @@ var unit3_lesson2 = {
       {
         "type": "letter_select",
         "word": "three",
-        "chinese": "三",
+        "chinese": "现在是三点。",
         "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
         "display": "t_ree",
         "options": [
@@ -802,7 +850,7 @@ var unit3_lesson2 = {
       {
         "type": "word_spell",
         "word": "read",
-        "chinese": "阅读",
+        "chinese": "我正在看书。",
         "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
         "display": "r_ad",
         "options": [
@@ -816,7 +864,7 @@ var unit3_lesson2 = {
       {
         "type": "letter_select",
         "word": "watch TV",
-        "chinese": "看电视",
+        "chinese": "现在是watch TV点。",
         "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
         "display": "w_tch TV",
         "options": [
@@ -830,7 +878,7 @@ var unit3_lesson2 = {
       {
         "type": "word_spell",
         "word": "kid",
-        "chinese": "小孩",
+        "chinese": "现在是kid点。",
         "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
         "display": "ki_",
         "options": [
@@ -844,7 +892,7 @@ var unit3_lesson2 = {
       {
         "type": "letter_select",
         "word": "three",
-        "chinese": "三",
+        "chinese": "现在是三点。",
         "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
         "display": "t_ree",
         "options": [
@@ -858,7 +906,7 @@ var unit3_lesson2 = {
       {
         "type": "letter_select",
         "word": "read",
-        "chinese": "阅读",
+        "chinese": "我正在看书。",
         "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
         "display": "rea_",
         "options": [
@@ -872,7 +920,7 @@ var unit3_lesson2 = {
       {
         "type": "word_spell",
         "word": "watch TV",
-        "chinese": "看电视",
+        "chinese": "现在是watch TV点。",
         "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
         "display": "watch_TV",
         "options": [
@@ -888,7 +936,7 @@ var unit3_lesson2 = {
       {
         "type": "word_spell",
         "word": "read",
-        "chinese": "阅读",
+        "chinese": "我正在看书。",
         "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
         "display": "rea_",
         "options": [
@@ -907,7 +955,7 @@ var unit3_lesson2 = {
       {
         "type": "word_spell",
         "word": "watch TV",
-        "chinese": "看电视",
+        "chinese": "现在是watch TV点。",
         "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
         "display": "wa_ch TV",
         "options": [
@@ -926,7 +974,7 @@ var unit3_lesson2 = {
       {
         "type": "word_spell",
         "word": "kid",
-        "chinese": "小孩",
+        "chinese": "现在是kid点。",
         "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
         "display": "ki_",
         "options": [
@@ -945,7 +993,7 @@ var unit3_lesson2 = {
       {
         "type": "letter_select",
         "word": "three",
-        "chinese": "三",
+        "chinese": "现在是三点。",
         "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
         "display": "t_ree",
         "options": [
@@ -964,7 +1012,7 @@ var unit3_lesson2 = {
       {
         "type": "duo_spell",
         "word": "read",
-        "chinese": "阅读",
+        "chinese": "我正在看书。",
         "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
         "display": "r_ad",
         "options": [
@@ -983,7 +1031,7 @@ var unit3_lesson2 = {
       {
         "type": "letter_select",
         "word": "watch TV",
-        "chinese": "看电视",
+        "chinese": "现在是watch TV点。",
         "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
         "display": "w_tch TV",
         "options": [
@@ -1002,7 +1050,7 @@ var unit3_lesson2 = {
       {
         "type": "letter_select",
         "word": "kid",
-        "chinese": "小孩",
+        "chinese": "现在是kid点。",
         "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
         "display": "ki_",
         "options": [
@@ -1021,7 +1069,7 @@ var unit3_lesson2 = {
       {
         "type": "letter_select",
         "word": "three",
-        "chinese": "三",
+        "chinese": "现在是三点。",
         "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
         "display": "t_ree",
         "options": [
@@ -1040,7 +1088,7 @@ var unit3_lesson2 = {
       {
         "type": "duo_spell",
         "word": "read",
-        "chinese": "阅读",
+        "chinese": "我正在看书。",
         "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
         "display": "rea_",
         "options": [
@@ -1059,7 +1107,7 @@ var unit3_lesson2 = {
       {
         "type": "letter_select",
         "word": "watch TV",
-        "chinese": "看电视",
+        "chinese": "现在是watch TV点。",
         "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
         "display": "watch_TV",
         "options": [
@@ -1078,7 +1126,7 @@ var unit3_lesson2 = {
       {
         "type": "letter_select",
         "word": "kid",
-        "chinese": "小孩",
+        "chinese": "现在是kid点。",
         "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
         "display": "k_d",
         "options": [
@@ -1097,7 +1145,7 @@ var unit3_lesson2 = {
       {
         "type": "duo_spell",
         "word": "three",
-        "chinese": "三",
+        "chinese": "现在是三点。",
         "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
         "display": "t_ree",
         "options": [
@@ -1120,70 +1168,70 @@ var unit3_lesson2 = {
       {
         "type": "shadowing",
         "word": "read",
-        "chinese": "阅读",
+        "chinese": "这是阅读。",
         "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
         "sentence": "What's the time in New York?"
       },
       {
         "type": "read_word",
         "word": "watch TV",
-        "chinese": "看电视",
+        "chinese": "这是看电视。",
         "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
         "sentence": "What's the time in New York?"
       },
       {
         "type": "read_word",
         "word": "kid",
-        "chinese": "小孩",
+        "chinese": "我喜欢kid。",
         "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
         "sentence": "I like kid."
       },
       {
         "type": "read_word",
         "word": "three",
-        "chinese": "三",
+        "chinese": "我喜欢三。",
         "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
         "sentence": "I like three."
       },
       {
         "type": "read_word",
         "word": "read",
-        "chinese": "阅读",
+        "chinese": "我喜欢看书。",
         "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
         "sentence": "I like read."
       },
       {
         "type": "shadowing",
         "word": "watch TV",
-        "chinese": "看电视",
+        "chinese": "我喜欢watch TV。",
         "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
         "sentence": "I like watch TV."
       },
       {
         "type": "shadowing",
         "word": "kid",
-        "chinese": "小孩",
+        "chinese": "这是小孩。",
         "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
         "sentence": "What's the time in New York?"
       },
       {
         "type": "shadowing",
         "word": "three",
-        "chinese": "三",
+        "chinese": "我喜欢三。",
         "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
         "sentence": "I like three."
       },
       {
         "type": "shadowing",
         "word": "read",
-        "chinese": "阅读",
+        "chinese": "我喜欢看书。",
         "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
         "sentence": "I like read."
       },
       {
         "type": "shadowing",
         "word": "watch TV",
-        "chinese": "看电视",
+        "chinese": "这是看电视。",
         "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
         "sentence": "What's the time in New York?"
       }
@@ -1192,7 +1240,7 @@ var unit3_lesson2 = {
       {
         "type": "read_word",
         "word": "read",
-        "chinese": "阅读",
+        "chinese": "这是一只看书。",
         "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
         "sentence": "This is a read.",
         "difficulty": "hard"
@@ -1200,7 +1248,7 @@ var unit3_lesson2 = {
       {
         "type": "debate",
         "word": "watch TV",
-        "chinese": "看电视",
+        "chinese": "这是一只watch TV。",
         "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
         "sentence": "This is a watch TV.",
         "difficulty": "hard"
@@ -1208,7 +1256,7 @@ var unit3_lesson2 = {
       {
         "type": "debate",
         "word": "kid",
-        "chinese": "小孩",
+        "chinese": "我正在看书。",
         "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
         "sentence": "I'm reading.",
         "difficulty": "medium"
@@ -1216,7 +1264,7 @@ var unit3_lesson2 = {
       {
         "type": "roleplay",
         "word": "three",
-        "chinese": "三",
+        "chinese": "这是一只三。",
         "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
         "sentence": "This is a three.",
         "difficulty": "hard"
@@ -1224,7 +1272,7 @@ var unit3_lesson2 = {
       {
         "type": "roleplay",
         "word": "read",
-        "chinese": "阅读",
+        "chinese": "这是一只看书。",
         "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
         "sentence": "This is a read.",
         "difficulty": "medium"
@@ -1232,7 +1280,7 @@ var unit3_lesson2 = {
       {
         "type": "shadowing",
         "word": "watch TV",
-        "chinese": "看电视",
+        "chinese": "我正在看书。",
         "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
         "sentence": "I'm reading.",
         "difficulty": "hard"
@@ -1240,7 +1288,7 @@ var unit3_lesson2 = {
       {
         "type": "read_word",
         "word": "kid",
-        "chinese": "小孩",
+        "chinese": "我正在看书。",
         "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
         "sentence": "I'm reading.",
         "difficulty": "easy"
@@ -1248,7 +1296,7 @@ var unit3_lesson2 = {
       {
         "type": "debate",
         "word": "three",
-        "chinese": "三",
+        "chinese": "我正在看书。",
         "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
         "sentence": "I'm reading.",
         "difficulty": "hard"
@@ -1256,7 +1304,7 @@ var unit3_lesson2 = {
       {
         "type": "shadowing",
         "word": "read",
-        "chinese": "阅读",
+        "chinese": "我正在看书。",
         "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
         "sentence": "I'm reading.",
         "difficulty": "medium"
@@ -1264,7 +1312,7 @@ var unit3_lesson2 = {
       {
         "type": "roleplay",
         "word": "watch TV",
-        "chinese": "看电视",
+        "chinese": "这是一只watch TV。",
         "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
         "sentence": "This is a watch TV.",
         "difficulty": "medium"
@@ -1272,7 +1320,7 @@ var unit3_lesson2 = {
       {
         "type": "shadowing",
         "word": "kid",
-        "chinese": "小孩",
+        "chinese": "我正在看书。",
         "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
         "sentence": "I'm reading.",
         "difficulty": "easy"
@@ -1280,7 +1328,7 @@ var unit3_lesson2 = {
       {
         "type": "roleplay",
         "word": "three",
-        "chinese": "三",
+        "chinese": "这是一只三。",
         "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
         "sentence": "This is a three.",
         "difficulty": "medium"

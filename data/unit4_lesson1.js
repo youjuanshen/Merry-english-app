@@ -6,7 +6,7 @@ var unit4_lesson1 = {
       {
         "type": "listen_tf",
         "audio": "milk",
-        "chinese": "牛奶",
+        "chinese": "我喜欢牛奶。",
         "options": [
           "<img src=\"assets/images/noodle.png\" width=\"80\">",
           "<img src=\"assets/images/milk.png\" width=\"80\">",
@@ -19,7 +19,7 @@ var unit4_lesson1 = {
       {
         "type": "listen_tf",
         "audio": "bread",
-        "chinese": "面包",
+        "chinese": "我喜欢面包。",
         "options": [
           "<img src=\"assets/images/egg.png\" width=\"80\">",
           "<img src=\"assets/images/milk.png\" width=\"80\">",
@@ -32,7 +32,7 @@ var unit4_lesson1 = {
       {
         "type": "listen_tf",
         "audio": "egg",
-        "chinese": "鸡蛋",
+        "chinese": "我喜欢鸡蛋。",
         "options": [
           "<img src=\"assets/images/noodle.png\" width=\"80\">",
           "<img src=\"assets/images/bread.png\" width=\"80\">",
@@ -45,7 +45,7 @@ var unit4_lesson1 = {
       {
         "type": "listen_select",
         "audio": "noodle",
-        "chinese": "面条",
+        "chinese": "我喜欢面条。",
         "options": [
           "<img src=\"assets/images/milk.png\" width=\"80\">",
           "<img src=\"assets/images/noodle.png\" width=\"80\">",
@@ -58,7 +58,7 @@ var unit4_lesson1 = {
       {
         "type": "listen_tf",
         "audio": "milk",
-        "chinese": "牛奶",
+        "chinese": "我喜欢牛奶。",
         "options": [
           "<img src=\"assets/images/egg.png\" width=\"80\">",
           "<img src=\"assets/images/noodle.png\" width=\"80\">",
@@ -71,7 +71,7 @@ var unit4_lesson1 = {
       {
         "type": "listen_select",
         "audio": "bread",
-        "chinese": "面包",
+        "chinese": "我喜欢面包。",
         "options": [
           "<img src=\"assets/images/noodle.png\" width=\"80\">",
           "<img src=\"assets/images/egg.png\" width=\"80\">",
@@ -84,7 +84,7 @@ var unit4_lesson1 = {
       {
         "type": "listen_tf",
         "audio": "egg",
-        "chinese": "鸡蛋",
+        "chinese": "我喜欢鸡蛋。",
         "options": [
           "<img src=\"assets/images/egg.png\" width=\"80\">",
           "<img src=\"assets/images/bread.png\" width=\"80\">",
@@ -97,7 +97,7 @@ var unit4_lesson1 = {
       {
         "type": "listen_select",
         "audio": "noodle",
-        "chinese": "面条",
+        "chinese": "我喜欢面条。",
         "options": [
           "<img src=\"assets/images/egg.png\" width=\"80\">",
           "<img src=\"assets/images/noodle.png\" width=\"80\">",
@@ -110,7 +110,7 @@ var unit4_lesson1 = {
       {
         "type": "listen_select",
         "audio": "milk",
-        "chinese": "牛奶",
+        "chinese": "我喜欢牛奶。",
         "options": [
           "<img src=\"assets/images/egg.png\" width=\"80\">",
           "<img src=\"assets/images/noodle.png\" width=\"80\">",
@@ -123,7 +123,7 @@ var unit4_lesson1 = {
       {
         "type": "listen_select",
         "audio": "bread",
-        "chinese": "面包",
+        "chinese": "我喜欢面包。",
         "options": [
           "<img src=\"assets/images/noodle.png\" width=\"80\">",
           "<img src=\"assets/images/milk.png\" width=\"80\">",
@@ -138,7 +138,7 @@ var unit4_lesson1 = {
       {
         "type": "balloon_pop",
         "audio": "milk",
-        "chinese": "牛奶",
+        "chinese": "我喜欢牛奶。",
         "options": [
           "<img src=\"assets/images/noodle.png\" width=\"80\">",
           "<img src=\"assets/images/milk.png\" width=\"80\">",
@@ -155,7 +155,7 @@ var unit4_lesson1 = {
       {
         "type": "balloon_pop",
         "audio": "bread",
-        "chinese": "面包",
+        "chinese": "我喜欢面包。",
         "options": [
           "<img src=\"assets/images/egg.png\" width=\"80\">",
           "<img src=\"assets/images/milk.png\" width=\"80\">",
@@ -172,7 +172,7 @@ var unit4_lesson1 = {
       {
         "type": "listen_select",
         "audio": "egg",
-        "chinese": "鸡蛋",
+        "chinese": "我喜欢鸡蛋。",
         "options": [
           "<img src=\"assets/images/noodle.png\" width=\"80\">",
           "<img src=\"assets/images/bread.png\" width=\"80\">",
@@ -189,7 +189,7 @@ var unit4_lesson1 = {
       {
         "type": "scenario",
         "audio": "noodle",
-        "chinese": "面条",
+        "chinese": "我喜欢面条。",
         "options": [
           "<img src=\"assets/images/milk.png\" width=\"80\">",
           "<img src=\"assets/images/noodle.png\" width=\"80\">",
@@ -206,7 +206,7 @@ var unit4_lesson1 = {
       {
         "type": "listen_select",
         "audio": "milk",
-        "chinese": "牛奶",
+        "chinese": "我喜欢牛奶。",
         "options": [
           "<img src=\"assets/images/egg.png\" width=\"80\">",
           "<img src=\"assets/images/noodle.png\" width=\"80\">",
@@ -223,7 +223,7 @@ var unit4_lesson1 = {
       {
         "type": "balloon_pop",
         "audio": "bread",
-        "chinese": "面包",
+        "chinese": "我喜欢面包。",
         "options": [
           "<img src=\"assets/images/noodle.png\" width=\"80\">",
           "<img src=\"assets/images/egg.png\" width=\"80\">",
@@ -240,7 +240,7 @@ var unit4_lesson1 = {
       {
         "type": "balloon_pop",
         "audio": "egg",
-        "chinese": "鸡蛋",
+        "chinese": "我喜欢鸡蛋。",
         "options": [
           "<img src=\"assets/images/egg.png\" width=\"80\">",
           "<img src=\"assets/images/bread.png\" width=\"80\">",
@@ -257,7 +257,7 @@ var unit4_lesson1 = {
       {
         "type": "listen_select",
         "audio": "noodle",
-        "chinese": "面条",
+        "chinese": "我喜欢面条。",
         "options": [
           "<img src=\"assets/images/egg.png\" width=\"80\">",
           "<img src=\"assets/images/noodle.png\" width=\"80\">",
@@ -274,7 +274,7 @@ var unit4_lesson1 = {
       {
         "type": "scenario",
         "audio": "milk",
-        "chinese": "牛奶",
+        "chinese": "我喜欢牛奶。",
         "options": [
           "<img src=\"assets/images/egg.png\" width=\"80\">",
           "<img src=\"assets/images/noodle.png\" width=\"80\">",
@@ -291,7 +291,7 @@ var unit4_lesson1 = {
       {
         "type": "scenario",
         "audio": "bread",
-        "chinese": "面包",
+        "chinese": "我喜欢面包。",
         "options": [
           "<img src=\"assets/images/noodle.png\" width=\"80\">",
           "<img src=\"assets/images/milk.png\" width=\"80\">",
@@ -308,7 +308,7 @@ var unit4_lesson1 = {
       {
         "type": "duo_listen_select",
         "audio": "egg",
-        "chinese": "鸡蛋",
+        "chinese": "我喜欢鸡蛋。",
         "options": [
           "<img src=\"assets/images/bread.png\" width=\"80\">",
           "<img src=\"assets/images/noodle.png\" width=\"80\">",
@@ -325,7 +325,7 @@ var unit4_lesson1 = {
       {
         "type": "listen_select",
         "audio": "noodle",
-        "chinese": "面条",
+        "chinese": "我喜欢面条。",
         "options": [
           "<img src=\"assets/images/noodle.png\" width=\"80\">",
           "<img src=\"assets/images/egg.png\" width=\"80\">",
@@ -345,7 +345,7 @@ var unit4_lesson1 = {
     "pretest": [
       {
         "type": "sentence_match",
-        "chinese": "牛奶",
+        "chinese": "我喜欢牛奶。",
         "word": "milk",
         "sentence": "I like milk.",
         "options": [
@@ -356,13 +356,21 @@ var unit4_lesson1 = {
           {
             "text": "<img src=\"assets/images/bread.png\" width=\"80\">",
             "value": "bread"
+          },
+          {
+            "text": "<img src=\"assets/images/salad.png\" width=\"80\">",
+            "value": "salad"
+          },
+          {
+            "text": "<img src=\"assets/images/water.png\" width=\"80\">",
+            "value": "water"
           }
         ],
         "correct": "milk"
       },
       {
         "type": "sentence_match",
-        "chinese": "面包",
+        "chinese": "我喜欢面包。",
         "word": "bread",
         "sentence": "I like bread.",
         "options": [
@@ -387,7 +395,7 @@ var unit4_lesson1 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "鸡蛋",
+        "chinese": "这是鸡蛋。",
         "word": "egg",
         "sentence": "I'm hungry.",
         "options": [
@@ -398,13 +406,21 @@ var unit4_lesson1 = {
           {
             "text": "<img src=\"assets/images/egg.png\" width=\"80\">",
             "value": "egg"
+          },
+          {
+            "text": "<img src=\"assets/images/juice.png\" width=\"80\">",
+            "value": "juice"
+          },
+          {
+            "text": "<img src=\"assets/images/apple.png\" width=\"80\">",
+            "value": "apple"
           }
         ],
         "correct": "egg"
       },
       {
         "type": "sentence_match",
-        "chinese": "面条",
+        "chinese": "这是面条。",
         "word": "noodle",
         "sentence": "I'm hungry.",
         "options": [
@@ -415,13 +431,21 @@ var unit4_lesson1 = {
           {
             "text": "<img src=\"assets/images/noodle.png\" width=\"80\">",
             "value": "noodle"
+          },
+          {
+            "text": "<img src=\"assets/images/water.png\" width=\"80\">",
+            "value": "water"
+          },
+          {
+            "text": "<img src=\"assets/images/bread.png\" width=\"80\">",
+            "value": "bread"
           }
         ],
         "correct": "noodle"
       },
       {
         "type": "sentence_match",
-        "chinese": "牛奶",
+        "chinese": "这是牛奶。",
         "word": "milk",
         "sentence": "I'm hungry.",
         "options": [
@@ -432,13 +456,21 @@ var unit4_lesson1 = {
           {
             "text": "<img src=\"assets/images/noodle.png\" width=\"80\">",
             "value": "noodle"
+          },
+          {
+            "text": "<img src=\"assets/images/chicken.png\" width=\"80\">",
+            "value": "chicken"
+          },
+          {
+            "text": "<img src=\"assets/images/juice.png\" width=\"80\">",
+            "value": "juice"
           }
         ],
         "correct": "milk"
       },
       {
         "type": "sentence_match",
-        "chinese": "面包",
+        "chinese": "这是面包。",
         "word": "bread",
         "sentence": "I'm hungry.",
         "options": [
@@ -449,13 +481,21 @@ var unit4_lesson1 = {
           {
             "text": "<img src=\"assets/images/egg.png\" width=\"80\">",
             "value": "egg"
+          },
+          {
+            "text": "<img src=\"assets/images/apple.png\" width=\"80\">",
+            "value": "apple"
+          },
+          {
+            "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+            "value": "hamburger"
           }
         ],
         "correct": "bread"
       },
       {
         "type": "sentence_match",
-        "chinese": "鸡蛋",
+        "chinese": "我喜欢鸡蛋。",
         "word": "egg",
         "sentence": "I like eggs.",
         "options": [
@@ -480,7 +520,7 @@ var unit4_lesson1 = {
       },
       {
         "type": "word_match",
-        "chinese": "面条",
+        "chinese": "我喜欢面条。",
         "word": "noodle",
         "sentence": "I like noodles.",
         "options": [
@@ -505,7 +545,7 @@ var unit4_lesson1 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "牛奶",
+        "chinese": "我喜欢牛奶。",
         "word": "milk",
         "sentence": "I like milk.",
         "options": [
@@ -516,13 +556,21 @@ var unit4_lesson1 = {
           {
             "text": "<img src=\"assets/images/noodle.png\" width=\"80\">",
             "value": "noodle"
+          },
+          {
+            "text": "<img src=\"assets/images/milk.png\" width=\"80\">",
+            "value": "milk"
+          },
+          {
+            "text": "<img src=\"assets/images/water.png\" width=\"80\">",
+            "value": "water"
           }
         ],
         "correct": "milk"
       },
       {
         "type": "word_match",
-        "chinese": "面包",
+        "chinese": "我喜欢面包。",
         "word": "bread",
         "sentence": "I like bread.",
         "options": [
@@ -549,7 +597,7 @@ var unit4_lesson1 = {
     "practice": [
       {
         "type": "word_match",
-        "chinese": "牛奶",
+        "chinese": "这是牛奶。",
         "word": "milk",
         "sentence": "What do you like for breakfast?",
         "options": [
@@ -563,7 +611,7 @@ var unit4_lesson1 = {
       },
       {
         "type": "word_match",
-        "chinese": "面包",
+        "chinese": "这是面包。",
         "word": "bread",
         "sentence": "What do you like for breakfast?",
         "options": [
@@ -577,7 +625,7 @@ var unit4_lesson1 = {
       },
       {
         "type": "word_match",
-        "chinese": "鸡蛋",
+        "chinese": "这是鸡蛋。",
         "word": "egg",
         "sentence": "What do you like for breakfast?",
         "options": [
@@ -591,7 +639,7 @@ var unit4_lesson1 = {
       },
       {
         "type": "word_match",
-        "chinese": "面条",
+        "chinese": "这是面条。",
         "word": "noodle",
         "sentence": "What do you like for breakfast?",
         "options": [
@@ -605,7 +653,7 @@ var unit4_lesson1 = {
       },
       {
         "type": "duo_race",
-        "chinese": "牛奶",
+        "chinese": "这是牛奶。",
         "word": "milk",
         "sentence": "What do you like for breakfast?",
         "options": [
@@ -631,7 +679,7 @@ var unit4_lesson1 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "面包",
+        "chinese": "这是面包。",
         "word": "bread",
         "sentence": "What do you like for breakfast?",
         "options": [
@@ -645,7 +693,7 @@ var unit4_lesson1 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "鸡蛋",
+        "chinese": "这是鸡蛋。",
         "word": "egg",
         "sentence": "What do you like for breakfast?",
         "options": [
@@ -671,7 +719,7 @@ var unit4_lesson1 = {
       },
       {
         "type": "word_match",
-        "chinese": "面条",
+        "chinese": "我喜欢面条。",
         "word": "noodle",
         "sentence": "I like noodles.",
         "options": [
@@ -685,7 +733,7 @@ var unit4_lesson1 = {
       },
       {
         "type": "word_match",
-        "chinese": "牛奶",
+        "chinese": "这是牛奶。",
         "word": "milk",
         "sentence": "What do you like for breakfast?",
         "options": [
@@ -711,7 +759,7 @@ var unit4_lesson1 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "面包",
+        "chinese": "我喜欢面包。",
         "word": "bread",
         "sentence": "I like bread.",
         "options": [
@@ -737,7 +785,7 @@ var unit4_lesson1 = {
       },
       {
         "type": "word_match",
-        "chinese": "鸡蛋",
+        "chinese": "我喜欢鸡蛋。",
         "word": "egg",
         "sentence": "I like eggs.",
         "options": [
@@ -751,7 +799,7 @@ var unit4_lesson1 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "面条",
+        "chinese": "这是面条。",
         "word": "noodle",
         "sentence": "What do you like for breakfast?",
         "options": [
@@ -770,7 +818,7 @@ var unit4_lesson1 = {
       {
         "type": "letter_select",
         "word": "milk",
-        "chinese": "牛奶",
+        "chinese": "我喜欢牛奶。",
         "image": "<img src=\"assets/images/milk.png\" width=\"80\">",
         "display": "m_lk",
         "options": [
@@ -784,7 +832,7 @@ var unit4_lesson1 = {
       {
         "type": "word_spell",
         "word": "bread",
-        "chinese": "面包",
+        "chinese": "我喜欢面包。",
         "image": "<img src=\"assets/images/bread.png\" width=\"80\">",
         "display": "_read",
         "options": [
@@ -798,7 +846,7 @@ var unit4_lesson1 = {
       {
         "type": "word_spell",
         "word": "egg",
-        "chinese": "鸡蛋",
+        "chinese": "我喜欢鸡蛋。",
         "image": "<img src=\"assets/images/egg.png\" width=\"80\">",
         "display": "_gg",
         "options": [
@@ -812,7 +860,7 @@ var unit4_lesson1 = {
       {
         "type": "letter_select",
         "word": "noodle",
-        "chinese": "面条",
+        "chinese": "我喜欢面条。",
         "image": "<img src=\"assets/images/noodle.png\" width=\"80\">",
         "display": "_oodle",
         "options": [
@@ -826,7 +874,7 @@ var unit4_lesson1 = {
       {
         "type": "word_spell",
         "word": "milk",
-        "chinese": "牛奶",
+        "chinese": "我喜欢牛奶。",
         "image": "<img src=\"assets/images/milk.png\" width=\"80\">",
         "display": "mil_",
         "options": [
@@ -840,7 +888,7 @@ var unit4_lesson1 = {
       {
         "type": "letter_select",
         "word": "bread",
-        "chinese": "面包",
+        "chinese": "我喜欢面包。",
         "image": "<img src=\"assets/images/bread.png\" width=\"80\">",
         "display": "br_ad",
         "options": [
@@ -854,7 +902,7 @@ var unit4_lesson1 = {
       {
         "type": "letter_select",
         "word": "egg",
-        "chinese": "鸡蛋",
+        "chinese": "我喜欢鸡蛋。",
         "image": "<img src=\"assets/images/egg.png\" width=\"80\">",
         "display": "eg_",
         "options": [
@@ -868,7 +916,7 @@ var unit4_lesson1 = {
       {
         "type": "word_spell",
         "word": "noodle",
-        "chinese": "面条",
+        "chinese": "我喜欢面条。",
         "image": "<img src=\"assets/images/noodle.png\" width=\"80\">",
         "display": "nood_e",
         "options": [
@@ -882,7 +930,7 @@ var unit4_lesson1 = {
       {
         "type": "letter_select",
         "word": "milk",
-        "chinese": "牛奶",
+        "chinese": "我喜欢牛奶。",
         "image": "<img src=\"assets/images/milk.png\" width=\"80\">",
         "display": "mil_",
         "options": [
@@ -896,7 +944,7 @@ var unit4_lesson1 = {
       {
         "type": "word_spell",
         "word": "bread",
-        "chinese": "面包",
+        "chinese": "我喜欢面包。",
         "image": "<img src=\"assets/images/bread.png\" width=\"80\">",
         "display": "_read",
         "options": [
@@ -912,7 +960,7 @@ var unit4_lesson1 = {
       {
         "type": "word_spell",
         "word": "milk",
-        "chinese": "牛奶",
+        "chinese": "我喜欢牛奶。",
         "image": "<img src=\"assets/images/milk.png\" width=\"80\">",
         "display": "m_lk",
         "options": [
@@ -931,7 +979,7 @@ var unit4_lesson1 = {
       {
         "type": "duo_spell",
         "word": "bread",
-        "chinese": "面包",
+        "chinese": "我喜欢面包。",
         "image": "<img src=\"assets/images/bread.png\" width=\"80\">",
         "display": "_read",
         "options": [
@@ -950,7 +998,7 @@ var unit4_lesson1 = {
       {
         "type": "duo_spell",
         "word": "egg",
-        "chinese": "鸡蛋",
+        "chinese": "我喜欢鸡蛋。",
         "image": "<img src=\"assets/images/egg.png\" width=\"80\">",
         "display": "_gg",
         "options": [
@@ -969,7 +1017,7 @@ var unit4_lesson1 = {
       {
         "type": "letter_select",
         "word": "noodle",
-        "chinese": "面条",
+        "chinese": "我喜欢面条。",
         "image": "<img src=\"assets/images/noodle.png\" width=\"80\">",
         "display": "_oodle",
         "options": [
@@ -988,7 +1036,7 @@ var unit4_lesson1 = {
       {
         "type": "word_spell",
         "word": "milk",
-        "chinese": "牛奶",
+        "chinese": "我喜欢牛奶。",
         "image": "<img src=\"assets/images/milk.png\" width=\"80\">",
         "display": "mil_",
         "options": [
@@ -1007,7 +1055,7 @@ var unit4_lesson1 = {
       {
         "type": "letter_select",
         "word": "bread",
-        "chinese": "面包",
+        "chinese": "我喜欢面包。",
         "image": "<img src=\"assets/images/bread.png\" width=\"80\">",
         "display": "br_ad",
         "options": [
@@ -1026,7 +1074,7 @@ var unit4_lesson1 = {
       {
         "type": "duo_spell",
         "word": "egg",
-        "chinese": "鸡蛋",
+        "chinese": "我喜欢鸡蛋。",
         "image": "<img src=\"assets/images/egg.png\" width=\"80\">",
         "display": "eg_",
         "options": [
@@ -1045,7 +1093,7 @@ var unit4_lesson1 = {
       {
         "type": "letter_select",
         "word": "noodle",
-        "chinese": "面条",
+        "chinese": "我喜欢面条。",
         "image": "<img src=\"assets/images/noodle.png\" width=\"80\">",
         "display": "nood_e",
         "options": [
@@ -1064,7 +1112,7 @@ var unit4_lesson1 = {
       {
         "type": "word_spell",
         "word": "milk",
-        "chinese": "牛奶",
+        "chinese": "我喜欢牛奶。",
         "image": "<img src=\"assets/images/milk.png\" width=\"80\">",
         "display": "mil_",
         "options": [
@@ -1083,7 +1131,7 @@ var unit4_lesson1 = {
       {
         "type": "word_spell",
         "word": "bread",
-        "chinese": "面包",
+        "chinese": "我喜欢面包。",
         "image": "<img src=\"assets/images/bread.png\" width=\"80\">",
         "display": "_read",
         "options": [
@@ -1102,7 +1150,7 @@ var unit4_lesson1 = {
       {
         "type": "duo_spell",
         "word": "egg",
-        "chinese": "鸡蛋",
+        "chinese": "我喜欢鸡蛋。",
         "image": "<img src=\"assets/images/egg.png\" width=\"80\">",
         "display": "_gg",
         "options": [
@@ -1121,7 +1169,7 @@ var unit4_lesson1 = {
       {
         "type": "duo_spell",
         "word": "noodle",
-        "chinese": "面条",
+        "chinese": "我喜欢面条。",
         "image": "<img src=\"assets/images/noodle.png\" width=\"80\">",
         "display": "nood_e",
         "options": [
@@ -1144,70 +1192,70 @@ var unit4_lesson1 = {
       {
         "type": "read_word",
         "word": "milk",
-        "chinese": "牛奶",
+        "chinese": "我喜欢牛奶。",
         "image": "<img src=\"assets/images/milk.png\" width=\"80\">",
         "sentence": "I like milk."
       },
       {
         "type": "read_word",
         "word": "bread",
-        "chinese": "面包",
+        "chinese": "我喜欢面包。",
         "image": "<img src=\"assets/images/bread.png\" width=\"80\">",
         "sentence": "I like bread."
       },
       {
         "type": "shadowing",
         "word": "egg",
-        "chinese": "鸡蛋",
+        "chinese": "我喜欢鸡蛋。",
         "image": "<img src=\"assets/images/egg.png\" width=\"80\">",
         "sentence": "I like egg."
       },
       {
         "type": "shadowing",
         "word": "noodle",
-        "chinese": "面条",
+        "chinese": "这是面条。",
         "image": "<img src=\"assets/images/noodle.png\" width=\"80\">",
         "sentence": "I'm hungry."
       },
       {
         "type": "read_word",
         "word": "milk",
-        "chinese": "牛奶",
+        "chinese": "我喜欢牛奶。",
         "image": "<img src=\"assets/images/milk.png\" width=\"80\">",
         "sentence": "I like milk."
       },
       {
         "type": "read_word",
         "word": "bread",
-        "chinese": "面包",
+        "chinese": "我喜欢面包。",
         "image": "<img src=\"assets/images/bread.png\" width=\"80\">",
         "sentence": "I like bread."
       },
       {
         "type": "shadowing",
         "word": "egg",
-        "chinese": "鸡蛋",
+        "chinese": "我喜欢鸡蛋。",
         "image": "<img src=\"assets/images/egg.png\" width=\"80\">",
         "sentence": "I like egg."
       },
       {
         "type": "shadowing",
         "word": "noodle",
-        "chinese": "面条",
+        "chinese": "我喜欢面条。",
         "image": "<img src=\"assets/images/noodle.png\" width=\"80\">",
         "sentence": "I like noodle."
       },
       {
         "type": "shadowing",
         "word": "milk",
-        "chinese": "牛奶",
+        "chinese": "这是牛奶。",
         "image": "<img src=\"assets/images/milk.png\" width=\"80\">",
         "sentence": "I'm hungry."
       },
       {
         "type": "read_word",
         "word": "bread",
-        "chinese": "面包",
+        "chinese": "我喜欢面包。",
         "image": "<img src=\"assets/images/bread.png\" width=\"80\">",
         "sentence": "I like bread."
       }
@@ -1216,7 +1264,7 @@ var unit4_lesson1 = {
       {
         "type": "read_word",
         "word": "milk",
-        "chinese": "牛奶",
+        "chinese": "这是一只牛奶。",
         "image": "<img src=\"assets/images/milk.png\" width=\"80\">",
         "sentence": "This is a milk.",
         "difficulty": "medium"
@@ -1224,7 +1272,7 @@ var unit4_lesson1 = {
       {
         "type": "read_word",
         "word": "bread",
-        "chinese": "面包",
+        "chinese": "这是面包。",
         "image": "<img src=\"assets/images/bread.png\" width=\"80\">",
         "sentence": "What do you like for breakfast?",
         "difficulty": "easy"
@@ -1232,7 +1280,7 @@ var unit4_lesson1 = {
       {
         "type": "debate",
         "word": "egg",
-        "chinese": "鸡蛋",
+        "chinese": "这是一只鸡蛋。",
         "image": "<img src=\"assets/images/egg.png\" width=\"80\">",
         "sentence": "This is a egg.",
         "difficulty": "medium"
@@ -1240,7 +1288,7 @@ var unit4_lesson1 = {
       {
         "type": "roleplay",
         "word": "noodle",
-        "chinese": "面条",
+        "chinese": "这是面条。",
         "image": "<img src=\"assets/images/noodle.png\" width=\"80\">",
         "sentence": "What do you like for breakfast?",
         "difficulty": "easy"
@@ -1248,7 +1296,7 @@ var unit4_lesson1 = {
       {
         "type": "debate",
         "word": "milk",
-        "chinese": "牛奶",
+        "chinese": "这是牛奶。",
         "image": "<img src=\"assets/images/milk.png\" width=\"80\">",
         "sentence": "What do you like for breakfast?",
         "difficulty": "hard"
@@ -1256,7 +1304,7 @@ var unit4_lesson1 = {
       {
         "type": "debate",
         "word": "bread",
-        "chinese": "面包",
+        "chinese": "这是面包。",
         "image": "<img src=\"assets/images/bread.png\" width=\"80\">",
         "sentence": "What do you like for breakfast?",
         "difficulty": "medium"
@@ -1264,7 +1312,7 @@ var unit4_lesson1 = {
       {
         "type": "roleplay",
         "word": "egg",
-        "chinese": "鸡蛋",
+        "chinese": "这是鸡蛋。",
         "image": "<img src=\"assets/images/egg.png\" width=\"80\">",
         "sentence": "What do you like for breakfast?",
         "difficulty": "hard"
@@ -1272,7 +1320,7 @@ var unit4_lesson1 = {
       {
         "type": "shadowing",
         "word": "noodle",
-        "chinese": "面条",
+        "chinese": "这是一只面条。",
         "image": "<img src=\"assets/images/noodle.png\" width=\"80\">",
         "sentence": "This is a noodle.",
         "difficulty": "medium"
@@ -1280,7 +1328,7 @@ var unit4_lesson1 = {
       {
         "type": "debate",
         "word": "milk",
-        "chinese": "牛奶",
+        "chinese": "这是牛奶。",
         "image": "<img src=\"assets/images/milk.png\" width=\"80\">",
         "sentence": "What do you like for breakfast?",
         "difficulty": "easy"
@@ -1288,7 +1336,7 @@ var unit4_lesson1 = {
       {
         "type": "shadowing",
         "word": "bread",
-        "chinese": "面包",
+        "chinese": "这是面包。",
         "image": "<img src=\"assets/images/bread.png\" width=\"80\">",
         "sentence": "What do you like for breakfast?",
         "difficulty": "hard"
@@ -1296,7 +1344,7 @@ var unit4_lesson1 = {
       {
         "type": "roleplay",
         "word": "egg",
-        "chinese": "鸡蛋",
+        "chinese": "这是鸡蛋。",
         "image": "<img src=\"assets/images/egg.png\" width=\"80\">",
         "sentence": "What do you like for breakfast?",
         "difficulty": "hard"
@@ -1304,7 +1352,7 @@ var unit4_lesson1 = {
       {
         "type": "roleplay",
         "word": "noodle",
-        "chinese": "面条",
+        "chinese": "这是面条。",
         "image": "<img src=\"assets/images/noodle.png\" width=\"80\">",
         "sentence": "What do you like for breakfast?",
         "difficulty": "easy"

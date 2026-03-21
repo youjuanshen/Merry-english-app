@@ -6,7 +6,7 @@ var unit3_lesson4 = {
       {
         "type": "listen_tf",
         "audio": "homework",
-        "chinese": "作业",
+        "chinese": "现在是homework点。",
         "options": [
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
           "<img src=\"assets/images/dog.png\" width=\"80\">",
@@ -19,7 +19,7 @@ var unit3_lesson4 = {
       {
         "type": "listen_tf",
         "audio": "sleep",
-        "chinese": "睡觉",
+        "chinese": "我正在睡觉。",
         "options": [
           "<img src=\"assets/images/sleeping.png\" width=\"80\">",
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
@@ -32,7 +32,7 @@ var unit3_lesson4 = {
       {
         "type": "listen_select",
         "audio": "picture",
-        "chinese": "图片",
+        "chinese": "现在是picture点。",
         "options": [
           "<img src=\"assets/images/dog.png\" width=\"80\">",
           "<img src=\"assets/images/sleeping.png\" width=\"80\">",
@@ -45,7 +45,7 @@ var unit3_lesson4 = {
       {
         "type": "listen_tf",
         "audio": "play",
-        "chinese": "玩耍",
+        "chinese": "我正在玩耍。",
         "options": [
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
           "<img src=\"assets/images/sleeping.png\" width=\"80\">",
@@ -58,7 +58,7 @@ var unit3_lesson4 = {
       {
         "type": "listen_select",
         "audio": "homework",
-        "chinese": "作业",
+        "chinese": "现在是homework点。",
         "options": [
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
           "<img src=\"assets/images/dog.png\" width=\"80\">",
@@ -71,7 +71,7 @@ var unit3_lesson4 = {
       {
         "type": "listen_select",
         "audio": "sleep",
-        "chinese": "睡觉",
+        "chinese": "我正在睡觉。",
         "options": [
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
           "<img src=\"assets/images/dog.png\" width=\"80\">",
@@ -84,7 +84,7 @@ var unit3_lesson4 = {
       {
         "type": "listen_select",
         "audio": "picture",
-        "chinese": "图片",
+        "chinese": "现在是picture点。",
         "options": [
           "<img src=\"assets/images/sleeping.png\" width=\"80\">",
           "<img src=\"assets/images/dog.png\" width=\"80\">",
@@ -97,7 +97,7 @@ var unit3_lesson4 = {
       {
         "type": "listen_select",
         "audio": "play",
-        "chinese": "玩耍",
+        "chinese": "我正在玩耍。",
         "options": [
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
           "<img src=\"assets/images/dog.png\" width=\"80\">",
@@ -110,7 +110,7 @@ var unit3_lesson4 = {
       {
         "type": "listen_select",
         "audio": "homework",
-        "chinese": "作业",
+        "chinese": "现在是homework点。",
         "options": [
           "<img src=\"assets/images/homework.png\" width=\"80\">",
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
@@ -123,7 +123,7 @@ var unit3_lesson4 = {
       {
         "type": "listen_tf",
         "audio": "sleep",
-        "chinese": "睡觉",
+        "chinese": "我正在睡觉。",
         "options": [
           "<img src=\"assets/images/dog.png\" width=\"80\">",
           "<img src=\"assets/images/sleeping.png\" width=\"80\">",
@@ -138,7 +138,7 @@ var unit3_lesson4 = {
       {
         "type": "scenario",
         "audio": "homework",
-        "chinese": "作业",
+        "chinese": "现在是homework点。",
         "options": [
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
           "<img src=\"assets/images/dog.png\" width=\"80\">",
@@ -155,7 +155,7 @@ var unit3_lesson4 = {
       {
         "type": "scenario",
         "audio": "sleep",
-        "chinese": "睡觉",
+        "chinese": "我正在睡觉。",
         "options": [
           "<img src=\"assets/images/sleeping.png\" width=\"80\">",
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
@@ -172,7 +172,7 @@ var unit3_lesson4 = {
       {
         "type": "balloon_pop",
         "audio": "picture",
-        "chinese": "图片",
+        "chinese": "现在是picture点。",
         "options": [
           "<img src=\"assets/images/dog.png\" width=\"80\">",
           "<img src=\"assets/images/sleeping.png\" width=\"80\">",
@@ -189,7 +189,7 @@ var unit3_lesson4 = {
       {
         "type": "listen_select",
         "audio": "play",
-        "chinese": "玩耍",
+        "chinese": "我正在玩耍。",
         "options": [
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
           "<img src=\"assets/images/sleeping.png\" width=\"80\">",
@@ -206,7 +206,7 @@ var unit3_lesson4 = {
       {
         "type": "listen_select",
         "audio": "homework",
-        "chinese": "作业",
+        "chinese": "现在是homework点。",
         "options": [
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
           "<img src=\"assets/images/dog.png\" width=\"80\">",
@@ -223,7 +223,7 @@ var unit3_lesson4 = {
       {
         "type": "scenario",
         "audio": "sleep",
-        "chinese": "睡觉",
+        "chinese": "我正在睡觉。",
         "options": [
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
           "<img src=\"assets/images/dog.png\" width=\"80\">",
@@ -240,7 +240,7 @@ var unit3_lesson4 = {
       {
         "type": "balloon_pop",
         "audio": "picture",
-        "chinese": "图片",
+        "chinese": "现在是picture点。",
         "options": [
           "<img src=\"assets/images/sleeping.png\" width=\"80\">",
           "<img src=\"assets/images/dog.png\" width=\"80\">",
@@ -257,7 +257,7 @@ var unit3_lesson4 = {
       {
         "type": "balloon_pop",
         "audio": "play",
-        "chinese": "玩耍",
+        "chinese": "我正在玩耍。",
         "options": [
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
           "<img src=\"assets/images/dog.png\" width=\"80\">",
@@ -274,7 +274,7 @@ var unit3_lesson4 = {
       {
         "type": "scenario",
         "audio": "homework",
-        "chinese": "作业",
+        "chinese": "现在是homework点。",
         "options": [
           "<img src=\"assets/images/homework.png\" width=\"80\">",
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
@@ -291,7 +291,7 @@ var unit3_lesson4 = {
       {
         "type": "duo_listen_select",
         "audio": "sleep",
-        "chinese": "睡觉",
+        "chinese": "我正在睡觉。",
         "options": [
           "<img src=\"assets/images/dog.png\" width=\"80\">",
           "<img src=\"assets/images/sleeping.png\" width=\"80\">",
@@ -308,7 +308,7 @@ var unit3_lesson4 = {
       {
         "type": "duo_listen_select",
         "audio": "picture",
-        "chinese": "图片",
+        "chinese": "现在是picture点。",
         "options": [
           "<img src=\"assets/images/homework.png\" width=\"80\">",
           "<img src=\"assets/images/dog.png\" width=\"80\">",
@@ -325,7 +325,7 @@ var unit3_lesson4 = {
       {
         "type": "scenario",
         "audio": "play",
-        "chinese": "玩耍",
+        "chinese": "我正在玩耍。",
         "options": [
           "<img src=\"assets/images/homework.png\" width=\"80\">",
           "<img src=\"assets/images/sleeping.png\" width=\"80\">",
@@ -345,7 +345,7 @@ var unit3_lesson4 = {
     "pretest": [
       {
         "type": "word_match",
-        "chinese": "作业",
+        "chinese": "这是作业。",
         "word": "homework",
         "sentence": "It's time to do my homework.",
         "options": [
@@ -370,7 +370,7 @@ var unit3_lesson4 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "睡觉",
+        "chinese": "我正在睡觉。",
         "word": "sleep",
         "sentence": "I'm sleeping.",
         "options": [
@@ -395,7 +395,7 @@ var unit3_lesson4 = {
       },
       {
         "type": "word_match",
-        "chinese": "图片",
+        "chinese": "我画了一幅画。",
         "word": "picture",
         "sentence": "I draw a picture.",
         "options": [
@@ -406,13 +406,21 @@ var unit3_lesson4 = {
           {
             "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
             "value": "picture"
+          },
+          {
+            "text": "<img src=\"assets/images/one.png\" width=\"80\">",
+            "value": "one"
+          },
+          {
+            "text": "<img src=\"assets/images/nine.png\" width=\"80\">",
+            "value": "nine"
           }
         ],
         "correct": "picture"
       },
       {
         "type": "sentence_match",
-        "chinese": "玩耍",
+        "chinese": "这是玩耍。",
         "word": "play",
         "sentence": "It's time to do my homework.",
         "options": [
@@ -437,7 +445,7 @@ var unit3_lesson4 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "作业",
+        "chinese": "我正在做作业。",
         "word": "homework",
         "sentence": "I'm doing my homework.",
         "options": [
@@ -448,13 +456,21 @@ var unit3_lesson4 = {
           {
             "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
             "value": "picture"
+          },
+          {
+            "text": "<img src=\"assets/images/twelve.png\" width=\"80\">",
+            "value": "twelve"
+          },
+          {
+            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
+            "value": "ten"
           }
         ],
         "correct": "homework"
       },
       {
         "type": "word_match",
-        "chinese": "睡觉",
+        "chinese": "我正在睡觉。",
         "word": "sleep",
         "sentence": "I'm sleeping.",
         "options": [
@@ -479,7 +495,7 @@ var unit3_lesson4 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "图片",
+        "chinese": "这是图片。",
         "word": "picture",
         "sentence": "It's time to do my homework.",
         "options": [
@@ -504,7 +520,7 @@ var unit3_lesson4 = {
       },
       {
         "type": "word_match",
-        "chinese": "玩耍",
+        "chinese": "我正在玩耍。",
         "word": "play",
         "sentence": "I'm playing.",
         "options": [
@@ -515,13 +531,21 @@ var unit3_lesson4 = {
           {
             "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
             "value": "play"
+          },
+          {
+            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
+            "value": "eight"
+          },
+          {
+            "text": "<img src=\"assets/images/six.png\" width=\"80\">",
+            "value": "six"
           }
         ],
         "correct": "play"
       },
       {
         "type": "sentence_match",
-        "chinese": "作业",
+        "chinese": "这是作业。",
         "word": "homework",
         "sentence": "It's time to do my homework.",
         "options": [
@@ -546,7 +570,7 @@ var unit3_lesson4 = {
       },
       {
         "type": "word_match",
-        "chinese": "睡觉",
+        "chinese": "这是睡觉。",
         "word": "sleep",
         "sentence": "It's time to do my homework.",
         "options": [
@@ -557,6 +581,14 @@ var unit3_lesson4 = {
           {
             "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
             "value": "picture"
+          },
+          {
+            "text": "<img src=\"assets/images/seven.png\" width=\"80\">",
+            "value": "seven"
+          },
+          {
+            "text": "<img src=\"assets/images/six.png\" width=\"80\">",
+            "value": "six"
           }
         ],
         "correct": "sleep"
@@ -565,7 +597,7 @@ var unit3_lesson4 = {
     "practice": [
       {
         "type": "word_match",
-        "chinese": "作业",
+        "chinese": "这是作业。",
         "word": "homework",
         "sentence": "It's time to go to bed.",
         "options": [
@@ -591,7 +623,7 @@ var unit3_lesson4 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "睡觉",
+        "chinese": "这是睡觉。",
         "word": "sleep",
         "sentence": "It's time to go to bed.",
         "options": [
@@ -617,7 +649,7 @@ var unit3_lesson4 = {
       },
       {
         "type": "duo_race",
-        "chinese": "图片",
+        "chinese": "这是图片。",
         "word": "picture",
         "sentence": "It's time to go to bed.",
         "options": [
@@ -631,7 +663,7 @@ var unit3_lesson4 = {
       },
       {
         "type": "word_match",
-        "chinese": "玩耍",
+        "chinese": "这是玩耍。",
         "word": "play",
         "sentence": "It's time to go to bed.",
         "options": [
@@ -657,7 +689,7 @@ var unit3_lesson4 = {
       },
       {
         "type": "duo_race",
-        "chinese": "作业",
+        "chinese": "这是作业。",
         "word": "homework",
         "sentence": "It's time to go to bed.",
         "options": [
@@ -671,7 +703,7 @@ var unit3_lesson4 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "睡觉",
+        "chinese": "我正在睡觉。",
         "word": "sleep",
         "sentence": "I'm sleeping.",
         "options": [
@@ -697,7 +729,7 @@ var unit3_lesson4 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "图片",
+        "chinese": "我画了一幅画。",
         "word": "picture",
         "sentence": "I draw a picture.",
         "options": [
@@ -723,7 +755,7 @@ var unit3_lesson4 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "玩耍",
+        "chinese": "这是玩耍。",
         "word": "play",
         "sentence": "It's time to go to bed.",
         "options": [
@@ -749,7 +781,7 @@ var unit3_lesson4 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "作业",
+        "chinese": "我正在做作业。",
         "word": "homework",
         "sentence": "I'm doing my homework.",
         "options": [
@@ -775,7 +807,7 @@ var unit3_lesson4 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "睡觉",
+        "chinese": "我正在睡觉。",
         "word": "sleep",
         "sentence": "I'm sleeping.",
         "options": [
@@ -789,7 +821,7 @@ var unit3_lesson4 = {
       },
       {
         "type": "word_match",
-        "chinese": "图片",
+        "chinese": "我画了一幅画。",
         "word": "picture",
         "sentence": "I draw a picture.",
         "options": [
@@ -815,7 +847,7 @@ var unit3_lesson4 = {
       },
       {
         "type": "word_match",
-        "chinese": "玩耍",
+        "chinese": "我正在玩耍。",
         "word": "play",
         "sentence": "I'm playing.",
         "options": [
@@ -846,7 +878,7 @@ var unit3_lesson4 = {
       {
         "type": "word_spell",
         "word": "homework",
-        "chinese": "作业",
+        "chinese": "现在是homework点。",
         "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
         "display": "_omework",
         "options": [
@@ -860,7 +892,7 @@ var unit3_lesson4 = {
       {
         "type": "letter_select",
         "word": "sleep",
-        "chinese": "睡觉",
+        "chinese": "我正在睡觉。",
         "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
         "display": "sl_ep",
         "options": [
@@ -874,7 +906,7 @@ var unit3_lesson4 = {
       {
         "type": "word_spell",
         "word": "picture",
-        "chinese": "图片",
+        "chinese": "现在是picture点。",
         "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
         "display": "pictu_e",
         "options": [
@@ -888,7 +920,7 @@ var unit3_lesson4 = {
       {
         "type": "letter_select",
         "word": "play",
-        "chinese": "玩耍",
+        "chinese": "我正在玩耍。",
         "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
         "display": "pla_",
         "options": [
@@ -902,7 +934,7 @@ var unit3_lesson4 = {
       {
         "type": "letter_select",
         "word": "homework",
-        "chinese": "作业",
+        "chinese": "现在是homework点。",
         "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
         "display": "homewor_",
         "options": [
@@ -916,7 +948,7 @@ var unit3_lesson4 = {
       {
         "type": "word_spell",
         "word": "sleep",
-        "chinese": "睡觉",
+        "chinese": "我正在睡觉。",
         "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
         "display": "sle_p",
         "options": [
@@ -930,7 +962,7 @@ var unit3_lesson4 = {
       {
         "type": "word_spell",
         "word": "picture",
-        "chinese": "图片",
+        "chinese": "现在是picture点。",
         "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
         "display": "pictu_e",
         "options": [
@@ -944,7 +976,7 @@ var unit3_lesson4 = {
       {
         "type": "word_spell",
         "word": "play",
-        "chinese": "玩耍",
+        "chinese": "我正在玩耍。",
         "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
         "display": "pl_y",
         "options": [
@@ -958,7 +990,7 @@ var unit3_lesson4 = {
       {
         "type": "letter_select",
         "word": "homework",
-        "chinese": "作业",
+        "chinese": "现在是homework点。",
         "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
         "display": "homew_rk",
         "options": [
@@ -972,7 +1004,7 @@ var unit3_lesson4 = {
       {
         "type": "word_spell",
         "word": "sleep",
-        "chinese": "睡觉",
+        "chinese": "我正在睡觉。",
         "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
         "display": "slee_",
         "options": [
@@ -988,7 +1020,7 @@ var unit3_lesson4 = {
       {
         "type": "duo_spell",
         "word": "homework",
-        "chinese": "作业",
+        "chinese": "现在是homework点。",
         "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
         "display": "_omework",
         "options": [
@@ -1007,7 +1039,7 @@ var unit3_lesson4 = {
       {
         "type": "letter_select",
         "word": "sleep",
-        "chinese": "睡觉",
+        "chinese": "我正在睡觉。",
         "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
         "display": "sl_ep",
         "options": [
@@ -1026,7 +1058,7 @@ var unit3_lesson4 = {
       {
         "type": "duo_spell",
         "word": "picture",
-        "chinese": "图片",
+        "chinese": "现在是picture点。",
         "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
         "display": "pictu_e",
         "options": [
@@ -1045,7 +1077,7 @@ var unit3_lesson4 = {
       {
         "type": "letter_select",
         "word": "play",
-        "chinese": "玩耍",
+        "chinese": "我正在玩耍。",
         "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
         "display": "pla_",
         "options": [
@@ -1064,7 +1096,7 @@ var unit3_lesson4 = {
       {
         "type": "letter_select",
         "word": "homework",
-        "chinese": "作业",
+        "chinese": "现在是homework点。",
         "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
         "display": "homewor_",
         "options": [
@@ -1083,7 +1115,7 @@ var unit3_lesson4 = {
       {
         "type": "word_spell",
         "word": "sleep",
-        "chinese": "睡觉",
+        "chinese": "我正在睡觉。",
         "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
         "display": "sle_p",
         "options": [
@@ -1102,7 +1134,7 @@ var unit3_lesson4 = {
       {
         "type": "letter_select",
         "word": "picture",
-        "chinese": "图片",
+        "chinese": "现在是picture点。",
         "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
         "display": "pictu_e",
         "options": [
@@ -1121,7 +1153,7 @@ var unit3_lesson4 = {
       {
         "type": "letter_select",
         "word": "play",
-        "chinese": "玩耍",
+        "chinese": "我正在玩耍。",
         "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
         "display": "pl_y",
         "options": [
@@ -1140,7 +1172,7 @@ var unit3_lesson4 = {
       {
         "type": "duo_spell",
         "word": "homework",
-        "chinese": "作业",
+        "chinese": "现在是homework点。",
         "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
         "display": "homew_rk",
         "options": [
@@ -1159,7 +1191,7 @@ var unit3_lesson4 = {
       {
         "type": "letter_select",
         "word": "sleep",
-        "chinese": "睡觉",
+        "chinese": "我正在睡觉。",
         "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
         "display": "slee_",
         "options": [
@@ -1178,7 +1210,7 @@ var unit3_lesson4 = {
       {
         "type": "word_spell",
         "word": "picture",
-        "chinese": "图片",
+        "chinese": "现在是picture点。",
         "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
         "display": "p_cture",
         "options": [
@@ -1197,7 +1229,7 @@ var unit3_lesson4 = {
       {
         "type": "word_spell",
         "word": "play",
-        "chinese": "玩耍",
+        "chinese": "我正在玩耍。",
         "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
         "display": "_lay",
         "options": [
@@ -1220,70 +1252,70 @@ var unit3_lesson4 = {
       {
         "type": "shadowing",
         "word": "homework",
-        "chinese": "作业",
+        "chinese": "这是作业。",
         "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
         "sentence": "It's time to do my homework."
       },
       {
         "type": "shadowing",
         "word": "sleep",
-        "chinese": "睡觉",
+        "chinese": "这是睡觉。",
         "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
         "sentence": "It's time to do my homework."
       },
       {
         "type": "read_word",
         "word": "picture",
-        "chinese": "图片",
+        "chinese": "我喜欢picture。",
         "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
         "sentence": "I like picture."
       },
       {
         "type": "shadowing",
         "word": "play",
-        "chinese": "玩耍",
+        "chinese": "这是玩耍。",
         "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
         "sentence": "It's time to do my homework."
       },
       {
         "type": "read_word",
         "word": "homework",
-        "chinese": "作业",
+        "chinese": "我喜欢homework。",
         "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
         "sentence": "I like homework."
       },
       {
         "type": "read_word",
         "word": "sleep",
-        "chinese": "睡觉",
+        "chinese": "这是睡觉。",
         "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
         "sentence": "It's time to do my homework."
       },
       {
         "type": "read_word",
         "word": "picture",
-        "chinese": "图片",
+        "chinese": "这是图片。",
         "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
         "sentence": "It's time to do my homework."
       },
       {
         "type": "shadowing",
         "word": "play",
-        "chinese": "玩耍",
+        "chinese": "这是玩耍。",
         "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
         "sentence": "It's time to do my homework."
       },
       {
         "type": "shadowing",
         "word": "homework",
-        "chinese": "作业",
+        "chinese": "我喜欢homework。",
         "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
         "sentence": "I like homework."
       },
       {
         "type": "read_word",
         "word": "sleep",
-        "chinese": "睡觉",
+        "chinese": "这是睡觉。",
         "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
         "sentence": "It's time to do my homework."
       }
@@ -1292,7 +1324,7 @@ var unit3_lesson4 = {
       {
         "type": "debate",
         "word": "homework",
-        "chinese": "作业",
+        "chinese": "这是作业。",
         "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
         "sentence": "It's time to go to bed.",
         "difficulty": "hard"
@@ -1300,7 +1332,7 @@ var unit3_lesson4 = {
       {
         "type": "roleplay",
         "word": "sleep",
-        "chinese": "睡觉",
+        "chinese": "这是睡觉。",
         "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
         "sentence": "It's time to go to bed.",
         "difficulty": "easy"
@@ -1308,7 +1340,7 @@ var unit3_lesson4 = {
       {
         "type": "debate",
         "word": "picture",
-        "chinese": "图片",
+        "chinese": "这是一只picture。",
         "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
         "sentence": "This is a picture.",
         "difficulty": "easy"
@@ -1316,7 +1348,7 @@ var unit3_lesson4 = {
       {
         "type": "debate",
         "word": "play",
-        "chinese": "玩耍",
+        "chinese": "这是一只玩耍。",
         "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
         "sentence": "This is a play.",
         "difficulty": "easy"
@@ -1324,7 +1356,7 @@ var unit3_lesson4 = {
       {
         "type": "shadowing",
         "word": "homework",
-        "chinese": "作业",
+        "chinese": "这是作业。",
         "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
         "sentence": "It's time to go to bed.",
         "difficulty": "easy"
@@ -1332,7 +1364,7 @@ var unit3_lesson4 = {
       {
         "type": "shadowing",
         "word": "sleep",
-        "chinese": "睡觉",
+        "chinese": "这是一只睡觉。",
         "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
         "sentence": "This is a sleep.",
         "difficulty": "hard"
@@ -1340,7 +1372,7 @@ var unit3_lesson4 = {
       {
         "type": "debate",
         "word": "picture",
-        "chinese": "图片",
+        "chinese": "这是一只picture。",
         "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
         "sentence": "This is a picture.",
         "difficulty": "easy"
@@ -1348,7 +1380,7 @@ var unit3_lesson4 = {
       {
         "type": "shadowing",
         "word": "play",
-        "chinese": "玩耍",
+        "chinese": "这是一只玩耍。",
         "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
         "sentence": "This is a play.",
         "difficulty": "easy"
@@ -1356,7 +1388,7 @@ var unit3_lesson4 = {
       {
         "type": "read_word",
         "word": "homework",
-        "chinese": "作业",
+        "chinese": "这是一只homework。",
         "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
         "sentence": "This is a homework.",
         "difficulty": "easy"
@@ -1364,7 +1396,7 @@ var unit3_lesson4 = {
       {
         "type": "shadowing",
         "word": "sleep",
-        "chinese": "睡觉",
+        "chinese": "这是一只睡觉。",
         "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
         "sentence": "This is a sleep.",
         "difficulty": "easy"
@@ -1372,7 +1404,7 @@ var unit3_lesson4 = {
       {
         "type": "shadowing",
         "word": "picture",
-        "chinese": "图片",
+        "chinese": "这是图片。",
         "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
         "sentence": "It's time to go to bed.",
         "difficulty": "hard"
@@ -1380,7 +1412,7 @@ var unit3_lesson4 = {
       {
         "type": "roleplay",
         "word": "play",
-        "chinese": "玩耍",
+        "chinese": "这是玩耍。",
         "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
         "sentence": "It's time to go to bed.",
         "difficulty": "hard"

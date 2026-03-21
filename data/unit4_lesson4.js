@@ -6,7 +6,7 @@ var unit4_lesson4 = {
       {
         "type": "listen_tf",
         "audio": "rice",
-        "chinese": "米饭",
+        "chinese": "我喜欢米饭。",
         "options": [
           "<img src=\"assets/images/soup.png\" width=\"80\">",
           "<img src=\"assets/images/vegetable.png\" width=\"80\">",
@@ -19,7 +19,7 @@ var unit4_lesson4 = {
       {
         "type": "listen_tf",
         "audio": "soup",
-        "chinese": "汤",
+        "chinese": "我喜欢汤。",
         "options": [
           "<img src=\"assets/images/vegetable.png\" width=\"80\">",
           "<img src=\"assets/images/chicken.png\" width=\"80\">",
@@ -32,7 +32,7 @@ var unit4_lesson4 = {
       {
         "type": "listen_select",
         "audio": "chicken",
-        "chinese": "鸡肉",
+        "chinese": "我喜欢鸡肉。",
         "options": [
           "<img src=\"assets/images/vegetable.png\" width=\"80\">",
           "<img src=\"assets/images/soup.png\" width=\"80\">",
@@ -45,7 +45,7 @@ var unit4_lesson4 = {
       {
         "type": "listen_tf",
         "audio": "vegetable",
-        "chinese": "蔬菜",
+        "chinese": "我喜欢蔬菜。",
         "options": [
           "<img src=\"assets/images/vegetable.png\" width=\"80\">",
           "<img src=\"assets/images/rice.png\" width=\"80\">",
@@ -58,7 +58,7 @@ var unit4_lesson4 = {
       {
         "type": "listen_tf",
         "audio": "rice",
-        "chinese": "米饭",
+        "chinese": "我喜欢米饭。",
         "options": [
           "<img src=\"assets/images/chicken.png\" width=\"80\">",
           "<img src=\"assets/images/rice.png\" width=\"80\">",
@@ -71,7 +71,7 @@ var unit4_lesson4 = {
       {
         "type": "listen_select",
         "audio": "soup",
-        "chinese": "汤",
+        "chinese": "我喜欢汤。",
         "options": [
           "<img src=\"assets/images/rice.png\" width=\"80\">",
           "<img src=\"assets/images/vegetable.png\" width=\"80\">",
@@ -84,7 +84,7 @@ var unit4_lesson4 = {
       {
         "type": "listen_tf",
         "audio": "chicken",
-        "chinese": "鸡肉",
+        "chinese": "我喜欢鸡肉。",
         "options": [
           "<img src=\"assets/images/rice.png\" width=\"80\">",
           "<img src=\"assets/images/soup.png\" width=\"80\">",
@@ -97,7 +97,7 @@ var unit4_lesson4 = {
       {
         "type": "listen_tf",
         "audio": "vegetable",
-        "chinese": "蔬菜",
+        "chinese": "我喜欢蔬菜。",
         "options": [
           "<img src=\"assets/images/soup.png\" width=\"80\">",
           "<img src=\"assets/images/chicken.png\" width=\"80\">",
@@ -110,7 +110,7 @@ var unit4_lesson4 = {
       {
         "type": "listen_tf",
         "audio": "rice",
-        "chinese": "米饭",
+        "chinese": "我喜欢米饭。",
         "options": [
           "<img src=\"assets/images/soup.png\" width=\"80\">",
           "<img src=\"assets/images/vegetable.png\" width=\"80\">",
@@ -123,7 +123,7 @@ var unit4_lesson4 = {
       {
         "type": "listen_select",
         "audio": "soup",
-        "chinese": "汤",
+        "chinese": "我喜欢汤。",
         "options": [
           "<img src=\"assets/images/rice.png\" width=\"80\">",
           "<img src=\"assets/images/vegetable.png\" width=\"80\">",
@@ -138,7 +138,7 @@ var unit4_lesson4 = {
       {
         "type": "scenario",
         "audio": "rice",
-        "chinese": "米饭",
+        "chinese": "我喜欢米饭。",
         "options": [
           "<img src=\"assets/images/soup.png\" width=\"80\">",
           "<img src=\"assets/images/vegetable.png\" width=\"80\">",
@@ -155,7 +155,7 @@ var unit4_lesson4 = {
       {
         "type": "listen_select",
         "audio": "soup",
-        "chinese": "汤",
+        "chinese": "我喜欢汤。",
         "options": [
           "<img src=\"assets/images/vegetable.png\" width=\"80\">",
           "<img src=\"assets/images/chicken.png\" width=\"80\">",
@@ -172,7 +172,7 @@ var unit4_lesson4 = {
       {
         "type": "listen_select",
         "audio": "chicken",
-        "chinese": "鸡肉",
+        "chinese": "我喜欢鸡肉。",
         "options": [
           "<img src=\"assets/images/vegetable.png\" width=\"80\">",
           "<img src=\"assets/images/soup.png\" width=\"80\">",
@@ -189,7 +189,7 @@ var unit4_lesson4 = {
       {
         "type": "scenario",
         "audio": "vegetable",
-        "chinese": "蔬菜",
+        "chinese": "我喜欢蔬菜。",
         "options": [
           "<img src=\"assets/images/vegetable.png\" width=\"80\">",
           "<img src=\"assets/images/rice.png\" width=\"80\">",
@@ -206,7 +206,7 @@ var unit4_lesson4 = {
       {
         "type": "scenario",
         "audio": "rice",
-        "chinese": "米饭",
+        "chinese": "我喜欢米饭。",
         "options": [
           "<img src=\"assets/images/chicken.png\" width=\"80\">",
           "<img src=\"assets/images/rice.png\" width=\"80\">",
@@ -223,7 +223,7 @@ var unit4_lesson4 = {
       {
         "type": "balloon_pop",
         "audio": "soup",
-        "chinese": "汤",
+        "chinese": "我喜欢汤。",
         "options": [
           "<img src=\"assets/images/rice.png\" width=\"80\">",
           "<img src=\"assets/images/vegetable.png\" width=\"80\">",
@@ -240,7 +240,7 @@ var unit4_lesson4 = {
       {
         "type": "scenario",
         "audio": "chicken",
-        "chinese": "鸡肉",
+        "chinese": "我喜欢鸡肉。",
         "options": [
           "<img src=\"assets/images/rice.png\" width=\"80\">",
           "<img src=\"assets/images/soup.png\" width=\"80\">",
@@ -257,7 +257,7 @@ var unit4_lesson4 = {
       {
         "type": "balloon_pop",
         "audio": "vegetable",
-        "chinese": "蔬菜",
+        "chinese": "我喜欢蔬菜。",
         "options": [
           "<img src=\"assets/images/soup.png\" width=\"80\">",
           "<img src=\"assets/images/chicken.png\" width=\"80\">",
@@ -274,7 +274,7 @@ var unit4_lesson4 = {
       {
         "type": "balloon_pop",
         "audio": "rice",
-        "chinese": "米饭",
+        "chinese": "我喜欢米饭。",
         "options": [
           "<img src=\"assets/images/soup.png\" width=\"80\">",
           "<img src=\"assets/images/vegetable.png\" width=\"80\">",
@@ -291,7 +291,7 @@ var unit4_lesson4 = {
       {
         "type": "listen_select",
         "audio": "soup",
-        "chinese": "汤",
+        "chinese": "我喜欢汤。",
         "options": [
           "<img src=\"assets/images/rice.png\" width=\"80\">",
           "<img src=\"assets/images/vegetable.png\" width=\"80\">",
@@ -308,7 +308,7 @@ var unit4_lesson4 = {
       {
         "type": "listen_select",
         "audio": "chicken",
-        "chinese": "鸡肉",
+        "chinese": "我喜欢鸡肉。",
         "options": [
           "<img src=\"assets/images/chicken.png\" width=\"80\">",
           "<img src=\"assets/images/soup.png\" width=\"80\">",
@@ -325,7 +325,7 @@ var unit4_lesson4 = {
       {
         "type": "scenario",
         "audio": "vegetable",
-        "chinese": "蔬菜",
+        "chinese": "我喜欢蔬菜。",
         "options": [
           "<img src=\"assets/images/soup.png\" width=\"80\">",
           "<img src=\"assets/images/chicken.png\" width=\"80\">",
@@ -345,7 +345,7 @@ var unit4_lesson4 = {
     "pretest": [
       {
         "type": "sentence_match",
-        "chinese": "米饭",
+        "chinese": "这是米饭。",
         "word": "rice",
         "sentence": "What's for dinner today?",
         "options": [
@@ -370,7 +370,7 @@ var unit4_lesson4 = {
       },
       {
         "type": "word_match",
-        "chinese": "汤",
+        "chinese": "这是汤。",
         "word": "soup",
         "sentence": "What's for dinner today?",
         "options": [
@@ -381,13 +381,21 @@ var unit4_lesson4 = {
           {
             "text": "<img src=\"assets/images/rice.png\" width=\"80\">",
             "value": "rice"
+          },
+          {
+            "text": "<img src=\"assets/images/salad.png\" width=\"80\">",
+            "value": "salad"
+          },
+          {
+            "text": "<img src=\"assets/images/soup.png\" width=\"80\">",
+            "value": "soup"
           }
         ],
         "correct": "soup"
       },
       {
         "type": "word_match",
-        "chinese": "鸡肉",
+        "chinese": "这是鸡肉。",
         "word": "chicken",
         "sentence": "What's for dinner today?",
         "options": [
@@ -398,13 +406,21 @@ var unit4_lesson4 = {
           {
             "text": "<img src=\"assets/images/chicken.png\" width=\"80\">",
             "value": "chicken"
+          },
+          {
+            "text": "<img src=\"assets/images/egg.png\" width=\"80\">",
+            "value": "egg"
+          },
+          {
+            "text": "<img src=\"assets/images/banana.png\" width=\"80\">",
+            "value": "banana"
           }
         ],
         "correct": "chicken"
       },
       {
         "type": "word_match",
-        "chinese": "蔬菜",
+        "chinese": "这是蔬菜。",
         "word": "vegetable",
         "sentence": "What's for dinner today?",
         "options": [
@@ -429,7 +445,7 @@ var unit4_lesson4 = {
       },
       {
         "type": "word_match",
-        "chinese": "米饭",
+        "chinese": "我喜欢米饭。",
         "word": "rice",
         "sentence": "I like rice.",
         "options": [
@@ -440,13 +456,21 @@ var unit4_lesson4 = {
           {
             "text": "<img src=\"assets/images/soup.png\" width=\"80\">",
             "value": "soup"
+          },
+          {
+            "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+            "value": "hamburger"
+          },
+          {
+            "text": "<img src=\"assets/images/chicken.png\" width=\"80\">",
+            "value": "chicken"
           }
         ],
         "correct": "rice"
       },
       {
         "type": "word_match",
-        "chinese": "汤",
+        "chinese": "我喜欢汤。",
         "word": "soup",
         "sentence": "I like soup.",
         "options": [
@@ -457,13 +481,21 @@ var unit4_lesson4 = {
           {
             "text": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
             "value": "vegetable"
+          },
+          {
+            "text": "<img src=\"assets/images/egg.png\" width=\"80\">",
+            "value": "egg"
+          },
+          {
+            "text": "<img src=\"assets/images/banana.png\" width=\"80\">",
+            "value": "banana"
           }
         ],
         "correct": "soup"
       },
       {
         "type": "sentence_match",
-        "chinese": "鸡肉",
+        "chinese": "我喜欢鸡肉。",
         "word": "chicken",
         "sentence": "I like chicken.",
         "options": [
@@ -474,13 +506,21 @@ var unit4_lesson4 = {
           {
             "text": "<img src=\"assets/images/chicken.png\" width=\"80\">",
             "value": "chicken"
+          },
+          {
+            "text": "<img src=\"assets/images/juice.png\" width=\"80\">",
+            "value": "juice"
+          },
+          {
+            "text": "<img src=\"assets/images/noodles.png\" width=\"80\">",
+            "value": "noodles"
           }
         ],
         "correct": "chicken"
       },
       {
         "type": "word_match",
-        "chinese": "蔬菜",
+        "chinese": "我喜欢蔬菜。",
         "word": "vegetable",
         "sentence": "I like vegetables.",
         "options": [
@@ -491,13 +531,21 @@ var unit4_lesson4 = {
           {
             "text": "<img src=\"assets/images/soup.png\" width=\"80\">",
             "value": "soup"
+          },
+          {
+            "text": "<img src=\"assets/images/rice.png\" width=\"80\">",
+            "value": "rice"
+          },
+          {
+            "text": "<img src=\"assets/images/chicken.png\" width=\"80\">",
+            "value": "chicken"
           }
         ],
         "correct": "vegetable"
       },
       {
         "type": "sentence_match",
-        "chinese": "米饭",
+        "chinese": "我喜欢米饭。",
         "word": "rice",
         "sentence": "I like rice.",
         "options": [
@@ -522,7 +570,7 @@ var unit4_lesson4 = {
       },
       {
         "type": "word_match",
-        "chinese": "汤",
+        "chinese": "这是汤。",
         "word": "soup",
         "sentence": "What's for dinner today?",
         "options": [
@@ -533,6 +581,14 @@ var unit4_lesson4 = {
           {
             "text": "<img src=\"assets/images/chicken.png\" width=\"80\">",
             "value": "chicken"
+          },
+          {
+            "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
+            "value": "hamburger"
+          },
+          {
+            "text": "<img src=\"assets/images/egg.png\" width=\"80\">",
+            "value": "egg"
           }
         ],
         "correct": "soup"
@@ -541,7 +597,7 @@ var unit4_lesson4 = {
     "practice": [
       {
         "type": "duo_race",
-        "chinese": "米饭",
+        "chinese": "这是米饭。",
         "word": "rice",
         "sentence": "How about some Chinese food?",
         "options": [
@@ -567,7 +623,7 @@ var unit4_lesson4 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "汤",
+        "chinese": "这是汤。",
         "word": "soup",
         "sentence": "How about some Chinese food?",
         "options": [
@@ -593,7 +649,7 @@ var unit4_lesson4 = {
       },
       {
         "type": "word_match",
-        "chinese": "鸡肉",
+        "chinese": "这是鸡肉。",
         "word": "chicken",
         "sentence": "How about some Chinese food?",
         "options": [
@@ -607,7 +663,7 @@ var unit4_lesson4 = {
       },
       {
         "type": "word_match",
-        "chinese": "蔬菜",
+        "chinese": "这是蔬菜。",
         "word": "vegetable",
         "sentence": "How about some Chinese food?",
         "options": [
@@ -633,7 +689,7 @@ var unit4_lesson4 = {
       },
       {
         "type": "duo_race",
-        "chinese": "米饭",
+        "chinese": "这是米饭。",
         "word": "rice",
         "sentence": "How about some Chinese food?",
         "options": [
@@ -647,7 +703,7 @@ var unit4_lesson4 = {
       },
       {
         "type": "duo_race",
-        "chinese": "汤",
+        "chinese": "这是汤。",
         "word": "soup",
         "sentence": "How about some Chinese food?",
         "options": [
@@ -673,7 +729,7 @@ var unit4_lesson4 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "鸡肉",
+        "chinese": "我喜欢鸡肉。",
         "word": "chicken",
         "sentence": "I like chicken.",
         "options": [
@@ -687,7 +743,7 @@ var unit4_lesson4 = {
       },
       {
         "type": "duo_race",
-        "chinese": "蔬菜",
+        "chinese": "我喜欢蔬菜。",
         "word": "vegetable",
         "sentence": "I like vegetables.",
         "options": [
@@ -713,7 +769,7 @@ var unit4_lesson4 = {
       },
       {
         "type": "word_match",
-        "chinese": "米饭",
+        "chinese": "这是米饭。",
         "word": "rice",
         "sentence": "How about some Chinese food?",
         "options": [
@@ -727,7 +783,7 @@ var unit4_lesson4 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "汤",
+        "chinese": "我喜欢汤。",
         "word": "soup",
         "sentence": "I like soup.",
         "options": [
@@ -741,7 +797,7 @@ var unit4_lesson4 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "鸡肉",
+        "chinese": "这是鸡肉。",
         "word": "chicken",
         "sentence": "How about some Chinese food?",
         "options": [
@@ -755,7 +811,7 @@ var unit4_lesson4 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "蔬菜",
+        "chinese": "我喜欢蔬菜。",
         "word": "vegetable",
         "sentence": "I like vegetables.",
         "options": [
@@ -774,7 +830,7 @@ var unit4_lesson4 = {
       {
         "type": "letter_select",
         "word": "rice",
-        "chinese": "米饭",
+        "chinese": "我喜欢米饭。",
         "image": "<img src=\"assets/images/rice.png\" width=\"80\">",
         "display": "ric_",
         "options": [
@@ -788,7 +844,7 @@ var unit4_lesson4 = {
       {
         "type": "letter_select",
         "word": "soup",
-        "chinese": "汤",
+        "chinese": "我喜欢汤。",
         "image": "<img src=\"assets/images/soup.png\" width=\"80\">",
         "display": "s_up",
         "options": [
@@ -802,7 +858,7 @@ var unit4_lesson4 = {
       {
         "type": "word_spell",
         "word": "chicken",
-        "chinese": "鸡肉",
+        "chinese": "我喜欢鸡肉。",
         "image": "<img src=\"assets/images/chicken.png\" width=\"80\">",
         "display": "chi_ken",
         "options": [
@@ -816,7 +872,7 @@ var unit4_lesson4 = {
       {
         "type": "word_spell",
         "word": "vegetable",
-        "chinese": "蔬菜",
+        "chinese": "我喜欢蔬菜。",
         "image": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
         "display": "v_getable",
         "options": [
@@ -830,7 +886,7 @@ var unit4_lesson4 = {
       {
         "type": "word_spell",
         "word": "rice",
-        "chinese": "米饭",
+        "chinese": "我喜欢米饭。",
         "image": "<img src=\"assets/images/rice.png\" width=\"80\">",
         "display": "ric_",
         "options": [
@@ -844,7 +900,7 @@ var unit4_lesson4 = {
       {
         "type": "word_spell",
         "word": "soup",
-        "chinese": "汤",
+        "chinese": "我喜欢汤。",
         "image": "<img src=\"assets/images/soup.png\" width=\"80\">",
         "display": "_oup",
         "options": [
@@ -858,7 +914,7 @@ var unit4_lesson4 = {
       {
         "type": "letter_select",
         "word": "chicken",
-        "chinese": "鸡肉",
+        "chinese": "我喜欢鸡肉。",
         "image": "<img src=\"assets/images/chicken.png\" width=\"80\">",
         "display": "_hicken",
         "options": [
@@ -872,7 +928,7 @@ var unit4_lesson4 = {
       {
         "type": "letter_select",
         "word": "vegetable",
-        "chinese": "蔬菜",
+        "chinese": "我喜欢蔬菜。",
         "image": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
         "display": "vegetabl_",
         "options": [
@@ -886,7 +942,7 @@ var unit4_lesson4 = {
       {
         "type": "word_spell",
         "word": "rice",
-        "chinese": "米饭",
+        "chinese": "我喜欢米饭。",
         "image": "<img src=\"assets/images/rice.png\" width=\"80\">",
         "display": "ric_",
         "options": [
@@ -900,7 +956,7 @@ var unit4_lesson4 = {
       {
         "type": "letter_select",
         "word": "soup",
-        "chinese": "汤",
+        "chinese": "我喜欢汤。",
         "image": "<img src=\"assets/images/soup.png\" width=\"80\">",
         "display": "so_p",
         "options": [
@@ -916,7 +972,7 @@ var unit4_lesson4 = {
       {
         "type": "duo_spell",
         "word": "rice",
-        "chinese": "米饭",
+        "chinese": "我喜欢米饭。",
         "image": "<img src=\"assets/images/rice.png\" width=\"80\">",
         "display": "ric_",
         "options": [
@@ -935,7 +991,7 @@ var unit4_lesson4 = {
       {
         "type": "word_spell",
         "word": "soup",
-        "chinese": "汤",
+        "chinese": "我喜欢汤。",
         "image": "<img src=\"assets/images/soup.png\" width=\"80\">",
         "display": "s_up",
         "options": [
@@ -954,7 +1010,7 @@ var unit4_lesson4 = {
       {
         "type": "word_spell",
         "word": "chicken",
-        "chinese": "鸡肉",
+        "chinese": "我喜欢鸡肉。",
         "image": "<img src=\"assets/images/chicken.png\" width=\"80\">",
         "display": "chi_ken",
         "options": [
@@ -973,7 +1029,7 @@ var unit4_lesson4 = {
       {
         "type": "duo_spell",
         "word": "vegetable",
-        "chinese": "蔬菜",
+        "chinese": "我喜欢蔬菜。",
         "image": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
         "display": "v_getable",
         "options": [
@@ -992,7 +1048,7 @@ var unit4_lesson4 = {
       {
         "type": "letter_select",
         "word": "rice",
-        "chinese": "米饭",
+        "chinese": "我喜欢米饭。",
         "image": "<img src=\"assets/images/rice.png\" width=\"80\">",
         "display": "ric_",
         "options": [
@@ -1011,7 +1067,7 @@ var unit4_lesson4 = {
       {
         "type": "duo_spell",
         "word": "soup",
-        "chinese": "汤",
+        "chinese": "我喜欢汤。",
         "image": "<img src=\"assets/images/soup.png\" width=\"80\">",
         "display": "_oup",
         "options": [
@@ -1030,7 +1086,7 @@ var unit4_lesson4 = {
       {
         "type": "word_spell",
         "word": "chicken",
-        "chinese": "鸡肉",
+        "chinese": "我喜欢鸡肉。",
         "image": "<img src=\"assets/images/chicken.png\" width=\"80\">",
         "display": "_hicken",
         "options": [
@@ -1049,7 +1105,7 @@ var unit4_lesson4 = {
       {
         "type": "word_spell",
         "word": "vegetable",
-        "chinese": "蔬菜",
+        "chinese": "我喜欢蔬菜。",
         "image": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
         "display": "vegetabl_",
         "options": [
@@ -1068,7 +1124,7 @@ var unit4_lesson4 = {
       {
         "type": "word_spell",
         "word": "rice",
-        "chinese": "米饭",
+        "chinese": "我喜欢米饭。",
         "image": "<img src=\"assets/images/rice.png\" width=\"80\">",
         "display": "ric_",
         "options": [
@@ -1087,7 +1143,7 @@ var unit4_lesson4 = {
       {
         "type": "word_spell",
         "word": "soup",
-        "chinese": "汤",
+        "chinese": "我喜欢汤。",
         "image": "<img src=\"assets/images/soup.png\" width=\"80\">",
         "display": "so_p",
         "options": [
@@ -1106,7 +1162,7 @@ var unit4_lesson4 = {
       {
         "type": "letter_select",
         "word": "chicken",
-        "chinese": "鸡肉",
+        "chinese": "我喜欢鸡肉。",
         "image": "<img src=\"assets/images/chicken.png\" width=\"80\">",
         "display": "_hicken",
         "options": [
@@ -1125,7 +1181,7 @@ var unit4_lesson4 = {
       {
         "type": "duo_spell",
         "word": "vegetable",
-        "chinese": "蔬菜",
+        "chinese": "我喜欢蔬菜。",
         "image": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
         "display": "veg_table",
         "options": [
@@ -1148,70 +1204,70 @@ var unit4_lesson4 = {
       {
         "type": "shadowing",
         "word": "rice",
-        "chinese": "米饭",
+        "chinese": "我喜欢米饭。",
         "image": "<img src=\"assets/images/rice.png\" width=\"80\">",
         "sentence": "I like rice."
       },
       {
         "type": "read_word",
         "word": "soup",
-        "chinese": "汤",
+        "chinese": "我喜欢汤。",
         "image": "<img src=\"assets/images/soup.png\" width=\"80\">",
         "sentence": "I like soup."
       },
       {
         "type": "read_word",
         "word": "chicken",
-        "chinese": "鸡肉",
+        "chinese": "这是鸡肉。",
         "image": "<img src=\"assets/images/chicken.png\" width=\"80\">",
         "sentence": "What's for dinner today?"
       },
       {
         "type": "read_word",
         "word": "vegetable",
-        "chinese": "蔬菜",
+        "chinese": "我喜欢蔬菜。",
         "image": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
         "sentence": "I like vegetable."
       },
       {
         "type": "read_word",
         "word": "rice",
-        "chinese": "米饭",
+        "chinese": "这是米饭。",
         "image": "<img src=\"assets/images/rice.png\" width=\"80\">",
         "sentence": "What's for dinner today?"
       },
       {
         "type": "read_word",
         "word": "soup",
-        "chinese": "汤",
+        "chinese": "我喜欢汤。",
         "image": "<img src=\"assets/images/soup.png\" width=\"80\">",
         "sentence": "I like soup."
       },
       {
         "type": "shadowing",
         "word": "chicken",
-        "chinese": "鸡肉",
+        "chinese": "我喜欢鸡肉。",
         "image": "<img src=\"assets/images/chicken.png\" width=\"80\">",
         "sentence": "I like chicken."
       },
       {
         "type": "shadowing",
         "word": "vegetable",
-        "chinese": "蔬菜",
+        "chinese": "我喜欢蔬菜。",
         "image": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
         "sentence": "I like vegetable."
       },
       {
         "type": "read_word",
         "word": "rice",
-        "chinese": "米饭",
+        "chinese": "我喜欢米饭。",
         "image": "<img src=\"assets/images/rice.png\" width=\"80\">",
         "sentence": "I like rice."
       },
       {
         "type": "shadowing",
         "word": "soup",
-        "chinese": "汤",
+        "chinese": "我喜欢汤。",
         "image": "<img src=\"assets/images/soup.png\" width=\"80\">",
         "sentence": "I like soup."
       }
@@ -1220,7 +1276,7 @@ var unit4_lesson4 = {
       {
         "type": "debate",
         "word": "rice",
-        "chinese": "米饭",
+        "chinese": "这是米饭。",
         "image": "<img src=\"assets/images/rice.png\" width=\"80\">",
         "sentence": "How about some Chinese food?",
         "difficulty": "medium"
@@ -1228,7 +1284,7 @@ var unit4_lesson4 = {
       {
         "type": "shadowing",
         "word": "soup",
-        "chinese": "汤",
+        "chinese": "这是一只汤。",
         "image": "<img src=\"assets/images/soup.png\" width=\"80\">",
         "sentence": "This is a soup.",
         "difficulty": "medium"
@@ -1236,7 +1292,7 @@ var unit4_lesson4 = {
       {
         "type": "debate",
         "word": "chicken",
-        "chinese": "鸡肉",
+        "chinese": "这是鸡肉。",
         "image": "<img src=\"assets/images/chicken.png\" width=\"80\">",
         "sentence": "How about some Chinese food?",
         "difficulty": "easy"
@@ -1244,7 +1300,7 @@ var unit4_lesson4 = {
       {
         "type": "shadowing",
         "word": "vegetable",
-        "chinese": "蔬菜",
+        "chinese": "这是蔬菜。",
         "image": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
         "sentence": "How about some Chinese food?",
         "difficulty": "medium"
@@ -1252,7 +1308,7 @@ var unit4_lesson4 = {
       {
         "type": "shadowing",
         "word": "rice",
-        "chinese": "米饭",
+        "chinese": "这是一只米饭。",
         "image": "<img src=\"assets/images/rice.png\" width=\"80\">",
         "sentence": "This is a rice.",
         "difficulty": "easy"
@@ -1260,7 +1316,7 @@ var unit4_lesson4 = {
       {
         "type": "read_word",
         "word": "soup",
-        "chinese": "汤",
+        "chinese": "这是汤。",
         "image": "<img src=\"assets/images/soup.png\" width=\"80\">",
         "sentence": "How about some Chinese food?",
         "difficulty": "medium"
@@ -1268,7 +1324,7 @@ var unit4_lesson4 = {
       {
         "type": "roleplay",
         "word": "chicken",
-        "chinese": "鸡肉",
+        "chinese": "这是鸡肉。",
         "image": "<img src=\"assets/images/chicken.png\" width=\"80\">",
         "sentence": "How about some Chinese food?",
         "difficulty": "easy"
@@ -1276,7 +1332,7 @@ var unit4_lesson4 = {
       {
         "type": "shadowing",
         "word": "vegetable",
-        "chinese": "蔬菜",
+        "chinese": "这是一只蔬菜。",
         "image": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
         "sentence": "This is a vegetable.",
         "difficulty": "easy"
@@ -1284,7 +1340,7 @@ var unit4_lesson4 = {
       {
         "type": "read_word",
         "word": "rice",
-        "chinese": "米饭",
+        "chinese": "这是米饭。",
         "image": "<img src=\"assets/images/rice.png\" width=\"80\">",
         "sentence": "How about some Chinese food?",
         "difficulty": "hard"
@@ -1292,7 +1348,7 @@ var unit4_lesson4 = {
       {
         "type": "roleplay",
         "word": "soup",
-        "chinese": "汤",
+        "chinese": "这是汤。",
         "image": "<img src=\"assets/images/soup.png\" width=\"80\">",
         "sentence": "How about some Chinese food?",
         "difficulty": "easy"
@@ -1300,7 +1356,7 @@ var unit4_lesson4 = {
       {
         "type": "roleplay",
         "word": "chicken",
-        "chinese": "鸡肉",
+        "chinese": "这是一只鸡肉。",
         "image": "<img src=\"assets/images/chicken.png\" width=\"80\">",
         "sentence": "This is a chicken.",
         "difficulty": "hard"
@@ -1308,7 +1364,7 @@ var unit4_lesson4 = {
       {
         "type": "debate",
         "word": "vegetable",
-        "chinese": "蔬菜",
+        "chinese": "这是蔬菜。",
         "image": "<img src=\"assets/images/vegetable.png\" width=\"80\">",
         "sentence": "How about some Chinese food?",
         "difficulty": "hard"

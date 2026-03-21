@@ -6,7 +6,7 @@ var unit4_lesson2 = {
       {
         "type": "listen_tf",
         "audio": "hamburger",
-        "chinese": "汉堡",
+        "chinese": "我喜欢汉堡。",
         "options": [
           "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
@@ -19,7 +19,7 @@ var unit4_lesson2 = {
       {
         "type": "listen_select",
         "audio": "salad",
-        "chinese": "沙拉",
+        "chinese": "我喜欢沙拉。",
         "options": [
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
           "<img src=\"assets/images/salad.png\" width=\"80\">",
@@ -32,7 +32,7 @@ var unit4_lesson2 = {
       {
         "type": "listen_tf",
         "audio": "apple juice",
-        "chinese": "苹果汁",
+        "chinese": "我喜欢苹果汁。",
         "options": [
           "<img src=\"assets/images/salad.png\" width=\"80\">",
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
@@ -45,7 +45,7 @@ var unit4_lesson2 = {
       {
         "type": "listen_tf",
         "audio": "lunch",
-        "chinese": "午餐",
+        "chinese": "我喜欢午饭。",
         "options": [
           "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
@@ -58,7 +58,7 @@ var unit4_lesson2 = {
       {
         "type": "listen_tf",
         "audio": "hamburger",
-        "chinese": "汉堡",
+        "chinese": "我喜欢汉堡。",
         "options": [
           "<img src=\"assets/images/salad.png\" width=\"80\">",
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
@@ -71,7 +71,7 @@ var unit4_lesson2 = {
       {
         "type": "listen_select",
         "audio": "salad",
-        "chinese": "沙拉",
+        "chinese": "我喜欢沙拉。",
         "options": [
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
           "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
@@ -84,7 +84,7 @@ var unit4_lesson2 = {
       {
         "type": "listen_select",
         "audio": "apple juice",
-        "chinese": "苹果汁",
+        "chinese": "我喜欢苹果汁。",
         "options": [
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
           "<img src=\"assets/images/salad.png\" width=\"80\">",
@@ -97,7 +97,7 @@ var unit4_lesson2 = {
       {
         "type": "listen_tf",
         "audio": "lunch",
-        "chinese": "午餐",
+        "chinese": "我喜欢午饭。",
         "options": [
           "<img src=\"assets/images/salad.png\" width=\"80\">",
           "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
@@ -110,7 +110,7 @@ var unit4_lesson2 = {
       {
         "type": "listen_select",
         "audio": "hamburger",
-        "chinese": "汉堡",
+        "chinese": "我喜欢汉堡。",
         "options": [
           "<img src=\"assets/images/salad.png\" width=\"80\">",
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
@@ -123,7 +123,7 @@ var unit4_lesson2 = {
       {
         "type": "listen_select",
         "audio": "salad",
-        "chinese": "沙拉",
+        "chinese": "我喜欢沙拉。",
         "options": [
           "<img src=\"assets/images/salad.png\" width=\"80\">",
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
@@ -138,7 +138,7 @@ var unit4_lesson2 = {
       {
         "type": "duo_listen_select",
         "audio": "hamburger",
-        "chinese": "汉堡",
+        "chinese": "我喜欢汉堡。",
         "options": [
           "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
@@ -155,7 +155,7 @@ var unit4_lesson2 = {
       {
         "type": "balloon_pop",
         "audio": "salad",
-        "chinese": "沙拉",
+        "chinese": "我喜欢沙拉。",
         "options": [
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
           "<img src=\"assets/images/salad.png\" width=\"80\">",
@@ -172,7 +172,7 @@ var unit4_lesson2 = {
       {
         "type": "listen_select",
         "audio": "apple juice",
-        "chinese": "苹果汁",
+        "chinese": "我喜欢苹果汁。",
         "options": [
           "<img src=\"assets/images/salad.png\" width=\"80\">",
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
@@ -189,7 +189,7 @@ var unit4_lesson2 = {
       {
         "type": "balloon_pop",
         "audio": "lunch",
-        "chinese": "午餐",
+        "chinese": "我喜欢午饭。",
         "options": [
           "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
@@ -206,7 +206,7 @@ var unit4_lesson2 = {
       {
         "type": "balloon_pop",
         "audio": "hamburger",
-        "chinese": "汉堡",
+        "chinese": "我喜欢汉堡。",
         "options": [
           "<img src=\"assets/images/salad.png\" width=\"80\">",
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
@@ -223,7 +223,7 @@ var unit4_lesson2 = {
       {
         "type": "listen_select",
         "audio": "salad",
-        "chinese": "沙拉",
+        "chinese": "我喜欢沙拉。",
         "options": [
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
           "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
@@ -240,7 +240,7 @@ var unit4_lesson2 = {
       {
         "type": "scenario",
         "audio": "apple juice",
-        "chinese": "苹果汁",
+        "chinese": "我喜欢苹果汁。",
         "options": [
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
           "<img src=\"assets/images/salad.png\" width=\"80\">",
@@ -257,7 +257,7 @@ var unit4_lesson2 = {
       {
         "type": "balloon_pop",
         "audio": "lunch",
-        "chinese": "午餐",
+        "chinese": "我喜欢午饭。",
         "options": [
           "<img src=\"assets/images/salad.png\" width=\"80\">",
           "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
@@ -274,7 +274,7 @@ var unit4_lesson2 = {
       {
         "type": "scenario",
         "audio": "hamburger",
-        "chinese": "汉堡",
+        "chinese": "我喜欢汉堡。",
         "options": [
           "<img src=\"assets/images/salad.png\" width=\"80\">",
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
@@ -291,7 +291,7 @@ var unit4_lesson2 = {
       {
         "type": "duo_listen_select",
         "audio": "salad",
-        "chinese": "沙拉",
+        "chinese": "我喜欢沙拉。",
         "options": [
           "<img src=\"assets/images/salad.png\" width=\"80\">",
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
@@ -308,7 +308,7 @@ var unit4_lesson2 = {
       {
         "type": "listen_select",
         "audio": "apple juice",
-        "chinese": "苹果汁",
+        "chinese": "我喜欢苹果汁。",
         "options": [
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
           "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
@@ -325,7 +325,7 @@ var unit4_lesson2 = {
       {
         "type": "listen_select",
         "audio": "lunch",
-        "chinese": "午餐",
+        "chinese": "我喜欢午饭。",
         "options": [
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
           "<img src=\"assets/images/hamburger.png\" width=\"80\">",
@@ -345,7 +345,7 @@ var unit4_lesson2 = {
     "pretest": [
       {
         "type": "sentence_match",
-        "chinese": "汉堡",
+        "chinese": "这是汉堡。",
         "word": "hamburger",
         "sentence": "What do you want to eat?",
         "options": [
@@ -356,13 +356,21 @@ var unit4_lesson2 = {
           {
             "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
             "value": "lunch"
+          },
+          {
+            "text": "<img src=\"assets/images/juice.png\" width=\"80\">",
+            "value": "juice"
+          },
+          {
+            "text": "<img src=\"assets/images/water.png\" width=\"80\">",
+            "value": "water"
           }
         ],
         "correct": "hamburger"
       },
       {
         "type": "word_match",
-        "chinese": "沙拉",
+        "chinese": "我想要沙拉。",
         "word": "salad",
         "sentence": "I want a salad.",
         "options": [
@@ -387,7 +395,7 @@ var unit4_lesson2 = {
       },
       {
         "type": "word_match",
-        "chinese": "苹果汁",
+        "chinese": "我喜欢苹果汁。",
         "word": "apple juice",
         "sentence": "I like apple juice.",
         "options": [
@@ -398,13 +406,21 @@ var unit4_lesson2 = {
           {
             "text": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
             "value": "apple juice"
+          },
+          {
+            "text": "<img src=\"assets/images/noodles.png\" width=\"80\">",
+            "value": "noodles"
+          },
+          {
+            "text": "<img src=\"assets/images/juice.png\" width=\"80\">",
+            "value": "juice"
           }
         ],
         "correct": "apple juice"
       },
       {
         "type": "sentence_match",
-        "chinese": "午餐",
+        "chinese": "这是午餐。",
         "word": "lunch",
         "sentence": "What do you want to eat?",
         "options": [
@@ -415,13 +431,21 @@ var unit4_lesson2 = {
           {
             "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
             "value": "hamburger"
+          },
+          {
+            "text": "<img src=\"assets/images/juice.png\" width=\"80\">",
+            "value": "juice"
+          },
+          {
+            "text": "<img src=\"assets/images/water.png\" width=\"80\">",
+            "value": "water"
           }
         ],
         "correct": "lunch"
       },
       {
         "type": "sentence_match",
-        "chinese": "汉堡",
+        "chinese": "这是汉堡。",
         "word": "hamburger",
         "sentence": "What do you want to eat?",
         "options": [
@@ -446,7 +470,7 @@ var unit4_lesson2 = {
       },
       {
         "type": "word_match",
-        "chinese": "沙拉",
+        "chinese": "我想要沙拉。",
         "word": "salad",
         "sentence": "I want a salad.",
         "options": [
@@ -457,13 +481,21 @@ var unit4_lesson2 = {
           {
             "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
             "value": "hamburger"
+          },
+          {
+            "text": "<img src=\"assets/images/egg.png\" width=\"80\">",
+            "value": "egg"
+          },
+          {
+            "text": "<img src=\"assets/images/chicken.png\" width=\"80\">",
+            "value": "chicken"
           }
         ],
         "correct": "salad"
       },
       {
         "type": "word_match",
-        "chinese": "苹果汁",
+        "chinese": "这是苹果汁。",
         "word": "apple juice",
         "sentence": "What do you want to eat?",
         "options": [
@@ -488,7 +520,7 @@ var unit4_lesson2 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "午餐",
+        "chinese": "午饭吃什么？",
         "word": "lunch",
         "sentence": "What's for lunch?",
         "options": [
@@ -513,7 +545,7 @@ var unit4_lesson2 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "汉堡",
+        "chinese": "我想要汉堡。",
         "word": "hamburger",
         "sentence": "I want a hamburger.",
         "options": [
@@ -538,7 +570,7 @@ var unit4_lesson2 = {
       },
       {
         "type": "word_match",
-        "chinese": "沙拉",
+        "chinese": "这是沙拉。",
         "word": "salad",
         "sentence": "What do you want to eat?",
         "options": [
@@ -549,6 +581,14 @@ var unit4_lesson2 = {
           {
             "text": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
             "value": "hamburger"
+          },
+          {
+            "text": "<img src=\"assets/images/chicken.png\" width=\"80\">",
+            "value": "chicken"
+          },
+          {
+            "text": "<img src=\"assets/images/water.png\" width=\"80\">",
+            "value": "water"
           }
         ],
         "correct": "salad"
@@ -557,7 +597,7 @@ var unit4_lesson2 = {
     "practice": [
       {
         "type": "word_match",
-        "chinese": "汉堡",
+        "chinese": "我想要汉堡。",
         "word": "hamburger",
         "sentence": "I want a hamburger.",
         "options": [
@@ -571,7 +611,7 @@ var unit4_lesson2 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "沙拉",
+        "chinese": "这是沙拉。",
         "word": "salad",
         "sentence": "Do you want some apple juice?",
         "options": [
@@ -585,7 +625,7 @@ var unit4_lesson2 = {
       },
       {
         "type": "duo_race",
-        "chinese": "苹果汁",
+        "chinese": "我喜欢苹果汁。",
         "word": "apple juice",
         "sentence": "I like apple juice.",
         "options": [
@@ -599,7 +639,7 @@ var unit4_lesson2 = {
       },
       {
         "type": "word_match",
-        "chinese": "午餐",
+        "chinese": "午饭吃什么？",
         "word": "lunch",
         "sentence": "What's for lunch?",
         "options": [
@@ -625,7 +665,7 @@ var unit4_lesson2 = {
       },
       {
         "type": "word_match",
-        "chinese": "汉堡",
+        "chinese": "我想要汉堡。",
         "word": "hamburger",
         "sentence": "I want a hamburger.",
         "options": [
@@ -639,7 +679,7 @@ var unit4_lesson2 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "沙拉",
+        "chinese": "这是沙拉。",
         "word": "salad",
         "sentence": "Do you want some apple juice?",
         "options": [
@@ -665,7 +705,7 @@ var unit4_lesson2 = {
       },
       {
         "type": "word_match",
-        "chinese": "苹果汁",
+        "chinese": "这是苹果汁。",
         "word": "apple juice",
         "sentence": "Do you want some apple juice?",
         "options": [
@@ -691,7 +731,7 @@ var unit4_lesson2 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "午餐",
+        "chinese": "这是午餐。",
         "word": "lunch",
         "sentence": "Do you want some apple juice?",
         "options": [
@@ -705,7 +745,7 @@ var unit4_lesson2 = {
       },
       {
         "type": "word_match",
-        "chinese": "汉堡",
+        "chinese": "我想要汉堡。",
         "word": "hamburger",
         "sentence": "I want a hamburger.",
         "options": [
@@ -719,7 +759,7 @@ var unit4_lesson2 = {
       },
       {
         "type": "word_match",
-        "chinese": "沙拉",
+        "chinese": "我想要沙拉。",
         "word": "salad",
         "sentence": "I want a salad.",
         "options": [
@@ -733,7 +773,7 @@ var unit4_lesson2 = {
       },
       {
         "type": "duo_race",
-        "chinese": "苹果汁",
+        "chinese": "这是苹果汁。",
         "word": "apple juice",
         "sentence": "Do you want some apple juice?",
         "options": [
@@ -759,7 +799,7 @@ var unit4_lesson2 = {
       },
       {
         "type": "word_match",
-        "chinese": "午餐",
+        "chinese": "午饭吃什么？",
         "word": "lunch",
         "sentence": "What's for lunch?",
         "options": [
@@ -778,7 +818,7 @@ var unit4_lesson2 = {
       {
         "type": "letter_select",
         "word": "hamburger",
-        "chinese": "汉堡",
+        "chinese": "我喜欢汉堡。",
         "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
         "display": "hamb_rger",
         "options": [
@@ -792,7 +832,7 @@ var unit4_lesson2 = {
       {
         "type": "word_spell",
         "word": "salad",
-        "chinese": "沙拉",
+        "chinese": "我喜欢沙拉。",
         "image": "<img src=\"assets/images/salad.png\" width=\"80\">",
         "display": "_alad",
         "options": [
@@ -806,7 +846,7 @@ var unit4_lesson2 = {
       {
         "type": "letter_select",
         "word": "apple juice",
-        "chinese": "苹果汁",
+        "chinese": "我喜欢苹果汁。",
         "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
         "display": "appl_ juice",
         "options": [
@@ -820,7 +860,7 @@ var unit4_lesson2 = {
       {
         "type": "letter_select",
         "word": "lunch",
-        "chinese": "午餐",
+        "chinese": "我喜欢午饭。",
         "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
         "display": "_unch",
         "options": [
@@ -834,7 +874,7 @@ var unit4_lesson2 = {
       {
         "type": "letter_select",
         "word": "hamburger",
-        "chinese": "汉堡",
+        "chinese": "我喜欢汉堡。",
         "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
         "display": "hamburg_r",
         "options": [
@@ -848,7 +888,7 @@ var unit4_lesson2 = {
       {
         "type": "letter_select",
         "word": "salad",
-        "chinese": "沙拉",
+        "chinese": "我喜欢沙拉。",
         "image": "<img src=\"assets/images/salad.png\" width=\"80\">",
         "display": "_alad",
         "options": [
@@ -862,7 +902,7 @@ var unit4_lesson2 = {
       {
         "type": "word_spell",
         "word": "apple juice",
-        "chinese": "苹果汁",
+        "chinese": "我喜欢苹果汁。",
         "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
         "display": "apple j_ice",
         "options": [
@@ -876,7 +916,7 @@ var unit4_lesson2 = {
       {
         "type": "word_spell",
         "word": "lunch",
-        "chinese": "午餐",
+        "chinese": "我喜欢午饭。",
         "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
         "display": "_unch",
         "options": [
@@ -890,7 +930,7 @@ var unit4_lesson2 = {
       {
         "type": "letter_select",
         "word": "hamburger",
-        "chinese": "汉堡",
+        "chinese": "我喜欢汉堡。",
         "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
         "display": "hamburge_",
         "options": [
@@ -904,7 +944,7 @@ var unit4_lesson2 = {
       {
         "type": "letter_select",
         "word": "salad",
-        "chinese": "沙拉",
+        "chinese": "我喜欢沙拉。",
         "image": "<img src=\"assets/images/salad.png\" width=\"80\">",
         "display": "_alad",
         "options": [
@@ -920,7 +960,7 @@ var unit4_lesson2 = {
       {
         "type": "duo_spell",
         "word": "hamburger",
-        "chinese": "汉堡",
+        "chinese": "我喜欢汉堡。",
         "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
         "display": "hamb_rger",
         "options": [
@@ -939,7 +979,7 @@ var unit4_lesson2 = {
       {
         "type": "letter_select",
         "word": "salad",
-        "chinese": "沙拉",
+        "chinese": "我喜欢沙拉。",
         "image": "<img src=\"assets/images/salad.png\" width=\"80\">",
         "display": "_alad",
         "options": [
@@ -958,7 +998,7 @@ var unit4_lesson2 = {
       {
         "type": "letter_select",
         "word": "apple juice",
-        "chinese": "苹果汁",
+        "chinese": "我喜欢苹果汁。",
         "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
         "display": "appl_ juice",
         "options": [
@@ -977,7 +1017,7 @@ var unit4_lesson2 = {
       {
         "type": "word_spell",
         "word": "lunch",
-        "chinese": "午餐",
+        "chinese": "我喜欢午饭。",
         "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
         "display": "_unch",
         "options": [
@@ -996,7 +1036,7 @@ var unit4_lesson2 = {
       {
         "type": "word_spell",
         "word": "hamburger",
-        "chinese": "汉堡",
+        "chinese": "我喜欢汉堡。",
         "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
         "display": "hamburg_r",
         "options": [
@@ -1015,7 +1055,7 @@ var unit4_lesson2 = {
       {
         "type": "word_spell",
         "word": "salad",
-        "chinese": "沙拉",
+        "chinese": "我喜欢沙拉。",
         "image": "<img src=\"assets/images/salad.png\" width=\"80\">",
         "display": "_alad",
         "options": [
@@ -1034,7 +1074,7 @@ var unit4_lesson2 = {
       {
         "type": "word_spell",
         "word": "apple juice",
-        "chinese": "苹果汁",
+        "chinese": "我喜欢苹果汁。",
         "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
         "display": "apple j_ice",
         "options": [
@@ -1053,7 +1093,7 @@ var unit4_lesson2 = {
       {
         "type": "letter_select",
         "word": "lunch",
-        "chinese": "午餐",
+        "chinese": "我喜欢午饭。",
         "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
         "display": "_unch",
         "options": [
@@ -1072,7 +1112,7 @@ var unit4_lesson2 = {
       {
         "type": "word_spell",
         "word": "hamburger",
-        "chinese": "汉堡",
+        "chinese": "我喜欢汉堡。",
         "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
         "display": "hamburge_",
         "options": [
@@ -1091,7 +1131,7 @@ var unit4_lesson2 = {
       {
         "type": "letter_select",
         "word": "salad",
-        "chinese": "沙拉",
+        "chinese": "我喜欢沙拉。",
         "image": "<img src=\"assets/images/salad.png\" width=\"80\">",
         "display": "_alad",
         "options": [
@@ -1110,7 +1150,7 @@ var unit4_lesson2 = {
       {
         "type": "letter_select",
         "word": "apple juice",
-        "chinese": "苹果汁",
+        "chinese": "我喜欢苹果汁。",
         "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
         "display": "appl_ juice",
         "options": [
@@ -1129,7 +1169,7 @@ var unit4_lesson2 = {
       {
         "type": "letter_select",
         "word": "lunch",
-        "chinese": "午餐",
+        "chinese": "我喜欢午饭。",
         "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
         "display": "lunc_",
         "options": [
@@ -1152,70 +1192,70 @@ var unit4_lesson2 = {
       {
         "type": "shadowing",
         "word": "hamburger",
-        "chinese": "汉堡",
+        "chinese": "我喜欢汉堡。",
         "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
         "sentence": "I like hamburger."
       },
       {
         "type": "shadowing",
         "word": "salad",
-        "chinese": "沙拉",
+        "chinese": "我喜欢沙拉。",
         "image": "<img src=\"assets/images/salad.png\" width=\"80\">",
         "sentence": "I like salad."
       },
       {
         "type": "shadowing",
         "word": "apple juice",
-        "chinese": "苹果汁",
+        "chinese": "我喜欢苹果汁。",
         "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
         "sentence": "I like apple juice."
       },
       {
         "type": "read_word",
         "word": "lunch",
-        "chinese": "午餐",
+        "chinese": "这是午餐。",
         "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
         "sentence": "What do you want to eat?"
       },
       {
         "type": "read_word",
         "word": "hamburger",
-        "chinese": "汉堡",
+        "chinese": "这是汉堡。",
         "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
         "sentence": "What do you want to eat?"
       },
       {
         "type": "read_word",
         "word": "salad",
-        "chinese": "沙拉",
+        "chinese": "这是沙拉。",
         "image": "<img src=\"assets/images/salad.png\" width=\"80\">",
         "sentence": "What do you want to eat?"
       },
       {
         "type": "shadowing",
         "word": "apple juice",
-        "chinese": "苹果汁",
+        "chinese": "这是苹果汁。",
         "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
         "sentence": "What do you want to eat?"
       },
       {
         "type": "read_word",
         "word": "lunch",
-        "chinese": "午餐",
+        "chinese": "我喜欢午饭。",
         "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
         "sentence": "I like lunch."
       },
       {
         "type": "read_word",
         "word": "hamburger",
-        "chinese": "汉堡",
+        "chinese": "我喜欢汉堡。",
         "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
         "sentence": "I like hamburger."
       },
       {
         "type": "read_word",
         "word": "salad",
-        "chinese": "沙拉",
+        "chinese": "这是沙拉。",
         "image": "<img src=\"assets/images/salad.png\" width=\"80\">",
         "sentence": "What do you want to eat?"
       }
@@ -1224,7 +1264,7 @@ var unit4_lesson2 = {
       {
         "type": "debate",
         "word": "hamburger",
-        "chinese": "汉堡",
+        "chinese": "这是汉堡。",
         "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
         "sentence": "Do you want some apple juice?",
         "difficulty": "easy"
@@ -1232,7 +1272,7 @@ var unit4_lesson2 = {
       {
         "type": "shadowing",
         "word": "salad",
-        "chinese": "沙拉",
+        "chinese": "这是沙拉。",
         "image": "<img src=\"assets/images/salad.png\" width=\"80\">",
         "sentence": "Do you want some apple juice?",
         "difficulty": "medium"
@@ -1240,7 +1280,7 @@ var unit4_lesson2 = {
       {
         "type": "debate",
         "word": "apple juice",
-        "chinese": "苹果汁",
+        "chinese": "这是苹果汁。",
         "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
         "sentence": "Do you want some apple juice?",
         "difficulty": "medium"
@@ -1248,7 +1288,7 @@ var unit4_lesson2 = {
       {
         "type": "read_word",
         "word": "lunch",
-        "chinese": "午餐",
+        "chinese": "这是一只午饭。",
         "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
         "sentence": "This is a lunch.",
         "difficulty": "easy"
@@ -1256,7 +1296,7 @@ var unit4_lesson2 = {
       {
         "type": "roleplay",
         "word": "hamburger",
-        "chinese": "汉堡",
+        "chinese": "这是一只汉堡。",
         "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
         "sentence": "This is a hamburger.",
         "difficulty": "easy"
@@ -1264,7 +1304,7 @@ var unit4_lesson2 = {
       {
         "type": "debate",
         "word": "salad",
-        "chinese": "沙拉",
+        "chinese": "这是沙拉。",
         "image": "<img src=\"assets/images/salad.png\" width=\"80\">",
         "sentence": "Do you want some apple juice?",
         "difficulty": "medium"
@@ -1272,7 +1312,7 @@ var unit4_lesson2 = {
       {
         "type": "read_word",
         "word": "apple juice",
-        "chinese": "苹果汁",
+        "chinese": "这是苹果汁。",
         "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
         "sentence": "Do you want some apple juice?",
         "difficulty": "medium"
@@ -1280,7 +1320,7 @@ var unit4_lesson2 = {
       {
         "type": "shadowing",
         "word": "lunch",
-        "chinese": "午餐",
+        "chinese": "这是午餐。",
         "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
         "sentence": "Do you want some apple juice?",
         "difficulty": "hard"
@@ -1288,7 +1328,7 @@ var unit4_lesson2 = {
       {
         "type": "roleplay",
         "word": "hamburger",
-        "chinese": "汉堡",
+        "chinese": "这是一只汉堡。",
         "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
         "sentence": "This is a hamburger.",
         "difficulty": "hard"
@@ -1296,7 +1336,7 @@ var unit4_lesson2 = {
       {
         "type": "read_word",
         "word": "salad",
-        "chinese": "沙拉",
+        "chinese": "这是沙拉。",
         "image": "<img src=\"assets/images/salad.png\" width=\"80\">",
         "sentence": "Do you want some apple juice?",
         "difficulty": "medium"
@@ -1304,7 +1344,7 @@ var unit4_lesson2 = {
       {
         "type": "roleplay",
         "word": "apple juice",
-        "chinese": "苹果汁",
+        "chinese": "这是苹果汁。",
         "image": "<img src=\"assets/images/apple_juice.png\" width=\"80\">",
         "sentence": "Do you want some apple juice?",
         "difficulty": "medium"
@@ -1312,7 +1352,7 @@ var unit4_lesson2 = {
       {
         "type": "roleplay",
         "word": "lunch",
-        "chinese": "午餐",
+        "chinese": "这是一只午饭。",
         "image": "<img src=\"assets/images/hamburger.png\" width=\"80\">",
         "sentence": "This is a lunch.",
         "difficulty": "medium"

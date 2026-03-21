@@ -6,7 +6,7 @@ var unit3_lesson1 = {
       {
         "type": "listen_tf",
         "audio": "clock",
-        "chinese": "时钟",
+        "chinese": "现在是clock点。",
         "options": [
           "<img src=\"assets/images/clock.png\" width=\"80\">",
           "<img src=\"assets/images/clock.png\" width=\"80\">",
@@ -19,7 +19,7 @@ var unit3_lesson1 = {
       {
         "type": "listen_select",
         "audio": "eleven",
-        "chinese": "十一",
+        "chinese": "现在是十一点。",
         "options": [
           "<img src=\"assets/images/clock.png\" width=\"80\">",
           "<img src=\"assets/images/clock.png\" width=\"80\">",
@@ -32,7 +32,7 @@ var unit3_lesson1 = {
       {
         "type": "listen_select",
         "audio": "twelve",
-        "chinese": "十二",
+        "chinese": "现在是十二点。",
         "options": [
           "<img src=\"assets/images/clock.png\" width=\"80\">",
           "<img src=\"assets/images/clock.png\" width=\"80\">",
@@ -45,7 +45,7 @@ var unit3_lesson1 = {
       {
         "type": "listen_tf",
         "audio": "time",
-        "chinese": "时间",
+        "chinese": "现在是time点。",
         "options": [
           "<img src=\"assets/images/clock.png\" width=\"80\">",
           "<img src=\"assets/images/clock_11.png\" width=\"80\">",
@@ -58,7 +58,7 @@ var unit3_lesson1 = {
       {
         "type": "listen_select",
         "audio": "clock",
-        "chinese": "时钟",
+        "chinese": "现在是clock点。",
         "options": [
           "<img src=\"assets/images/clock_11.png\" width=\"80\">",
           "<img src=\"assets/images/clock.png\" width=\"80\">",
@@ -71,7 +71,7 @@ var unit3_lesson1 = {
       {
         "type": "listen_tf",
         "audio": "eleven",
-        "chinese": "十一",
+        "chinese": "现在是十一点。",
         "options": [
           "<img src=\"assets/images/clock.png\" width=\"80\">",
           "<img src=\"assets/images/clock_12.png\" width=\"80\">",
@@ -84,7 +84,7 @@ var unit3_lesson1 = {
       {
         "type": "listen_select",
         "audio": "twelve",
-        "chinese": "十二",
+        "chinese": "现在是十二点。",
         "options": [
           "<img src=\"assets/images/clock_12.png\" width=\"80\">",
           "<img src=\"assets/images/clock.png\" width=\"80\">",
@@ -97,7 +97,7 @@ var unit3_lesson1 = {
       {
         "type": "listen_select",
         "audio": "time",
-        "chinese": "时间",
+        "chinese": "现在是time点。",
         "options": [
           "<img src=\"assets/images/clock_12.png\" width=\"80\">",
           "<img src=\"assets/images/clock_11.png\" width=\"80\">",
@@ -110,7 +110,7 @@ var unit3_lesson1 = {
       {
         "type": "listen_select",
         "audio": "clock",
-        "chinese": "时钟",
+        "chinese": "现在是clock点。",
         "options": [
           "<img src=\"assets/images/clock_11.png\" width=\"80\">",
           "<img src=\"assets/images/clock.png\" width=\"80\">",
@@ -123,7 +123,7 @@ var unit3_lesson1 = {
       {
         "type": "listen_tf",
         "audio": "eleven",
-        "chinese": "十一",
+        "chinese": "现在是十一点。",
         "options": [
           "<img src=\"assets/images/clock.png\" width=\"80\">",
           "<img src=\"assets/images/clock_12.png\" width=\"80\">",
@@ -138,7 +138,7 @@ var unit3_lesson1 = {
       {
         "type": "scenario",
         "audio": "clock",
-        "chinese": "时钟",
+        "chinese": "现在是clock点。",
         "options": [
           "<img src=\"assets/images/clock.png\" width=\"80\">",
           "<img src=\"assets/images/clock.png\" width=\"80\">",
@@ -155,7 +155,7 @@ var unit3_lesson1 = {
       {
         "type": "scenario",
         "audio": "eleven",
-        "chinese": "十一",
+        "chinese": "现在是十一点。",
         "options": [
           "<img src=\"assets/images/clock.png\" width=\"80\">",
           "<img src=\"assets/images/clock.png\" width=\"80\">",
@@ -172,7 +172,7 @@ var unit3_lesson1 = {
       {
         "type": "duo_listen_select",
         "audio": "twelve",
-        "chinese": "十二",
+        "chinese": "现在是十二点。",
         "options": [
           "<img src=\"assets/images/clock.png\" width=\"80\">",
           "<img src=\"assets/images/clock.png\" width=\"80\">",
@@ -189,7 +189,7 @@ var unit3_lesson1 = {
       {
         "type": "duo_listen_select",
         "audio": "time",
-        "chinese": "时间",
+        "chinese": "现在是time点。",
         "options": [
           "<img src=\"assets/images/clock.png\" width=\"80\">",
           "<img src=\"assets/images/clock_11.png\" width=\"80\">",
@@ -206,7 +206,7 @@ var unit3_lesson1 = {
       {
         "type": "listen_select",
         "audio": "clock",
-        "chinese": "时钟",
+        "chinese": "现在是clock点。",
         "options": [
           "<img src=\"assets/images/clock_11.png\" width=\"80\">",
           "<img src=\"assets/images/clock.png\" width=\"80\">",
@@ -223,7 +223,7 @@ var unit3_lesson1 = {
       {
         "type": "duo_listen_select",
         "audio": "eleven",
-        "chinese": "十一",
+        "chinese": "现在是十一点。",
         "options": [
           "<img src=\"assets/images/clock.png\" width=\"80\">",
           "<img src=\"assets/images/clock_12.png\" width=\"80\">",
@@ -240,7 +240,7 @@ var unit3_lesson1 = {
       {
         "type": "duo_listen_select",
         "audio": "twelve",
-        "chinese": "十二",
+        "chinese": "现在是十二点。",
         "options": [
           "<img src=\"assets/images/clock_12.png\" width=\"80\">",
           "<img src=\"assets/images/clock.png\" width=\"80\">",
@@ -257,7 +257,7 @@ var unit3_lesson1 = {
       {
         "type": "scenario",
         "audio": "time",
-        "chinese": "时间",
+        "chinese": "现在是time点。",
         "options": [
           "<img src=\"assets/images/clock_12.png\" width=\"80\">",
           "<img src=\"assets/images/clock_11.png\" width=\"80\">",
@@ -274,7 +274,7 @@ var unit3_lesson1 = {
       {
         "type": "listen_select",
         "audio": "clock",
-        "chinese": "时钟",
+        "chinese": "现在是clock点。",
         "options": [
           "<img src=\"assets/images/clock_11.png\" width=\"80\">",
           "<img src=\"assets/images/clock.png\" width=\"80\">",
@@ -291,7 +291,7 @@ var unit3_lesson1 = {
       {
         "type": "balloon_pop",
         "audio": "eleven",
-        "chinese": "十一",
+        "chinese": "现在是十一点。",
         "options": [
           "<img src=\"assets/images/clock.png\" width=\"80\">",
           "<img src=\"assets/images/clock_12.png\" width=\"80\">",
@@ -308,7 +308,7 @@ var unit3_lesson1 = {
       {
         "type": "scenario",
         "audio": "twelve",
-        "chinese": "十二",
+        "chinese": "现在是十二点。",
         "options": [
           "<img src=\"assets/images/clock_11.png\" width=\"80\">",
           "<img src=\"assets/images/clock.png\" width=\"80\">",
@@ -325,7 +325,7 @@ var unit3_lesson1 = {
       {
         "type": "listen_select",
         "audio": "time",
-        "chinese": "时间",
+        "chinese": "现在是time点。",
         "options": [
           "<img src=\"assets/images/clock.png\" width=\"80\">",
           "<img src=\"assets/images/clock_12.png\" width=\"80\">",
@@ -345,7 +345,7 @@ var unit3_lesson1 = {
     "pretest": [
       {
         "type": "sentence_match",
-        "chinese": "时钟",
+        "chinese": "这是时钟。",
         "word": "clock",
         "sentence": "What's the time, Mom?",
         "options": [
@@ -356,13 +356,21 @@ var unit3_lesson1 = {
           {
             "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
             "value": "time"
+          },
+          {
+            "text": "<img src=\"assets/images/one.png\" width=\"80\">",
+            "value": "one"
+          },
+          {
+            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
+            "value": "ten"
           }
         ],
         "correct": "clock"
       },
       {
         "type": "word_match",
-        "chinese": "十一",
+        "chinese": "现在是十一点。",
         "word": "eleven",
         "sentence": "It's eleven o'clock.",
         "options": [
@@ -387,7 +395,7 @@ var unit3_lesson1 = {
       },
       {
         "type": "word_match",
-        "chinese": "十二",
+        "chinese": "这是十二。",
         "word": "twelve",
         "sentence": "What's the time, Mom?",
         "options": [
@@ -398,13 +406,21 @@ var unit3_lesson1 = {
           {
             "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
             "value": "clock"
+          },
+          {
+            "text": "<img src=\"assets/images/twelve.png\" width=\"80\">",
+            "value": "twelve"
+          },
+          {
+            "text": "<img src=\"assets/images/three.png\" width=\"80\">",
+            "value": "three"
           }
         ],
         "correct": "twelve"
       },
       {
         "type": "sentence_match",
-        "chinese": "时间",
+        "chinese": "几点了？",
         "word": "time",
         "sentence": "What's the time?",
         "options": [
@@ -415,13 +431,21 @@ var unit3_lesson1 = {
           {
             "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
             "value": "time"
+          },
+          {
+            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
+            "value": "eight"
+          },
+          {
+            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
+            "value": "ten"
           }
         ],
         "correct": "time"
       },
       {
         "type": "sentence_match",
-        "chinese": "时钟",
+        "chinese": "几点了？",
         "word": "clock",
         "sentence": "What's the time?",
         "options": [
@@ -446,7 +470,7 @@ var unit3_lesson1 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "十一",
+        "chinese": "现在是十一点。",
         "word": "eleven",
         "sentence": "It's eleven o'clock.",
         "options": [
@@ -471,7 +495,7 @@ var unit3_lesson1 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "十二",
+        "chinese": "这是十二。",
         "word": "twelve",
         "sentence": "What's the time, Mom?",
         "options": [
@@ -496,7 +520,7 @@ var unit3_lesson1 = {
       },
       {
         "type": "word_match",
-        "chinese": "时间",
+        "chinese": "这是时间。",
         "word": "time",
         "sentence": "What's the time, Mom?",
         "options": [
@@ -507,13 +531,21 @@ var unit3_lesson1 = {
           {
             "text": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
             "value": "twelve"
+          },
+          {
+            "text": "<img src=\"assets/images/nine.png\" width=\"80\">",
+            "value": "nine"
+          },
+          {
+            "text": "<img src=\"assets/images/eleven.png\" width=\"80\">",
+            "value": "eleven"
           }
         ],
         "correct": "time"
       },
       {
         "type": "sentence_match",
-        "chinese": "时钟",
+        "chinese": "这是时钟。",
         "word": "clock",
         "sentence": "What's the time, Mom?",
         "options": [
@@ -524,13 +556,21 @@ var unit3_lesson1 = {
           {
             "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
             "value": "time"
+          },
+          {
+            "text": "<img src=\"assets/images/two.png\" width=\"80\">",
+            "value": "two"
+          },
+          {
+            "text": "<img src=\"assets/images/six.png\" width=\"80\">",
+            "value": "six"
           }
         ],
         "correct": "clock"
       },
       {
         "type": "word_match",
-        "chinese": "十一",
+        "chinese": "现在是十一点。",
         "word": "eleven",
         "sentence": "It's eleven o'clock.",
         "options": [
@@ -541,6 +581,14 @@ var unit3_lesson1 = {
           {
             "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
             "value": "clock"
+          },
+          {
+            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
+            "value": "eight"
+          },
+          {
+            "text": "<img src=\"assets/images/three.png\" width=\"80\">",
+            "value": "three"
           }
         ],
         "correct": "eleven"
@@ -549,7 +597,7 @@ var unit3_lesson1 = {
     "practice": [
       {
         "type": "sentence_match",
-        "chinese": "时钟",
+        "chinese": "现在是十一点。",
         "word": "clock",
         "sentence": "It's eleven o'clock.",
         "options": [
@@ -563,7 +611,7 @@ var unit3_lesson1 = {
       },
       {
         "type": "duo_race",
-        "chinese": "十一",
+        "chinese": "现在是十一点。",
         "word": "eleven",
         "sentence": "It's eleven o'clock.",
         "options": [
@@ -577,7 +625,7 @@ var unit3_lesson1 = {
       },
       {
         "type": "duo_race",
-        "chinese": "十二",
+        "chinese": "现在是十二点。",
         "word": "twelve",
         "sentence": "It's twelve o'clock.",
         "options": [
@@ -603,7 +651,7 @@ var unit3_lesson1 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "时间",
+        "chinese": "现在是十一点。",
         "word": "time",
         "sentence": "It's eleven o'clock.",
         "options": [
@@ -617,7 +665,7 @@ var unit3_lesson1 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "时钟",
+        "chinese": "现在是十一点。",
         "word": "clock",
         "sentence": "It's eleven o'clock.",
         "options": [
@@ -643,7 +691,7 @@ var unit3_lesson1 = {
       },
       {
         "type": "word_match",
-        "chinese": "十一",
+        "chinese": "现在是十一点。",
         "word": "eleven",
         "sentence": "It's eleven o'clock.",
         "options": [
@@ -657,7 +705,7 @@ var unit3_lesson1 = {
       },
       {
         "type": "duo_race",
-        "chinese": "十二",
+        "chinese": "现在是十一点。",
         "word": "twelve",
         "sentence": "It's eleven o'clock.",
         "options": [
@@ -671,7 +719,7 @@ var unit3_lesson1 = {
       },
       {
         "type": "word_match",
-        "chinese": "时间",
+        "chinese": "现在是十一点。",
         "word": "time",
         "sentence": "It's eleven o'clock.",
         "options": [
@@ -697,7 +745,7 @@ var unit3_lesson1 = {
       },
       {
         "type": "word_match",
-        "chinese": "时钟",
+        "chinese": "现在是十一点。",
         "word": "clock",
         "sentence": "It's eleven o'clock.",
         "options": [
@@ -711,7 +759,7 @@ var unit3_lesson1 = {
       },
       {
         "type": "duo_race",
-        "chinese": "十一",
+        "chinese": "现在是十一点。",
         "word": "eleven",
         "sentence": "It's eleven o'clock.",
         "options": [
@@ -725,7 +773,7 @@ var unit3_lesson1 = {
       },
       {
         "type": "duo_race",
-        "chinese": "十二",
+        "chinese": "现在是十二点。",
         "word": "twelve",
         "sentence": "It's twelve o'clock.",
         "options": [
@@ -739,7 +787,7 @@ var unit3_lesson1 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "时间",
+        "chinese": "现在是十一点。",
         "word": "time",
         "sentence": "It's eleven o'clock.",
         "options": [
@@ -758,7 +806,7 @@ var unit3_lesson1 = {
       {
         "type": "word_spell",
         "word": "clock",
-        "chinese": "时钟",
+        "chinese": "现在是clock点。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "display": "_lock",
         "options": [
@@ -772,7 +820,7 @@ var unit3_lesson1 = {
       {
         "type": "word_spell",
         "word": "eleven",
-        "chinese": "十一",
+        "chinese": "现在是十一点。",
         "image": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
         "display": "e_even",
         "options": [
@@ -786,7 +834,7 @@ var unit3_lesson1 = {
       {
         "type": "letter_select",
         "word": "twelve",
-        "chinese": "十二",
+        "chinese": "现在是十二点。",
         "image": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
         "display": "twelv_",
         "options": [
@@ -800,7 +848,7 @@ var unit3_lesson1 = {
       {
         "type": "word_spell",
         "word": "time",
-        "chinese": "时间",
+        "chinese": "现在是time点。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "display": "_ime",
         "options": [
@@ -814,7 +862,7 @@ var unit3_lesson1 = {
       {
         "type": "word_spell",
         "word": "clock",
-        "chinese": "时钟",
+        "chinese": "现在是clock点。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "display": "cloc_",
         "options": [
@@ -828,7 +876,7 @@ var unit3_lesson1 = {
       {
         "type": "letter_select",
         "word": "eleven",
-        "chinese": "十一",
+        "chinese": "现在是十一点。",
         "image": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
         "display": "e_even",
         "options": [
@@ -842,7 +890,7 @@ var unit3_lesson1 = {
       {
         "type": "word_spell",
         "word": "twelve",
-        "chinese": "十二",
+        "chinese": "现在是十二点。",
         "image": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
         "display": "_welve",
         "options": [
@@ -856,7 +904,7 @@ var unit3_lesson1 = {
       {
         "type": "letter_select",
         "word": "time",
-        "chinese": "时间",
+        "chinese": "现在是time点。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "display": "t_me",
         "options": [
@@ -870,7 +918,7 @@ var unit3_lesson1 = {
       {
         "type": "letter_select",
         "word": "clock",
-        "chinese": "时钟",
+        "chinese": "现在是clock点。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "display": "_lock",
         "options": [
@@ -884,7 +932,7 @@ var unit3_lesson1 = {
       {
         "type": "letter_select",
         "word": "eleven",
-        "chinese": "十一",
+        "chinese": "现在是十一点。",
         "image": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
         "display": "el_ven",
         "options": [
@@ -900,7 +948,7 @@ var unit3_lesson1 = {
       {
         "type": "duo_spell",
         "word": "clock",
-        "chinese": "时钟",
+        "chinese": "现在是clock点。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "display": "_lock",
         "options": [
@@ -919,7 +967,7 @@ var unit3_lesson1 = {
       {
         "type": "word_spell",
         "word": "eleven",
-        "chinese": "十一",
+        "chinese": "现在是十一点。",
         "image": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
         "display": "e_even",
         "options": [
@@ -938,7 +986,7 @@ var unit3_lesson1 = {
       {
         "type": "duo_spell",
         "word": "twelve",
-        "chinese": "十二",
+        "chinese": "现在是十二点。",
         "image": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
         "display": "twelv_",
         "options": [
@@ -957,7 +1005,7 @@ var unit3_lesson1 = {
       {
         "type": "duo_spell",
         "word": "time",
-        "chinese": "时间",
+        "chinese": "现在是time点。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "display": "_ime",
         "options": [
@@ -976,7 +1024,7 @@ var unit3_lesson1 = {
       {
         "type": "word_spell",
         "word": "clock",
-        "chinese": "时钟",
+        "chinese": "现在是clock点。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "display": "cloc_",
         "options": [
@@ -995,7 +1043,7 @@ var unit3_lesson1 = {
       {
         "type": "word_spell",
         "word": "eleven",
-        "chinese": "十一",
+        "chinese": "现在是十一点。",
         "image": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
         "display": "e_even",
         "options": [
@@ -1014,7 +1062,7 @@ var unit3_lesson1 = {
       {
         "type": "word_spell",
         "word": "twelve",
-        "chinese": "十二",
+        "chinese": "现在是十二点。",
         "image": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
         "display": "_welve",
         "options": [
@@ -1033,7 +1081,7 @@ var unit3_lesson1 = {
       {
         "type": "word_spell",
         "word": "time",
-        "chinese": "时间",
+        "chinese": "现在是time点。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "display": "t_me",
         "options": [
@@ -1052,7 +1100,7 @@ var unit3_lesson1 = {
       {
         "type": "duo_spell",
         "word": "clock",
-        "chinese": "时钟",
+        "chinese": "现在是clock点。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "display": "_lock",
         "options": [
@@ -1071,7 +1119,7 @@ var unit3_lesson1 = {
       {
         "type": "letter_select",
         "word": "eleven",
-        "chinese": "十一",
+        "chinese": "现在是十一点。",
         "image": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
         "display": "el_ven",
         "options": [
@@ -1090,7 +1138,7 @@ var unit3_lesson1 = {
       {
         "type": "duo_spell",
         "word": "twelve",
-        "chinese": "十二",
+        "chinese": "现在是十二点。",
         "image": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
         "display": "t_elve",
         "options": [
@@ -1109,7 +1157,7 @@ var unit3_lesson1 = {
       {
         "type": "duo_spell",
         "word": "time",
-        "chinese": "时间",
+        "chinese": "现在是time点。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "display": "_ime",
         "options": [
@@ -1132,70 +1180,70 @@ var unit3_lesson1 = {
       {
         "type": "read_word",
         "word": "clock",
-        "chinese": "时钟",
+        "chinese": "这是时钟。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "sentence": "What's the time, Mom?"
       },
       {
         "type": "read_word",
         "word": "eleven",
-        "chinese": "十一",
+        "chinese": "我喜欢十一。",
         "image": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
         "sentence": "I like eleven."
       },
       {
         "type": "shadowing",
         "word": "twelve",
-        "chinese": "十二",
+        "chinese": "这是十二。",
         "image": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
         "sentence": "What's the time, Mom?"
       },
       {
         "type": "shadowing",
         "word": "time",
-        "chinese": "时间",
+        "chinese": "我喜欢time。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "sentence": "I like time."
       },
       {
         "type": "shadowing",
         "word": "clock",
-        "chinese": "时钟",
+        "chinese": "我喜欢clock。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "sentence": "I like clock."
       },
       {
         "type": "read_word",
         "word": "eleven",
-        "chinese": "十一",
+        "chinese": "我喜欢十一。",
         "image": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
         "sentence": "I like eleven."
       },
       {
         "type": "shadowing",
         "word": "twelve",
-        "chinese": "十二",
+        "chinese": "我喜欢十二。",
         "image": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
         "sentence": "I like twelve."
       },
       {
         "type": "read_word",
         "word": "time",
-        "chinese": "时间",
+        "chinese": "我喜欢time。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "sentence": "I like time."
       },
       {
         "type": "shadowing",
         "word": "clock",
-        "chinese": "时钟",
+        "chinese": "这是时钟。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "sentence": "What's the time, Mom?"
       },
       {
         "type": "shadowing",
         "word": "eleven",
-        "chinese": "十一",
+        "chinese": "这是十一。",
         "image": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
         "sentence": "What's the time, Mom?"
       }
@@ -1204,7 +1252,7 @@ var unit3_lesson1 = {
       {
         "type": "read_word",
         "word": "clock",
-        "chinese": "时钟",
+        "chinese": "这是一只clock。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "sentence": "This is a clock.",
         "difficulty": "easy"
@@ -1212,7 +1260,7 @@ var unit3_lesson1 = {
       {
         "type": "read_word",
         "word": "eleven",
-        "chinese": "十一",
+        "chinese": "这是一只十一。",
         "image": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
         "sentence": "This is a eleven.",
         "difficulty": "easy"
@@ -1220,7 +1268,7 @@ var unit3_lesson1 = {
       {
         "type": "debate",
         "word": "twelve",
-        "chinese": "十二",
+        "chinese": "现在是十一点。",
         "image": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
         "sentence": "It's eleven o'clock.",
         "difficulty": "hard"
@@ -1228,7 +1276,7 @@ var unit3_lesson1 = {
       {
         "type": "shadowing",
         "word": "time",
-        "chinese": "时间",
+        "chinese": "现在是十一点。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "sentence": "It's eleven o'clock.",
         "difficulty": "hard"
@@ -1236,7 +1284,7 @@ var unit3_lesson1 = {
       {
         "type": "shadowing",
         "word": "clock",
-        "chinese": "时钟",
+        "chinese": "这是一只clock。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "sentence": "This is a clock.",
         "difficulty": "medium"
@@ -1244,7 +1292,7 @@ var unit3_lesson1 = {
       {
         "type": "shadowing",
         "word": "eleven",
-        "chinese": "十一",
+        "chinese": "这是一只十一。",
         "image": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
         "sentence": "This is a eleven.",
         "difficulty": "medium"
@@ -1252,7 +1300,7 @@ var unit3_lesson1 = {
       {
         "type": "roleplay",
         "word": "twelve",
-        "chinese": "十二",
+        "chinese": "现在是十一点。",
         "image": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
         "sentence": "It's eleven o'clock.",
         "difficulty": "medium"
@@ -1260,7 +1308,7 @@ var unit3_lesson1 = {
       {
         "type": "shadowing",
         "word": "time",
-        "chinese": "时间",
+        "chinese": "这是一只time。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "sentence": "This is a time.",
         "difficulty": "easy"
@@ -1268,7 +1316,7 @@ var unit3_lesson1 = {
       {
         "type": "roleplay",
         "word": "clock",
-        "chinese": "时钟",
+        "chinese": "现在是十一点。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "sentence": "It's eleven o'clock.",
         "difficulty": "hard"
@@ -1276,7 +1324,7 @@ var unit3_lesson1 = {
       {
         "type": "roleplay",
         "word": "eleven",
-        "chinese": "十一",
+        "chinese": "这是一只十一。",
         "image": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
         "sentence": "This is a eleven.",
         "difficulty": "easy"
@@ -1284,7 +1332,7 @@ var unit3_lesson1 = {
       {
         "type": "debate",
         "word": "twelve",
-        "chinese": "十二",
+        "chinese": "这是一只十二。",
         "image": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
         "sentence": "This is a twelve.",
         "difficulty": "medium"
@@ -1292,7 +1340,7 @@ var unit3_lesson1 = {
       {
         "type": "debate",
         "word": "time",
-        "chinese": "时间",
+        "chinese": "现在是十一点。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "sentence": "It's eleven o'clock.",
         "difficulty": "hard"

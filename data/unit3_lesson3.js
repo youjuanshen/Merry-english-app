@@ -6,7 +6,7 @@ var unit3_lesson3 = {
       {
         "type": "listen_select",
         "audio": "cook",
-        "chinese": "做饭",
+        "chinese": "我正在做饭。",
         "options": [
           "<img src=\"assets/images/cooking.png\" width=\"80\">",
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
@@ -19,7 +19,7 @@ var unit3_lesson3 = {
       {
         "type": "listen_tf",
         "audio": "dinner",
-        "chinese": "晚餐",
+        "chinese": "该吃晚饭了。",
         "options": [
           "<img src=\"assets/images/clock.png\" width=\"80\">",
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
@@ -32,7 +32,7 @@ var unit3_lesson3 = {
       {
         "type": "listen_select",
         "audio": "draw",
-        "chinese": "画画",
+        "chinese": "我正在画画。",
         "options": [
           "<img src=\"assets/images/clock.png\" width=\"80\">",
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
@@ -45,7 +45,7 @@ var unit3_lesson3 = {
       {
         "type": "listen_select",
         "audio": "twenty",
-        "chinese": "二十",
+        "chinese": "现在是twenty点。",
         "options": [
           "<img src=\"assets/images/clock.png\" width=\"80\">",
           "<img src=\"assets/images/cooking.png\" width=\"80\">",
@@ -58,7 +58,7 @@ var unit3_lesson3 = {
       {
         "type": "listen_select",
         "audio": "cook",
-        "chinese": "做饭",
+        "chinese": "我正在做饭。",
         "options": [
           "<img src=\"assets/images/cooking.png\" width=\"80\">",
           "<img src=\"assets/images/cooking.png\" width=\"80\">",
@@ -71,7 +71,7 @@ var unit3_lesson3 = {
       {
         "type": "listen_select",
         "audio": "dinner",
-        "chinese": "晚餐",
+        "chinese": "该吃晚饭了。",
         "options": [
           "<img src=\"assets/images/cooking.png\" width=\"80\">",
           "<img src=\"assets/images/cooking.png\" width=\"80\">",
@@ -84,7 +84,7 @@ var unit3_lesson3 = {
       {
         "type": "listen_tf",
         "audio": "draw",
-        "chinese": "画画",
+        "chinese": "我正在画画。",
         "options": [
           "<img src=\"assets/images/clock.png\" width=\"80\">",
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
@@ -97,7 +97,7 @@ var unit3_lesson3 = {
       {
         "type": "listen_tf",
         "audio": "twenty",
-        "chinese": "二十",
+        "chinese": "现在是twenty点。",
         "options": [
           "<img src=\"assets/images/cooking.png\" width=\"80\">",
           "<img src=\"assets/images/clock.png\" width=\"80\">",
@@ -110,7 +110,7 @@ var unit3_lesson3 = {
       {
         "type": "listen_tf",
         "audio": "cook",
-        "chinese": "做饭",
+        "chinese": "我正在做饭。",
         "options": [
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
           "<img src=\"assets/images/cooking.png\" width=\"80\">",
@@ -123,7 +123,7 @@ var unit3_lesson3 = {
       {
         "type": "listen_select",
         "audio": "dinner",
-        "chinese": "晚餐",
+        "chinese": "该吃晚饭了。",
         "options": [
           "<img src=\"assets/images/cooking.png\" width=\"80\">",
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
@@ -138,7 +138,7 @@ var unit3_lesson3 = {
       {
         "type": "scenario",
         "audio": "cook",
-        "chinese": "做饭",
+        "chinese": "我正在做饭。",
         "options": [
           "<img src=\"assets/images/cooking.png\" width=\"80\">",
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
@@ -155,7 +155,7 @@ var unit3_lesson3 = {
       {
         "type": "listen_select",
         "audio": "dinner",
-        "chinese": "晚餐",
+        "chinese": "该吃晚饭了。",
         "options": [
           "<img src=\"assets/images/clock.png\" width=\"80\">",
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
@@ -172,7 +172,7 @@ var unit3_lesson3 = {
       {
         "type": "scenario",
         "audio": "draw",
-        "chinese": "画画",
+        "chinese": "我正在画画。",
         "options": [
           "<img src=\"assets/images/clock.png\" width=\"80\">",
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
@@ -189,7 +189,7 @@ var unit3_lesson3 = {
       {
         "type": "scenario",
         "audio": "twenty",
-        "chinese": "二十",
+        "chinese": "现在是twenty点。",
         "options": [
           "<img src=\"assets/images/clock.png\" width=\"80\">",
           "<img src=\"assets/images/cooking.png\" width=\"80\">",
@@ -206,7 +206,7 @@ var unit3_lesson3 = {
       {
         "type": "balloon_pop",
         "audio": "cook",
-        "chinese": "做饭",
+        "chinese": "我正在做饭。",
         "options": [
           "<img src=\"assets/images/cooking.png\" width=\"80\">",
           "<img src=\"assets/images/cooking.png\" width=\"80\">",
@@ -223,7 +223,7 @@ var unit3_lesson3 = {
       {
         "type": "duo_listen_select",
         "audio": "dinner",
-        "chinese": "晚餐",
+        "chinese": "该吃晚饭了。",
         "options": [
           "<img src=\"assets/images/cooking.png\" width=\"80\">",
           "<img src=\"assets/images/cooking.png\" width=\"80\">",
@@ -240,7 +240,7 @@ var unit3_lesson3 = {
       {
         "type": "balloon_pop",
         "audio": "draw",
-        "chinese": "画画",
+        "chinese": "我正在画画。",
         "options": [
           "<img src=\"assets/images/clock.png\" width=\"80\">",
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
@@ -257,7 +257,7 @@ var unit3_lesson3 = {
       {
         "type": "scenario",
         "audio": "twenty",
-        "chinese": "二十",
+        "chinese": "现在是twenty点。",
         "options": [
           "<img src=\"assets/images/cooking.png\" width=\"80\">",
           "<img src=\"assets/images/clock.png\" width=\"80\">",
@@ -274,7 +274,7 @@ var unit3_lesson3 = {
       {
         "type": "duo_listen_select",
         "audio": "cook",
-        "chinese": "做饭",
+        "chinese": "我正在做饭。",
         "options": [
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
           "<img src=\"assets/images/cooking.png\" width=\"80\">",
@@ -291,7 +291,7 @@ var unit3_lesson3 = {
       {
         "type": "scenario",
         "audio": "dinner",
-        "chinese": "晚餐",
+        "chinese": "该吃晚饭了。",
         "options": [
           "<img src=\"assets/images/cooking.png\" width=\"80\">",
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
@@ -308,7 +308,7 @@ var unit3_lesson3 = {
       {
         "type": "scenario",
         "audio": "draw",
-        "chinese": "画画",
+        "chinese": "我正在画画。",
         "options": [
           "<img src=\"assets/images/clock.png\" width=\"80\">",
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
@@ -325,7 +325,7 @@ var unit3_lesson3 = {
       {
         "type": "listen_select",
         "audio": "twenty",
-        "chinese": "二十",
+        "chinese": "现在是twenty点。",
         "options": [
           "<img src=\"assets/images/cooking.png\" width=\"80\">",
           "<img src=\"assets/images/clock.png\" width=\"80\">",
@@ -345,7 +345,7 @@ var unit3_lesson3 = {
     "pretest": [
       {
         "type": "sentence_match",
-        "chinese": "做饭",
+        "chinese": "这是做饭。",
         "word": "cook",
         "sentence": "What are you doing?",
         "options": [
@@ -356,13 +356,21 @@ var unit3_lesson3 = {
           {
             "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
             "value": "draw"
+          },
+          {
+            "text": "<img src=\"assets/images/twelve.png\" width=\"80\">",
+            "value": "twelve"
+          },
+          {
+            "text": "<img src=\"assets/images/seven.png\" width=\"80\">",
+            "value": "seven"
           }
         ],
         "correct": "cook"
       },
       {
         "type": "sentence_match",
-        "chinese": "晚餐",
+        "chinese": "这是晚餐。",
         "word": "dinner",
         "sentence": "What are you doing?",
         "options": [
@@ -387,7 +395,7 @@ var unit3_lesson3 = {
       },
       {
         "type": "word_match",
-        "chinese": "画画",
+        "chinese": "这是画画。",
         "word": "draw",
         "sentence": "What are you doing?",
         "options": [
@@ -412,7 +420,7 @@ var unit3_lesson3 = {
       },
       {
         "type": "word_match",
-        "chinese": "二十",
+        "chinese": "现在是twenty点。",
         "word": "twenty",
         "sentence": "It's twenty o'clock.",
         "options": [
@@ -437,7 +445,7 @@ var unit3_lesson3 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "做饭",
+        "chinese": "这是做饭。",
         "word": "cook",
         "sentence": "What are you doing?",
         "options": [
@@ -462,7 +470,7 @@ var unit3_lesson3 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "晚餐",
+        "chinese": "该吃晚饭了。",
         "word": "dinner",
         "sentence": "It's time for dinner.",
         "options": [
@@ -473,13 +481,21 @@ var unit3_lesson3 = {
           {
             "text": "<img src=\"assets/images/cooking.png\" width=\"80\">",
             "value": "dinner"
+          },
+          {
+            "text": "<img src=\"assets/images/three.png\" width=\"80\">",
+            "value": "three"
+          },
+          {
+            "text": "<img src=\"assets/images/twelve.png\" width=\"80\">",
+            "value": "twelve"
           }
         ],
         "correct": "dinner"
       },
       {
         "type": "word_match",
-        "chinese": "画画",
+        "chinese": "我正在画画。",
         "word": "draw",
         "sentence": "I'm drawing.",
         "options": [
@@ -490,13 +506,21 @@ var unit3_lesson3 = {
           {
             "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
             "value": "twenty"
+          },
+          {
+            "text": "<img src=\"assets/images/seven.png\" width=\"80\">",
+            "value": "seven"
+          },
+          {
+            "text": "<img src=\"assets/images/five.png\" width=\"80\">",
+            "value": "five"
           }
         ],
         "correct": "draw"
       },
       {
         "type": "word_match",
-        "chinese": "二十",
+        "chinese": "这是二十。",
         "word": "twenty",
         "sentence": "What are you doing?",
         "options": [
@@ -507,13 +531,21 @@ var unit3_lesson3 = {
           {
             "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
             "value": "twenty"
+          },
+          {
+            "text": "<img src=\"assets/images/twelve.png\" width=\"80\">",
+            "value": "twelve"
+          },
+          {
+            "text": "<img src=\"assets/images/three.png\" width=\"80\">",
+            "value": "three"
           }
         ],
         "correct": "twenty"
       },
       {
         "type": "word_match",
-        "chinese": "做饭",
+        "chinese": "我正在做饭。",
         "word": "cook",
         "sentence": "I'm cooking.",
         "options": [
@@ -524,13 +556,21 @@ var unit3_lesson3 = {
           {
             "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
             "value": "twenty"
+          },
+          {
+            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
+            "value": "ten"
+          },
+          {
+            "text": "<img src=\"assets/images/three.png\" width=\"80\">",
+            "value": "three"
           }
         ],
         "correct": "cook"
       },
       {
         "type": "sentence_match",
-        "chinese": "晚餐",
+        "chinese": "这是晚餐。",
         "word": "dinner",
         "sentence": "What are you doing?",
         "options": [
@@ -541,6 +581,14 @@ var unit3_lesson3 = {
           {
             "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
             "value": "twenty"
+          },
+          {
+            "text": "<img src=\"assets/images/six.png\" width=\"80\">",
+            "value": "six"
+          },
+          {
+            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
+            "value": "ten"
           }
         ],
         "correct": "dinner"
@@ -549,7 +597,7 @@ var unit3_lesson3 = {
     "practice": [
       {
         "type": "duo_race",
-        "chinese": "做饭",
+        "chinese": "我正在做饭。",
         "word": "cook",
         "sentence": "I'm cooking.",
         "options": [
@@ -575,7 +623,7 @@ var unit3_lesson3 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "晚餐",
+        "chinese": "该吃晚饭了。",
         "word": "dinner",
         "sentence": "It's time for dinner.",
         "options": [
@@ -601,7 +649,7 @@ var unit3_lesson3 = {
       },
       {
         "type": "word_match",
-        "chinese": "画画",
+        "chinese": "我正在画画。",
         "word": "draw",
         "sentence": "I'm drawing.",
         "options": [
@@ -627,7 +675,7 @@ var unit3_lesson3 = {
       },
       {
         "type": "duo_race",
-        "chinese": "二十",
+        "chinese": "我正在做饭。",
         "word": "twenty",
         "sentence": "I'm cooking.",
         "options": [
@@ -641,7 +689,7 @@ var unit3_lesson3 = {
       },
       {
         "type": "word_match",
-        "chinese": "做饭",
+        "chinese": "我正在做饭。",
         "word": "cook",
         "sentence": "I'm cooking.",
         "options": [
@@ -655,7 +703,7 @@ var unit3_lesson3 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "晚餐",
+        "chinese": "该吃晚饭了。",
         "word": "dinner",
         "sentence": "It's time for dinner.",
         "options": [
@@ -681,7 +729,7 @@ var unit3_lesson3 = {
       },
       {
         "type": "word_match",
-        "chinese": "画画",
+        "chinese": "我正在画画。",
         "word": "draw",
         "sentence": "I'm drawing.",
         "options": [
@@ -695,7 +743,7 @@ var unit3_lesson3 = {
       },
       {
         "type": "duo_race",
-        "chinese": "二十",
+        "chinese": "我正在做饭。",
         "word": "twenty",
         "sentence": "I'm cooking.",
         "options": [
@@ -709,7 +757,7 @@ var unit3_lesson3 = {
       },
       {
         "type": "word_match",
-        "chinese": "做饭",
+        "chinese": "我正在做饭。",
         "word": "cook",
         "sentence": "I'm cooking.",
         "options": [
@@ -723,7 +771,7 @@ var unit3_lesson3 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "晚餐",
+        "chinese": "该吃晚饭了。",
         "word": "dinner",
         "sentence": "It's time for dinner.",
         "options": [
@@ -749,7 +797,7 @@ var unit3_lesson3 = {
       },
       {
         "type": "word_match",
-        "chinese": "画画",
+        "chinese": "我正在画画。",
         "word": "draw",
         "sentence": "I'm drawing.",
         "options": [
@@ -775,7 +823,7 @@ var unit3_lesson3 = {
       },
       {
         "type": "word_match",
-        "chinese": "二十",
+        "chinese": "现在是twenty点。",
         "word": "twenty",
         "sentence": "It's twenty o'clock.",
         "options": [
@@ -806,7 +854,7 @@ var unit3_lesson3 = {
       {
         "type": "word_spell",
         "word": "cook",
-        "chinese": "做饭",
+        "chinese": "我正在做饭。",
         "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
         "display": "co_k",
         "options": [
@@ -820,7 +868,7 @@ var unit3_lesson3 = {
       {
         "type": "letter_select",
         "word": "dinner",
-        "chinese": "晚餐",
+        "chinese": "该吃晚饭了。",
         "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
         "display": "d_nner",
         "options": [
@@ -834,7 +882,7 @@ var unit3_lesson3 = {
       {
         "type": "word_spell",
         "word": "draw",
-        "chinese": "画画",
+        "chinese": "我正在画画。",
         "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
         "display": "dr_w",
         "options": [
@@ -848,7 +896,7 @@ var unit3_lesson3 = {
       {
         "type": "letter_select",
         "word": "twenty",
-        "chinese": "二十",
+        "chinese": "现在是twenty点。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "display": "twent_",
         "options": [
@@ -862,7 +910,7 @@ var unit3_lesson3 = {
       {
         "type": "letter_select",
         "word": "cook",
-        "chinese": "做饭",
+        "chinese": "我正在做饭。",
         "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
         "display": "c_ok",
         "options": [
@@ -876,7 +924,7 @@ var unit3_lesson3 = {
       {
         "type": "letter_select",
         "word": "dinner",
-        "chinese": "晚餐",
+        "chinese": "该吃晚饭了。",
         "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
         "display": "_inner",
         "options": [
@@ -890,7 +938,7 @@ var unit3_lesson3 = {
       {
         "type": "word_spell",
         "word": "draw",
-        "chinese": "画画",
+        "chinese": "我正在画画。",
         "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
         "display": "d_aw",
         "options": [
@@ -904,7 +952,7 @@ var unit3_lesson3 = {
       {
         "type": "word_spell",
         "word": "twenty",
-        "chinese": "二十",
+        "chinese": "现在是twenty点。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "display": "t_enty",
         "options": [
@@ -918,7 +966,7 @@ var unit3_lesson3 = {
       {
         "type": "letter_select",
         "word": "cook",
-        "chinese": "做饭",
+        "chinese": "我正在做饭。",
         "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
         "display": "c_ok",
         "options": [
@@ -932,7 +980,7 @@ var unit3_lesson3 = {
       {
         "type": "letter_select",
         "word": "dinner",
-        "chinese": "晚餐",
+        "chinese": "该吃晚饭了。",
         "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
         "display": "dinne_",
         "options": [
@@ -948,7 +996,7 @@ var unit3_lesson3 = {
       {
         "type": "duo_spell",
         "word": "cook",
-        "chinese": "做饭",
+        "chinese": "我正在做饭。",
         "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
         "display": "co_k",
         "options": [
@@ -967,7 +1015,7 @@ var unit3_lesson3 = {
       {
         "type": "duo_spell",
         "word": "dinner",
-        "chinese": "晚餐",
+        "chinese": "该吃晚饭了。",
         "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
         "display": "d_nner",
         "options": [
@@ -986,7 +1034,7 @@ var unit3_lesson3 = {
       {
         "type": "word_spell",
         "word": "draw",
-        "chinese": "画画",
+        "chinese": "我正在画画。",
         "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
         "display": "dr_w",
         "options": [
@@ -1005,7 +1053,7 @@ var unit3_lesson3 = {
       {
         "type": "letter_select",
         "word": "twenty",
-        "chinese": "二十",
+        "chinese": "现在是twenty点。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "display": "twent_",
         "options": [
@@ -1024,7 +1072,7 @@ var unit3_lesson3 = {
       {
         "type": "letter_select",
         "word": "cook",
-        "chinese": "做饭",
+        "chinese": "我正在做饭。",
         "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
         "display": "c_ok",
         "options": [
@@ -1043,7 +1091,7 @@ var unit3_lesson3 = {
       {
         "type": "letter_select",
         "word": "dinner",
-        "chinese": "晚餐",
+        "chinese": "该吃晚饭了。",
         "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
         "display": "_inner",
         "options": [
@@ -1062,7 +1110,7 @@ var unit3_lesson3 = {
       {
         "type": "word_spell",
         "word": "draw",
-        "chinese": "画画",
+        "chinese": "我正在画画。",
         "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
         "display": "d_aw",
         "options": [
@@ -1081,7 +1129,7 @@ var unit3_lesson3 = {
       {
         "type": "duo_spell",
         "word": "twenty",
-        "chinese": "二十",
+        "chinese": "现在是twenty点。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "display": "t_enty",
         "options": [
@@ -1100,7 +1148,7 @@ var unit3_lesson3 = {
       {
         "type": "letter_select",
         "word": "cook",
-        "chinese": "做饭",
+        "chinese": "我正在做饭。",
         "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
         "display": "c_ok",
         "options": [
@@ -1119,7 +1167,7 @@ var unit3_lesson3 = {
       {
         "type": "duo_spell",
         "word": "dinner",
-        "chinese": "晚餐",
+        "chinese": "该吃晚饭了。",
         "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
         "display": "dinne_",
         "options": [
@@ -1138,7 +1186,7 @@ var unit3_lesson3 = {
       {
         "type": "duo_spell",
         "word": "draw",
-        "chinese": "画画",
+        "chinese": "我正在画画。",
         "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
         "display": "dra_",
         "options": [
@@ -1157,7 +1205,7 @@ var unit3_lesson3 = {
       {
         "type": "duo_spell",
         "word": "twenty",
-        "chinese": "二十",
+        "chinese": "现在是twenty点。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "display": "t_enty",
         "options": [
@@ -1180,70 +1228,70 @@ var unit3_lesson3 = {
       {
         "type": "read_word",
         "word": "cook",
-        "chinese": "做饭",
+        "chinese": "这是做饭。",
         "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
         "sentence": "What are you doing?"
       },
       {
         "type": "shadowing",
         "word": "dinner",
-        "chinese": "晚餐",
+        "chinese": "这是晚餐。",
         "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
         "sentence": "What are you doing?"
       },
       {
         "type": "read_word",
         "word": "draw",
-        "chinese": "画画",
+        "chinese": "这是画画。",
         "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
         "sentence": "What are you doing?"
       },
       {
         "type": "shadowing",
         "word": "twenty",
-        "chinese": "二十",
+        "chinese": "我喜欢twenty。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "sentence": "I like twenty."
       },
       {
         "type": "shadowing",
         "word": "cook",
-        "chinese": "做饭",
+        "chinese": "我喜欢做饭。",
         "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
         "sentence": "I like cook."
       },
       {
         "type": "shadowing",
         "word": "dinner",
-        "chinese": "晚餐",
+        "chinese": "我喜欢晚饭。",
         "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
         "sentence": "I like dinner."
       },
       {
         "type": "shadowing",
         "word": "draw",
-        "chinese": "画画",
+        "chinese": "我喜欢画画。",
         "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
         "sentence": "I like draw."
       },
       {
         "type": "shadowing",
         "word": "twenty",
-        "chinese": "二十",
+        "chinese": "我喜欢twenty。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "sentence": "I like twenty."
       },
       {
         "type": "read_word",
         "word": "cook",
-        "chinese": "做饭",
+        "chinese": "这是做饭。",
         "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
         "sentence": "What are you doing?"
       },
       {
         "type": "shadowing",
         "word": "dinner",
-        "chinese": "晚餐",
+        "chinese": "这是晚餐。",
         "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
         "sentence": "What are you doing?"
       }
@@ -1252,7 +1300,7 @@ var unit3_lesson3 = {
       {
         "type": "shadowing",
         "word": "cook",
-        "chinese": "做饭",
+        "chinese": "我正在做饭。",
         "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
         "sentence": "I'm cooking.",
         "difficulty": "easy"
@@ -1260,7 +1308,7 @@ var unit3_lesson3 = {
       {
         "type": "debate",
         "word": "dinner",
-        "chinese": "晚餐",
+        "chinese": "我正在做饭。",
         "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
         "sentence": "I'm cooking.",
         "difficulty": "easy"
@@ -1268,7 +1316,7 @@ var unit3_lesson3 = {
       {
         "type": "roleplay",
         "word": "draw",
-        "chinese": "画画",
+        "chinese": "这是一只画画。",
         "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
         "sentence": "This is a draw.",
         "difficulty": "hard"
@@ -1276,7 +1324,7 @@ var unit3_lesson3 = {
       {
         "type": "read_word",
         "word": "twenty",
-        "chinese": "二十",
+        "chinese": "这是一只twenty。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "sentence": "This is a twenty.",
         "difficulty": "easy"
@@ -1284,7 +1332,7 @@ var unit3_lesson3 = {
       {
         "type": "debate",
         "word": "cook",
-        "chinese": "做饭",
+        "chinese": "这是一只做饭。",
         "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
         "sentence": "This is a cook.",
         "difficulty": "hard"
@@ -1292,7 +1340,7 @@ var unit3_lesson3 = {
       {
         "type": "roleplay",
         "word": "dinner",
-        "chinese": "晚餐",
+        "chinese": "我正在做饭。",
         "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
         "sentence": "I'm cooking.",
         "difficulty": "easy"
@@ -1300,7 +1348,7 @@ var unit3_lesson3 = {
       {
         "type": "debate",
         "word": "draw",
-        "chinese": "画画",
+        "chinese": "这是一只画画。",
         "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
         "sentence": "This is a draw.",
         "difficulty": "easy"
@@ -1308,7 +1356,7 @@ var unit3_lesson3 = {
       {
         "type": "roleplay",
         "word": "twenty",
-        "chinese": "二十",
+        "chinese": "我正在做饭。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "sentence": "I'm cooking.",
         "difficulty": "hard"
@@ -1316,7 +1364,7 @@ var unit3_lesson3 = {
       {
         "type": "shadowing",
         "word": "cook",
-        "chinese": "做饭",
+        "chinese": "这是一只做饭。",
         "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
         "sentence": "This is a cook.",
         "difficulty": "hard"
@@ -1324,7 +1372,7 @@ var unit3_lesson3 = {
       {
         "type": "debate",
         "word": "dinner",
-        "chinese": "晚餐",
+        "chinese": "这是一只晚饭。",
         "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
         "sentence": "This is a dinner.",
         "difficulty": "medium"
@@ -1332,7 +1380,7 @@ var unit3_lesson3 = {
       {
         "type": "roleplay",
         "word": "draw",
-        "chinese": "画画",
+        "chinese": "这是一只画画。",
         "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
         "sentence": "This is a draw.",
         "difficulty": "hard"
@@ -1340,7 +1388,7 @@ var unit3_lesson3 = {
       {
         "type": "roleplay",
         "word": "twenty",
-        "chinese": "二十",
+        "chinese": "这是一只twenty。",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "sentence": "This is a twenty.",
         "difficulty": "hard"

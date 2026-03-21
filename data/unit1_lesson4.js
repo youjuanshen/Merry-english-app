@@ -6,7 +6,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_select",
         "audio": "dog",
-        "chinese": "狗",
+        "chinese": "这是一只狗。",
         "options": [
           "<img src=\"assets/images/elephant.png\" width=\"80\">",
           "<img src=\"assets/images/bird.png\" width=\"80\">",
@@ -18,7 +18,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_select",
         "audio": "monkey",
-        "chinese": "猴子",
+        "chinese": "这是一只猴子。",
         "options": [
           "<img src=\"assets/images/duck.png\" width=\"80\">",
           "<img src=\"assets/images/bear.png\" width=\"80\">",
@@ -30,7 +30,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_select",
         "audio": "lion",
-        "chinese": "狮子",
+        "chinese": "这是一只狮子。",
         "options": [
           "<img src=\"assets/images/lion.png\" width=\"80\">",
           "<img src=\"assets/images/elephant.png\" width=\"80\">",
@@ -42,7 +42,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_select",
         "audio": "tiger",
-        "chinese": "老虎",
+        "chinese": "这是一只老虎。",
         "options": [
           "<img src=\"assets/images/tiger.png\" width=\"80\">",
           "<img src=\"assets/images/mouse.png\" width=\"80\">",
@@ -54,7 +54,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_select",
         "audio": "elephant",
-        "chinese": "大象",
+        "chinese": "这是一只大象。",
         "options": [
           "<img src=\"assets/images/mouse.png\" width=\"80\">",
           "<img src=\"assets/images/bird.png\" width=\"80\">",
@@ -66,7 +66,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_select",
         "audio": "mouse",
-        "chinese": "老鼠",
+        "chinese": "这是一只老鼠。",
         "options": [
           "<img src=\"assets/images/mouse.png\" width=\"80\">",
           "<img src=\"assets/images/duck.png\" width=\"80\">",
@@ -78,7 +78,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_select",
         "audio": "rabbit",
-        "chinese": "兔子",
+        "chinese": "这是一只兔子。",
         "options": [
           "<img src=\"assets/images/rabbit.png\" width=\"80\">",
           "<img src=\"assets/images/bird.png\" width=\"80\">",
@@ -90,14 +90,14 @@ var unit1_lesson4 = {
       {
         "type": "listen_tf",
         "audio": "bird",
-        "chinese": "鸟",
+        "chinese": "这是一只鸟。",
         "image": "<img src=\"assets/images/bird.png\" width=\"80\">",
         "correct": true
       },
       {
         "type": "listen_select",
         "audio": "bear",
-        "chinese": "熊",
+        "chinese": "这是一只熊。",
         "options": [
           "<img src=\"assets/images/bear.png\" width=\"80\">",
           "<img src=\"assets/images/fish.png\" width=\"80\">",
@@ -109,7 +109,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_select",
         "audio": "cat",
-        "chinese": "猫",
+        "chinese": "这是一只猫。",
         "options": [
           "<img src=\"assets/images/bear.png\" width=\"80\">",
           "<img src=\"assets/images/elephant.png\" width=\"80\">",
@@ -123,7 +123,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_tf",
         "audio": "bird",
-        "chinese": "鸟",
+        "chinese": "这是一只鸟。",
         "difficulty": "easy",
         "image": "<img src=\"assets/images/bird.png\" width=\"80\">",
         "correct": true
@@ -131,7 +131,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_select",
         "audio": "mouse",
-        "chinese": "老鼠",
+        "chinese": "这是一只老鼠。",
         "difficulty": "easy",
         "options": [
           "<img src=\"assets/images/mouse.png\" width=\"80\">",
@@ -144,7 +144,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_select",
         "audio": "elephant",
-        "chinese": "大象",
+        "chinese": "这是一只大象。",
         "difficulty": "hard",
         "options": [
           "<img src=\"assets/images/lion.png\" width=\"80\">",
@@ -157,7 +157,7 @@ var unit1_lesson4 = {
       {
         "type": "duo_listen_select",
         "audio": "cat",
-        "chinese": "猫",
+        "chinese": "这是一只猫。",
         "difficulty": "medium",
         "options": [
           "<img src=\"assets/images/cat.png\" width=\"80\">",
@@ -170,7 +170,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_select",
         "audio": "duck",
-        "chinese": "鸭子",
+        "chinese": "这是一只鸭子。",
         "difficulty": "hard",
         "options": [
           "<img src=\"assets/images/bird.png\" width=\"80\">",
@@ -183,7 +183,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_select",
         "audio": "bear",
-        "chinese": "熊",
+        "chinese": "这是一只熊。",
         "difficulty": "medium",
         "options": [
           "<img src=\"assets/images/rabbit.png\" width=\"80\">",
@@ -196,7 +196,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_select",
         "audio": "tiger",
-        "chinese": "老虎",
+        "chinese": "这是一只老虎。",
         "difficulty": "easy",
         "options": [
           "<img src=\"assets/images/rabbit.png\" width=\"80\">",
@@ -209,7 +209,7 @@ var unit1_lesson4 = {
       {
         "type": "duo_listen_select",
         "audio": "rabbit",
-        "chinese": "兔子",
+        "chinese": "这是一只兔子。",
         "difficulty": "hard",
         "options": [
           "<img src=\"assets/images/rabbit.png\" width=\"80\">",
@@ -222,7 +222,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_select",
         "audio": "monkey",
-        "chinese": "猴子",
+        "chinese": "这是一只猴子。",
         "difficulty": "easy",
         "options": [
           "<img src=\"assets/images/lion.png\" width=\"80\">",
@@ -235,7 +235,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_tf",
         "audio": "lion",
-        "chinese": "狮子",
+        "chinese": "这是一只狮子。",
         "difficulty": "hard",
         "image": "<img src=\"assets/images/tiger.png\" width=\"80\">",
         "correct": false
@@ -243,7 +243,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_select",
         "audio": "bird",
-        "chinese": "鸟",
+        "chinese": "这是一只鸟。",
         "difficulty": "easy",
         "options": [
           "<img src=\"assets/images/bear.png\" width=\"80\">",
@@ -256,7 +256,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_select",
         "audio": "dog",
-        "chinese": "狗",
+        "chinese": "这是一只狗。",
         "difficulty": "easy",
         "options": [
           "<img src=\"assets/images/dog.png\" width=\"80\">",
@@ -269,7 +269,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_select",
         "audio": "bear",
-        "chinese": "熊",
+        "chinese": "这是一只熊。",
         "difficulty": "hard",
         "options": [
           "<img src=\"assets/images/duck.png\" width=\"80\">",
@@ -282,7 +282,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_select",
         "audio": "fish",
-        "chinese": "鱼",
+        "chinese": "这是一只fish。",
         "difficulty": "medium",
         "options": [
           "<img src=\"assets/images/cat.png\" width=\"80\">",
@@ -295,7 +295,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_select",
         "audio": "mouse",
-        "chinese": "老鼠",
+        "chinese": "这是一只老鼠。",
         "difficulty": "medium",
         "options": [
           "<img src=\"assets/images/lion.png\" width=\"80\">",
@@ -308,7 +308,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_select",
         "audio": "dog",
-        "chinese": "狗",
+        "chinese": "这是一只狗。",
         "difficulty": "easy",
         "options": [
           "<img src=\"assets/images/dog.png\" width=\"80\">",
@@ -321,7 +321,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_tf",
         "audio": "cat",
-        "chinese": "猫",
+        "chinese": "这是一只猫。",
         "difficulty": "medium",
         "image": "<img src=\"assets/images/cat.png\" width=\"80\">",
         "correct": true
@@ -329,7 +329,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_select",
         "audio": "cat",
-        "chinese": "猫",
+        "chinese": "这是一只猫。",
         "difficulty": "hard",
         "options": [
           "<img src=\"assets/images/elephant.png\" width=\"80\">",
@@ -342,7 +342,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_select",
         "audio": "duck",
-        "chinese": "鸭子",
+        "chinese": "这是一只鸭子。",
         "difficulty": "easy",
         "options": [
           "<img src=\"assets/images/fish.png\" width=\"80\">",
@@ -355,7 +355,7 @@ var unit1_lesson4 = {
       {
         "type": "duo_listen_select",
         "audio": "tiger",
-        "chinese": "老虎",
+        "chinese": "这是一只老虎。",
         "difficulty": "easy",
         "options": [
           "<img src=\"assets/images/rabbit.png\" width=\"80\">",
@@ -368,7 +368,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_select",
         "audio": "elephant",
-        "chinese": "大象",
+        "chinese": "这是一只大象。",
         "difficulty": "medium",
         "options": [
           "<img src=\"assets/images/elephant.png\" width=\"80\">",
@@ -381,7 +381,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_tf",
         "audio": "dog",
-        "chinese": "狗",
+        "chinese": "这是一只狗。",
         "difficulty": "medium",
         "image": "<img src=\"assets/images/cat.png\" width=\"80\">",
         "correct": false
@@ -389,7 +389,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_select",
         "audio": "rabbit",
-        "chinese": "兔子",
+        "chinese": "这是一只兔子。",
         "difficulty": "medium",
         "options": [
           "<img src=\"assets/images/duck.png\" width=\"80\">",
@@ -402,7 +402,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_tf",
         "audio": "monkey",
-        "chinese": "猴子",
+        "chinese": "这是一只猴子。",
         "difficulty": "medium",
         "image": "<img src=\"assets/images/monkey.png\" width=\"80\">",
         "correct": true
@@ -410,7 +410,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_select",
         "audio": "lion",
-        "chinese": "狮子",
+        "chinese": "这是一只狮子。",
         "difficulty": "medium",
         "options": [
           "<img src=\"assets/images/lion.png\" width=\"80\">",
@@ -423,7 +423,7 @@ var unit1_lesson4 = {
       {
         "type": "listen_select",
         "audio": "fish",
-        "chinese": "鱼",
+        "chinese": "这是一只fish。",
         "difficulty": "hard",
         "options": [
           "<img src=\"assets/images/mouse.png\" width=\"80\">",
@@ -436,7 +436,7 @@ var unit1_lesson4 = {
       {
         "type": "balloon_pop",
         "text": "Find the word",
-        "chinese": "老鼠",
+        "chinese": "这是一只Find the word。",
         "options": [
           "<img src=\"assets/images/mouse.png\" width=\"80\">",
           "<img src=\"assets/images/fish.png\" width=\"80\">",
@@ -449,7 +449,7 @@ var unit1_lesson4 = {
       {
         "type": "balloon_pop",
         "text": "Find the word",
-        "chinese": "大象",
+        "chinese": "这是一只Find the word。",
         "options": [
           "<img src=\"assets/images/lion.png\" width=\"80\">",
           "<img src=\"assets/images/mouse.png\" width=\"80\">",
@@ -462,7 +462,7 @@ var unit1_lesson4 = {
       {
         "type": "balloon_pop",
         "text": "Find the word",
-        "chinese": "鸭子",
+        "chinese": "这是一只Find the word。",
         "options": [
           "<img src=\"assets/images/bird.png\" width=\"80\">",
           "<img src=\"assets/images/fish.png\" width=\"80\">",
@@ -475,7 +475,7 @@ var unit1_lesson4 = {
       {
         "type": "balloon_pop",
         "text": "Find the word",
-        "chinese": "熊",
+        "chinese": "这是一只Find the word。",
         "options": [
           "<img src=\"assets/images/rabbit.png\" width=\"80\">",
           "<img src=\"assets/images/tiger.png\" width=\"80\">",
@@ -493,7 +493,8 @@ var unit1_lesson4 = {
         "options": [
           "<img src=\"assets/images/cat.png\" width=\"80\">",
           "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/bird.png\" width=\"80\">"
+          "<img src=\"assets/images/bird.png\" width=\"80\">",
+          "<img src=\"assets/images/bear.png\" width=\"80\">"
         ],
         "correct": 1,
         "feedback": "Dogs bark and wag their tails!",
@@ -507,7 +508,8 @@ var unit1_lesson4 = {
         "options": [
           "<img src=\"assets/images/bear.png\" width=\"80\">",
           "<img src=\"assets/images/panda.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">"
+          "<img src=\"assets/images/tiger.png\" width=\"80\">",
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">"
         ],
         "correct": 1,
         "feedback": "Pandas eat bamboo!",
@@ -521,7 +523,8 @@ var unit1_lesson4 = {
         "options": [
           "<img src=\"assets/images/panda.png\" width=\"80\">",
           "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">"
+          "<img src=\"assets/images/lion.png\" width=\"80\">",
+          "<img src=\"assets/images/bird.png\" width=\"80\">"
         ],
         "correct": 1,
         "feedback": "Polar bears live in cold places!",
@@ -535,7 +538,8 @@ var unit1_lesson4 = {
         "options": [
           "<img src=\"assets/images/dog.png\" width=\"80\">",
           "<img src=\"assets/images/cat.png\" width=\"80\">",
-          "<img src=\"assets/images/bird.png\" width=\"80\">"
+          "<img src=\"assets/images/bird.png\" width=\"80\">",
+          "<img src=\"assets/images/tiger.png\" width=\"80\">"
         ],
         "correct": 2,
         "feedback": "Birds can fly and sing!",
@@ -547,7 +551,7 @@ var unit1_lesson4 = {
     "pretest": [
       {
         "type": "sentence_match",
-        "chinese": "狗",
+        "chinese": "这是一只狗。",
         "sentence": "This is a dog.",
         "options": [
           {
@@ -557,13 +561,21 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
             "value": "dog"
+          },
+          {
+            "text": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+            "value": "rabbit"
+          },
+          {
+            "text": "<img src=\"assets/images/cat.png\" width=\"80\">",
+            "value": "cat"
           }
         ],
         "correct": "dog"
       },
       {
         "type": "word_match",
-        "chinese": "猴子",
+        "chinese": "这是一只猴子。",
         "word": "monkey",
         "options": [
           {
@@ -573,13 +585,21 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
             "value": "monkey"
+          },
+          {
+            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
+            "value": "panda"
+          },
+          {
+            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
+            "value": "tiger"
           }
         ],
         "correct": "monkey"
       },
       {
         "type": "word_match",
-        "chinese": "猫",
+        "chinese": "这是一只猫。",
         "word": "cat",
         "options": [
           {
@@ -589,13 +609,21 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/lion.png\" width=\"80\">",
             "value": "lion"
+          },
+          {
+            "text": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+            "value": "rabbit"
+          },
+          {
+            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
+            "value": "dog"
           }
         ],
         "correct": "cat"
       },
       {
         "type": "word_match",
-        "chinese": "鸭子",
+        "chinese": "这是一只鸭子。",
         "word": "duck",
         "options": [
           {
@@ -605,13 +633,21 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/duck.png\" width=\"80\">",
             "value": "duck"
+          },
+          {
+            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
+            "value": "monkey"
+          },
+          {
+            "text": "<img src=\"assets/images/lion.png\" width=\"80\">",
+            "value": "lion"
           }
         ],
         "correct": "duck"
       },
       {
         "type": "word_match",
-        "chinese": "鱼",
+        "chinese": "这是一只fish。",
         "word": "fish",
         "options": [
           {
@@ -621,13 +657,21 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/fish.png\" width=\"80\">",
             "value": "fish"
+          },
+          {
+            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
+            "value": "horse"
+          },
+          {
+            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
+            "value": "tiger"
           }
         ],
         "correct": "fish"
       },
       {
         "type": "word_match",
-        "chinese": "老鼠",
+        "chinese": "这是一只老鼠。",
         "word": "mouse",
         "options": [
           {
@@ -637,13 +681,21 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/fish.png\" width=\"80\">",
             "value": "fish"
+          },
+          {
+            "text": "<img src=\"assets/images/lion.png\" width=\"80\">",
+            "value": "lion"
+          },
+          {
+            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
+            "value": "tiger"
           }
         ],
         "correct": "mouse"
       },
       {
         "type": "sentence_match",
-        "chinese": "大象",
+        "chinese": "这是一只大象。",
         "sentence": "This is a elephant.",
         "options": [
           {
@@ -653,13 +705,21 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/lion.png\" width=\"80\">",
             "value": "lion"
+          },
+          {
+            "text": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+            "value": "rabbit"
+          },
+          {
+            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
+            "value": "monkey"
           }
         ],
         "correct": "elephant"
       },
       {
         "type": "word_match",
-        "chinese": "兔子",
+        "chinese": "这是一只兔子。",
         "word": "rabbit",
         "options": [
           {
@@ -669,13 +729,21 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
             "value": "bird"
+          },
+          {
+            "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
+            "value": "bear"
+          },
+          {
+            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
+            "value": "dog"
           }
         ],
         "correct": "rabbit"
       },
       {
         "type": "word_match",
-        "chinese": "熊",
+        "chinese": "这是一只熊。",
         "word": "bear",
         "options": [
           {
@@ -685,13 +753,21 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
             "value": "bear"
+          },
+          {
+            "text": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+            "value": "rabbit"
+          },
+          {
+            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
+            "value": "horse"
           }
         ],
         "correct": "bear"
       },
       {
         "type": "word_match",
-        "chinese": "鸟",
+        "chinese": "这是一只鸟。",
         "word": "bird",
         "options": [
           {
@@ -701,13 +777,21 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
             "value": "bird"
+          },
+          {
+            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
+            "value": "monkey"
+          },
+          {
+            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
+            "value": "panda"
           }
         ],
         "correct": "bird"
       },
       {
         "type": "word_match",
-        "chinese": "老虎",
+        "chinese": "这是一只老虎。",
         "word": "tiger",
         "options": [
           {
@@ -717,13 +801,21 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
             "value": "tiger"
+          },
+          {
+            "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
+            "value": "bear"
+          },
+          {
+            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
+            "value": "dog"
           }
         ],
         "correct": "tiger"
       },
       {
         "type": "word_match",
-        "chinese": "狮子",
+        "chinese": "这是一只狮子。",
         "word": "lion",
         "options": [
           {
@@ -733,6 +825,14 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
             "value": "dog"
+          },
+          {
+            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
+            "value": "tiger"
+          },
+          {
+            "text": "<img src=\"assets/images/cat.png\" width=\"80\">",
+            "value": "cat"
           }
         ],
         "correct": "lion"
@@ -741,7 +841,7 @@ var unit1_lesson4 = {
     "practice": [
       {
         "type": "sentence_match",
-        "chinese": "熊",
+        "chinese": "这是一只熊。",
         "difficulty": "easy",
         "sentence": "This is a bear.",
         "options": [
@@ -752,13 +852,21 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
             "value": "rabbit"
+          },
+          {
+            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
+            "value": "monkey"
+          },
+          {
+            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
+            "value": "horse"
           }
         ],
         "correct": "bear"
       },
       {
         "type": "word_match",
-        "chinese": "老虎",
+        "chinese": "这是一只老虎。",
         "difficulty": "hard",
         "word": "tiger",
         "options": [
@@ -769,13 +877,21 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
             "value": "tiger"
+          },
+          {
+            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
+            "value": "panda"
+          },
+          {
+            "text": "<img src=\"assets/images/cat.png\" width=\"80\">",
+            "value": "cat"
           }
         ],
         "correct": "tiger"
       },
       {
         "type": "word_match",
-        "chinese": "猴子",
+        "chinese": "这是一只猴子。",
         "difficulty": "easy",
         "word": "monkey",
         "options": [
@@ -786,13 +902,21 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
             "value": "monkey"
+          },
+          {
+            "text": "<img src=\"assets/images/cat.png\" width=\"80\">",
+            "value": "cat"
+          },
+          {
+            "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
+            "value": "bird"
           }
         ],
         "correct": "monkey"
       },
       {
         "type": "word_match",
-        "chinese": "猫",
+        "chinese": "这是一只猫。",
         "difficulty": "easy",
         "word": "cat",
         "options": [
@@ -803,13 +927,21 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
             "value": "rabbit"
+          },
+          {
+            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
+            "value": "horse"
+          },
+          {
+            "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
+            "value": "bird"
           }
         ],
         "correct": "cat"
       },
       {
         "type": "duo_race",
-        "chinese": "狗",
+        "chinese": "这是一只狗。",
         "difficulty": "easy",
         "word": "dog",
         "options": [
@@ -822,7 +954,7 @@ var unit1_lesson4 = {
       },
       {
         "type": "whack_mole",
-        "chinese": "鸟",
+        "chinese": "这是一只鸟。",
         "difficulty": "hard",
         "word": "bird",
         "options": [
@@ -835,7 +967,7 @@ var unit1_lesson4 = {
       },
       {
         "type": "word_match",
-        "chinese": "鸟",
+        "chinese": "这是一只鸟。",
         "difficulty": "hard",
         "word": "bird",
         "options": [
@@ -846,13 +978,21 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
             "value": "bird"
+          },
+          {
+            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
+            "value": "horse"
+          },
+          {
+            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
+            "value": "panda"
           }
         ],
         "correct": "bird"
       },
       {
         "type": "word_match",
-        "chinese": "大象",
+        "chinese": "这是一只大象。",
         "difficulty": "medium",
         "word": "elephant",
         "options": [
@@ -863,13 +1003,21 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/lion.png\" width=\"80\">",
             "value": "lion"
+          },
+          {
+            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
+            "value": "tiger"
+          },
+          {
+            "text": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+            "value": "rabbit"
           }
         ],
         "correct": "elephant"
       },
       {
         "type": "whack_mole",
-        "chinese": "猫",
+        "chinese": "这是一只猫。",
         "difficulty": "easy",
         "word": "cat",
         "options": [
@@ -882,7 +1030,7 @@ var unit1_lesson4 = {
       },
       {
         "type": "whack_mole",
-        "chinese": "熊",
+        "chinese": "这是一只熊。",
         "difficulty": "medium",
         "word": "bear",
         "options": [
@@ -895,7 +1043,7 @@ var unit1_lesson4 = {
       },
       {
         "type": "word_match",
-        "chinese": "鸟",
+        "chinese": "这是一只鸟。",
         "difficulty": "easy",
         "word": "bird",
         "options": [
@@ -906,13 +1054,21 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/mouse.png\" width=\"80\">",
             "value": "mouse"
+          },
+          {
+            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
+            "value": "dog"
+          },
+          {
+            "text": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+            "value": "rabbit"
           }
         ],
         "correct": "bird"
       },
       {
         "type": "sentence_match",
-        "chinese": "老虎",
+        "chinese": "这是一只老虎。",
         "difficulty": "hard",
         "sentence": "This is a tiger.",
         "options": [
@@ -923,13 +1079,21 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
             "value": "tiger"
+          },
+          {
+            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
+            "value": "monkey"
+          },
+          {
+            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
+            "value": "horse"
           }
         ],
         "correct": "tiger"
       },
       {
         "type": "word_match",
-        "chinese": "鱼",
+        "chinese": "这是一只fish。",
         "difficulty": "hard",
         "word": "fish",
         "options": [
@@ -940,13 +1104,21 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/fish.png\" width=\"80\">",
             "value": "fish"
+          },
+          {
+            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
+            "value": "panda"
+          },
+          {
+            "text": "<img src=\"assets/images/cat.png\" width=\"80\">",
+            "value": "cat"
           }
         ],
         "correct": "fish"
       },
       {
         "type": "whack_mole",
-        "chinese": "大象",
+        "chinese": "这是一只大象。",
         "difficulty": "medium",
         "word": "elephant",
         "options": [
@@ -959,7 +1131,7 @@ var unit1_lesson4 = {
       },
       {
         "type": "word_match",
-        "chinese": "兔子",
+        "chinese": "这是一只兔子。",
         "difficulty": "medium",
         "word": "rabbit",
         "options": [
@@ -970,13 +1142,21 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
             "value": "dog"
+          },
+          {
+            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
+            "value": "panda"
+          },
+          {
+            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
+            "value": "tiger"
           }
         ],
         "correct": "rabbit"
       },
       {
         "type": "word_match",
-        "chinese": "老鼠",
+        "chinese": "这是一只老鼠。",
         "difficulty": "hard",
         "word": "mouse",
         "options": [
@@ -987,13 +1167,21 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/mouse.png\" width=\"80\">",
             "value": "mouse"
+          },
+          {
+            "text": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+            "value": "rabbit"
+          },
+          {
+            "text": "<img src=\"assets/images/lion.png\" width=\"80\">",
+            "value": "lion"
           }
         ],
         "correct": "mouse"
       },
       {
         "type": "sentence_match",
-        "chinese": "狗",
+        "chinese": "这是一只狗。",
         "difficulty": "medium",
         "sentence": "This is a dog.",
         "options": [
@@ -1004,13 +1192,21 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
             "value": "dog"
+          },
+          {
+            "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
+            "value": "bear"
+          },
+          {
+            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
+            "value": "horse"
           }
         ],
         "correct": "dog"
       },
       {
         "type": "word_match",
-        "chinese": "狮子",
+        "chinese": "这是一只狮子。",
         "difficulty": "easy",
         "word": "lion",
         "options": [
@@ -1021,13 +1217,21 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
             "value": "tiger"
+          },
+          {
+            "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
+            "value": "bird"
+          },
+          {
+            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
+            "value": "panda"
           }
         ],
         "correct": "lion"
       },
       {
         "type": "word_match",
-        "chinese": "猴子",
+        "chinese": "这是一只猴子。",
         "difficulty": "easy",
         "word": "monkey",
         "options": [
@@ -1038,13 +1242,21 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
             "value": "monkey"
+          },
+          {
+            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
+            "value": "dog"
+          },
+          {
+            "text": "<img src=\"assets/images/cat.png\" width=\"80\">",
+            "value": "cat"
           }
         ],
         "correct": "monkey"
       },
       {
         "type": "duo_race",
-        "chinese": "狗",
+        "chinese": "这是一只狗。",
         "difficulty": "medium",
         "word": "dog",
         "options": [
@@ -1057,7 +1269,7 @@ var unit1_lesson4 = {
       },
       {
         "type": "duo_race",
-        "chinese": "猴子",
+        "chinese": "这是一只猴子。",
         "difficulty": "medium",
         "word": "monkey",
         "options": [
@@ -1070,7 +1282,7 @@ var unit1_lesson4 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "鱼",
+        "chinese": "这是一只fish。",
         "difficulty": "medium",
         "sentence": "This is a fish.",
         "options": [
@@ -1081,13 +1293,21 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
             "value": "dog"
+          },
+          {
+            "text": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+            "value": "rabbit"
+          },
+          {
+            "text": "<img src=\"assets/images/cat.png\" width=\"80\">",
+            "value": "cat"
           }
         ],
         "correct": "fish"
       },
       {
         "type": "sentence_match",
-        "chinese": "老鼠",
+        "chinese": "这是一只老鼠。",
         "difficulty": "hard",
         "sentence": "This is a mouse.",
         "options": [
@@ -1098,13 +1318,21 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/mouse.png\" width=\"80\">",
             "value": "mouse"
+          },
+          {
+            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
+            "value": "dog"
+          },
+          {
+            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
+            "value": "tiger"
           }
         ],
         "correct": "mouse"
       },
       {
         "type": "whack_mole",
-        "chinese": "鸭子",
+        "chinese": "这是一只鸭子。",
         "difficulty": "medium",
         "word": "duck",
         "options": [
@@ -1117,7 +1345,7 @@ var unit1_lesson4 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "猫",
+        "chinese": "这是一只猫。",
         "difficulty": "easy",
         "sentence": "This is a cat.",
         "options": [
@@ -1128,13 +1356,21 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/cat.png\" width=\"80\">",
             "value": "cat"
+          },
+          {
+            "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
+            "value": "bear"
+          },
+          {
+            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
+            "value": "horse"
           }
         ],
         "correct": "cat"
       },
       {
         "type": "duo_race",
-        "chinese": "老虎",
+        "chinese": "这是一只老虎。",
         "difficulty": "easy",
         "word": "tiger",
         "options": [
@@ -1147,7 +1383,7 @@ var unit1_lesson4 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "狮子",
+        "chinese": "这是一只狮子。",
         "difficulty": "easy",
         "sentence": "This is a lion.",
         "options": [
@@ -1158,13 +1394,21 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/lion.png\" width=\"80\">",
             "value": "lion"
+          },
+          {
+            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
+            "value": "tiger"
+          },
+          {
+            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
+            "value": "monkey"
           }
         ],
         "correct": "lion"
       },
       {
         "type": "whack_mole",
-        "chinese": "兔子",
+        "chinese": "这是一只兔子。",
         "difficulty": "hard",
         "word": "rabbit",
         "options": [
@@ -1177,7 +1421,7 @@ var unit1_lesson4 = {
       },
       {
         "type": "word_match",
-        "chinese": "鸭子",
+        "chinese": "这是一只鸭子。",
         "difficulty": "medium",
         "word": "duck",
         "options": [
@@ -1188,13 +1432,21 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/duck.png\" width=\"80\">",
             "value": "duck"
+          },
+          {
+            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
+            "value": "monkey"
+          },
+          {
+            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
+            "value": "dog"
           }
         ],
         "correct": "duck"
       },
       {
         "type": "sentence_match",
-        "chinese": "熊",
+        "chinese": "这是一只熊。",
         "difficulty": "medium",
         "sentence": "This is a bear.",
         "options": [
@@ -1205,6 +1457,14 @@ var unit1_lesson4 = {
           {
             "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
             "value": "bear"
+          },
+          {
+            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
+            "value": "monkey"
+          },
+          {
+            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
+            "value": "tiger"
           }
         ],
         "correct": "bear"
@@ -1216,7 +1476,7 @@ var unit1_lesson4 = {
       {
         "type": "letter_select",
         "word": "bird",
-        "chinese": "鸟",
+        "chinese": "这是一只鸟。",
         "display": "b_rd",
         "options": [
           "i",
@@ -1229,13 +1489,13 @@ var unit1_lesson4 = {
       {
         "type": "word_spell",
         "word": "bear",
-        "chinese": "熊",
+        "chinese": "这是一只熊。",
         "image": "<img src=\"assets/images/bear.png\" width=\"80\">"
       },
       {
         "type": "letter_select",
         "word": "fish",
-        "chinese": "鱼",
+        "chinese": "这是一只fish。",
         "display": "_ish",
         "options": [
           "v",
@@ -1248,13 +1508,13 @@ var unit1_lesson4 = {
       {
         "type": "word_spell",
         "word": "rabbit",
-        "chinese": "兔子",
+        "chinese": "这是一只兔子。",
         "image": "<img src=\"assets/images/rabbit.png\" width=\"80\">"
       },
       {
         "type": "letter_select",
         "word": "cat",
-        "chinese": "猫",
+        "chinese": "这是一只猫。",
         "display": "c_t",
         "options": [
           "y",
@@ -1267,7 +1527,7 @@ var unit1_lesson4 = {
       {
         "type": "letter_select",
         "word": "mouse",
-        "chinese": "老鼠",
+        "chinese": "这是一只老鼠。",
         "display": "m_use",
         "options": [
           "o",
@@ -1280,37 +1540,37 @@ var unit1_lesson4 = {
       {
         "type": "word_spell",
         "word": "elephant",
-        "chinese": "大象",
+        "chinese": "这是一只大象。",
         "image": "<img src=\"assets/images/elephant.png\" width=\"80\">"
       },
       {
         "type": "word_spell",
         "word": "tiger",
-        "chinese": "老虎",
+        "chinese": "这是一只老虎。",
         "image": "<img src=\"assets/images/tiger.png\" width=\"80\">"
       },
       {
         "type": "word_spell",
         "word": "duck",
-        "chinese": "鸭子",
+        "chinese": "这是一只鸭子。",
         "image": "<img src=\"assets/images/duck.png\" width=\"80\">"
       },
       {
         "type": "word_spell",
         "word": "dog",
-        "chinese": "狗",
+        "chinese": "这是一只狗。",
         "image": "<img src=\"assets/images/dog.png\" width=\"80\">"
       },
       {
         "type": "word_spell",
         "word": "lion",
-        "chinese": "狮子",
+        "chinese": "这是一只狮子。",
         "image": "<img src=\"assets/images/lion.png\" width=\"80\">"
       },
       {
         "type": "letter_select",
         "word": "monkey",
-        "chinese": "猴子",
+        "chinese": "这是一只猴子。",
         "display": "mon_ey",
         "options": [
           "m",
@@ -1325,7 +1585,7 @@ var unit1_lesson4 = {
       {
         "type": "letter_select",
         "word": "dog",
-        "chinese": "狗",
+        "chinese": "这是一只狗。",
         "difficulty": "hard",
         "display": "_og",
         "options": [
@@ -1339,14 +1599,14 @@ var unit1_lesson4 = {
       {
         "type": "word_spell",
         "word": "cat",
-        "chinese": "猫",
+        "chinese": "这是一只猫。",
         "difficulty": "medium",
         "image": "<img src=\"assets/images/cat.png\" width=\"80\">"
       },
       {
         "type": "duo_spell",
         "word": "rabbit",
-        "chinese": "兔子",
+        "chinese": "这是一只兔子。",
         "difficulty": "medium",
         "parts": [
           "rab",
@@ -1357,7 +1617,7 @@ var unit1_lesson4 = {
       {
         "type": "duo_spell",
         "word": "cat",
-        "chinese": "猫",
+        "chinese": "这是一只猫。",
         "difficulty": "medium",
         "parts": [
           "c",
@@ -1368,7 +1628,7 @@ var unit1_lesson4 = {
       {
         "type": "letter_select",
         "word": "mouse",
-        "chinese": "老鼠",
+        "chinese": "这是一只老鼠。",
         "difficulty": "medium",
         "display": "m_use",
         "options": [
@@ -1382,7 +1642,7 @@ var unit1_lesson4 = {
       {
         "type": "letter_select",
         "word": "bear",
-        "chinese": "熊",
+        "chinese": "这是一只熊。",
         "difficulty": "easy",
         "display": "bea_",
         "options": [
@@ -1396,7 +1656,7 @@ var unit1_lesson4 = {
       {
         "type": "letter_select",
         "word": "bear",
-        "chinese": "熊",
+        "chinese": "这是一只熊。",
         "difficulty": "easy",
         "display": "bea_",
         "options": [
@@ -1410,7 +1670,7 @@ var unit1_lesson4 = {
       {
         "type": "duo_sentence",
         "word": "bird",
-        "chinese": "鸟",
+        "chinese": "这是一只鸟。",
         "difficulty": "hard",
         "words": [
           "This",
@@ -1429,7 +1689,7 @@ var unit1_lesson4 = {
       {
         "type": "letter_select",
         "word": "elephant",
-        "chinese": "大象",
+        "chinese": "这是一只大象。",
         "difficulty": "easy",
         "display": "elepha_t",
         "options": [
@@ -1443,7 +1703,7 @@ var unit1_lesson4 = {
       {
         "type": "duo_sentence",
         "word": "monkey",
-        "chinese": "猴子",
+        "chinese": "这是一只猴子。",
         "difficulty": "easy",
         "words": [
           "This",
@@ -1462,14 +1722,14 @@ var unit1_lesson4 = {
       {
         "type": "word_spell",
         "word": "fish",
-        "chinese": "鱼",
+        "chinese": "这是一只fish。",
         "difficulty": "easy",
         "image": "<img src=\"assets/images/fish.png\" width=\"80\">"
       },
       {
         "type": "letter_select",
         "word": "mouse",
-        "chinese": "老鼠",
+        "chinese": "这是一只老鼠。",
         "difficulty": "medium",
         "display": "mou_e",
         "options": [
@@ -1483,7 +1743,7 @@ var unit1_lesson4 = {
       {
         "type": "duo_sentence",
         "word": "duck",
-        "chinese": "鸭子",
+        "chinese": "这是一只鸭子。",
         "difficulty": "medium",
         "words": [
           "This",
@@ -1502,7 +1762,7 @@ var unit1_lesson4 = {
       {
         "type": "duo_spell",
         "word": "tiger",
-        "chinese": "老虎",
+        "chinese": "这是一只老虎。",
         "difficulty": "medium",
         "parts": [
           "ti",
@@ -1513,14 +1773,14 @@ var unit1_lesson4 = {
       {
         "type": "word_spell",
         "word": "duck",
-        "chinese": "鸭子",
+        "chinese": "这是一只鸭子。",
         "difficulty": "medium",
         "image": "<img src=\"assets/images/duck.png\" width=\"80\">"
       },
       {
         "type": "duo_sentence",
         "word": "dog",
-        "chinese": "狗",
+        "chinese": "这是一只狗。",
         "difficulty": "medium",
         "words": [
           "This",
@@ -1539,7 +1799,7 @@ var unit1_lesson4 = {
       {
         "type": "letter_select",
         "word": "lion",
-        "chinese": "狮子",
+        "chinese": "这是一只狮子。",
         "difficulty": "easy",
         "display": "_ion",
         "options": [
@@ -1553,7 +1813,7 @@ var unit1_lesson4 = {
       {
         "type": "duo_sentence",
         "word": "cat",
-        "chinese": "猫",
+        "chinese": "这是一只猫。",
         "difficulty": "medium",
         "words": [
           "This",
@@ -1572,7 +1832,7 @@ var unit1_lesson4 = {
       {
         "type": "letter_select",
         "word": "rabbit",
-        "chinese": "兔子",
+        "chinese": "这是一只兔子。",
         "difficulty": "easy",
         "display": "rab_it",
         "options": [
@@ -1586,7 +1846,7 @@ var unit1_lesson4 = {
       {
         "type": "letter_select",
         "word": "lion",
-        "chinese": "狮子",
+        "chinese": "这是一只狮子。",
         "difficulty": "hard",
         "display": "_ion",
         "options": [
@@ -1600,7 +1860,7 @@ var unit1_lesson4 = {
       {
         "type": "letter_select",
         "word": "elephant",
-        "chinese": "大象",
+        "chinese": "这是一只大象。",
         "difficulty": "easy",
         "display": "elephan_",
         "options": [
@@ -1614,7 +1874,7 @@ var unit1_lesson4 = {
       {
         "type": "duo_spell",
         "word": "monkey",
-        "chinese": "猴子",
+        "chinese": "这是一只猴子。",
         "difficulty": "hard",
         "parts": [
           "mon",
@@ -1625,7 +1885,7 @@ var unit1_lesson4 = {
       {
         "type": "letter_select",
         "word": "bird",
-        "chinese": "鸟",
+        "chinese": "这是一只鸟。",
         "difficulty": "hard",
         "display": "bir_",
         "options": [
@@ -1639,7 +1899,7 @@ var unit1_lesson4 = {
       {
         "type": "letter_select",
         "word": "fish",
-        "chinese": "鱼",
+        "chinese": "这是一只fish。",
         "difficulty": "hard",
         "display": "f_sh",
         "options": [
@@ -1653,14 +1913,14 @@ var unit1_lesson4 = {
       {
         "type": "word_spell",
         "word": "tiger",
-        "chinese": "老虎",
+        "chinese": "这是一只老虎。",
         "difficulty": "hard",
         "image": "<img src=\"assets/images/tiger.png\" width=\"80\">"
       },
       {
         "type": "letter_select",
         "word": "dog",
-        "chinese": "狗",
+        "chinese": "这是一只狗。",
         "difficulty": "easy",
         "display": "_og",
         "options": [
@@ -1677,73 +1937,73 @@ var unit1_lesson4 = {
     "pretest": [
       {
         "type": "read_sentence",
-        "chinese": "猴子",
+        "chinese": "这是一只猴子。",
         "sentence": "I see a monkey.",
         "image": "<img src=\"assets/images/monkey.png\" width=\"80\">"
       },
       {
         "type": "repeat_word",
-        "chinese": "鸭子",
+        "chinese": "这是一只鸭子。",
         "word": "duck",
         "image": "<img src=\"assets/images/duck.png\" width=\"80\">"
       },
       {
         "type": "repeat_word",
-        "chinese": "鸟",
+        "chinese": "这是一只鸟。",
         "word": "bird",
         "image": "<img src=\"assets/images/bird.png\" width=\"80\">"
       },
       {
         "type": "read_sentence",
-        "chinese": "鱼",
+        "chinese": "这是一只鱼。",
         "sentence": "I see a fish.",
         "image": "<img src=\"assets/images/fish.png\" width=\"80\">"
       },
       {
         "type": "repeat_word",
-        "chinese": "老虎",
+        "chinese": "这是一只老虎。",
         "word": "tiger",
         "image": "<img src=\"assets/images/tiger.png\" width=\"80\">"
       },
       {
         "type": "read_sentence",
-        "chinese": "熊",
+        "chinese": "这是一只熊。",
         "sentence": "I see a bear.",
         "image": "<img src=\"assets/images/bear.png\" width=\"80\">"
       },
       {
         "type": "read_sentence",
-        "chinese": "大象",
+        "chinese": "这是一只大象。",
         "sentence": "I see a elephant.",
         "image": "<img src=\"assets/images/elephant.png\" width=\"80\">"
       },
       {
         "type": "repeat_word",
-        "chinese": "狮子",
+        "chinese": "这是一只狮子。",
         "word": "lion",
         "image": "<img src=\"assets/images/lion.png\" width=\"80\">"
       },
       {
         "type": "read_sentence",
-        "chinese": "老鼠",
+        "chinese": "这是一只老鼠。",
         "sentence": "I see a mouse.",
         "image": "<img src=\"assets/images/mouse.png\" width=\"80\">"
       },
       {
         "type": "read_sentence",
-        "chinese": "猫",
+        "chinese": "这是一只猫。",
         "sentence": "I see a cat.",
         "image": "<img src=\"assets/images/cat.png\" width=\"80\">"
       },
       {
         "type": "read_sentence",
-        "chinese": "兔子",
+        "chinese": "这是一只兔子。",
         "sentence": "I see a rabbit.",
         "image": "<img src=\"assets/images/rabbit.png\" width=\"80\">"
       },
       {
         "type": "read_sentence",
-        "chinese": "狗",
+        "chinese": "这是一只狗。",
         "sentence": "I see a dog.",
         "image": "<img src=\"assets/images/dog.png\" width=\"80\">"
       }
@@ -1751,196 +2011,196 @@ var unit1_lesson4 = {
     "practice": [
       {
         "type": "repeat_word",
-        "chinese": "熊",
+        "chinese": "这是一只熊。",
         "difficulty": "easy",
         "word": "bear",
         "image": "<img src=\"assets/images/bear.png\" width=\"80\">"
       },
       {
         "type": "repeat_word",
-        "chinese": "鱼",
+        "chinese": "这是一只fish。",
         "difficulty": "easy",
         "word": "fish",
         "image": "<img src=\"assets/images/fish.png\" width=\"80\">"
       },
       {
         "type": "repeat_word",
-        "chinese": "鸟",
+        "chinese": "这是一只鸟。",
         "difficulty": "easy",
         "word": "bird",
         "image": "<img src=\"assets/images/bird.png\" width=\"80\">"
       },
       {
         "type": "repeat_word",
-        "chinese": "大象",
+        "chinese": "这是一只大象。",
         "difficulty": "hard",
         "word": "elephant",
         "image": "<img src=\"assets/images/elephant.png\" width=\"80\">"
       },
       {
         "type": "read_sentence",
-        "chinese": "鸭子",
+        "chinese": "这是一只鸭子。",
         "difficulty": "hard",
         "sentence": "I see a duck.",
         "image": "<img src=\"assets/images/duck.png\" width=\"80\">"
       },
       {
         "type": "repeat_word",
-        "chinese": "狗",
+        "chinese": "这是一只狗。",
         "difficulty": "medium",
         "word": "dog",
         "image": "<img src=\"assets/images/dog.png\" width=\"80\">"
       },
       {
         "type": "repeat_word",
-        "chinese": "兔子",
+        "chinese": "这是一只兔子。",
         "difficulty": "easy",
         "word": "rabbit",
         "image": "<img src=\"assets/images/rabbit.png\" width=\"80\">"
       },
       {
         "type": "repeat_word",
-        "chinese": "猫",
+        "chinese": "这是一只猫。",
         "difficulty": "easy",
         "word": "cat",
         "image": "<img src=\"assets/images/cat.png\" width=\"80\">"
       },
       {
         "type": "read_sentence",
-        "chinese": "老虎",
+        "chinese": "这是一只老虎。",
         "difficulty": "medium",
         "sentence": "I see a tiger.",
         "image": "<img src=\"assets/images/tiger.png\" width=\"80\">"
       },
       {
         "type": "repeat_word",
-        "chinese": "鱼",
+        "chinese": "这是一只fish。",
         "difficulty": "medium",
         "word": "fish",
         "image": "<img src=\"assets/images/fish.png\" width=\"80\">"
       },
       {
         "type": "read_sentence",
-        "chinese": "猫",
+        "chinese": "这是一只猫。",
         "difficulty": "hard",
         "sentence": "I see a cat.",
         "image": "<img src=\"assets/images/cat.png\" width=\"80\">"
       },
       {
         "type": "repeat_word",
-        "chinese": "老鼠",
+        "chinese": "这是一只老鼠。",
         "difficulty": "easy",
         "word": "mouse",
         "image": "<img src=\"assets/images/mouse.png\" width=\"80\">"
       },
       {
         "type": "repeat_word",
-        "chinese": "老虎",
+        "chinese": "这是一只老虎。",
         "difficulty": "easy",
         "word": "tiger",
         "image": "<img src=\"assets/images/tiger.png\" width=\"80\">"
       },
       {
         "type": "repeat_word",
-        "chinese": "鸟",
+        "chinese": "这是一只鸟。",
         "difficulty": "hard",
         "word": "bird",
         "image": "<img src=\"assets/images/bird.png\" width=\"80\">"
       },
       {
         "type": "read_sentence",
-        "chinese": "老鼠",
+        "chinese": "这是一只老鼠。",
         "difficulty": "easy",
         "sentence": "I see a mouse.",
         "image": "<img src=\"assets/images/mouse.png\" width=\"80\">"
       },
       {
         "type": "repeat_word",
-        "chinese": "鸭子",
+        "chinese": "这是一只鸭子。",
         "difficulty": "medium",
         "word": "duck",
         "image": "<img src=\"assets/images/duck.png\" width=\"80\">"
       },
       {
         "type": "repeat_word",
-        "chinese": "猴子",
+        "chinese": "这是一只猴子。",
         "difficulty": "medium",
         "word": "monkey",
         "image": "<img src=\"assets/images/monkey.png\" width=\"80\">"
       },
       {
         "type": "repeat_word",
-        "chinese": "猴子",
+        "chinese": "这是一只猴子。",
         "difficulty": "medium",
         "word": "monkey",
         "image": "<img src=\"assets/images/monkey.png\" width=\"80\">"
       },
       {
         "type": "read_sentence",
-        "chinese": "大象",
+        "chinese": "这是一只大象。",
         "difficulty": "easy",
         "sentence": "I see a elephant.",
         "image": "<img src=\"assets/images/elephant.png\" width=\"80\">"
       },
       {
         "type": "repeat_word",
-        "chinese": "狗",
+        "chinese": "这是一只狗。",
         "difficulty": "medium",
         "word": "dog",
         "image": "<img src=\"assets/images/dog.png\" width=\"80\">"
       },
       {
         "type": "read_sentence",
-        "chinese": "猫",
+        "chinese": "这是一只猫。",
         "difficulty": "medium",
         "sentence": "I see a cat.",
         "image": "<img src=\"assets/images/cat.png\" width=\"80\">"
       },
       {
         "type": "repeat_word",
-        "chinese": "熊",
+        "chinese": "这是一只熊。",
         "difficulty": "hard",
         "word": "bear",
         "image": "<img src=\"assets/images/bear.png\" width=\"80\">"
       },
       {
         "type": "repeat_word",
-        "chinese": "狮子",
+        "chinese": "这是一只狮子。",
         "difficulty": "medium",
         "word": "lion",
         "image": "<img src=\"assets/images/lion.png\" width=\"80\">"
       },
       {
         "type": "read_sentence",
-        "chinese": "狗",
+        "chinese": "这是一只狗。",
         "difficulty": "hard",
         "sentence": "I see a dog.",
         "image": "<img src=\"assets/images/dog.png\" width=\"80\">"
       },
       {
         "type": "read_sentence",
-        "chinese": "鸟",
+        "chinese": "这是一只鸟。",
         "difficulty": "medium",
         "sentence": "I see a bird.",
         "image": "<img src=\"assets/images/bird.png\" width=\"80\">"
       },
       {
         "type": "repeat_word",
-        "chinese": "狮子",
+        "chinese": "这是一只狮子。",
         "difficulty": "easy",
         "word": "lion",
         "image": "<img src=\"assets/images/lion.png\" width=\"80\">"
       },
       {
         "type": "read_sentence",
-        "chinese": "熊",
+        "chinese": "这是一只熊。",
         "difficulty": "medium",
         "sentence": "I see a bear.",
         "image": "<img src=\"assets/images/bear.png\" width=\"80\">"
       },
       {
         "type": "repeat_word",
-        "chinese": "兔子",
+        "chinese": "这是一只兔子。",
         "difficulty": "hard",
         "word": "rabbit",
         "image": "<img src=\"assets/images/rabbit.png\" width=\"80\">"

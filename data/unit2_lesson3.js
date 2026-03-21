@@ -6,7 +6,7 @@ var unit2_lesson3 = {
       {
         "type": "listen_select",
         "audio": "sweater",
-        "chinese": "毛衣",
+        "chinese": "这是sweater。",
         "options": [
           "<img src=\"assets/images/chair.png\" width=\"80\">",
           "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
@@ -19,7 +19,7 @@ var unit2_lesson3 = {
       {
         "type": "listen_tf",
         "audio": "bed",
-        "chinese": "床",
+        "chinese": "这是bed。",
         "options": [
           "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
           "<img src=\"assets/images/bed.png\" width=\"80\">",
@@ -32,7 +32,7 @@ var unit2_lesson3 = {
       {
         "type": "listen_select",
         "audio": "chair",
-        "chinese": "椅子",
+        "chinese": "这是chair。",
         "options": [
           "<img src=\"assets/images/chair.png\" width=\"80\">",
           "<img src=\"assets/images/sweater.png\" width=\"80\">",
@@ -45,7 +45,7 @@ var unit2_lesson3 = {
       {
         "type": "listen_tf",
         "audio": "schoolbag",
-        "chinese": "书包",
+        "chinese": "这是书包。",
         "options": [
           "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
           "<img src=\"assets/images/sweater.png\" width=\"80\">",
@@ -58,7 +58,7 @@ var unit2_lesson3 = {
       {
         "type": "listen_select",
         "audio": "sweater",
-        "chinese": "毛衣",
+        "chinese": "这是sweater。",
         "options": [
           "<img src=\"assets/images/sweater.png\" width=\"80\">",
           "<img src=\"assets/images/bed.png\" width=\"80\">",
@@ -71,7 +71,7 @@ var unit2_lesson3 = {
       {
         "type": "listen_tf",
         "audio": "bed",
-        "chinese": "床",
+        "chinese": "这是bed。",
         "options": [
           "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
           "<img src=\"assets/images/sweater.png\" width=\"80\">",
@@ -84,7 +84,7 @@ var unit2_lesson3 = {
       {
         "type": "listen_tf",
         "audio": "chair",
-        "chinese": "椅子",
+        "chinese": "这是chair。",
         "options": [
           "<img src=\"assets/images/bed.png\" width=\"80\">",
           "<img src=\"assets/images/sweater.png\" width=\"80\">",
@@ -97,7 +97,7 @@ var unit2_lesson3 = {
       {
         "type": "listen_select",
         "audio": "schoolbag",
-        "chinese": "书包",
+        "chinese": "这是书包。",
         "options": [
           "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
           "<img src=\"assets/images/bed.png\" width=\"80\">",
@@ -110,7 +110,7 @@ var unit2_lesson3 = {
       {
         "type": "listen_tf",
         "audio": "sweater",
-        "chinese": "毛衣",
+        "chinese": "这是sweater。",
         "options": [
           "<img src=\"assets/images/sweater.png\" width=\"80\">",
           "<img src=\"assets/images/chair.png\" width=\"80\">",
@@ -123,7 +123,7 @@ var unit2_lesson3 = {
       {
         "type": "listen_select",
         "audio": "bed",
-        "chinese": "床",
+        "chinese": "这是bed。",
         "options": [
           "<img src=\"assets/images/sweater.png\" width=\"80\">",
           "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
@@ -138,7 +138,7 @@ var unit2_lesson3 = {
       {
         "type": "scenario",
         "audio": "sweater",
-        "chinese": "毛衣",
+        "chinese": "这是sweater。",
         "options": [
           "<img src=\"assets/images/chair.png\" width=\"80\">",
           "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
@@ -155,7 +155,7 @@ var unit2_lesson3 = {
       {
         "type": "balloon_pop",
         "audio": "bed",
-        "chinese": "床",
+        "chinese": "这是bed。",
         "options": [
           "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
           "<img src=\"assets/images/bed.png\" width=\"80\">",
@@ -172,7 +172,7 @@ var unit2_lesson3 = {
       {
         "type": "duo_listen_select",
         "audio": "chair",
-        "chinese": "椅子",
+        "chinese": "这是chair。",
         "options": [
           "<img src=\"assets/images/chair.png\" width=\"80\">",
           "<img src=\"assets/images/sweater.png\" width=\"80\">",
@@ -189,7 +189,7 @@ var unit2_lesson3 = {
       {
         "type": "balloon_pop",
         "audio": "schoolbag",
-        "chinese": "书包",
+        "chinese": "这是书包。",
         "options": [
           "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
           "<img src=\"assets/images/sweater.png\" width=\"80\">",
@@ -206,7 +206,7 @@ var unit2_lesson3 = {
       {
         "type": "scenario",
         "audio": "sweater",
-        "chinese": "毛衣",
+        "chinese": "这是sweater。",
         "options": [
           "<img src=\"assets/images/sweater.png\" width=\"80\">",
           "<img src=\"assets/images/bed.png\" width=\"80\">",
@@ -223,7 +223,7 @@ var unit2_lesson3 = {
       {
         "type": "duo_listen_select",
         "audio": "bed",
-        "chinese": "床",
+        "chinese": "这是bed。",
         "options": [
           "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
           "<img src=\"assets/images/sweater.png\" width=\"80\">",
@@ -240,7 +240,7 @@ var unit2_lesson3 = {
       {
         "type": "scenario",
         "audio": "chair",
-        "chinese": "椅子",
+        "chinese": "这是chair。",
         "options": [
           "<img src=\"assets/images/bed.png\" width=\"80\">",
           "<img src=\"assets/images/sweater.png\" width=\"80\">",
@@ -257,7 +257,7 @@ var unit2_lesson3 = {
       {
         "type": "scenario",
         "audio": "schoolbag",
-        "chinese": "书包",
+        "chinese": "这是书包。",
         "options": [
           "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
           "<img src=\"assets/images/bed.png\" width=\"80\">",
@@ -274,7 +274,7 @@ var unit2_lesson3 = {
       {
         "type": "scenario",
         "audio": "sweater",
-        "chinese": "毛衣",
+        "chinese": "这是sweater。",
         "options": [
           "<img src=\"assets/images/sweater.png\" width=\"80\">",
           "<img src=\"assets/images/chair.png\" width=\"80\">",
@@ -291,7 +291,7 @@ var unit2_lesson3 = {
       {
         "type": "duo_listen_select",
         "audio": "bed",
-        "chinese": "床",
+        "chinese": "这是bed。",
         "options": [
           "<img src=\"assets/images/sweater.png\" width=\"80\">",
           "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
@@ -308,7 +308,7 @@ var unit2_lesson3 = {
       {
         "type": "scenario",
         "audio": "chair",
-        "chinese": "椅子",
+        "chinese": "这是chair。",
         "options": [
           "<img src=\"assets/images/bed.png\" width=\"80\">",
           "<img src=\"assets/images/sweater.png\" width=\"80\">",
@@ -325,7 +325,7 @@ var unit2_lesson3 = {
       {
         "type": "balloon_pop",
         "audio": "schoolbag",
-        "chinese": "书包",
+        "chinese": "这是书包。",
         "options": [
           "<img src=\"assets/images/chair.png\" width=\"80\">",
           "<img src=\"assets/images/sweater.png\" width=\"80\">",
@@ -345,7 +345,7 @@ var unit2_lesson3 = {
     "pretest": [
       {
         "type": "word_match",
-        "chinese": "毛衣",
+        "chinese": "我的sweater在哪里？",
         "word": "sweater",
         "sentence": "Where is my sweater?",
         "options": [
@@ -370,7 +370,7 @@ var unit2_lesson3 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "床",
+        "chinese": "我穿了一件bed。",
         "word": "bed",
         "sentence": "I wear a bed.",
         "options": [
@@ -381,13 +381,21 @@ var unit2_lesson3 = {
           {
             "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
             "value": "bed"
+          },
+          {
+            "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
+            "value": "skirt"
+          },
+          {
+            "text": "<img src=\"assets/images/shirt.png\" width=\"80\">",
+            "value": "shirt"
           }
         ],
         "correct": "bed"
       },
       {
         "type": "sentence_match",
-        "chinese": "椅子",
+        "chinese": "我的sweater在哪里？",
         "word": "chair",
         "sentence": "Where is my sweater?",
         "options": [
@@ -412,7 +420,7 @@ var unit2_lesson3 = {
       },
       {
         "type": "word_match",
-        "chinese": "书包",
+        "chinese": "我穿了一件书包。",
         "word": "schoolbag",
         "sentence": "I wear a schoolbag.",
         "options": [
@@ -437,7 +445,7 @@ var unit2_lesson3 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "毛衣",
+        "chinese": "我穿了一件sweater。",
         "word": "sweater",
         "sentence": "I wear a sweater.",
         "options": [
@@ -448,13 +456,21 @@ var unit2_lesson3 = {
           {
             "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
             "value": "sweater"
+          },
+          {
+            "text": "<img src=\"assets/images/jacket.png\" width=\"80\">",
+            "value": "jacket"
+          },
+          {
+            "text": "<img src=\"assets/images/dress.png\" width=\"80\">",
+            "value": "dress"
           }
         ],
         "correct": "sweater"
       },
       {
         "type": "sentence_match",
-        "chinese": "床",
+        "chinese": "我穿了一件bed。",
         "word": "bed",
         "sentence": "I wear a bed.",
         "options": [
@@ -479,7 +495,7 @@ var unit2_lesson3 = {
       },
       {
         "type": "word_match",
-        "chinese": "椅子",
+        "chinese": "我的sweater在哪里？",
         "word": "chair",
         "sentence": "Where is my sweater?",
         "options": [
@@ -504,7 +520,7 @@ var unit2_lesson3 = {
       },
       {
         "type": "word_match",
-        "chinese": "书包",
+        "chinese": "我穿了一件书包。",
         "word": "schoolbag",
         "sentence": "I wear a schoolbag.",
         "options": [
@@ -529,7 +545,7 @@ var unit2_lesson3 = {
       },
       {
         "type": "word_match",
-        "chinese": "毛衣",
+        "chinese": "我的sweater在哪里？",
         "word": "sweater",
         "sentence": "Where is my sweater?",
         "options": [
@@ -540,13 +556,21 @@ var unit2_lesson3 = {
           {
             "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
             "value": "schoolbag"
+          },
+          {
+            "text": "<img src=\"assets/images/shirt.png\" width=\"80\">",
+            "value": "shirt"
+          },
+          {
+            "text": "<img src=\"assets/images/t-shirt.png\" width=\"80\">",
+            "value": "t-shirt"
           }
         ],
         "correct": "sweater"
       },
       {
         "type": "word_match",
-        "chinese": "床",
+        "chinese": "我的sweater在哪里？",
         "word": "bed",
         "sentence": "Where is my sweater?",
         "options": [
@@ -573,7 +597,7 @@ var unit2_lesson3 = {
     "practice": [
       {
         "type": "duo_race",
-        "chinese": "毛衣",
+        "chinese": "这是毛衣。",
         "word": "sweater",
         "sentence": "Look! Your sweater is in your schoolbag!",
         "options": [
@@ -599,7 +623,7 @@ var unit2_lesson3 = {
       },
       {
         "type": "duo_race",
-        "chinese": "床",
+        "chinese": "这是床。",
         "word": "bed",
         "sentence": "Look! Your sweater is in your schoolbag!",
         "options": [
@@ -613,7 +637,7 @@ var unit2_lesson3 = {
       },
       {
         "type": "duo_race",
-        "chinese": "椅子",
+        "chinese": "我穿了一件chair。",
         "word": "chair",
         "sentence": "I wear a chair.",
         "options": [
@@ -639,7 +663,7 @@ var unit2_lesson3 = {
       },
       {
         "type": "word_match",
-        "chinese": "书包",
+        "chinese": "这是书包。",
         "word": "schoolbag",
         "sentence": "Look! Your sweater is in your schoolbag!",
         "options": [
@@ -665,7 +689,7 @@ var unit2_lesson3 = {
       },
       {
         "type": "duo_race",
-        "chinese": "毛衣",
+        "chinese": "这是毛衣。",
         "word": "sweater",
         "sentence": "Look! Your sweater is in your schoolbag!",
         "options": [
@@ -679,7 +703,7 @@ var unit2_lesson3 = {
       },
       {
         "type": "word_match",
-        "chinese": "床",
+        "chinese": "这是床。",
         "word": "bed",
         "sentence": "Look! Your sweater is in your schoolbag!",
         "options": [
@@ -693,7 +717,7 @@ var unit2_lesson3 = {
       },
       {
         "type": "word_match",
-        "chinese": "椅子",
+        "chinese": "这是椅子。",
         "word": "chair",
         "sentence": "Look! Your sweater is in your schoolbag!",
         "options": [
@@ -707,7 +731,7 @@ var unit2_lesson3 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "书包",
+        "chinese": "这是书包。",
         "word": "schoolbag",
         "sentence": "Look! Your sweater is in your schoolbag!",
         "options": [
@@ -721,7 +745,7 @@ var unit2_lesson3 = {
       },
       {
         "type": "duo_race",
-        "chinese": "毛衣",
+        "chinese": "这是毛衣。",
         "word": "sweater",
         "sentence": "Look! Your sweater is in your schoolbag!",
         "options": [
@@ -735,7 +759,7 @@ var unit2_lesson3 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "床",
+        "chinese": "我穿了一件bed。",
         "word": "bed",
         "sentence": "I wear a bed.",
         "options": [
@@ -761,7 +785,7 @@ var unit2_lesson3 = {
       },
       {
         "type": "word_match",
-        "chinese": "椅子",
+        "chinese": "我穿了一件chair。",
         "word": "chair",
         "sentence": "I wear a chair.",
         "options": [
@@ -787,7 +811,7 @@ var unit2_lesson3 = {
       },
       {
         "type": "duo_race",
-        "chinese": "书包",
+        "chinese": "这是书包。",
         "word": "schoolbag",
         "sentence": "Look! Your sweater is in your schoolbag!",
         "options": [
@@ -806,7 +830,7 @@ var unit2_lesson3 = {
       {
         "type": "letter_select",
         "word": "sweater",
-        "chinese": "毛衣",
+        "chinese": "这是sweater。",
         "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
         "display": "s_eater",
         "options": [
@@ -820,7 +844,7 @@ var unit2_lesson3 = {
       {
         "type": "letter_select",
         "word": "bed",
-        "chinese": "床",
+        "chinese": "这是bed。",
         "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
         "display": "_ed",
         "options": [
@@ -834,7 +858,7 @@ var unit2_lesson3 = {
       {
         "type": "word_spell",
         "word": "chair",
-        "chinese": "椅子",
+        "chinese": "这是chair。",
         "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
         "display": "c_air",
         "options": [
@@ -848,7 +872,7 @@ var unit2_lesson3 = {
       {
         "type": "letter_select",
         "word": "schoolbag",
-        "chinese": "书包",
+        "chinese": "这是书包。",
         "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
         "display": "sch_olbag",
         "options": [
@@ -862,7 +886,7 @@ var unit2_lesson3 = {
       {
         "type": "letter_select",
         "word": "sweater",
-        "chinese": "毛衣",
+        "chinese": "这是sweater。",
         "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
         "display": "s_eater",
         "options": [
@@ -876,7 +900,7 @@ var unit2_lesson3 = {
       {
         "type": "letter_select",
         "word": "bed",
-        "chinese": "床",
+        "chinese": "这是bed。",
         "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
         "display": "be_",
         "options": [
@@ -890,7 +914,7 @@ var unit2_lesson3 = {
       {
         "type": "letter_select",
         "word": "chair",
-        "chinese": "椅子",
+        "chinese": "这是chair。",
         "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
         "display": "_hair",
         "options": [
@@ -904,7 +928,7 @@ var unit2_lesson3 = {
       {
         "type": "letter_select",
         "word": "schoolbag",
-        "chinese": "书包",
+        "chinese": "这是书包。",
         "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
         "display": "schoo_bag",
         "options": [
@@ -918,7 +942,7 @@ var unit2_lesson3 = {
       {
         "type": "letter_select",
         "word": "sweater",
-        "chinese": "毛衣",
+        "chinese": "这是sweater。",
         "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
         "display": "_weater",
         "options": [
@@ -932,7 +956,7 @@ var unit2_lesson3 = {
       {
         "type": "letter_select",
         "word": "bed",
-        "chinese": "床",
+        "chinese": "这是bed。",
         "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
         "display": "b_d",
         "options": [
@@ -948,7 +972,7 @@ var unit2_lesson3 = {
       {
         "type": "duo_spell",
         "word": "sweater",
-        "chinese": "毛衣",
+        "chinese": "这是sweater。",
         "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
         "display": "s_eater",
         "options": [
@@ -967,7 +991,7 @@ var unit2_lesson3 = {
       {
         "type": "duo_spell",
         "word": "bed",
-        "chinese": "床",
+        "chinese": "这是bed。",
         "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
         "display": "_ed",
         "options": [
@@ -986,7 +1010,7 @@ var unit2_lesson3 = {
       {
         "type": "duo_spell",
         "word": "chair",
-        "chinese": "椅子",
+        "chinese": "这是chair。",
         "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
         "display": "c_air",
         "options": [
@@ -1005,7 +1029,7 @@ var unit2_lesson3 = {
       {
         "type": "duo_spell",
         "word": "schoolbag",
-        "chinese": "书包",
+        "chinese": "这是书包。",
         "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
         "display": "sch_olbag",
         "options": [
@@ -1024,7 +1048,7 @@ var unit2_lesson3 = {
       {
         "type": "letter_select",
         "word": "sweater",
-        "chinese": "毛衣",
+        "chinese": "这是sweater。",
         "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
         "display": "s_eater",
         "options": [
@@ -1043,7 +1067,7 @@ var unit2_lesson3 = {
       {
         "type": "duo_spell",
         "word": "bed",
-        "chinese": "床",
+        "chinese": "这是bed。",
         "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
         "display": "be_",
         "options": [
@@ -1062,7 +1086,7 @@ var unit2_lesson3 = {
       {
         "type": "letter_select",
         "word": "chair",
-        "chinese": "椅子",
+        "chinese": "这是chair。",
         "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
         "display": "_hair",
         "options": [
@@ -1081,7 +1105,7 @@ var unit2_lesson3 = {
       {
         "type": "duo_spell",
         "word": "schoolbag",
-        "chinese": "书包",
+        "chinese": "这是书包。",
         "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
         "display": "schoo_bag",
         "options": [
@@ -1100,7 +1124,7 @@ var unit2_lesson3 = {
       {
         "type": "duo_spell",
         "word": "sweater",
-        "chinese": "毛衣",
+        "chinese": "这是sweater。",
         "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
         "display": "_weater",
         "options": [
@@ -1119,7 +1143,7 @@ var unit2_lesson3 = {
       {
         "type": "duo_spell",
         "word": "bed",
-        "chinese": "床",
+        "chinese": "这是bed。",
         "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
         "display": "b_d",
         "options": [
@@ -1138,7 +1162,7 @@ var unit2_lesson3 = {
       {
         "type": "duo_spell",
         "word": "chair",
-        "chinese": "椅子",
+        "chinese": "这是chair。",
         "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
         "display": "_hair",
         "options": [
@@ -1157,7 +1181,7 @@ var unit2_lesson3 = {
       {
         "type": "letter_select",
         "word": "schoolbag",
-        "chinese": "书包",
+        "chinese": "这是书包。",
         "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
         "display": "sch_olbag",
         "options": [
@@ -1180,70 +1204,70 @@ var unit2_lesson3 = {
       {
         "type": "read_word",
         "word": "sweater",
-        "chinese": "毛衣",
+        "chinese": "我的sweater在哪里？",
         "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
         "sentence": "Where is my sweater?"
       },
       {
         "type": "read_word",
         "word": "bed",
-        "chinese": "床",
+        "chinese": "我喜欢bed。",
         "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
         "sentence": "I like bed."
       },
       {
         "type": "shadowing",
         "word": "chair",
-        "chinese": "椅子",
+        "chinese": "我喜欢chair。",
         "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
         "sentence": "I like chair."
       },
       {
         "type": "read_word",
         "word": "schoolbag",
-        "chinese": "书包",
+        "chinese": "我的sweater在哪里？",
         "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
         "sentence": "Where is my sweater?"
       },
       {
         "type": "shadowing",
         "word": "sweater",
-        "chinese": "毛衣",
+        "chinese": "我喜欢sweater。",
         "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
         "sentence": "I like sweater."
       },
       {
         "type": "read_word",
         "word": "bed",
-        "chinese": "床",
+        "chinese": "我喜欢bed。",
         "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
         "sentence": "I like bed."
       },
       {
         "type": "shadowing",
         "word": "chair",
-        "chinese": "椅子",
+        "chinese": "我的sweater在哪里？",
         "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
         "sentence": "Where is my sweater?"
       },
       {
         "type": "shadowing",
         "word": "schoolbag",
-        "chinese": "书包",
+        "chinese": "我的sweater在哪里？",
         "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
         "sentence": "Where is my sweater?"
       },
       {
         "type": "read_word",
         "word": "sweater",
-        "chinese": "毛衣",
+        "chinese": "我的sweater在哪里？",
         "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
         "sentence": "Where is my sweater?"
       },
       {
         "type": "shadowing",
         "word": "bed",
-        "chinese": "床",
+        "chinese": "我喜欢bed。",
         "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
         "sentence": "I like bed."
       }
@@ -1252,7 +1276,7 @@ var unit2_lesson3 = {
       {
         "type": "roleplay",
         "word": "sweater",
-        "chinese": "毛衣",
+        "chinese": "这是一只sweater。",
         "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
         "sentence": "This is a sweater.",
         "difficulty": "hard"
@@ -1260,7 +1284,7 @@ var unit2_lesson3 = {
       {
         "type": "debate",
         "word": "bed",
-        "chinese": "床",
+        "chinese": "这是床。",
         "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
         "sentence": "Look! Your sweater is in your schoolbag!",
         "difficulty": "easy"
@@ -1268,7 +1292,7 @@ var unit2_lesson3 = {
       {
         "type": "debate",
         "word": "chair",
-        "chinese": "椅子",
+        "chinese": "这是一只chair。",
         "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
         "sentence": "This is a chair.",
         "difficulty": "medium"
@@ -1276,7 +1300,7 @@ var unit2_lesson3 = {
       {
         "type": "roleplay",
         "word": "schoolbag",
-        "chinese": "书包",
+        "chinese": "这是一只书包。",
         "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
         "sentence": "This is a schoolbag.",
         "difficulty": "medium"
@@ -1284,7 +1308,7 @@ var unit2_lesson3 = {
       {
         "type": "read_word",
         "word": "sweater",
-        "chinese": "毛衣",
+        "chinese": "这是一只sweater。",
         "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
         "sentence": "This is a sweater.",
         "difficulty": "medium"
@@ -1292,7 +1316,7 @@ var unit2_lesson3 = {
       {
         "type": "read_word",
         "word": "bed",
-        "chinese": "床",
+        "chinese": "这是一只bed。",
         "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
         "sentence": "This is a bed.",
         "difficulty": "easy"
@@ -1300,7 +1324,7 @@ var unit2_lesson3 = {
       {
         "type": "roleplay",
         "word": "chair",
-        "chinese": "椅子",
+        "chinese": "这是一只chair。",
         "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
         "sentence": "This is a chair.",
         "difficulty": "hard"
@@ -1308,7 +1332,7 @@ var unit2_lesson3 = {
       {
         "type": "roleplay",
         "word": "schoolbag",
-        "chinese": "书包",
+        "chinese": "这是书包。",
         "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
         "sentence": "Look! Your sweater is in your schoolbag!",
         "difficulty": "easy"
@@ -1316,7 +1340,7 @@ var unit2_lesson3 = {
       {
         "type": "shadowing",
         "word": "sweater",
-        "chinese": "毛衣",
+        "chinese": "这是一只sweater。",
         "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
         "sentence": "This is a sweater.",
         "difficulty": "easy"
@@ -1324,7 +1348,7 @@ var unit2_lesson3 = {
       {
         "type": "shadowing",
         "word": "bed",
-        "chinese": "床",
+        "chinese": "这是床。",
         "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
         "sentence": "Look! Your sweater is in your schoolbag!",
         "difficulty": "easy"
@@ -1332,7 +1356,7 @@ var unit2_lesson3 = {
       {
         "type": "read_word",
         "word": "chair",
-        "chinese": "椅子",
+        "chinese": "这是一只chair。",
         "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
         "sentence": "This is a chair.",
         "difficulty": "easy"
@@ -1340,7 +1364,7 @@ var unit2_lesson3 = {
       {
         "type": "read_word",
         "word": "schoolbag",
-        "chinese": "书包",
+        "chinese": "这是书包。",
         "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
         "sentence": "Look! Your sweater is in your schoolbag!",
         "difficulty": "medium"

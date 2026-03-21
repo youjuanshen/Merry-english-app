@@ -6,7 +6,7 @@ var unit2_lesson2 = {
       {
         "type": "listen_tf",
         "audio": "shirt",
-        "chinese": "衬衫",
+        "chinese": "这是衬衫。",
         "options": [
           "<img src=\"assets/images/shirt.png\" width=\"80\">",
           "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
@@ -19,7 +19,7 @@ var unit2_lesson2 = {
       {
         "type": "listen_tf",
         "audio": "jacket",
-        "chinese": "夹克",
+        "chinese": "这是夹克。",
         "options": [
           "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
           "<img src=\"assets/images/shirt.png\" width=\"80\">",
@@ -32,7 +32,7 @@ var unit2_lesson2 = {
       {
         "type": "listen_select",
         "audio": "whose",
-        "chinese": "谁的",
+        "chinese": "这是whose。",
         "options": [
           "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
           "<img src=\"assets/images/shirt.png\" width=\"80\">",
@@ -45,7 +45,7 @@ var unit2_lesson2 = {
       {
         "type": "listen_tf",
         "audio": "clothes",
-        "chinese": "衣服",
+        "chinese": "这是clothes。",
         "options": [
           "<img src=\"assets/images/jacket.png\" width=\"80\">",
           "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
@@ -58,7 +58,7 @@ var unit2_lesson2 = {
       {
         "type": "listen_select",
         "audio": "shirt",
-        "chinese": "衬衫",
+        "chinese": "这是衬衫。",
         "options": [
           "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
           "<img src=\"assets/images/jacket.png\" width=\"80\">",
@@ -71,7 +71,7 @@ var unit2_lesson2 = {
       {
         "type": "listen_tf",
         "audio": "jacket",
-        "chinese": "夹克",
+        "chinese": "这是夹克。",
         "options": [
           "<img src=\"assets/images/shirt.png\" width=\"80\">",
           "<img src=\"assets/images/jacket.png\" width=\"80\">",
@@ -84,7 +84,7 @@ var unit2_lesson2 = {
       {
         "type": "listen_select",
         "audio": "whose",
-        "chinese": "谁的",
+        "chinese": "这是whose。",
         "options": [
           "<img src=\"assets/images/shirt.png\" width=\"80\">",
           "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
@@ -97,7 +97,7 @@ var unit2_lesson2 = {
       {
         "type": "listen_select",
         "audio": "clothes",
-        "chinese": "衣服",
+        "chinese": "这是clothes。",
         "options": [
           "<img src=\"assets/images/shirt.png\" width=\"80\">",
           "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
@@ -110,7 +110,7 @@ var unit2_lesson2 = {
       {
         "type": "listen_tf",
         "audio": "shirt",
-        "chinese": "衬衫",
+        "chinese": "这是衬衫。",
         "options": [
           "<img src=\"assets/images/jacket.png\" width=\"80\">",
           "<img src=\"assets/images/shirt.png\" width=\"80\">",
@@ -123,7 +123,7 @@ var unit2_lesson2 = {
       {
         "type": "listen_select",
         "audio": "jacket",
-        "chinese": "夹克",
+        "chinese": "这是夹克。",
         "options": [
           "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
           "<img src=\"assets/images/shirt.png\" width=\"80\">",
@@ -138,7 +138,7 @@ var unit2_lesson2 = {
       {
         "type": "scenario",
         "audio": "shirt",
-        "chinese": "衬衫",
+        "chinese": "这是衬衫。",
         "options": [
           "<img src=\"assets/images/shirt.png\" width=\"80\">",
           "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
@@ -155,7 +155,7 @@ var unit2_lesson2 = {
       {
         "type": "balloon_pop",
         "audio": "jacket",
-        "chinese": "夹克",
+        "chinese": "这是夹克。",
         "options": [
           "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
           "<img src=\"assets/images/shirt.png\" width=\"80\">",
@@ -172,7 +172,7 @@ var unit2_lesson2 = {
       {
         "type": "duo_listen_select",
         "audio": "whose",
-        "chinese": "谁的",
+        "chinese": "这是whose。",
         "options": [
           "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
           "<img src=\"assets/images/shirt.png\" width=\"80\">",
@@ -189,7 +189,7 @@ var unit2_lesson2 = {
       {
         "type": "scenario",
         "audio": "clothes",
-        "chinese": "衣服",
+        "chinese": "这是clothes。",
         "options": [
           "<img src=\"assets/images/jacket.png\" width=\"80\">",
           "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
@@ -206,7 +206,7 @@ var unit2_lesson2 = {
       {
         "type": "balloon_pop",
         "audio": "shirt",
-        "chinese": "衬衫",
+        "chinese": "这是衬衫。",
         "options": [
           "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
           "<img src=\"assets/images/jacket.png\" width=\"80\">",
@@ -223,7 +223,7 @@ var unit2_lesson2 = {
       {
         "type": "listen_select",
         "audio": "jacket",
-        "chinese": "夹克",
+        "chinese": "这是夹克。",
         "options": [
           "<img src=\"assets/images/shirt.png\" width=\"80\">",
           "<img src=\"assets/images/jacket.png\" width=\"80\">",
@@ -240,7 +240,7 @@ var unit2_lesson2 = {
       {
         "type": "scenario",
         "audio": "whose",
-        "chinese": "谁的",
+        "chinese": "这是whose。",
         "options": [
           "<img src=\"assets/images/shirt.png\" width=\"80\">",
           "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
@@ -257,7 +257,7 @@ var unit2_lesson2 = {
       {
         "type": "balloon_pop",
         "audio": "clothes",
-        "chinese": "衣服",
+        "chinese": "这是clothes。",
         "options": [
           "<img src=\"assets/images/shirt.png\" width=\"80\">",
           "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
@@ -274,7 +274,7 @@ var unit2_lesson2 = {
       {
         "type": "listen_select",
         "audio": "shirt",
-        "chinese": "衬衫",
+        "chinese": "这是衬衫。",
         "options": [
           "<img src=\"assets/images/jacket.png\" width=\"80\">",
           "<img src=\"assets/images/shirt.png\" width=\"80\">",
@@ -291,7 +291,7 @@ var unit2_lesson2 = {
       {
         "type": "duo_listen_select",
         "audio": "jacket",
-        "chinese": "夹克",
+        "chinese": "这是夹克。",
         "options": [
           "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
           "<img src=\"assets/images/shirt.png\" width=\"80\">",
@@ -308,7 +308,7 @@ var unit2_lesson2 = {
       {
         "type": "balloon_pop",
         "audio": "whose",
-        "chinese": "谁的",
+        "chinese": "这是whose。",
         "options": [
           "<img src=\"assets/images/jacket.png\" width=\"80\">",
           "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
@@ -325,7 +325,7 @@ var unit2_lesson2 = {
       {
         "type": "listen_select",
         "audio": "clothes",
-        "chinese": "衣服",
+        "chinese": "这是clothes。",
         "options": [
           "<img src=\"assets/images/shirt.png\" width=\"80\">",
           "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
@@ -345,7 +345,7 @@ var unit2_lesson2 = {
     "pretest": [
       {
         "type": "sentence_match",
-        "chinese": "衬衫",
+        "chinese": "我穿了一件衬衫。",
         "word": "shirt",
         "sentence": "I wear a shirt.",
         "options": [
@@ -370,7 +370,7 @@ var unit2_lesson2 = {
       },
       {
         "type": "word_match",
-        "chinese": "夹克",
+        "chinese": "我穿了一件夹克。",
         "word": "jacket",
         "sentence": "I wear a jacket.",
         "options": [
@@ -395,7 +395,7 @@ var unit2_lesson2 = {
       },
       {
         "type": "word_match",
-        "chinese": "谁的",
+        "chinese": "这是谁的。",
         "word": "whose",
         "sentence": "Whose shirt is this?",
         "options": [
@@ -420,7 +420,7 @@ var unit2_lesson2 = {
       },
       {
         "type": "word_match",
-        "chinese": "衣服",
+        "chinese": "这是你的clothes吗？",
         "word": "clothes",
         "sentence": "Is this your clothes?",
         "options": [
@@ -445,7 +445,7 @@ var unit2_lesson2 = {
       },
       {
         "type": "word_match",
-        "chinese": "衬衫",
+        "chinese": "我穿了一件衬衫。",
         "word": "shirt",
         "sentence": "I wear a shirt.",
         "options": [
@@ -456,13 +456,21 @@ var unit2_lesson2 = {
           {
             "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
             "value": "whose"
+          },
+          {
+            "text": "<img src=\"assets/images/dress.png\" width=\"80\">",
+            "value": "dress"
+          },
+          {
+            "text": "<img src=\"assets/images/shorts.png\" width=\"80\">",
+            "value": "shorts"
           }
         ],
         "correct": "shirt"
       },
       {
         "type": "sentence_match",
-        "chinese": "夹克",
+        "chinese": "我穿了一件夹克。",
         "word": "jacket",
         "sentence": "I wear a jacket.",
         "options": [
@@ -473,13 +481,21 @@ var unit2_lesson2 = {
           {
             "text": "<img src=\"assets/images/shirt.png\" width=\"80\">",
             "value": "shirt"
+          },
+          {
+            "text": "<img src=\"assets/images/jacket.png\" width=\"80\">",
+            "value": "jacket"
+          },
+          {
+            "text": "<img src=\"assets/images/dress.png\" width=\"80\">",
+            "value": "dress"
           }
         ],
         "correct": "jacket"
       },
       {
         "type": "word_match",
-        "chinese": "谁的",
+        "chinese": "这是你的whose吗？",
         "word": "whose",
         "sentence": "Is this your whose?",
         "options": [
@@ -490,13 +506,21 @@ var unit2_lesson2 = {
           {
             "text": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
             "value": "clothes"
+          },
+          {
+            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+            "value": "schoolbag"
+          },
+          {
+            "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
+            "value": "skirt"
           }
         ],
         "correct": "whose"
       },
       {
         "type": "sentence_match",
-        "chinese": "衣服",
+        "chinese": "这是你的clothes吗？",
         "word": "clothes",
         "sentence": "Is this your clothes?",
         "options": [
@@ -507,13 +531,21 @@ var unit2_lesson2 = {
           {
             "text": "<img src=\"assets/images/jacket.png\" width=\"80\">",
             "value": "jacket"
+          },
+          {
+            "text": "<img src=\"assets/images/t-shirt.png\" width=\"80\">",
+            "value": "t-shirt"
+          },
+          {
+            "text": "<img src=\"assets/images/shorts.png\" width=\"80\">",
+            "value": "shorts"
           }
         ],
         "correct": "clothes"
       },
       {
         "type": "word_match",
-        "chinese": "衬衫",
+        "chinese": "这是衬衫。",
         "word": "shirt",
         "sentence": "Whose shirt is this?",
         "options": [
@@ -538,7 +570,7 @@ var unit2_lesson2 = {
       },
       {
         "type": "word_match",
-        "chinese": "夹克",
+        "chinese": "我穿了一件夹克。",
         "word": "jacket",
         "sentence": "I wear a jacket.",
         "options": [
@@ -549,6 +581,14 @@ var unit2_lesson2 = {
           {
             "text": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
             "value": "clothes"
+          },
+          {
+            "text": "<img src=\"assets/images/t-shirt.png\" width=\"80\">",
+            "value": "t-shirt"
+          },
+          {
+            "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
+            "value": "skirt"
           }
         ],
         "correct": "jacket"
@@ -557,7 +597,7 @@ var unit2_lesson2 = {
     "practice": [
       {
         "type": "sentence_match",
-        "chinese": "衬衫",
+        "chinese": "我穿了一件衬衫。",
         "word": "shirt",
         "sentence": "I wear a shirt.",
         "options": [
@@ -583,7 +623,7 @@ var unit2_lesson2 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "夹克",
+        "chinese": "我穿了一件夹克。",
         "word": "jacket",
         "sentence": "I wear a jacket.",
         "options": [
@@ -609,7 +649,7 @@ var unit2_lesson2 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "谁的",
+        "chinese": "这是你的whose吗？",
         "word": "whose",
         "sentence": "Is this your whose?",
         "options": [
@@ -623,7 +663,7 @@ var unit2_lesson2 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "衣服",
+        "chinese": "这是你的clothes吗？",
         "word": "clothes",
         "sentence": "Is this your clothes?",
         "options": [
@@ -637,7 +677,7 @@ var unit2_lesson2 = {
       },
       {
         "type": "duo_race",
-        "chinese": "衬衫",
+        "chinese": "我穿了一件衬衫。",
         "word": "shirt",
         "sentence": "I wear a shirt.",
         "options": [
@@ -651,7 +691,7 @@ var unit2_lesson2 = {
       },
       {
         "type": "duo_race",
-        "chinese": "夹克",
+        "chinese": "我穿了一件夹克。",
         "word": "jacket",
         "sentence": "I wear a jacket.",
         "options": [
@@ -677,7 +717,7 @@ var unit2_lesson2 = {
       },
       {
         "type": "word_match",
-        "chinese": "谁的",
+        "chinese": "这是你的whose吗？",
         "word": "whose",
         "sentence": "Is this your whose?",
         "options": [
@@ -691,7 +731,7 @@ var unit2_lesson2 = {
       },
       {
         "type": "word_match",
-        "chinese": "衣服",
+        "chinese": "这是杨明的衬衫。",
         "word": "clothes",
         "sentence": "It's Yang Ming's shirt.",
         "options": [
@@ -717,7 +757,7 @@ var unit2_lesson2 = {
       },
       {
         "type": "duo_race",
-        "chinese": "衬衫",
+        "chinese": "这是杨明的衬衫。",
         "word": "shirt",
         "sentence": "It's Yang Ming's shirt.",
         "options": [
@@ -731,7 +771,7 @@ var unit2_lesson2 = {
       },
       {
         "type": "duo_race",
-        "chinese": "夹克",
+        "chinese": "这是杨明的衬衫。",
         "word": "jacket",
         "sentence": "It's Yang Ming's shirt.",
         "options": [
@@ -757,7 +797,7 @@ var unit2_lesson2 = {
       },
       {
         "type": "sentence_match",
-        "chinese": "谁的",
+        "chinese": "这是你的whose吗？",
         "word": "whose",
         "sentence": "Is this your whose?",
         "options": [
@@ -771,7 +811,7 @@ var unit2_lesson2 = {
       },
       {
         "type": "word_match",
-        "chinese": "衣服",
+        "chinese": "这是杨明的衬衫。",
         "word": "clothes",
         "sentence": "It's Yang Ming's shirt.",
         "options": [
@@ -790,7 +830,7 @@ var unit2_lesson2 = {
       {
         "type": "word_spell",
         "word": "shirt",
-        "chinese": "衬衫",
+        "chinese": "这是衬衫。",
         "image": "<img src=\"assets/images/shirt.png\" width=\"80\">",
         "display": "shi_t",
         "options": [
@@ -804,7 +844,7 @@ var unit2_lesson2 = {
       {
         "type": "letter_select",
         "word": "jacket",
-        "chinese": "夹克",
+        "chinese": "这是夹克。",
         "image": "<img src=\"assets/images/jacket.png\" width=\"80\">",
         "display": "ja_ket",
         "options": [
@@ -818,7 +858,7 @@ var unit2_lesson2 = {
       {
         "type": "word_spell",
         "word": "whose",
-        "chinese": "谁的",
+        "chinese": "这是whose。",
         "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
         "display": "whos_",
         "options": [
@@ -832,7 +872,7 @@ var unit2_lesson2 = {
       {
         "type": "letter_select",
         "word": "clothes",
-        "chinese": "衣服",
+        "chinese": "这是clothes。",
         "image": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
         "display": "clo_hes",
         "options": [
@@ -846,7 +886,7 @@ var unit2_lesson2 = {
       {
         "type": "letter_select",
         "word": "shirt",
-        "chinese": "衬衫",
+        "chinese": "这是衬衫。",
         "image": "<img src=\"assets/images/shirt.png\" width=\"80\">",
         "display": "shir_",
         "options": [
@@ -860,7 +900,7 @@ var unit2_lesson2 = {
       {
         "type": "letter_select",
         "word": "jacket",
-        "chinese": "夹克",
+        "chinese": "这是夹克。",
         "image": "<img src=\"assets/images/jacket.png\" width=\"80\">",
         "display": "jac_et",
         "options": [
@@ -874,7 +914,7 @@ var unit2_lesson2 = {
       {
         "type": "word_spell",
         "word": "whose",
-        "chinese": "谁的",
+        "chinese": "这是whose。",
         "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
         "display": "wh_se",
         "options": [
@@ -888,7 +928,7 @@ var unit2_lesson2 = {
       {
         "type": "word_spell",
         "word": "clothes",
-        "chinese": "衣服",
+        "chinese": "这是clothes。",
         "image": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
         "display": "_lothes",
         "options": [
@@ -902,7 +942,7 @@ var unit2_lesson2 = {
       {
         "type": "letter_select",
         "word": "shirt",
-        "chinese": "衬衫",
+        "chinese": "这是衬衫。",
         "image": "<img src=\"assets/images/shirt.png\" width=\"80\">",
         "display": "s_irt",
         "options": [
@@ -916,7 +956,7 @@ var unit2_lesson2 = {
       {
         "type": "word_spell",
         "word": "jacket",
-        "chinese": "夹克",
+        "chinese": "这是夹克。",
         "image": "<img src=\"assets/images/jacket.png\" width=\"80\">",
         "display": "jacke_",
         "options": [
@@ -932,7 +972,7 @@ var unit2_lesson2 = {
       {
         "type": "duo_spell",
         "word": "shirt",
-        "chinese": "衬衫",
+        "chinese": "这是衬衫。",
         "image": "<img src=\"assets/images/shirt.png\" width=\"80\">",
         "display": "shi_t",
         "options": [
@@ -951,7 +991,7 @@ var unit2_lesson2 = {
       {
         "type": "letter_select",
         "word": "jacket",
-        "chinese": "夹克",
+        "chinese": "这是夹克。",
         "image": "<img src=\"assets/images/jacket.png\" width=\"80\">",
         "display": "ja_ket",
         "options": [
@@ -970,7 +1010,7 @@ var unit2_lesson2 = {
       {
         "type": "letter_select",
         "word": "whose",
-        "chinese": "谁的",
+        "chinese": "这是whose。",
         "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
         "display": "whos_",
         "options": [
@@ -989,7 +1029,7 @@ var unit2_lesson2 = {
       {
         "type": "word_spell",
         "word": "clothes",
-        "chinese": "衣服",
+        "chinese": "这是clothes。",
         "image": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
         "display": "clo_hes",
         "options": [
@@ -1008,7 +1048,7 @@ var unit2_lesson2 = {
       {
         "type": "word_spell",
         "word": "shirt",
-        "chinese": "衬衫",
+        "chinese": "这是衬衫。",
         "image": "<img src=\"assets/images/shirt.png\" width=\"80\">",
         "display": "shir_",
         "options": [
@@ -1027,7 +1067,7 @@ var unit2_lesson2 = {
       {
         "type": "word_spell",
         "word": "jacket",
-        "chinese": "夹克",
+        "chinese": "这是夹克。",
         "image": "<img src=\"assets/images/jacket.png\" width=\"80\">",
         "display": "jac_et",
         "options": [
@@ -1046,7 +1086,7 @@ var unit2_lesson2 = {
       {
         "type": "letter_select",
         "word": "whose",
-        "chinese": "谁的",
+        "chinese": "这是whose。",
         "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
         "display": "wh_se",
         "options": [
@@ -1065,7 +1105,7 @@ var unit2_lesson2 = {
       {
         "type": "duo_spell",
         "word": "clothes",
-        "chinese": "衣服",
+        "chinese": "这是clothes。",
         "image": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
         "display": "_lothes",
         "options": [
@@ -1084,7 +1124,7 @@ var unit2_lesson2 = {
       {
         "type": "letter_select",
         "word": "shirt",
-        "chinese": "衬衫",
+        "chinese": "这是衬衫。",
         "image": "<img src=\"assets/images/shirt.png\" width=\"80\">",
         "display": "s_irt",
         "options": [
@@ -1103,7 +1143,7 @@ var unit2_lesson2 = {
       {
         "type": "letter_select",
         "word": "jacket",
-        "chinese": "夹克",
+        "chinese": "这是夹克。",
         "image": "<img src=\"assets/images/jacket.png\" width=\"80\">",
         "display": "jacke_",
         "options": [
@@ -1122,7 +1162,7 @@ var unit2_lesson2 = {
       {
         "type": "word_spell",
         "word": "whose",
-        "chinese": "谁的",
+        "chinese": "这是whose。",
         "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
         "display": "whos_",
         "options": [
@@ -1141,7 +1181,7 @@ var unit2_lesson2 = {
       {
         "type": "letter_select",
         "word": "clothes",
-        "chinese": "衣服",
+        "chinese": "这是clothes。",
         "image": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
         "display": "cloth_s",
         "options": [
@@ -1164,70 +1204,70 @@ var unit2_lesson2 = {
       {
         "type": "read_word",
         "word": "shirt",
-        "chinese": "衬衫",
+        "chinese": "这是衬衫。",
         "image": "<img src=\"assets/images/shirt.png\" width=\"80\">",
         "sentence": "Whose shirt is this?"
       },
       {
         "type": "read_word",
         "word": "jacket",
-        "chinese": "夹克",
+        "chinese": "我喜欢夹克。",
         "image": "<img src=\"assets/images/jacket.png\" width=\"80\">",
         "sentence": "I like jacket."
       },
       {
         "type": "read_word",
         "word": "whose",
-        "chinese": "谁的",
+        "chinese": "这是谁的。",
         "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
         "sentence": "Whose shirt is this?"
       },
       {
         "type": "read_word",
         "word": "clothes",
-        "chinese": "衣服",
+        "chinese": "这是衣服。",
         "image": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
         "sentence": "Whose shirt is this?"
       },
       {
         "type": "read_word",
         "word": "shirt",
-        "chinese": "衬衫",
+        "chinese": "我喜欢衬衫。",
         "image": "<img src=\"assets/images/shirt.png\" width=\"80\">",
         "sentence": "I like shirt."
       },
       {
         "type": "read_word",
         "word": "jacket",
-        "chinese": "夹克",
+        "chinese": "这是夹克。",
         "image": "<img src=\"assets/images/jacket.png\" width=\"80\">",
         "sentence": "Whose shirt is this?"
       },
       {
         "type": "shadowing",
         "word": "whose",
-        "chinese": "谁的",
+        "chinese": "我喜欢whose。",
         "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
         "sentence": "I like whose."
       },
       {
         "type": "shadowing",
         "word": "clothes",
-        "chinese": "衣服",
+        "chinese": "我喜欢clothes。",
         "image": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
         "sentence": "I like clothes."
       },
       {
         "type": "shadowing",
         "word": "shirt",
-        "chinese": "衬衫",
+        "chinese": "我喜欢衬衫。",
         "image": "<img src=\"assets/images/shirt.png\" width=\"80\">",
         "sentence": "I like shirt."
       },
       {
         "type": "read_word",
         "word": "jacket",
-        "chinese": "夹克",
+        "chinese": "这是夹克。",
         "image": "<img src=\"assets/images/jacket.png\" width=\"80\">",
         "sentence": "Whose shirt is this?"
       }
@@ -1236,7 +1276,7 @@ var unit2_lesson2 = {
       {
         "type": "shadowing",
         "word": "shirt",
-        "chinese": "衬衫",
+        "chinese": "这是杨明的衬衫。",
         "image": "<img src=\"assets/images/shirt.png\" width=\"80\">",
         "sentence": "It's Yang Ming's shirt.",
         "difficulty": "easy"
@@ -1244,7 +1284,7 @@ var unit2_lesson2 = {
       {
         "type": "roleplay",
         "word": "jacket",
-        "chinese": "夹克",
+        "chinese": "这是一只夹克。",
         "image": "<img src=\"assets/images/jacket.png\" width=\"80\">",
         "sentence": "This is a jacket.",
         "difficulty": "easy"
@@ -1252,7 +1292,7 @@ var unit2_lesson2 = {
       {
         "type": "read_word",
         "word": "whose",
-        "chinese": "谁的",
+        "chinese": "这是杨明的衬衫。",
         "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
         "sentence": "It's Yang Ming's shirt.",
         "difficulty": "easy"
@@ -1260,7 +1300,7 @@ var unit2_lesson2 = {
       {
         "type": "shadowing",
         "word": "clothes",
-        "chinese": "衣服",
+        "chinese": "这是一只clothes。",
         "image": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
         "sentence": "This is a clothes.",
         "difficulty": "medium"
@@ -1268,7 +1308,7 @@ var unit2_lesson2 = {
       {
         "type": "shadowing",
         "word": "shirt",
-        "chinese": "衬衫",
+        "chinese": "这是一只衬衫。",
         "image": "<img src=\"assets/images/shirt.png\" width=\"80\">",
         "sentence": "This is a shirt.",
         "difficulty": "easy"
@@ -1276,7 +1316,7 @@ var unit2_lesson2 = {
       {
         "type": "roleplay",
         "word": "jacket",
-        "chinese": "夹克",
+        "chinese": "这是杨明的衬衫。",
         "image": "<img src=\"assets/images/jacket.png\" width=\"80\">",
         "sentence": "It's Yang Ming's shirt.",
         "difficulty": "medium"
@@ -1284,7 +1324,7 @@ var unit2_lesson2 = {
       {
         "type": "debate",
         "word": "whose",
-        "chinese": "谁的",
+        "chinese": "这是杨明的衬衫。",
         "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
         "sentence": "It's Yang Ming's shirt.",
         "difficulty": "easy"
@@ -1292,7 +1332,7 @@ var unit2_lesson2 = {
       {
         "type": "shadowing",
         "word": "clothes",
-        "chinese": "衣服",
+        "chinese": "这是杨明的衬衫。",
         "image": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
         "sentence": "It's Yang Ming's shirt.",
         "difficulty": "medium"
@@ -1300,7 +1340,7 @@ var unit2_lesson2 = {
       {
         "type": "debate",
         "word": "shirt",
-        "chinese": "衬衫",
+        "chinese": "这是一只衬衫。",
         "image": "<img src=\"assets/images/shirt.png\" width=\"80\">",
         "sentence": "This is a shirt.",
         "difficulty": "hard"
@@ -1308,7 +1348,7 @@ var unit2_lesson2 = {
       {
         "type": "read_word",
         "word": "jacket",
-        "chinese": "夹克",
+        "chinese": "这是一只夹克。",
         "image": "<img src=\"assets/images/jacket.png\" width=\"80\">",
         "sentence": "This is a jacket.",
         "difficulty": "hard"
@@ -1316,7 +1356,7 @@ var unit2_lesson2 = {
       {
         "type": "read_word",
         "word": "whose",
-        "chinese": "谁的",
+        "chinese": "这是杨明的衬衫。",
         "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
         "sentence": "It's Yang Ming's shirt.",
         "difficulty": "hard"
@@ -1324,7 +1364,7 @@ var unit2_lesson2 = {
       {
         "type": "read_word",
         "word": "clothes",
-        "chinese": "衣服",
+        "chinese": "这是一只clothes。",
         "image": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
         "sentence": "This is a clothes.",
         "difficulty": "hard"
