@@ -809,7 +809,7 @@ function updatePhaseIndicator() {
 
     const phaseNames = {
         pretest: '前测',
-        practice: '练习'
+        practice: '实战'
     };
     const moduleNames = {
         listening: '听力',
