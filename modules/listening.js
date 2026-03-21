@@ -139,7 +139,7 @@ function renderListeningQuestion(q, container) {
         container.appendChild(wordsContainer);
     } else if (q.type === 'whack_mole') {
         var descEl = document.createElement('h3');
-        descEl.textContent = '🔨 打中正确的！ ' + (q.chinese || '');
+        descEl.innerHTML = '🔨 打中 <strong style="font-size:24px;color:#ff4b4b;">' + (q.word || q.sentence || '') + '</strong>';
         container.appendChild(descEl);
 
         var wmGrid = document.createElement('div');
@@ -176,10 +176,10 @@ function renderListeningQuestion(q, container) {
             setTimeout(function() { randomMole.classList.remove('up'); }, 1000);
         }, 1200);
 
-        // clear interval on answer
+        // clear interval only on correct answer
         var origHandleAnswer = handleAnswer;
         handleAnswer = function(isCorrect, cardEl) {
-            clearInterval(moleInterval);
+            if (isCorrect) clearInterval(moleInterval);
             origHandleAnswer(isCorrect, cardEl);
         }
         
@@ -215,7 +215,7 @@ function renderListeningQuestion(q, container) {
 
         var drDescEl = document.createElement('div');
         drDescEl.style.marginBottom = '20px';
-        drDescEl.textContent = '谁先找到正确答案？ ' + (q.chinese || '');
+        drDescEl.innerHTML = '谁先找到 <strong style="font-size:24px;color:#ff4b4b;">' + (q.word || q.sentence || q.chinese || '') + '</strong> ？';
         container.appendChild(drDescEl);
 
         var raceArea = document.createElement('div');
