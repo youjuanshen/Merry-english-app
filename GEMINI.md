@@ -8,7 +8,7 @@
 
 ## 工作流程
 
-1. 看当前任务 → 2. 做 → 3. commit + push → 4. 做下一个
+1. 看当前任务 → 2. 做 → 3. commit（本地保存） → 4. 做下一个 → 5. 全部完成后统一 push
 
 ---
 
@@ -83,7 +83,7 @@
 | listening | Q3 | listen_select | correct=true应为correct=0 | 已修复 |
 ```
 
-发现问题立即修复，**每完成一课就 commit + push**。
+发现问题立即修复，**每完成一课就 commit**（不用 push，最后统一 push）。
 
 ---
 
