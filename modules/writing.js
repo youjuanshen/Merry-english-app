@@ -1,6 +1,17 @@
 // writing.js
 
 function renderWritingQuestion(q, container) {
+    // 容错：如果题目数据不完整，显示提示并允许跳过
+    if (!q || (!q.options && !q.letters && !q.scrambled && !q.parts && !q.pairs && q.type !== 'letter_trace' && q.type !== 'coop_relay_spell')) {
+        var skipEl = document.createElement('div');
+        skipEl.style.textAlign = 'center';
+        skipEl.style.padding = '40px';
+        skipEl.innerHTML = '<div style="font-size:40px;margin-bottom:15px;">⚠️</div>' +
+            '<div style="font-size:18px;color:#888;margin-bottom:20px;">这道题数据不完整，自动跳过</div>';
+        container.appendChild(skipEl);
+        setTimeout(function() { handleAnswer(true); }, 1000);
+        return;
+    }
     if (q.type === 'letter_select') {
         const promptEl = document.createElement('h2');
         promptEl.textContent = q.prompt;
@@ -25,7 +36,7 @@ function renderWritingQuestion(q, container) {
         descEl.style.fontSize = '20px';
         descEl.style.marginBottom = '20px';
         descEl.style.color = 'var(--gray-shadow)';
-        descEl.textContent = `TRACE LETTER FOR: ${q.word}`;
+        descEl.textContent = '描摹字母: ' + q.word;
         container.appendChild(descEl);
 
         const traceArea = document.createElement('div');
@@ -56,7 +67,7 @@ function renderWritingQuestion(q, container) {
         hint.style.bottom = '-30px';
         hint.style.fontSize = '16px';
         hint.style.color = 'var(--secondary)';
-        hint.textContent = 'Tap to trace';
+        hint.textContent = '点击描摹';
         traceArea.appendChild(hint);
 
         container.appendChild(traceArea);
@@ -100,7 +111,7 @@ function renderWritingQuestion(q, container) {
         container.appendChild(grid);
     } else if (q.type === 'word_puzzle' || q.type === 'sentence_order') {
         const descEl = document.createElement('h3');
-        descEl.textContent = q.type === 'word_puzzle' ? 'Spell the word! ' : 'Order the sentence! ';
+        descEl.textContent = q.type === 'word_puzzle' ? '拼出单词！ ' : '排列句子！ ';
         if(q.chinese) descEl.textContent += `(${q.chinese})`;
         container.appendChild(descEl);
 
@@ -236,7 +247,7 @@ function renderWritingQuestion(q, container) {
 
     } else if (q.type === 'pinyin_fill') {
         const descEl = document.createElement('h3');
-        descEl.textContent = 'Fill in the missing letter! ' + (q.chinese || '');
+        descEl.textContent = '填上缺少的字母！ ' + (q.chinese || '');
         container.appendChild(descEl);
 
         if (q.image) {

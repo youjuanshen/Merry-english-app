@@ -97,7 +97,7 @@ function renderSpeakingQuestion(q, container) {
     const hintEl = document.createElement('div');
     hintEl.style.color = 'var(--gray-shadow)';
     hintEl.style.marginBottom = '30px';
-    hintEl.textContent = 'Listen to demo first';
+    hintEl.textContent = '先听示范';
     container.appendChild(hintEl);
 
     // Record button
@@ -146,20 +146,21 @@ function renderSpeakingQuestion(q, container) {
             recordBtn.innerHTML = '🎤';
             
             // Mock AI scoring process
-            statusText.textContent = 'AI is scoring...';
+            statusText.textContent = '评分中...';
             isAnimating = true;
-            
-            setTimeout(() => {
+
+            setTimeout(function() {
                 // Random mock score between 60 and 100 for now
-                const mockScore = Math.floor(Math.random() * 41) + 60;
-                let stars = '⭐'.repeat(Math.ceil((mockScore-50)/10));
-                
-                statusText.innerHTML = `<span style="color:var(--primary); font-size:30px;">Score: ${mockScore} ${stars}</span>`;
-                
-                // Allow proceeding based on this mock interaction. Treat as correct.
-                setTimeout(() => {
-                    handleAnswer(true);
-                }, 1500);
+                var mockScore = Math.floor(Math.random() * 41) + 60;
+                var starCount = mockScore >= 100 ? 5 : mockScore >= 80 ? 4 : mockScore >= 60 ? 3 : mockScore >= 40 ? 2 : 1;
+                var stars = '';
+                for (var s = 0; s < starCount; s++) stars += '⭐';
+
+                statusText.innerHTML = '<span style="color:var(--primary); font-size:30px;">得分: ' + mockScore + ' ' + stars + '</span>';
+
+                isAnimating = false;
+                // Directly go to next question
+                handleAnswer(true);
 
             }, 1000);
         }
@@ -171,7 +172,7 @@ function renderSpeakingQuestion(q, container) {
 
 function renderWheelSpin(q, container) {
     const descEl = document.createElement('h3');
-    descEl.textContent = 'Spin the wheel! ' + (q.chinese || '');
+    descEl.textContent = '转动转盘！ ' + (q.chinese || '');
     container.appendChild(descEl);
 
     const wheelContainer = document.createElement('div');
@@ -247,7 +248,7 @@ function renderWheelSpin(q, container) {
             };
             
             const transitionEl = document.createElement('h2');
-            transitionEl.textContent = "You got: " + subQ.word;
+            transitionEl.textContent = "你抽到了: " + subQ.word;
             transitionEl.className = 'animate-pop';
             transitionEl.style.color = 'var(--primary)';
             transitionEl.style.textAlign = 'center';

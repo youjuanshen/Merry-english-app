@@ -1,6 +1,17 @@
 // listening.js
 
 function renderListeningQuestion(q, container) {
+    // 容错：如果题目数据不完整，自动跳过
+    if (!q || (!q.options && q.type !== 'listen_tf')) {
+        var skipEl = document.createElement('div');
+        skipEl.style.textAlign = 'center';
+        skipEl.style.padding = '40px';
+        skipEl.innerHTML = '<div style="font-size:40px;margin-bottom:15px;">⚠️</div>' +
+            '<div style="font-size:18px;color:#888;">这道题数据不完整，自动跳过</div>';
+        container.appendChild(skipEl);
+        setTimeout(function() { handleAnswer(true); }, 1000);
+        return;
+    }
     // 喇叭按钮（紧凑，节省空间给选项）
     var playBtn = document.createElement('button');
     playBtn.className = 'play-sound-btn animate-pop';

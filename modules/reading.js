@@ -3,6 +3,17 @@
 let draggedEl = null;
 
 function renderReadingQuestion(q, container) {
+    // 容错：如果题目数据不完整，自动跳过
+    if (!q || (!q.options && !q.pairs && q.type !== 'spot_diff')) {
+        var skipEl = document.createElement('div');
+        skipEl.style.textAlign = 'center';
+        skipEl.style.padding = '40px';
+        skipEl.innerHTML = '<div style="font-size:40px;margin-bottom:15px;">⚠️</div>' +
+            '<div style="font-size:18px;color:#888;">这道题数据不完整，自动跳过</div>';
+        container.appendChild(skipEl);
+        setTimeout(function() { handleAnswer(true); }, 1000);
+        return;
+    }
     if (q.type === 'word_match') {
         const textEl = document.createElement('div');
         textEl.style.fontSize = '60px';
