@@ -58,8 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
 // 计时器相关
 let questionTimer = null;
 let timeLeft = 0;
-let currentTimeLimit = 30; // 默认每题30秒
-const DEFAULT_TIME_LIMIT = 30;
+let currentTimeLimit = 0; // 0=不限时，学生答完点下一题
+const DEFAULT_TIME_LIMIT = 0;
 
 // ========== 自适应难度系统 ==========
 // 前测统计（用于计算学生水平）
