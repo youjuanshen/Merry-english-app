@@ -214,7 +214,7 @@ function renderWritingQuestion(q, container) {
             const imgEl = document.createElement('div');
             imgEl.style.fontSize = '60px';
             imgEl.style.marginBottom = '15px';
-            imgEl.textContent = q.image;
+            imgEl.innerHTML = q.image;
             container.appendChild(imgEl);
         }
 

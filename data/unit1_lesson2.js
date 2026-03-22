@@ -1,539 +1,262 @@
-var unit1_lesson2 = {
+// Unit 1 Lesson 2: These are pandas.
+// Core vocab: small, ear, eye, baby, long, leg, these, those
+// Sentences: "These are pandas.", "Those are horses.", "They have small ears.", "It's black and white.", "They are big."
+var lesson2 = {
   "id": "U1L2",
-  "title": "I see a monkey.",
+  "title": "These are pandas.",
   "listening": {
     "pretest": [
       {
+        "type": "listen_select",
+        "audio": "panda",
+        "options": [
+          "<img src=\"assets/images/panda.png\" width=\"80\">",
+          "<img src=\"assets/images/bear.png\" width=\"80\">",
+          "<img src=\"assets/images/horse.png\" width=\"80\">",
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "chinese": "这些是熊猫。"
+      },
+      {
         "type": "listen_tf",
-        "audio": "monkey",
-        "chinese": "这是一只猴子。",
-        "image": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-        "correct": false
+        "audio": "horse",
+        "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
+        "correct": true,
+        "chinese": "那些是马。"
       },
       {
         "type": "listen_select",
-        "audio": "elephant",
-        "chinese": "这是一只大象。",
+        "audio": "bear",
         "options": [
           "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">"
+          "<img src=\"assets/images/duck.png\" width=\"80\">",
+          "<img src=\"assets/images/bear.png\" width=\"80\">",
+          "<img src=\"assets/images/bird.png\" width=\"80\">"
         ],
-        "correct": 1
+        "correct": 2,
+        "chinese": "这是一只熊。它很大。"
       },
       {
         "type": "listen_tf",
-        "audio": "monkey",
-        "chinese": "这是一只猴子。",
-        "image": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-        "correct": false
+        "audio": "rabbit",
+        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
+        "correct": false,
+        "chinese": "这是一只兔子。"
       },
       {
         "type": "listen_select",
-        "audio": "monkey",
-        "chinese": "这是一只猴子。",
+        "audio": "duck",
         "options": [
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
+          "<img src=\"assets/images/horse.png\" width=\"80\">",
+          "<img src=\"assets/images/duck.png\" width=\"80\">",
           "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">"
+          "<img src=\"assets/images/panda.png\" width=\"80\">"
         ],
-        "correct": 3
-      },
-      {
-        "type": "listen_tf",
-        "audio": "tiger",
-        "chinese": "这是一只老虎。",
-        "image": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-        "correct": true
-      },
-      {
-        "type": "listen_select",
-        "audio": "lion",
-        "chinese": "这是一只狮子。",
-        "options": [
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "listen_select",
-        "audio": "tiger",
-        "chinese": "这是一只老虎。",
-        "options": [
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">"
-        ],
-        "correct": 0
+        "correct": 1,
+        "chinese": "这是一只鸭子。"
       },
       {
         "type": "listen_tf",
-        "audio": "elephant",
-        "chinese": "这是一只大象。",
-        "image": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-        "correct": false
+        "audio": "monkey",
+        "image": "<img src=\"assets/images/monkey.png\" width=\"80\">",
+        "correct": true,
+        "chinese": "这是一只猴子。"
       },
       {
         "type": "listen_select",
-        "audio": "lion",
-        "chinese": "这是一只狮子。",
+        "audio": "bird",
         "options": [
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">"
+          "<img src=\"assets/images/bear.png\" width=\"80\">",
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+          "<img src=\"assets/images/horse.png\" width=\"80\">",
+          "<img src=\"assets/images/bird.png\" width=\"80\">"
         ],
-        "correct": 1
+        "correct": 3,
+        "chinese": "这是一只鸟。"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "panda",
+        "image": "<img src=\"assets/images/bear.png\" width=\"80\">",
+        "correct": false,
+        "chinese": "这些是熊猫。它们是黑白色的。"
       },
       {
         "type": "listen_select",
-        "audio": "tiger",
-        "chinese": "这是一只老虎。",
+        "audio": "rabbit",
         "options": [
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+          "<img src=\"assets/images/panda.png\" width=\"80\">",
           "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">"
+          "<img src=\"assets/images/duck.png\" width=\"80\">"
         ],
-        "correct": 3
+        "correct": 0,
+        "chinese": "这是一只兔子。它有长耳朵。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "horse",
+        "options": [
+          "<img src=\"assets/images/bird.png\" width=\"80\">",
+          "<img src=\"assets/images/bear.png\" width=\"80\">",
+          "<img src=\"assets/images/horse.png\" width=\"80\">",
+          "<img src=\"assets/images/duck.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "chinese": "那些是马。它们有长腿。"
       }
     ],
     "practice": [
       {
-        "type": "duo_listen_select",
-        "audio": "monkey",
-        "chinese": "这是一只猴子。",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
         "type": "listen_select",
-        "audio": "lion",
-        "chinese": "这是一只狮子。",
-        "difficulty": "medium",
+        "audio": "panda",
         "options": [
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
+          "<img src=\"assets/images/bear.png\" width=\"80\">",
+          "<img src=\"assets/images/panda.png\" width=\"80\">",
           "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "listen_select",
-        "audio": "tiger",
-        "chinese": "这是一只老虎。",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "listen_select",
-        "audio": "lion",
-        "chinese": "这是一只狮子。",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "tiger",
-        "chinese": "这是一只老虎。",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "listen_select",
-        "audio": "lion",
-        "chinese": "这是一只狮子。",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "listen_tf",
-        "audio": "monkey",
-        "chinese": "这是一只猴子。",
-        "difficulty": "easy",
-        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "listen_select",
-        "audio": "elephant",
-        "chinese": "这是一只大象。",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_tf",
-        "audio": "lion",
-        "chinese": "这是一只狮子。",
-        "difficulty": "easy",
-        "image": "<img src=\"assets/images/lion.png\" width=\"80\">",
-        "correct": true
-      },
-      {
-        "type": "listen_select",
-        "audio": "monkey",
-        "chinese": "这是一只猴子。",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "listen_select",
-        "audio": "elephant",
-        "chinese": "这是一只大象。",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "listen_select",
-        "audio": "elephant",
-        "chinese": "这是一只大象。",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "listen_tf",
-        "audio": "elephant",
-        "chinese": "这是一只大象。",
-        "difficulty": "easy",
-        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">",
-        "correct": true
-      },
-      {
-        "type": "listen_tf",
-        "audio": "monkey",
-        "chinese": "这是一只猴子。",
-        "difficulty": "easy",
-        "image": "<img src=\"assets/images/lion.png\" width=\"80\">",
-        "correct": false
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "elephant",
-        "chinese": "这是一只大象。",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "tiger",
-        "chinese": "这是一只老虎。",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "listen_select",
-        "audio": "monkey",
-        "chinese": "这是一只猴子。",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "tiger",
-        "chinese": "这是一只老虎。",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "listen_select",
-        "audio": "tiger",
-        "chinese": "这是一只老虎。",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "tiger",
-        "chinese": "这是一只老虎。",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "listen_select",
-        "audio": "monkey",
-        "chinese": "这是一只猴子。",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "lion",
-        "chinese": "这是一只狮子。",
-        "difficulty": "hard",
-        "options": [
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">"
-        ],
-        "correct": 2
-      },
-      {
-        "type": "listen_select",
-        "audio": "lion",
-        "chinese": "这是一只狮子。",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "listen_select",
-        "audio": "elephant",
-        "chinese": "这是一只大象。",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "monkey",
-        "chinese": "这是一只猴子。",
-        "difficulty": "easy",
-        "options": [
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "listen_select",
-        "audio": "tiger",
-        "chinese": "这是一只老虎。",
-        "difficulty": "medium",
-        "options": [
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "balloon_pop",
-        "text": "Find the word",
-        "chinese": "这是一只Find the word。",
-        "options": [
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">"
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">"
         ],
         "correct": 1,
-        "difficulty": "easy"
+        "chinese": "这些是熊猫。它们是黑白色的。"
       },
       {
-        "type": "balloon_pop",
-        "text": "Find the word",
-        "chinese": "这是一只Find the word。",
-        "options": [
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">"
-        ],
-        "correct": 1,
-        "difficulty": "medium"
+        "type": "listen_tf",
+        "audio": "bear",
+        "image": "<img src=\"assets/images/bear.png\" width=\"80\">",
+        "correct": true,
+        "chinese": "这是一只熊。它们很大。"
       },
       {
-        "type": "balloon_pop",
-        "text": "Find the word",
-        "chinese": "这是一只Find the word。",
+        "type": "listen_select",
+        "audio": "horse",
         "options": [
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">"
+          "<img src=\"assets/images/horse.png\" width=\"80\">",
+          "<img src=\"assets/images/duck.png\" width=\"80\">",
+          "<img src=\"assets/images/bird.png\" width=\"80\">",
+          "<img src=\"assets/images/panda.png\" width=\"80\">"
         ],
         "correct": 0,
-        "difficulty": "medium"
+        "chinese": "那些是马。它们有长腿。"
       },
       {
-        "type": "balloon_pop",
-        "text": "Find the word",
-        "chinese": "这是一只Find the word。",
+        "type": "listen_tf",
+        "audio": "duck",
+        "image": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+        "correct": false,
+        "chinese": "这是一只鸭子。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "monkey",
         "options": [
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
+          "<img src=\"assets/images/bird.png\" width=\"80\">",
+          "<img src=\"assets/images/horse.png\" width=\"80\">",
           "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">"
-        ],
-        "correct": 3,
-        "difficulty": "hard"
-      },
-      {
-        "type": "scenario",
-        "scenario": "Bob is at the zoo. He wants to see a big cat with stripes.",
-        "chinese": "鲍勃在动物园。他想看一只有条纹的大猫。",
-        "question": "Where should Bob go?",
-        "options": [
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/horse.png\" width=\"80\">"
-        ],
-        "correct": 1,
-        "feedback": "Tigers have stripes!",
-        "difficulty": "easy"
-      },
-      {
-        "type": "scenario",
-        "scenario": "Amy wants a pet that lives in water.",
-        "chinese": "艾米想要一只生活在水里的宠物。",
-        "question": "What should Amy get?",
-        "options": [
-          "<img src=\"assets/images/fish.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/cat.png\" width=\"80\">",
           "<img src=\"assets/images/bear.png\" width=\"80\">"
         ],
+        "correct": 2,
+        "chinese": "这是一只猴子。"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "rabbit",
+        "image": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+        "correct": true,
+        "chinese": "这是一只兔子。它们有小眼睛。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "bird",
+        "options": [
+          "<img src=\"assets/images/duck.png\" width=\"80\">",
+          "<img src=\"assets/images/bird.png\" width=\"80\">",
+          "<img src=\"assets/images/panda.png\" width=\"80\">",
+          "<img src=\"assets/images/tiger.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "chinese": "这是一只鸟。"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "horse",
+        "image": "<img src=\"assets/images/monkey.png\" width=\"80\">",
+        "correct": false,
+        "chinese": "那些是马。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "bear",
+        "options": [
+          "<img src=\"assets/images/panda.png\" width=\"80\">",
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+          "<img src=\"assets/images/bear.png\" width=\"80\">",
+          "<img src=\"assets/images/horse.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "chinese": "这是一只熊。它们很大。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "duck",
+        "options": [
+          "<img src=\"assets/images/duck.png\" width=\"80\">",
+          "<img src=\"assets/images/bear.png\" width=\"80\">",
+          "<img src=\"assets/images/monkey.png\" width=\"80\">",
+          "<img src=\"assets/images/bird.png\" width=\"80\">"
+        ],
         "correct": 0,
-        "feedback": "Fish live in water!",
-        "difficulty": "easy"
+        "chinese": "这是一只鸭子。"
       },
       {
-        "type": "scenario",
-        "scenario": "Jack sees an animal with a long tail climbing trees.",
-        "chinese": "杰克看到一只长尾巴的动物在爬树。",
-        "question": "What animal does Jack see?",
-        "options": [
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">"
-        ],
-        "correct": 1,
-        "feedback": "Monkeys climb trees!",
-        "difficulty": "medium"
+        "type": "listen_tf",
+        "audio": "panda",
+        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
+        "correct": true,
+        "chinese": "这些是熊猫。它们有小耳朵。"
       },
       {
-        "type": "scenario",
-        "scenario": "The king of the jungle is sleeping under a tree.",
-        "chinese": "丛林之王正在树下睡觉。",
-        "question": "What animal is it?",
+        "type": "listen_select",
+        "audio": "rabbit",
         "options": [
           "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
-          "<img src=\"assets/images/fish.png\" width=\"80\">",
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">"
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+          "<img src=\"assets/images/horse.png\" width=\"80\">",
+          "<img src=\"assets/images/duck.png\" width=\"80\">"
         ],
         "correct": 1,
-        "feedback": "The lion is the king of the jungle!",
-        "difficulty": "medium"
+        "chinese": "这是一只兔子。它有长耳朵。"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "bird",
+        "image": "<img src=\"assets/images/bird.png\" width=\"80\">",
+        "correct": true,
+        "chinese": "这是一只鸟。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "monkey",
+        "options": [
+          "<img src=\"assets/images/duck.png\" width=\"80\">",
+          "<img src=\"assets/images/bear.png\" width=\"80\">",
+          "<img src=\"assets/images/panda.png\" width=\"80\">",
+          "<img src=\"assets/images/monkey.png\" width=\"80\">"
+        ],
+        "correct": 3,
+        "chinese": "这是一只猴子。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "horse",
+        "options": [
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+          "<img src=\"assets/images/horse.png\" width=\"80\">",
+          "<img src=\"assets/images/bird.png\" width=\"80\">",
+          "<img src=\"assets/images/bear.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "chinese": "那些是马。它们有长腿。"
       }
     ]
   },
@@ -541,923 +264,318 @@ var unit1_lesson2 = {
     "pretest": [
       {
         "type": "sentence_match",
-        "chinese": "这是一只猴子。",
-        "sentence": "This is a monkey.",
+        "sentence": "These are pandas.",
+        "chinese": "这些是熊猫。",
         "options": [
-          {
-            "text": "<img src=\"assets/images/lion.png\" width=\"80\">",
-            "value": "lion"
-          },
-          {
-            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
-            "value": "monkey"
-          },
-          {
-            "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
-            "value": "bird"
-          },
-          {
-            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
-            "value": "panda"
-          }
+          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"},
+          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
+          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
+          {"text": "<img src=\"assets/images/rabbit.png\" width=\"80\">", "value": "rabbit"}
         ],
-        "correct": "monkey"
+        "correct": "panda"
       },
       {
         "type": "word_match",
-        "chinese": "这是一只大象。",
-        "word": "elephant",
+        "word": "ear",
+        "sentence": "They have small ears.",
+        "chinese": "它们有小耳朵。",
         "options": [
-          {
-            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-            "value": "tiger"
-          },
-          {
-            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
-            "value": "elephant"
-          },
-          {
-            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
-            "value": "dog"
-          },
-          {
-            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
-            "value": "horse"
-          }
+          {"text": "<img src=\"assets/images/rabbit.png\" width=\"80\">", "value": "rabbit"},
+          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"},
+          {"text": "<img src=\"assets/images/monkey.png\" width=\"80\">", "value": "monkey"},
+          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"}
         ],
-        "correct": "elephant"
-      },
-      {
-        "type": "word_match",
-        "chinese": "这是一只大象。",
-        "word": "elephant",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
-            "value": "elephant"
-          },
-          {
-            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-            "value": "tiger"
-          },
-          {
-            "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
-            "value": "bear"
-          },
-          {
-            "text": "<img src=\"assets/images/lion.png\" width=\"80\">",
-            "value": "lion"
-          }
-        ],
-        "correct": "elephant"
+        "correct": "rabbit"
       },
       {
         "type": "sentence_match",
-        "chinese": "这是一只老虎。",
-        "sentence": "This is a tiger.",
+        "sentence": "Those are horses.",
+        "chinese": "那些是马。",
         "options": [
-          {
-            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
-            "value": "monkey"
-          },
-          {
-            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-            "value": "tiger"
-          },
-          {
-            "text": "<img src=\"assets/images/cat.png\" width=\"80\">",
-            "value": "cat"
-          },
-          {
-            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
-            "value": "panda"
-          }
+          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
+          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
+          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
+          {"text": "<img src=\"assets/images/bird.png\" width=\"80\">", "value": "bird"}
         ],
-        "correct": "tiger"
+        "correct": "horse"
       },
       {
         "type": "word_match",
-        "chinese": "这是一只狮子。",
-        "word": "lion",
+        "word": "bear",
+        "sentence": "This is a bear. They are big.",
+        "chinese": "这是一只熊。它们很大。",
         "options": [
-          {
-            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-            "value": "tiger"
-          },
-          {
-            "text": "<img src=\"assets/images/lion.png\" width=\"80\">",
-            "value": "lion"
-          },
-          {
-            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
-            "value": "panda"
-          },
-          {
-            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
-            "value": "horse"
-          }
+          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"},
+          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
+          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
+          {"text": "<img src=\"assets/images/monkey.png\" width=\"80\">", "value": "monkey"}
         ],
-        "correct": "lion"
+        "correct": "bear"
       },
       {
         "type": "sentence_match",
-        "chinese": "这是一只大象。",
-        "sentence": "This is a elephant.",
+        "sentence": "It's black and white.",
+        "chinese": "它是黑白色的。",
         "options": [
-          {
-            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
-            "value": "elephant"
-          },
-          {
-            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
-            "value": "monkey"
-          },
-          {
-            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
-            "value": "dog"
-          },
-          {
-            "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
-            "value": "bear"
-          }
+          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
+          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"},
+          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
+          {"text": "<img src=\"assets/images/rabbit.png\" width=\"80\">", "value": "rabbit"}
         ],
-        "correct": "elephant"
+        "correct": "panda"
       },
       {
         "type": "word_match",
-        "chinese": "这是一只狮子。",
-        "word": "lion",
+        "word": "duck",
+        "sentence": "This is a duck.",
+        "chinese": "这是一只鸭子。",
         "options": [
-          {
-            "text": "<img src=\"assets/images/lion.png\" width=\"80\">",
-            "value": "lion"
-          },
-          {
-            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
-            "value": "monkey"
-          },
-          {
-            "text": "<img src=\"assets/images/cat.png\" width=\"80\">",
-            "value": "cat"
-          },
-          {
-            "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
-            "value": "bird"
-          }
+          {"text": "<img src=\"assets/images/bird.png\" width=\"80\">", "value": "bird"},
+          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
+          {"text": "<img src=\"assets/images/rabbit.png\" width=\"80\">", "value": "rabbit"},
+          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"}
         ],
-        "correct": "lion"
-      },
-      {
-        "type": "word_match",
-        "chinese": "这是一只狮子。",
-        "word": "lion",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/lion.png\" width=\"80\">",
-            "value": "lion"
-          },
-          {
-            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-            "value": "tiger"
-          },
-          {
-            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
-            "value": "monkey"
-          },
-          {
-            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
-            "value": "dog"
-          }
-        ],
-        "correct": "lion"
-      },
-      {
-        "type": "word_match",
-        "chinese": "这是一只老虎。",
-        "word": "tiger",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/lion.png\" width=\"80\">",
-            "value": "lion"
-          },
-          {
-            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-            "value": "tiger"
-          },
-          {
-            "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
-            "value": "bird"
-          },
-          {
-            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
-            "value": "monkey"
-          }
-        ],
-        "correct": "tiger"
+        "correct": "duck"
       },
       {
         "type": "sentence_match",
-        "chinese": "这是一只猴子。",
-        "sentence": "This is a monkey.",
+        "sentence": "They have small ears.",
+        "chinese": "它们有小耳朵。",
         "options": [
-          {
-            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
-            "value": "elephant"
-          },
-          {
-            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
-            "value": "monkey"
-          },
-          {
-            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
-            "value": "dog"
-          },
-          {
-            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
-            "value": "panda"
-          }
+          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
+          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
+          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
+          {"text": "<img src=\"assets/images/monkey.png\" width=\"80\">", "value": "monkey"}
         ],
-        "correct": "monkey"
+        "correct": "panda"
       },
       {
         "type": "word_match",
-        "chinese": "这是一只老虎。",
-        "word": "tiger",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/lion.png\" width=\"80\">",
-            "value": "lion"
-          },
-          {
-            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-            "value": "tiger"
-          },
-          {
-            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
-            "value": "horse"
-          },
-          {
-            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
-            "value": "dog"
-          }
-        ],
-        "correct": "tiger"
-      },
-      {
-        "type": "word_match",
-        "chinese": "这是一只猴子。",
         "word": "monkey",
+        "sentence": "This is a monkey.",
+        "chinese": "这是一只猴子。",
         "options": [
-          {
-            "text": "<img src=\"assets/images/lion.png\" width=\"80\">",
-            "value": "lion"
-          },
-          {
-            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
-            "value": "monkey"
-          },
-          {
-            "text": "<img src=\"assets/images/cat.png\" width=\"80\">",
-            "value": "cat"
-          },
-          {
-            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-            "value": "tiger"
-          }
+          {"text": "<img src=\"assets/images/monkey.png\" width=\"80\">", "value": "monkey"},
+          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"},
+          {"text": "<img src=\"assets/images/bird.png\" width=\"80\">", "value": "bird"},
+          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"}
         ],
         "correct": "monkey"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "They are big.",
+        "chinese": "它们很大。",
+        "options": [
+          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"},
+          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
+          {"text": "<img src=\"assets/images/rabbit.png\" width=\"80\">", "value": "rabbit"},
+          {"text": "<img src=\"assets/images/bird.png\" width=\"80\">", "value": "bird"}
+        ],
+        "correct": "bear"
+      },
+      {
+        "type": "word_match",
+        "word": "horse",
+        "sentence": "Those are horses. They have long legs.",
+        "chinese": "那些是马。它们有长腿。",
+        "options": [
+          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
+          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
+          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
+          {"text": "<img src=\"assets/images/monkey.png\" width=\"80\">", "value": "monkey"}
+        ],
+        "correct": "horse"
       }
     ],
     "practice": [
       {
         "type": "word_match",
-        "chinese": "这是一只狮子。",
-        "difficulty": "easy",
-        "word": "lion",
+        "word": "panda",
+        "sentence": "These are pandas. It's black and white.",
+        "chinese": "这些是熊猫。它们是黑白色的。",
         "options": [
-          {
-            "text": "<img src=\"assets/images/lion.png\" width=\"80\">",
-            "value": "lion"
-          },
-          {
-            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
-            "value": "monkey"
-          },
-          {
-            "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
-            "value": "bird"
-          },
-          {
-            "text": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-            "value": "rabbit"
-          }
+          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
+          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"},
+          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
+          {"text": "<img src=\"assets/images/monkey.png\" width=\"80\">", "value": "monkey"}
         ],
-        "correct": "lion"
+        "correct": "panda"
       },
       {
         "type": "sentence_match",
-        "chinese": "这是一只猴子。",
-        "difficulty": "hard",
+        "sentence": "Those are horses. They have long legs.",
+        "chinese": "那些是马。它们有长腿。",
+        "options": [
+          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
+          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
+          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"},
+          {"text": "<img src=\"assets/images/rabbit.png\" width=\"80\">", "value": "rabbit"}
+        ],
+        "correct": "horse"
+      },
+      {
+        "type": "word_match",
+        "word": "rabbit",
+        "sentence": "This is a rabbit. It has long ears.",
+        "chinese": "这是一只兔子。它有长耳朵。",
+        "options": [
+          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
+          {"text": "<img src=\"assets/images/rabbit.png\" width=\"80\">", "value": "rabbit"},
+          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
+          {"text": "<img src=\"assets/images/bird.png\" width=\"80\">", "value": "bird"}
+        ],
+        "correct": "rabbit"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "These are pandas. They have small ears.",
+        "chinese": "这些是熊猫。它们有小耳朵。",
+        "options": [
+          {"text": "<img src=\"assets/images/monkey.png\" width=\"80\">", "value": "monkey"},
+          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
+          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
+          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"}
+        ],
+        "correct": "panda"
+      },
+      {
+        "type": "word_match",
+        "word": "bear",
+        "sentence": "This is a bear. They are big.",
+        "chinese": "这是一只熊。它们很大。",
+        "options": [
+          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
+          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"},
+          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
+          {"text": "<img src=\"assets/images/rabbit.png\" width=\"80\">", "value": "rabbit"}
+        ],
+        "correct": "bear"
+      },
+      {
+        "type": "sentence_match",
         "sentence": "This is a monkey.",
+        "chinese": "这是一只猴子。",
         "options": [
-          {
-            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
-            "value": "monkey"
-          },
-          {
-            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-            "value": "tiger"
-          },
-          {
-            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
-            "value": "panda"
-          },
-          {
-            "text": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-            "value": "rabbit"
-          }
+          {"text": "<img src=\"assets/images/bird.png\" width=\"80\">", "value": "bird"},
+          {"text": "<img src=\"assets/images/monkey.png\" width=\"80\">", "value": "monkey"},
+          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
+          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"}
         ],
         "correct": "monkey"
       },
       {
-        "type": "sentence_match",
-        "chinese": "这是一只大象。",
-        "difficulty": "easy",
-        "sentence": "This is a elephant.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
-            "value": "elephant"
-          },
-          {
-            "text": "<img src=\"assets/images/lion.png\" width=\"80\">",
-            "value": "lion"
-          },
-          {
-            "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
-            "value": "bear"
-          },
-          {
-            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
-            "value": "horse"
-          }
-        ],
-        "correct": "elephant"
-      },
-      {
         "type": "word_match",
-        "chinese": "这是一只狮子。",
-        "difficulty": "medium",
-        "word": "lion",
+        "word": "bird",
+        "sentence": "This is a bird. It has two eyes.",
+        "chinese": "这是一只鸟。它有两只眼睛。",
         "options": [
-          {
-            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
-            "value": "elephant"
-          },
-          {
-            "text": "<img src=\"assets/images/lion.png\" width=\"80\">",
-            "value": "lion"
-          },
-          {
-            "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
-            "value": "bear"
-          },
-          {
-            "text": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-            "value": "rabbit"
-          }
+          {"text": "<img src=\"assets/images/bird.png\" width=\"80\">", "value": "bird"},
+          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"},
+          {"text": "<img src=\"assets/images/monkey.png\" width=\"80\">", "value": "monkey"},
+          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"}
         ],
-        "correct": "lion"
-      },
-      {
-        "type": "word_match",
-        "chinese": "这是一只老虎。",
-        "difficulty": "easy",
-        "word": "tiger",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-            "value": "tiger"
-          },
-          {
-            "text": "<img src=\"assets/images/lion.png\" width=\"80\">",
-            "value": "lion"
-          },
-          {
-            "text": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-            "value": "rabbit"
-          },
-          {
-            "text": "<img src=\"assets/images/cat.png\" width=\"80\">",
-            "value": "cat"
-          }
-        ],
-        "correct": "tiger"
-      },
-      {
-        "type": "word_match",
-        "chinese": "这是一只大象。",
-        "difficulty": "easy",
-        "word": "elephant",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
-            "value": "monkey"
-          },
-          {
-            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
-            "value": "elephant"
-          },
-          {
-            "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
-            "value": "bear"
-          },
-          {
-            "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
-            "value": "bird"
-          }
-        ],
-        "correct": "elephant"
+        "correct": "bird"
       },
       {
         "type": "sentence_match",
-        "chinese": "这是一只猴子。",
-        "difficulty": "medium",
+        "sentence": "This is a duck.",
+        "chinese": "这是一只鸭子。",
+        "options": [
+          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
+          {"text": "<img src=\"assets/images/rabbit.png\" width=\"80\">", "value": "rabbit"},
+          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"},
+          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"}
+        ],
+        "correct": "duck"
+      },
+      {
+        "type": "word_match",
+        "word": "horse",
+        "sentence": "Those are horses.",
+        "chinese": "那些是马。",
+        "options": [
+          {"text": "<img src=\"assets/images/monkey.png\" width=\"80\">", "value": "monkey"},
+          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
+          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
+          {"text": "<img src=\"assets/images/bird.png\" width=\"80\">", "value": "bird"}
+        ],
+        "correct": "horse"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "This is a bear. It's big.",
+        "chinese": "这是一只熊。它很大。",
+        "options": [
+          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"},
+          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
+          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
+          {"text": "<img src=\"assets/images/rabbit.png\" width=\"80\">", "value": "rabbit"}
+        ],
+        "correct": "bear"
+      },
+      {
+        "type": "word_match",
+        "word": "duck",
+        "sentence": "This is a duck.",
+        "chinese": "这是一只鸭子。",
+        "options": [
+          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
+          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
+          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"},
+          {"text": "<img src=\"assets/images/bird.png\" width=\"80\">", "value": "bird"}
+        ],
+        "correct": "duck"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "This is a rabbit. It has long ears.",
+        "chinese": "这是一只兔子。它有长耳朵。",
+        "options": [
+          {"text": "<img src=\"assets/images/rabbit.png\" width=\"80\">", "value": "rabbit"},
+          {"text": "<img src=\"assets/images/monkey.png\" width=\"80\">", "value": "monkey"},
+          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
+          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"}
+        ],
+        "correct": "rabbit"
+      },
+      {
+        "type": "word_match",
+        "word": "panda",
+        "sentence": "These are pandas.",
+        "chinese": "这些是熊猫。",
+        "options": [
+          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"},
+          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
+          {"text": "<img src=\"assets/images/rabbit.png\" width=\"80\">", "value": "rabbit"},
+          {"text": "<img src=\"assets/images/monkey.png\" width=\"80\">", "value": "monkey"}
+        ],
+        "correct": "panda"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "This is a bird.",
+        "chinese": "这是一只鸟。",
+        "options": [
+          {"text": "<img src=\"assets/images/bird.png\" width=\"80\">", "value": "bird"},
+          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
+          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
+          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"}
+        ],
+        "correct": "bird"
+      },
+      {
+        "type": "word_match",
+        "word": "monkey",
         "sentence": "This is a monkey.",
+        "chinese": "这是一只猴子。",
         "options": [
-          {
-            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
-            "value": "monkey"
-          },
-          {
-            "text": "<img src=\"assets/images/lion.png\" width=\"80\">",
-            "value": "lion"
-          },
-          {
-            "text": "<img src=\"assets/images/cat.png\" width=\"80\">",
-            "value": "cat"
-          },
-          {
-            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
-            "value": "panda"
-          }
+          {"text": "<img src=\"assets/images/monkey.png\" width=\"80\">", "value": "monkey"},
+          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
+          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
+          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"}
         ],
         "correct": "monkey"
-      },
-      {
-        "type": "word_match",
-        "chinese": "这是一只老虎。",
-        "difficulty": "hard",
-        "word": "tiger",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-            "value": "tiger"
-          },
-          {
-            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
-            "value": "monkey"
-          },
-          {
-            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
-            "value": "horse"
-          },
-          {
-            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
-            "value": "panda"
-          }
-        ],
-        "correct": "tiger"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "这是一只大象。",
-        "difficulty": "easy",
-        "word": "elephant",
-        "options": [
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "duo_race",
-        "chinese": "这是一只猴子。",
-        "difficulty": "easy",
-        "word": "monkey",
-        "options": [
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "word_match",
-        "chinese": "这是一只大象。",
-        "difficulty": "hard",
-        "word": "elephant",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
-            "value": "elephant"
-          },
-          {
-            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
-            "value": "monkey"
-          },
-          {
-            "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
-            "value": "bear"
-          },
-          {
-            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-            "value": "tiger"
-          }
-        ],
-        "correct": "elephant"
-      },
-      {
-        "type": "word_match",
-        "chinese": "这是一只狮子。",
-        "difficulty": "medium",
-        "word": "lion",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/lion.png\" width=\"80\">",
-            "value": "lion"
-          },
-          {
-            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
-            "value": "monkey"
-          },
-          {
-            "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
-            "value": "bear"
-          },
-          {
-            "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
-            "value": "bird"
-          }
-        ],
-        "correct": "lion"
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "这是一只老虎。",
-        "difficulty": "hard",
-        "word": "tiger",
-        "options": [
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "这是一只狮子。",
-        "difficulty": "easy",
-        "sentence": "This is a lion.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/lion.png\" width=\"80\">",
-            "value": "lion"
-          },
-          {
-            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
-            "value": "monkey"
-          },
-          {
-            "text": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-            "value": "rabbit"
-          },
-          {
-            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-            "value": "tiger"
-          }
-        ],
-        "correct": "lion"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "这是一只猴子。",
-        "difficulty": "hard",
-        "word": "monkey",
-        "options": [
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "word_match",
-        "chinese": "这是一只老虎。",
-        "difficulty": "medium",
-        "word": "tiger",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-            "value": "tiger"
-          },
-          {
-            "text": "<img src=\"assets/images/lion.png\" width=\"80\">",
-            "value": "lion"
-          },
-          {
-            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
-            "value": "monkey"
-          },
-          {
-            "text": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-            "value": "rabbit"
-          }
-        ],
-        "correct": "tiger"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "这是一只老虎。",
-        "difficulty": "easy",
-        "sentence": "This is a tiger.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
-            "value": "elephant"
-          },
-          {
-            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-            "value": "tiger"
-          },
-          {
-            "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
-            "value": "bear"
-          },
-          {
-            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
-            "value": "dog"
-          }
-        ],
-        "correct": "tiger"
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "这是一只猴子。",
-        "difficulty": "medium",
-        "word": "monkey",
-        "options": [
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "这是一只狮子。",
-        "difficulty": "medium",
-        "sentence": "This is a lion.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/lion.png\" width=\"80\">",
-            "value": "lion"
-          },
-          {
-            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-            "value": "tiger"
-          },
-          {
-            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
-            "value": "monkey"
-          },
-          {
-            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
-            "value": "panda"
-          }
-        ],
-        "correct": "lion"
-      },
-      {
-        "type": "word_match",
-        "chinese": "这是一只大象。",
-        "difficulty": "hard",
-        "word": "elephant",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
-            "value": "elephant"
-          },
-          {
-            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
-            "value": "monkey"
-          },
-          {
-            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
-            "value": "panda"
-          },
-          {
-            "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
-            "value": "bird"
-          }
-        ],
-        "correct": "elephant"
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "这是一只猴子。",
-        "difficulty": "hard",
-        "word": "monkey",
-        "options": [
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "word_match",
-        "chinese": "这是一只老虎。",
-        "difficulty": "easy",
-        "word": "tiger",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-            "value": "tiger"
-          },
-          {
-            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
-            "value": "elephant"
-          },
-          {
-            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
-            "value": "monkey"
-          },
-          {
-            "text": "<img src=\"assets/images/lion.png\" width=\"80\">",
-            "value": "lion"
-          }
-        ],
-        "correct": "tiger"
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "这是一只狮子。",
-        "difficulty": "easy",
-        "word": "lion",
-        "options": [
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">"
-        ],
-        "correct": 0
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "这是一只老虎。",
-        "difficulty": "hard",
-        "sentence": "This is a tiger.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
-            "value": "elephant"
-          },
-          {
-            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-            "value": "tiger"
-          },
-          {
-            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
-            "value": "dog"
-          },
-          {
-            "text": "<img src=\"assets/images/cat.png\" width=\"80\">",
-            "value": "cat"
-          }
-        ],
-        "correct": "tiger"
-      },
-      {
-        "type": "word_match",
-        "chinese": "这是一只猴子。",
-        "difficulty": "medium",
-        "word": "monkey",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
-            "value": "monkey"
-          },
-          {
-            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-            "value": "tiger"
-          },
-          {
-            "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
-            "value": "bird"
-          },
-          {
-            "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
-            "value": "bear"
-          }
-        ],
-        "correct": "monkey"
-      },
-      {
-        "type": "whack_mole",
-        "chinese": "这是一只大象。",
-        "difficulty": "medium",
-        "word": "elephant",
-        "options": [
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">"
-        ],
-        "correct": 3
-      },
-      {
-        "type": "duo_race",
-        "chinese": "这是一只猴子。",
-        "difficulty": "medium",
-        "word": "monkey",
-        "options": [
-          "<img src=\"assets/images/lion.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">"
-        ],
-        "correct": 1
-      },
-      {
-        "type": "word_match",
-        "chinese": "这是一只狮子。",
-        "difficulty": "medium",
-        "word": "lion",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/lion.png\" width=\"80\">",
-            "value": "lion"
-          },
-          {
-            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-            "value": "tiger"
-          },
-          {
-            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
-            "value": "horse"
-          },
-          {
-            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
-            "value": "panda"
-          }
-        ],
-        "correct": "lion"
-      },
-      {
-        "type": "word_match",
-        "chinese": "这是一只大象。",
-        "difficulty": "medium",
-        "word": "elephant",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
-            "value": "monkey"
-          },
-          {
-            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
-            "value": "elephant"
-          },
-          {
-            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
-            "value": "horse"
-          },
-          {
-            "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
-            "value": "bird"
-          }
-        ],
-        "correct": "elephant"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "这是一只老虎。",
-        "difficulty": "easy",
-        "word": "tiger",
-        "options": [
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/lion.png\" width=\"80\">"
-        ],
-        "correct": 0
       }
     ]
   },
@@ -1465,740 +583,401 @@ var unit1_lesson2 = {
     "pretest": [
       {
         "type": "letter_select",
-        "word": "monkey",
-        "chinese": "这是一只猴子。",
-        "display": "m_nkey",
-        "options": [
-          "i",
-          "o",
-          "e",
-          "d"
-        ],
-        "correct": "o"
+        "prompt": "小的(small)的首字母是？",
+        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
+        "options": ["c", "s", "z", "x"],
+        "correct": 1,
+        "chinese": "小的第一个字母是s。"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "These are _____.",
+        "image": "🐼",
+        "options": ["pandas", "horses", "bears", "birds"],
+        "correct": 0,
+        "chinese": "这些是熊猫。"
+      },
+      {
+        "type": "word_puzzle",
+        "chinese": "耳朵",
+        "image": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+        "letters": ["e", "a", "r"],
+        "scrambled": ["a", "r", "e"]
       },
       {
         "type": "letter_select",
-        "word": "elephant",
-        "chinese": "这是一只大象。",
-        "display": "e_ephant",
-        "options": [
-          "x",
-          "p",
-          "l",
-          "m"
-        ],
-        "correct": "l"
+        "prompt": "眼睛的首字母是？",
+        "image": "<img src=\"assets/images/bear.png\" width=\"80\">",
+        "options": ["a", "i", "e", "o"],
+        "correct": 2,
+        "chinese": "眼睛的第一个字母是e。"
       },
       {
-        "type": "word_spell",
-        "word": "lion",
-        "chinese": "这是一只狮子。",
-        "image": "<img src=\"assets/images/lion.png\" width=\"80\">"
+        "type": "fill_blank",
+        "prompt": "Those are _____.",
+        "image": "🐴",
+        "options": ["pandas", "bears", "horses", "ducks"],
+        "correct": 2,
+        "chinese": "那些是马。"
       },
       {
-        "type": "word_spell",
-        "word": "lion",
-        "chinese": "这是一只狮子。",
-        "image": "<img src=\"assets/images/lion.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "tiger",
-        "chinese": "这是一只老虎。",
-        "image": "<img src=\"assets/images/tiger.png\" width=\"80\">"
+        "type": "word_puzzle",
+        "chinese": "眼睛",
+        "image": "<img src=\"assets/images/monkey.png\" width=\"80\">",
+        "letters": ["e", "y", "e"],
+        "scrambled": ["y", "e", "e"]
       },
       {
         "type": "letter_select",
-        "word": "elephant",
-        "chinese": "这是一只大象。",
-        "display": "elepha_t",
-        "options": [
-          "l",
-          "n",
-          "f",
-          "j"
-        ],
-        "correct": "n"
+        "prompt": "腿的首字母是？",
+        "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
+        "options": ["r", "l", "k", "t"],
+        "correct": 1,
+        "chinese": "腿的第一个字母是l。"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "They have small _____.",
+        "image": "🐼",
+        "options": ["legs", "eyes", "ears", "mouths"],
+        "correct": 2,
+        "chinese": "它们有小耳朵。"
+      },
+      {
+        "type": "word_puzzle",
+        "chinese": "腿",
+        "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
+        "letters": ["l", "e", "g"],
+        "scrambled": ["g", "l", "e"]
       },
       {
         "type": "letter_select",
-        "word": "monkey",
-        "chinese": "这是一只猴子。",
-        "display": "monk_y",
-        "options": [
-          "e",
-          "m",
-          "q",
-          "g"
-        ],
-        "correct": "e"
+        "prompt": "宝宝的首字母是？",
+        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
+        "options": ["d", "p", "b", "g"],
+        "correct": 2,
+        "chinese": "宝宝的第一个字母是b。"
       },
       {
-        "type": "letter_select",
-        "word": "monkey",
-        "chinese": "这是一只猴子。",
-        "display": "monk_y",
-        "options": [
-          "e",
-          "s",
-          "n",
-          "k"
-        ],
-        "correct": "e"
+        "type": "sentence_order",
+        "chinese": "这些是熊猫。",
+        "words": ["These", "are", "pandas"],
+        "scrambled": ["pandas", "These", "are"]
       },
       {
-        "type": "word_spell",
-        "word": "lion",
-        "chinese": "这是一只狮子。",
-        "image": "<img src=\"assets/images/lion.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "elephant",
-        "chinese": "这是一只大象。",
-        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "tiger",
-        "chinese": "这是一只老虎。",
-        "display": "tig_r",
-        "options": [
-          "t",
-          "v",
-          "f",
-          "e"
-        ],
-        "correct": "e"
-      },
-      {
-        "type": "letter_select",
-        "word": "tiger",
-        "chinese": "这是一只老虎。",
-        "display": "tig_r",
-        "options": [
-          "k",
-          "h",
-          "e",
-          "t"
-        ],
-        "correct": "e"
+        "type": "sentence_order",
+        "chinese": "那些是马。",
+        "words": ["Those", "are", "horses"],
+        "scrambled": ["are", "horses", "Those"]
       }
     ],
     "practice": [
       {
         "type": "letter_select",
-        "word": "monkey",
-        "chinese": "这是一只猴子。",
-        "difficulty": "easy",
-        "display": "mo_key",
-        "options": [
-          "n",
-          "s",
-          "m",
-          "q"
-        ],
-        "correct": "n"
+        "prompt": "熊猫的首字母是？",
+        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
+        "options": ["b", "d", "q", "p"],
+        "correct": 3,
+        "chinese": "熊猫的第一个字母是p。"
       },
       {
-        "type": "duo_sentence",
-        "word": "monkey",
-        "chinese": "这是一只猴子。",
-        "difficulty": "easy",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "monkey"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/monkey.png\" width=\"80\">"
+        "type": "fill_blank",
+        "prompt": "These are _____. It's black and white.",
+        "image": "🐼",
+        "options": ["horses", "pandas", "bears", "ducks"],
+        "correct": 1,
+        "chinese": "这些是熊猫。它们是黑白色的。"
       },
       {
-        "type": "duo_spell",
-        "word": "monkey",
-        "chinese": "这是一只猴子。",
-        "difficulty": "easy",
-        "parts": [
-          "mon",
-          "key"
-        ],
-        "image": "<img src=\"assets/images/monkey.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_spell",
-        "word": "monkey",
-        "chinese": "这是一只猴子。",
-        "difficulty": "easy",
-        "parts": [
-          "mon",
-          "key"
-        ],
-        "image": "<img src=\"assets/images/monkey.png\" width=\"80\">"
+        "type": "word_puzzle",
+        "chinese": "小的",
+        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
+        "letters": ["s", "m", "a", "l", "l"],
+        "scrambled": ["l", "s", "m", "a", "l"]
       },
       {
         "type": "letter_select",
-        "word": "elephant",
-        "chinese": "这是一只大象。",
-        "difficulty": "medium",
-        "display": "eleph_nt",
-        "options": [
-          "n",
-          "a",
-          "x",
-          "i"
-        ],
-        "correct": "a"
+        "prompt": "马的首字母是？",
+        "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
+        "options": ["n", "h", "m", "r"],
+        "correct": 1,
+        "chinese": "马的第一个字母是h。"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "They have long _____.",
+        "image": "🐴",
+        "options": ["ears", "eyes", "legs", "mouths"],
+        "correct": 2,
+        "chinese": "它们有长腿。"
+      },
+      {
+        "type": "word_puzzle",
+        "chinese": "长的",
+        "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
+        "letters": ["l", "o", "n", "g"],
+        "scrambled": ["n", "g", "l", "o"]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "This is a _____. They are big.",
+        "image": "🐻",
+        "options": ["rabbit", "duck", "bear", "bird"],
+        "correct": 2,
+        "chinese": "这是一只熊。它们很大。"
       },
       {
         "type": "letter_select",
-        "word": "tiger",
-        "chinese": "这是一只老虎。",
-        "difficulty": "easy",
-        "display": "t_ger",
-        "options": [
-          "b",
-          "k",
-          "i",
-          "t"
-        ],
-        "correct": "i"
+        "prompt": "熊的首字母是？",
+        "image": "<img src=\"assets/images/bear.png\" width=\"80\">",
+        "options": ["b", "d", "p", "g"],
+        "correct": 0,
+        "chinese": "熊的第一个字母是b。"
+      },
+      {
+        "type": "word_puzzle",
+        "chinese": "熊猫",
+        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
+        "letters": ["p", "a", "n", "d", "a"],
+        "scrambled": ["d", "a", "p", "n", "a"]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "This is a _____. It has long ears.",
+        "image": "🐰",
+        "options": ["duck", "rabbit", "monkey", "panda"],
+        "correct": 1,
+        "chinese": "这是一只兔子。它有长耳朵。"
+      },
+      {
+        "type": "word_puzzle",
+        "chinese": "兔子",
+        "image": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+        "letters": ["r", "a", "b", "b", "i", "t"],
+        "scrambled": ["b", "r", "a", "t", "i", "b"]
       },
       {
         "type": "letter_select",
-        "word": "lion",
-        "chinese": "这是一只狮子。",
-        "difficulty": "easy",
-        "display": "lio_",
-        "options": [
-          "y",
-          "n",
-          "s",
-          "k"
-        ],
-        "correct": "n"
+        "prompt": "鸭子的首字母是？",
+        "image": "<img src=\"assets/images/duck.png\" width=\"80\">",
+        "options": ["b", "p", "d", "q"],
+        "correct": 2,
+        "chinese": "鸭子的第一个字母是d。"
       },
       {
-        "type": "duo_sentence",
-        "word": "lion",
-        "chinese": "这是一只狮子。",
-        "difficulty": "medium",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "lion"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/lion.png\" width=\"80\">"
+        "type": "fill_blank",
+        "prompt": "These are _____.",
+        "image": "🐦",
+        "options": ["birds", "ducks", "pandas", "rabbits"],
+        "correct": 0,
+        "chinese": "这些是鸟。"
       },
       {
-        "type": "letter_select",
-        "word": "elephant",
-        "chinese": "这是一只大象。",
-        "difficulty": "hard",
-        "display": "elepha_t",
-        "options": [
-          "g",
-          "p",
-          "n",
-          "i"
-        ],
-        "correct": "n"
+        "type": "word_puzzle",
+        "chinese": "马",
+        "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
+        "letters": ["h", "o", "r", "s", "e"],
+        "scrambled": ["r", "h", "e", "o", "s"]
       },
       {
-        "type": "letter_select",
-        "word": "tiger",
-        "chinese": "这是一只老虎。",
-        "difficulty": "medium",
-        "display": "tige_",
-        "options": [
-          "r",
-          "w",
-          "a",
-          "c"
-        ],
-        "correct": "r"
+        "type": "fill_blank",
+        "prompt": "This is a _____.",
+        "image": "🐒",
+        "options": ["monkey", "bear", "horse", "panda"],
+        "correct": 0,
+        "chinese": "这是一只猴子。"
       },
       {
-        "type": "word_spell",
-        "word": "tiger",
-        "chinese": "这是一只老虎。",
-        "difficulty": "medium",
-        "image": "<img src=\"assets/images/tiger.png\" width=\"80\">"
+        "type": "sentence_order",
+        "chinese": "这些是熊猫。",
+        "words": ["These", "are", "pandas"],
+        "scrambled": ["are", "These", "pandas"]
       },
       {
-        "type": "word_spell",
-        "word": "lion",
-        "chinese": "这是一只狮子。",
-        "difficulty": "medium",
-        "image": "<img src=\"assets/images/lion.png\" width=\"80\">"
+        "type": "sentence_order",
+        "chinese": "那些是马。",
+        "words": ["Those", "are", "horses"],
+        "scrambled": ["horses", "Those", "are"]
       },
       {
-        "type": "duo_spell",
-        "word": "monkey",
-        "chinese": "这是一只猴子。",
-        "difficulty": "medium",
-        "parts": [
-          "mon",
-          "key"
-        ],
-        "image": "<img src=\"assets/images/monkey.png\" width=\"80\">"
+        "type": "sentence_order",
+        "chinese": "它们有小耳朵。",
+        "words": ["They", "have", "small", "ears"],
+        "scrambled": ["small", "They", "ears", "have"]
       },
       {
-        "type": "word_spell",
-        "word": "tiger",
-        "chinese": "这是一只老虎。",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/tiger.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_spell",
-        "word": "elephant",
-        "chinese": "这是一只大象。",
-        "difficulty": "medium",
-        "parts": [
-          "elep",
-          "hant"
-        ],
-        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "monkey",
-        "chinese": "这是一只猴子。",
-        "difficulty": "easy",
-        "display": "mo_key",
-        "options": [
-          "c",
-          "g",
-          "h",
-          "n"
-        ],
-        "correct": "n"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "lion",
-        "chinese": "这是一只狮子。",
-        "difficulty": "easy",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "lion"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/lion.png\" width=\"80\">"
-      },
-      {
-        "type": "letter_select",
-        "word": "lion",
-        "chinese": "这是一只狮子。",
-        "difficulty": "hard",
-        "display": "li_n",
-        "options": [
-          "o",
-          "s",
-          "y",
-          "w"
-        ],
-        "correct": "o"
-      },
-      {
-        "type": "letter_select",
-        "word": "elephant",
-        "chinese": "这是一只大象。",
-        "difficulty": "easy",
-        "display": "elephan_",
-        "options": [
-          "q",
-          "c",
-          "j",
-          "t"
-        ],
-        "correct": "t"
-      },
-      {
-        "type": "letter_select",
-        "word": "tiger",
-        "chinese": "这是一只老虎。",
-        "difficulty": "medium",
-        "display": "t_ger",
-        "options": [
-          "b",
-          "q",
-          "w",
-          "i"
-        ],
-        "correct": "i"
-      },
-      {
-        "type": "duo_spell",
-        "word": "elephant",
-        "chinese": "这是一只大象。",
-        "difficulty": "hard",
-        "parts": [
-          "elep",
-          "hant"
-        ],
-        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_spell",
-        "word": "tiger",
-        "chinese": "这是一只老虎。",
-        "difficulty": "medium",
-        "parts": [
-          "ti",
-          "ger"
-        ],
-        "image": "<img src=\"assets/images/tiger.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_spell",
-        "word": "tiger",
-        "chinese": "这是一只老虎。",
-        "difficulty": "hard",
-        "parts": [
-          "ti",
-          "ger"
-        ],
-        "image": "<img src=\"assets/images/tiger.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "monkey",
-        "chinese": "这是一只猴子。",
-        "difficulty": "hard",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "monkey"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/monkey.png\" width=\"80\">"
-      },
-      {
-        "type": "duo_sentence",
-        "word": "lion",
-        "chinese": "这是一只狮子。",
-        "difficulty": "medium",
-        "words": [
-          "This",
-          "is",
-          "a",
-          "lion"
-        ],
-        "correct": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "image": "<img src=\"assets/images/lion.png\" width=\"80\">"
-      },
-      {
-        "type": "word_spell",
-        "word": "elephant",
-        "chinese": "这是一只大象。",
-        "difficulty": "hard",
-        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">"
+        "type": "sentence_order",
+        "chinese": "它们很大。",
+        "words": ["They", "are", "big"],
+        "scrambled": ["big", "are", "They"]
       }
     ]
   },
   "speaking": {
     "pretest": [
       {
-        "type": "read_sentence",
-        "chinese": "这是一只猴子。",
-        "sentence": "I see a monkey.",
-        "image": "<img src=\"assets/images/monkey.png\" width=\"80\">"
+        "type": "repeat_sentence",
+        "word": "These are pandas.",
+        "chinese": "请跟读这个句子：这些是熊猫。",
+        "expected": "These are pandas."
       },
       {
         "type": "repeat_word",
-        "chinese": "这是一只猴子。",
-        "word": "monkey",
-        "image": "<img src=\"assets/images/monkey.png\" width=\"80\">"
+        "word": "small",
+        "chinese": "请跟读这个单词：小的。",
+        "expected": "small"
       },
       {
-        "type": "read_sentence",
-        "chinese": "这是一只老虎。",
-        "sentence": "I see a tiger.",
-        "image": "<img src=\"assets/images/tiger.png\" width=\"80\">"
+        "type": "picture_speak",
+        "image": "<img src=\"assets/images/panda.png\" width=\"120\">",
+        "expected": "panda",
+        "chinese": "请看图说出这个动物的英文名字：熊猫。"
       },
       {
-        "type": "repeat_word",
-        "chinese": "这是一只狮子。",
-        "word": "lion",
-        "image": "<img src=\"assets/images/lion.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "这是一只老虎。",
-        "sentence": "I see a tiger.",
-        "image": "<img src=\"assets/images/tiger.png\" width=\"80\">"
+        "type": "repeat_sentence",
+        "word": "Those are horses.",
+        "chinese": "请跟读这个句子：那些是马。",
+        "expected": "Those are horses."
       },
       {
         "type": "repeat_word",
-        "chinese": "这是一只狮子。",
-        "word": "lion",
-        "image": "<img src=\"assets/images/lion.png\" width=\"80\">"
+        "word": "ear",
+        "chinese": "请跟读这个单词：耳朵。",
+        "expected": "ear"
+      },
+      {
+        "type": "picture_speak",
+        "image": "<img src=\"assets/images/horse.png\" width=\"120\">",
+        "expected": "horse",
+        "chinese": "请看图说出这个动物的英文名字：马。"
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "They have small ears.",
+        "chinese": "请跟读这个句子：它们有小耳朵。",
+        "expected": "They have small ears."
       },
       {
         "type": "repeat_word",
-        "chinese": "这是一只老虎。",
-        "word": "tiger",
-        "image": "<img src=\"assets/images/tiger.png\" width=\"80\">"
+        "word": "eye",
+        "chinese": "请跟读这个单词：眼睛。",
+        "expected": "eye"
       },
       {
-        "type": "repeat_word",
-        "chinese": "这是一只大象。",
-        "word": "elephant",
-        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">"
+        "type": "picture_speak",
+        "image": "<img src=\"assets/images/bear.png\" width=\"120\">",
+        "expected": "bear",
+        "chinese": "请看图说出这个动物的英文名字：熊。"
       },
       {
-        "type": "read_sentence",
-        "chinese": "这是一只大象。",
-        "sentence": "I see a elephant.",
-        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "这是一只猴子。",
-        "sentence": "I see a monkey.",
-        "image": "<img src=\"assets/images/monkey.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "这是一只大象。",
-        "sentence": "I see a elephant.",
-        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "这是一只狮子。",
-        "word": "lion",
-        "image": "<img src=\"assets/images/lion.png\" width=\"80\">"
+        "type": "repeat_sentence",
+        "word": "It's black and white.",
+        "chinese": "请跟读这个句子：它是黑白色的。",
+        "expected": "It's black and white."
       }
     ],
     "practice": [
       {
         "type": "repeat_word",
-        "chinese": "这是一只大象。",
-        "difficulty": "medium",
-        "word": "elephant",
-        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "这是一只老虎。",
-        "difficulty": "medium",
-        "sentence": "I see a tiger.",
-        "image": "<img src=\"assets/images/tiger.png\" width=\"80\">"
+        "word": "small",
+        "chinese": "请跟读这个单词：小的。",
+        "expected": "small"
       },
       {
         "type": "repeat_word",
-        "chinese": "这是一只猴子。",
-        "difficulty": "hard",
-        "word": "monkey",
-        "image": "<img src=\"assets/images/monkey.png\" width=\"80\">"
+        "word": "ear",
+        "chinese": "请跟读这个单词：耳朵。",
+        "expected": "ear"
       },
       {
         "type": "repeat_word",
-        "chinese": "这是一只老虎。",
-        "difficulty": "easy",
-        "word": "tiger",
-        "image": "<img src=\"assets/images/tiger.png\" width=\"80\">"
+        "word": "eye",
+        "chinese": "请跟读这个单词：眼睛。",
+        "expected": "eye"
       },
       {
         "type": "repeat_word",
-        "chinese": "这是一只大象。",
-        "difficulty": "medium",
-        "word": "elephant",
-        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">"
+        "word": "baby",
+        "chinese": "请跟读这个单词：宝宝。",
+        "expected": "baby"
       },
       {
         "type": "repeat_word",
-        "chinese": "这是一只猴子。",
-        "difficulty": "hard",
-        "word": "monkey",
-        "image": "<img src=\"assets/images/monkey.png\" width=\"80\">"
+        "word": "long",
+        "chinese": "请跟读这个单词：长的。",
+        "expected": "long"
       },
       {
         "type": "repeat_word",
-        "chinese": "这是一只狮子。",
-        "difficulty": "medium",
-        "word": "lion",
-        "image": "<img src=\"assets/images/lion.png\" width=\"80\">"
+        "word": "leg",
+        "chinese": "请跟读这个单词：腿。",
+        "expected": "leg"
       },
       {
-        "type": "read_sentence",
-        "chinese": "这是一只大象。",
-        "difficulty": "easy",
-        "sentence": "I see a elephant.",
-        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">"
+        "type": "repeat_sentence",
+        "word": "These are pandas.",
+        "chinese": "请跟读这个句子：这些是熊猫。",
+        "expected": "These are pandas."
       },
       {
-        "type": "repeat_word",
-        "chinese": "这是一只老虎。",
-        "difficulty": "easy",
-        "word": "tiger",
-        "image": "<img src=\"assets/images/tiger.png\" width=\"80\">"
+        "type": "repeat_sentence",
+        "word": "Those are horses.",
+        "chinese": "请跟读这个句子：那些是马。",
+        "expected": "Those are horses."
       },
       {
-        "type": "read_sentence",
-        "chinese": "这是一只老虎。",
-        "difficulty": "medium",
-        "sentence": "I see a tiger.",
-        "image": "<img src=\"assets/images/tiger.png\" width=\"80\">"
+        "type": "repeat_sentence",
+        "word": "They have small ears.",
+        "chinese": "请跟读这个句子：它们有小耳朵。",
+        "expected": "They have small ears."
       },
       {
-        "type": "read_sentence",
-        "chinese": "这是一只狮子。",
-        "difficulty": "hard",
-        "sentence": "I see a lion.",
-        "image": "<img src=\"assets/images/lion.png\" width=\"80\">"
+        "type": "repeat_sentence",
+        "word": "It's black and white.",
+        "chinese": "请跟读这个句子：它是黑白色的。",
+        "expected": "It's black and white."
       },
       {
-        "type": "read_sentence",
-        "chinese": "这是一只猴子。",
-        "difficulty": "easy",
-        "sentence": "I see a monkey.",
-        "image": "<img src=\"assets/images/monkey.png\" width=\"80\">"
+        "type": "repeat_sentence",
+        "word": "They are big.",
+        "chinese": "请跟读这个句子：它们很大。",
+        "expected": "They are big."
       },
       {
-        "type": "read_sentence",
-        "chinese": "这是一只狮子。",
-        "difficulty": "medium",
-        "sentence": "I see a lion.",
-        "image": "<img src=\"assets/images/lion.png\" width=\"80\">"
+        "type": "picture_speak",
+        "image": "<img src=\"assets/images/panda.png\" width=\"120\">",
+        "expected": "panda",
+        "chinese": "请看图说出这个动物的英文名字：熊猫。"
       },
       {
-        "type": "read_sentence",
-        "chinese": "这是一只狮子。",
-        "difficulty": "medium",
-        "sentence": "I see a lion.",
-        "image": "<img src=\"assets/images/lion.png\" width=\"80\">"
+        "type": "picture_speak",
+        "image": "<img src=\"assets/images/horse.png\" width=\"120\">",
+        "expected": "horse",
+        "chinese": "请看图说出这个动物的英文名字：马。"
       },
       {
-        "type": "repeat_word",
-        "chinese": "这是一只猴子。",
-        "difficulty": "hard",
-        "word": "monkey",
-        "image": "<img src=\"assets/images/monkey.png\" width=\"80\">"
+        "type": "picture_speak",
+        "image": "<img src=\"assets/images/rabbit.png\" width=\"120\">",
+        "expected": "rabbit",
+        "chinese": "请看图说出这个动物的英文名字：兔子。"
       },
       {
-        "type": "read_sentence",
-        "chinese": "这是一只老虎。",
-        "difficulty": "hard",
-        "sentence": "I see a tiger.",
-        "image": "<img src=\"assets/images/tiger.png\" width=\"80\">"
+        "type": "picture_speak",
+        "image": "<img src=\"assets/images/bear.png\" width=\"120\">",
+        "expected": "bear",
+        "chinese": "请看图说出这个动物的英文名字：熊。"
       },
       {
-        "type": "repeat_word",
-        "chinese": "这是一只老虎。",
-        "difficulty": "easy",
-        "word": "tiger",
-        "image": "<img src=\"assets/images/tiger.png\" width=\"80\">"
+        "type": "picture_speak",
+        "image": "<img src=\"assets/images/duck.png\" width=\"120\">",
+        "expected": "duck",
+        "chinese": "请看图说出这个动物的英文名字：鸭子。"
       },
       {
-        "type": "repeat_word",
-        "chinese": "这是一只大象。",
-        "difficulty": "easy",
-        "word": "elephant",
-        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "这是一只大象。",
-        "difficulty": "medium",
-        "sentence": "I see a elephant.",
-        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "这是一只猴子。",
-        "difficulty": "easy",
-        "sentence": "I see a monkey.",
-        "image": "<img src=\"assets/images/monkey.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "这是一只狮子。",
-        "difficulty": "medium",
-        "word": "lion",
-        "image": "<img src=\"assets/images/lion.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "这是一只猴子。",
-        "difficulty": "easy",
-        "word": "monkey",
-        "image": "<img src=\"assets/images/monkey.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "这是一只狮子。",
-        "difficulty": "medium",
-        "sentence": "I see a lion.",
-        "image": "<img src=\"assets/images/lion.png\" width=\"80\">"
-      },
-      {
-        "type": "read_sentence",
-        "chinese": "这是一只猴子。",
-        "difficulty": "hard",
-        "sentence": "I see a monkey.",
-        "image": "<img src=\"assets/images/monkey.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "这是一只狮子。",
-        "difficulty": "easy",
-        "word": "lion",
-        "image": "<img src=\"assets/images/lion.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "这是一只大象。",
-        "difficulty": "hard",
-        "word": "elephant",
-        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "这是一只大象。",
-        "difficulty": "medium",
-        "word": "elephant",
-        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">"
-      },
-      {
-        "type": "repeat_word",
-        "chinese": "这是一只老虎。",
-        "difficulty": "easy",
-        "word": "tiger",
-        "image": "<img src=\"assets/images/tiger.png\" width=\"80\">"
+        "type": "picture_speak",
+        "image": "<img src=\"assets/images/monkey.png\" width=\"120\">",
+        "expected": "monkey",
+        "chinese": "请看图说出这个动物的英文名字：猴子。"
       }
     ]
   }
