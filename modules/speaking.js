@@ -100,68 +100,60 @@ function renderSpeakingQuestion(q, container) {
     hintEl.textContent = '先听示范';
     container.appendChild(hintEl);
 
-    // Record button
-    const recordBtn = document.createElement('button');
-    recordBtn.style.width = '100px';
-    recordBtn.style.height = '100px';
-    recordBtn.style.borderRadius = '50%';
-    recordBtn.style.backgroundColor = '#ff4b4b';
-    recordBtn.style.color = 'white';
-    recordBtn.style.fontSize = '40px';
-    recordBtn.style.border = 'none';
-    recordBtn.style.boxShadow = '0 6px 0 #cc0000';
-    recordBtn.style.display = 'flex';
-    recordBtn.style.alignItems = 'center';
-    recordBtn.style.justifyContent = 'center';
-    recordBtn.style.cursor = 'pointer';
-    recordBtn.style.transition = 'all 0.2s';
+    // 录音按钮（多邻国风格：一个大按钮，点击切换状态）
+    var recordBtn = document.createElement('button');
+    recordBtn.style.cssText = 'width:120px;height:120px;border-radius:50%;background:#58CC02;color:white;font-size:50px;border:none;box-shadow:0 6px 0 #46a302;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.2s;';
     recordBtn.innerHTML = '🎤';
 
-    const statusText = document.createElement('div');
-    statusText.style.marginTop = '20px';
-    statusText.style.fontSize = '24px';
-    statusText.style.fontWeight = 'bold';
-    statusText.style.minHeight = '30px';
-    
-    let isRecording = false;
+    var statusText = document.createElement('div');
+    statusText.style.cssText = 'margin-top:15px;font-size:18px;font-weight:bold;min-height:30px;color:#888;';
+    statusText.textContent = '点击麦克风开始录音';
 
-    recordBtn.onclick = () => {
+    // 录音中脉冲动画
+    if (!document.getElementById('recording-pulse-style')) {
+        var pulseStyle = document.createElement('style');
+        pulseStyle.id = 'recording-pulse-style';
+        pulseStyle.textContent = '@keyframes recordPulse{0%{box-shadow:0 0 0 0 rgba(255,75,75,0.5)}70%{box-shadow:0 0 0 20px rgba(255,75,75,0)}100%{box-shadow:0 0 0 0 rgba(255,75,75,0)}}';
+        document.head.appendChild(pulseStyle);
+    }
+
+    var isRecording = false;
+
+    recordBtn.onclick = function() {
         if(isAnimating) return;
-        
+
         if (!isRecording) {
-            // Start recording (Mock)
             isRecording = true;
-            recordBtn.style.backgroundColor = 'var(--secondary)';
-            recordBtn.style.boxShadow = '0 6px 0 var(--secondary-shadow)';
+            recordBtn.style.background = '#ff4b4b';
+            recordBtn.style.boxShadow = '0 0 0 0 rgba(255,75,75,0.5)';
+            recordBtn.style.animation = 'recordPulse 1.5s infinite';
+            recordBtn.style.webkitAnimation = 'recordPulse 1.5s infinite';
             recordBtn.style.transform = 'scale(1.1)';
-            recordBtn.innerHTML = '⬛'; // stop icon
-            statusText.textContent = 'Recording: "..."';
-            statusText.style.color = 'var(--text)';
-        } else {
-            // Stop recording
-            isRecording = false;
-            recordBtn.style.backgroundColor = '#ff4b4b';
-            recordBtn.style.boxShadow = '0 6px 0 #cc0000';
-            recordBtn.style.transform = 'scale(1)';
             recordBtn.innerHTML = '🎤';
-            
-            // Mock AI scoring process
+            statusText.textContent = '🔴 录音中...';
+            statusText.style.color = '#ff4b4b';
+        } else {
+            isRecording = false;
+            recordBtn.style.background = '#58CC02';
+            recordBtn.style.boxShadow = '0 6px 0 #46a302';
+            recordBtn.style.animation = 'none';
+            recordBtn.style.webkitAnimation = 'none';
+            recordBtn.style.transform = 'scale(1)';
+            recordBtn.innerHTML = '✅';
             statusText.textContent = '评分中...';
+            statusText.style.color = '#888';
             isAnimating = true;
 
             setTimeout(function() {
-                // Random mock score between 60 and 100 for now
                 var mockScore = Math.floor(Math.random() * 41) + 60;
                 var starCount = mockScore >= 100 ? 5 : mockScore >= 80 ? 4 : mockScore >= 60 ? 3 : mockScore >= 40 ? 2 : 1;
                 var stars = '';
                 for (var s = 0; s < starCount; s++) stars += '⭐';
 
-                statusText.innerHTML = '<span style="color:var(--primary); font-size:30px;">得分: ' + mockScore + ' ' + stars + '</span>';
+                statusText.innerHTML = '<span style="color:#58CC02;font-size:24px;">得分: ' + mockScore + ' ' + stars + '</span>';
 
                 isAnimating = false;
-                // Directly go to next question
                 handleAnswer(true);
-
             }, 1000);
         }
     };
