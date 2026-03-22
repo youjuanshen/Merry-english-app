@@ -6,11 +6,18 @@ function renderSpeakingQuestion(q, container) {
         return;
     }
     if (q.type === 'repeat_word' || q.type === 'repeat_sentence') {
-        const textEl = document.createElement('h2');
-        textEl.style.fontSize = q.type === 'repeat_sentence' ? '40px' : '60px';
+        var textEl = document.createElement('h2');
+        textEl.style.fontSize = q.type === 'repeat_sentence' ? '36px' : '50px';
         textEl.style.textAlign = 'center';
         textEl.textContent = q.word || q.sentence;
         container.appendChild(textEl);
+        // 显示中文翻译帮助理解
+        if (q.chinese) {
+            var chineseEl = document.createElement('div');
+            chineseEl.style.cssText = 'text-align:center;font-size:20px;color:#888;margin-top:5px;margin-bottom:10px;';
+            chineseEl.textContent = q.chinese;
+            container.appendChild(chineseEl);
+        }
     } else if (q.type === 'picture_speak') {
         const imgEl = document.createElement('div');
         imgEl.style.fontSize = '80px';
