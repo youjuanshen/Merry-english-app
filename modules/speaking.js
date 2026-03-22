@@ -120,6 +120,18 @@ function renderSpeakingQuestion(q, container) {
     hintEl.textContent = '先听示范';
     container.appendChild(hintEl);
 
+    // 录音区域上方显示中英文提示（确保所有口语题都有）
+    var spWord = q.word || q.sentence || q.expected || '';
+    var spChinese = q.chinese || '';
+    if (spWord || spChinese) {
+        var speakHintEl = document.createElement('div');
+        speakHintEl.style.cssText = 'text-align:center;margin-bottom:15px;';
+        speakHintEl.innerHTML = '<div style="font-size:16px;color:#888;margin-bottom:5px;">请跟读：</div>' +
+            (spWord ? '<div style="font-size:28px;font-weight:bold;color:#333;">' + spWord + '</div>' : '') +
+            (spChinese ? '<div style="font-size:16px;color:#888;margin-top:3px;">' + spChinese + '</div>' : '');
+        container.appendChild(speakHintEl);
+    }
+
     // 录音按钮（多邻国风格：一个大按钮，点击切换状态）
     var recordBtn = document.createElement('button');
     recordBtn.style.cssText = 'width:120px;height:120px;border-radius:50%;background:#58CC02;color:white;font-size:50px;border:none;box-shadow:0 6px 0 #46a302;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.2s;';
