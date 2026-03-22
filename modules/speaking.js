@@ -19,11 +19,24 @@ function renderSpeakingQuestion(q, container) {
             container.appendChild(chineseEl);
         }
     } else if (q.type === 'picture_speak') {
-        const imgEl = document.createElement('div');
+        var imgEl = document.createElement('div');
         imgEl.style.fontSize = '80px';
-        imgEl.style.marginBottom = '20px';
+        imgEl.style.marginBottom = '10px';
         imgEl.innerHTML = q.image;
         container.appendChild(imgEl);
+        // 图片下方显示英文+中文
+        if (q.expected || q.word) {
+            var wordEl = document.createElement('div');
+            wordEl.style.cssText = 'text-align:center;font-size:36px;font-weight:bold;margin-bottom:5px;';
+            wordEl.textContent = q.expected || q.word;
+            container.appendChild(wordEl);
+        }
+        if (q.chinese) {
+            var chEl = document.createElement('div');
+            chEl.style.cssText = 'text-align:center;font-size:18px;color:#888;margin-bottom:15px;';
+            chEl.textContent = q.chinese;
+            container.appendChild(chEl);
+        }
     } else if (q.type === 'coop_speak_guess') {
         // Dual interface in one container
         container.style.display = 'flex';
