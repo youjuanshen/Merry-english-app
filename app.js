@@ -20,21 +20,39 @@ document.addEventListener('DOMContentLoaded', () => {
     const countdownEl = document.getElementById('countdown');
 
     if (welcomeScreen && loginScreen && countdownEl) {
-        let count = 3;
-        const countdownInterval = setInterval(() => {
+        var countWords = ['Three', 'Two', 'One', 'Go!'];
+        var count = 3;
+        // 播报英文倒计时
+        function speakCountdown(word) {
+            try {
+                var u = new SpeechSynthesisUtterance(word);
+                u.lang = 'en-US';
+                u.rate = word === 'Go!' ? 1.2 : 0.9;
+                u.pitch = word === 'Go!' ? 1.3 : 1.0;
+                u.volume = 1;
+                speechSynthesis.speak(u);
+            } catch(e) {}
+        }
+        // 初始显示3时播报Three
+        speakCountdown('Three');
+        var countdownInterval = setInterval(function() {
             count--;
             if (count > 0) {
                 countdownEl.textContent = count;
+                speakCountdown(countWords[3 - count]);
             } else {
                 clearInterval(countdownInterval);
                 countdownEl.textContent = 'GO!';
-                setTimeout(() => {
+                countdownEl.style.fontSize = '80px';
+                countdownEl.style.color = '#58CC02';
+                speakCountdown('Go!');
+                setTimeout(function() {
                     welcomeScreen.style.opacity = '0';
-                    setTimeout(() => {
+                    setTimeout(function() {
                         welcomeScreen.classList.remove('active');
                         loginScreen.classList.add('active');
                     }, 500);
-                }, 300);
+                }, 600);
             }
         }, 1000);
     }
