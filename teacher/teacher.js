@@ -21,9 +21,10 @@ let currentLesson = savedLesson.unit && savedLesson.lesson
 let currentModule = savedLesson.module || 'listening';
 let currentPhase = 'pretest';
 
-// 从 Sync 引擎拉取最近一次的教师指令
+// 从 Sync 引擎拉取最近一次的教师指令（只同步模块，不同步phase，phase由教师手动选择）
 Sync.listenTeacherCommand(cmd => {
-    if (cmd && cmd.phase) currentPhase = cmd.phase;
+    if (cmd && cmd.module) currentModule = cmd.module;
+    // 不自动恢复 phase，始终默认前测，教师手动切换
 });
 
 // 根据单元和课时更新 currentLesson ID
