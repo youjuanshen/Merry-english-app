@@ -648,12 +648,12 @@ function shuffleArray(arr) {
 function getQuestions(module, phase) {
     var allQuestions = currentLessonData[module][phase] || [];
 
-    // 前测：随机打乱顺序
+    // 前测：保持难度顺序不打乱，机会均等靠严格交替
     if (phase === 'pretest') {
-        return shuffleArray(allQuestions);
+        return allQuestions;
     }
 
-    // 练习：根据学生水平筛选后打乱
+    // 实战：根据学生水平筛选后随机打乱
     return shuffleArray(filterQuestionsByLevel(allQuestions, studentLevel));
 }
 
@@ -1551,8 +1551,8 @@ function onCorrect() {
     updateHeader();
     createConfetti(15);
 
-    // Random next player (not just alternating)
-    currentPlayerIndex = Math.random() < 0.5 ? 0 : 1;
+    // 严格交替：A→B→A→B，机会均等
+    currentPlayerIndex = currentPlayerIndex === 0 ? 1 : 0;
     currentQuestionIndex++;
     syncStudentProgress();
     renderQuestion();
