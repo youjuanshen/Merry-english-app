@@ -811,6 +811,73 @@ var lesson1 = {
         "chinese": "它很可爱",
         "words": ["It's", "cute"],
         "scrambled": ["cute", "It's"]
+      },
+      {
+        "type": "word_spell",
+        "image": "<img src=\"assets/images/bear.png\" width=\"80\">",
+        "hint": "看图选词",
+        "sentence": "选出正确的英文单词",
+        "options": ["bear", "bird", "horse", "panda"],
+        "correct": 0,
+        "chinese": "熊"
+      },
+      {
+        "type": "word_spell",
+        "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
+        "hint": "看图选词",
+        "sentence": "选出正确的英文单词",
+        "options": ["bear", "horse", "duck", "monkey"],
+        "correct": 1,
+        "chinese": "马"
+      },
+      {
+        "type": "word_spell",
+        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
+        "hint": "看图选词",
+        "sentence": "选出正确的英文单词",
+        "options": ["rabbit", "bird", "panda", "horse"],
+        "correct": 2,
+        "chinese": "熊猫"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "这是一只熊。= This is a _____.",
+        "image": "<img src=\"assets/images/bear.png\" width=\"80\">",
+        "options": ["bear", "bird", "horse", "panda"],
+        "correct": 0,
+        "chinese": "这是一只熊"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "这是一只熊猫。= This is a _____.",
+        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
+        "options": ["horse", "panda", "duck", "bear"],
+        "correct": 1,
+        "chinese": "这是一只熊猫"
+      },
+      {
+        "type": "pinyin_fill",
+        "hint": "b_ar",
+        "image": "<img src=\"assets/images/bear.png\" width=\"80\">",
+        "options": ["e", "a", "o", "i"],
+        "correct": 0,
+        "chinese": "熊"
+      },
+      {
+        "type": "pinyin_fill",
+        "hint": "h_rse",
+        "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
+        "options": ["o", "a", "e", "u"],
+        "correct": 0,
+        "chinese": "马"
+      },
+      {
+        "type": "pinyin_fill",
+        "hint": "p_nda",
+        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
+        "options": ["a", "e", "o", "i"],
+        "correct": 0,
+        "chinese": "熊猫"
       }
     ]
   },

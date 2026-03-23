@@ -810,6 +810,56 @@ var lesson3 = {
         "chinese": "不，不是",
         "words": ["No", "it", "isn't"],
         "scrambled": ["isn't", "No", "it"]
+      },
+      {
+        "type": "word_spell",
+        "image": "<img src=\"assets/images/tiger.png\" width=\"80\">",
+        "hint": "看图选词",
+        "sentence": "选出正确的英文单词",
+        "options": ["bear", "tiger", "horse", "rabbit"],
+        "correct": 1,
+        "chinese": "老虎"
+      },
+      {
+        "type": "word_spell",
+        "image": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+        "hint": "看图选词",
+        "sentence": "选出正确的英文单词",
+        "options": ["rabbit", "duck", "monkey", "panda"],
+        "correct": 0,
+        "chinese": "兔子"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "我有一个动物朋友。= I have an animal _____.",
+        "image": "<img src=\"assets/images/tiger.png\" width=\"80\">",
+        "options": ["friend", "baby", "meat", "mouth"],
+        "correct": 0,
+        "chinese": "我有一个动物朋友"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "它会跳。= It can _____.",
+        "image": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+        "options": ["run", "jump", "draw", "eat"],
+        "correct": 1,
+        "chinese": "它会跳"
+      },
+      {
+        "type": "pinyin_fill",
+        "hint": "t_ger",
+        "image": "<img src=\"assets/images/tiger.png\" width=\"80\">",
+        "options": ["i", "a", "o", "e"],
+        "correct": 0,
+        "chinese": "老虎"
+      },
+      {
+        "type": "pinyin_fill",
+        "hint": "j_mp",
+        "image": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+        "options": ["u", "a", "o", "i"],
+        "correct": 0,
+        "chinese": "跳"
       }
     ]
   },

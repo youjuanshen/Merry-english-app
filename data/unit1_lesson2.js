@@ -810,6 +810,56 @@ var lesson2 = {
         "chinese": "它们很大",
         "words": ["They", "are", "big"],
         "scrambled": ["big", "are", "They"]
+      },
+      {
+        "type": "word_spell",
+        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
+        "hint": "看图选词",
+        "sentence": "选出正确的英文单词",
+        "options": ["bears", "pandas", "horses", "ducks"],
+        "correct": 1,
+        "chinese": "熊猫（复数）"
+      },
+      {
+        "type": "word_spell",
+        "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
+        "hint": "看图选词",
+        "sentence": "选出正确的英文单词",
+        "options": ["bears", "birds", "horses", "rabbits"],
+        "correct": 2,
+        "chinese": "马（复数）"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "这些是熊猫。= These are _____.",
+        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
+        "options": ["pandas", "bears", "horses", "ducks"],
+        "correct": 0,
+        "chinese": "这些是熊猫"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "那些是马。= Those are _____.",
+        "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
+        "options": ["bears", "horses", "pandas", "birds"],
+        "correct": 1,
+        "chinese": "那些是马"
+      },
+      {
+        "type": "pinyin_fill",
+        "hint": "sm_ll",
+        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
+        "options": ["a", "e", "o", "i"],
+        "correct": 0,
+        "chinese": "小的"
+      },
+      {
+        "type": "pinyin_fill",
+        "hint": "b_by",
+        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
+        "options": ["a", "e", "o", "i"],
+        "correct": 0,
+        "chinese": "宝宝"
       }
     ]
   },

@@ -799,6 +799,56 @@ var lesson4 = {
         "chinese": "我们来画画吧",
         "words": ["Let's", "draw"],
         "scrambled": ["draw", "Let's"]
+      },
+      {
+        "type": "word_spell",
+        "image": "<img src=\"assets/images/cat.png\" width=\"80\">",
+        "hint": "看图选词",
+        "sentence": "选出正确的英文单词",
+        "options": ["cat", "dog", "bear", "duck"],
+        "correct": 0,
+        "chinese": "猫"
+      },
+      {
+        "type": "word_spell",
+        "image": "<img src=\"assets/images/bird.png\" width=\"80\">",
+        "hint": "看图选词",
+        "sentence": "选出正确的英文单词",
+        "options": ["duck", "bird", "rabbit", "monkey"],
+        "correct": 1,
+        "chinese": "鸟"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "看！这是一只猫。= Look! It's a _____.",
+        "image": "<img src=\"assets/images/cat.png\" width=\"80\">",
+        "options": ["cat", "bird", "horse", "panda"],
+        "correct": 0,
+        "chinese": "看！这是一只猫"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "我们来画画吧。= Let's _____.",
+        "image": "<img src=\"assets/images/cat.png\" width=\"80\">",
+        "options": ["jump", "draw", "run", "eat"],
+        "correct": 1,
+        "chinese": "我们来画画吧"
+      },
+      {
+        "type": "pinyin_fill",
+        "hint": "c_t",
+        "image": "<img src=\"assets/images/cat.png\" width=\"80\">",
+        "options": ["a", "e", "o", "i"],
+        "correct": 0,
+        "chinese": "猫"
+      },
+      {
+        "type": "pinyin_fill",
+        "hint": "n_se",
+        "image": "<img src=\"assets/images/cat.png\" width=\"80\">",
+        "options": ["o", "a", "e", "i"],
+        "correct": 0,
+        "chinese": "鼻子"
       }
     ]
   },
