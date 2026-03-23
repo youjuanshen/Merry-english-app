@@ -13,6 +13,13 @@ function renderWritingQuestion(q, container) {
         return;
     }
     if (q.type === 'letter_select') {
+        // 显示图片（帮助学生区分熊和熊猫等）
+        if (q.image) {
+            var imgEl = document.createElement('div');
+            imgEl.style.cssText = 'text-align:center;margin-bottom:8px;';
+            imgEl.innerHTML = q.image;
+            container.appendChild(imgEl);
+        }
         const promptEl = document.createElement('h2');
         promptEl.textContent = q.prompt;
         container.appendChild(promptEl);
