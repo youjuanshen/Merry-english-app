@@ -1345,8 +1345,8 @@ function showFeedbackPanel(isCorrect, question) {
     const feedbackList = isCorrect ? feedbackMap.success : feedbackMap.encourage;
     const feedback = feedbackList[Math.floor(Math.random() * feedbackList.length)];
 
-    // 获取正确答案（优先显示句子，其次单词）
-    let answerWord = (question && question.sentence) || (question && question.word) || (question && question.audio) || '';
+    // 获取正确答案（从所有可能的字段中取）
+    let answerWord = (question && question.sentence) || (question && question.word) || (question && question.audio) || (question && question.prompt) || (question && question.hint) || (question && question.expected) || '';
     let answerChinese = (question && question.chinese) || '';
 
     // 构建面板内容
