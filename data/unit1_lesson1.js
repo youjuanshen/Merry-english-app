@@ -45,16 +45,11 @@ var lesson1 = {
         "chinese": "熊猫"
       },
       {
-        "type": "listen_select",
+        "type": "listen_tf",
         "audio": "animal",
-        "options": [
-          "<img src=\"assets/images/horse.png\" width=\"80\">",
-          "<img src=\"assets/images/duck.png\" width=\"80\">",
-          "<img src=\"assets/images/panda.png\" width=\"80\">",
-          "<img src=\"assets/images/bear.png\" width=\"80\">"
-        ],
-        "correct": 3,
-        "chinese": "动物"
+        "image": "<img src=\"assets/images/bear.png\" width=\"80\">",
+        "correct": true,
+        "chinese": "动物（熊是动物）"
       },
       {
         "type": "listen_select",
@@ -157,16 +152,11 @@ var lesson1 = {
         "chinese": "熊猫"
       },
       {
-        "type": "listen_select",
+        "type": "listen_tf",
         "audio": "animal",
-        "options": [
-          "<img src=\"assets/images/duck.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">"
-        ],
-        "correct": 3,
-        "chinese": "动物"
+        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
+        "correct": true,
+        "chinese": "动物（熊猫是动物）"
       },
       {
         "type": "listen_tf",
