@@ -106,7 +106,7 @@ var lesson3 = {
       },
       {
         "type": "listen_select",
-        "audio": "Your friend says: I have an animal friend. Please guess! What do you ask?",
+        "audio": "你的朋友说：我有一个动物朋友，请你猜！你会问什么？",
         "options": [
           "Is it a rabbit?",
           "It can jump.",
@@ -297,7 +297,7 @@ var lesson3 = {
       },
       {
         "type": "listen_select",
-        "audio": "A says: Is it a rabbit? What does B say?",
+        "audio": "A问：它是兔子吗？B会怎么回答？",
         "options": [
           "Yes, it is.",
           "It can jump.",
@@ -309,7 +309,7 @@ var lesson3 = {
       },
       {
         "type": "listen_select",
-        "audio": "A says: Is it a cat? What does B say?",
+        "audio": "A问：它是猫吗？B会怎么回答？",
         "options": [
           "Yes, it is.",
           "No, it isn't. It's a tiger!",
@@ -321,7 +321,7 @@ var lesson3 = {
       },
       {
         "type": "listen_select",
-        "audio": "A says: I have an animal friend. Please guess! What does B say?",
+        "audio": "A说：我有一个动物朋友，请你猜！B会怎么回答？",
         "options": [
           "It's a tiger!",
           "I like carrots.",
@@ -333,7 +333,7 @@ var lesson3 = {
       },
       {
         "type": "listen_select",
-        "audio": "Your friend asks you to guess an animal. You want to know if it's a cat. What do you say?",
+        "audio": "你的朋友让你猜一个动物，你想问是不是猫，你会说什么？",
         "options": [
           "Is it a cat?",
           "It's a tiger!",

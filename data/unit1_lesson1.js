@@ -106,7 +106,7 @@ var lesson1 = {
       },
       {
         "type": "listen_select",
-        "audio": "You see many animals at the zoo. What do you say?",
+        "audio": "你在动物园看到好多动物，你会说什么？",
         "options": [
           "So many animals!",
           "It's big.",
@@ -273,7 +273,7 @@ var lesson1 = {
       },
       {
         "type": "listen_select",
-        "audio": "A says: Look! This is a bear. What does B say?",
+        "audio": "A说：看！这是一只熊。B会怎么回答？",
         "options": [
           "It's big!",
           "It can run fast.",
@@ -285,7 +285,7 @@ var lesson1 = {
       },
       {
         "type": "listen_select",
-        "audio": "A says: That is a horse. What does B say?",
+        "audio": "A说：那是一匹马。B会怎么回答？",
         "options": [
           "It's black and white.",
           "It can run fast.",
@@ -297,7 +297,7 @@ var lesson1 = {
       },
       {
         "type": "listen_select",
-        "audio": "A says: So many animals! What does B say?",
+        "audio": "A说：好多动物！B会怎么回答？",
         "options": [
           "It's big.",
           "OK, let's go.",
@@ -309,7 +309,7 @@ var lesson1 = {
       },
       {
         "type": "listen_select",
-        "audio": "You see a black and white panda. What do you say?",
+        "audio": "你看到一只黑白色的熊猫，你会说什么？",
         "options": [
           "It's black and white. It's cute!",
           "It can run fast.",
@@ -321,7 +321,7 @@ var lesson1 = {
       },
       {
         "type": "listen_select",
-        "audio": "You see two colorful birds. What do you say?",
+        "audio": "你看到两只漂亮的鸟，你会说什么？",
         "options": [
           "It's big.",
           "It can run fast.",
@@ -333,7 +333,7 @@ var lesson1 = {
       },
       {
         "type": "listen_select",
-        "audio": "Your friend wants to visit the zoo. What do you say?",
+        "audio": "你的朋友想去动物园，你会说什么？",
         "options": [
           "It's cute.",
           "Let's go in and have a look.",

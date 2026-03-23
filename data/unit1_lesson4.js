@@ -106,7 +106,7 @@ var lesson4 = {
       },
       {
         "type": "listen_select",
-        "audio": "You want to draw with your friend. What do you say?",
+        "audio": "你想和朋友一起画画，你会说什么？",
         "options": [
           "Let's draw together!",
           "This is a face.",
@@ -297,7 +297,7 @@ var lesson4 = {
       },
       {
         "type": "listen_select",
-        "audio": "A says: Let's draw together! What does B draw first?",
+        "audio": "A说：我们一起画画吧！B先画什么？",
         "options": [
           "This is a face.",
           "I like carrots.",
@@ -309,7 +309,7 @@ var lesson4 = {
       },
       {
         "type": "listen_select",
-        "audio": "A says: This is a face. These are two eyes. What does A draw next?",
+        "audio": "A说：这是一张脸，这是两只眼睛。接下来A会画什么？",
         "options": [
           "These are two ears.",
           "Those are horses.",
@@ -321,7 +321,7 @@ var lesson4 = {
       },
       {
         "type": "listen_select",
-        "audio": "You finished drawing. It has two eyes, two ears, a nose, and a mouth. What do you say?",
+        "audio": "你画完了，它有两只眼睛、两只耳朵、一个鼻子和一张嘴巴。你会说什么？",
         "options": [
           "These are two ears.",
           "This is a face.",
@@ -333,7 +333,7 @@ var lesson4 = {
       },
       {
         "type": "listen_select",
-        "audio": "Your friend asks you to draw. What do you say?",
+        "audio": "你的朋友叫你画画，你会说什么？",
         "options": [
           "Look! It's a cat.",
           "This is a face.",
