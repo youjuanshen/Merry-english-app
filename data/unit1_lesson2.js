@@ -818,13 +818,13 @@ var lesson2 = {
       {
         "type": "repeat_sentence",
         "word": "These are pandas.",
-        "chinese": "请跟读这个句子：这些是熊猫。",
+        "chinese": "这些是熊猫。",
         "expected": "These are pandas."
       },
       {
         "type": "repeat_word",
         "word": "small",
-        "chinese": "请跟读这个单词：小的。",
+        "chinese": "小的。",
         "expected": "small"
       },
       {
@@ -836,13 +836,13 @@ var lesson2 = {
       {
         "type": "repeat_sentence",
         "word": "Those are horses.",
-        "chinese": "请跟读这个句子：那些是马。",
+        "chinese": "那些是马。",
         "expected": "Those are horses."
       },
       {
         "type": "repeat_word",
         "word": "ear",
-        "chinese": "请跟读这个单词：耳朵。",
+        "chinese": "耳朵。",
         "expected": "ear"
       },
       {
@@ -854,13 +854,13 @@ var lesson2 = {
       {
         "type": "repeat_sentence",
         "word": "They have small ears.",
-        "chinese": "请跟读这个句子：它们有小耳朵。",
+        "chinese": "它们有小耳朵。",
         "expected": "They have small ears."
       },
       {
         "type": "repeat_word",
         "word": "eye",
-        "chinese": "请跟读这个单词：眼睛。",
+        "chinese": "眼睛。",
         "expected": "eye"
       },
       {
@@ -872,7 +872,7 @@ var lesson2 = {
       {
         "type": "repeat_sentence",
         "word": "It's black and white.",
-        "chinese": "请跟读这个句子：它是黑白色的。",
+        "chinese": "它是黑白色的。",
         "expected": "It's black and white."
       }
     ],
@@ -880,67 +880,67 @@ var lesson2 = {
       {
         "type": "repeat_word",
         "word": "small",
-        "chinese": "请跟读这个单词：小的。",
+        "chinese": "小的。",
         "expected": "small"
       },
       {
         "type": "repeat_word",
         "word": "ear",
-        "chinese": "请跟读这个单词：耳朵。",
+        "chinese": "耳朵。",
         "expected": "ear"
       },
       {
         "type": "repeat_word",
         "word": "eye",
-        "chinese": "请跟读这个单词：眼睛。",
+        "chinese": "眼睛。",
         "expected": "eye"
       },
       {
         "type": "repeat_word",
         "word": "baby",
-        "chinese": "请跟读这个单词：宝宝。",
+        "chinese": "宝宝。",
         "expected": "baby"
       },
       {
         "type": "repeat_word",
         "word": "long",
-        "chinese": "请跟读这个单词：长的。",
+        "chinese": "长的。",
         "expected": "long"
       },
       {
         "type": "repeat_word",
         "word": "leg",
-        "chinese": "请跟读这个单词：腿。",
+        "chinese": "腿。",
         "expected": "leg"
       },
       {
         "type": "repeat_sentence",
         "word": "These are pandas.",
-        "chinese": "请跟读这个句子：这些是熊猫。",
+        "chinese": "这些是熊猫。",
         "expected": "These are pandas."
       },
       {
         "type": "repeat_sentence",
         "word": "Those are horses.",
-        "chinese": "请跟读这个句子：那些是马。",
+        "chinese": "那些是马。",
         "expected": "Those are horses."
       },
       {
         "type": "repeat_sentence",
         "word": "They have small ears.",
-        "chinese": "请跟读这个句子：它们有小耳朵。",
+        "chinese": "它们有小耳朵。",
         "expected": "They have small ears."
       },
       {
         "type": "repeat_sentence",
         "word": "It's black and white.",
-        "chinese": "请跟读这个句子：它是黑白色的。",
+        "chinese": "它是黑白色的。",
         "expected": "It's black and white."
       },
       {
         "type": "repeat_sentence",
         "word": "They are big.",
-        "chinese": "请跟读这个句子：它们很大。",
+        "chinese": "它们很大。",
         "expected": "They are big."
       },
       {

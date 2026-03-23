@@ -428,26 +428,18 @@ function speakEncouragement(isCorrect) {
 // 多邻国风格鼓励语（更丰富、更有趣）
 const feedbackMap = {
     success: [
-        { en: 'Great!', cn: '太棒了！' },
-        { en: 'Awesome!', cn: '真厉害！' },
-        { en: 'Good job!', cn: '好极了！' },
-        { en: 'Perfect!', cn: '完美！' },
+        { en: 'Correct!', cn: '答对了！' },
+        { en: 'Right!', cn: '正确！' },
+        { en: 'Good!', cn: '不错！' },
+        { en: 'Nice!', cn: '很好！' },
         { en: 'Well done!', cn: '做得好！' },
-        { en: 'Excellent!', cn: '太优秀了！' },
-        { en: 'Amazing!', cn: '太厉害了！' },
-        { en: 'Brilliant!', cn: '聪明！' },
-        { en: 'Fantastic!', cn: '非常好！' },
-        { en: 'Super!', cn: '超级棒！' },
-        { en: 'Wonderful!', cn: '太厉害了！' },
-        { en: 'Incredible!', cn: '难以置信！' }
+        { en: 'Yes!', cn: '没错！' }
     ],
     encourage: [
-        { en: 'Try again!', cn: '再试一次！' },
+        { en: 'Try again!', cn: '再想想！' },
         { en: 'Almost!', cn: '差一点！' },
-        { en: 'Keep going!', cn: '继续加油！' },
-        { en: 'You can do it!', cn: '你可以的！' },
-        { en: 'Don\'t give up!', cn: '别放弃！' },
-        { en: 'So close!', cn: '很接近了！' }
+        { en: 'Not quite.', cn: '不太对哦' },
+        { en: 'Keep trying!', cn: '再试试！' }
     ],
     // 连击专用鼓励语
     combo: [

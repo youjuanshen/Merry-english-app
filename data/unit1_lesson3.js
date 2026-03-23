@@ -818,13 +818,13 @@ var lesson3 = {
       {
         "type": "repeat_sentence",
         "word": "I have an animal friend.",
-        "chinese": "请跟读这个句子：我有一个动物朋友。",
+        "chinese": "我有一个动物朋友。",
         "expected": "I have an animal friend."
       },
       {
         "type": "repeat_word",
         "word": "tiger",
-        "chinese": "请跟读这个单词：老虎。",
+        "chinese": "老虎。",
         "expected": "tiger"
       },
       {
@@ -836,13 +836,13 @@ var lesson3 = {
       {
         "type": "repeat_sentence",
         "word": "Is it a rabbit?",
-        "chinese": "请跟读这个句子：它是一只兔子吗？",
+        "chinese": "它是一只兔子吗？",
         "expected": "Is it a rabbit?"
       },
       {
         "type": "repeat_word",
         "word": "jump",
-        "chinese": "请跟读这个单词：跳。",
+        "chinese": "跳。",
         "expected": "jump"
       },
       {
@@ -854,19 +854,19 @@ var lesson3 = {
       {
         "type": "repeat_sentence",
         "word": "Yes, it is.",
-        "chinese": "请跟读这个句子：是的，它是。",
+        "chinese": "是的，它是。",
         "expected": "Yes, it is."
       },
       {
         "type": "repeat_word",
         "word": "mouth",
-        "chinese": "请跟读这个单词：嘴巴。",
+        "chinese": "嘴巴。",
         "expected": "mouth"
       },
       {
         "type": "repeat_sentence",
         "word": "No, it isn't.",
-        "chinese": "请跟读这个句子：不，不是。",
+        "chinese": "不，不是。",
         "expected": "No, it isn't."
       },
       {
@@ -880,67 +880,67 @@ var lesson3 = {
       {
         "type": "repeat_word",
         "word": "tiger",
-        "chinese": "请跟读这个单词：老虎。",
+        "chinese": "老虎。",
         "expected": "tiger"
       },
       {
         "type": "repeat_word",
         "word": "jump",
-        "chinese": "请跟读这个单词：跳。",
+        "chinese": "跳。",
         "expected": "jump"
       },
       {
         "type": "repeat_word",
         "word": "mouth",
-        "chinese": "请跟读这个单词：嘴巴。",
+        "chinese": "嘴巴。",
         "expected": "mouth"
       },
       {
         "type": "repeat_word",
         "word": "meat",
-        "chinese": "请跟读这个单词：肉。",
+        "chinese": "肉。",
         "expected": "meat"
       },
       {
         "type": "repeat_word",
         "word": "no",
-        "chinese": "请跟读这个单词：不。",
+        "chinese": "不。",
         "expected": "no"
       },
       {
         "type": "repeat_sentence",
         "word": "I have an animal friend.",
-        "chinese": "请跟读这个句子：我有一个动物朋友。",
+        "chinese": "我有一个动物朋友。",
         "expected": "I have an animal friend."
       },
       {
         "type": "repeat_sentence",
         "word": "Is it a rabbit?",
-        "chinese": "请跟读这个句子：它是一只兔子吗？",
+        "chinese": "它是一只兔子吗？",
         "expected": "Is it a rabbit?"
       },
       {
         "type": "repeat_sentence",
         "word": "Yes, it is.",
-        "chinese": "请跟读这个句子：是的，它是。",
+        "chinese": "是的，它是。",
         "expected": "Yes, it is."
       },
       {
         "type": "repeat_sentence",
         "word": "No, it isn't.",
-        "chinese": "请跟读这个句子：不，不是。",
+        "chinese": "不，不是。",
         "expected": "No, it isn't."
       },
       {
         "type": "repeat_sentence",
         "word": "It can jump.",
-        "chinese": "请跟读这个句子：它会跳。",
+        "chinese": "它会跳。",
         "expected": "It can jump."
       },
       {
         "type": "repeat_sentence",
         "word": "Is it a tiger?",
-        "chinese": "请跟读这个句子：它是一只老虎吗？",
+        "chinese": "它是一只老虎吗？",
         "expected": "Is it a tiger?"
       },
       {

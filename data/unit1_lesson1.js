@@ -819,19 +819,19 @@ var lesson1 = {
       {
         "type": "repeat_word",
         "word": "bear",
-        "chinese": "请跟读这个单词：熊。",
+        "chinese": "熊。",
         "expected": "bear"
       },
       {
         "type": "repeat_word",
         "word": "horse",
-        "chinese": "请跟读这个单词：马。",
+        "chinese": "马。",
         "expected": "horse"
       },
       {
         "type": "repeat_sentence",
         "word": "This is a bear.",
-        "chinese": "请跟读这个句子：这是一只熊。",
+        "chinese": "这是一只熊。",
         "expected": "This is a bear."
       },
       {
@@ -843,13 +843,13 @@ var lesson1 = {
       {
         "type": "repeat_word",
         "word": "panda",
-        "chinese": "请跟读这个单词：熊猫。",
+        "chinese": "熊猫。",
         "expected": "panda"
       },
       {
         "type": "repeat_sentence",
         "word": "That is a panda.",
-        "chinese": "请跟读这个句子：那是一只熊猫。",
+        "chinese": "那是一只熊猫。",
         "expected": "That is a panda."
       },
       {
@@ -861,7 +861,7 @@ var lesson1 = {
       {
         "type": "repeat_word",
         "word": "bird",
-        "chinese": "请跟读这个单词：鸟。",
+        "chinese": "鸟。",
         "expected": "bird"
       },
       {
@@ -873,7 +873,7 @@ var lesson1 = {
       {
         "type": "repeat_sentence",
         "word": "It's big.",
-        "chinese": "请跟读这个句子：它很大。",
+        "chinese": "它很大。",
         "expected": "It's big."
       }
     ],
@@ -881,61 +881,61 @@ var lesson1 = {
       {
         "type": "repeat_word",
         "word": "bear",
-        "chinese": "请跟读这个单词：熊。",
+        "chinese": "熊。",
         "expected": "bear"
       },
       {
         "type": "repeat_word",
         "word": "horse",
-        "chinese": "请跟读这个单词：马。",
+        "chinese": "马。",
         "expected": "horse"
       },
       {
         "type": "repeat_word",
         "word": "bird",
-        "chinese": "请跟读这个单词：鸟。",
+        "chinese": "鸟。",
         "expected": "bird"
       },
       {
         "type": "repeat_word",
         "word": "panda",
-        "chinese": "请跟读这个单词：熊猫。",
+        "chinese": "熊猫。",
         "expected": "panda"
       },
       {
         "type": "repeat_word",
         "word": "rabbit",
-        "chinese": "请跟读这个单词：兔子。",
+        "chinese": "兔子。",
         "expected": "rabbit"
       },
       {
         "type": "repeat_word",
         "word": "monkey",
-        "chinese": "请跟读这个单词：猴子。",
+        "chinese": "猴子。",
         "expected": "monkey"
       },
       {
         "type": "repeat_word",
         "word": "duck",
-        "chinese": "请跟读这个单词：鸭子。",
+        "chinese": "鸭子。",
         "expected": "duck"
       },
       {
         "type": "repeat_sentence",
         "word": "This is a bear.",
-        "chinese": "请跟读这个句子：这是一只熊。",
+        "chinese": "这是一只熊。",
         "expected": "This is a bear."
       },
       {
         "type": "repeat_sentence",
         "word": "That is a panda. It's cute.",
-        "chinese": "请跟读这个句子：那是一只熊猫。它很可爱。",
+        "chinese": "那是一只熊猫。它很可爱。",
         "expected": "That is a panda. It's cute."
       },
       {
         "type": "repeat_sentence",
         "word": "This is a horse. It can run fast.",
-        "chinese": "请跟读这个句子：这是一匹马。它跑得很快。",
+        "chinese": "这是一匹马。它跑得很快。",
         "expected": "This is a horse. It can run fast."
       },
       {
@@ -971,13 +971,13 @@ var lesson1 = {
       {
         "type": "repeat_sentence",
         "word": "This is a bird.",
-        "chinese": "请跟读这个句子：这是一只鸟。",
+        "chinese": "这是一只鸟。",
         "expected": "This is a bird."
       },
       {
         "type": "repeat_sentence",
         "word": "It's big.",
-        "chinese": "请跟读这个句子：它很大。",
+        "chinese": "它很大。",
         "expected": "It's big."
       },
       {

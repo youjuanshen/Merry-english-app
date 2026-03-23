@@ -807,13 +807,13 @@ var lesson4 = {
       {
         "type": "repeat_sentence",
         "word": "Look! It's a cat.",
-        "chinese": "请跟读这个句子：看！这是一只猫。",
+        "chinese": "看！这是一只猫。",
         "expected": "Look! It's a cat."
       },
       {
         "type": "repeat_word",
         "word": "cat",
-        "chinese": "请跟读这个单词：猫。",
+        "chinese": "猫。",
         "expected": "cat"
       },
       {
@@ -825,13 +825,13 @@ var lesson4 = {
       {
         "type": "repeat_word",
         "word": "nose",
-        "chinese": "请跟读这个单词：鼻子。",
+        "chinese": "鼻子。",
         "expected": "nose"
       },
       {
         "type": "repeat_sentence",
         "word": "These are two eyes.",
-        "chinese": "请跟读这个句子：这些是两只眼睛。",
+        "chinese": "这些是两只眼睛。",
         "expected": "These are two eyes."
       },
       {
@@ -843,13 +843,13 @@ var lesson4 = {
       {
         "type": "repeat_word",
         "word": "draw",
-        "chinese": "请跟读这个单词：画。",
+        "chinese": "画。",
         "expected": "draw"
       },
       {
         "type": "repeat_sentence",
         "word": "Let's draw.",
-        "chinese": "请跟读这个句子：我们来画画吧。",
+        "chinese": "我们来画画吧。",
         "expected": "Let's draw."
       },
       {
@@ -861,7 +861,7 @@ var lesson4 = {
       {
         "type": "repeat_sentence",
         "word": "Look! It's a bear.",
-        "chinese": "请跟读这个句子：看！这是一只熊。",
+        "chinese": "看！这是一只熊。",
         "expected": "Look! It's a bear."
       }
     ],
@@ -869,55 +869,55 @@ var lesson4 = {
       {
         "type": "repeat_word",
         "word": "cat",
-        "chinese": "请跟读这个单词：猫。",
+        "chinese": "猫。",
         "expected": "cat"
       },
       {
         "type": "repeat_word",
         "word": "nose",
-        "chinese": "请跟读这个单词：鼻子。",
+        "chinese": "鼻子。",
         "expected": "nose"
       },
       {
         "type": "repeat_word",
         "word": "draw",
-        "chinese": "请跟读这个单词：画。",
+        "chinese": "画。",
         "expected": "draw"
       },
       {
         "type": "repeat_sentence",
         "word": "Look! It's a cat.",
-        "chinese": "请跟读这个句子：看！这是一只猫。",
+        "chinese": "看！这是一只猫。",
         "expected": "Look! It's a cat."
       },
       {
         "type": "repeat_sentence",
         "word": "These are two eyes.",
-        "chinese": "请跟读这个句子：这些是两只眼睛。",
+        "chinese": "这些是两只眼睛。",
         "expected": "These are two eyes."
       },
       {
         "type": "repeat_sentence",
         "word": "Let's draw.",
-        "chinese": "请跟读这个句子：我们来画画吧。",
+        "chinese": "我们来画画吧。",
         "expected": "Let's draw."
       },
       {
         "type": "repeat_sentence",
         "word": "Look! It's a bear.",
-        "chinese": "请跟读这个句子：看！这是一只熊。",
+        "chinese": "看！这是一只熊。",
         "expected": "Look! It's a bear."
       },
       {
         "type": "repeat_sentence",
         "word": "Look! It's a panda.",
-        "chinese": "请跟读这个句子：看！这是一只熊猫。",
+        "chinese": "看！这是一只熊猫。",
         "expected": "Look! It's a panda."
       },
       {
         "type": "repeat_sentence",
         "word": "Look! It's a rabbit.",
-        "chinese": "请跟读这个句子：看！这是一只兔子。",
+        "chinese": "看！这是一只兔子。",
         "expected": "Look! It's a rabbit."
       },
       {
