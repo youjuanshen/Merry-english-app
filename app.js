@@ -957,15 +957,8 @@ function renderQuestion() {
     const skipBtn = document.createElement('button');
     skipBtn.className = 'next-btn';
     skipBtn.id = 'next-question-btn';
-    // 最后一题：显示「再来一次」
-    const isLastQuestion = (currentQuestionIndex >= moduleQuestions.length - 1);
-    if (isLastQuestion) {
-        skipBtn.textContent = '再来一次 ↩';
-        skipBtn.onclick = function() { location.reload(); };
-    } else {
-        skipBtn.textContent = '下一题 ▶';
-        skipBtn.onclick = skipToNextQuestion;
-    }
+    skipBtn.textContent = '下一题 ▶';
+    skipBtn.onclick = skipToNextQuestion;
     skipBtn.disabled = true; // 默认禁用
     container.appendChild(skipBtn);
 
