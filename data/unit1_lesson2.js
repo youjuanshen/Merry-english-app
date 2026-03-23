@@ -8,106 +8,127 @@ var lesson2 = {
     "pretest": [
       {
         "type": "listen_select",
-        "audio": "small",
+        "audio": "panda",
         "options": [
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
+          "<img src=\"assets/images/panda.png\" width=\"80\">",
+          "<img src=\"assets/images/horse.png\" width=\"80\">",
           "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/horse.png\" width=\"80\">"
+          "<img src=\"assets/images/duck.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "chinese": "熊猫"
+      },
+      {
+        "type": "listen_select",
+        "audio": "horse",
+        "options": [
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+          "<img src=\"assets/images/monkey.png\" width=\"80\">",
+          "<img src=\"assets/images/horse.png\" width=\"80\">",
+          "<img src=\"assets/images/bird.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "chinese": "马"
+      },
+      {
+        "type": "listen_select",
+        "audio": "baby",
+        "options": [
+          "<img src=\"assets/images/bear.png\" width=\"80\">",
+          "<img src=\"assets/images/baby.png\" width=\"80\">",
+          "<img src=\"assets/images/panda.png\" width=\"80\">",
+          "<img src=\"assets/images/duck.png\" width=\"80\">"
         ],
         "correct": 1,
-        "chinese": "小的"
+        "chinese": "宝宝"
+      },
+      {
+        "type": "listen_select",
+        "audio": "They have small ears and black eyes.",
+        "options": ["它们有小耳朵和黑眼睛。", "它们有长腿。", "它们是棕色的。", "它们很可爱。"],
+        "correct": 0,
+        "chinese": "它们有小耳朵和黑眼睛。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "They are lovely.",
+        "options": ["它们很可爱。", "它们是棕色的。", "它们有长腿。", "它们有小耳朵。"],
+        "correct": 0,
+        "chinese": "它们很可爱。"
       },
       {
         "type": "listen_tf",
-        "audio": "ear",
-        "image": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+        "audio": "These are pandas.",
+        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
         "correct": true,
-        "chinese": "耳朵"
+        "chinese": "这些是熊猫，正确！"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "Those are horses.",
+        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
+        "correct": false,
+        "chinese": "这不是马，这是熊猫。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "___ are pandas. They have small ears.",
+        "options": ["Those", "These", "This", "That"],
+        "correct": 1,
+        "chinese": "___是熊猫。它们有小耳朵。(这些)"
+      },
+      {
+        "type": "listen_select",
+        "audio": "___ are horses. They have long legs.",
+        "options": ["These", "This", "Those", "That"],
+        "correct": 2,
+        "chinese": "___是马。它们有长腿。(那些)"
+      },
+      {
+        "type": "listen_select",
+        "audio": "You see baby pandas. They are very cute. What do you say?",
+        "options": ["They are lovely.", "They have long legs.", "They are brown.", "They like grass."],
+        "correct": 0,
+        "chinese": "你看到熊猫宝宝，它们非常可爱，你会说什么？"
+      }
+    ],
+    "practice": [
+      {
+        "type": "listen_select",
+        "audio": "ear",
+        "options": [
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+          "<img src=\"assets/images/monkey.png\" width=\"80\">",
+          "<img src=\"assets/images/duck.png\" width=\"80\">",
+          "<img src=\"assets/images/bear.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "chinese": "耳朵（兔子有长耳朵）"
       },
       {
         "type": "listen_select",
         "audio": "eye",
         "options": [
-          "<img src=\"assets/images/panda.png\" width=\"80\">",
-          "<img src=\"assets/images/cat.png\" width=\"80\">",
-          "<img src=\"assets/images/bird.png\" width=\"80\">",
-          "<img src=\"assets/images/duck.png\" width=\"80\">"
-        ],
-        "correct": 0,
-        "chinese": "眼睛"
-      },
-      {
-        "type": "listen_select",
-        "audio": "These are pandas. They have small ears and black eyes.",
-        "options": [
-          "<img src=\"assets/images/panda.png\" width=\"80\">",
-          "<img src=\"assets/images/bear.png\" width=\"80\">",
           "<img src=\"assets/images/horse.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">"
+          "<img src=\"assets/images/panda.png\" width=\"80\">",
+          "<img src=\"assets/images/bird.png\" width=\"80\">",
+          "<img src=\"assets/images/cat.png\" width=\"80\">"
         ],
-        "correct": 0,
-        "chinese": "这些是熊猫。它们有小耳朵和黑眼睛。"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "baby",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
-        "correct": true,
-        "chinese": "宝宝"
+        "correct": 1,
+        "chinese": "眼睛（熊猫有黑眼睛）"
       },
       {
         "type": "listen_select",
-        "audio": "long",
+        "audio": "leg",
         "options": [
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
           "<img src=\"assets/images/duck.png\" width=\"80\">",
-          "<img src=\"assets/images/cat.png\" width=\"80\">",
+          "<img src=\"assets/images/panda.png\" width=\"80\">",
+          "<img src=\"assets/images/horse.png\" width=\"80\">",
           "<img src=\"assets/images/bird.png\" width=\"80\">"
         ],
-        "correct": 0,
-        "chinese": "长的"
+        "correct": 2,
+        "chinese": "腿（马有长腿）"
       },
-      {
-        "type": "listen_tf",
-        "audio": "leg",
-        "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
-        "correct": true,
-        "chinese": "腿"
-      },
-      {
-        "type": "listen_select",
-        "audio": "Those are horses. They have long legs.",
-        "options": [
-          "<img src=\"assets/images/panda.png\" width=\"80\">",
-          "<img src=\"assets/images/horse.png\" width=\"80\">",
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-          "<img src=\"assets/images/duck.png\" width=\"80\">"
-        ],
-        "correct": 1,
-        "chinese": "那些是马。它们有长腿。"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "these",
-        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
-        "correct": true,
-        "chinese": "这些"
-      },
-      {
-        "type": "listen_select",
-        "audio": "those",
-        "options": [
-          "<img src=\"assets/images/panda.png\" width=\"80\">",
-          "<img src=\"assets/images/horse.png\" width=\"80\">",
-          "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">"
-        ],
-        "correct": 1,
-        "chinese": "那些"
-      }
-    ],
-    "practice": [
       {
         "type": "listen_select",
         "audio": "small",
@@ -122,217 +143,150 @@ var lesson2 = {
       },
       {
         "type": "listen_select",
-        "audio": "ear",
-        "options": [
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-          "<img src=\"assets/images/duck.png\" width=\"80\">",
-          "<img src=\"assets/images/bird.png\" width=\"80\">",
-          "<img src=\"assets/images/cat.png\" width=\"80\">"
-        ],
+        "audio": "These are pandas.",
+        "options": ["这些是熊猫。", "那些是马。", "它们有小耳朵。", "它们很可爱。"],
         "correct": 0,
-        "chinese": "耳朵"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "eye",
-        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
-        "correct": true,
-        "chinese": "眼睛"
+        "chinese": "这些是熊猫。"
       },
       {
         "type": "listen_select",
-        "audio": "baby",
-        "options": [
-          "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/horse.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">"
-        ],
+        "audio": "Those are horses.",
+        "options": ["它们有长腿。", "那些是马。", "它们是棕色的。", "这些是熊猫。"],
+        "correct": 1,
+        "chinese": "那些是马。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "They are brown.",
+        "options": ["它们很可爱。", "它们有小耳朵。", "它们是棕色的。", "它们有长腿。"],
         "correct": 2,
-        "chinese": "宝宝"
-      },
-      {
-        "type": "listen_select",
-        "audio": "long",
-        "options": [
-          "<img src=\"assets/images/duck.png\" width=\"80\">",
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-          "<img src=\"assets/images/cat.png\" width=\"80\">",
-          "<img src=\"assets/images/panda.png\" width=\"80\">"
-        ],
-        "correct": 1,
-        "chinese": "长的"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "leg",
-        "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
-        "correct": true,
-        "chinese": "腿"
-      },
-      {
-        "type": "listen_select",
-        "audio": "these",
-        "options": [
-          "<img src=\"assets/images/panda.png\" width=\"80\">",
-          "<img src=\"assets/images/horse.png\" width=\"80\">",
-          "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/duck.png\" width=\"80\">"
-        ],
-        "correct": 0,
-        "chinese": "这些"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "those",
-        "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
-        "correct": true,
-        "chinese": "那些"
-      },
-      {
-        "type": "listen_select",
-        "audio": "These are pandas. They have small ears and black eyes.",
-        "options": [
-          "<img src=\"assets/images/panda.png\" width=\"80\">",
-          "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/horse.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">"
-        ],
-        "correct": 0,
-        "chinese": "这些是熊猫。它们有小耳朵和黑眼睛。"
-      },
-      {
-        "type": "listen_select",
-        "audio": "Those are horses. They are brown. They have long legs. They like grass.",
-        "options": [
-          "<img src=\"assets/images/panda.png\" width=\"80\">",
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-          "<img src=\"assets/images/horse.png\" width=\"80\">",
-          "<img src=\"assets/images/duck.png\" width=\"80\">"
-        ],
-        "correct": 2,
-        "chinese": "那些是马。它们是棕色的。它们有长腿。它们喜欢吃草。"
-      },
-      {
-        "type": "listen_select",
-        "audio": "Baby pandas. They are lovely.",
-        "options": [
-          "<img src=\"assets/images/panda.png\" width=\"80\">",
-          "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
-        ],
-        "correct": 0,
-        "chinese": "熊猫宝宝。它们很可爱。"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "small",
-        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">",
-        "correct": false,
-        "chinese": "小的"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "baby",
-        "image": "<img src=\"assets/images/bear.png\" width=\"80\">",
-        "correct": false,
-        "chinese": "宝宝"
-      },
-      {
-        "type": "listen_select",
-        "audio": "They have long legs.",
-        "options": [
-          "它们有长腿。",
-          "它们有小耳朵和黑眼睛。",
-          "它们是棕色的。",
-          "它们喜欢吃草。"
-        ],
-        "correct": 0,
-        "chinese": "它们有长腿。"
-      },
-      {
-        "type": "listen_select",
-        "audio": "They have small ears and black eyes.",
-        "options": [
-          "它们有长腿。",
-          "它们有小耳朵和黑眼睛。",
-          "它们是棕色的。",
-          "它们很可爱。"
-        ],
-        "correct": 1,
-        "chinese": "它们有小耳朵和黑眼睛。"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "ear",
-        "image": "<img src=\"assets/images/duck.png\" width=\"80\">",
-        "correct": false,
-        "chinese": "耳朵"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "long",
-        "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
-        "correct": true,
-        "chinese": "长的"
-      },
-      {
-        "type": "listen_select",
-        "audio": "eye",
-        "options": [
-          "<img src=\"assets/images/cat.png\" width=\"80\">",
-          "<img src=\"assets/images/panda.png\" width=\"80\">",
-          "<img src=\"assets/images/duck.png\" width=\"80\">",
-          "<img src=\"assets/images/bird.png\" width=\"80\">"
-        ],
-        "correct": 1,
-        "chinese": "眼睛"
+        "chinese": "它们是棕色的。"
       },
       {
         "type": "listen_select",
         "audio": "They like grass.",
-        "options": [
-          "它们喜欢吃草。",
-          "它们有长腿。",
-          "它们有小耳朵和黑眼睛。",
-          "它们是棕色的。"
-        ],
+        "options": ["它们喜欢吃草。", "它们有长腿。", "它们是棕色的。", "它们很可爱。"],
         "correct": 0,
         "chinese": "它们喜欢吃草。"
       },
       {
         "type": "listen_select",
-        "audio": "They are brown.",
-        "options": [
-          "它们喜欢吃草。",
-          "它们很可爱。",
-          "它们是棕色的。",
-          "它们有长腿。"
-        ],
+        "audio": "___ are pandas. They have ___ ears.",
+        "options": ["These, small", "Those, long", "This, big", "That, black"],
+        "correct": 0,
+        "chinese": "___是熊猫。它们有___耳朵。(这些，小)"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Those are horses. They have ___ legs.",
+        "options": ["small", "black", "long", "brown"],
         "correct": 2,
-        "chinese": "它们是棕色的。"
+        "chinese": "那些是马。它们有___腿。(长)"
+      },
+      {
+        "type": "listen_select",
+        "audio": "They have small ears and ___ eyes.",
+        "options": ["long", "brown", "black", "big"],
+        "correct": 2,
+        "chinese": "它们有小耳朵和___眼睛。(黑色的)"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "These are pandas.",
+        "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
+        "correct": false,
+        "chinese": "这不是熊猫，这是马。"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "Baby pandas.",
+        "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
+        "correct": true,
+        "chinese": "熊猫宝宝，正确！"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "Those are horses.",
+        "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
+        "correct": true,
+        "chinese": "那些是马，正确！"
+      },
+      {
+        "type": "listen_select",
+        "audio": "A says: These are pandas. What does B say?",
+        "options": ["They have small ears and black eyes.", "They have long legs.", "They are brown.", "They like grass."],
+        "correct": 0,
+        "chinese": "A说：这些是熊猫。B会说什么？"
+      },
+      {
+        "type": "listen_select",
+        "audio": "A says: Those are horses. What does B say?",
+        "options": ["They have small ears.", "They are brown. They have long legs.", "They are lovely.", "They have black eyes."],
+        "correct": 1,
+        "chinese": "A说：那些是马。B会说什么？"
+      },
+      {
+        "type": "listen_select",
+        "audio": "A says: Look! Baby pandas! What does B say?",
+        "options": ["They have long legs.", "They are brown.", "They are lovely.", "They like grass."],
+        "correct": 2,
+        "chinese": "A说：看！熊猫宝宝！B会说什么？"
+      },
+      {
+        "type": "listen_select",
+        "audio": "You see brown horses eating grass. What do you say?",
+        "options": ["They like grass.", "They have small ears.", "They are lovely.", "They have black eyes."],
+        "correct": 0,
+        "chinese": "你看到棕色的马在吃草，你会说什么？"
+      },
+      {
+        "type": "listen_select",
+        "audio": "You see pandas with small ears. What do you say?",
+        "options": ["They have long legs.", "They are brown.", "They have small ears and black eyes.", "They like grass."],
+        "correct": 2,
+        "chinese": "你看到有小耳朵的熊猫，你会说什么？"
+      },
+      {
+        "type": "listen_select",
+        "audio": "You see cute baby pandas. What do you say?",
+        "options": ["They are brown.", "Baby pandas! They are lovely.", "They have long legs.", "They like grass."],
+        "correct": 1,
+        "chinese": "你看到可爱的熊猫宝宝，你会说什么？"
       }
     ]
   },
   "reading": {
     "pretest": [
       {
-        "type": "sentence_match",
+        "type": "word_match",
+        "word": "panda",
         "sentence": "These are pandas.",
         "chinese": "这些是熊猫。",
         "options": [
           {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
           {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"},
           {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
-          {"text": "<img src=\"assets/images/cat.png\" width=\"80\">", "value": "cat"}
+          {"text": "<img src=\"assets/images/rabbit.png\" width=\"80\">", "value": "rabbit"}
         ],
         "correct": "panda"
       },
       {
+        "type": "word_match",
+        "word": "horse",
+        "sentence": "Those are horses.",
+        "chinese": "那些是马。",
+        "options": [
+          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
+          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
+          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
+          {"text": "<img src=\"assets/images/bird.png\" width=\"80\">", "value": "bird"}
+        ],
+        "correct": "horse"
+      },
+      {
         "type": "sentence_match",
-        "sentence": "They have small ears and black eyes.",
-        "chinese": "它们有小耳朵和黑眼睛。",
+        "sentence": "These are pandas. They have small ears and black eyes.",
+        "chinese": "这些是熊猫。它们有小耳朵和黑眼睛。",
         "options": [
           {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
           {"text": "<img src=\"assets/images/rabbit.png\" width=\"80\">", "value": "rabbit"},
@@ -343,20 +297,8 @@ var lesson2 = {
       },
       {
         "type": "sentence_match",
-        "sentence": "Those are horses.",
-        "chinese": "那些是马。",
-        "options": [
-          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
-          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
-          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
-          {"text": "<img src=\"assets/images/bird.png\" width=\"80\">", "value": "bird"}
-        ],
-        "correct": "horse"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "They are brown.",
-        "chinese": "它们是棕色的。",
+        "sentence": "Those are horses. They are brown.",
+        "chinese": "那些是马。它们是棕色的。",
         "options": [
           {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
           {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
@@ -364,241 +306,6 @@ var lesson2 = {
           {"text": "<img src=\"assets/images/rabbit.png\" width=\"80\">", "value": "rabbit"}
         ],
         "correct": "horse"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "They have long legs.",
-        "chinese": "它们有长腿。",
-        "options": [
-          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
-          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
-          {"text": "<img src=\"assets/images/mouse.png\" width=\"80\">", "value": "mouse"},
-          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"}
-        ],
-        "correct": "horse"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "They like grass.",
-        "chinese": "它们喜欢吃草。",
-        "options": [
-          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
-          {"text": "<img src=\"assets/images/tiger.png\" width=\"80\">", "value": "tiger"},
-          {"text": "<img src=\"assets/images/cat.png\" width=\"80\">", "value": "cat"},
-          {"text": "<img src=\"assets/images/monkey.png\" width=\"80\">", "value": "monkey"}
-        ],
-        "correct": "horse"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "Baby pandas.",
-        "chinese": "熊猫宝宝。",
-        "options": [
-          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
-          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"},
-          {"text": "<img src=\"assets/images/monkey.png\" width=\"80\">", "value": "monkey"},
-          {"text": "<img src=\"assets/images/cat.png\" width=\"80\">", "value": "cat"}
-        ],
-        "correct": "panda"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "They are lovely.",
-        "chinese": "它们很可爱。",
-        "options": [
-          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
-          {"text": "<img src=\"assets/images/tiger.png\" width=\"80\">", "value": "tiger"},
-          {"text": "<img src=\"assets/images/lion.png\" width=\"80\">", "value": "lion"},
-          {"text": "<img src=\"assets/images/elephant.png\" width=\"80\">", "value": "elephant"}
-        ],
-        "correct": "panda"
-      },
-      {
-        "type": "word_match",
-        "word": "panda",
-        "sentence": "These are pandas.",
-        "chinese": "这些是熊猫。",
-        "options": [
-          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
-          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"},
-          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
-          {"text": "<img src=\"assets/images/rabbit.png\" width=\"80\">", "value": "rabbit"}
-        ],
-        "correct": "panda"
-      },
-      {
-        "type": "word_match",
-        "word": "horse",
-        "sentence": "Those are horses.",
-        "chinese": "那些是马。",
-        "options": [
-          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
-          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
-          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
-          {"text": "<img src=\"assets/images/bird.png\" width=\"80\">", "value": "bird"}
-        ],
-        "correct": "horse"
-      }
-    ],
-    "practice": [
-      {
-        "type": "sentence_match",
-        "sentence": "These are pandas.",
-        "chinese": "这些是熊猫。",
-        "options": [
-          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
-          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"},
-          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
-          {"text": "<img src=\"assets/images/monkey.png\" width=\"80\">", "value": "monkey"}
-        ],
-        "correct": "panda"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "They have small ears and black eyes.",
-        "chinese": "它们有小耳朵和黑眼睛。",
-        "options": [
-          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
-          {"text": "<img src=\"assets/images/rabbit.png\" width=\"80\">", "value": "rabbit"},
-          {"text": "<img src=\"assets/images/dog.png\" width=\"80\">", "value": "dog"},
-          {"text": "<img src=\"assets/images/cat.png\" width=\"80\">", "value": "cat"}
-        ],
-        "correct": "panda"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "Those are horses.",
-        "chinese": "那些是马。",
-        "options": [
-          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
-          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
-          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
-          {"text": "<img src=\"assets/images/bird.png\" width=\"80\">", "value": "bird"}
-        ],
-        "correct": "horse"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "They are brown.",
-        "chinese": "它们是棕色的。",
-        "options": [
-          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
-          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
-          {"text": "<img src=\"assets/images/bird.png\" width=\"80\">", "value": "bird"},
-          {"text": "<img src=\"assets/images/mouse.png\" width=\"80\">", "value": "mouse"}
-        ],
-        "correct": "horse"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "They have long legs.",
-        "chinese": "它们有长腿。",
-        "options": [
-          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
-          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
-          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
-          {"text": "<img src=\"assets/images/mouse.png\" width=\"80\">", "value": "mouse"}
-        ],
-        "correct": "horse"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "They like grass.",
-        "chinese": "它们喜欢吃草。",
-        "options": [
-          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
-          {"text": "<img src=\"assets/images/tiger.png\" width=\"80\">", "value": "tiger"},
-          {"text": "<img src=\"assets/images/cat.png\" width=\"80\">", "value": "cat"},
-          {"text": "<img src=\"assets/images/monkey.png\" width=\"80\">", "value": "monkey"}
-        ],
-        "correct": "horse"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "Baby pandas.",
-        "chinese": "熊猫宝宝。",
-        "options": [
-          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
-          {"text": "<img src=\"assets/images/baby.png\" width=\"80\">", "value": "baby"},
-          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"},
-          {"text": "<img src=\"assets/images/cat.png\" width=\"80\">", "value": "cat"}
-        ],
-        "correct": "panda"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "They are lovely.",
-        "chinese": "它们很可爱。",
-        "options": [
-          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
-          {"text": "<img src=\"assets/images/tiger.png\" width=\"80\">", "value": "tiger"},
-          {"text": "<img src=\"assets/images/elephant.png\" width=\"80\">", "value": "elephant"},
-          {"text": "<img src=\"assets/images/lion.png\" width=\"80\">", "value": "lion"}
-        ],
-        "correct": "panda"
-      },
-      {
-        "type": "word_match",
-        "word": "panda",
-        "sentence": "These are pandas.",
-        "chinese": "这些是熊猫。",
-        "options": [
-          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
-          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"},
-          {"text": "<img src=\"assets/images/tiger.png\" width=\"80\">", "value": "tiger"},
-          {"text": "<img src=\"assets/images/rabbit.png\" width=\"80\">", "value": "rabbit"}
-        ],
-        "correct": "panda"
-      },
-      {
-        "type": "word_match",
-        "word": "horse",
-        "sentence": "Those are horses.",
-        "chinese": "那些是马。",
-        "options": [
-          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
-          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
-          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
-          {"text": "<img src=\"assets/images/elephant.png\" width=\"80\">", "value": "elephant"}
-        ],
-        "correct": "horse"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "They have small ears and black eyes.",
-        "chinese": "它们有小耳朵和黑眼睛。",
-        "options": [
-          {"text": "它们有小耳朵和黑眼睛。", "value": "correct"},
-          {"text": "它们有大耳朵和蓝眼睛。", "value": "wrong1"},
-          {"text": "它们有长耳朵和红眼睛。", "value": "wrong2"},
-          {"text": "它们有小嘴巴和黑鼻子。", "value": "wrong3"}
-        ],
-        "correct": "correct"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "They are brown.",
-        "chinese": "它们是棕色的。",
-        "options": [
-          {"text": "它们是棕色的。", "value": "correct"},
-          {"text": "它们是黑白色的。", "value": "wrong1"},
-          {"text": "它们是红色的。", "value": "wrong2"},
-          {"text": "它们是绿色的。", "value": "wrong3"}
-        ],
-        "correct": "correct"
-      },
-      {
-        "type": "word_match",
-        "word": "ear",
-        "sentence": "They have small ears and black eyes.",
-        "chinese": "它们有小耳朵和黑眼睛。",
-        "options": [
-          {"text": "<img src=\"assets/images/rabbit.png\" width=\"80\">", "value": "rabbit"},
-          {"text": "<img src=\"assets/images/bird.png\" width=\"80\">", "value": "bird"},
-          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
-          {"text": "<img src=\"assets/images/mouse.png\" width=\"80\">", "value": "mouse"}
-        ],
-        "correct": "rabbit"
       },
       {
         "type": "sentence_match",
@@ -626,27 +333,79 @@ var lesson2 = {
       },
       {
         "type": "sentence_match",
-        "sentence": "Baby pandas.",
-        "chinese": "熊猫宝宝。",
+        "sentence": "你看到几只熊猫宝宝，觉得很可爱，你会说：",
+        "chinese": "情景选择",
         "options": [
-          {"text": "熊猫宝宝。", "value": "correct"},
-          {"text": "老虎宝宝。", "value": "wrong1"},
-          {"text": "小马宝宝。", "value": "wrong2"},
-          {"text": "兔子宝宝。", "value": "wrong3"}
+          {"text": "Baby pandas. They are lovely.", "value": "correct"},
+          {"text": "Those are horses. They are brown.", "value": "wrong1"},
+          {"text": "They have long legs.", "value": "wrong2"},
+          {"text": "They like grass.", "value": "wrong3"}
         ],
         "correct": "correct"
       },
       {
         "type": "sentence_match",
-        "sentence": "They are lovely.",
-        "chinese": "它们很可爱。",
+        "sentence": "你想告诉朋友那些棕色的动物是马，你会说：",
+        "chinese": "情景选择",
         "options": [
-          {"text": "它们很可爱。", "value": "correct"},
-          {"text": "它们很大。", "value": "wrong1"},
-          {"text": "它们很快。", "value": "wrong2"},
-          {"text": "它们很丑。", "value": "wrong3"}
+          {"text": "Those are horses. They are brown.", "value": "correct"},
+          {"text": "These are pandas. They are lovely.", "value": "wrong1"},
+          {"text": "Baby pandas.", "value": "wrong2"},
+          {"text": "They have small ears.", "value": "wrong3"}
         ],
         "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "A: These are pandas.\nB: ______",
+        "chinese": "A说这些是熊猫，B应该怎么描述它们？",
+        "options": [
+          {"text": "They have small ears and black eyes.", "value": "correct"},
+          {"text": "They have long legs.", "value": "wrong1"},
+          {"text": "They are brown.", "value": "wrong2"},
+          {"text": "They like grass.", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "A: Those are horses.\nB: ______",
+        "chinese": "A说那些是马，B应该怎么描述它们？",
+        "options": [
+          {"text": "They have long legs. They like grass.", "value": "correct"},
+          {"text": "They have small ears.", "value": "wrong1"},
+          {"text": "Baby pandas.", "value": "wrong2"},
+          {"text": "They are lovely.", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      }
+    ],
+    "practice": [
+      {
+        "type": "word_match",
+        "word": "panda",
+        "sentence": "These are pandas.",
+        "chinese": "这些是熊猫。",
+        "options": [
+          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
+          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"},
+          {"text": "<img src=\"assets/images/tiger.png\" width=\"80\">", "value": "tiger"},
+          {"text": "<img src=\"assets/images/rabbit.png\" width=\"80\">", "value": "rabbit"}
+        ],
+        "correct": "panda"
+      },
+      {
+        "type": "word_match",
+        "word": "horse",
+        "sentence": "Those are horses.",
+        "chinese": "那些是马。",
+        "options": [
+          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
+          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
+          {"text": "<img src=\"assets/images/elephant.png\" width=\"80\">", "value": "elephant"},
+          {"text": "<img src=\"assets/images/bird.png\" width=\"80\">", "value": "bird"}
+        ],
+        "correct": "horse"
       },
       {
         "type": "word_match",
@@ -663,6 +422,42 @@ var lesson2 = {
       },
       {
         "type": "sentence_match",
+        "sentence": "These are pandas. They have small ears and black eyes.",
+        "chinese": "这些是熊猫。它们有小耳朵和黑眼睛。",
+        "options": [
+          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
+          {"text": "<img src=\"assets/images/rabbit.png\" width=\"80\">", "value": "rabbit"},
+          {"text": "<img src=\"assets/images/dog.png\" width=\"80\">", "value": "dog"},
+          {"text": "<img src=\"assets/images/cat.png\" width=\"80\">", "value": "cat"}
+        ],
+        "correct": "panda"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "Those are horses. They have long legs.",
+        "chinese": "那些是马。它们有长腿。",
+        "options": [
+          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
+          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
+          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
+          {"text": "<img src=\"assets/images/mouse.png\" width=\"80\">", "value": "mouse"}
+        ],
+        "correct": "horse"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "Baby pandas. They are lovely.",
+        "chinese": "熊猫宝宝。它们很可爱。",
+        "options": [
+          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
+          {"text": "<img src=\"assets/images/tiger.png\" width=\"80\">", "value": "tiger"},
+          {"text": "<img src=\"assets/images/elephant.png\" width=\"80\">", "value": "elephant"},
+          {"text": "<img src=\"assets/images/lion.png\" width=\"80\">", "value": "lion"}
+        ],
+        "correct": "panda"
+      },
+      {
+        "type": "sentence_match",
         "sentence": "These are pandas.",
         "chinese": "这些是熊猫。",
         "options": [
@@ -675,6 +470,18 @@ var lesson2 = {
       },
       {
         "type": "sentence_match",
+        "sentence": "They have small ears and black eyes.",
+        "chinese": "它们有小耳朵和黑眼睛。",
+        "options": [
+          {"text": "它们有小耳朵和黑眼睛。", "value": "correct"},
+          {"text": "它们有大耳朵和蓝眼睛。", "value": "wrong1"},
+          {"text": "它们有长耳朵和红眼睛。", "value": "wrong2"},
+          {"text": "它们有小嘴巴和黑鼻子。", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
         "sentence": "Those are horses.",
         "chinese": "那些是马。",
         "options": [
@@ -682,6 +489,138 @@ var lesson2 = {
           {"text": "这些是马。", "value": "wrong1"},
           {"text": "那些是猫。", "value": "wrong2"},
           {"text": "那些是鸟。", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "They are brown.",
+        "chinese": "它们是棕色的。",
+        "options": [
+          {"text": "它们是棕色的。", "value": "correct"},
+          {"text": "它们是黑白色的。", "value": "wrong1"},
+          {"text": "它们是红色的。", "value": "wrong2"},
+          {"text": "它们是绿色的。", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "你看到一群熊猫有小耳朵和黑眼睛，你想告诉朋友：",
+        "chinese": "情景选择",
+        "options": [
+          {"text": "These are pandas. They have small ears and black eyes.", "value": "correct"},
+          {"text": "Those are horses. They are brown.", "value": "wrong1"},
+          {"text": "Baby pandas. They are lovely.", "value": "wrong2"},
+          {"text": "They have long legs.", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "你想描述马喜欢吃草，你会说：",
+        "chinese": "情景选择",
+        "options": [
+          {"text": "They like grass.", "value": "correct"},
+          {"text": "They are lovely.", "value": "wrong1"},
+          {"text": "They have small ears.", "value": "wrong2"},
+          {"text": "Baby pandas.", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "你看到马有长长的腿，你会说：",
+        "chinese": "情景选择",
+        "options": [
+          {"text": "Those are horses. They have long legs.", "value": "correct"},
+          {"text": "These are pandas. They have small ears.", "value": "wrong1"},
+          {"text": "Baby pandas. They are lovely.", "value": "wrong2"},
+          {"text": "They like grass.", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "你看到很可爱的熊猫宝宝，你会说：",
+        "chinese": "情景选择",
+        "options": [
+          {"text": "Baby pandas. They are lovely.", "value": "correct"},
+          {"text": "Those are horses. They are brown.", "value": "wrong1"},
+          {"text": "They have long legs.", "value": "wrong2"},
+          {"text": "They like grass.", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "你看到棕色的马在吃草，你想描述它们：",
+        "chinese": "情景选择",
+        "options": [
+          {"text": "Those are horses. They are brown. They like grass.", "value": "correct"},
+          {"text": "These are pandas. They have small ears.", "value": "wrong1"},
+          {"text": "Baby pandas. They are lovely.", "value": "wrong2"},
+          {"text": "They have small ears and black eyes.", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "A: Look! These are pandas.\nB: ______",
+        "chinese": "A说看这些是熊猫，B应该怎么描述？",
+        "options": [
+          {"text": "They have small ears and black eyes.", "value": "correct"},
+          {"text": "They have long legs.", "value": "wrong1"},
+          {"text": "They are brown.", "value": "wrong2"},
+          {"text": "They like grass.", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "A: Those are horses. They are brown.\nB: ______",
+        "chinese": "A说那些是马，它们是棕色的，B接着说什么？",
+        "options": [
+          {"text": "They have long legs. They like grass.", "value": "correct"},
+          {"text": "They have small ears.", "value": "wrong1"},
+          {"text": "Baby pandas.", "value": "wrong2"},
+          {"text": "They are lovely.", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "A: Look! Baby pandas.\nB: ______",
+        "chinese": "A说看熊猫宝宝，B应该说什么？",
+        "options": [
+          {"text": "They are lovely.", "value": "correct"},
+          {"text": "They are brown.", "value": "wrong1"},
+          {"text": "They have long legs.", "value": "wrong2"},
+          {"text": "They like grass.", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "A: What do horses like?\nB: ______",
+        "chinese": "A问马喜欢什么，B应该说什么？",
+        "options": [
+          {"text": "They like grass.", "value": "correct"},
+          {"text": "They are lovely.", "value": "wrong1"},
+          {"text": "They have small ears.", "value": "wrong2"},
+          {"text": "Baby pandas.", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "A: These are pandas. They have small ears.\nB: ______",
+        "chinese": "A描述了熊猫有小耳朵，B接着补充什么？",
+        "options": [
+          {"text": "They have black eyes too.", "value": "correct"},
+          {"text": "They have long legs.", "value": "wrong1"},
+          {"text": "They are brown.", "value": "wrong2"},
+          {"text": "They like grass.", "value": "wrong3"}
         ],
         "correct": "correct"
       }

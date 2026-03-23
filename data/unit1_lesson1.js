@@ -11,166 +11,106 @@ var lesson1 = {
         "audio": "bear",
         "options": [
           "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/cat.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/bird.png\" width=\"80\">"
+          "<img src=\"assets/images/horse.png\" width=\"80\">",
+          "<img src=\"assets/images/duck.png\" width=\"80\">",
+          "<img src=\"assets/images/monkey.png\" width=\"80\">"
         ],
         "correct": 0,
         "chinese": "熊"
       },
       {
-        "type": "listen_tf",
+        "type": "listen_select",
         "audio": "horse",
-        "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
-        "correct": true,
+        "options": [
+          "<img src=\"assets/images/panda.png\" width=\"80\">",
+          "<img src=\"assets/images/horse.png\" width=\"80\">",
+          "<img src=\"assets/images/bird.png\" width=\"80\">",
+          "<img src=\"assets/images/bear.png\" width=\"80\">"
+        ],
+        "correct": 1,
         "chinese": "马"
       },
       {
         "type": "listen_select",
-        "audio": "bird",
-        "options": [
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/bird.png\" width=\"80\">",
-          "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">"
-        ],
-        "correct": 1,
-        "chinese": "鸟"
-      },
-      {
-        "type": "listen_tf",
         "audio": "panda",
-        "image": "<img src=\"assets/images/cat.png\" width=\"80\">",
-        "correct": false,
+        "options": [
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+          "<img src=\"assets/images/monkey.png\" width=\"80\">",
+          "<img src=\"assets/images/panda.png\" width=\"80\">",
+          "<img src=\"assets/images/duck.png\" width=\"80\">"
+        ],
+        "correct": 2,
         "chinese": "熊猫"
       },
       {
-        "type": "listen_tf",
-        "audio": "animal",
-        "image": "<img src=\"assets/images/bear.png\" width=\"80\">",
-        "correct": true,
-        "chinese": "动物（熊是动物）"
-      },
-      {
         "type": "listen_select",
-        "audio": "Look! This is a bear. It's big.",
-        "options": [
-          "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/bird.png\" width=\"80\">",
-          "<img src=\"assets/images/panda.png\" width=\"80\">",
-          "<img src=\"assets/images/duck.png\" width=\"80\">"
-        ],
+        "audio": "It's big.",
+        "options": ["它很大。", "它很可爱。", "它跑得很快。", "它们很漂亮。"],
         "correct": 0,
-        "chinese": "看！这是一只熊。它很大。"
+        "chinese": "它很大。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "They are beautiful.",
+        "options": ["它们很漂亮。", "它很可爱。", "它很大。", "它是黑白色的。"],
+        "correct": 0,
+        "chinese": "它们很漂亮。"
       },
       {
         "type": "listen_tf",
-        "audio": "rabbit",
-        "image": "<img src=\"assets/images/monkey.png\" width=\"80\">",
+        "audio": "bird",
+        "image": "<img src=\"assets/images/bird.png\" width=\"80\">",
+        "correct": true,
+        "chinese": "这是鸟，正确！"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "bear",
+        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
         "correct": false,
-        "chinese": "兔子"
+        "chinese": "这不是熊，这是熊猫。"
       },
       {
         "type": "listen_select",
-        "audio": "monkey",
-        "options": [
-          "<img src=\"assets/images/panda.png\" width=\"80\">",
-          "<img src=\"assets/images/horse.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">"
-        ],
+        "audio": "This is a ___. It's big.",
+        "options": ["bear", "bird", "panda", "duck"],
+        "correct": 0,
+        "chinese": "这是一只___。它很大。(熊)"
+      },
+      {
+        "type": "listen_select",
+        "audio": "That is a ___. It can run fast.",
+        "options": ["bird", "panda", "horse", "monkey"],
         "correct": 2,
-        "chinese": "猴子"
+        "chinese": "那是一匹___。它跑得很快。(马)"
       },
       {
         "type": "listen_select",
-        "audio": "That is a horse. It can run fast.",
-        "options": [
-          "<img src=\"assets/images/bird.png\" width=\"80\">",
-          "<img src=\"assets/images/horse.png\" width=\"80\">",
-          "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/duck.png\" width=\"80\">"
-        ],
-        "correct": 1,
-        "chinese": "那是一匹马。它跑得快。"
-      },
-      {
-        "type": "listen_select",
-        "audio": "duck",
-        "options": [
-          "<img src=\"assets/images/bird.png\" width=\"80\">",
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-          "<img src=\"assets/images/duck.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">"
-        ],
-        "correct": 2,
-        "chinese": "鸭子"
+        "audio": "You see many animals at the zoo. What do you say?",
+        "options": ["So many animals!", "It's big.", "They are beautiful.", "It can run fast."],
+        "correct": 0,
+        "chinese": "你在动物园看到很多动物，你会说什么？"
       }
     ],
     "practice": [
       {
         "type": "listen_select",
-        "audio": "bear",
+        "audio": "bird",
         "options": [
-          "<img src=\"assets/images/panda.png\" width=\"80\">",
           "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/horse.png\" width=\"80\">",
-          "<img src=\"assets/images/duck.png\" width=\"80\">"
-        ],
-        "correct": 1,
-        "chinese": "熊"
-      },
-      {
-        "type": "listen_select",
-        "audio": "horse",
-        "options": [
           "<img src=\"assets/images/bird.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
           "<img src=\"assets/images/horse.png\" width=\"80\">",
           "<img src=\"assets/images/panda.png\" width=\"80\">"
         ],
-        "correct": 2,
-        "chinese": "马"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "bird",
-        "image": "<img src=\"assets/images/bird.png\" width=\"80\">",
-        "correct": true,
+        "correct": 1,
         "chinese": "鸟"
-      },
-      {
-        "type": "listen_select",
-        "audio": "panda",
-        "options": [
-          "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-          "<img src=\"assets/images/panda.png\" width=\"80\">",
-          "<img src=\"assets/images/horse.png\" width=\"80\">"
-        ],
-        "correct": 2,
-        "chinese": "熊猫"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "animal",
-        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
-        "correct": true,
-        "chinese": "动物（熊猫是动物）"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "rabbit",
-        "image": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-        "correct": true,
-        "chinese": "兔子"
       },
       {
         "type": "listen_select",
         "audio": "monkey",
         "options": [
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
           "<img src=\"assets/images/duck.png\" width=\"80\">",
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
           "<img src=\"assets/images/monkey.png\" width=\"80\">",
           "<img src=\"assets/images/bear.png\" width=\"80\">"
         ],
@@ -182,719 +122,153 @@ var lesson1 = {
         "audio": "duck",
         "options": [
           "<img src=\"assets/images/duck.png\" width=\"80\">",
-          "<img src=\"assets/images/cat.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">"
+          "<img src=\"assets/images/bird.png\" width=\"80\">",
+          "<img src=\"assets/images/panda.png\" width=\"80\">",
+          "<img src=\"assets/images/horse.png\" width=\"80\">"
         ],
         "correct": 0,
         "chinese": "鸭子"
       },
       {
         "type": "listen_select",
-        "audio": "So many animals! Let's go in and have a look.",
-        "options": [
-          "好多动物！我们进去看看吧。",
-          "看！这是一只熊。它很大。",
-          "那是一匹马。它跑得快。",
-          "那是一只熊猫。它是黑白色的。"
-        ],
-        "correct": 0,
-        "chinese": "好多动物！我们进去看看吧。"
-      },
-      {
-        "type": "listen_select",
-        "audio": "Look! This is a bear. It's big.",
-        "options": [
-          "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/bird.png\" width=\"80\">",
-          "<img src=\"assets/images/panda.png\" width=\"80\">",
-          "<img src=\"assets/images/duck.png\" width=\"80\">"
-        ],
-        "correct": 0,
-        "chinese": "看！这是一只熊。它很大。"
-      },
-      {
-        "type": "listen_select",
-        "audio": "That is a horse. It can run fast.",
+        "audio": "rabbit",
         "options": [
           "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/horse.png\" width=\"80\">",
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-          "<img src=\"assets/images/bear.png\" width=\"80\">"
-        ],
-        "correct": 1,
-        "chinese": "那是一匹马。它跑得快。"
-      },
-      {
-        "type": "listen_select",
-        "audio": "This is a red bird. That is a blue bird. They are beautiful.",
-        "options": [
-          "<img src=\"assets/images/bird.png\" width=\"80\">",
-          "<img src=\"assets/images/duck.png\" width=\"80\">",
-          "<img src=\"assets/images/panda.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">"
-        ],
-        "correct": 0,
-        "chinese": "这是一只红色的鸟。那是一只蓝色的鸟。它们很漂亮。"
-      },
-      {
-        "type": "listen_select",
-        "audio": "That is a panda. It's black and white. It's cute.",
-        "options": [
           "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/horse.png\" width=\"80\">",
-          "<img src=\"assets/images/panda.png\" width=\"80\">",
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">"
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+          "<img src=\"assets/images/duck.png\" width=\"80\">"
         ],
         "correct": 2,
-        "chinese": "那是一只熊猫。它是黑白色的。它很可爱。"
+        "chinese": "兔子"
       },
       {
-        "type": "listen_tf",
-        "audio": "bear",
-        "image": "<img src=\"assets/images/monkey.png\" width=\"80\">",
-        "correct": false,
-        "chinese": "熊"
+        "type": "listen_select",
+        "audio": "It's black and white.",
+        "options": ["它是黑白色的。", "它很大。", "它跑得很快。", "它们很漂亮。"],
+        "correct": 0,
+        "chinese": "它是黑白色的。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It can run fast.",
+        "options": ["它很可爱。", "它跑得很快。", "它很大。", "它是黑白色的。"],
+        "correct": 1,
+        "chinese": "它跑得很快。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's cute.",
+        "options": ["它们很漂亮。", "它很大。", "它很可爱。", "它跑得很快。"],
+        "correct": 2,
+        "chinese": "它很可爱。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Let's go in and have a look.",
+        "options": ["我们进去看看吧。", "好多动物！", "我们走吧。", "它们很漂亮。"],
+        "correct": 0,
+        "chinese": "我们进去看看吧。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "This is a ___. It's black and white.",
+        "options": ["bear", "horse", "panda", "bird"],
+        "correct": 2,
+        "chinese": "这是一只___。它是黑白色的。(熊猫)"
+      },
+      {
+        "type": "listen_select",
+        "audio": "This is a red ___. That is a blue ___.",
+        "options": ["bear", "bird", "horse", "panda"],
+        "correct": 1,
+        "chinese": "这是一只红色的___。那是一只蓝色的___。(鸟)"
+      },
+      {
+        "type": "listen_select",
+        "audio": "That is a ___. It's cute.",
+        "options": ["horse", "bird", "bear", "panda"],
+        "correct": 3,
+        "chinese": "那是一只___。它很可爱。(熊猫)"
       },
       {
         "type": "listen_tf",
         "audio": "horse",
         "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
         "correct": true,
-        "chinese": "马"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "panda",
-        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
-        "correct": true,
-        "chinese": "熊猫"
+        "chinese": "这是马，正确！"
       },
       {
         "type": "listen_tf",
         "audio": "duck",
-        "image": "<img src=\"assets/images/bird.png\" width=\"80\">",
+        "image": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
         "correct": false,
-        "chinese": "鸭子"
+        "chinese": "这不是鸭子，这是兔子。"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "monkey",
+        "image": "<img src=\"assets/images/monkey.png\" width=\"80\">",
+        "correct": true,
+        "chinese": "这是猴子，正确！"
       },
       {
         "type": "listen_select",
-        "audio": "OK, let's go.",
-        "options": [
-          "好多动物！我们进去看看吧。",
-          "这是一只红色的鸟。",
-          "好的，我们走吧。",
-          "那是一只熊猫。它很可爱。"
-        ],
-        "correct": 2,
-        "chinese": "好的，我们走吧。"
-      },
-      {
-        "type": "listen_select",
-        "audio": "rabbit",
-        "options": [
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/bird.png\" width=\"80\">",
-          "<img src=\"assets/images/horse.png\" width=\"80\">"
-        ],
+        "audio": "A says: Look! This is a bear. What does B say?",
+        "options": ["It's big!", "It can run fast.", "They are beautiful.", "It's cute!"],
         "correct": 0,
-        "chinese": "兔子"
+        "chinese": "A说：看！这是一只熊。B会说什么？"
       },
       {
         "type": "listen_select",
-        "audio": "bird",
-        "options": [
-          "<img src=\"assets/images/duck.png\" width=\"80\">",
-          "<img src=\"assets/images/panda.png\" width=\"80\">",
-          "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/bird.png\" width=\"80\">"
-        ],
-        "correct": 3,
-        "chinese": "鸟"
+        "audio": "A says: That is a horse. What does B say?",
+        "options": ["It's black and white.", "It can run fast.", "It's cute.", "They are beautiful."],
+        "correct": 1,
+        "chinese": "A说：那是一匹马。B会说什么？"
+      },
+      {
+        "type": "listen_select",
+        "audio": "A says: So many animals! What does B say?",
+        "options": ["It's big.", "OK, let's go.", "It's cute.", "It can run fast."],
+        "correct": 1,
+        "chinese": "A说：好多动物！B会说什么？"
+      },
+      {
+        "type": "listen_select",
+        "audio": "You see a black and white panda. What do you say?",
+        "options": ["It's black and white. It's cute!", "It can run fast.", "They are beautiful.", "It's big."],
+        "correct": 0,
+        "chinese": "你看到一只黑白色的熊猫，你会说什么？"
+      },
+      {
+        "type": "listen_select",
+        "audio": "You see two colorful birds. What do you say?",
+        "options": ["It's big.", "It can run fast.", "They are beautiful.", "It's cute."],
+        "correct": 2,
+        "chinese": "你看到两只漂亮的鸟，你会说什么？"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Your friend wants to visit the zoo. What do you say?",
+        "options": ["It's cute.", "Let's go in and have a look.", "It's big.", "They are beautiful."],
+        "correct": 1,
+        "chinese": "你的朋友想去动物园，你会说什么？"
       }
     ]
   },
   "reading": {
     "pretest": [
       {
-        "type": "sentence_match",
-        "sentence": "Look! This is a bear.",
-        "chinese": "看！这是一只熊。",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
-            "value": "bear"
-          },
-          {
-            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
-            "value": "horse"
-          },
-          {
-            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
-            "value": "panda"
-          },
-          {
-            "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
-            "value": "bird"
-          }
-        ],
-        "correct": "bear"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "It's big.",
-        "chinese": "它很大。",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
-            "value": "bear"
-          },
-          {
-            "text": "<img src=\"assets/images/mouse.png\" width=\"80\">",
-            "value": "mouse"
-          },
-          {
-            "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
-            "value": "bird"
-          },
-          {
-            "text": "<img src=\"assets/images/duck.png\" width=\"80\">",
-            "value": "duck"
-          }
-        ],
-        "correct": "bear"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "That is a horse.",
-        "chinese": "那是一匹马。",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
-            "value": "horse"
-          },
-          {
-            "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
-            "value": "bear"
-          },
-          {
-            "text": "<img src=\"assets/images/cat.png\" width=\"80\">",
-            "value": "cat"
-          },
-          {
-            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
-            "value": "monkey"
-          }
-        ],
-        "correct": "horse"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "It can run fast.",
-        "chinese": "它能跑得很快。",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
-            "value": "horse"
-          },
-          {
-            "text": "<img src=\"assets/images/duck.png\" width=\"80\">",
-            "value": "duck"
-          },
-          {
-            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
-            "value": "panda"
-          },
-          {
-            "text": "<img src=\"assets/images/mouse.png\" width=\"80\">",
-            "value": "mouse"
-          }
-        ],
-        "correct": "horse"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "This is a red bird.",
-        "chinese": "这是一只红色的鸟。",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
-            "value": "bird"
-          },
-          {
-            "text": "<img src=\"assets/images/duck.png\" width=\"80\">",
-            "value": "duck"
-          },
-          {
-            "text": "<img src=\"assets/images/cat.png\" width=\"80\">",
-            "value": "cat"
-          },
-          {
-            "text": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-            "value": "rabbit"
-          }
-        ],
-        "correct": "bird"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "That is a panda.",
-        "chinese": "那是一只熊猫。",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
-            "value": "panda"
-          },
-          {
-            "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
-            "value": "bear"
-          },
-          {
-            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-            "value": "tiger"
-          },
-          {
-            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
-            "value": "monkey"
-          }
-        ],
-        "correct": "panda"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "It's black and white.",
-        "chinese": "它是黑白色的。",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
-            "value": "panda"
-          },
-          {
-            "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
-            "value": "bird"
-          },
-          {
-            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
-            "value": "horse"
-          },
-          {
-            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-            "value": "tiger"
-          }
-        ],
-        "correct": "panda"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "It's cute.",
-        "chinese": "它很可爱。",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
-            "value": "panda"
-          },
-          {
-            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-            "value": "tiger"
-          },
-          {
-            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
-            "value": "horse"
-          },
-          {
-            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
-            "value": "elephant"
-          }
-        ],
-        "correct": "panda"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "They are beautiful.",
-        "chinese": "它们很漂亮。",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
-            "value": "bird"
-          },
-          {
-            "text": "<img src=\"assets/images/mouse.png\" width=\"80\">",
-            "value": "mouse"
-          },
-          {
-            "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
-            "value": "bear"
-          },
-          {
-            "text": "<img src=\"assets/images/duck.png\" width=\"80\">",
-            "value": "duck"
-          }
-        ],
-        "correct": "bird"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "So many animals!",
-        "chinese": "好多动物！",
-        "options": [
-          {
-            "text": "好多动物！",
-            "value": "correct"
-          },
-          {
-            "text": "好多人！",
-            "value": "wrong1"
-          },
-          {
-            "text": "好多食物！",
-            "value": "wrong2"
-          },
-          {
-            "text": "好多玩具！",
-            "value": "wrong3"
-          }
-        ],
-        "correct": "correct"
-      }
-    ],
-    "practice": [
-      {
-        "type": "sentence_match",
-        "sentence": "So many animals!",
-        "chinese": "好多动物！",
-        "options": [
-          {
-            "text": "好多动物！",
-            "value": "correct"
-          },
-          {
-            "text": "好多花！",
-            "value": "wrong1"
-          },
-          {
-            "text": "好多书！",
-            "value": "wrong2"
-          },
-          {
-            "text": "好多人！",
-            "value": "wrong3"
-          }
-        ],
-        "correct": "correct"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "Let's go in and have a look.",
-        "chinese": "我们进去看看吧。",
-        "options": [
-          {
-            "text": "我们进去看看吧。",
-            "value": "correct"
-          },
-          {
-            "text": "我们回家吧。",
-            "value": "wrong1"
-          },
-          {
-            "text": "我们吃饭吧。",
-            "value": "wrong2"
-          },
-          {
-            "text": "我们睡觉吧。",
-            "value": "wrong3"
-          }
-        ],
-        "correct": "correct"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "OK, let's go.",
-        "chinese": "好的，走吧。",
-        "options": [
-          {
-            "text": "好的，走吧。",
-            "value": "correct"
-          },
-          {
-            "text": "不，我不去。",
-            "value": "wrong1"
-          },
-          {
-            "text": "好的，吃吧。",
-            "value": "wrong2"
-          },
-          {
-            "text": "好的，睡吧。",
-            "value": "wrong3"
-          }
-        ],
-        "correct": "correct"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "Look! This is a bear.",
-        "chinese": "看！这是一只熊。",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
-            "value": "bear"
-          },
-          {
-            "text": "<img src=\"assets/images/cat.png\" width=\"80\">",
-            "value": "cat"
-          },
-          {
-            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
-            "value": "monkey"
-          },
-          {
-            "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
-            "value": "bird"
-          }
-        ],
-        "correct": "bear"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "It's big.",
-        "chinese": "它很大。",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
-            "value": "elephant"
-          },
-          {
-            "text": "<img src=\"assets/images/mouse.png\" width=\"80\">",
-            "value": "mouse"
-          },
-          {
-            "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
-            "value": "bird"
-          },
-          {
-            "text": "<img src=\"assets/images/duck.png\" width=\"80\">",
-            "value": "duck"
-          }
-        ],
-        "correct": "elephant"
-      },
-      {
         "type": "word_match",
         "word": "bear",
         "sentence": "This is a bear.",
         "chinese": "这是一只熊。",
         "options": [
-          {
-            "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
-            "value": "bear"
-          },
-          {
-            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
-            "value": "horse"
-          },
-          {
-            "text": "<img src=\"assets/images/duck.png\" width=\"80\">",
-            "value": "duck"
-          },
-          {
-            "text": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-            "value": "rabbit"
-          }
+          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"},
+          {"text": "<img src=\"assets/images/cat.png\" width=\"80\">", "value": "cat"},
+          {"text": "<img src=\"assets/images/dog.png\" width=\"80\">", "value": "dog"},
+          {"text": "<img src=\"assets/images/bird.png\" width=\"80\">", "value": "bird"}
         ],
         "correct": "bear"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "That is a horse.",
-        "chinese": "那是一匹马。",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
-            "value": "horse"
-          },
-          {
-            "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
-            "value": "bear"
-          },
-          {
-            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
-            "value": "panda"
-          },
-          {
-            "text": "<img src=\"assets/images/cat.png\" width=\"80\">",
-            "value": "cat"
-          }
-        ],
-        "correct": "horse"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "It can run fast.",
-        "chinese": "它能跑得很快。",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
-            "value": "horse"
-          },
-          {
-            "text": "<img src=\"assets/images/duck.png\" width=\"80\">",
-            "value": "duck"
-          },
-          {
-            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
-            "value": "panda"
-          },
-          {
-            "text": "<img src=\"assets/images/mouse.png\" width=\"80\">",
-            "value": "mouse"
-          }
-        ],
-        "correct": "horse"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "This is a red bird.",
-        "chinese": "这是一只红色的鸟。",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
-            "value": "bird"
-          },
-          {
-            "text": "<img src=\"assets/images/duck.png\" width=\"80\">",
-            "value": "duck"
-          },
-          {
-            "text": "<img src=\"assets/images/cat.png\" width=\"80\">",
-            "value": "cat"
-          },
-          {
-            "text": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-            "value": "rabbit"
-          }
-        ],
-        "correct": "bird"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "That is a blue bird.",
-        "chinese": "那是一只蓝色的鸟。",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
-            "value": "bird"
-          },
-          {
-            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
-            "value": "monkey"
-          },
-          {
-            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
-            "value": "horse"
-          },
-          {
-            "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
-            "value": "bear"
-          }
-        ],
-        "correct": "bird"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "They are beautiful.",
-        "chinese": "它们很漂亮。",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
-            "value": "bird"
-          },
-          {
-            "text": "<img src=\"assets/images/mouse.png\" width=\"80\">",
-            "value": "mouse"
-          },
-          {
-            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-            "value": "tiger"
-          },
-          {
-            "text": "<img src=\"assets/images/duck.png\" width=\"80\">",
-            "value": "duck"
-          }
-        ],
-        "correct": "bird"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "That is a panda.",
-        "chinese": "那是一只熊猫。",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
-            "value": "panda"
-          },
-          {
-            "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
-            "value": "bear"
-          },
-          {
-            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-            "value": "tiger"
-          },
-          {
-            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
-            "value": "monkey"
-          }
-        ],
-        "correct": "panda"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "It's black and white.",
-        "chinese": "它是黑白色的。",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
-            "value": "panda"
-          },
-          {
-            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
-            "value": "horse"
-          },
-          {
-            "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
-            "value": "bird"
-          },
-          {
-            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-            "value": "tiger"
-          }
-        ],
-        "correct": "panda"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "It's cute.",
-        "chinese": "它很可爱。",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
-            "value": "panda"
-          },
-          {
-            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
-            "value": "tiger"
-          },
-          {
-            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
-            "value": "horse"
-          },
-          {
-            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
-            "value": "elephant"
-          }
-        ],
-        "correct": "panda"
       },
       {
         "type": "word_match",
@@ -902,47 +276,121 @@ var lesson1 = {
         "sentence": "That is a panda.",
         "chinese": "那是一只熊猫。",
         "options": [
-          {
-            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
-            "value": "panda"
-          },
-          {
-            "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
-            "value": "bear"
-          },
-          {
-            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
-            "value": "horse"
-          },
-          {
-            "text": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-            "value": "rabbit"
-          }
+          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
+          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"},
+          {"text": "<img src=\"assets/images/monkey.png\" width=\"80\">", "value": "monkey"},
+          {"text": "<img src=\"assets/images/rabbit.png\" width=\"80\">", "value": "rabbit"}
         ],
         "correct": "panda"
       },
+      {
+        "type": "sentence_match",
+        "sentence": "This is a bear. It's big.",
+        "chinese": "这是一只熊。它很大。",
+        "options": [
+          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"},
+          {"text": "<img src=\"assets/images/mouse.png\" width=\"80\">", "value": "mouse"},
+          {"text": "<img src=\"assets/images/bird.png\" width=\"80\">", "value": "bird"},
+          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"}
+        ],
+        "correct": "bear"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "That is a horse. It can run fast.",
+        "chinese": "那是一匹马。它能跑得很快。",
+        "options": [
+          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
+          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
+          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
+          {"text": "<img src=\"assets/images/mouse.png\" width=\"80\">", "value": "mouse"}
+        ],
+        "correct": "horse"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "They are beautiful.",
+        "chinese": "它们很漂亮。",
+        "options": [
+          {"text": "它们很漂亮。", "value": "correct"},
+          {"text": "它们很大。", "value": "wrong1"},
+          {"text": "它们很可爱。", "value": "wrong2"},
+          {"text": "它是黑白色的。", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "It's black and white.",
+        "chinese": "它是黑白色的。",
+        "options": [
+          {"text": "它是黑白色的。", "value": "correct"},
+          {"text": "它是红色的。", "value": "wrong1"},
+          {"text": "它是棕色的。", "value": "wrong2"},
+          {"text": "它是蓝色的。", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "你在动物园看到一只大熊，你会说：",
+        "chinese": "情景选择",
+        "options": [
+          {"text": "This is a bear. It's big.", "value": "correct"},
+          {"text": "That is a panda. It's cute.", "value": "wrong1"},
+          {"text": "It can run fast.", "value": "wrong2"},
+          {"text": "They are beautiful.", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "你看到一只黑白色的熊猫，觉得很可爱，你会说：",
+        "chinese": "情景选择",
+        "options": [
+          {"text": "That is a panda. It's black and white. It's cute.", "value": "correct"},
+          {"text": "This is a bear. It's big.", "value": "wrong1"},
+          {"text": "That is a horse. It can run fast.", "value": "wrong2"},
+          {"text": "This is a red bird.", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "A: So many animals!\nB: ______",
+        "chinese": "A说好多动物！B应该说什么？",
+        "options": [
+          {"text": "Let's go in and have a look.", "value": "correct"},
+          {"text": "It's big.", "value": "wrong1"},
+          {"text": "They are beautiful.", "value": "wrong2"},
+          {"text": "It's black and white.", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "A: Let's go in and have a look.\nB: ______",
+        "chinese": "A说我们进去看看吧，B应该说什么？",
+        "options": [
+          {"text": "OK, let's go.", "value": "correct"},
+          {"text": "It's cute.", "value": "wrong1"},
+          {"text": "This is a bear.", "value": "wrong2"},
+          {"text": "They are beautiful.", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      }
+    ],
+    "practice": [
       {
         "type": "word_match",
         "word": "horse",
         "sentence": "That is a horse.",
         "chinese": "那是一匹马。",
         "options": [
-          {
-            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
-            "value": "horse"
-          },
-          {
-            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
-            "value": "panda"
-          },
-          {
-            "text": "<img src=\"assets/images/duck.png\" width=\"80\">",
-            "value": "duck"
-          },
-          {
-            "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
-            "value": "bird"
-          }
+          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
+          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"},
+          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
+          {"text": "<img src=\"assets/images/cat.png\" width=\"80\">", "value": "cat"}
         ],
         "correct": "horse"
       },
@@ -952,72 +400,12 @@ var lesson1 = {
         "sentence": "This is a red bird.",
         "chinese": "这是一只红色的鸟。",
         "options": [
-          {
-            "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
-            "value": "bird"
-          },
-          {
-            "text": "<img src=\"assets/images/cat.png\" width=\"80\">",
-            "value": "cat"
-          },
-          {
-            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
-            "value": "monkey"
-          },
-          {
-            "text": "<img src=\"assets/images/duck.png\" width=\"80\">",
-            "value": "duck"
-          }
+          {"text": "<img src=\"assets/images/bird.png\" width=\"80\">", "value": "bird"},
+          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
+          {"text": "<img src=\"assets/images/rabbit.png\" width=\"80\">", "value": "rabbit"},
+          {"text": "<img src=\"assets/images/monkey.png\" width=\"80\">", "value": "monkey"}
         ],
         "correct": "bird"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "That is a blue bird.",
-        "chinese": "那是一只蓝色的鸟。",
-        "options": [
-          {
-            "text": "那是一只蓝色的鸟。",
-            "value": "correct"
-          },
-          {
-            "text": "那是一只红色的鸟。",
-            "value": "wrong1"
-          },
-          {
-            "text": "那是一只绿色的鸟。",
-            "value": "wrong2"
-          },
-          {
-            "text": "那是一只黄色的鸟。",
-            "value": "wrong3"
-          }
-        ],
-        "correct": "correct"
-      },
-      {
-        "type": "sentence_match",
-        "sentence": "So many animals!",
-        "chinese": "好多动物！",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
-            "value": "bear"
-          },
-          {
-            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
-            "value": "horse"
-          },
-          {
-            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
-            "value": "panda"
-          },
-          {
-            "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
-            "value": "bird"
-          }
-        ],
-        "correct": "bear"
       },
       {
         "type": "word_match",
@@ -1025,24 +413,216 @@ var lesson1 = {
         "sentence": "Look! This is a bear.",
         "chinese": "看！这是一只熊。",
         "options": [
-          {
-            "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
-            "value": "bear"
-          },
-          {
-            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
-            "value": "monkey"
-          },
-          {
-            "text": "<img src=\"assets/images/duck.png\" width=\"80\">",
-            "value": "duck"
-          },
-          {
-            "text": "<img src=\"assets/images/cat.png\" width=\"80\">",
-            "value": "cat"
-          }
+          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"},
+          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
+          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
+          {"text": "<img src=\"assets/images/elephant.png\" width=\"80\">", "value": "elephant"}
         ],
         "correct": "bear"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "This is a red bird. That is a blue bird.",
+        "chinese": "这是一只红色的鸟。那是一只蓝色的鸟。",
+        "options": [
+          {"text": "<img src=\"assets/images/bird.png\" width=\"80\">", "value": "bird"},
+          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
+          {"text": "<img src=\"assets/images/cat.png\" width=\"80\">", "value": "cat"},
+          {"text": "<img src=\"assets/images/rabbit.png\" width=\"80\">", "value": "rabbit"}
+        ],
+        "correct": "bird"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "That is a panda. It's cute.",
+        "chinese": "那是一只熊猫。它很可爱。",
+        "options": [
+          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
+          {"text": "<img src=\"assets/images/tiger.png\" width=\"80\">", "value": "tiger"},
+          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"},
+          {"text": "<img src=\"assets/images/elephant.png\" width=\"80\">", "value": "elephant"}
+        ],
+        "correct": "panda"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "It's black and white. It's cute.",
+        "chinese": "它是黑白色的。它很可爱。",
+        "options": [
+          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
+          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
+          {"text": "<img src=\"assets/images/bird.png\" width=\"80\">", "value": "bird"},
+          {"text": "<img src=\"assets/images/tiger.png\" width=\"80\">", "value": "tiger"}
+        ],
+        "correct": "panda"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "So many animals!",
+        "chinese": "好多动物！",
+        "options": [
+          {"text": "好多动物！", "value": "correct"},
+          {"text": "好多人！", "value": "wrong1"},
+          {"text": "好多食物！", "value": "wrong2"},
+          {"text": "好多玩具！", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "Let's go in and have a look.",
+        "chinese": "我们进去看看吧。",
+        "options": [
+          {"text": "我们进去看看吧。", "value": "correct"},
+          {"text": "我们回家吧。", "value": "wrong1"},
+          {"text": "我们吃饭吧。", "value": "wrong2"},
+          {"text": "我们出去玩吧。", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "OK, let's go.",
+        "chinese": "好的，走吧。",
+        "options": [
+          {"text": "好的，走吧。", "value": "correct"},
+          {"text": "不，我不去。", "value": "wrong1"},
+          {"text": "好的，吃吧。", "value": "wrong2"},
+          {"text": "好的，睡吧。", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "It's cute.",
+        "chinese": "它很可爱。",
+        "options": [
+          {"text": "它很可爱。", "value": "correct"},
+          {"text": "它很大。", "value": "wrong1"},
+          {"text": "它很快。", "value": "wrong2"},
+          {"text": "它很漂亮。", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "你在动物园看到两只漂亮的鸟，你会说：",
+        "chinese": "情景选择",
+        "options": [
+          {"text": "This is a red bird. That is a blue bird. They are beautiful.", "value": "correct"},
+          {"text": "This is a bear. It's big.", "value": "wrong1"},
+          {"text": "That is a horse. It can run fast.", "value": "wrong2"},
+          {"text": "That is a panda. It's cute.", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "你看到一匹马跑得很快，你会说：",
+        "chinese": "情景选择",
+        "options": [
+          {"text": "That is a horse. It can run fast.", "value": "correct"},
+          {"text": "This is a bear. It's big.", "value": "wrong1"},
+          {"text": "That is a panda. It's cute.", "value": "wrong2"},
+          {"text": "They are beautiful.", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "你想邀请朋友一起去看动物，你会说：",
+        "chinese": "情景选择",
+        "options": [
+          {"text": "So many animals! Let's go in and have a look.", "value": "correct"},
+          {"text": "This is a bear. It's big.", "value": "wrong1"},
+          {"text": "That is a panda. It's cute.", "value": "wrong2"},
+          {"text": "It can run fast.", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "你看到一只熊猫，它是黑白色的，你想告诉朋友：",
+        "chinese": "情景选择",
+        "options": [
+          {"text": "That is a panda. It's black and white.", "value": "correct"},
+          {"text": "This is a bear. It's big.", "value": "wrong1"},
+          {"text": "This is a red bird.", "value": "wrong2"},
+          {"text": "It can run fast.", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "朋友说动物园看到一只很大的动物，你想知道是什么，你会说：",
+        "chinese": "情景选择",
+        "options": [
+          {"text": "It's big.", "value": "correct"},
+          {"text": "It's cute.", "value": "wrong1"},
+          {"text": "They are beautiful.", "value": "wrong2"},
+          {"text": "It can run fast.", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "A: Look! This is a bear.\nB: ______",
+        "chinese": "A说看这是一只熊，B应该说什么？",
+        "options": [
+          {"text": "It's big!", "value": "correct"},
+          {"text": "It can jump.", "value": "wrong1"},
+          {"text": "They are beautiful.", "value": "wrong2"},
+          {"text": "Let's draw.", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "A: This is a red bird. That is a blue bird.\nB: ______",
+        "chinese": "A介绍了两只鸟，B应该说什么？",
+        "options": [
+          {"text": "They are beautiful.", "value": "correct"},
+          {"text": "It's big.", "value": "wrong1"},
+          {"text": "It can run fast.", "value": "wrong2"},
+          {"text": "It's black and white.", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "A: That is a panda.\nB: ______",
+        "chinese": "A说那是一只熊猫，B应该说什么？",
+        "options": [
+          {"text": "It's black and white. It's cute.", "value": "correct"},
+          {"text": "It can run fast.", "value": "wrong1"},
+          {"text": "It's big.", "value": "wrong2"},
+          {"text": "They are beautiful.", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "A: That is a horse.\nB: ______",
+        "chinese": "A说那是一匹马，B应该说什么？",
+        "options": [
+          {"text": "It can run fast.", "value": "correct"},
+          {"text": "It's cute.", "value": "wrong1"},
+          {"text": "It's black and white.", "value": "wrong2"},
+          {"text": "They are beautiful.", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "A: So many animals! Let's go in and have a look.\nB: ______",
+        "chinese": "A说好多动物，我们进去看看吧，B应该说什么？",
+        "options": [
+          {"text": "OK, let's go.", "value": "correct"},
+          {"text": "It's big.", "value": "wrong1"},
+          {"text": "This is a bear.", "value": "wrong2"},
+          {"text": "It's cute.", "value": "wrong3"}
+        ],
+        "correct": "correct"
       }
     ]
   },
