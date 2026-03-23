@@ -5,35 +5,27 @@ function renderSpeakingQuestion(q, container) {
         renderWheelSpin(q, container);
         return;
     }
-    if (q.type === 'repeat_word' || q.type === 'repeat_sentence') {
-        var textEl = document.createElement('h2');
-        textEl.style.fontSize = q.type === 'repeat_sentence' ? '36px' : '50px';
-        textEl.style.textAlign = 'center';
-        textEl.textContent = q.word || q.sentence;
-        container.appendChild(textEl);
-        // 显示中文翻译帮助理解
-        if (q.chinese) {
-            var chineseEl = document.createElement('div');
-            chineseEl.style.cssText = 'text-align:center;font-size:20px;color:#888;margin-top:5px;margin-bottom:10px;';
-            chineseEl.textContent = q.chinese;
-            container.appendChild(chineseEl);
+    // 统一简洁布局：单词/句子 + 中文 + 麦克风，一屏搞定
+    if (q.type === 'repeat_word' || q.type === 'repeat_sentence' || q.type === 'picture_speak') {
+        // 如果有图片，小尺寸显示
+        if (q.type === 'picture_speak' && q.image) {
+            var imgEl = document.createElement('div');
+            imgEl.style.cssText = 'text-align:center;margin-bottom:10px;';
+            imgEl.innerHTML = q.image;
+            container.appendChild(imgEl);
         }
-    } else if (q.type === 'picture_speak') {
-        var imgEl = document.createElement('div');
-        imgEl.style.fontSize = '80px';
-        imgEl.style.marginBottom = '10px';
-        imgEl.innerHTML = q.image;
-        container.appendChild(imgEl);
-        // 图片下方显示英文+中文
-        if (q.expected || q.word) {
+        // 英文单词/句子（核心内容）
+        var word = q.word || q.sentence || q.expected || '';
+        if (word) {
             var wordEl = document.createElement('div');
-            wordEl.style.cssText = 'text-align:center;font-size:36px;font-weight:bold;margin-bottom:5px;';
-            wordEl.textContent = q.expected || q.word;
+            wordEl.style.cssText = 'text-align:center;font-size:' + (word.length > 15 ? '28px' : '42px') + ';font-weight:bold;margin-bottom:8px;';
+            wordEl.textContent = word;
             container.appendChild(wordEl);
         }
+        // 中文翻译（小字灰色）
         if (q.chinese) {
             var chEl = document.createElement('div');
-            chEl.style.cssText = 'text-align:center;font-size:18px;color:#888;margin-bottom:15px;';
+            chEl.style.cssText = 'text-align:center;font-size:16px;color:#aaa;margin-bottom:15px;';
             chEl.textContent = q.chinese;
             container.appendChild(chEl);
         }
@@ -105,32 +97,12 @@ function renderSpeakingQuestion(q, container) {
         return;
     }
 
-    // Play demo audio button
-    const demoBtn = document.createElement('button');
-    demoBtn.className = 'play-sound-btn animate-pop';
-    demoBtn.style.marginBottom = '10px';
+    // 🔊 听示范按钮（小号，不占太多空间）
+    var demoBtn = document.createElement('button');
+    demoBtn.style.cssText = 'background:#1cb0f6;border:none;border-radius:50%;width:50px;height:50px;font-size:24px;color:white;cursor:pointer;margin-bottom:15px;box-shadow:0 3px 0 #0d8ecf;';
     demoBtn.innerHTML = '🔊';
-    // Fallback to text to speech if audio file is not available natively yet
-    demoBtn.onclick = () => speakWord(q.word || q.sentence || q.expected);
+    demoBtn.onclick = function() { speakWord(q.word || q.sentence || q.expected); };
     container.appendChild(demoBtn);
-
-    const hintEl = document.createElement('div');
-    hintEl.style.color = 'var(--gray-shadow)';
-    hintEl.style.marginBottom = '30px';
-    hintEl.textContent = '先听示范';
-    container.appendChild(hintEl);
-
-    // 录音区域上方显示中英文提示（确保所有口语题都有）
-    var spWord = q.word || q.sentence || q.expected || '';
-    var spChinese = q.chinese || '';
-    if (spWord || spChinese) {
-        var speakHintEl = document.createElement('div');
-        speakHintEl.style.cssText = 'text-align:center;margin-bottom:15px;';
-        speakHintEl.innerHTML = '<div style="font-size:16px;color:#888;margin-bottom:5px;">请跟读：</div>' +
-            (spWord ? '<div style="font-size:28px;font-weight:bold;color:#333;">' + spWord + '</div>' : '') +
-            (spChinese ? '<div style="font-size:16px;color:#888;margin-top:3px;">' + spChinese + '</div>' : '');
-        container.appendChild(speakHintEl);
-    }
 
     // 录音按钮（多邻国风格：一个大按钮，点击切换状态）
     var recordBtn = document.createElement('button');
