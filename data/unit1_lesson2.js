@@ -43,20 +43,6 @@ var lesson2 = {
         "chinese": "宝宝"
       },
       {
-        "type": "listen_select",
-        "audio": "They have small ears and black eyes.",
-        "options": ["它们有小耳朵和黑眼睛。", "它们有长腿。", "它们是棕色的。", "它们很可爱。"],
-        "correct": 0,
-        "chinese": "它们有小耳朵和黑眼睛。"
-      },
-      {
-        "type": "listen_select",
-        "audio": "They are lovely.",
-        "options": ["它们很可爱。", "它们是棕色的。", "它们有长腿。", "它们有小耳朵。"],
-        "correct": 0,
-        "chinese": "它们很可爱。"
-      },
-      {
         "type": "listen_tf",
         "audio": "These are pandas.",
         "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
@@ -72,22 +58,61 @@ var lesson2 = {
       },
       {
         "type": "listen_select",
+        "audio": "They have small ears and black eyes.",
+        "options": [
+          "它们有小耳朵和黑眼睛。",
+          "它们有长腿。",
+          "它们是棕色的。",
+          "它们很可爱。"
+        ],
+        "correct": 0,
+        "chinese": "它们有小耳朵和黑眼睛。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "They are lovely.",
+        "options": [
+          "它们很可爱。",
+          "它们是棕色的。",
+          "它们有长腿。",
+          "它们有小耳朵。"
+        ],
+        "correct": 0,
+        "chinese": "它们很可爱。"
+      },
+      {
+        "type": "listen_select",
         "audio": "___ are pandas. They have small ears.",
-        "options": ["Those", "These", "This", "That"],
+        "options": [
+          "Those",
+          "These",
+          "This",
+          "That"
+        ],
         "correct": 1,
         "chinese": "___是熊猫。它们有小耳朵。(这些)"
       },
       {
         "type": "listen_select",
         "audio": "___ are horses. They have long legs.",
-        "options": ["These", "This", "Those", "That"],
+        "options": [
+          "These",
+          "This",
+          "Those",
+          "That"
+        ],
         "correct": 2,
         "chinese": "___是马。它们有长腿。(那些)"
       },
       {
         "type": "listen_select",
         "audio": "You see baby pandas. They are very cute. What do you say?",
-        "options": ["They are lovely.", "They have long legs.", "They are brown.", "They like grass."],
+        "options": [
+          "They are lovely.",
+          "They have long legs.",
+          "They are brown.",
+          "They like grass."
+        ],
         "correct": 0,
         "chinese": "你看到熊猫宝宝，它们非常可爱，你会说什么？"
       }
@@ -142,55 +167,6 @@ var lesson2 = {
         "chinese": "小的"
       },
       {
-        "type": "listen_select",
-        "audio": "These are pandas.",
-        "options": ["这些是熊猫。", "那些是马。", "它们有小耳朵。", "它们很可爱。"],
-        "correct": 0,
-        "chinese": "这些是熊猫。"
-      },
-      {
-        "type": "listen_select",
-        "audio": "Those are horses.",
-        "options": ["它们有长腿。", "那些是马。", "它们是棕色的。", "这些是熊猫。"],
-        "correct": 1,
-        "chinese": "那些是马。"
-      },
-      {
-        "type": "listen_select",
-        "audio": "They are brown.",
-        "options": ["它们很可爱。", "它们有小耳朵。", "它们是棕色的。", "它们有长腿。"],
-        "correct": 2,
-        "chinese": "它们是棕色的。"
-      },
-      {
-        "type": "listen_select",
-        "audio": "They like grass.",
-        "options": ["它们喜欢吃草。", "它们有长腿。", "它们是棕色的。", "它们很可爱。"],
-        "correct": 0,
-        "chinese": "它们喜欢吃草。"
-      },
-      {
-        "type": "listen_select",
-        "audio": "___ are pandas. They have ___ ears.",
-        "options": ["These, small", "Those, long", "This, big", "That, black"],
-        "correct": 0,
-        "chinese": "___是熊猫。它们有___耳朵。(这些，小)"
-      },
-      {
-        "type": "listen_select",
-        "audio": "Those are horses. They have ___ legs.",
-        "options": ["small", "black", "long", "brown"],
-        "correct": 2,
-        "chinese": "那些是马。它们有___腿。(长)"
-      },
-      {
-        "type": "listen_select",
-        "audio": "They have small ears and ___ eyes.",
-        "options": ["long", "brown", "black", "big"],
-        "correct": 2,
-        "chinese": "它们有小耳朵和___眼睛。(黑色的)"
-      },
-      {
         "type": "listen_tf",
         "audio": "These are pandas.",
         "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
@@ -213,43 +189,157 @@ var lesson2 = {
       },
       {
         "type": "listen_select",
+        "audio": "These are pandas.",
+        "options": [
+          "这些是熊猫。",
+          "那些是马。",
+          "它们有小耳朵。",
+          "它们很可爱。"
+        ],
+        "correct": 0,
+        "chinese": "这些是熊猫。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Those are horses.",
+        "options": [
+          "它们有长腿。",
+          "那些是马。",
+          "它们是棕色的。",
+          "这些是熊猫。"
+        ],
+        "correct": 1,
+        "chinese": "那些是马。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "They are brown.",
+        "options": [
+          "它们很可爱。",
+          "它们有小耳朵。",
+          "它们是棕色的。",
+          "它们有长腿。"
+        ],
+        "correct": 2,
+        "chinese": "它们是棕色的。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "They like grass.",
+        "options": [
+          "它们喜欢吃草。",
+          "它们有长腿。",
+          "它们是棕色的。",
+          "它们很可爱。"
+        ],
+        "correct": 0,
+        "chinese": "它们喜欢吃草。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "___ are pandas. They have ___ ears.",
+        "options": [
+          "These, small",
+          "Those, long",
+          "This, big",
+          "That, black"
+        ],
+        "correct": 0,
+        "chinese": "___是熊猫。它们有___耳朵。(这些，小)"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Those are horses. They have ___ legs.",
+        "options": [
+          "small",
+          "black",
+          "long",
+          "brown"
+        ],
+        "correct": 2,
+        "chinese": "那些是马。它们有___腿。(长)"
+      },
+      {
+        "type": "listen_select",
+        "audio": "They have small ears and ___ eyes.",
+        "options": [
+          "long",
+          "brown",
+          "black",
+          "big"
+        ],
+        "correct": 2,
+        "chinese": "它们有小耳朵和___眼睛。(黑色的)"
+      },
+      {
+        "type": "listen_select",
         "audio": "A says: These are pandas. What does B say?",
-        "options": ["They have small ears and black eyes.", "They have long legs.", "They are brown.", "They like grass."],
+        "options": [
+          "They have small ears and black eyes.",
+          "They have long legs.",
+          "They are brown.",
+          "They like grass."
+        ],
         "correct": 0,
         "chinese": "A说：这些是熊猫。B会说什么？"
       },
       {
         "type": "listen_select",
         "audio": "A says: Those are horses. What does B say?",
-        "options": ["They have small ears.", "They are brown. They have long legs.", "They are lovely.", "They have black eyes."],
+        "options": [
+          "They have small ears.",
+          "They are brown. They have long legs.",
+          "They are lovely.",
+          "They have black eyes."
+        ],
         "correct": 1,
         "chinese": "A说：那些是马。B会说什么？"
       },
       {
         "type": "listen_select",
         "audio": "A says: Look! Baby pandas! What does B say?",
-        "options": ["They have long legs.", "They are brown.", "They are lovely.", "They like grass."],
+        "options": [
+          "They have long legs.",
+          "They are brown.",
+          "They are lovely.",
+          "They like grass."
+        ],
         "correct": 2,
         "chinese": "A说：看！熊猫宝宝！B会说什么？"
       },
       {
         "type": "listen_select",
         "audio": "You see brown horses eating grass. What do you say?",
-        "options": ["They like grass.", "They have small ears.", "They are lovely.", "They have black eyes."],
+        "options": [
+          "They like grass.",
+          "They have small ears.",
+          "They are lovely.",
+          "They have black eyes."
+        ],
         "correct": 0,
         "chinese": "你看到棕色的马在吃草，你会说什么？"
       },
       {
         "type": "listen_select",
         "audio": "You see pandas with small ears. What do you say?",
-        "options": ["They have long legs.", "They are brown.", "They have small ears and black eyes.", "They like grass."],
+        "options": [
+          "They have long legs.",
+          "They are brown.",
+          "They have small ears and black eyes.",
+          "They like grass."
+        ],
         "correct": 2,
         "chinese": "你看到有小耳朵的熊猫，你会说什么？"
       },
       {
         "type": "listen_select",
         "audio": "You see cute baby pandas. What do you say?",
-        "options": ["They are brown.", "Baby pandas! They are lovely.", "They have long legs.", "They like grass."],
+        "options": [
+          "They are brown.",
+          "Baby pandas! They are lovely.",
+          "They have long legs.",
+          "They like grass."
+        ],
         "correct": 1,
         "chinese": "你看到可爱的熊猫宝宝，你会说什么？"
       }
@@ -263,10 +353,22 @@ var lesson2 = {
         "sentence": "These are pandas.",
         "chinese": "这些是熊猫。",
         "options": [
-          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
-          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"},
-          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
-          {"text": "<img src=\"assets/images/rabbit.png\" width=\"80\">", "value": "rabbit"}
+          {
+            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
+            "value": "panda"
+          },
+          {
+            "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
+            "value": "bear"
+          },
+          {
+            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
+            "value": "horse"
+          },
+          {
+            "text": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+            "value": "rabbit"
+          }
         ],
         "correct": "panda"
       },
@@ -276,10 +378,22 @@ var lesson2 = {
         "sentence": "Those are horses.",
         "chinese": "那些是马。",
         "options": [
-          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
-          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
-          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
-          {"text": "<img src=\"assets/images/bird.png\" width=\"80\">", "value": "bird"}
+          {
+            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
+            "value": "horse"
+          },
+          {
+            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
+            "value": "panda"
+          },
+          {
+            "text": "<img src=\"assets/images/duck.png\" width=\"80\">",
+            "value": "duck"
+          },
+          {
+            "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
+            "value": "bird"
+          }
         ],
         "correct": "horse"
       },
@@ -288,10 +402,22 @@ var lesson2 = {
         "sentence": "These are pandas. They have small ears and black eyes.",
         "chinese": "这些是熊猫。它们有小耳朵和黑眼睛。",
         "options": [
-          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
-          {"text": "<img src=\"assets/images/rabbit.png\" width=\"80\">", "value": "rabbit"},
-          {"text": "<img src=\"assets/images/cat.png\" width=\"80\">", "value": "cat"},
-          {"text": "<img src=\"assets/images/dog.png\" width=\"80\">", "value": "dog"}
+          {
+            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
+            "value": "panda"
+          },
+          {
+            "text": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+            "value": "rabbit"
+          },
+          {
+            "text": "<img src=\"assets/images/cat.png\" width=\"80\">",
+            "value": "cat"
+          },
+          {
+            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
+            "value": "dog"
+          }
         ],
         "correct": "panda"
       },
@@ -300,10 +426,22 @@ var lesson2 = {
         "sentence": "Those are horses. They are brown.",
         "chinese": "那些是马。它们是棕色的。",
         "options": [
-          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
-          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
-          {"text": "<img src=\"assets/images/bird.png\" width=\"80\">", "value": "bird"},
-          {"text": "<img src=\"assets/images/rabbit.png\" width=\"80\">", "value": "rabbit"}
+          {
+            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
+            "value": "horse"
+          },
+          {
+            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
+            "value": "panda"
+          },
+          {
+            "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
+            "value": "bird"
+          },
+          {
+            "text": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+            "value": "rabbit"
+          }
         ],
         "correct": "horse"
       },
@@ -312,10 +450,22 @@ var lesson2 = {
         "sentence": "They have long legs.",
         "chinese": "它们有长腿。",
         "options": [
-          {"text": "它们有长腿。", "value": "correct"},
-          {"text": "它们有短腿。", "value": "wrong1"},
-          {"text": "它们有长耳朵。", "value": "wrong2"},
-          {"text": "它们有大眼睛。", "value": "wrong3"}
+          {
+            "text": "它们有长腿。",
+            "value": "correct"
+          },
+          {
+            "text": "它们有短腿。",
+            "value": "wrong1"
+          },
+          {
+            "text": "它们有长耳朵。",
+            "value": "wrong2"
+          },
+          {
+            "text": "它们有大眼睛。",
+            "value": "wrong3"
+          }
         ],
         "correct": "correct"
       },
@@ -324,10 +474,22 @@ var lesson2 = {
         "sentence": "They like grass.",
         "chinese": "它们喜欢吃草。",
         "options": [
-          {"text": "它们喜欢吃草。", "value": "correct"},
-          {"text": "它们喜欢吃鱼。", "value": "wrong1"},
-          {"text": "它们喜欢吃肉。", "value": "wrong2"},
-          {"text": "它们喜欢吃水果。", "value": "wrong3"}
+          {
+            "text": "它们喜欢吃草。",
+            "value": "correct"
+          },
+          {
+            "text": "它们喜欢吃鱼。",
+            "value": "wrong1"
+          },
+          {
+            "text": "它们喜欢吃肉。",
+            "value": "wrong2"
+          },
+          {
+            "text": "它们喜欢吃水果。",
+            "value": "wrong3"
+          }
         ],
         "correct": "correct"
       },
@@ -336,10 +498,22 @@ var lesson2 = {
         "sentence": "你看到几只熊猫宝宝，觉得很可爱，你会说：",
         "chinese": "情景选择",
         "options": [
-          {"text": "Baby pandas. They are lovely.", "value": "correct"},
-          {"text": "Those are horses. They are brown.", "value": "wrong1"},
-          {"text": "They have long legs.", "value": "wrong2"},
-          {"text": "They like grass.", "value": "wrong3"}
+          {
+            "text": "Baby pandas. They are lovely.",
+            "value": "correct"
+          },
+          {
+            "text": "Those are horses. They are brown.",
+            "value": "wrong1"
+          },
+          {
+            "text": "They have long legs.",
+            "value": "wrong2"
+          },
+          {
+            "text": "They like grass.",
+            "value": "wrong3"
+          }
         ],
         "correct": "correct"
       },
@@ -348,10 +522,22 @@ var lesson2 = {
         "sentence": "你想告诉朋友那些棕色的动物是马，你会说：",
         "chinese": "情景选择",
         "options": [
-          {"text": "Those are horses. They are brown.", "value": "correct"},
-          {"text": "These are pandas. They are lovely.", "value": "wrong1"},
-          {"text": "Baby pandas.", "value": "wrong2"},
-          {"text": "They have small ears.", "value": "wrong3"}
+          {
+            "text": "Those are horses. They are brown.",
+            "value": "correct"
+          },
+          {
+            "text": "These are pandas. They are lovely.",
+            "value": "wrong1"
+          },
+          {
+            "text": "Baby pandas.",
+            "value": "wrong2"
+          },
+          {
+            "text": "They have small ears.",
+            "value": "wrong3"
+          }
         ],
         "correct": "correct"
       },
@@ -360,10 +546,22 @@ var lesson2 = {
         "sentence": "A: These are pandas.\nB: ______",
         "chinese": "A说这些是熊猫，B应该怎么描述它们？",
         "options": [
-          {"text": "They have small ears and black eyes.", "value": "correct"},
-          {"text": "They have long legs.", "value": "wrong1"},
-          {"text": "They are brown.", "value": "wrong2"},
-          {"text": "They like grass.", "value": "wrong3"}
+          {
+            "text": "They have small ears and black eyes.",
+            "value": "correct"
+          },
+          {
+            "text": "They have long legs.",
+            "value": "wrong1"
+          },
+          {
+            "text": "They are brown.",
+            "value": "wrong2"
+          },
+          {
+            "text": "They like grass.",
+            "value": "wrong3"
+          }
         ],
         "correct": "correct"
       },
@@ -372,10 +570,22 @@ var lesson2 = {
         "sentence": "A: Those are horses.\nB: ______",
         "chinese": "A说那些是马，B应该怎么描述它们？",
         "options": [
-          {"text": "They have long legs. They like grass.", "value": "correct"},
-          {"text": "They have small ears.", "value": "wrong1"},
-          {"text": "Baby pandas.", "value": "wrong2"},
-          {"text": "They are lovely.", "value": "wrong3"}
+          {
+            "text": "They have long legs. They like grass.",
+            "value": "correct"
+          },
+          {
+            "text": "They have small ears.",
+            "value": "wrong1"
+          },
+          {
+            "text": "Baby pandas.",
+            "value": "wrong2"
+          },
+          {
+            "text": "They are lovely.",
+            "value": "wrong3"
+          }
         ],
         "correct": "correct"
       }
@@ -387,10 +597,22 @@ var lesson2 = {
         "sentence": "These are pandas.",
         "chinese": "这些是熊猫。",
         "options": [
-          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
-          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"},
-          {"text": "<img src=\"assets/images/tiger.png\" width=\"80\">", "value": "tiger"},
-          {"text": "<img src=\"assets/images/rabbit.png\" width=\"80\">", "value": "rabbit"}
+          {
+            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
+            "value": "panda"
+          },
+          {
+            "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
+            "value": "bear"
+          },
+          {
+            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
+            "value": "tiger"
+          },
+          {
+            "text": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+            "value": "rabbit"
+          }
         ],
         "correct": "panda"
       },
@@ -400,10 +622,22 @@ var lesson2 = {
         "sentence": "Those are horses.",
         "chinese": "那些是马。",
         "options": [
-          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
-          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
-          {"text": "<img src=\"assets/images/elephant.png\" width=\"80\">", "value": "elephant"},
-          {"text": "<img src=\"assets/images/bird.png\" width=\"80\">", "value": "bird"}
+          {
+            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
+            "value": "horse"
+          },
+          {
+            "text": "<img src=\"assets/images/duck.png\" width=\"80\">",
+            "value": "duck"
+          },
+          {
+            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
+            "value": "elephant"
+          },
+          {
+            "text": "<img src=\"assets/images/bird.png\" width=\"80\">",
+            "value": "bird"
+          }
         ],
         "correct": "horse"
       },
@@ -413,10 +647,22 @@ var lesson2 = {
         "sentence": "Baby pandas.",
         "chinese": "熊猫宝宝。",
         "options": [
-          {"text": "<img src=\"assets/images/baby.png\" width=\"80\">", "value": "baby"},
-          {"text": "<img src=\"assets/images/bear.png\" width=\"80\">", "value": "bear"},
-          {"text": "<img src=\"assets/images/monkey.png\" width=\"80\">", "value": "monkey"},
-          {"text": "<img src=\"assets/images/cat.png\" width=\"80\">", "value": "cat"}
+          {
+            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
+            "value": "baby"
+          },
+          {
+            "text": "<img src=\"assets/images/bear.png\" width=\"80\">",
+            "value": "bear"
+          },
+          {
+            "text": "<img src=\"assets/images/monkey.png\" width=\"80\">",
+            "value": "monkey"
+          },
+          {
+            "text": "<img src=\"assets/images/cat.png\" width=\"80\">",
+            "value": "cat"
+          }
         ],
         "correct": "baby"
       },
@@ -425,10 +671,22 @@ var lesson2 = {
         "sentence": "These are pandas. They have small ears and black eyes.",
         "chinese": "这些是熊猫。它们有小耳朵和黑眼睛。",
         "options": [
-          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
-          {"text": "<img src=\"assets/images/rabbit.png\" width=\"80\">", "value": "rabbit"},
-          {"text": "<img src=\"assets/images/dog.png\" width=\"80\">", "value": "dog"},
-          {"text": "<img src=\"assets/images/cat.png\" width=\"80\">", "value": "cat"}
+          {
+            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
+            "value": "panda"
+          },
+          {
+            "text": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+            "value": "rabbit"
+          },
+          {
+            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
+            "value": "dog"
+          },
+          {
+            "text": "<img src=\"assets/images/cat.png\" width=\"80\">",
+            "value": "cat"
+          }
         ],
         "correct": "panda"
       },
@@ -437,10 +695,22 @@ var lesson2 = {
         "sentence": "Those are horses. They have long legs.",
         "chinese": "那些是马。它们有长腿。",
         "options": [
-          {"text": "<img src=\"assets/images/horse.png\" width=\"80\">", "value": "horse"},
-          {"text": "<img src=\"assets/images/duck.png\" width=\"80\">", "value": "duck"},
-          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
-          {"text": "<img src=\"assets/images/mouse.png\" width=\"80\">", "value": "mouse"}
+          {
+            "text": "<img src=\"assets/images/horse.png\" width=\"80\">",
+            "value": "horse"
+          },
+          {
+            "text": "<img src=\"assets/images/duck.png\" width=\"80\">",
+            "value": "duck"
+          },
+          {
+            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
+            "value": "panda"
+          },
+          {
+            "text": "<img src=\"assets/images/mouse.png\" width=\"80\">",
+            "value": "mouse"
+          }
         ],
         "correct": "horse"
       },
@@ -449,10 +719,22 @@ var lesson2 = {
         "sentence": "Baby pandas. They are lovely.",
         "chinese": "熊猫宝宝。它们很可爱。",
         "options": [
-          {"text": "<img src=\"assets/images/panda.png\" width=\"80\">", "value": "panda"},
-          {"text": "<img src=\"assets/images/tiger.png\" width=\"80\">", "value": "tiger"},
-          {"text": "<img src=\"assets/images/elephant.png\" width=\"80\">", "value": "elephant"},
-          {"text": "<img src=\"assets/images/lion.png\" width=\"80\">", "value": "lion"}
+          {
+            "text": "<img src=\"assets/images/panda.png\" width=\"80\">",
+            "value": "panda"
+          },
+          {
+            "text": "<img src=\"assets/images/tiger.png\" width=\"80\">",
+            "value": "tiger"
+          },
+          {
+            "text": "<img src=\"assets/images/elephant.png\" width=\"80\">",
+            "value": "elephant"
+          },
+          {
+            "text": "<img src=\"assets/images/lion.png\" width=\"80\">",
+            "value": "lion"
+          }
         ],
         "correct": "panda"
       },
@@ -461,10 +743,22 @@ var lesson2 = {
         "sentence": "These are pandas.",
         "chinese": "这些是熊猫。",
         "options": [
-          {"text": "这些是熊猫。", "value": "correct"},
-          {"text": "这些是老虎。", "value": "wrong1"},
-          {"text": "那些是熊猫。", "value": "wrong2"},
-          {"text": "这些是小鸟。", "value": "wrong3"}
+          {
+            "text": "这些是熊猫。",
+            "value": "correct"
+          },
+          {
+            "text": "这些是老虎。",
+            "value": "wrong1"
+          },
+          {
+            "text": "那些是熊猫。",
+            "value": "wrong2"
+          },
+          {
+            "text": "这些是小鸟。",
+            "value": "wrong3"
+          }
         ],
         "correct": "correct"
       },
@@ -473,10 +767,22 @@ var lesson2 = {
         "sentence": "They have small ears and black eyes.",
         "chinese": "它们有小耳朵和黑眼睛。",
         "options": [
-          {"text": "它们有小耳朵和黑眼睛。", "value": "correct"},
-          {"text": "它们有大耳朵和蓝眼睛。", "value": "wrong1"},
-          {"text": "它们有长耳朵和红眼睛。", "value": "wrong2"},
-          {"text": "它们有小嘴巴和黑鼻子。", "value": "wrong3"}
+          {
+            "text": "它们有小耳朵和黑眼睛。",
+            "value": "correct"
+          },
+          {
+            "text": "它们有大耳朵和蓝眼睛。",
+            "value": "wrong1"
+          },
+          {
+            "text": "它们有长耳朵和红眼睛。",
+            "value": "wrong2"
+          },
+          {
+            "text": "它们有小嘴巴和黑鼻子。",
+            "value": "wrong3"
+          }
         ],
         "correct": "correct"
       },
@@ -485,10 +791,22 @@ var lesson2 = {
         "sentence": "Those are horses.",
         "chinese": "那些是马。",
         "options": [
-          {"text": "那些是马。", "value": "correct"},
-          {"text": "这些是马。", "value": "wrong1"},
-          {"text": "那些是猫。", "value": "wrong2"},
-          {"text": "那些是鸟。", "value": "wrong3"}
+          {
+            "text": "那些是马。",
+            "value": "correct"
+          },
+          {
+            "text": "这些是马。",
+            "value": "wrong1"
+          },
+          {
+            "text": "那些是猫。",
+            "value": "wrong2"
+          },
+          {
+            "text": "那些是鸟。",
+            "value": "wrong3"
+          }
         ],
         "correct": "correct"
       },
@@ -497,10 +815,22 @@ var lesson2 = {
         "sentence": "They are brown.",
         "chinese": "它们是棕色的。",
         "options": [
-          {"text": "它们是棕色的。", "value": "correct"},
-          {"text": "它们是黑白色的。", "value": "wrong1"},
-          {"text": "它们是红色的。", "value": "wrong2"},
-          {"text": "它们是绿色的。", "value": "wrong3"}
+          {
+            "text": "它们是棕色的。",
+            "value": "correct"
+          },
+          {
+            "text": "它们是黑白色的。",
+            "value": "wrong1"
+          },
+          {
+            "text": "它们是红色的。",
+            "value": "wrong2"
+          },
+          {
+            "text": "它们是绿色的。",
+            "value": "wrong3"
+          }
         ],
         "correct": "correct"
       },
@@ -509,10 +839,22 @@ var lesson2 = {
         "sentence": "你看到一群熊猫有小耳朵和黑眼睛，你想告诉朋友：",
         "chinese": "情景选择",
         "options": [
-          {"text": "These are pandas. They have small ears and black eyes.", "value": "correct"},
-          {"text": "Those are horses. They are brown.", "value": "wrong1"},
-          {"text": "Baby pandas. They are lovely.", "value": "wrong2"},
-          {"text": "They have long legs.", "value": "wrong3"}
+          {
+            "text": "These are pandas. They have small ears and black eyes.",
+            "value": "correct"
+          },
+          {
+            "text": "Those are horses. They are brown.",
+            "value": "wrong1"
+          },
+          {
+            "text": "Baby pandas. They are lovely.",
+            "value": "wrong2"
+          },
+          {
+            "text": "They have long legs.",
+            "value": "wrong3"
+          }
         ],
         "correct": "correct"
       },
@@ -521,10 +863,22 @@ var lesson2 = {
         "sentence": "你想描述马喜欢吃草，你会说：",
         "chinese": "情景选择",
         "options": [
-          {"text": "They like grass.", "value": "correct"},
-          {"text": "They are lovely.", "value": "wrong1"},
-          {"text": "They have small ears.", "value": "wrong2"},
-          {"text": "Baby pandas.", "value": "wrong3"}
+          {
+            "text": "They like grass.",
+            "value": "correct"
+          },
+          {
+            "text": "They are lovely.",
+            "value": "wrong1"
+          },
+          {
+            "text": "They have small ears.",
+            "value": "wrong2"
+          },
+          {
+            "text": "Baby pandas.",
+            "value": "wrong3"
+          }
         ],
         "correct": "correct"
       },
@@ -533,10 +887,22 @@ var lesson2 = {
         "sentence": "你看到马有长长的腿，你会说：",
         "chinese": "情景选择",
         "options": [
-          {"text": "Those are horses. They have long legs.", "value": "correct"},
-          {"text": "These are pandas. They have small ears.", "value": "wrong1"},
-          {"text": "Baby pandas. They are lovely.", "value": "wrong2"},
-          {"text": "They like grass.", "value": "wrong3"}
+          {
+            "text": "Those are horses. They have long legs.",
+            "value": "correct"
+          },
+          {
+            "text": "These are pandas. They have small ears.",
+            "value": "wrong1"
+          },
+          {
+            "text": "Baby pandas. They are lovely.",
+            "value": "wrong2"
+          },
+          {
+            "text": "They like grass.",
+            "value": "wrong3"
+          }
         ],
         "correct": "correct"
       },
@@ -545,10 +911,22 @@ var lesson2 = {
         "sentence": "你看到很可爱的熊猫宝宝，你会说：",
         "chinese": "情景选择",
         "options": [
-          {"text": "Baby pandas. They are lovely.", "value": "correct"},
-          {"text": "Those are horses. They are brown.", "value": "wrong1"},
-          {"text": "They have long legs.", "value": "wrong2"},
-          {"text": "They like grass.", "value": "wrong3"}
+          {
+            "text": "Baby pandas. They are lovely.",
+            "value": "correct"
+          },
+          {
+            "text": "Those are horses. They are brown.",
+            "value": "wrong1"
+          },
+          {
+            "text": "They have long legs.",
+            "value": "wrong2"
+          },
+          {
+            "text": "They like grass.",
+            "value": "wrong3"
+          }
         ],
         "correct": "correct"
       },
@@ -557,10 +935,22 @@ var lesson2 = {
         "sentence": "你看到棕色的马在吃草，你想描述它们：",
         "chinese": "情景选择",
         "options": [
-          {"text": "Those are horses. They are brown. They like grass.", "value": "correct"},
-          {"text": "These are pandas. They have small ears.", "value": "wrong1"},
-          {"text": "Baby pandas. They are lovely.", "value": "wrong2"},
-          {"text": "They have small ears and black eyes.", "value": "wrong3"}
+          {
+            "text": "Those are horses. They are brown. They like grass.",
+            "value": "correct"
+          },
+          {
+            "text": "These are pandas. They have small ears.",
+            "value": "wrong1"
+          },
+          {
+            "text": "Baby pandas. They are lovely.",
+            "value": "wrong2"
+          },
+          {
+            "text": "They have small ears and black eyes.",
+            "value": "wrong3"
+          }
         ],
         "correct": "correct"
       },
@@ -569,10 +959,22 @@ var lesson2 = {
         "sentence": "A: Look! These are pandas.\nB: ______",
         "chinese": "A说看这些是熊猫，B应该怎么描述？",
         "options": [
-          {"text": "They have small ears and black eyes.", "value": "correct"},
-          {"text": "They have long legs.", "value": "wrong1"},
-          {"text": "They are brown.", "value": "wrong2"},
-          {"text": "They like grass.", "value": "wrong3"}
+          {
+            "text": "They have small ears and black eyes.",
+            "value": "correct"
+          },
+          {
+            "text": "They have long legs.",
+            "value": "wrong1"
+          },
+          {
+            "text": "They are brown.",
+            "value": "wrong2"
+          },
+          {
+            "text": "They like grass.",
+            "value": "wrong3"
+          }
         ],
         "correct": "correct"
       },
@@ -581,10 +983,22 @@ var lesson2 = {
         "sentence": "A: Those are horses. They are brown.\nB: ______",
         "chinese": "A说那些是马，它们是棕色的，B接着说什么？",
         "options": [
-          {"text": "They have long legs. They like grass.", "value": "correct"},
-          {"text": "They have small ears.", "value": "wrong1"},
-          {"text": "Baby pandas.", "value": "wrong2"},
-          {"text": "They are lovely.", "value": "wrong3"}
+          {
+            "text": "They have long legs. They like grass.",
+            "value": "correct"
+          },
+          {
+            "text": "They have small ears.",
+            "value": "wrong1"
+          },
+          {
+            "text": "Baby pandas.",
+            "value": "wrong2"
+          },
+          {
+            "text": "They are lovely.",
+            "value": "wrong3"
+          }
         ],
         "correct": "correct"
       },
@@ -593,10 +1007,22 @@ var lesson2 = {
         "sentence": "A: Look! Baby pandas.\nB: ______",
         "chinese": "A说看熊猫宝宝，B应该说什么？",
         "options": [
-          {"text": "They are lovely.", "value": "correct"},
-          {"text": "They are brown.", "value": "wrong1"},
-          {"text": "They have long legs.", "value": "wrong2"},
-          {"text": "They like grass.", "value": "wrong3"}
+          {
+            "text": "They are lovely.",
+            "value": "correct"
+          },
+          {
+            "text": "They are brown.",
+            "value": "wrong1"
+          },
+          {
+            "text": "They have long legs.",
+            "value": "wrong2"
+          },
+          {
+            "text": "They like grass.",
+            "value": "wrong3"
+          }
         ],
         "correct": "correct"
       },
@@ -605,10 +1031,22 @@ var lesson2 = {
         "sentence": "A: What do horses like?\nB: ______",
         "chinese": "A问马喜欢什么，B应该说什么？",
         "options": [
-          {"text": "They like grass.", "value": "correct"},
-          {"text": "They are lovely.", "value": "wrong1"},
-          {"text": "They have small ears.", "value": "wrong2"},
-          {"text": "Baby pandas.", "value": "wrong3"}
+          {
+            "text": "They like grass.",
+            "value": "correct"
+          },
+          {
+            "text": "They are lovely.",
+            "value": "wrong1"
+          },
+          {
+            "text": "They have small ears.",
+            "value": "wrong2"
+          },
+          {
+            "text": "Baby pandas.",
+            "value": "wrong3"
+          }
         ],
         "correct": "correct"
       },
@@ -617,35 +1055,67 @@ var lesson2 = {
         "sentence": "A: These are pandas. They have small ears.\nB: ______",
         "chinese": "A描述了熊猫有小耳朵，B接着补充什么？",
         "options": [
-          {"text": "They have black eyes too.", "value": "correct"},
-          {"text": "They have long legs.", "value": "wrong1"},
-          {"text": "They are brown.", "value": "wrong2"},
-          {"text": "They like grass.", "value": "wrong3"}
+          {
+            "text": "They have black eyes too.",
+            "value": "correct"
+          },
+          {
+            "text": "They have long legs.",
+            "value": "wrong1"
+          },
+          {
+            "text": "They are brown.",
+            "value": "wrong2"
+          },
+          {
+            "text": "They like grass.",
+            "value": "wrong3"
+          }
         ],
         "correct": "correct"
       }
     ]
   },
-
   "writing": {
     "pretest": [
       {
         "type": "sentence_order",
         "chinese": "这些是熊猫。",
-        "words": ["These", "are", "pandas"],
-        "scrambled": ["pandas", "These", "are"]
+        "words": [
+          "These",
+          "are",
+          "pandas"
+        ],
+        "scrambled": [
+          "pandas",
+          "These",
+          "are"
+        ]
       },
       {
         "type": "sentence_order",
         "chinese": "那些是马。",
-        "words": ["Those", "are", "horses"],
-        "scrambled": ["are", "horses", "Those"]
+        "words": [
+          "Those",
+          "are",
+          "horses"
+        ],
+        "scrambled": [
+          "are",
+          "horses",
+          "Those"
+        ]
       },
       {
         "type": "fill_blank",
         "prompt": "They have small _____ and black eyes.",
         "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
-        "options": ["ears", "legs", "eyes", "mouths"],
+        "options": [
+          "ears",
+          "legs",
+          "eyes",
+          "mouths"
+        ],
         "correct": 0,
         "chinese": "它们有小耳朵和黑色的眼睛。"
       },
@@ -653,7 +1123,12 @@ var lesson2 = {
         "type": "fill_blank",
         "prompt": "Those are _____. They are brown.",
         "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
-        "options": ["pandas", "horses", "bears", "ducks"],
+        "options": [
+          "pandas",
+          "horses",
+          "bears",
+          "ducks"
+        ],
         "correct": 1,
         "chinese": "那些是马。它们是棕色的。"
       },
@@ -661,21 +1136,42 @@ var lesson2 = {
         "type": "word_puzzle",
         "chinese": "耳朵",
         "image": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-        "letters": ["e", "a", "r"],
-        "scrambled": ["a", "r", "e"]
+        "letters": [
+          "e",
+          "a",
+          "r"
+        ],
+        "scrambled": [
+          "a",
+          "r",
+          "e"
+        ]
       },
       {
         "type": "word_puzzle",
         "chinese": "眼睛",
         "image": "<img src=\"assets/images/bear.png\" width=\"80\">",
-        "letters": ["e", "y", "e"],
-        "scrambled": ["y", "e", "e"]
+        "letters": [
+          "e",
+          "y",
+          "e"
+        ],
+        "scrambled": [
+          "y",
+          "e",
+          "e"
+        ]
       },
       {
         "type": "letter_select",
         "prompt": "腿的首字母是？",
         "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
-        "options": ["r", "l", "k", "t"],
+        "options": [
+          "r",
+          "l",
+          "k",
+          "t"
+        ],
         "correct": 1,
         "chinese": "腿"
       },
@@ -683,7 +1179,12 @@ var lesson2 = {
         "type": "letter_select",
         "prompt": "宝宝的首字母是？",
         "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
-        "options": ["d", "p", "b", "g"],
+        "options": [
+          "d",
+          "p",
+          "b",
+          "g"
+        ],
         "correct": 2,
         "chinese": "宝宝"
       },
@@ -691,7 +1192,12 @@ var lesson2 = {
         "type": "pinyin_fill",
         "hint": "sm_ll",
         "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
-        "options": ["a", "e", "o", "i"],
+        "options": [
+          "a",
+          "e",
+          "o",
+          "i"
+        ],
         "correct": 0,
         "chinese": "小的"
       },
@@ -699,7 +1205,12 @@ var lesson2 = {
         "type": "fill_blank",
         "prompt": "They have long _____.",
         "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
-        "options": ["ears", "eyes", "legs", "mouths"],
+        "options": [
+          "ears",
+          "eyes",
+          "legs",
+          "mouths"
+        ],
         "correct": 2,
         "chinese": "它们有长腿。"
       }
@@ -708,56 +1219,133 @@ var lesson2 = {
       {
         "type": "sentence_order",
         "chinese": "这些是熊猫。",
-        "words": ["These", "are", "pandas"],
-        "scrambled": ["are", "These", "pandas"]
+        "words": [
+          "These",
+          "are",
+          "pandas"
+        ],
+        "scrambled": [
+          "are",
+          "These",
+          "pandas"
+        ]
       },
       {
         "type": "sentence_order",
         "chinese": "它们有小耳朵和黑色的眼睛。",
-        "words": ["They", "have", "small", "ears", "and", "black", "eyes"],
-        "scrambled": ["small", "They", "eyes", "and", "ears", "have", "black"]
+        "words": [
+          "They",
+          "have",
+          "small",
+          "ears",
+          "and",
+          "black",
+          "eyes"
+        ],
+        "scrambled": [
+          "small",
+          "They",
+          "eyes",
+          "and",
+          "ears",
+          "have",
+          "black"
+        ]
       },
       {
         "type": "sentence_order",
         "chinese": "那些是马。",
-        "words": ["Those", "are", "horses"],
-        "scrambled": ["horses", "Those", "are"]
+        "words": [
+          "Those",
+          "are",
+          "horses"
+        ],
+        "scrambled": [
+          "horses",
+          "Those",
+          "are"
+        ]
       },
       {
         "type": "sentence_order",
         "chinese": "它们是棕色的。",
-        "words": ["They", "are", "brown"],
-        "scrambled": ["brown", "They", "are"]
+        "words": [
+          "They",
+          "are",
+          "brown"
+        ],
+        "scrambled": [
+          "brown",
+          "They",
+          "are"
+        ]
       },
       {
         "type": "sentence_order",
         "chinese": "它们有长腿。",
-        "words": ["They", "have", "long", "legs"],
-        "scrambled": ["long", "They", "legs", "have"]
+        "words": [
+          "They",
+          "have",
+          "long",
+          "legs"
+        ],
+        "scrambled": [
+          "long",
+          "They",
+          "legs",
+          "have"
+        ]
       },
       {
         "type": "sentence_order",
         "chinese": "它们喜欢吃草。",
-        "words": ["They", "like", "grass"],
-        "scrambled": ["grass", "They", "like"]
+        "words": [
+          "They",
+          "like",
+          "grass"
+        ],
+        "scrambled": [
+          "grass",
+          "They",
+          "like"
+        ]
       },
       {
         "type": "sentence_order",
         "chinese": "熊猫宝宝。",
-        "words": ["Baby", "pandas"],
-        "scrambled": ["pandas", "Baby"]
+        "words": [
+          "Baby",
+          "pandas"
+        ],
+        "scrambled": [
+          "pandas",
+          "Baby"
+        ]
       },
       {
         "type": "sentence_order",
         "chinese": "它们很可爱。",
-        "words": ["They", "are", "lovely"],
-        "scrambled": ["lovely", "They", "are"]
+        "words": [
+          "They",
+          "are",
+          "lovely"
+        ],
+        "scrambled": [
+          "lovely",
+          "They",
+          "are"
+        ]
       },
       {
         "type": "fill_blank",
         "prompt": "These are _____. They have small ears.",
         "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
-        "options": ["horses", "pandas", "bears", "ducks"],
+        "options": [
+          "horses",
+          "pandas",
+          "bears",
+          "ducks"
+        ],
         "correct": 1,
         "chinese": "这些是熊猫。它们有小耳朵。"
       },
@@ -765,7 +1353,12 @@ var lesson2 = {
         "type": "fill_blank",
         "prompt": "Those are horses. They have long _____.",
         "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
-        "options": ["ears", "eyes", "legs", "mouths"],
+        "options": [
+          "ears",
+          "eyes",
+          "legs",
+          "mouths"
+        ],
         "correct": 2,
         "chinese": "那些是马。它们有长腿。"
       },
@@ -773,7 +1366,12 @@ var lesson2 = {
         "type": "fill_blank",
         "prompt": "They like _____.",
         "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
-        "options": ["grass", "meat", "fish", "milk"],
+        "options": [
+          "grass",
+          "meat",
+          "fish",
+          "milk"
+        ],
         "correct": 0,
         "chinese": "它们喜欢吃草。"
       },
@@ -781,7 +1379,12 @@ var lesson2 = {
         "type": "fill_blank",
         "prompt": "_____ pandas. They are lovely.",
         "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
-        "options": ["Baby", "Big", "Small", "Old"],
+        "options": [
+          "Baby",
+          "Big",
+          "Small",
+          "Old"
+        ],
         "correct": 0,
         "chinese": "熊猫宝宝。它们很可爱。"
       },
@@ -789,42 +1392,95 @@ var lesson2 = {
         "type": "word_puzzle",
         "chinese": "小的",
         "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
-        "letters": ["s", "m", "a", "l", "l"],
-        "scrambled": ["l", "s", "m", "a", "l"]
+        "letters": [
+          "s",
+          "m",
+          "a",
+          "l",
+          "l"
+        ],
+        "scrambled": [
+          "l",
+          "s",
+          "m",
+          "a",
+          "l"
+        ]
       },
       {
         "type": "word_puzzle",
         "chinese": "耳朵",
         "image": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-        "letters": ["e", "a", "r"],
-        "scrambled": ["r", "a", "e"]
+        "letters": [
+          "e",
+          "a",
+          "r"
+        ],
+        "scrambled": [
+          "r",
+          "a",
+          "e"
+        ]
       },
       {
         "type": "word_puzzle",
         "chinese": "长的",
         "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
-        "letters": ["l", "o", "n", "g"],
-        "scrambled": ["n", "g", "l", "o"]
+        "letters": [
+          "l",
+          "o",
+          "n",
+          "g"
+        ],
+        "scrambled": [
+          "n",
+          "g",
+          "l",
+          "o"
+        ]
       },
       {
         "type": "word_puzzle",
         "chinese": "腿",
         "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
-        "letters": ["l", "e", "g"],
-        "scrambled": ["g", "l", "e"]
+        "letters": [
+          "l",
+          "e",
+          "g"
+        ],
+        "scrambled": [
+          "g",
+          "l",
+          "e"
+        ]
       },
       {
         "type": "word_puzzle",
         "chinese": "宝宝",
         "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
-        "letters": ["b", "a", "b", "y"],
-        "scrambled": ["y", "b", "a", "b"]
+        "letters": [
+          "b",
+          "a",
+          "b",
+          "y"
+        ],
+        "scrambled": [
+          "y",
+          "b",
+          "a",
+          "b"
+        ]
       },
       {
         "type": "letter_select",
         "prompt": "小的首字母是？",
         "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
-        "options": ["c", "s", "z", "x"],
+        "options": [
+          "c",
+          "s",
+          "z",
+          "x"
+        ],
         "correct": 1,
         "chinese": "小的"
       },
@@ -832,7 +1488,12 @@ var lesson2 = {
         "type": "letter_select",
         "prompt": "眼睛的首字母是？",
         "image": "<img src=\"assets/images/bear.png\" width=\"80\">",
-        "options": ["a", "i", "e", "o"],
+        "options": [
+          "a",
+          "i",
+          "e",
+          "o"
+        ],
         "correct": 2,
         "chinese": "眼睛"
       },
@@ -840,7 +1501,12 @@ var lesson2 = {
         "type": "pinyin_fill",
         "hint": "b_by",
         "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
-        "options": ["a", "e", "o", "i"],
+        "options": [
+          "a",
+          "e",
+          "o",
+          "i"
+        ],
         "correct": 0,
         "chinese": "宝宝"
       },
@@ -848,7 +1514,12 @@ var lesson2 = {
         "type": "pinyin_fill",
         "hint": "l_ng",
         "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
-        "options": ["o", "a", "e", "i"],
+        "options": [
+          "o",
+          "a",
+          "e",
+          "i"
+        ],
         "correct": 0,
         "chinese": "长的"
       },
@@ -856,7 +1527,12 @@ var lesson2 = {
         "type": "fill_blank",
         "prompt": "They have _____ eyes.",
         "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
-        "options": ["black", "blue", "red", "green"],
+        "options": [
+          "black",
+          "blue",
+          "red",
+          "green"
+        ],
         "correct": 0,
         "chinese": "它们有黑色的眼睛。"
       },
@@ -864,21 +1540,44 @@ var lesson2 = {
         "type": "fill_blank",
         "prompt": "Those are horses. They are _____.",
         "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
-        "options": ["brown", "black", "white", "red"],
+        "options": [
+          "brown",
+          "black",
+          "white",
+          "red"
+        ],
         "correct": 0,
         "chinese": "那些是马。它们是棕色的。"
       },
       {
         "type": "sentence_order",
         "chinese": "它们有小耳朵。",
-        "words": ["They", "have", "small", "ears"],
-        "scrambled": ["small", "ears", "They", "have"]
+        "words": [
+          "They",
+          "have",
+          "small",
+          "ears"
+        ],
+        "scrambled": [
+          "small",
+          "ears",
+          "They",
+          "have"
+        ]
       },
       {
         "type": "sentence_order",
         "chinese": "它们喜欢吃草。",
-        "words": ["They", "like", "grass"],
-        "scrambled": ["like", "grass", "They"]
+        "words": [
+          "They",
+          "like",
+          "grass"
+        ],
+        "scrambled": [
+          "like",
+          "grass",
+          "They"
+        ]
       }
     ]
   },
