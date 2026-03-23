@@ -1345,8 +1345,8 @@ function showFeedbackPanel(isCorrect, question) {
     const feedbackList = isCorrect ? feedbackMap.success : feedbackMap.encourage;
     const feedback = feedbackList[Math.floor(Math.random() * feedbackList.length)];
 
-    // 获取正确答案
-    let answerWord = (question && question.audio) || (question && question.word) || (question && question.sentence) || '';
+    // 获取正确答案（优先显示句子，其次单词）
+    let answerWord = (question && question.sentence) || (question && question.word) || (question && question.audio) || '';
     let answerChinese = (question && question.chinese) || '';
 
     // 构建面板内容
@@ -1497,7 +1497,7 @@ function forceNextQuestion() {
     speakFeedback(false);
 
     setTimeout(() => {
-        currentPlayerIndex = Math.random() < 0.5 ? 0 : 1;
+        currentPlayerIndex = currentPlayerIndex === 0 ? 1 : 0;
         currentQuestionIndex++;
         resetHintLevel();
         syncStudentProgress();
@@ -1510,7 +1510,7 @@ function skipToNextQuestion() {
     if (isAnimating) return;
     stopQuestionTimer();
     hideCorrectAnswerDisplay(); // 隐藏正确答案显示
-    currentPlayerIndex = Math.random() < 0.5 ? 0 : 1;
+    currentPlayerIndex = currentPlayerIndex === 0 ? 1 : 0;
     currentQuestionIndex++;
     resetHintLevel();
     syncStudentProgress();
