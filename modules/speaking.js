@@ -10,7 +10,7 @@ function renderSpeakingQuestion(q, container) {
         // 如果有图片，小尺寸显示
         if (q.type === 'picture_speak' && q.image) {
             var imgEl = document.createElement('div');
-            imgEl.style.cssText = 'text-align:center;margin-bottom:10px;';
+            imgEl.style.cssText = 'text-align:center;margin-bottom:5px;';
             imgEl.innerHTML = q.image;
             container.appendChild(imgEl);
         }
@@ -18,14 +18,14 @@ function renderSpeakingQuestion(q, container) {
         var word = q.word || q.sentence || q.expected || '';
         if (word) {
             var wordEl = document.createElement('div');
-            wordEl.style.cssText = 'text-align:center;font-size:' + (word.length > 15 ? '28px' : '42px') + ';font-weight:bold;margin-bottom:8px;';
+            wordEl.style.cssText = 'text-align:center;font-size:' + (word.length > 15 ? '26px' : '38px') + ';font-weight:bold;margin-bottom:2px;';
             wordEl.textContent = word;
             container.appendChild(wordEl);
         }
         // 中文翻译（小字灰色）
         if (q.chinese) {
             var chEl = document.createElement('div');
-            chEl.style.cssText = 'text-align:center;font-size:16px;color:#aaa;margin-bottom:15px;';
+            chEl.style.cssText = 'text-align:center;font-size:14px;color:#aaa;margin-bottom:8px;';
             chEl.textContent = q.chinese;
             container.appendChild(chEl);
         }
@@ -99,18 +99,18 @@ function renderSpeakingQuestion(q, container) {
 
     // 🔊 听示范按钮（小号，不占太多空间）
     var demoBtn = document.createElement('button');
-    demoBtn.style.cssText = 'background:#1cb0f6;border:none;border-radius:50%;width:50px;height:50px;font-size:24px;color:white;cursor:pointer;margin-bottom:15px;box-shadow:0 3px 0 #0d8ecf;';
+    demoBtn.style.cssText = 'background:#1cb0f6;border:none;border-radius:50%;width:44px;height:44px;font-size:20px;color:white;cursor:pointer;margin-bottom:8px;box-shadow:0 3px 0 #0d8ecf;';
     demoBtn.innerHTML = '🔊';
     demoBtn.onclick = function() { speakWord(q.word || q.sentence || q.expected); };
     container.appendChild(demoBtn);
 
     // 录音按钮（多邻国风格：一个大按钮，点击切换状态）
     var recordBtn = document.createElement('button');
-    recordBtn.style.cssText = 'width:120px;height:120px;border-radius:50%;background:#58CC02;color:white;font-size:50px;border:none;box-shadow:0 6px 0 #46a302;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.2s;';
+    recordBtn.style.cssText = 'width:90px;height:90px;border-radius:50%;background:#58CC02;color:white;font-size:40px;border:none;box-shadow:0 5px 0 #46a302;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.2s;';
     recordBtn.innerHTML = '🎤';
 
     var statusText = document.createElement('div');
-    statusText.style.cssText = 'margin-top:15px;font-size:18px;font-weight:bold;min-height:30px;color:#888;';
+    statusText.style.cssText = 'margin-top:8px;font-size:14px;font-weight:bold;min-height:20px;color:#888;';
     statusText.textContent = '点击麦克风开始录音';
 
     // 录音中脉冲动画
