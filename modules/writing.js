@@ -194,18 +194,21 @@ function renderWritingQuestion(q, container) {
                      let currentAns = Array.from(answerArea.children).map(s => s.textContent);
                      
                      if (currentAns.join('') === correctArr.join('')) {
-                         setTimeout(() => handleAnswer(true), 500);
+                         setTimeout(function() { handleAnswer(true); }, 500);
                      } else {
-                         setTimeout(() => {
-                             handleAnswer(false);
-                             // Return all pieces
-                             Array.from(answerArea.children).forEach(s => {
+                         // 拼错了：红色闪烁提示，然后重置让学生重试
+                         Array.from(answerArea.children).forEach(function(s) {
+                             s.style.borderColor = '#ff4b4b';
+                         });
+                         setTimeout(function() {
+                             Array.from(answerArea.children).forEach(function(s) {
                                  s.textContent = '';
+                                 s.style.borderColor = '';
                                  s.onclick = null;
                              });
-                             Array.from(sourceArea.children).forEach(p => p.style.opacity = '1');
+                             Array.from(sourceArea.children).forEach(function(p) { p.style.opacity = '1'; });
                              currentFilled = 0;
-                         }, 500);
+                         }, 800);
                      }
                  }
              };
