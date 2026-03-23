@@ -818,18 +818,21 @@ var lesson1 = {
     "pretest": [
       {
         "type": "repeat_word",
+        "image": "<img src=\"assets/images/bear.png\" width=\"80\">",
         "word": "bear",
         "chinese": "熊",
         "expected": "bear"
       },
       {
         "type": "repeat_word",
+        "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
         "word": "horse",
         "chinese": "马",
         "expected": "horse"
       },
       {
         "type": "repeat_sentence",
+        "image": "<img src=\"assets/images/bear.png\" width=\"80\">",
         "word": "This is a bear.",
         "chinese": "这是一只熊",
         "expected": "This is a bear."
@@ -842,12 +845,14 @@ var lesson1 = {
       },
       {
         "type": "repeat_word",
+        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
         "word": "panda",
         "chinese": "熊猫",
         "expected": "panda"
       },
       {
         "type": "repeat_sentence",
+        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
         "word": "That is a panda.",
         "chinese": "那是一只熊猫",
         "expected": "That is a panda."
@@ -860,6 +865,7 @@ var lesson1 = {
       },
       {
         "type": "repeat_word",
+        "image": "<img src=\"assets/images/bird.png\" width=\"80\">",
         "word": "bird",
         "chinese": "鸟",
         "expected": "bird"
@@ -872,6 +878,7 @@ var lesson1 = {
       },
       {
         "type": "repeat_sentence",
+        "image": "<img src=\"assets/images/bear.png\" width=\"80\">",
         "word": "It's big.",
         "chinese": "它很大",
         "expected": "It's big."
@@ -880,60 +887,70 @@ var lesson1 = {
     "practice": [
       {
         "type": "repeat_word",
+        "image": "<img src=\"assets/images/bear.png\" width=\"80\">",
         "word": "bear",
         "chinese": "熊",
         "expected": "bear"
       },
       {
         "type": "repeat_word",
+        "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
         "word": "horse",
         "chinese": "马",
         "expected": "horse"
       },
       {
         "type": "repeat_word",
+        "image": "<img src=\"assets/images/bird.png\" width=\"80\">",
         "word": "bird",
         "chinese": "鸟",
         "expected": "bird"
       },
       {
         "type": "repeat_word",
+        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
         "word": "panda",
         "chinese": "熊猫",
         "expected": "panda"
       },
       {
         "type": "repeat_word",
+        "image": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
         "word": "rabbit",
         "chinese": "兔子",
         "expected": "rabbit"
       },
       {
         "type": "repeat_word",
+        "image": "<img src=\"assets/images/monkey.png\" width=\"80\">",
         "word": "monkey",
         "chinese": "猴子",
         "expected": "monkey"
       },
       {
         "type": "repeat_word",
+        "image": "<img src=\"assets/images/duck.png\" width=\"80\">",
         "word": "duck",
         "chinese": "鸭子",
         "expected": "duck"
       },
       {
         "type": "repeat_sentence",
+        "image": "<img src=\"assets/images/bear.png\" width=\"80\">",
         "word": "This is a bear.",
         "chinese": "这是一只熊",
         "expected": "This is a bear."
       },
       {
         "type": "repeat_sentence",
+        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
         "word": "That is a panda. It's cute.",
         "chinese": "那是一只熊猫。它很可爱",
         "expected": "That is a panda. It's cute."
       },
       {
         "type": "repeat_sentence",
+        "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
         "word": "This is a horse. It can run fast.",
         "chinese": "这是一匹马。它跑得很快",
         "expected": "This is a horse. It can run fast."
@@ -970,12 +987,14 @@ var lesson1 = {
       },
       {
         "type": "repeat_sentence",
+        "image": "<img src=\"assets/images/bird.png\" width=\"80\">",
         "word": "This is a bird.",
         "chinese": "这是一只鸟",
         "expected": "This is a bird."
       },
       {
         "type": "repeat_sentence",
+        "image": "<img src=\"assets/images/bear.png\" width=\"80\">",
         "word": "It's big.",
         "chinese": "它很大",
         "expected": "It's big."

@@ -817,6 +817,7 @@ var lesson2 = {
     "pretest": [
       {
         "type": "repeat_sentence",
+        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
         "word": "These are pandas.",
         "chinese": "这些是熊猫",
         "expected": "These are pandas."
@@ -835,6 +836,7 @@ var lesson2 = {
       },
       {
         "type": "repeat_sentence",
+        "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
         "word": "Those are horses.",
         "chinese": "那些是马",
         "expected": "Those are horses."
@@ -853,6 +855,7 @@ var lesson2 = {
       },
       {
         "type": "repeat_sentence",
+        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
         "word": "They have small ears.",
         "chinese": "它们有小耳朵",
         "expected": "They have small ears."
@@ -871,6 +874,7 @@ var lesson2 = {
       },
       {
         "type": "repeat_sentence",
+        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
         "word": "It's black and white.",
         "chinese": "它是黑白色的",
         "expected": "It's black and white."
@@ -897,6 +901,7 @@ var lesson2 = {
       },
       {
         "type": "repeat_word",
+        "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
         "word": "baby",
         "chinese": "宝宝",
         "expected": "baby"
@@ -915,30 +920,35 @@ var lesson2 = {
       },
       {
         "type": "repeat_sentence",
+        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
         "word": "These are pandas.",
         "chinese": "这些是熊猫",
         "expected": "These are pandas."
       },
       {
         "type": "repeat_sentence",
+        "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
         "word": "Those are horses.",
         "chinese": "那些是马",
         "expected": "Those are horses."
       },
       {
         "type": "repeat_sentence",
+        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
         "word": "They have small ears.",
         "chinese": "它们有小耳朵",
         "expected": "They have small ears."
       },
       {
         "type": "repeat_sentence",
+        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
         "word": "It's black and white.",
         "chinese": "它是黑白色的",
         "expected": "It's black and white."
       },
       {
         "type": "repeat_sentence",
+        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">",
         "word": "They are big.",
         "chinese": "它们很大",
         "expected": "They are big."

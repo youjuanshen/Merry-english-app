@@ -806,12 +806,14 @@ var lesson4 = {
     "pretest": [
       {
         "type": "repeat_sentence",
+        "image": "<img src=\"assets/images/cat.png\" width=\"80\">",
         "word": "Look! It's a cat.",
         "chinese": "看！这是一只猫",
         "expected": "Look! It's a cat."
       },
       {
         "type": "repeat_word",
+        "image": "<img src=\"assets/images/cat.png\" width=\"80\">",
         "word": "cat",
         "chinese": "猫",
         "expected": "cat"
@@ -824,12 +826,14 @@ var lesson4 = {
       },
       {
         "type": "repeat_word",
+        "image": "<img src=\"assets/images/cat.png\" width=\"80\">",
         "word": "nose",
         "chinese": "鼻子",
         "expected": "nose"
       },
       {
         "type": "repeat_sentence",
+        "image": "<img src=\"assets/images/cat.png\" width=\"80\">",
         "word": "These are two eyes.",
         "chinese": "这些是两只眼睛",
         "expected": "These are two eyes."
@@ -842,12 +846,14 @@ var lesson4 = {
       },
       {
         "type": "repeat_word",
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
         "word": "draw",
         "chinese": "画",
         "expected": "draw"
       },
       {
         "type": "repeat_sentence",
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
         "word": "Let's draw.",
         "chinese": "我们来画画吧",
         "expected": "Let's draw."
@@ -860,6 +866,7 @@ var lesson4 = {
       },
       {
         "type": "repeat_sentence",
+        "image": "<img src=\"assets/images/bear.png\" width=\"80\">",
         "word": "Look! It's a bear.",
         "chinese": "看！这是一只熊",
         "expected": "Look! It's a bear."
@@ -868,54 +875,63 @@ var lesson4 = {
     "practice": [
       {
         "type": "repeat_word",
+        "image": "<img src=\"assets/images/cat.png\" width=\"80\">",
         "word": "cat",
         "chinese": "猫",
         "expected": "cat"
       },
       {
         "type": "repeat_word",
+        "image": "<img src=\"assets/images/cat.png\" width=\"80\">",
         "word": "nose",
         "chinese": "鼻子",
         "expected": "nose"
       },
       {
         "type": "repeat_word",
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
         "word": "draw",
         "chinese": "画",
         "expected": "draw"
       },
       {
         "type": "repeat_sentence",
+        "image": "<img src=\"assets/images/cat.png\" width=\"80\">",
         "word": "Look! It's a cat.",
         "chinese": "看！这是一只猫",
         "expected": "Look! It's a cat."
       },
       {
         "type": "repeat_sentence",
+        "image": "<img src=\"assets/images/cat.png\" width=\"80\">",
         "word": "These are two eyes.",
         "chinese": "这些是两只眼睛",
         "expected": "These are two eyes."
       },
       {
         "type": "repeat_sentence",
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
         "word": "Let's draw.",
         "chinese": "我们来画画吧",
         "expected": "Let's draw."
       },
       {
         "type": "repeat_sentence",
+        "image": "<img src=\"assets/images/bear.png\" width=\"80\">",
         "word": "Look! It's a bear.",
         "chinese": "看！这是一只熊",
         "expected": "Look! It's a bear."
       },
       {
         "type": "repeat_sentence",
+        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
         "word": "Look! It's a panda.",
         "chinese": "看！这是一只熊猫",
         "expected": "Look! It's a panda."
       },
       {
         "type": "repeat_sentence",
+        "image": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
         "word": "Look! It's a rabbit.",
         "chinese": "看！这是一只兔子",
         "expected": "Look! It's a rabbit."

@@ -7,8 +7,8 @@ function renderSpeakingQuestion(q, container) {
     }
     // 统一简洁布局：单词/句子 + 中文 + 麦克风，一屏搞定
     if (q.type === 'repeat_word' || q.type === 'repeat_sentence' || q.type === 'picture_speak') {
-        // 如果有图片，小尺寸显示
-        if (q.type === 'picture_speak' && q.image) {
+        // 如果有图片，小尺寸显示（所有口语题都显示图片）
+        if (q.image) {
             var imgEl = document.createElement('div');
             imgEl.style.cssText = 'text-align:center;margin-bottom:5px;';
             imgEl.innerHTML = q.image;
