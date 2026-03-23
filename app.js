@@ -633,16 +633,28 @@ function toggleStudent(name, el) {
     }
 }
 
-function getQuestions(module, phase) {
-    const allQuestions = currentLessonData[module][phase] || [];
+// 随机打乱数组（Fisher-Yates 洗牌算法）
+function shuffleArray(arr) {
+    var shuffled = arr.slice(); // 复制，不改原数组
+    for (var i = shuffled.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = shuffled[i];
+        shuffled[i] = shuffled[j];
+        shuffled[j] = temp;
+    }
+    return shuffled;
+}
 
-    // 前测：返回所有题目
+function getQuestions(module, phase) {
+    var allQuestions = currentLessonData[module][phase] || [];
+
+    // 前测：随机打乱顺序
     if (phase === 'pretest') {
-        return allQuestions;
+        return shuffleArray(allQuestions);
     }
 
-    // 练习：根据学生水平筛选题目
-    return filterQuestionsByLevel(allQuestions, studentLevel);
+    // 练习：根据学生水平筛选后打乱
+    return shuffleArray(filterQuestionsByLevel(allQuestions, studentLevel));
 }
 
 // 根据学生水平筛选题目
@@ -1384,6 +1396,7 @@ function onFeedbackContinue() {
     hideFeedbackPanel();
     hideCorrectAnswerDisplay();
     hideCorrectHint();
+    isAnimating = false; // 确保动画锁解除
 
     // 如果上一题答对了，调用 onCorrect 加分；否则只跳到下一题
     if (lastAnswerCorrect) {
