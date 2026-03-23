@@ -838,7 +838,7 @@ var lesson1 = {
         "type": "picture_speak",
         "image": "<img src=\"assets/images/bird.png\" width=\"120\">",
         "expected": "bird",
-        "chinese": "请看图说出这个动物的英文名字：鸟"
+        "chinese": "鸟"
       },
       {
         "type": "repeat_word",
@@ -856,7 +856,7 @@ var lesson1 = {
         "type": "picture_speak",
         "image": "<img src=\"assets/images/horse.png\" width=\"120\">",
         "expected": "horse",
-        "chinese": "请看图说出这个动物的英文名字：马"
+        "chinese": "马"
       },
       {
         "type": "repeat_word",
@@ -868,7 +868,7 @@ var lesson1 = {
         "type": "picture_speak",
         "image": "<img src=\"assets/images/bear.png\" width=\"120\">",
         "expected": "bear",
-        "chinese": "请看图说出这个动物的英文名字：熊"
+        "chinese": "熊"
       },
       {
         "type": "repeat_sentence",
@@ -942,31 +942,31 @@ var lesson1 = {
         "type": "picture_speak",
         "image": "<img src=\"assets/images/panda.png\" width=\"120\">",
         "expected": "panda",
-        "chinese": "请看图说出这个动物的英文名字：熊猫"
+        "chinese": "熊猫"
       },
       {
         "type": "picture_speak",
         "image": "<img src=\"assets/images/rabbit.png\" width=\"120\">",
         "expected": "rabbit",
-        "chinese": "请看图说出这个动物的英文名字：兔子"
+        "chinese": "兔子"
       },
       {
         "type": "picture_speak",
         "image": "<img src=\"assets/images/monkey.png\" width=\"120\">",
         "expected": "monkey",
-        "chinese": "请看图说出这个动物的英文名字：猴子"
+        "chinese": "猴子"
       },
       {
         "type": "picture_speak",
         "image": "<img src=\"assets/images/duck.png\" width=\"120\">",
         "expected": "duck",
-        "chinese": "请看图说出这个动物的英文名字：鸭子"
+        "chinese": "鸭子"
       },
       {
         "type": "picture_speak",
         "image": "<img src=\"assets/images/bear.png\" width=\"120\">",
         "expected": "bear",
-        "chinese": "请看图说出这个动物的英文名字：熊"
+        "chinese": "熊"
       },
       {
         "type": "repeat_sentence",
@@ -984,7 +984,7 @@ var lesson1 = {
         "type": "picture_speak",
         "image": "<img src=\"assets/images/horse.png\" width=\"120\">",
         "expected": "horse",
-        "chinese": "请看图说出这个动物的英文名字：马"
+        "chinese": "马"
       }
     ]
   }

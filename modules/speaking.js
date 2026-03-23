@@ -97,21 +97,26 @@ function renderSpeakingQuestion(q, container) {
         return;
     }
 
-    // 🔊 听示范按钮（小号，不占太多空间）
+    // 🔊和🎤放同一行，统一大小
+    var btnRow = document.createElement('div');
+    btnRow.style.cssText = 'display:flex;justify-content:center;align-items:center;gap:20px;margin-bottom:8px;';
+
     var demoBtn = document.createElement('button');
-    demoBtn.style.cssText = 'background:#1cb0f6;border:none;border-radius:50%;width:44px;height:44px;font-size:20px;color:white;cursor:pointer;margin-bottom:8px;box-shadow:0 3px 0 #0d8ecf;';
+    demoBtn.style.cssText = 'background:#1cb0f6;border:none;border-radius:50%;width:70px;height:70px;font-size:30px;color:white;cursor:pointer;box-shadow:0 4px 0 #0d8ecf;';
     demoBtn.innerHTML = '🔊';
     demoBtn.onclick = function() { speakWord(q.word || q.sentence || q.expected); };
-    container.appendChild(demoBtn);
 
-    // 录音按钮（多邻国风格：一个大按钮，点击切换状态）
     var recordBtn = document.createElement('button');
-    recordBtn.style.cssText = 'width:90px;height:90px;border-radius:50%;background:#58CC02;color:white;font-size:40px;border:none;box-shadow:0 5px 0 #46a302;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.2s;';
+    recordBtn.style.cssText = 'width:70px;height:70px;border-radius:50%;background:#58CC02;color:white;font-size:30px;border:none;box-shadow:0 4px 0 #46a302;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.2s;';
     recordBtn.innerHTML = '🎤';
 
+    btnRow.appendChild(demoBtn);
+    btnRow.appendChild(recordBtn);
+    container.appendChild(btnRow);
+
     var statusText = document.createElement('div');
-    statusText.style.cssText = 'margin-top:8px;font-size:14px;font-weight:bold;min-height:20px;color:#888;';
-    statusText.textContent = '点击麦克风开始录音';
+    statusText.style.cssText = 'margin-top:5px;font-size:13px;font-weight:bold;min-height:20px;color:#888;text-align:center;';
+    statusText.textContent = '🔊听示范  🎤录音';
 
     // 录音中脉冲动画
     if (!document.getElementById('recording-pulse-style')) {
@@ -162,7 +167,6 @@ function renderSpeakingQuestion(q, container) {
         }
     };
 
-    container.appendChild(recordBtn);
     container.appendChild(statusText);
 }
 
