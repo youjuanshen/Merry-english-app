@@ -41,10 +41,10 @@ var lesson4 = {
         "type": "listen_select",
         "audio": "Let's draw together! This is a face.",
         "options": [
-          "<img src=\"assets/images/drawing.png\" width=\"80\">",
-          "<img src=\"assets/images/cat.png\" width=\"80\">",
-          "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/bird.png\" width=\"80\">"
+          "我们一起画画吧！这是一张脸。",
+          "看！这是一只猫。",
+          "这些是两只眼睛。",
+          "这是一个鼻子和一张嘴。"
         ],
         "correct": 0,
         "chinese": "我们一起画画吧！这是一张脸。"
@@ -186,10 +186,10 @@ var lesson4 = {
         "type": "listen_select",
         "audio": "Let's draw together! This is a face. These are two eyes.",
         "options": [
-          "<img src=\"assets/images/drawing.png\" width=\"80\">",
-          "<img src=\"assets/images/cat.png\" width=\"80\">",
-          "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/bird.png\" width=\"80\">"
+          "我们一起画画吧！这是一张脸。这些是两只眼睛。",
+          "看！这是一只猫。",
+          "这些是两只耳朵。这是一个鼻子和一张嘴。",
+          "那是一张脸。那些是两只眼睛。"
         ],
         "correct": 0,
         "chinese": "我们一起画画吧！这是一张脸。这些是两只眼睛。"
@@ -210,10 +210,10 @@ var lesson4 = {
         "type": "listen_select",
         "audio": "These are two ears. This is a nose and a mouth.",
         "options": [
-          "<img src=\"assets/images/cat.png\" width=\"80\">",
-          "<img src=\"assets/images/drawing.png\" width=\"80\">",
-          "<img src=\"assets/images/duck.png\" width=\"80\">",
-          "<img src=\"assets/images/bear.png\" width=\"80\">"
+          "这些是两只耳朵。这是一个鼻子和一张嘴。",
+          "我们一起画画吧！这是一张脸。",
+          "这些是两只眼睛。",
+          "看！这是一只猫。"
         ],
         "correct": 0,
         "chinese": "这些是两只耳朵。这是一个鼻子和一张嘴。"
@@ -262,10 +262,10 @@ var lesson4 = {
         "type": "listen_select",
         "audio": "This is a face.",
         "options": [
-          "<img src=\"assets/images/cat.png\" width=\"80\">",
-          "<img src=\"assets/images/drawing.png\" width=\"80\">",
-          "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/duck.png\" width=\"80\">"
+          "这是一张脸。",
+          "这些是两只眼睛。",
+          "看！这是一只猫。",
+          "这是一个鼻子和一张嘴。"
         ],
         "correct": 0,
         "chinese": "这是一张脸。"
@@ -274,10 +274,10 @@ var lesson4 = {
         "type": "listen_select",
         "audio": "These are two eyes.",
         "options": [
-          "<img src=\"assets/images/cat.png\" width=\"80\">",
-          "<img src=\"assets/images/drawing.png\" width=\"80\">",
-          "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">"
+          "这些是两只眼睛。",
+          "这是一张脸。",
+          "我们一起画画吧！",
+          "这些是两只耳朵。"
         ],
         "correct": 0,
         "chinese": "这些是两只眼睛。"
@@ -300,10 +300,10 @@ var lesson4 = {
         "type": "listen_select",
         "audio": "Those are two eyes.",
         "options": [
-          "<img src=\"assets/images/cat.png\" width=\"80\">",
-          "<img src=\"assets/images/drawing.png\" width=\"80\">",
-          "<img src=\"assets/images/duck.png\" width=\"80\">",
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">"
+          "那些是两只眼睛。",
+          "这是一张脸。",
+          "这是一个鼻子和一张嘴。",
+          "我们一起画画吧！"
         ],
         "correct": 0,
         "chinese": "那些是两只眼睛。"

@@ -193,12 +193,12 @@ var lesson1 = {
         "type": "listen_select",
         "audio": "So many animals! Let's go in and have a look.",
         "options": [
-          "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/panda.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/horse.png\" width=\"80\">"
+          "好多动物！我们进去看看吧。",
+          "看！这是一只熊。它很大。",
+          "那是一匹马。它跑得快。",
+          "那是一只熊猫。它是黑白色的。"
         ],
-        "correct": 2,
+        "correct": 0,
         "chinese": "好多动物！我们进去看看吧。"
       },
       {
@@ -281,12 +281,12 @@ var lesson1 = {
         "type": "listen_select",
         "audio": "OK, let's go.",
         "options": [
-          "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/horse.png\" width=\"80\">",
-          "<img src=\"assets/images/panda.png\" width=\"80\">",
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">"
+          "好多动物！我们进去看看吧。",
+          "这是一只红色的鸟。",
+          "好的，我们走吧。",
+          "那是一只熊猫。它很可爱。"
         ],
-        "correct": 3,
+        "correct": 2,
         "chinese": "好的，我们走吧。"
       },
       {

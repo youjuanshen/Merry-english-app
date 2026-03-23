@@ -41,10 +41,10 @@ var lesson3 = {
         "type": "listen_select",
         "audio": "I have an animal friend. Please guess!",
         "options": [
-          "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/panda.png\" width=\"80\">"
+          "它是一只兔子吗？是的，它是。",
+          "我有一个动物朋友。请猜猜！",
+          "它会跳。",
+          "我喜欢胡萝卜。"
         ],
         "correct": 1,
         "chinese": "我有一个动物朋友。请猜猜！"
@@ -186,10 +186,10 @@ var lesson3 = {
         "type": "listen_select",
         "audio": "I have an animal friend. Please guess!",
         "options": [
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-          "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/panda.png\" width=\"80\">"
+          "我的嘴巴很小。",
+          "我有一个动物朋友。请猜猜！",
+          "它是一只老虎！",
+          "我喜欢胡萝卜。"
         ],
         "correct": 1,
         "chinese": "我有一个动物朋友。请猜猜！"
@@ -222,10 +222,10 @@ var lesson3 = {
         "type": "listen_select",
         "audio": "It can jump. I am white. I can jump. My mouth is small.",
         "options": [
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/duck.png\" width=\"80\">",
-          "<img src=\"assets/images/bear.png\" width=\"80\">"
+          "它会跳。我是白色的。我会跳。我的嘴巴很小。",
+          "我有一个动物朋友。请猜猜！",
+          "它是一只猫吗？不，不是。它是一只老虎！",
+          "我有两只长耳朵。我喜欢胡萝卜。"
         ],
         "correct": 0,
         "chinese": "它会跳。我是白色的。我会跳。我的嘴巴很小。"
@@ -234,10 +234,10 @@ var lesson3 = {
         "type": "listen_select",
         "audio": "I have two long ears. I like carrots. What am I?",
         "options": [
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-          "<img src=\"assets/images/horse.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/panda.png\" width=\"80\">"
+          "我有两只长耳朵。我喜欢胡萝卜。我是什么？",
+          "它会跳。我是白色的。我的嘴巴很小。",
+          "我有一个动物朋友。请猜猜！",
+          "它是一只猫吗？不，不是。"
         ],
         "correct": 0,
         "chinese": "我有两只长耳朵。我喜欢胡萝卜。我是什么？"
@@ -274,10 +274,10 @@ var lesson3 = {
         "type": "listen_select",
         "audio": "My mouth is small.",
         "options": [
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/horse.png\" width=\"80\">"
+          "我的嘴巴很小。",
+          "它会跳。",
+          "我喜欢胡萝卜。",
+          "我有一个动物朋友。"
         ],
         "correct": 0,
         "chinese": "我的嘴巴很小。"
@@ -286,10 +286,10 @@ var lesson3 = {
         "type": "listen_select",
         "audio": "I like carrots.",
         "options": [
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-          "<img src=\"assets/images/duck.png\" width=\"80\">",
-          "<img src=\"assets/images/panda.png\" width=\"80\">"
+          "我的嘴巴很小。",
+          "我喜欢胡萝卜。",
+          "它会跳。",
+          "请猜猜！"
         ],
         "correct": 1,
         "chinese": "我喜欢胡萝卜。"
@@ -298,10 +298,10 @@ var lesson3 = {
         "type": "listen_select",
         "audio": "It can jump.",
         "options": [
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-          "<img src=\"assets/images/panda.png\" width=\"80\">",
-          "<img src=\"assets/images/duck.png\" width=\"80\">",
-          "<img src=\"assets/images/bear.png\" width=\"80\">"
+          "它会跳。",
+          "我的嘴巴很小。",
+          "我喜欢胡萝卜。",
+          "我有一个动物朋友。"
         ],
         "correct": 0,
         "chinese": "它会跳。"

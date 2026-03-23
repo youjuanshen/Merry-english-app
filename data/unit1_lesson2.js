@@ -243,10 +243,10 @@ var lesson2 = {
         "type": "listen_select",
         "audio": "They have long legs.",
         "options": [
-          "<img src=\"assets/images/horse.png\" width=\"80\">",
-          "<img src=\"assets/images/panda.png\" width=\"80\">",
-          "<img src=\"assets/images/duck.png\" width=\"80\">",
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">"
+          "它们有长腿。",
+          "它们有小耳朵和黑眼睛。",
+          "它们是棕色的。",
+          "它们喜欢吃草。"
         ],
         "correct": 0,
         "chinese": "它们有长腿。"
@@ -255,10 +255,10 @@ var lesson2 = {
         "type": "listen_select",
         "audio": "They have small ears and black eyes.",
         "options": [
-          "<img src=\"assets/images/horse.png\" width=\"80\">",
-          "<img src=\"assets/images/panda.png\" width=\"80\">",
-          "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">"
+          "它们有长腿。",
+          "它们有小耳朵和黑眼睛。",
+          "它们是棕色的。",
+          "它们很可爱。"
         ],
         "correct": 1,
         "chinese": "它们有小耳朵和黑眼睛。"
@@ -293,10 +293,10 @@ var lesson2 = {
         "type": "listen_select",
         "audio": "They like grass.",
         "options": [
-          "<img src=\"assets/images/horse.png\" width=\"80\">",
-          "<img src=\"assets/images/panda.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">"
+          "它们喜欢吃草。",
+          "它们有长腿。",
+          "它们有小耳朵和黑眼睛。",
+          "它们是棕色的。"
         ],
         "correct": 0,
         "chinese": "它们喜欢吃草。"
@@ -305,10 +305,10 @@ var lesson2 = {
         "type": "listen_select",
         "audio": "They are brown.",
         "options": [
-          "<img src=\"assets/images/panda.png\" width=\"80\">",
-          "<img src=\"assets/images/duck.png\" width=\"80\">",
-          "<img src=\"assets/images/horse.png\" width=\"80\">",
-          "<img src=\"assets/images/bear.png\" width=\"80\">"
+          "它们喜欢吃草。",
+          "它们很可爱。",
+          "它们是棕色的。",
+          "它们有长腿。"
         ],
         "correct": 2,
         "chinese": "它们是棕色的。"
