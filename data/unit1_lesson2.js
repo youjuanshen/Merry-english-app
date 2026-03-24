@@ -82,7 +82,7 @@ var unit1_lesson2 = {
       },
       {
         "type": "listen_select",
-        "audio": "___ are pandas. They have small ears.",
+        "audio": "These are pandas. They have small ears.",
         "options": [
           "Those",
           "These",
@@ -94,7 +94,7 @@ var unit1_lesson2 = {
       },
       {
         "type": "listen_select",
-        "audio": "___ are horses. They have long legs.",
+        "audio": "Those are horses. They have long legs.",
         "options": [
           "These",
           "This",
@@ -106,7 +106,7 @@ var unit1_lesson2 = {
       },
       {
         "type": "listen_select",
-        "audio": "你看到熊猫宝宝，它们很可爱，你会说什么？",
+        "audio": "Baby pandas. They are lovely.",
         "options": [
           "They are lovely.",
           "They have long legs.",
@@ -237,7 +237,7 @@ var unit1_lesson2 = {
       },
       {
         "type": "listen_select",
-        "audio": "___ are pandas. They have ___ ears.",
+        "audio": "These are pandas. They have small ears.",
         "options": [
           "These, small",
           "Those, long",
@@ -249,7 +249,7 @@ var unit1_lesson2 = {
       },
       {
         "type": "listen_select",
-        "audio": "Those are horses. They have ___ legs.",
+        "audio": "Those are horses. They have long legs.",
         "options": [
           "small",
           "black",
@@ -261,7 +261,7 @@ var unit1_lesson2 = {
       },
       {
         "type": "listen_select",
-        "audio": "They have small ears and ___ eyes.",
+        "audio": "They have small ears and black eyes.",
         "options": [
           "long",
           "brown",
@@ -273,7 +273,7 @@ var unit1_lesson2 = {
       },
       {
         "type": "listen_select",
-        "audio": "A说：这些是熊猫。B会怎么回答？",
+        "audio": "These are pandas.",
         "options": [
           "They have small ears and black eyes.",
           "They have long legs.",
@@ -285,7 +285,7 @@ var unit1_lesson2 = {
       },
       {
         "type": "listen_select",
-        "audio": "A说：那些是马。B会怎么回答？",
+        "audio": "Those are horses. They are brown.",
         "options": [
           "They have small ears.",
           "They are brown. They have long legs.",
@@ -297,7 +297,7 @@ var unit1_lesson2 = {
       },
       {
         "type": "listen_select",
-        "audio": "A说：看！熊猫宝宝！B会怎么回答？",
+        "audio": "Look, baby pandas! They are lovely.",
         "options": [
           "They have long legs.",
           "They are brown.",
@@ -309,7 +309,7 @@ var unit1_lesson2 = {
       },
       {
         "type": "listen_select",
-        "audio": "你看到棕色的马在吃草，你会说什么？",
+        "audio": "They like grass.",
         "options": [
           "They like grass.",
           "They have small ears.",
@@ -321,7 +321,7 @@ var unit1_lesson2 = {
       },
       {
         "type": "listen_select",
-        "audio": "你看到有小耳朵的熊猫，你会说什么？",
+        "audio": "They have small ears and black eyes.",
         "options": [
           "They have long legs.",
           "They are brown.",
@@ -333,7 +333,7 @@ var unit1_lesson2 = {
       },
       {
         "type": "listen_select",
-        "audio": "你看到可爱的熊猫宝宝，你会说什么？",
+        "audio": "Baby pandas! They are lovely.",
         "options": [
           "They are brown.",
           "Baby pandas! They are lovely.",
