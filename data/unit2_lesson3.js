@@ -338,6 +338,64 @@ var unit2_lesson3 = {
         "scenario": "Look! Your sweater is in your schoolbag!",
         "question": "What should we pick?",
         "feedback": "Great choice!"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Okay, Mom.",
+        "options": [
+          "好的，妈妈。",
+          "谢谢你。",
+          "不客气。",
+          "我的毛衣在哪里？"
+        ],
+        "correct": 0,
+        "chinese": "好的，妈妈。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Oh, thank you very much.",
+        "options": [
+          "好的，妈妈。",
+          "哦，非常感谢你。",
+          "不客气。",
+          "请收好你的衣服。"
+        ],
+        "correct": 1,
+        "chinese": "哦，非常感谢你。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "You're welcome.",
+        "options": [
+          "非常感谢。",
+          "好的，妈妈。",
+          "不客气。",
+          "它在你的书包里。"
+        ],
+        "correct": 2,
+        "chinese": "不客气。"
+      }
+,
+      {
+        "type": "listen_select",
+        "audio": "Is it on your bed? No, it isn't.",
+        "options": ["它在你的床上吗？不，不在。", "它在你的椅子下面吗？", "它在你的书包里。", "好的，妈妈。"],
+        "correct": 0,
+        "chinese": "它在你的床上吗？不，不在。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Is it under your chair? No, it isn't.",
+        "options": ["好的，妈妈。", "它在你的椅子下面吗？不，不在。", "它在你的书包里。", "我的毛衣在哪里？"],
+        "correct": 1,
+        "chinese": "它在你的椅子下面吗？不，不在。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Dear, put away your clothes, please.",
+        "options": ["亲爱的，请收好你的衣服。", "我的毛衣在哪里？", "它在你的书包里。", "好的，妈妈。"],
+        "correct": 0,
+        "chinese": "亲爱的，请收好你的衣服。"
       }
     ]
   },
@@ -462,7 +520,7 @@ var unit2_lesson3 = {
             "value": "jacket"
           },
           {
-            "text": "<img src=\"assets/images/dress.png\" width=\"80\">",
+            "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
             "value": "dress"
           }
         ],
@@ -822,6 +880,47 @@ var unit2_lesson3 = {
         ],
         "correct": 2,
         "difficulty": "easy"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "Oh, thank you very much.",
+        "options": [
+          {"text": "哦，非常感谢你。", "value": "correct"},
+          {"text": "好的，妈妈。", "value": "wrong1"},
+          {"text": "不客气。", "value": "wrong2"},
+          {"text": "我的毛衣在哪里？", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "You're welcome.",
+        "options": [
+          {"text": "不客气。", "value": "correct"},
+          {"text": "非常感谢。", "value": "wrong1"},
+          {"text": "好的，妈妈。", "value": "wrong2"},
+          {"text": "请收好你的衣服。", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      }
+,
+      {
+        "type": "sentence_match",
+        "sentence": "Is it on your bed?",
+        "options": [{"text": "它在你的床上吗？", "value": "correct"}, {"text": "它在椅子下面吗？", "value": "wrong1"}, {"text": "它在书包里。", "value": "wrong2"}, {"text": "我的毛衣在哪里？", "value": "wrong3"}],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "Is it under your chair?",
+        "options": [{"text": "它在你的椅子下面吗？", "value": "correct"}, {"text": "它在你的床上吗？", "value": "wrong1"}, {"text": "请收好你的衣服。", "value": "wrong2"}, {"text": "好的，妈妈。", "value": "wrong3"}],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "Dear, put away your clothes, please.",
+        "options": [{"text": "亲爱的，请收好你的衣服。", "value": "correct"}, {"text": "我的毛衣在哪里？", "value": "wrong1"}, {"text": "它在你的书包里。", "value": "wrong2"}, {"text": "不客气。", "value": "wrong3"}],
+        "correct": "correct"
       }
     ]
   },
@@ -1197,6 +1296,97 @@ var unit2_lesson3 = {
           "olbag"
         ]
       }
+,
+      {
+        "type": "sentence_order",
+        "chinese": "我的毛衣在哪里？",
+        "words": ["Where", "is", "my", "sweater"],
+        "scrambled": ["is", "sweater", "Where", "my"],
+        "chineseWords": ["我的", "毛衣", "在", "哪里"],
+        "chineseScrambled": ["在", "哪里", "我的", "毛衣"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "它在你的床上吗？",
+        "words": ["Is", "it", "on", "your", "bed"],
+        "scrambled": ["on", "bed", "it", "Is", "your"],
+        "chineseWords": ["它", "在", "你的", "床上", "吗"],
+        "chineseScrambled": ["你的", "吗", "床上", "它", "在"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "它在你的椅子下面吗？",
+        "words": ["Is", "it", "under", "your", "chair"],
+        "scrambled": ["your", "it", "under", "Is", "chair"],
+        "chineseWords": ["它", "在", "你的", "椅子", "下面", "吗"],
+        "chineseScrambled": ["下面", "你的", "它", "吗", "在", "椅子"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "你的毛衣在你的书包里！",
+        "words": ["Your", "sweater", "is", "in", "your", "schoolbag"],
+        "scrambled": ["schoolbag", "sweater", "your", "in", "is", "Your"],
+        "chineseWords": ["你的", "毛衣", "在", "你的", "书包里"],
+        "chineseScrambled": ["你的", "你的", "书包里", "在", "毛衣"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "请收好你的衣服。",
+        "words": ["Put", "away", "your", "clothes", "please"],
+        "scrambled": ["away", "your", "please", "Put", "clothes"],
+        "chineseWords": ["请", "收好", "你的", "衣服"],
+        "chineseScrambled": ["你的", "请", "收好", "衣服"]
+      }
+,
+      {
+        "type": "sentence_order",
+        "chinese": "我的毛衣在哪里？",
+        "words": ["Where", "is", "my", "sweater"],
+        "scrambled": ["is", "sweater", "Where", "my"],
+        "chineseWords": ["我的", "毛衣", "在哪里"],
+        "chineseScrambled": ["我的", "在哪里", "毛衣"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "它在你的床上吗？",
+        "words": ["Is", "it", "on", "your", "bed"],
+        "scrambled": ["your", "on", "bed", "Is", "it"],
+        "chineseWords": ["它", "在", "你的", "床上吗"],
+        "chineseScrambled": ["你的", "在", "床上吗", "它"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "它在你的椅子下面吗？",
+        "words": ["Is", "it", "under", "your", "chair"],
+        "scrambled": ["under", "your", "it", "chair", "Is"],
+        "chineseWords": ["它", "在", "你的椅子", "下面吗"],
+        "chineseScrambled": ["下面吗", "它", "你的椅子", "在"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "你的毛衣在书包里！",
+        "words": ["Your", "sweater", "is", "in", "your", "schoolbag"],
+        "scrambled": ["sweater", "Your", "is", "schoolbag", "your", "in"],
+        "chineseWords": ["你的", "毛衣", "在", "书包里"],
+        "chineseScrambled": ["毛衣", "在", "书包里", "你的"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "请收好你的衣服。",
+        "words": ["Put", "away", "your", "clothes", "please"],
+        "scrambled": ["please", "clothes", "away", "your", "Put"],
+        "chineseWords": ["请", "收好", "你的", "衣服"],
+        "chineseScrambled": ["你的", "收好", "衣服", "请"]
+      }
+,
+      {
+        "type": "sentence_order",
+        "chinese": "哦，非常感谢你。",
+        "words": ["Oh", "thank", "you", "very", "much"],
+        "scrambled": ["you", "Oh", "much", "very", "thank"],
+        "chineseWords": ["哦", "非常", "感谢", "你"],
+        "chineseScrambled": ["你", "非常", "哦", "感谢"]
+      }
     ]
   },
   "speaking": {
@@ -1368,6 +1558,31 @@ var unit2_lesson3 = {
         "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
         "sentence": "Look! Your sweater is in your schoolbag!",
         "difficulty": "medium"
+      }
+,
+      {
+        "type": "repeat_sentence",
+        "word": "Is it on your bed? No, it isn't.",
+        "chinese": "它在你的床上吗？不，不在。",
+        "expected": "Is it on your bed? No, it isn't."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "Is it under your chair? No, it isn't.",
+        "chinese": "它在你的椅子下面吗？不，不在。",
+        "expected": "Is it under your chair? No, it isn't."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "Dear, put away your clothes, please.",
+        "chinese": "亲爱的，请收好你的衣服。",
+        "expected": "Dear, put away your clothes, please."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "Oh, thank you very much.",
+        "chinese": "哦，非常感谢你。",
+        "expected": "Oh, thank you very much."
       }
     ]
   }

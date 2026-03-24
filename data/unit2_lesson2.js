@@ -338,6 +338,69 @@ var unit2_lesson2 = {
         "scenario": "Whose shirt is this?",
         "question": "What should we pick?",
         "feedback": "Great choice!"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Yang Ming, this is your T-shirt.",
+        "options": [
+          "杨明，这是你的T恤。",
+          "这是我的夹克。",
+          "这是谁的衬衫？",
+          "谢谢你。"
+        ],
+        "correct": 0,
+        "chinese": "杨明，这是你的T恤。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "This is my jacket.",
+        "options": [
+          "这是我的衬衫。",
+          "这是我的夹克。",
+          "这是谁的夹克？",
+          "给你。"
+        ],
+        "correct": 1,
+        "chinese": "这是我的夹克。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "This is my shirt.",
+        "options": [
+          "这是我的衬衫。",
+          "这是我的夹克。",
+          "这是你的T恤。",
+          "这是谁的衬衫？"
+        ],
+        "correct": 0,
+        "chinese": "这是我的衬衫。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Whose jacket is this?",
+        "options": [
+          "这是谁的衬衫？",
+          "这是我的夹克。",
+          "这是谁的夹克？",
+          "给你。谢谢。"
+        ],
+        "correct": 2,
+        "chinese": "这是谁的夹克？"
+      }
+,
+      {
+        "type": "listen_select",
+        "audio": "Is this your jacket? No, it isn't.",
+        "options": ["这是你的夹克吗？不，不是。", "这是谁的衬衫？", "给你。谢谢。", "这是我的衬衫。"],
+        "correct": 0,
+        "chinese": "这是你的夹克吗？不，不是。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Here you are. Thank you. You're welcome.",
+        "options": ["给你。谢谢。不客气。", "这是谁的衬衫？", "这是我的夹克。", "不，不是。"],
+        "correct": 0,
+        "chinese": "给你。谢谢。不客气。"
       }
     ]
   },
@@ -458,7 +521,7 @@ var unit2_lesson2 = {
             "value": "whose"
           },
           {
-            "text": "<img src=\"assets/images/dress.png\" width=\"80\">",
+            "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
             "value": "dress"
           },
           {
@@ -487,7 +550,7 @@ var unit2_lesson2 = {
             "value": "jacket"
           },
           {
-            "text": "<img src=\"assets/images/dress.png\" width=\"80\">",
+            "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
             "value": "dress"
           }
         ],
@@ -822,6 +885,64 @@ var unit2_lesson2 = {
         ],
         "correct": 2,
         "difficulty": "easy"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "Yang Ming, this is your T-shirt.",
+        "options": [
+          {"text": "杨明，这是你的T恤。", "value": "correct"},
+          {"text": "这是我的夹克。", "value": "wrong1"},
+          {"text": "这是谁的衬衫？", "value": "wrong2"},
+          {"text": "给你。谢谢。", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "This is my shirt. This is my jacket.",
+        "options": [
+          {"text": "这是我的衬衫。这是我的夹克。", "value": "correct"},
+          {"text": "这是谁的衬衫？", "value": "wrong1"},
+          {"text": "给你。谢谢。", "value": "wrong2"},
+          {"text": "这是你的T恤。", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "Whose jacket is this?",
+        "options": [
+          {"text": "这是谁的夹克？", "value": "correct"},
+          {"text": "这是我的衬衫。", "value": "wrong1"},
+          {"text": "这是你的T恤。", "value": "wrong2"},
+          {"text": "不，不是。", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      }
+,
+      {
+        "type": "sentence_match",
+        "sentence": "Is this your jacket?",
+        "options": [{"text": "这是你的夹克吗？", "value": "correct"}, {"text": "这是谁的衬衫？", "value": "wrong1"}, {"text": "给你。", "value": "wrong2"}, {"text": "这是我的夹克。", "value": "wrong3"}],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "Here you are. Thank you.",
+        "options": [{"text": "给你。谢谢。", "value": "correct"}, {"text": "不客气。", "value": "wrong1"}, {"text": "这是你的夹克吗？", "value": "wrong2"}, {"text": "这是我的衬衫。", "value": "wrong3"}],
+        "correct": "correct"
+      }
+,
+      {
+        "type": "sentence_match",
+        "sentence": "You're welcome.",
+        "options": [
+          {"text": "不客气。", "value": "correct"},
+          {"text": "谢谢。", "value": "wrong1"},
+          {"text": "给你。", "value": "wrong2"},
+          {"text": "这是谁的衬衫？", "value": "wrong3"}
+        ],
+        "correct": "correct"
       }
     ]
   },
@@ -1197,6 +1318,113 @@ var unit2_lesson2 = {
           "thes"
         ]
       }
+,
+      {
+        "type": "sentence_order",
+        "chinese": "这是谁的衬衫？",
+        "words": ["Whose", "shirt", "is", "this"],
+        "scrambled": ["is", "shirt", "this", "Whose"],
+        "chineseWords": ["这", "是", "谁的", "衬衫"],
+        "chineseScrambled": ["是", "这", "谁的", "衬衫"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "这是你的夹克吗？",
+        "words": ["Is", "this", "your", "jacket"],
+        "scrambled": ["this", "your", "jacket", "Is"],
+        "chineseWords": ["这", "是", "你的", "夹克", "吗"],
+        "chineseScrambled": ["吗", "是", "夹克", "你的", "这"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "给你。",
+        "words": ["Here", "you", "are"],
+        "scrambled": ["are", "Here", "you"],
+        "chineseWords": ["给", "你"],
+        "chineseScrambled": ["你", "给"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "谢谢。",
+        "words": ["Thank", "you"],
+        "scrambled": ["you", "Thank"],
+        "chineseWords": ["谢谢"],
+        "chineseScrambled": ["谢谢"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "不客气。",
+        "words": ["You're", "welcome"],
+        "scrambled": ["welcome", "You're"],
+        "chineseWords": ["不", "客气"],
+        "chineseScrambled": ["客气", "不"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "这是我的夹克。",
+        "words": ["This", "is", "my", "jacket"],
+        "scrambled": ["This", "is", "jacket", "my"],
+        "chineseWords": ["这", "是", "我的", "夹克"],
+        "chineseScrambled": ["我的", "是", "夹克", "这"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "这是我的衬衫。",
+        "words": ["This", "is", "my", "shirt"],
+        "scrambled": ["my", "shirt", "is", "This"],
+        "chineseWords": ["这", "是", "我的", "衬衫"],
+        "chineseScrambled": ["这", "是", "衬衫", "我的"]
+      }
+,
+      {
+        "type": "sentence_order",
+        "chinese": "这是谁的衬衫？",
+        "words": ["Whose", "shirt", "is", "this"],
+        "scrambled": ["shirt", "is", "this", "Whose"],
+        "chineseWords": ["这", "是", "谁的", "衬衫"],
+        "chineseScrambled": ["衬衫", "谁的", "是", "这"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "这是你的夹克吗？",
+        "words": ["Is", "this", "your", "jacket"],
+        "scrambled": ["this", "your", "jacket", "Is"],
+        "chineseWords": ["这", "是", "你的", "夹克吗"],
+        "chineseScrambled": ["你的", "是", "这", "夹克吗"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "给你。",
+        "words": ["Here", "you", "are"],
+        "scrambled": ["are", "you", "Here"],
+        "chineseWords": ["给", "你"],
+        "chineseScrambled": ["你", "给"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "谢谢。",
+        "words": ["Thank", "you"],
+        "scrambled": ["you", "Thank"],
+        "chineseWords": ["谢谢"],
+        "chineseScrambled": ["谢谢"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "不客气。",
+        "words": ["You're", "welcome"],
+        "scrambled": ["welcome", "You're"],
+        "chineseWords": ["不", "客气"],
+        "chineseScrambled": ["客气", "不"]
+      }
+,
+      {
+        "type": "sentence_order",
+        "chinese": "这是谁的夹克？",
+        "words": ["Whose", "jacket", "is", "this"],
+        "scrambled": ["jacket", "is", "this", "Whose"],
+        "chineseWords": ["这", "是", "谁的", "夹克"],
+        "chineseScrambled": ["夹克", "这", "是", "谁的"]
+      }
     ]
   },
   "speaking": {
@@ -1368,6 +1596,43 @@ var unit2_lesson2 = {
         "image": "<img src=\"assets/images/T-shirt.png\" width=\"80\">",
         "sentence": "This is a clothes.",
         "difficulty": "hard"
+      }
+,
+      {
+        "type": "repeat_sentence",
+        "word": "Is this your jacket? No, it isn't.",
+        "chinese": "这是你的夹克吗？不，不是。",
+        "expected": "Is this your jacket? No, it isn't."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "Here you are. Thank you.",
+        "chinese": "给你。谢谢。",
+        "expected": "Here you are. Thank you."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "You're welcome.",
+        "chinese": "不客气。",
+        "expected": "You're welcome."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "This is my jacket.",
+        "chinese": "这是我的夹克。",
+        "expected": "This is my jacket."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "This is my shirt.",
+        "chinese": "这是我的衬衫。",
+        "expected": "This is my shirt."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "Whose jacket is this?",
+        "chinese": "这是谁的夹克？",
+        "expected": "Whose jacket is this?"
       }
     ]
   }

@@ -12,6 +12,16 @@ function renderListeningQuestion(q, container) {
         setTimeout(function() { handleAnswer(true); }, 1000);
         return;
     }
+    // 打乱选项顺序（防止正确答案总在同一位置）
+    if (q.options && q.options.length > 1 && typeof q.correct === 'number') {
+        var correctVal = q.options[q.correct];
+        for (var si = q.options.length - 1; si > 0; si--) {
+            var sj = Math.floor(Math.random() * (si + 1));
+            var stmp = q.options[si]; q.options[si] = q.options[sj]; q.options[sj] = stmp;
+        }
+        q.correct = q.options.indexOf(correctVal);
+    }
+
     // 喇叭按钮（紧凑，节省空间给选项）
     var playBtn = document.createElement('button');
     playBtn.className = 'play-sound-btn animate-pop';

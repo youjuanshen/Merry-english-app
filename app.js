@@ -505,6 +505,7 @@ function showComboIndicator(count) {
 }
 
 // 语音鼓励（说英文）
+// 语音鼓励（说英文）
 function speakFeedback(isCorrect) {
     if ('speechSynthesis' in window) {
         const list = isCorrect ? feedbackMap.success : feedbackMap.encourage;
@@ -653,8 +654,8 @@ function getQuestions(module, phase) {
         return allQuestions;
     }
 
-    // 实战：根据学生水平筛选后随机打乱
-    return shuffleArray(filterQuestionsByLevel(allQuestions, studentLevel));
+    // 实战：按原始顺序出所有题（先简单后难，不打乱不筛选）
+    return allQuestions;
 }
 
 // 根据学生水平筛选题目
@@ -805,6 +806,10 @@ function startGame() {
         currentQuestionIndex = 0;
         currentPlayerIndex = 0;
 
+        // 重置双方分数（防止多轮游戏累加）
+        players[0].stars = 0;
+        players[1].stars = 0;
+
         // 如果没有设置时间限制，使用默认值
         if (!currentTimeLimit || currentTimeLimit === 0) {
             currentTimeLimit = DEFAULT_TIME_LIMIT;
@@ -938,9 +943,16 @@ function renderQuestion() {
         difficultyIndicator = `<span class="difficulty-tag">${diffLabels[currentDifficulty] || ''}</span>`;
     }
 
-    // 简洁设计：进度只在顶部显示，这里只显示轮次和计时
+    // 实战阶段：两人一起答；前测阶段：交替答
+    var turnText = '';
+    if (currentPhase === 'practice') {
+        turnText = '<span class="turn-name">两人 <strong>一起回答</strong></span>';
+    } else {
+        turnText = '<span class="turn-name">请 <strong>' + currentPlayerName + '</strong> 回答</span>';
+    }
+
     document.getElementById('turn-indicator').innerHTML = `
-        <span class="turn-name">请 <strong>${currentPlayerName}</strong> 回答</span>
+        ${turnText}
         ${difficultyIndicator}
         <span class="turn-timer" id="question-timer">${currentTimeLimit ? currentTimeLimit + 's' : ''}</span>
     `;
@@ -965,13 +977,23 @@ function renderQuestion() {
     // 给所有选项卡片内的图片添加白色背景包装（去除透明马赛克）
     wrapImagesWithWhiteBg(container);
 
-    // 添加"下一题"按钮（默认禁用，答对后才启用）
+    // 添加底部按钮（默认禁用，答对后才启用）
     const skipBtn = document.createElement('button');
     skipBtn.className = 'next-btn';
     skipBtn.id = 'next-question-btn';
-    skipBtn.textContent = '下一题 ▶';
-    skipBtn.onclick = skipToNextQuestion;
-    skipBtn.disabled = true; // 默认禁用
+
+    // 最后一题时显示"再来一次"，否则显示"下一题"
+    if (currentQuestionIndex >= moduleQuestions.length - 1) {
+        skipBtn.textContent = '再来一次';
+        skipBtn.onclick = function() {
+            startGame();
+        };
+        skipBtn.disabled = false; // 最后一题直接启用
+    } else {
+        skipBtn.textContent = '下一题 ▶';
+        skipBtn.onclick = skipToNextQuestion;
+        skipBtn.disabled = true; // 非最后一题默认禁用
+    }
     container.appendChild(skipBtn);
 
     syncStudentProgress();
@@ -1120,10 +1142,44 @@ function calculateStudentLevel() {
 }
 
 function updateHeader() {
-    document.getElementById('player1-ui').classList.toggle('active-player', currentPlayerIndex === 0);
-    document.getElementById('player2-ui').classList.toggle('active-player', currentPlayerIndex === 1);
-    document.getElementById('player1-ui').querySelector('.stars').innerHTML = `⭐ ${players[0].stars}`;
-    document.getElementById('player2-ui').querySelector('.stars').innerHTML = `⭐ ${players[1].stars}`;
+    var p1 = document.getElementById('player1-ui');
+    var p2 = document.getElementById('player2-ui');
+    var teamUI = document.getElementById('team-ui');
+
+    if (currentPhase === 'practice') {
+        // 实战：合作模式 — 隐藏AB，显示团队
+        p1.style.display = 'none';
+        p2.style.display = 'none';
+
+        if (!teamUI) {
+            teamUI = document.createElement('div');
+            teamUI.id = 'team-ui';
+            teamUI.style.cssText = 'display:flex;align-items:center;justify-content:center;width:100%;gap:8px;';
+            var header = document.querySelector('.header');
+            header.insertBefore(teamUI, document.getElementById('question-progress'));
+        }
+
+        var name1 = players[0].name.replace(/^\d+\.\s*/, '');
+        var name2 = players[1].name.replace(/^\d+\.\s*/, '');
+        var teamScore = players[0].stars;
+
+        teamUI.innerHTML = '<div style="text-align:center;">' +
+            '<div style="font-size:14px;font-weight:bold;color:#4b4b4b;">' + name1 + ' & ' + name2 + '</div>' +
+            '<div style="font-size:13px;color:#58cc02;font-weight:bold;">⭐ ' + teamScore + '</div>' +
+        '</div>';
+        teamUI.style.display = 'flex';
+    } else {
+        // 前测：竞争模式
+        p1.style.display = '';
+        p2.style.display = '';
+        if (teamUI) teamUI.style.display = 'none';
+
+        p1.querySelector('.name').textContent = players[0].name;
+        p1.classList.toggle('active-player', currentPlayerIndex === 0);
+        p2.classList.toggle('active-player', currentPlayerIndex === 1);
+        p1.querySelector('.stars').innerHTML = '⭐ ' + players[0].stars;
+        p2.querySelector('.stars').innerHTML = '⭐ ' + players[1].stars;
+    }
 }
 
 function handleAnswer(isCorrect, cardEl = null, correctAnswer = null) {
@@ -1191,10 +1247,8 @@ function handleAnswer(isCorrect, cardEl = null, correctAnswer = null) {
         // 只显示底部反馈面板（包含答案和鼓励语，不再重复显示绿色答案条）
         showFeedbackPanel(true, q);
 
-        // 答对后解锁交互
-        isAnimating = false;
-
-        // 不再自动跳转，让学生点击继续按钮
+        // 答对后保持 isAnimating = true，防止学生重复点击选项
+        // 由 onFeedbackContinue() 中的"继续"按钮来解锁并跳到下一题
     } else {
         if (cardEl) cardEl.classList.add('wrong');
         if (window.SoundSystem) SoundSystem.playWrong();
@@ -1354,6 +1408,10 @@ function showFeedbackPanel(isCorrect, question) {
     let answerWord = (question && question.sentence) || (question && question.word) || (question && question.audio) || (question && question.prompt) || (question && question.hint) || (question && question.expected) || '';
     let answerChinese = (question && question.chinese) || '';
 
+    // 最后一题时按钮文案改为"查看结果"
+    var isLastQuestion = (currentQuestionIndex >= moduleQuestions.length - 1);
+    var continueBtnText = isLastQuestion ? '再来一次' : '继续';
+
     // 构建面板内容
     let contentHTML = '';
     if (isCorrect) {
@@ -1365,7 +1423,7 @@ function showFeedbackPanel(isCorrect, question) {
                     ${answerWord ? `<div class="feedback-answer"><span class="answer-word">${answerWord}</span>${answerChinese ? ` = ${answerChinese}` : ''}</div>` : ''}
                 </div>
             </div>
-            <button class="feedback-continue-btn" onclick="onFeedbackContinue()">继续</button>
+            <button class="feedback-continue-btn" onclick="onFeedbackContinue()">${continueBtnText}</button>
         `;
     } else {
         contentHTML = `
@@ -1376,7 +1434,7 @@ function showFeedbackPanel(isCorrect, question) {
                     ${answerWord ? `<div class="feedback-answer">正确答案：<span class="answer-word">${answerWord}</span>${answerChinese ? ` (${answerChinese})` : ''}</div>` : ''}
                 </div>
             </div>
-            <button class="feedback-continue-btn" onclick="onFeedbackContinue()">继续</button>
+            <button class="feedback-continue-btn" onclick="onFeedbackContinue()">${continueBtnText}</button>
         `;
     }
 
@@ -1515,8 +1573,11 @@ function forceNextQuestion() {
 function skipToNextQuestion() {
     if (isAnimating) return;
     stopQuestionTimer();
-    hideCorrectAnswerDisplay(); // 隐藏正确答案显示
-    currentPlayerIndex = currentPlayerIndex === 0 ? 1 : 0;
+    hideCorrectAnswerDisplay();
+    // 前测：交替；实战：不切换
+    if (currentPhase !== 'practice') {
+        currentPlayerIndex = currentPlayerIndex === 0 ? 1 : 0;
+    }
     currentQuestionIndex++;
     resetHintLevel();
     syncStudentProgress();
@@ -1547,12 +1608,21 @@ function hideCorrectHint() {
 }
 
 function onCorrect() {
-    players[currentPlayerIndex].stars += 1;
+    if (currentPhase === 'practice') {
+        // 实战阶段：两人合作，都加分
+        players[0].stars += 1;
+        players[1].stars += 1;
+    } else {
+        // 前测阶段：只给当前回答的同学加分
+        players[currentPlayerIndex].stars += 1;
+    }
     updateHeader();
     createConfetti(15);
 
-    // 严格交替：A→B→A→B，机会均等
-    currentPlayerIndex = currentPlayerIndex === 0 ? 1 : 0;
+    // 前测：严格交替 A→B；实战：不切换（两人一起）
+    if (currentPhase !== 'practice') {
+        currentPlayerIndex = currentPlayerIndex === 0 ? 1 : 0;
+    }
     currentQuestionIndex++;
     syncStudentProgress();
     renderQuestion();

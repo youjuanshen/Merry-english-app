@@ -2,6 +2,33 @@
 
 let draggedEl = null;
 
+function _shuffleOptions(q) {
+    // 打乱选项顺序，防止正确答案总在同一位置
+    if (!q.options || q.options.length < 2) return;
+
+    var isObj = typeof q.options[0] === 'object' && q.options[0] !== null;
+
+    if (isObj) {
+        // value-based: 直接打乱，onclick 用 value 判断对错
+        for (var i = q.options.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var tmp = q.options[i];
+            q.options[i] = q.options[j];
+            q.options[j] = tmp;
+        }
+    } else if (typeof q.correct === 'number') {
+        // index-based: 记住正确答案，打乱后更新 correct 索引
+        var correctVal = q.options[q.correct];
+        for (var i = q.options.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var tmp = q.options[i];
+            q.options[i] = q.options[j];
+            q.options[j] = tmp;
+        }
+        q.correct = q.options.indexOf(correctVal);
+    }
+}
+
 function renderReadingQuestion(q, container) {
     // 容错：如果题目数据不完整，自动跳过
     if (!q || (!q.options && !q.pairs && q.type !== 'spot_diff')) {
@@ -14,6 +41,9 @@ function renderReadingQuestion(q, container) {
         setTimeout(function() { handleAnswer(true); }, 1000);
         return;
     }
+    // 打乱选项顺序
+    _shuffleOptions(q);
+
     if (q.type === 'word_match') {
         const textEl = document.createElement('div');
         textEl.style.fontSize = '60px';
@@ -45,12 +75,14 @@ function renderReadingQuestion(q, container) {
 
     } else if (q.type === 'sentence_match') {
         const textEl = document.createElement('div');
-        textEl.style.fontSize = '40px';
+        textEl.style.fontSize = '36px';
         textEl.style.fontWeight = 'bold';
-        textEl.style.marginBottom = '30px';
+        textEl.style.marginBottom = '10px';
         textEl.style.textAlign = 'center';
         textEl.textContent = q.sentence;
         container.appendChild(textEl);
+
+        // 中文翻译默认不显示，答错后才作为提示出现（支架撤退设计）
 
         const grid = document.createElement('div');
         grid.className = 'options-grid';

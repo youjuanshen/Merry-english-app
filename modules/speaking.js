@@ -1,6 +1,16 @@
 // speaking.js
 
 function renderSpeakingQuestion(q, container) {
+    // 打乱选项顺序
+    if (q.options && q.options.length > 1 && typeof q.correct === 'number') {
+        var correctVal = q.options[q.correct];
+        for (var si = q.options.length - 1; si > 0; si--) {
+            var sj = Math.floor(Math.random() * (si + 1));
+            var stmp = q.options[si]; q.options[si] = q.options[sj]; q.options[sj] = stmp;
+        }
+        q.correct = q.options.indexOf(correctVal);
+    }
+
     if (q.type === 'wheel_spin') {
         renderWheelSpin(q, container);
         return;
@@ -161,8 +171,10 @@ function renderSpeakingQuestion(q, container) {
 
                 statusText.innerHTML = '<span style="color:#58CC02;font-size:24px;">得分: ' + mockScore + ' ' + stars + '</span>';
 
+                // 不手动解锁 isAnimating，由 handleAnswer 内部管理
                 isAnimating = false;
                 handleAnswer(true);
+                // handleAnswer(true) 之后 isAnimating 保持 true，直到"继续"按钮被点击
             }, 1000);
         }
     };

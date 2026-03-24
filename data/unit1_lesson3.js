@@ -1,7 +1,7 @@
 // Unit 1 Lesson 3: I have an animal friend.
 // Core vocab: jump, mouth, meat, tiger, no
 // Sentences: "I have an animal friend.", "Is it a rabbit?", "Yes, it is.", "No, it isn't.", "It can jump."
-var lesson3 = {
+var unit1_lesson3 = {
   "id": "U1L3",
   "title": "I have an animal friend.",
   "listening": {
@@ -32,7 +32,7 @@ var lesson3 = {
       },
       {
         "type": "listen_select",
-        "audio": "carrot",
+        "audio": "I like carrots. What am I?",
         "options": [
           "<img src=\"assets/images/rabbit.png\" width=\"80\">",
           "<img src=\"assets/images/tiger.png\" width=\"80\">",
@@ -40,7 +40,7 @@ var lesson3 = {
           "<img src=\"assets/images/bear.png\" width=\"80\">"
         ],
         "correct": 0,
-        "chinese": "胡萝卜（兔子爱吃胡萝卜）"
+        "chinese": "我喜欢胡萝卜。我是什么？（兔子）"
       },
       {
         "type": "listen_tf",
@@ -82,69 +82,69 @@ var lesson3 = {
       },
       {
         "type": "listen_select",
-        "audio": "Is it a ___? No, it isn't. It's a tiger!",
+        "audio": "Is it a cat? No, it isn't. It's a tiger!",
         "options": [
-          "rabbit",
-          "cat",
-          "bear",
-          "horse"
-        ],
-        "correct": 1,
-        "chinese": "它是___吗？不，它不是。它是老虎！(猫)"
-      },
-      {
-        "type": "listen_select",
-        "audio": "It can ___. I like carrots.",
-        "options": [
-          "run",
-          "jump",
-          "fly",
-          "swim"
-        ],
-        "correct": 1,
-        "chinese": "它会___。我喜欢胡萝卜。(跳)"
-      },
-      {
-        "type": "listen_select",
-        "audio": "你的朋友说：我有一个动物朋友，请你猜！你会问什么？",
-        "options": [
-          "Is it a rabbit?",
-          "It can jump.",
-          "I like carrots.",
-          "My mouth is small."
+          "它是猫吗？不，不是。它是老虎！",
+          "它是兔子吗？是的。",
+          "我有一个动物朋友。",
+          "它会跳。"
         ],
         "correct": 0,
-        "chinese": "你的朋友说：我有一个动物朋友，请你猜猜！你会怎么问？"
+        "chinese": "它是猫吗？不，不是。它是老虎！"
+      },
+      {
+        "type": "listen_select",
+        "audio": "I can jump. I like carrots.",
+        "options": [
+          "<img src=\"assets/images/tiger.png\" width=\"80\">",
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+          "<img src=\"assets/images/cat.png\" width=\"80\">",
+          "<img src=\"assets/images/bear.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "chinese": "我会跳。我喜欢胡萝卜。（兔子）"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Is it a rabbit? Yes, it is.",
+        "options": [
+          "它是兔子吗？是的。",
+          "它是老虎吗？不是。",
+          "我喜欢胡萝卜。",
+          "它会跳。"
+        ],
+        "correct": 0,
+        "chinese": "它是兔子吗？是的。"
       }
     ],
     "practice": [
       {
         "type": "listen_select",
-        "audio": "mouth",
+        "audio": "My mouth is small. I like carrots.",
         "options": [
-          "<img src=\"assets/images/cat.png\" width=\"80\">",
           "<img src=\"assets/images/tiger.png\" width=\"80\">",
           "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-          "<img src=\"assets/images/duck.png\" width=\"80\">"
+          "<img src=\"assets/images/cat.png\" width=\"80\">",
+          "<img src=\"assets/images/horse.png\" width=\"80\">"
         ],
-        "correct": 2,
-        "chinese": "嘴巴（兔子嘴巴小）"
+        "correct": 1,
+        "chinese": "我的嘴巴小。我喜欢胡萝卜。（兔子）"
       },
       {
         "type": "listen_select",
-        "audio": "jump",
+        "audio": "I can jump. I have two long ears.",
         "options": [
           "<img src=\"assets/images/rabbit.png\" width=\"80\">",
           "<img src=\"assets/images/panda.png\" width=\"80\">",
-          "<img src=\"assets/images/duck.png\" width=\"80\">",
+          "<img src=\"assets/images/tiger.png\" width=\"80\">",
           "<img src=\"assets/images/horse.png\" width=\"80\">"
         ],
         "correct": 0,
-        "chinese": "跳（兔子会跳）"
+        "chinese": "我会跳。我有两只长耳朵。（兔子）"
       },
       {
         "type": "listen_select",
-        "audio": "meat",
+        "audio": "My mouth is big. I like meat.",
         "options": [
           "<img src=\"assets/images/rabbit.png\" width=\"80\">",
           "<img src=\"assets/images/tiger.png\" width=\"80\">",
@@ -152,19 +152,19 @@ var lesson3 = {
           "<img src=\"assets/images/bird.png\" width=\"80\">"
         ],
         "correct": 1,
-        "chinese": "肉（老虎吃肉）"
+        "chinese": "我的嘴巴大。我喜欢吃肉。（老虎）"
       },
       {
         "type": "listen_select",
-        "audio": "no",
+        "audio": "No, it isn't. It's a tiger!",
         "options": [
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/duck.png\" width=\"80\">",
-          "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/cat.png\" width=\"80\">"
+          "不，不是。它是老虎！",
+          "是的，它是。",
+          "我有一个动物朋友。",
+          "它会跳。"
         ],
-        "correct": 3,
-        "chinese": "不（不，它不是猫。）"
+        "correct": 0,
+        "chinese": "不，不是。它是老虎！"
       },
       {
         "type": "listen_tf",
@@ -237,111 +237,101 @@ var lesson3 = {
       },
       {
         "type": "listen_select",
-        "audio": "My ___ is small. I have two long ears.",
+        "audio": "My mouth is small. I have two long ears.",
         "options": [
-          "eye",
-          "nose",
-          "mouth",
-          "leg"
-        ],
-        "correct": 2,
-        "chinese": "我的___小。我有两只长耳朵。(嘴巴)"
-      },
-      {
-        "type": "listen_select",
-        "audio": "I like ___. What am I?",
-        "options": [
-          "grass",
-          "meat",
-          "carrots",
-          "fish"
-        ],
-        "correct": 2,
-        "chinese": "我喜欢___。我是什么？(胡萝卜——兔子)"
-      },
-      {
-        "type": "listen_select",
-        "audio": "It can jump. I have two long ___.",
-        "options": [
-          "legs",
-          "eyes",
-          "ears",
-          "mouths"
-        ],
-        "correct": 2,
-        "chinese": "它会跳。我有两只长___。(耳朵)"
-      },
-      {
-        "type": "listen_select",
-        "audio": "An animal has a small mouth, two long ears, and likes carrots. What is it?",
-        "options": [
-          "It's a tiger.",
-          "It's a cat.",
-          "It's a rabbit.",
-          "It's a bear."
-        ],
-        "correct": 2,
-        "chinese": "一个动物嘴巴小，有两只长耳朵，喜欢胡萝卜。它是什么？"
-      },
-      {
-        "type": "listen_select",
-        "audio": "An animal can jump and likes meat. What is it?",
-        "options": [
-          "It's a rabbit.",
-          "It's a tiger.",
-          "It's a duck.",
-          "It's a panda."
+          "<img src=\"assets/images/tiger.png\" width=\"80\">",
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+          "<img src=\"assets/images/cat.png\" width=\"80\">",
+          "<img src=\"assets/images/monkey.png\" width=\"80\">"
         ],
         "correct": 1,
-        "chinese": "一个动物会跳，喜欢吃肉。它是什么？"
+        "chinese": "我的嘴巴小。我有两只长耳朵。（兔子）"
       },
       {
         "type": "listen_select",
-        "audio": "A问：它是兔子吗？B会怎么回答？",
+        "audio": "I like carrots. I can jump.",
         "options": [
-          "Yes, it is.",
-          "It can jump.",
-          "My mouth is small.",
-          "I like carrots."
-        ],
-        "correct": 0,
-        "chinese": "A问：它是兔子吗？B会说什么？"
-      },
-      {
-        "type": "listen_select",
-        "audio": "A问：它是猫吗？B会怎么回答？",
-        "options": [
-          "Yes, it is.",
-          "No, it isn't. It's a tiger!",
-          "It can jump.",
-          "My mouth is small."
+          "我喜欢吃肉。我跑得很快。",
+          "我喜欢胡萝卜。我会跳。",
+          "我的嘴巴大。我喜欢吃肉。",
+          "我有一个动物朋友。"
         ],
         "correct": 1,
-        "chinese": "A问：它是猫吗？B会说什么？"
+        "chinese": "我喜欢胡萝卜。我会跳。"
       },
       {
         "type": "listen_select",
-        "audio": "A说：我有一个动物朋友，请你猜！B会怎么回答？",
+        "audio": "I can run fast. My mouth is big. I like meat.",
         "options": [
-          "It's a tiger!",
-          "I like carrots.",
-          "Is it a rabbit?",
-          "My mouth is small."
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+          "<img src=\"assets/images/cat.png\" width=\"80\">",
+          "<img src=\"assets/images/tiger.png\" width=\"80\">",
+          "<img src=\"assets/images/panda.png\" width=\"80\">"
         ],
         "correct": 2,
-        "chinese": "A说：我有一个动物朋友，请你猜猜！B会说什么？"
+        "chinese": "我跑得很快。我的嘴巴大。我喜欢吃肉。（老虎）"
       },
       {
         "type": "listen_select",
-        "audio": "你的朋友让你猜一个动物，你想问是不是猫，你会说什么？",
+        "audio": "I have an animal friend. Please guess!",
         "options": [
-          "Is it a cat?",
-          "It's a tiger!",
-          "No, it isn't.",
-          "I like carrots."
+          "我有一个动物朋友。请你猜！",
+          "它是兔子吗？",
+          "不，不是。它是老虎！",
+          "我喜欢胡萝卜。"
         ],
         "correct": 0,
-        "chinese": "你的朋友让你猜一个动物，你想知道它是不是猫，你会怎么说？"
+        "chinese": "我有一个动物朋友。请你猜！"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "I can jump.",
+        "image": "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+        "correct": true,
+        "chinese": "兔子会跳，正确！"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "I like carrots.",
+        "image": "<img src=\"assets/images/tiger.png\" width=\"80\">",
+        "correct": false,
+        "chinese": "老虎不喜欢胡萝卜，老虎喜欢吃肉。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "No, it isn't. It's a tiger!",
+        "options": [
+          "不，不是。它是老虎！",
+          "是的，它是。",
+          "我有一个动物朋友。",
+          "它会跳。"
+        ],
+        "correct": 0,
+        "chinese": "不，不是。它是老虎！"
+      },
+      {
+        "type": "listen_select",
+        "audio": "I am white. I can jump. What am I?",
+        "options": [
+          "<img src=\"assets/images/tiger.png\" width=\"80\">",
+          "<img src=\"assets/images/bear.png\" width=\"80\">",
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+          "<img src=\"assets/images/cat.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "chinese": "我是白色的。我会跳。我是什么？（兔子）"
+      },
+      {
+        "type": "listen_select",
+        "audio": "I am black and yellow. I like meat. What am I?",
+        "options": [
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+          "<img src=\"assets/images/panda.png\" width=\"80\">",
+          "<img src=\"assets/images/tiger.png\" width=\"80\">",
+          "<img src=\"assets/images/horse.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "chinese": "我是黑黄色的。我喜欢吃肉。我是什么？（老虎）"
       }
     ]
   },
@@ -1074,6 +1064,29 @@ var lesson3 = {
         ],
         "correct": "correct"
       }
+,
+      {
+        "type": "sentence_match",
+        "sentence": "I can jump. I have two long ears.",
+        "options": [
+          {"text": "我会跳。我有两只长耳朵。", "value": "correct"},
+          {"text": "我跑得很快。我的嘴巴大。", "value": "wrong1"},
+          {"text": "我喜欢胡萝卜。", "value": "wrong2"},
+          {"text": "我有一个动物朋友。", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "I can run fast. My mouth is big. I like meat.",
+        "options": [
+          {"text": "我跑得很快。我的嘴巴大。我喜欢吃肉。", "value": "correct"},
+          {"text": "我会跳。我的嘴巴小。我喜欢胡萝卜。", "value": "wrong1"},
+          {"text": "我有一个动物朋友。请你猜！", "value": "wrong2"},
+          {"text": "它是兔子吗？是的。", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      }
     ]
   },
   "writing": {
@@ -1094,7 +1107,9 @@ var lesson3 = {
           "friend",
           "have",
           "an"
-        ]
+        ],
+        "chineseWords": ["我", "有", "一个", "动物朋友"],
+        "chineseScrambled": ["我", "有", "动物朋友", "一个"]
       },
       {
         "type": "sentence_order",
@@ -1244,7 +1259,9 @@ var lesson3 = {
           "I",
           "animal",
           "have"
-        ]
+        ],
+        "chineseWords": ["我", "有", "两只", "长耳朵"],
+        "chineseScrambled": ["有", "两只", "我", "长耳朵"]
       },
       {
         "type": "sentence_order",
@@ -1267,12 +1284,16 @@ var lesson3 = {
           "a",
           "rabbit"
         ],
+        "chineseWords": ["请", "猜猜"],
+        "chineseScrambled": ["猜猜", "请"],
         "scrambled": [
           "a",
           "rabbit",
           "Is",
           "it"
-        ]
+        ],
+        "chineseWords": ["它", "是", "一只", "兔子", "吗"],
+        "chineseScrambled": ["一只", "它", "吗", "是", "兔子"]
       },
       {
         "type": "sentence_order",
@@ -1282,11 +1303,15 @@ var lesson3 = {
           "it",
           "is"
         ],
+        "chineseWords": ["是的", "它是"],
+        "chineseScrambled": ["它是", "是的"],
         "scrambled": [
           "it",
           "Yes",
           "is"
-        ]
+        ],
+        "chineseWords": ["是的", "它是"],
+        "chineseScrambled": ["它是", "是的"]
       },
       {
         "type": "sentence_order",
@@ -1297,12 +1322,16 @@ var lesson3 = {
           "a",
           "cat"
         ],
+        "chineseWords": ["是的", "它是"],
+        "chineseScrambled": ["它是", "是的"],
         "scrambled": [
           "cat",
           "Is",
           "a",
           "it"
-        ]
+        ],
+        "chineseWords": ["它", "是", "一只", "猫", "吗"],
+        "chineseScrambled": ["吗", "它", "猫", "是", "一只"]
       },
       {
         "type": "sentence_order",
@@ -1312,11 +1341,15 @@ var lesson3 = {
           "it",
           "isn't"
         ],
+        "chineseWords": ["不", "不是"],
+        "chineseScrambled": ["不是", "不"],
         "scrambled": [
           "isn't",
           "No",
           "it"
-        ]
+        ],
+        "chineseWords": ["不", "不是"],
+        "chineseScrambled": ["不是", "不"]
       },
       {
         "type": "sentence_order",
@@ -1326,11 +1359,15 @@ var lesson3 = {
           "a",
           "tiger"
         ],
+        "chineseWords": ["不", "不是"],
+        "chineseScrambled": ["不是", "不"],
         "scrambled": [
           "tiger",
           "It's",
           "a"
-        ]
+        ],
+        "chineseWords": ["它", "是", "一只", "老虎"],
+        "chineseScrambled": ["一只", "它", "是", "老虎"]
       },
       {
         "type": "sentence_order",
@@ -1340,11 +1377,15 @@ var lesson3 = {
           "can",
           "jump"
         ],
+        "chineseWords": ["它", "是", "一只", "老虎"],
+        "chineseScrambled": ["老虎", "是", "它", "一只"],
         "scrambled": [
           "can",
           "jump",
           "It"
-        ]
+        ],
+        "chineseWords": ["它", "会", "跳"],
+        "chineseScrambled": ["会", "跳", "它"]
       },
       {
         "type": "sentence_order",
@@ -1378,7 +1419,9 @@ var lesson3 = {
           "ears",
           "have",
           "long"
-        ]
+        ],
+        "chineseWords": ["我", "有", "两只", "长耳朵"],
+        "chineseScrambled": ["两只", "我", "长耳朵", "有"]
       },
       {
         "type": "sentence_order",
@@ -1392,7 +1435,9 @@ var lesson3 = {
           "carrots",
           "I",
           "like"
-        ]
+        ],
+        "chineseWords": ["我", "喜欢", "胡萝卜"],
+        "chineseScrambled": ["我", "胡萝卜", "喜欢"]
       },
       {
         "type": "sentence_order",
@@ -1406,7 +1451,9 @@ var lesson3 = {
           "I",
           "What",
           "am"
-        ]
+        ],
+        "chineseWords": ["我", "是", "什么"],
+        "chineseScrambled": ["是", "我", "什么"]
       },
       {
         "type": "fill_blank",
@@ -1596,6 +1643,136 @@ var lesson3 = {
         ],
         "correct": 0,
         "chinese": "嘴巴"
+      }
+,
+      {
+        "type": "sentence_order",
+        "chinese": "我有一个动物朋友。",
+        "words": ["I", "have", "an", "animal", "friend"],
+        "scrambled": ["animal", "I", "an", "friend", "have"],
+        "chineseWords": ["我", "有", "一个", "动物朋友"],
+        "chineseScrambled": ["一个", "动物朋友", "我", "有"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "它是兔子吗？",
+        "words": ["Is", "it", "a", "rabbit"],
+        "scrambled": ["a", "it", "rabbit", "Is"],
+        "chineseWords": ["它", "是", "兔子", "吗"],
+        "chineseScrambled": ["兔子", "是", "吗", "它"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "我会跳。",
+        "words": ["I", "can", "jump"],
+        "scrambled": ["can", "jump", "I"],
+        "chineseWords": ["我", "会", "跳"],
+        "chineseScrambled": ["会", "跳", "我"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "我的嘴巴小。",
+        "words": ["My", "mouth", "is", "small"],
+        "scrambled": ["small", "My", "mouth", "is"],
+        "chineseWords": ["我的", "嘴巴", "小"],
+        "chineseScrambled": ["我的", "小", "嘴巴"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "我喜欢胡萝卜。",
+        "words": ["I", "like", "carrots"],
+        "scrambled": ["carrots", "like", "I"],
+        "chineseWords": ["我", "喜欢", "胡萝卜"],
+        "chineseScrambled": ["胡萝卜", "我", "喜欢"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "我跑得很快。",
+        "words": ["I", "can", "run", "fast"],
+        "scrambled": ["I", "run", "fast", "can"],
+        "chineseWords": ["我", "跑得", "很快"],
+        "chineseScrambled": ["我", "很快", "跑得"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "我的嘴巴大。",
+        "words": ["My", "mouth", "is", "big"],
+        "scrambled": ["mouth", "big", "is", "My"],
+        "chineseWords": ["我的", "嘴巴", "大"],
+        "chineseScrambled": ["大", "嘴巴", "我的"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "我喜欢吃肉。",
+        "words": ["I", "like", "meat"],
+        "scrambled": ["like", "meat", "I"],
+        "chineseWords": ["我", "喜欢", "吃肉"],
+        "chineseScrambled": ["喜欢", "我", "吃肉"]
+      }
+,
+      {
+        "type": "sentence_order",
+        "chinese": "我有一个动物朋友。",
+        "words": ["I", "have", "an", "animal", "friend"],
+        "scrambled": ["animal", "friend", "I", "have", "an"],
+        "chineseWords": ["我", "有", "一个", "动物朋友"],
+        "chineseScrambled": ["一个", "动物朋友", "有", "我"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "它是兔子吗？",
+        "words": ["Is", "it", "a", "rabbit"],
+        "scrambled": ["it", "Is", "rabbit", "a"],
+        "chineseWords": ["它", "是", "兔子", "吗"],
+        "chineseScrambled": ["它", "兔子", "是", "吗"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "我会跳。",
+        "words": ["I", "can", "jump"],
+        "scrambled": ["can", "I", "jump"],
+        "chineseWords": ["我", "会", "跳"],
+        "chineseScrambled": ["我", "跳", "会"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "我的嘴巴小。",
+        "words": ["My", "mouth", "is", "small"],
+        "scrambled": ["My", "is", "mouth", "small"],
+        "chineseWords": ["我的", "嘴巴", "小"],
+        "chineseScrambled": ["嘴巴", "我的", "小"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "我喜欢胡萝卜。",
+        "words": ["I", "like", "carrots"],
+        "scrambled": ["I", "carrots", "like"],
+        "chineseWords": ["我", "喜欢", "胡萝卜"],
+        "chineseScrambled": ["喜欢", "胡萝卜", "我"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "我跑得很快。",
+        "words": ["I", "can", "run", "fast"],
+        "scrambled": ["fast", "I", "run", "can"],
+        "chineseWords": ["我", "跑得", "很快"],
+        "chineseScrambled": ["我", "很快", "跑得"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "我的嘴巴大。",
+        "words": ["My", "mouth", "is", "big"],
+        "scrambled": ["is", "My", "mouth", "big"],
+        "chineseWords": ["我的", "嘴巴", "大"],
+        "chineseScrambled": ["我的", "大", "嘴巴"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "我喜欢吃肉。",
+        "words": ["I", "like", "meat"],
+        "scrambled": ["meat", "like", "I"],
+        "chineseWords": ["我", "喜欢", "吃肉"],
+        "chineseScrambled": ["吃肉", "我", "喜欢"]
       }
     ]
   },
@@ -1796,6 +1973,25 @@ var lesson3 = {
         "expected": "cat",
         "word": "cat",
         "chinese": "猫"
+      }
+,
+      {
+        "type": "repeat_sentence",
+        "word": "I can jump.",
+        "chinese": "我会跳。",
+        "expected": "I can jump."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "I can run fast.",
+        "chinese": "我跑得很快。",
+        "expected": "I can run fast."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "My mouth is big. I like meat.",
+        "chinese": "我的嘴巴大。我喜欢吃肉。",
+        "expected": "My mouth is big. I like meat."
       }
     ]
   }

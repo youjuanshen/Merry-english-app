@@ -1,7 +1,7 @@
 // Unit 1 Lesson 4: Look! It's a cat.
 // Core vocab: draw, nose, cat
 // Sentences: "Look! It's a cat.", "These are two eyes.", "Let's draw."
-var lesson4 = {
+var unit1_lesson4 = {
   "id": "U1L4",
   "title": "Look! It's a cat.",
   "listening": {
@@ -20,19 +20,19 @@ var lesson4 = {
       },
       {
         "type": "listen_select",
-        "audio": "nose",
+        "audio": "This is a nose.",
         "options": [
-          "<img src=\"assets/images/cat.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/elephant.png\" width=\"80\">",
-          "<img src=\"assets/images/duck.png\" width=\"80\">"
+          "这是一个鼻子。",
+          "这是一张脸。",
+          "这些是两只眼睛。",
+          "这些是两只耳朵。"
         ],
-        "correct": 2,
-        "chinese": "鼻子（大象有长鼻子）"
+        "correct": 0,
+        "chinese": "这是一个鼻子。"
       },
       {
         "type": "listen_select",
-        "audio": "draw",
+        "audio": "Let's draw together!",
         "options": [
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
           "<img src=\"assets/images/cat.png\" width=\"80\">",
@@ -40,7 +40,7 @@ var lesson4 = {
           "<img src=\"assets/images/bird.png\" width=\"80\">"
         ],
         "correct": 0,
-        "chinese": "画"
+        "chinese": "我们一起画画吧！"
       },
       {
         "type": "listen_tf",
@@ -82,89 +82,89 @@ var lesson4 = {
       },
       {
         "type": "listen_select",
-        "audio": "This is a ___. These are two eyes.",
+        "audio": "This is a face. These are two eyes.",
         "options": [
-          "nose",
-          "mouth",
-          "face",
-          "ear"
-        ],
-        "correct": 2,
-        "chinese": "这是一个___。这些是两只眼睛。(脸)"
-      },
-      {
-        "type": "listen_select",
-        "audio": "This is a ___ and a mouth.",
-        "options": [
-          "face",
-          "eye",
-          "ear",
-          "nose"
-        ],
-        "correct": 3,
-        "chinese": "这是一个___和一张嘴。(鼻子)"
-      },
-      {
-        "type": "listen_select",
-        "audio": "你想和朋友一起画画，你会说什么？",
-        "options": [
-          "Let's draw together!",
-          "This is a face.",
-          "Look! It's a cat.",
-          "These are two eyes."
+          "这是一张脸。这些是两只眼睛。",
+          "这些是两只耳朵。",
+          "这是一个鼻子和一张嘴。",
+          "我们一起画画吧！"
         ],
         "correct": 0,
-        "chinese": "你想和朋友一起画画，你会说什么？"
+        "chinese": "这是一张脸。这些是两只眼睛。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "This is a nose and a mouth.",
+        "options": [
+          "这是一张脸。",
+          "这些是两只眼睛。",
+          "这是一个鼻子和一张嘴。",
+          "看！是一只猫。"
+        ],
+        "correct": 2,
+        "chinese": "这是一个鼻子和一张嘴。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Let's draw together!",
+        "options": [
+          "我们一起画画吧！",
+          "看！是一只猫。",
+          "这是两只耳朵。",
+          "这是一张脸。"
+        ],
+        "correct": 0,
+        "chinese": "我们一起画画吧！"
       }
     ],
     "practice": [
       {
         "type": "listen_select",
-        "audio": "face",
+        "audio": "This is a face.",
         "options": [
-          "<img src=\"assets/images/cat.png\" width=\"80\">",
-          "<img src=\"assets/images/monkey.png\" width=\"80\">",
-          "<img src=\"assets/images/bear.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">"
+          "这是一张脸。",
+          "这些是两只眼睛。",
+          "这是一个鼻子。",
+          "这些是两只耳朵。"
+        ],
+        "correct": 0,
+        "chinese": "这是一张脸。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "These are two eyes.",
+        "options": [
+          "这些是两只耳朵。",
+          "这些是两只眼睛。",
+          "这是一张脸。",
+          "这是一个鼻子。"
         ],
         "correct": 1,
-        "chinese": "脸（猴子有张有趣的脸）"
+        "chinese": "这些是两只眼睛。"
       },
       {
         "type": "listen_select",
-        "audio": "eye",
+        "audio": "These are two ears.",
         "options": [
-          "<img src=\"assets/images/panda.png\" width=\"80\">",
-          "<img src=\"assets/images/duck.png\" width=\"80\">",
-          "<img src=\"assets/images/horse.png\" width=\"80\">",
-          "<img src=\"assets/images/bird.png\" width=\"80\">"
+          "这些是两只耳朵。",
+          "这些是两只眼睛。",
+          "这是一张嘴。",
+          "这是一张脸。"
         ],
         "correct": 0,
-        "chinese": "眼睛（熊猫有黑眼睛）"
+        "chinese": "这些是两只耳朵。"
       },
       {
         "type": "listen_select",
-        "audio": "ear",
+        "audio": "This is a nose and a mouth.",
         "options": [
-          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
-          "<img src=\"assets/images/duck.png\" width=\"80\">",
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/bird.png\" width=\"80\">"
+          "这是一张脸。",
+          "这些是两只眼睛。",
+          "这是一个鼻子和一张嘴。",
+          "我们一起画画吧！"
         ],
-        "correct": 0,
-        "chinese": "耳朵（兔子有长耳朵）"
-      },
-      {
-        "type": "listen_select",
-        "audio": "mouth",
-        "options": [
-          "<img src=\"assets/images/tiger.png\" width=\"80\">",
-          "<img src=\"assets/images/horse.png\" width=\"80\">",
-          "<img src=\"assets/images/panda.png\" width=\"80\">",
-          "<img src=\"assets/images/duck.png\" width=\"80\">"
-        ],
-        "correct": 0,
-        "chinese": "嘴巴（老虎有大嘴巴）"
+        "correct": 2,
+        "chinese": "这是一个鼻子和一张嘴。"
       },
       {
         "type": "listen_tf",
@@ -237,111 +237,125 @@ var lesson4 = {
       },
       {
         "type": "listen_select",
-        "audio": "___ is a face. These are two eyes.",
+        "audio": "This is a face.",
         "options": [
-          "That",
-          "Those",
-          "This",
-          "These"
+          "这是一张脸。",
+          "这些是两只眼睛。",
+          "这是一个鼻子。",
+          "这些是两只耳朵。"
         ],
-        "correct": 2,
-        "chinese": "___是一张脸。这些是两只眼睛。(这)"
+        "correct": 0,
+        "chinese": "这是一张脸。"
       },
       {
         "type": "listen_select",
-        "audio": "___ are two ears. This is a nose.",
+        "audio": "These are two ears.",
         "options": [
-          "This",
-          "That",
-          "These",
-          "Those"
+          "这些是两只眼睛。",
+          "这是一张脸。",
+          "这些是两只耳朵。",
+          "这是一个鼻子。"
         ],
         "correct": 2,
-        "chinese": "___是两只耳朵。这是一个鼻子。(这些)"
+        "chinese": "这些是两只耳朵。"
       },
       {
         "type": "listen_select",
-        "audio": "That is a ___. Those are two eyes.",
+        "audio": "That is a face. Those are two eyes.",
         "options": [
-          "nose",
-          "mouth",
-          "face",
-          "ear"
+          "那是一张脸。那些是两只眼睛。",
+          "这是一张脸。这些是两只耳朵。",
+          "这是一个鼻子和一张嘴。",
+          "看！是一只猫。"
         ],
-        "correct": 2,
-        "chinese": "那是一个___。那些是两只眼睛。(脸)"
+        "correct": 0,
+        "chinese": "那是一张脸。那些是两只眼睛。"
       },
       {
         "type": "listen_select",
-        "audio": "A draws a face and two eyes. B says: Look! What is it?",
+        "audio": "Look! It's a cat.",
         "options": [
-          "It's a dog.",
-          "It's a cat.",
-          "It's a bear.",
-          "It's a panda."
+          "我们一起画画吧！",
+          "看！是一只猫。",
+          "这是一张脸。",
+          "这些是两只耳朵。"
         ],
         "correct": 1,
-        "chinese": "A画了一张脸和两只眼睛。B说：看！它是什么？"
+        "chinese": "看！是一只猫。"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "These are two eyes.",
+        "image": "<img src=\"assets/images/cat.png\" width=\"80\">",
+        "correct": true,
+        "chinese": "猫有两只眼睛，正确！"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "This is a nose.",
+        "image": "<img src=\"assets/images/elephant.png\" width=\"80\">",
+        "correct": true,
+        "chinese": "大象有鼻子，正确！"
       },
       {
         "type": "listen_select",
-        "audio": "You are drawing an animal face. You just drew two eyes. What do you draw next?",
+        "audio": "This is a nose and a mouth.",
         "options": [
-          "This is a nose and a mouth.",
-          "Those are horses.",
-          "They are lovely.",
-          "It can run fast."
+          "这些是两只眼睛。",
+          "这是一个鼻子和一张嘴。",
+          "这是一张脸。",
+          "我们一起画画吧！"
+        ],
+        "correct": 1,
+        "chinese": "这是一个鼻子和一张嘴。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Let's draw together!",
+        "options": [
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/cat.png\" width=\"80\">",
+          "<img src=\"assets/images/rabbit.png\" width=\"80\">",
+          "<img src=\"assets/images/bear.png\" width=\"80\">"
         ],
         "correct": 0,
-        "chinese": "你在画动物的脸，刚画了两只眼睛。接下来画什么？"
+        "chinese": "我们一起画画吧！"
       },
       {
         "type": "listen_select",
-        "audio": "A说：我们一起画画吧！B先画什么？",
+        "audio": "These are two eyes. These are two ears.",
         "options": [
-          "This is a face.",
-          "I like carrots.",
-          "It can jump.",
-          "They are brown."
+          "这些是两只眼睛。这些是两只耳朵。",
+          "这是一张脸。这是一个鼻子。",
+          "看！是一只猫。",
+          "我们一起画画吧！"
         ],
         "correct": 0,
-        "chinese": "A说：我们一起画画吧！B先画什么？"
+        "chinese": "这些是两只眼睛。这些是两只耳朵。"
       },
       {
         "type": "listen_select",
-        "audio": "A说：这是一张脸，这是两只眼睛。接下来A会画什么？",
+        "audio": "Look, a nose and a mouth.",
         "options": [
-          "These are two ears.",
-          "Those are horses.",
-          "It's big.",
-          "They are beautiful."
+          "看，一个鼻子和一张嘴。",
+          "这是一张脸。",
+          "这些是两只眼睛。",
+          "我们一起画画吧！"
         ],
         "correct": 0,
-        "chinese": "A说：这是一张脸。这些是两只眼睛。A接下来画什么？"
+        "chinese": "看，一个鼻子和一张嘴。"
       },
       {
         "type": "listen_select",
-        "audio": "你画完了，它有两只眼睛、两只耳朵、一个鼻子和一张嘴巴。你会说什么？",
+        "audio": "Is it a panda? No, it isn't.",
         "options": [
-          "These are two ears.",
-          "This is a face.",
-          "Look! It's a cat.",
-          "Let's draw together!"
+          "它是熊猫吗？不，不是。",
+          "看！是一只猫。",
+          "这是一张脸。",
+          "我们一起画画吧！"
         ],
-        "correct": 2,
-        "chinese": "你画完了，它有两只眼睛、两只耳朵、一个鼻子和一张嘴。你会说什么？"
-      },
-      {
-        "type": "listen_select",
-        "audio": "你的朋友叫你画画，你会说什么？",
-        "options": [
-          "Look! It's a cat.",
-          "This is a face.",
-          "Let's draw together!",
-          "These are two eyes."
-        ],
-        "correct": 2,
-        "chinese": "你的朋友邀请你画画，你会说什么？"
+        "correct": 0,
+        "chinese": "它是熊猫吗？不，不是。"
       }
     ]
   },
@@ -1073,6 +1087,28 @@ var lesson4 = {
           }
         ],
         "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "Look, a nose and a mouth.",
+        "options": [
+          {"text": "看，一个鼻子和一张嘴。", "value": "correct"},
+          {"text": "这是一张脸。", "value": "wrong1"},
+          {"text": "这些是两只眼睛。", "value": "wrong2"},
+          {"text": "看！是一只猫。", "value": "wrong3"}
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "Is it a panda? No, it isn't.",
+        "options": [
+          {"text": "它是熊猫吗？不，不是。", "value": "correct"},
+          {"text": "看！是一只猫。", "value": "wrong1"},
+          {"text": "我们一起画画吧！", "value": "wrong2"},
+          {"text": "这些是两只耳朵。", "value": "wrong3"}
+        ],
+        "correct": "correct"
       }
     ]
   },
@@ -1090,7 +1126,11 @@ var lesson4 = {
           "draw",
           "Let's",
           "together"
-        ]
+        ],
+        "chineseWords": ["我们", "一起", "画画", "吧"],
+        "chineseScrambled": ["吧", "我们", "画画", "一起"],
+        "chineseWords": ["我们", "一起", "画画", "吧"],
+        "chineseScrambled": ["画画", "吧", "我们", "一起"]
       },
       {
         "type": "sentence_order",
@@ -1106,7 +1146,9 @@ var lesson4 = {
           "a",
           "This",
           "is"
-        ]
+        ],
+        "chineseWords": ["这", "是", "一张", "脸"],
+        "chineseScrambled": ["一张", "是", "脸", "这"]
       },
       {
         "type": "fill_blank",
@@ -1232,7 +1274,9 @@ var lesson4 = {
           "together",
           "Let's",
           "draw"
-        ]
+        ],
+        "chineseWords": ["这是", "一个鼻子", "和", "一张嘴巴"],
+        "chineseScrambled": ["一张嘴巴", "这是", "一个鼻子", "和"]
       },
       {
         "type": "sentence_order",
@@ -1243,12 +1287,16 @@ var lesson4 = {
           "a",
           "face"
         ],
+        "chineseWords": ["我们", "一起", "画画", "吧"],
+        "chineseScrambled": ["我们", "画画", "一起", "吧"],
         "scrambled": [
           "a",
           "face",
           "This",
           "is"
-        ]
+        ],
+        "chineseWords": ["这", "是", "一张", "脸"],
+        "chineseScrambled": ["这", "脸", "一张", "是"]
       },
       {
         "type": "sentence_order",
@@ -1264,7 +1312,9 @@ var lesson4 = {
           "These",
           "eyes",
           "are"
-        ]
+        ],
+        "chineseWords": ["这些", "是", "两只", "眼睛"],
+        "chineseScrambled": ["眼睛", "这些", "是", "两只"]
       },
       {
         "type": "sentence_order",
@@ -1280,7 +1330,9 @@ var lesson4 = {
           "That",
           "a",
           "is"
-        ]
+        ],
+        "chineseWords": ["那", "是", "一张", "脸"],
+        "chineseScrambled": ["脸", "是", "那", "一张"]
       },
       {
         "type": "sentence_order",
@@ -1296,7 +1348,9 @@ var lesson4 = {
           "Those",
           "two",
           "are"
-        ]
+        ],
+        "chineseWords": ["那些", "是", "两只", "眼睛"],
+        "chineseScrambled": ["眼睛", "两只", "是", "那些"]
       },
       {
         "type": "sentence_order",
@@ -1328,7 +1382,9 @@ var lesson4 = {
           "These",
           "two",
           "are"
-        ]
+        ],
+        "chineseWords": ["这些", "是", "两只", "耳朵"],
+        "chineseScrambled": ["这些", "两只", "耳朵", "是"]
       },
       {
         "type": "sentence_order",
@@ -1350,7 +1406,9 @@ var lesson4 = {
           "and",
           "is",
           "a"
-        ]
+        ],
+        "chineseWords": ["这是", "一个鼻子", "和", "一张嘴巴"],
+        "chineseScrambled": ["和", "一张嘴巴", "一个鼻子", "这是"]
       },
       {
         "type": "fill_blank",
@@ -1565,7 +1623,9 @@ var lesson4 = {
           "ears",
           "These",
           "are"
-        ]
+        ],
+        "chineseWords": ["这些", "是", "两只", "耳朵"],
+        "chineseScrambled": ["是", "两只", "耳朵", "这些"]
       },
       {
         "type": "fill_blank",
@@ -1592,8 +1652,18 @@ var lesson4 = {
         ],
         "correct": 1,
         "chinese": "那些是两只眼睛。"
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "它是熊猫吗？不，不是。",
+        "words": ["Is", "it", "a", "panda", "No", "it", "isn't"],
+        "scrambled": ["No", "a", "it", "panda", "Is", "isn't", "it"],
+        "chineseWords": ["它", "是", "熊猫", "吗", "不", "不是"],
+        "chineseScrambled": ["不是", "它", "熊猫", "吗", "是", "不"]
       }
-    ]
+    ],
+        "chineseWords": ["那些", "是", "两只", "眼睛"],
+        "chineseScrambled": ["眼睛", "两只", "是", "那些"]
   },
   "speaking": {
     "pretest": [
@@ -1793,6 +1863,13 @@ var lesson4 = {
         "expected": "monkey",
         "word": "monkey",
         "chinese": "猴子"
+      }
+,
+      {
+        "type": "repeat_sentence",
+        "word": "Is it a panda? No, it isn't.",
+        "chinese": "它是熊猫吗？不，不是。",
+        "expected": "Is it a panda? No, it isn't."
       }
     ]
   }

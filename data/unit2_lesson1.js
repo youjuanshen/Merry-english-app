@@ -339,6 +339,34 @@ var unit2_lesson1 = {
         "question": "What should we pick?",
         "feedback": "Great choice!"
       }
+,
+      {
+        "type": "listen_select",
+        "audio": "Put on your team T-shirts, please.",
+        "options": ["请穿上你们的队服T恤。", "你穿多大号的？", "太大了。", "太小了。"],
+        "correct": 0,
+        "chinese": "请穿上你们的队服T恤。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Size S, Size M, Size L.",
+        "options": ["S号，M号，L号。", "太大了。", "你穿多大号？", "穿上你的T恤。"],
+        "correct": 0,
+        "chinese": "S号，M号，L号。"
+      }
+,
+      {
+        "type": "listen_select",
+        "audio": "It's too small.",
+        "options": [
+          "太大了。",
+          "太小了。",
+          "你穿多大号？",
+          "穿上你的T恤。"
+        ],
+        "correct": 1,
+        "chinese": "太小了。"
+      }
     ]
   },
   "reading": {
@@ -358,7 +386,7 @@ var unit2_lesson1 = {
             "value": "small"
           },
           {
-            "text": "<img src=\"assets/images/dress.png\" width=\"80\">",
+            "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
             "value": "dress"
           },
           {
@@ -387,7 +415,7 @@ var unit2_lesson1 = {
             "value": "jacket"
           },
           {
-            "text": "<img src=\"assets/images/dress.png\" width=\"80\">",
+            "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
             "value": "dress"
           }
         ],
@@ -437,7 +465,7 @@ var unit2_lesson1 = {
             "value": "shirt"
           },
           {
-            "text": "<img src=\"assets/images/dress.png\" width=\"80\">",
+            "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
             "value": "dress"
           }
         ],
@@ -508,7 +536,7 @@ var unit2_lesson1 = {
             "value": "wear"
           },
           {
-            "text": "<img src=\"assets/images/dress.png\" width=\"80\">",
+            "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
             "value": "dress"
           },
           {
@@ -587,7 +615,7 @@ var unit2_lesson1 = {
             "value": "skirt"
           },
           {
-            "text": "<img src=\"assets/images/dress.png\" width=\"80\">",
+            "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
             "value": "dress"
           }
         ],
@@ -834,6 +862,13 @@ var unit2_lesson1 = {
         ],
         "correct": 0,
         "difficulty": "medium"
+      }
+,
+      {
+        "type": "sentence_match",
+        "sentence": "Put on your team T-shirts, please.",
+        "options": [{"text": "请穿上你们的队服T恤。", "value": "correct"}, {"text": "你穿多大号？", "value": "wrong1"}, {"text": "太大了。", "value": "wrong2"}, {"text": "太小了。", "value": "wrong3"}],
+        "correct": "correct"
       }
     ]
   },
@@ -1209,6 +1244,72 @@ var unit2_lesson1 = {
           "all"
         ]
       }
+,
+      {
+        "type": "sentence_order",
+        "chinese": "请穿上你的T恤。",
+        "words": ["Put", "on", "your", "T-shirts", "please"],
+        "scrambled": ["your", "please", "on", "T-shirts", "Put"],
+        "chineseWords": ["请", "穿上", "你的", "T恤"],
+        "chineseScrambled": ["穿上", "T恤", "请", "你的"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "你穿多大号的？",
+        "words": ["What", "size", "do", "you", "wear"],
+        "scrambled": ["size", "do", "you", "wear", "What"],
+        "chineseWords": ["你", "穿", "多大号的"],
+        "chineseScrambled": ["穿", "你", "多大号的"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "太大了。",
+        "words": ["It's", "too", "big"],
+        "scrambled": ["too", "It's", "big"],
+        "chineseWords": ["太", "大", "了"],
+        "chineseScrambled": ["了", "大", "太"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "太小了。",
+        "words": ["It's", "too", "small"],
+        "scrambled": ["too", "It's", "small"],
+        "chineseWords": ["太", "小", "了"],
+        "chineseScrambled": ["小", "了", "太"]
+      }
+,
+      {
+        "type": "sentence_order",
+        "chinese": "请穿上你的T恤。",
+        "words": ["Put", "on", "your", "T-shirts", "please"],
+        "scrambled": ["on", "T-shirts", "Put", "please", "your"],
+        "chineseWords": ["请", "穿上", "你的", "T恤"],
+        "chineseScrambled": ["T恤", "穿上", "请", "你的"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "你穿多大号？",
+        "words": ["What", "size", "do", "you", "wear"],
+        "scrambled": ["What", "wear", "size", "do", "you"],
+        "chineseWords": ["你", "穿", "多大号"],
+        "chineseScrambled": ["多大号", "穿", "你"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "太大了。",
+        "words": ["It's", "too", "big"],
+        "scrambled": ["big", "It's", "too"],
+        "chineseWords": ["太", "大", "了"],
+        "chineseScrambled": ["了", "大", "太"]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "太小了。",
+        "words": ["It's", "too", "small"],
+        "scrambled": ["too", "It's", "small"],
+        "chineseWords": ["太", "小", "了"],
+        "chineseScrambled": ["了", "小", "太"]
+      }
     ]
   },
   "speaking": {
@@ -1380,6 +1481,25 @@ var unit2_lesson1 = {
         "image": "<img src=\"assets/images/mouse.png\" width=\"80\">",
         "sentence": "It's too big.",
         "difficulty": "easy"
+      }
+,
+      {
+        "type": "repeat_sentence",
+        "word": "Put on your T-shirts, please.",
+        "chinese": "请穿上你的T恤。",
+        "expected": "Put on your T-shirts, please."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "Size S. Size M. Size L.",
+        "chinese": "S号。M号。L号。",
+        "expected": "Size S. Size M. Size L."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "It's too small.",
+        "chinese": "太小了。",
+        "expected": "It's too small."
       }
     ]
   }

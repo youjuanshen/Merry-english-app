@@ -33,82 +33,99 @@ const lessonObjectives = {
   },
   'U1L2': {
 
-    title: 'Unit 1 Lesson 2: I see a monkey.',
+    title: 'Unit 1 Lesson 2: These are pandas.',
     vocabulary: [
-      { word: 'monkey', chinese: '猴子' },
-      { word: 'elephant', chinese: '大象' },
-      { word: 'tiger', chinese: '老虎' },
-      { word: 'lion', chinese: '狮子' }
+      { word: 'small', chinese: '小的' },
+      { word: 'ear', chinese: '耳朵' },
+      { word: 'eye', chinese: '眼睛' },
+      { word: 'baby', chinese: '宝宝' },
+      { word: 'long', chinese: '长的' },
+      { word: 'leg', chinese: '腿' },
+      { word: 'these', chinese: '这些' },
+      { word: 'those', chinese: '那些' }
     ],
     sentences: [
-      { en: 'I see a monkey.', cn: '我看见一只猴子。' },
-      { en: 'Look! A tiger!', cn: '看！一只老虎！' },
-      { en: "It's big and strong.", cn: '它又大又壮。' }
+      { en: 'These are pandas. They have small ears and black eyes.', cn: '这些是熊猫。它们有小耳朵和黑眼睛。' },
+      { en: 'Those are horses. They are brown. They have long legs.', cn: '那些是马。它们是棕色的。它们有长腿。' },
+      { en: 'They like grass.', cn: '它们喜欢吃草。' },
+      { en: 'Look, baby pandas. They are lovely.', cn: '看，熊猫宝宝。它们很可爱。' },
+      { en: "Let's ride a horse.", cn: '我们骑马吧。' }
     ],
     objectives: [
-      '能听懂并认读4个动物单词',
-      '能用I see...描述看到的动物',
-      '能用形容词描述动物特征'
+      '能听懂并认读small, ear, eye, baby, long, leg等词汇',
+      '能用These are.../Those are...介绍动物',
+      '能用They have...描述动物特征'
     ],
 
     moduleObjectives: {
-        listening: ['能听懂并辨认本课的核心动物词汇', '能根据录音选择正确的图片与对应场景'],
-        reading: ['能认读本课的核心动物词汇', '能理解简单句子含义并完成图文匹配'],
-        writing: ['能正确拼写核心动物单词', '能补全简单句子强化拼写记忆'],
-        speaking: ['能正确朗读核心动物词汇', '能跟读核心句型并进行简单的口语问答']
+        listening: ['能听懂These/Those的区别用法', '能根据描述判断是哪种动物'],
+        reading: ['能认读these, those等指示代词', '能理解动物特征描述句子'],
+        writing: ['能正确拼写ear, eye, leg等身体部位单词', '能排列组合These are.../Those are...句型'],
+        speaking: ['能朗读These are pandas等句子', '能跟读动物特征描述句']
     }
   },
   'U1L3': {
 
-    title: 'Unit 1 Lesson 3: The rabbit is small.',
+    title: 'Unit 1 Lesson 3: I have an animal friend.',
     vocabulary: [
+      { word: 'jump', chinese: '跳' },
+      { word: 'mouth', chinese: '嘴巴' },
+      { word: 'meat', chinese: '肉' },
+      { word: 'tiger', chinese: '老虎' },
+      { word: 'no', chinese: '不' },
       { word: 'rabbit', chinese: '兔子' },
-      { word: 'mouse', chinese: '老鼠' },
-      { word: 'fish', chinese: '鱼' },
-      { word: 'duck', chinese: '鸭子' }
+      { word: 'carrot', chinese: '胡萝卜' }
     ],
     sentences: [
-      { en: 'The rabbit is small.', cn: '兔子很小。' },
-      { en: 'The duck is yellow.', cn: '鸭子是黄色的。' },
-      { en: 'I like fish.', cn: '我喜欢鱼。' }
+      { en: 'I have an animal friend. Please guess!', cn: '我有一个动物朋友。请你猜！' },
+      { en: 'Is it a rabbit? Yes, it is.', cn: '它是兔子吗？是的。' },
+      { en: "Is it a cat? No, it isn't. It's a tiger!", cn: '它是猫吗？不，不是。它是老虎！' },
+      { en: 'I can jump. My mouth is small. I like carrots.', cn: '我会跳。我的嘴巴小。我喜欢胡萝卜。' },
+      { en: 'I can run fast. My mouth is big. I like meat.', cn: '我跑得很快。我的嘴巴大。我喜欢吃肉。' }
     ],
     objectives: [
-      '能听懂并认读4个动物单词',
-      '能用The...is...描述动物',
-      '能用I like...表达喜好'
+      '能听懂并认读jump, mouth, meat, tiger, rabbit, carrot等词汇',
+      '能用Is it a...?提问并回答Yes/No',
+      '能用I can.../My mouth is.../I like...描述动物特征'
     ],
 
     moduleObjectives: {
-        listening: ['能听懂并辨认本课的核心动物词汇', '能根据录音选择正确的图片与对应场景'],
-        reading: ['能认读本课的核心动物词汇', '能理解简单句子含义并完成图文匹配'],
-        writing: ['能正确拼写核心动物单词', '能补全简单句子强化拼写记忆'],
-        speaking: ['能正确朗读核心动物词汇', '能跟读核心句型并进行简单的口语问答']
+        listening: ['能听懂动物特征描述并猜出动物', '能听懂Is it a...?问答句型'],
+        reading: ['能认读动物猜谜的描述句', '能理解Yes, it is./No, it isn\'t.的含义'],
+        writing: ['能拼写jump, mouth, meat等核心词汇', '能排列组合动物描述句子'],
+        speaking: ['能朗读动物猜谜对话', '能跟读I can jump./I like carrots.等句子']
     }
   },
   'U1L4': {
 
-    title: 'Unit 1 Lesson 4: What is this? It\'s a dog.',
+    title: 'Unit 1 Lesson 4: Look! It\'s a cat.',
     vocabulary: [
-      { word: 'dog', chinese: '狗' },
-      { word: 'cat', chinese: '猫' },
-      { word: 'What', chinese: '什么' }
+      { word: 'draw', chinese: '画' },
+      { word: 'nose', chinese: '鼻子' },
+      { word: 'face', chinese: '脸' },
+      { word: 'eye', chinese: '眼睛' },
+      { word: 'ear', chinese: '耳朵' },
+      { word: 'mouth', chinese: '嘴巴' }
     ],
     sentences: [
-      { en: 'What is this?', cn: '这是什么？' },
-      { en: "It's a dog.", cn: '这是一只狗。' },
-      { en: 'What is that?', cn: '那是什么？' }
+      { en: "Let's draw together!", cn: '我们一起画画吧！' },
+      { en: 'This is a face. These are two eyes.', cn: '这是一张脸。这些是两只眼睛。' },
+      { en: 'That is a face. Those are two eyes.', cn: '那是一张脸。那些是两只眼睛。' },
+      { en: "Look! It's a cat.", cn: '看！是一只猫。' },
+      { en: 'These are two ears. This is a nose and a mouth.', cn: '这些是两只耳朵。这是一个鼻子和一张嘴。' },
+      { en: "Is it a panda? No, it isn't.", cn: '它是熊猫吗？不，不是。' }
     ],
     objectives: [
-      '能听懂并认读dog, cat等单词',
-      '能用What is this/that?提问',
-      '能用It\'s a...回答'
+      '能听懂并认读draw, nose, face, eye, ear, mouth等词汇',
+      '能用This is.../These are...描述五官',
+      '能用That is.../Those are...描述五官'
     ],
 
     moduleObjectives: {
-        listening: ['能听懂并辨认本课的核心动物词汇', '能根据录音选择正确的图片与对应场景'],
-        reading: ['能认读本课的核心动物词汇', '能理解简单句子含义并完成图文匹配'],
-        writing: ['能正确拼写核心动物单词', '能补全简单句子强化拼写记忆'],
-        speaking: ['能正确朗读核心动物词汇', '能跟读核心句型并进行简单的口语问答']
+        listening: ['能听懂五官部位单词', '能根据描述判断画的是什么动物'],
+        reading: ['能认读face, eye, ear, nose, mouth等词', '能理解This/These和That/Those的区别'],
+        writing: ['能正确拼写五官单词', '能排列组合描述五官的句子'],
+        speaking: ['能朗读Let\'s draw together!等句子', '能跟读五官描述句']
     }
   },
   // Unit 2: Colors 颜色
