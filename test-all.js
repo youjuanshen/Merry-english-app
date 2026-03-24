@@ -34,6 +34,14 @@ const textbook = {
   'U2L2': { vocab: ['whose','shirt','jacket'], sentences: ['Whose shirt is this','Is this your jacket','Here you are','Thank you',"You're welcome",'This is my jacket','This is my shirt','Whose jacket'] },
   'U2L3': { vocab: ['where','sweater','under','bed','chair','schoolbag'], sentences: ['Where is my sweater','Is it on your bed','Is it under your chair','in your schoolbag','put away your clothes','thank you very much'] },
   'U2L4': { vocab: ['sport','shoe','skirt','shorts'], sentences: ['Put on your T-shirt and shorts','I want my sports shoes','too big for you','too small for me','Put on your sports shoes',"can't wear your skirt",'My sports shoes, please'] },
+  'U3L1': { vocab: ['time','eleven','twelve','clock'], sentences: ["What's the time",'eleven o\'clock','twelve o\'clock','three o\'clock','So many clocks'] },
+  'U3L2': { vocab: ['kid','read','watch','TV'], sentences: ["What's the time in New York","What's the time in London",'watching TV','she isn\'t','She is reading','playing with toys'] },
+  'U3L3': { vocab: ['thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen','twenty','dinner','cook'], sentences: ['five twenty','doing my homework','Yang Fan is reading','six thirty','having your dinner','I\'m drawing'] },
+  'U3L4': { vocab: ['play','picture','homework'], sentences: ['time to do my homework','time to draw a picture','time to go to bed','My homework'] },
+  'U4L1': { vocab: ['breakfast','milk','bread','egg','noodle','hungry'], sentences: ['I\'m hungry','time for breakfast','What do you like for breakfast','eggs and noodles','milk and bread'] },
+  'U4L2': { vocab: ['some','drink','juice','hamburger','salad','glass'], sentences: ['What do you want to eat','hamburger and a salad','What do you want to drink','apple juice','Me too','Can I help you'] },
+  'U4L3': { vocab: ['favorite','fruit','orange','banana','sweet','water'], sentences: ['favorite drink','favorite fruit','bananas','orange juice','sweet','I like apples','apple juice'] },
+  'U4L4': { vocab: ['dinner','rice','soup','chicken','fish','vegetable'], sentences: ["what's for dinner",'rice, soup, chicken','vegetables','Chinese food','big dinner','here you are','Good idea','Let me help you'] },
 };
 
 // 图片-audio上下文匹配规则
