@@ -1,189 +1,204 @@
 /**
- * Firebase 与 LocalStorage 双引擎同步适配器
- * 自动识别是否配置了 Firebase，以实现真实的多设备手机互联
+ * 云函数同步引擎（替代 Firebase）
+ * 通过腾讯云函数 + 飞书多维表格实现多设备通信
  */
 
-const firebaseConfig = {
-    // 🔥 TO USER: 在这里填入你在 Google Firebase 控制台免费申请到的配置信息！
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    databaseURL: "https://YOUR_PROJECT_ID-default-rtdb.firebaseio.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
-};
+const SCF_URL = "https://1316992450-2fbeeh6iet.ap-guangzhou.tencentscf.com/";
+const SCF_API_KEY = "merry-quiz-2026-secret";
 
-let useFirebase = false;
-let db = null;
 const _cache = {
     teacherCommand: null,
     currentLesson: null
 };
 
-if (firebaseConfig.apiKey !== "YOUR_API_KEY" && typeof firebase !== 'undefined') {
-    firebase.initializeApp(firebaseConfig);
-    db = firebase.database();
-    useFirebase = true;
-    console.log("🔥 Firebase Sync Engine: Activated.");
-} else {
-    console.warn("⚠️ Firebase configs not set! Falling back to localStorage Sync Engine.");
-    console.warn("To enable multi-device iPhone communication, please configure firebaseConfig in firebase-sync.js");
+// ===== 基础通信 =====
+
+function scfPost(data) {
+    return new Promise(function(resolve, reject) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', SCF_URL, true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.setRequestHeader('X-Api-Key', SCF_API_KEY);
+        xhr.timeout = 15000;
+        xhr.onload = function() {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                try { resolve(JSON.parse(xhr.responseText)); }
+                catch(e) { resolve({ code: 0 }); }
+            } else {
+                reject(new Error('HTTP ' + xhr.status));
+            }
+        };
+        xhr.onerror = function() { reject(new Error('NETWORK_ERROR')); };
+        xhr.ontimeout = function() { reject(new Error('TIMEOUT')); };
+        xhr.send(JSON.stringify(data));
+    });
 }
 
+// 写入键值
+function scfSet(key, value) {
+    return scfPost({ action: 'set', key: key, value: typeof value === 'string' ? value : JSON.stringify(value) });
+}
+
+// 读取键值
+function scfGet(key) {
+    return scfPost({ action: 'get', key: key }).then(function(resp) {
+        if (resp && resp.data) {
+            try { return JSON.parse(resp.data); }
+            catch(e) { return resp.data; }
+        }
+        return null;
+    });
+}
+
+// ===== Sync API（保持与原有接口兼容）=====
+
 const Sync = {
-    /** 
-     * 监听教师发布的控制指令
+    /**
+     * 监听教师发布的控制指令（轮询模式）
      */
     listenTeacherCommand: (callback) => {
-        if (useFirebase) {
-            db.ref('teacherCommand').on('value', snapshot => {
-                const val = snapshot.val();
-                _cache.teacherCommand = val || null;
-                if (val) callback(val);
-            });
-        } else {
-            // LocalStorage Fallback (original polling)
-            let lastCommandHash = '';
-            setInterval(() => {
-                const cmdStr = localStorage.getItem('teacherCommand');
-                if (cmdStr && cmdStr !== lastCommandHash) {
-                    try {
-                        const cmd = JSON.parse(cmdStr);
-                        lastCommandHash = cmdStr;
-                        _cache.teacherCommand = cmd || null;
-                        callback(cmd);
-                    } catch(e) {}
+        let lastTimestamp = 0;
+        let pollInterval = 30000; // 30秒轮询（省费用）
+        let errorCount = 0;
+        let pollTimer = null;
+
+        function poll() {
+            // 页面不可见时跳过轮询，节省调用次数
+            if (document.hidden) {
+                pollTimer = setTimeout(poll, pollInterval);
+                return;
+            }
+            scfGet('teacherCommand').then(function(val) {
+                errorCount = 0;
+                if (val && val.timestamp && val.timestamp !== lastTimestamp) {
+                    lastTimestamp = val.timestamp;
+                    _cache.teacherCommand = val;
+                    callback(val);
                 }
-            }, 1000);
+                pollTimer = setTimeout(poll, pollInterval);
+            }).catch(function(err) {
+                errorCount++;
+                var backoff = Math.min(pollInterval + errorCount * 10000, 60000);
+                console.warn('[Sync] 轮询失败(第' + errorCount + '次)，' + (backoff/1000) + '秒后重试');
+                pollTimer = setTimeout(poll, backoff);
+            });
         }
+
+        // 页面重新可见时立即拉一次
+        document.addEventListener('visibilitychange', function() {
+            if (!document.hidden) {
+                clearTimeout(pollTimer);
+                poll();
+            }
+        });
+
+        setTimeout(poll, 1000);
     },
 
     /**
      * 教师派发游戏控制指令
      */
     sendTeacherCommand: (cmdObj) => {
-        if (useFirebase) {
-            db.ref('teacherCommand').set(cmdObj);
-        } else {
-            localStorage.setItem('teacherCommand', JSON.stringify(cmdObj));
-        }
-        _cache.teacherCommand = cmdObj || null;
+        _cache.teacherCommand = cmdObj;
+        // 同时写 localStorage（本地备份）和云端
+        localStorage.setItem('teacherCommand', JSON.stringify(cmdObj));
+        scfSet('teacherCommand', cmdObj).then(function() {
+            console.log('[Sync] 教师指令已同步到云端');
+        }).catch(function(err) {
+            console.warn('[Sync] 教师指令云端同步失败:', err.message);
+        });
     },
 
     /**
-     * 同步当前课程 (Current Lesson)
+     * 同步当前课程
      */
     setCurrentLesson: (lessonObj) => {
-        if (useFirebase) {
-            db.ref('currentLesson').set(lessonObj);
-        } else {
-            localStorage.setItem('currentLesson', JSON.stringify(lessonObj));
-        }
-        _cache.currentLesson = lessonObj || null;
+        _cache.currentLesson = lessonObj;
+        localStorage.setItem('currentLesson', JSON.stringify(lessonObj));
+        scfSet('currentLesson', lessonObj).then(function() {
+            console.log('[Sync] 课程信息已同步到云端');
+        }).catch(function(err) {
+            console.warn('[Sync] 课程信息云端同步失败:', err.message);
+        });
     },
-    
+
     getCurrentLessonOnce: async () => {
-        if (useFirebase) {
-            const snap = await db.ref('currentLesson').once('value');
-            const val = snap.val();
-            _cache.currentLesson = val || null;
-            return val;
-        } else {
-            const str = localStorage.getItem('currentLesson');
-            if (str) {
-                try {
-                    const parsed = JSON.parse(str);
-                    _cache.currentLesson = parsed || null;
-                    return parsed;
-                } catch (e) {
-                    return null;
-                }
-            }
-            return null;
+        // 先用本地缓存，不主动发请求（由轮询更新）
+        if (_cache.currentLesson) return _cache.currentLesson;
+        var str = localStorage.getItem('currentLesson');
+        if (str) {
+            try {
+                var parsed = JSON.parse(str);
+                _cache.currentLesson = parsed;
+                return parsed;
+            } catch(e) { return null; }
         }
+        // 本地没有才去云端拿
+        try {
+            var val = await scfGet('currentLesson');
+            if (val) {
+                _cache.currentLesson = val;
+                return val;
+            }
+        } catch(e) {
+            console.warn('[Sync] 获取课程失败');
+        }
+        return null;
     },
-    
+
     getCurrentLessonOnceSync: () => {
         if (_cache.currentLesson) return _cache.currentLesson;
-        const str = localStorage.getItem('currentLesson');
+        var str = localStorage.getItem('currentLesson');
         if (!str) return null;
         try {
-            const parsed = JSON.parse(str);
-            _cache.currentLesson = parsed || null;
+            var parsed = JSON.parse(str);
+            _cache.currentLesson = parsed;
             return parsed;
-        } catch (e) {
-            return null;
-        }
+        } catch(e) { return null; }
     },
 
     getTeacherCommandOnce: () => {
         if (_cache.teacherCommand) return _cache.teacherCommand;
-        const str = localStorage.getItem('teacherCommand');
+        var str = localStorage.getItem('teacherCommand');
         if (!str) return null;
         try {
-            const parsed = JSON.parse(str);
-            _cache.teacherCommand = parsed || null;
+            var parsed = JSON.parse(str);
+            _cache.teacherCommand = parsed;
             return parsed;
-        } catch (e) {
-            return null;
-        }
+        } catch(e) { return null; }
     },
 
     /**
      * 同步作业检查结果
      */
     saveHomeworkCheck: (key, data) => {
-        if (useFirebase) {
-            db.ref('homeworkRecords/' + key).set(data);
-        } else {
-            let currentObj = {};
-            try {
-                currentObj = JSON.parse(localStorage.getItem('homeworkRecords') || '{}');
-            } catch (e) {
-                currentObj = {};
-            }
-            currentObj[key] = data;
-            localStorage.setItem('homeworkRecords', JSON.stringify(currentObj));
-        }
+        var currentObj = {};
+        try {
+            currentObj = JSON.parse(localStorage.getItem('homeworkRecords') || '{}');
+        } catch(e) { currentObj = {}; }
+        currentObj[key] = data;
+        localStorage.setItem('homeworkRecords', JSON.stringify(currentObj));
     },
 
     getHomeworkRecordsOnce: async () => {
-        if (useFirebase) {
-            const snap = await db.ref('homeworkRecords').once('value');
-            return snap.val() || {};
-        } else {
-            try {
-                return JSON.parse(localStorage.getItem('homeworkRecords') || '{}');
-            } catch (e) {
-                return {};
-            }
-        }
+        try {
+            return JSON.parse(localStorage.getItem('homeworkRecords') || '{}');
+        } catch(e) { return {}; }
     },
 
     /**
      * 进度统计汇总上报
      */
     setDashboardData: (key, data) => {
-        if (useFirebase) {
-            db.ref('dashboard/' + key).set(data);
-        } else {
-            localStorage.setItem(key, JSON.stringify(data));
-        }
+        localStorage.setItem(key, JSON.stringify(data));
     },
-    
+
     getDashboardDataOnce: async (key) => {
-        if (useFirebase) {
-            const snap = await db.ref('dashboard/' + key).once('value');
-            return snap.val();
-        } else {
-            try {
-                return JSON.parse(localStorage.getItem(key) || 'null');
-            } catch (e) {
-                return null;
-            }
-        }
+        try {
+            return JSON.parse(localStorage.getItem(key) || 'null');
+        } catch(e) { return null; }
     }
 };
 
 window.Sync = Sync;
+console.log("☁️ Cloud Sync Engine: Activated (SCF + Feishu)");
