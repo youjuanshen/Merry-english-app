@@ -1196,6 +1196,10 @@ h1 {
   gap: 10px;
   z-index: 9999;
 }
+/* 给内容区留出底部按钮的空间，防止C/D选项被遮挡 */
+#question-container {
+  padding-bottom: 80px;
+}
 .next-btn:active:not(:disabled) {
   transform: translateY(4px);
   -webkit-transform: translateY(4px);

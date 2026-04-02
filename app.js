@@ -727,6 +727,19 @@ var PRACTICE_MAX_QUESTIONS = 20;
 function getQuestions(module, phase) {
     var allQuestions = currentLessonData[module][phase] || [];
 
+    // 去重：移除内容完全相同的重复题目
+    var seen = {};
+    var unique = [];
+    for (var d = 0; d < allQuestions.length; d++) {
+        var q = allQuestions[d];
+        var key = (q.sentence || '') + '|' + (q.audio || '') + '|' + (q.word || '') + '|' + (q.text || '') + '|' + (q.type || '');
+        if (!seen[key]) {
+            seen[key] = true;
+            unique.push(q);
+        }
+    }
+    allQuestions = unique;
+
     if (phase === 'pretest') {
         // 前测：每人需做10题（共20题），将原10题复制一份
         var doubled = [];
