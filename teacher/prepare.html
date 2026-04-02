@@ -5,6 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>课前准备 - Merry英语</title>
     <link rel="stylesheet" href="teacher.css">
+    <style>
+        /* Collapsible objectives */
+        .obj-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .obj-toggle .card-title {
+            margin: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .obj-arrow {
+            font-size: 12px;
+            color: #aaa;
+            transition: transform 0.3s ease;
+            padding: 6px 10px;
+            background: #f0f0f0;
+            border-radius: 6px;
+            line-height: 1;
+        }
+        .obj-arrow.open {
+            transform: rotate(180deg);
+        }
+        .obj-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease;
+        }
+        .obj-body.open {
+            max-height: 800px;
+        }
+        .obj-hint {
+            font-size: 12px;
+            color: #bbb;
+            margin-top: 6px;
+        }
+        .obj-body.open + .obj-hint {
+            display: none;
+        }
+
+        /* Time pills */
+        .time-pills {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .time-pill {
+            flex: 1;
+            min-width: 0;
+            padding: 12px 6px;
+            border: 2px solid #e8e8e8;
+            border-radius: 12px;
+            background: white;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 14px;
+            font-weight: 600;
+            color: #888;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .time-pill .time-val {
+            display: block;
+            font-size: 20px;
+            font-weight: 700;
+            color: #555;
+            margin-bottom: 2px;
+        }
+        .time-pill .time-label {
+            display: block;
+            font-size: 11px;
+            color: #aaa;
+            font-weight: normal;
+        }
+        .time-pill.active {
+            border-color: var(--teacher-primary);
+            background: #f0fff0;
+            color: var(--teacher-primary);
+        }
+        .time-pill.active .time-val {
+            color: var(--teacher-primary);
+        }
+        .time-pill.active .time-label {
+            color: var(--teacher-primary);
+        }
+        .time-pill:active {
+            transform: scale(0.96);
+        }
+
+        /* Launch area */
+        .launch-area {
+            margin-top: 8px;
+        }
+    </style>
 </head>
 <body data-page="prepare">
     <div class="top-nav">
@@ -13,6 +110,7 @@
     </div>
     
     <div class="teacher-view">
+        <!-- 1. 选择课程 -->
         <div class="teacher-card">
             <h3 class="card-title">📚 选择课程</h3>
             <div class="grid-2">
@@ -31,6 +129,7 @@
             </div>
         </div>
 
+        <!-- 2. 选择模块 -->
         <div class="teacher-card">
             <h3 class="card-title">🎯 选择模块</h3>
             <div class="grid-4" id="module-selector">
@@ -41,68 +140,98 @@
             </div>
         </div>
 
+        <!-- 3. 教学目标（可折叠，默认收起，位于模块和阶段之间） -->
+        <div class="teacher-card">
+            <div class="obj-toggle" onclick="toggleObjectives()">
+                <h3 class="card-title">📖 教学目标</h3>
+                <span class="obj-arrow" id="obj-arrow">▼</span>
+            </div>
+            <div class="obj-body" id="obj-body">
+                <div id="objectives-container" style="margin-top: 8px;">
+                    <!-- Rendered by JS -->
+                </div>
+            </div>
+            <div class="obj-hint" id="obj-hint">点击展开查看本课教学目标</div>
+        </div>
+
+        <!-- 4. 选择阶段 -->
         <div class="teacher-card">
             <h3 class="card-title">📊 选择阶段</h3>
             <div class="grid-2" id="phase-selector">
-                <div class="phase-select active" data-phase="pretest">📝 前测<br><small>诊断学生水平</small></div>
-                <div class="phase-select" data-phase="practice">🎮 实战<br><small>游戏化练习</small></div>
+                <div class="phase-select active" data-phase="pretest">🏃 热身赛<br><small>诊断学生水平</small></div>
+                <div class="phase-select" data-phase="practice">🎮 闯关赛<br><small>游戏化练习</small></div>
             </div>
         </div>
 
-        <div class="teacher-card" id="objectives-container">
-            <!-- Rendered by JS -->
-        </div>
-
+        <!-- 5. 答题时间（可视化按钮选择） -->
         <div class="teacher-card">
-            <h3 class="card-title">👀 今日观察名单</h3>
-            <div class="name-grid" id="observation-list">
-                <!-- Rendered by JS -->
+            <h3 class="card-title">⏱️ 每题答题时间</h3>
+            <div class="time-pills" id="time-pills">
+                <div class="time-pill active" data-time="0">
+                    <span class="time-val">∞</span>
+                    <span class="time-label">不限时</span>
+                </div>
+                <div class="time-pill" data-time="15">
+                    <span class="time-val">15</span>
+                    <span class="time-label">秒/题</span>
+                </div>
+                <div class="time-pill" data-time="20">
+                    <span class="time-val">20</span>
+                    <span class="time-label">秒/题</span>
+                </div>
+                <div class="time-pill" data-time="30">
+                    <span class="time-val">30</span>
+                    <span class="time-label">秒/题</span>
+                </div>
+                <div class="time-pill" data-time="45">
+                    <span class="time-val">45</span>
+                    <span class="time-label">合作题</span>
+                </div>
             </div>
         </div>
 
-        <div class="teacher-card">
-            <h3 class="card-title">📝 上节课未完成作业学生</h3>
-            <div id="last-homework-incomplete">
-                <p style="color:#888; font-size:14px;">暂无记录</p>
-            </div>
-        </div>
-
-        <div class="teacher-card">
-            <h3 class="card-title">✅ 本节课作业检查</h3>
-            <p style="font-size: 13px; color: var(--teacher-text-light); margin-bottom: 10px;">左右滑动勾选未完成作业的学生：</p>
-            
-            <div class="hw-pages-container" id="homework-check-list">
-                <!-- Data populated by JS (sliding pages) -->
-            </div>
-            <div class="hw-page-dots" id="hw-page-dots">
-                <!-- JS will populate -->
-            </div>
-
-            <button class="teacher-btn btn-success" style="width: 100%; margin-top:15px;" id="btn-save-homework">
-                💾 提交
+        <!-- 6. 发布按钮 -->
+        <div class="launch-area">
+            <button class="teacher-btn btn-primary" id="btn-start-class" style="margin-top: 0;">
+                🚀 开始上课 (发布任务)
+            </button>
+            <!-- 重置按钮：始终显示，方便测试切换不同课程 -->
+            <button class="teacher-btn" id="btn-reset-class" style="margin-top: 10px; background: transparent; color: #bbb; font-size: 13px; padding: 8px 16px; border: 1.5px dashed #ddd; border-radius: 8px; cursor: pointer; width: 100%;">
+                🔄 重置课堂 (换课程重新发布)
             </button>
         </div>
-
-        <div class="teacher-card">
-            <h3 class="card-title">⏳ 答题时间</h3>
-            <select class="select-input" id="time-limit-select">
-                <option value="0">无限制 (推荐)</option>
-                <option value="10">10秒 / 题</option>
-                <option value="15">15秒 / 题</option>
-                <option value="20">20秒 / 题</option>
-                <option value="30">30秒 - 合作题专属</option>
-            </select>
-        </div>
-
-        <button class="teacher-btn btn-primary" id="btn-start-class">
-            🚀 开始上课 (发布任务)
-        </button>
     </div>
 
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
-    <script src="../firebase-sync.js"></script>
+    <!-- Hidden select for JS compatibility -->
+    <select id="time-limit-select" style="display:none;">
+        <option value="0" selected>0</option>
+    </select>
+
+    <script src="../firebase-sync.js?v=50"></script>
     <script src="data.js"></script>
     <script src="teacher.js"></script>
+    <script>
+        // Toggle objectives
+        function toggleObjectives() {
+            var body = document.getElementById('obj-body');
+            var arrow = document.getElementById('obj-arrow');
+            var hint = document.getElementById('obj-hint');
+            body.classList.toggle('open');
+            arrow.classList.toggle('open');
+            hint.style.display = body.classList.contains('open') ? 'none' : 'block';
+        }
+
+        // Time pill selection
+        var timePills = document.querySelectorAll('.time-pill');
+        var hiddenSelect = document.getElementById('time-limit-select');
+        timePills.forEach(function(pill) {
+            pill.addEventListener('click', function() {
+                timePills.forEach(function(p) { p.classList.remove('active'); });
+                pill.classList.add('active');
+                // Update hidden select for JS compatibility
+                hiddenSelect.value = pill.dataset.time;
+            });
+        });
+    </script>
 </body>
 </html>
