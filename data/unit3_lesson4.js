@@ -1,343 +1,404 @@
+// Unit 3 Lesson 4: It's time to do my homework.
+// Core vocab: play, picture, homework
+// Sentences: "It's time to do my homework.", "It's time to draw a picture.", "It's time to go to bed.", "Oh, no! My homework!"
 var unit3_lesson4 = {
   "id": "U3L4",
-  "title": "Unit 3 Lesson 4: It's time to do my homework.",
+  "title": "It's time to do my homework.",
   "listening": {
     "pretest": [
       {
-        "type": "listen_tf",
-        "audio": "homework",
-        "chinese": "现在是homework点。",
-        "options": [
-          "<img src=\"assets/images/drawing.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-          "<img src=\"assets/images/homework.png\" width=\"80\">"
-        ],
-        "correct": false,
-        "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "sleep",
-        "chinese": "我正在睡觉。",
-        "options": [
-          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-          "<img src=\"assets/images/drawing.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/homework.png\" width=\"80\">"
-        ],
-        "correct": false,
-        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">"
-      },
-      {
         "type": "listen_select",
-        "audio": "picture",
-        "chinese": "现在是picture点。",
+        "audio": "clock",
         "options": [
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-          "<img src=\"assets/images/drawing.png\" width=\"80\">",
-          "<img src=\"assets/images/homework.png\" width=\"80\">"
-        ],
-        "correct": 2,
-        "image": "<img src=\"assets/images/dog.png\" width=\"80\">"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "play",
-        "chinese": "我正在玩耍。",
-        "options": [
-          "<img src=\"assets/images/drawing.png\" width=\"80\">",
-          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/homework.png\" width=\"80\">"
-        ],
-        "correct": false,
-        "image": "<img src=\"assets/images/homework.png\" width=\"80\">"
-      },
-      {
-        "type": "listen_select",
-        "audio": "homework",
-        "chinese": "现在是homework点。",
-        "options": [
-          "<img src=\"assets/images/drawing.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-          "<img src=\"assets/images/homework.png\" width=\"80\">"
-        ],
-        "correct": 3,
-        "image": "<img src=\"assets/images/homework.png\" width=\"80\">"
-      },
-      {
-        "type": "listen_select",
-        "audio": "sleep",
-        "chinese": "我正在睡觉。",
-        "options": [
-          "<img src=\"assets/images/drawing.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-          "<img src=\"assets/images/homework.png\" width=\"80\">"
-        ],
-        "correct": 2,
-        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">"
-      },
-      {
-        "type": "listen_select",
-        "audio": "picture",
-        "chinese": "现在是picture点。",
-        "options": [
-          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/homework.png\" width=\"80\">",
-          "<img src=\"assets/images/drawing.png\" width=\"80\">"
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
         ],
         "correct": 1,
-        "image": "<img src=\"assets/images/dog.png\" width=\"80\">"
+        "chinese": "钟"
       },
       {
         "type": "listen_select",
-        "audio": "play",
-        "chinese": "我正在玩耍。",
+        "audio": "drawing",
         "options": [
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/homework.png\" width=\"80\">",
-          "<img src=\"assets/images/sleeping.png\" width=\"80\">"
+          "<img src=\"assets/images/bed.png\" width=\"80\">"
         ],
-        "correct": 1,
-        "image": "<img src=\"assets/images/dog.png\" width=\"80\">"
+        "correct": 2,
+        "chinese": "画画"
       },
       {
         "type": "listen_select",
-        "audio": "homework",
-        "chinese": "现在是homework点。",
+        "audio": "bed",
         "options": [
-          "<img src=\"assets/images/homework.png\" width=\"80\">",
-          "<img src=\"assets/images/drawing.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/sleeping.png\" width=\"80\">"
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">"
         ],
         "correct": 0,
-        "image": "<img src=\"assets/images/homework.png\" width=\"80\">"
+        "chinese": "床"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's time to do my homework.",
+        "options": [
+          "该画画了。",
+          "该做作业了。",
+          "该上床睡觉了。",
+          "哦，不！我的作业！"
+        ],
+        "correct": 1,
+        "chinese": "该做作业了。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's time to draw a picture.",
+        "options": [
+          "该做作业了。",
+          "该上床睡觉了。",
+          "该画画了。",
+          "哦，不！我的作业！"
+        ],
+        "correct": 2,
+        "chinese": "该画画了。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's time to go to bed.",
+        "options": [
+          "该做作业了。",
+          "该画画了。",
+          "哦，不！我的作业！",
+          "该上床睡觉了。"
+        ],
+        "correct": 3,
+        "chinese": "该上床睡觉了。"
       },
       {
         "type": "listen_tf",
-        "audio": "sleep",
-        "chinese": "我正在睡觉。",
-        "options": [
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-          "<img src=\"assets/images/drawing.png\" width=\"80\">",
-          "<img src=\"assets/images/homework.png\" width=\"80\">"
-        ],
+        "audio": "This is a clock.",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "correct": true,
-        "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">"
+        "chinese": "这是一个钟，正确！"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "This is a bed.",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "correct": false,
+        "chinese": "这不是床，这是一个钟。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's 7:00 p.m. It's time to do my homework.",
+        "options": [
+          "现在是晚上七点。该做作业了。",
+          "现在是晚上七点半。该画画了。",
+          "现在是晚上九点。该上床睡觉了。",
+          "哦，不！我的作业！"
+        ],
+        "correct": 0,
+        "chinese": "现在是晚上七点。该做作业了。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's 9:00 p.m. It's time to go to bed. Oh, no! My homework!",
+        "options": [
+          "现在是晚上七点。该做作业了。",
+          "现在是晚上七点半。该画画了。",
+          "现在是晚上九点。该上床睡觉了。哦，不！我的作业！",
+          "该做作业了。该画画了。"
+        ],
+        "correct": 2,
+        "chinese": "现在是晚上九点。该上床睡觉了。哦，不！我的作业！"
       }
     ],
     "practice": [
       {
-        "type": "scenario",
-        "audio": "homework",
-        "chinese": "现在是homework点。",
+        "type": "listen_select",
+        "audio": "clock",
         "options": [
-          "<img src=\"assets/images/drawing.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-          "<img src=\"assets/images/homework.png\" width=\"80\">"
-        ],
-        "correct": 3,
-        "difficulty": "easy",
-        "text": "Find the word",
-        "scenario": "It's time to go to bed.",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
-      },
-      {
-        "type": "scenario",
-        "audio": "sleep",
-        "chinese": "我正在睡觉。",
-        "options": [
-          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-          "<img src=\"assets/images/drawing.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/homework.png\" width=\"80\">"
-        ],
-        "correct": 0,
-        "difficulty": "easy",
-        "text": "Find the word",
-        "scenario": "It's time to go to bed.",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
-      },
-      {
-        "type": "balloon_pop",
-        "audio": "picture",
-        "chinese": "现在是picture点。",
-        "options": [
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-          "<img src=\"assets/images/drawing.png\" width=\"80\">",
-          "<img src=\"assets/images/homework.png\" width=\"80\">"
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
         ],
         "correct": 2,
-        "difficulty": "medium",
-        "text": "Find the word",
-        "scenario": "It's time to go to bed.",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
+        "chinese": "钟"
       },
       {
         "type": "listen_select",
-        "audio": "play",
-        "chinese": "我正在玩耍。",
+        "audio": "drawing",
         "options": [
           "<img src=\"assets/images/drawing.png\" width=\"80\">",
-          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/homework.png\" width=\"80\">"
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">"
         ],
-        "correct": 2,
-        "difficulty": "medium",
-        "text": "Find the word",
-        "scenario": "It's time to do my homework.",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
+        "correct": 0,
+        "chinese": "画画"
       },
       {
         "type": "listen_select",
-        "audio": "homework",
-        "chinese": "现在是homework点。",
+        "audio": "It's 7:00 p.m.",
         "options": [
-          "<img src=\"assets/images/drawing.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-          "<img src=\"assets/images/homework.png\" width=\"80\">"
-        ],
-        "correct": 3,
-        "difficulty": "medium",
-        "text": "Find the word",
-        "scenario": "It's time to go to bed.",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
-      },
-      {
-        "type": "scenario",
-        "audio": "sleep",
-        "chinese": "我正在睡觉。",
-        "options": [
-          "<img src=\"assets/images/drawing.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-          "<img src=\"assets/images/homework.png\" width=\"80\">"
+          "现在是晚上七点半。",
+          "现在是晚上九点。",
+          "现在是晚上七点。",
+          "该做作业了。"
         ],
         "correct": 2,
-        "difficulty": "hard",
-        "text": "Find the word",
-        "scenario": "It's time to do my homework.",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
+        "chinese": "现在是晚上七点。"
       },
       {
-        "type": "balloon_pop",
-        "audio": "picture",
-        "chinese": "现在是picture点。",
+        "type": "listen_select",
+        "audio": "It's time to do my homework.",
         "options": [
-          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/homework.png\" width=\"80\">",
-          "<img src=\"assets/images/drawing.png\" width=\"80\">"
-        ],
-        "correct": 3,
-        "difficulty": "easy",
-        "text": "Find the word",
-        "scenario": "It's time to do my homework.",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
-      },
-      {
-        "type": "balloon_pop",
-        "audio": "play",
-        "chinese": "我正在玩耍。",
-        "options": [
-          "<img src=\"assets/images/drawing.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/homework.png\" width=\"80\">",
-          "<img src=\"assets/images/sleeping.png\" width=\"80\">"
+          "该画画了。",
+          "该做作业了。",
+          "该上床睡觉了。",
+          "哦，不！我的作业！"
         ],
         "correct": 1,
-        "difficulty": "medium",
-        "text": "Find the word",
-        "scenario": "It's time to do my homework.",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
+        "chinese": "该做作业了。"
       },
       {
-        "type": "scenario",
-        "audio": "homework",
-        "chinese": "现在是homework点。",
+        "type": "listen_select",
+        "audio": "It's 7:30 p.m.",
         "options": [
-          "<img src=\"assets/images/homework.png\" width=\"80\">",
-          "<img src=\"assets/images/drawing.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/sleeping.png\" width=\"80\">"
+          "现在是晚上七点。",
+          "现在是晚上七点半。",
+          "现在是晚上九点。",
+          "该画画了。"
+        ],
+        "correct": 1,
+        "chinese": "现在是晚上七点半。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's time to draw a picture.",
+        "options": [
+          "该做作业了。",
+          "该上床睡觉了。",
+          "该画画了。",
+          "哦，不！我的作业！"
+        ],
+        "correct": 2,
+        "chinese": "该画画了。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's 9:00 p.m.",
+        "options": [
+          "现在是晚上七点。",
+          "现在是晚上七点半。",
+          "该上床睡觉了。",
+          "现在是晚上九点。"
+        ],
+        "correct": 3,
+        "chinese": "现在是晚上九点。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's time to go to bed.",
+        "options": [
+          "该做作业了。",
+          "该画画了。",
+          "哦，不！我的作业！",
+          "该上床睡觉了。"
+        ],
+        "correct": 3,
+        "chinese": "该上床睡觉了。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Oh, no! My homework!",
+        "options": [
+          "该做作业了。",
+          "哦，不！我的作业！",
+          "该画画了。",
+          "该上床睡觉了。"
+        ],
+        "correct": 1,
+        "chinese": "哦，不！我的作业！"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's 7:00 p.m. It's time to do my homework.",
+        "options": [
+          "现在是晚上七点。该做作业了。",
+          "现在是晚上七点半。该画画了。",
+          "现在是晚上九点。该上床睡觉了。",
+          "哦，不！我的作业！"
         ],
         "correct": 0,
-        "difficulty": "medium",
-        "text": "Find the word",
-        "scenario": "It's time to do my homework.",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
+        "chinese": "现在是晚上七点。该做作业了。"
       },
       {
-        "type": "duo_listen_select",
-        "audio": "sleep",
-        "chinese": "我正在睡觉。",
+        "type": "listen_select",
+        "audio": "It's 7:30 p.m. It's time to draw a picture.",
         "options": [
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-          "<img src=\"assets/images/drawing.png\" width=\"80\">",
-          "<img src=\"assets/images/homework.png\" width=\"80\">"
+          "现在是晚上七点。该做作业了。",
+          "现在是晚上七点半。该画画了。",
+          "现在是晚上九点。该上床睡觉了。",
+          "哦，不！我的作业！"
         ],
         "correct": 1,
-        "difficulty": "hard",
-        "text": "Find the word",
-        "scenario": "It's time to go to bed.",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
+        "chinese": "现在是晚上七点半。该画画了。"
       },
       {
-        "type": "duo_listen_select",
-        "audio": "picture",
-        "chinese": "现在是picture点。",
+        "type": "listen_select",
+        "audio": "It's 9:00 p.m. It's time to go to bed.",
         "options": [
-          "<img src=\"assets/images/homework.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-          "<img src=\"assets/images/drawing.png\" width=\"80\">"
+          "现在是晚上七点。该做作业了。",
+          "现在是晚上七点半。该画画了。",
+          "现在是晚上九点。该上床睡觉了。",
+          "哦，不！我的作业！"
         ],
-        "correct": 3,
-        "difficulty": "hard",
-        "text": "Find the word",
-        "scenario": "It's time to go to bed.",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
+        "correct": 2,
+        "chinese": "现在是晚上九点。该上床睡觉了。"
       },
       {
-        "type": "scenario",
-        "audio": "play",
-        "chinese": "我正在玩耍。",
+        "type": "listen_select",
+        "audio": "It's 9:00 p.m. It's time to go to bed. Oh, no! My homework!",
         "options": [
-          "<img src=\"assets/images/homework.png\" width=\"80\">",
-          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-          "<img src=\"assets/images/drawing.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">"
+          "现在是晚上九点。该上床睡觉了。哦，不！我的作业！",
+          "现在是晚上七点。该做作业了。",
+          "现在是晚上七点半。该画画了。",
+          "该做作业了。该画画了。"
         ],
-        "correct": 3,
-        "difficulty": "hard",
-        "text": "Find the word",
-        "scenario": "It's time to do my homework.",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
+        "correct": 0,
+        "chinese": "现在是晚上九点。该上床睡觉了。哦，不！我的作业！"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's 7:00 p.m. It's time to do my homework. It's 7:30 p.m. It's time to draw a picture.",
+        "options": [
+          "现在是晚上七点。该做作业了。现在是晚上七点半。该画画了。",
+          "现在是晚上九点。该上床睡觉了。哦，不！我的作业！",
+          "该做作业了。哦，不！我的作业！",
+          "现在是晚上七点半。该画画了。该上床睡觉了。"
+        ],
+        "correct": 0,
+        "chinese": "现在是晚上七点。该做作业了。现在是晚上七点半。该画画了。"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "This is a bed.",
+        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
+        "correct": true,
+        "chinese": "这是一张床，正确！"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "This is a chair.",
+        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
+        "correct": false,
+        "chinese": "这不是椅子，这是一张床。"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "This is a clock.",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "correct": true,
+        "chinese": "这是一个钟，正确！"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's time to do my homework. It's time to draw a picture. It's time to go to bed.",
+        "options": [
+          "该做作业了。该画画了。该上床睡觉了。",
+          "现在是晚上七点。现在是晚上七点半。现在是晚上九点。",
+          "哦，不！我的作业！该做作业了。",
+          "该画画了。哦，不！我的作业！"
+        ],
+        "correct": 0,
+        "chinese": "该做作业了。该画画了。该上床睡觉了。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's time to go to bed. Oh, no! My homework!",
+        "options": [
+          "该做作业了。哦，不！我的作业！",
+          "该上床睡觉了。哦，不！我的作业！",
+          "该画画了。该上床睡觉了。",
+          "现在是晚上九点。该做作业了。"
+        ],
+        "correct": 1,
+        "chinese": "该上床睡觉了。哦，不！我的作业！"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's 7:30 p.m. It's time to draw a picture. It's 9:00 p.m. It's time to go to bed.",
+        "options": [
+          "现在是晚上七点。该做作业了。现在是晚上七点半。该画画了。",
+          "现在是晚上七点半。该画画了。现在是晚上九点。该上床睡觉了。",
+          "现在是晚上九点。该上床睡觉了。哦，不！我的作业！",
+          "该做作业了。该画画了。"
+        ],
+        "correct": 1,
+        "chinese": "现在是晚上七点半。该画画了。现在是晚上九点。该上床睡觉了。"
+      },
+      {
+        "type": "listen_sequence",
+        "audio": "homework, drawing, sleeping",
+        "sequence": [
+          "homework",
+          "drawing",
+          "sleeping"
+        ],
+        "words": [
+          "<img src=\"assets/images/sleeping.png\" width=\"60\">",
+          "<img src=\"assets/images/homework.png\" width=\"60\">",
+          "<img src=\"assets/images/drawing.png\" width=\"60\">"
+        ],
+        "chinese": "听音频，按顺序点图片！"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's time to do my homework.",
+        "context": "📚 到了做作业的时间。",
+        "question": "现在该做什么？",
+        "options": [
+          "做作业",
+          "画画",
+          "睡觉",
+          "吃饭"
+        ],
+        "correct": 0,
+        "chinese": "该做作业了。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's time to draw a picture.",
+        "context": "🎨 做完作业，接下来做什么呢？",
+        "question": "接下来做什么？",
+        "options": [
+          "画画",
+          "做作业",
+          "睡觉",
+          "看电视"
+        ],
+        "correct": 0,
+        "chinese": "该画画了。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's time to go to bed.",
+        "context": "😴 天很晚了。",
+        "question": "该做什么了？",
+        "options": [
+          "睡觉",
+          "做作业",
+          "画画",
+          "吃早餐"
+        ],
+        "correct": 0,
+        "chinese": "该上床睡觉了。"
       }
     ]
   },
@@ -345,1077 +406,1642 @@ var unit3_lesson4 = {
     "pretest": [
       {
         "type": "word_match",
-        "chinese": "这是作业。",
-        "word": "homework",
-        "sentence": "It's time to do my homework.",
+        "word": "clock",
+        "sentence": "What's the time?",
+        "chinese": "几点了？",
         "options": [
           {
-            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-            "value": "sleep"
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
           },
           {
-            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
-            "value": "homework"
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "clock"
           },
           {
-            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
-            "value": "play"
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "chair"
           },
           {
-            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
-            "value": "picture"
+            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+            "value": "schoolbag"
           }
         ],
-        "correct": "homework"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "我正在睡觉。",
-        "word": "sleep",
-        "sentence": "I'm sleeping.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
-            "value": "picture"
-          },
-          {
-            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
-            "value": "homework"
-          },
-          {
-            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-            "value": "sleep"
-          },
-          {
-            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
-            "value": "play"
-          }
-        ],
-        "correct": "sleep"
+        "correct": "clock"
       },
       {
         "type": "word_match",
-        "chinese": "我画了一幅画。",
-        "word": "picture",
-        "sentence": "I draw a picture.",
+        "word": "bed",
+        "sentence": "It's time to go to bed.",
+        "chinese": "该上床睡觉了。",
         "options": [
           {
-            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
-            "value": "homework"
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
           },
           {
-            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
-            "value": "picture"
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "clock"
           },
           {
-            "text": "<img src=\"assets/images/one.png\" width=\"80\">",
-            "value": "one"
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "chair"
           },
           {
-            "text": "<img src=\"assets/images/nine.png\" width=\"80\">",
-            "value": "nine"
+            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+            "value": "schoolbag"
           }
         ],
-        "correct": "picture"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "这是玩耍。",
-        "word": "play",
-        "sentence": "It's time to do my homework.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
-            "value": "homework"
-          },
-          {
-            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
-            "value": "play"
-          },
-          {
-            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-            "value": "sleep"
-          },
-          {
-            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
-            "value": "picture"
-          }
-        ],
-        "correct": "play"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "我正在做作业。",
-        "word": "homework",
-        "sentence": "I'm doing my homework.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-            "value": "sleep"
-          },
-          {
-            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
-            "value": "picture"
-          },
-          {
-            "text": "<img src=\"assets/images/twelve.png\" width=\"80\">",
-            "value": "twelve"
-          },
-          {
-            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
-            "value": "ten"
-          }
-        ],
-        "correct": "homework"
+        "correct": "bed"
       },
       {
         "type": "word_match",
-        "chinese": "我正在睡觉。",
-        "word": "sleep",
-        "sentence": "I'm sleeping.",
+        "word": "drawing",
+        "sentence": "It's time to draw a picture.",
+        "chinese": "该画画了。",
         "options": [
           {
-            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-            "value": "sleep"
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "clock"
           },
           {
             "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
-            "value": "picture"
+            "value": "drawing"
           },
           {
-            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
-            "value": "homework"
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
           },
           {
-            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
-            "value": "play"
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "chair"
           }
         ],
-        "correct": "sleep"
+        "correct": "drawing"
       },
       {
         "type": "sentence_match",
-        "chinese": "这是图片。",
-        "word": "picture",
         "sentence": "It's time to do my homework.",
+        "chinese": "该做作业了。",
         "options": [
           {
-            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-            "value": "sleep"
+            "text": "该画画了。",
+            "value": "wrong1"
           },
           {
-            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
-            "value": "homework"
+            "text": "该做作业了。",
+            "value": "correct"
           },
           {
-            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
-            "value": "play"
+            "text": "该上床睡觉了。",
+            "value": "wrong2"
           },
           {
-            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
-            "value": "picture"
+            "text": "哦，不！我的作业！",
+            "value": "wrong3"
           }
         ],
-        "correct": "picture"
-      },
-      {
-        "type": "word_match",
-        "chinese": "我正在玩耍。",
-        "word": "play",
-        "sentence": "I'm playing.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
-            "value": "picture"
-          },
-          {
-            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
-            "value": "play"
-          },
-          {
-            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
-            "value": "eight"
-          },
-          {
-            "text": "<img src=\"assets/images/six.png\" width=\"80\">",
-            "value": "six"
-          }
-        ],
-        "correct": "play"
+        "correct": "correct"
       },
       {
         "type": "sentence_match",
-        "chinese": "这是作业。",
-        "word": "homework",
-        "sentence": "It's time to do my homework.",
+        "sentence": "It's time to draw a picture.",
+        "chinese": "该画画了。",
         "options": [
           {
-            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-            "value": "sleep"
+            "text": "该做作业了。",
+            "value": "wrong1"
           },
           {
-            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
-            "value": "play"
+            "text": "该上床睡觉了。",
+            "value": "wrong2"
           },
           {
-            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
-            "value": "homework"
+            "text": "该画画了。",
+            "value": "correct"
           },
           {
-            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
-            "value": "picture"
+            "text": "哦，不！我的作业！",
+            "value": "wrong3"
           }
         ],
-        "correct": "homework"
+        "correct": "correct"
       },
       {
-        "type": "word_match",
-        "chinese": "这是睡觉。",
-        "word": "sleep",
-        "sentence": "It's time to do my homework.",
+        "type": "sentence_match",
+        "sentence": "It's time to go to bed.",
+        "chinese": "该上床睡觉了。",
         "options": [
           {
-            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
-            "value": "homework"
+            "text": "该做作业了。",
+            "value": "wrong1"
           },
           {
-            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
-            "value": "picture"
+            "text": "该画画了。",
+            "value": "wrong2"
           },
           {
-            "text": "<img src=\"assets/images/seven.png\" width=\"80\">",
-            "value": "seven"
+            "text": "哦，不！我的作业！",
+            "value": "wrong3"
           },
           {
-            "text": "<img src=\"assets/images/six.png\" width=\"80\">",
-            "value": "six"
+            "text": "该上床睡觉了。",
+            "value": "correct"
           }
         ],
-        "correct": "sleep"
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "Oh, no! My homework!",
+        "chinese": "哦，不！我的作业！",
+        "options": [
+          {
+            "text": "哦，不！我的作业！",
+            "value": "correct"
+          },
+          {
+            "text": "该做作业了。",
+            "value": "wrong1"
+          },
+          {
+            "text": "该画画了。",
+            "value": "wrong2"
+          },
+          {
+            "text": "该上床睡觉了。",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "It's 7:00 p.m.",
+        "chinese": "现在是晚上七点。",
+        "options": [
+          {
+            "text": "现在是晚上七点半。",
+            "value": "wrong1"
+          },
+          {
+            "text": "现在是晚上七点。",
+            "value": "correct"
+          },
+          {
+            "text": "现在是晚上九点。",
+            "value": "wrong2"
+          },
+          {
+            "text": "该做作业了。",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "晚上九点了，该睡觉了，你会说：",
+        "chinese": "情景选择",
+        "options": [
+          {
+            "text": "It's time to do my homework.",
+            "value": "wrong1"
+          },
+          {
+            "text": "It's time to draw a picture.",
+            "value": "wrong2"
+          },
+          {
+            "text": "It's time to go to bed.",
+            "value": "correct"
+          },
+          {
+            "text": "Oh, no! My homework!",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "你突然想起作业还没做，你会说：",
+        "chinese": "情景选择",
+        "options": [
+          {
+            "text": "It's time to go to bed.",
+            "value": "wrong1"
+          },
+          {
+            "text": "It's time to draw a picture.",
+            "value": "wrong2"
+          },
+          {
+            "text": "It's time to do my homework.",
+            "value": "wrong3"
+          },
+          {
+            "text": "Oh, no! My homework!",
+            "value": "correct"
+          }
+        ],
+        "correct": "correct"
       }
     ],
     "practice": [
       {
+        "type": "tap_pair",
+        "chinese": "点英文词，配对图片！",
+        "pairs": [
+          {
+            "word": "homework",
+            "match": "<img src=\"assets/images/homework.png\" width=\"50\">",
+            "chinese": "作业"
+          },
+          {
+            "word": "drawing",
+            "match": "<img src=\"assets/images/drawing.png\" width=\"50\">",
+            "chinese": "画画"
+          },
+          {
+            "word": "sleeping",
+            "match": "<img src=\"assets/images/sleeping.png\" width=\"50\">",
+            "chinese": "睡觉"
+          },
+          {
+            "word": "reading",
+            "match": "<img src=\"assets/images/reading.png\" width=\"50\">",
+            "chinese": "读书"
+          }
+        ]
+      },
+      {
+        "type": "tap_pair",
+        "chinese": "点英文词，配对中文！",
+        "pairs": [
+          {
+            "word": "play",
+            "match": "玩",
+            "example": "I want to play."
+          },
+          {
+            "word": "picture",
+            "match": "画",
+            "example": "It's time to draw a picture."
+          },
+          {
+            "word": "homework",
+            "match": "作业",
+            "example": "It's time to do my homework."
+          },
+          {
+            "word": "bed",
+            "match": "床",
+            "example": "It's time to go to bed."
+          }
+        ]
+      },
+      {
         "type": "word_match",
-        "chinese": "这是作业。",
+        "word": "clock",
+        "sentence": "It's 7:00 p.m.",
+        "chinese": "现在是晚上七点。",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "clock"
+          },
+          {
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
+          },
+          {
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "chair"
+          },
+          {
+            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+            "value": "schoolbag"
+          }
+        ],
+        "correct": "clock"
+      },
+      {
+        "type": "word_match",
+        "word": "bed",
+        "sentence": "It's time to go to bed.",
+        "chinese": "该上床睡觉了。",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "chair"
+          },
+          {
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
+          },
+          {
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "clock"
+          },
+          {
+            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+            "value": "schoolbag"
+          }
+        ],
+        "correct": "bed"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "It's 7:00 p.m.",
+        "chinese": "现在是晚上七点。",
+        "options": [
+          {
+            "text": "现在是晚上七点。",
+            "value": "correct"
+          },
+          {
+            "text": "现在是晚上七点半。",
+            "value": "wrong1"
+          },
+          {
+            "text": "现在是晚上九点。",
+            "value": "wrong2"
+          },
+          {
+            "text": "该做作业了。",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "It's time to do my homework.",
+        "chinese": "该做作业了。",
+        "options": [
+          {
+            "text": "该画画了。",
+            "value": "wrong1"
+          },
+          {
+            "text": "该做作业了。",
+            "value": "correct"
+          },
+          {
+            "text": "该上床睡觉了。",
+            "value": "wrong2"
+          },
+          {
+            "text": "哦，不！我的作业！",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "It's 7:30 p.m.",
+        "chinese": "现在是晚上七点半。",
+        "options": [
+          {
+            "text": "现在是晚上七点。",
+            "value": "wrong1"
+          },
+          {
+            "text": "现在是晚上七点半。",
+            "value": "correct"
+          },
+          {
+            "text": "现在是晚上九点。",
+            "value": "wrong2"
+          },
+          {
+            "text": "该画画了。",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "It's time to draw a picture.",
+        "chinese": "该画画了。",
+        "options": [
+          {
+            "text": "该做作业了。",
+            "value": "wrong1"
+          },
+          {
+            "text": "该上床睡觉了。",
+            "value": "wrong2"
+          },
+          {
+            "text": "该画画了。",
+            "value": "correct"
+          },
+          {
+            "text": "哦，不！我的作业！",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "It's 9:00 p.m.",
+        "chinese": "现在是晚上九点。",
+        "options": [
+          {
+            "text": "现在是晚上七点。",
+            "value": "wrong1"
+          },
+          {
+            "text": "现在是晚上七点半。",
+            "value": "wrong2"
+          },
+          {
+            "text": "现在是晚上九点。",
+            "value": "correct"
+          },
+          {
+            "text": "该上床睡觉了。",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "It's time to go to bed.",
+        "chinese": "该上床睡觉了。",
+        "options": [
+          {
+            "text": "该做作业了。",
+            "value": "wrong1"
+          },
+          {
+            "text": "该画画了。",
+            "value": "wrong2"
+          },
+          {
+            "text": "哦，不！我的作业！",
+            "value": "wrong3"
+          },
+          {
+            "text": "该上床睡觉了。",
+            "value": "correct"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "Oh, no! My homework!",
+        "chinese": "哦，不！我的作业！",
+        "options": [
+          {
+            "text": "哦，不！我的作业！",
+            "value": "correct"
+          },
+          {
+            "text": "该做作业了。",
+            "value": "wrong1"
+          },
+          {
+            "text": "该画画了。",
+            "value": "wrong2"
+          },
+          {
+            "text": "该上床睡觉了。",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "It's 7:00 p.m. It's time to do my homework.",
+        "chinese": "现在是晚上七点。该做作业了。",
+        "options": [
+          {
+            "text": "现在是晚上七点。该做作业了。",
+            "value": "correct"
+          },
+          {
+            "text": "现在是晚上七点半。该画画了。",
+            "value": "wrong1"
+          },
+          {
+            "text": "现在是晚上九点。该上床睡觉了。",
+            "value": "wrong2"
+          },
+          {
+            "text": "哦，不！我的作业！",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "It's 7:30 p.m. It's time to draw a picture.",
+        "chinese": "现在是晚上七点半。该画画了。",
+        "options": [
+          {
+            "text": "现在是晚上七点。该做作业了。",
+            "value": "wrong1"
+          },
+          {
+            "text": "现在是晚上七点半。该画画了。",
+            "value": "correct"
+          },
+          {
+            "text": "现在是晚上九点。该上床睡觉了。",
+            "value": "wrong2"
+          },
+          {
+            "text": "哦，不！我的作业！",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "It's 9:00 p.m. It's time to go to bed.",
+        "chinese": "现在是晚上九点。该上床睡觉了。",
+        "options": [
+          {
+            "text": "现在是晚上七点。该做作业了。",
+            "value": "wrong1"
+          },
+          {
+            "text": "现在是晚上七点半。该画画了。",
+            "value": "wrong2"
+          },
+          {
+            "text": "现在是晚上九点。该上床睡觉了。",
+            "value": "correct"
+          },
+          {
+            "text": "哦，不！我的作业！",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "It's 9:00 p.m. It's time to go to bed. Oh, no! My homework!",
+        "chinese": "现在是晚上九点。该上床睡觉了。哦，不！我的作业！",
+        "options": [
+          {
+            "text": "现在是晚上九点。该上床睡觉了。哦，不！我的作业！",
+            "value": "correct"
+          },
+          {
+            "text": "现在是晚上七点。该做作业了。",
+            "value": "wrong1"
+          },
+          {
+            "text": "现在是晚上七点半。该画画了。",
+            "value": "wrong2"
+          },
+          {
+            "text": "该做作业了。该画画了。",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "晚上七点了，该做作业了，你会说：",
+        "chinese": "情景选择",
+        "options": [
+          {
+            "text": "It's time to draw a picture.",
+            "value": "wrong1"
+          },
+          {
+            "text": "It's time to go to bed.",
+            "value": "wrong2"
+          },
+          {
+            "text": "It's time to do my homework.",
+            "value": "correct"
+          },
+          {
+            "text": "Oh, no! My homework!",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "晚上七点半了，该画画了，你会说：",
+        "chinese": "情景选择",
+        "options": [
+          {
+            "text": "It's time to do my homework.",
+            "value": "wrong1"
+          },
+          {
+            "text": "It's time to draw a picture.",
+            "value": "correct"
+          },
+          {
+            "text": "It's time to go to bed.",
+            "value": "wrong2"
+          },
+          {
+            "text": "Oh, no! My homework!",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "晚上九点了，该睡觉了，你会说：",
+        "chinese": "情景选择",
+        "options": [
+          {
+            "text": "It's time to do my homework.",
+            "value": "wrong1"
+          },
+          {
+            "text": "It's time to draw a picture.",
+            "value": "wrong2"
+          },
+          {
+            "text": "Oh, no! My homework!",
+            "value": "wrong3"
+          },
+          {
+            "text": "It's time to go to bed.",
+            "value": "correct"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "你发现作业忘做了，你会说：",
+        "chinese": "情景选择",
+        "options": [
+          {
+            "text": "It's time to go to bed.",
+            "value": "wrong1"
+          },
+          {
+            "text": "Oh, no! My homework!",
+            "value": "correct"
+          },
+          {
+            "text": "It's time to draw a picture.",
+            "value": "wrong2"
+          },
+          {
+            "text": "It's time to do my homework.",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "It's 7:00 p.m. It's time to do my homework. It's 7:30 p.m. It's time to draw a picture.",
+        "chinese": "现在是晚上七点。该做作业了。现在是晚上七点半。该画画了。",
+        "options": [
+          {
+            "text": "现在是晚上七点。该做作业了。现在是晚上七点半。该画画了。",
+            "value": "correct"
+          },
+          {
+            "text": "现在是晚上九点。该上床睡觉了。哦，不！我的作业！",
+            "value": "wrong1"
+          },
+          {
+            "text": "该做作业了。哦，不！我的作业！",
+            "value": "wrong2"
+          },
+          {
+            "text": "现在是晚上七点半。该画画了。该上床睡觉了。",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "It's time to go to bed. Oh, no! My homework!",
+        "chinese": "该上床睡觉了。哦，不！我的作业！",
+        "options": [
+          {
+            "text": "该做作业了。哦，不！我的作业！",
+            "value": "wrong1"
+          },
+          {
+            "text": "该上床睡觉了。哦，不！我的作业！",
+            "value": "correct"
+          },
+          {
+            "text": "该画画了。该上床睡觉了。",
+            "value": "wrong2"
+          },
+          {
+            "text": "现在是晚上九点。该做作业了。",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "It's time to do my homework. It's time to draw a picture. It's time to go to bed.",
+        "chinese": "该做作业了。该画画了。该上床睡觉了。",
+        "options": [
+          {
+            "text": "该做作业了。该画画了。该上床睡觉了。",
+            "value": "correct"
+          },
+          {
+            "text": "现在是晚上七点。现在是晚上七点半。现在是晚上九点。",
+            "value": "wrong1"
+          },
+          {
+            "text": "哦，不！我的作业！该做作业了。",
+            "value": "wrong2"
+          },
+          {
+            "text": "该画画了。哦，不！我的作业！",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "scenario",
+        "sentence": "It's time to do my homework.",
+        "context": "你朋友发来消息想约你打球。你看了看时间表。",
+        "question": "你能去打球吗？",
+        "options": [
+          {
+            "text": "不能，该做作业了",
+            "value": "correct"
+          },
+          {
+            "text": "可以",
+            "value": "w1"
+          },
+          {
+            "text": "该睡觉了",
+            "value": "w2"
+          },
+          {
+            "text": "该吃饭了",
+            "value": "w3"
+          }
+        ],
+        "correct": "correct",
+        "chinese": "该做作业了。"
+      },
+      {
+        "type": "scenario",
+        "sentence": "It's time to go to bed.",
+        "context": "你还想看电视，但时间表上写着该做什么了。",
+        "question": "你应该做什么？",
+        "options": [
+          {
+            "text": "去睡觉",
+            "value": "correct"
+          },
+          {
+            "text": "继续看电视",
+            "value": "w1"
+          },
+          {
+            "text": "做作业",
+            "value": "w2"
+          },
+          {
+            "text": "画画",
+            "value": "w3"
+          }
+        ],
+        "correct": "correct",
+        "chinese": "该上床睡觉了。"
+      },
+      {
+        "type": "sentence_sequence",
+        "sentences": [
+          "It's time to do homework.",
+          "It's time to draw.",
+          "It's time for bed."
+        ],
+        "chinese": "把一天的安排排好！",
+        "chineseHint": "该做作业了。 / 该画画了。 / 该睡觉了。"
+      },
+      {
+        "type": "sentence_sequence",
+        "sentences": [
+          "Oh no!",
+          "My homework!",
+          "I forgot!"
+        ],
+        "chinese": "把对话排好顺序！",
+        "chineseHint": "哦不！ / 我的作业！ / 我忘了！"
+      },
+      {
+        "type": "word_match",
         "word": "homework",
-        "sentence": "It's time to go to bed.",
         "options": [
-          {
-            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-            "value": "sleep"
-          },
           {
             "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
             "value": "homework"
           },
           {
-            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
-            "value": "play"
-          },
-          {
             "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
-            "value": "picture"
-          }
-        ],
-        "correct": 3,
-        "difficulty": "easy"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "这是睡觉。",
-        "word": "sleep",
-        "sentence": "It's time to go to bed.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
-            "value": "picture"
-          },
-          {
-            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
-            "value": "homework"
+            "value": "wrong1"
           },
           {
             "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-            "value": "sleep"
-          },
-          {
-            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
-            "value": "play"
+            "value": "wrong2"
           }
         ],
-        "correct": "sleep",
-        "difficulty": "hard"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "这是图片。",
-        "word": "picture",
-        "sentence": "It's time to go to bed.",
-        "options": [
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-          "<img src=\"assets/images/drawing.png\" width=\"80\">",
-          "<img src=\"assets/images/homework.png\" width=\"80\">"
-        ],
-        "correct": 0,
-        "difficulty": "hard"
+        "correct": "homework",
+        "chinese": "homework"
       },
       {
         "type": "word_match",
-        "chinese": "这是玩耍。",
-        "word": "play",
-        "sentence": "It's time to go to bed.",
+        "word": "drawing",
         "options": [
           {
-            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
-            "value": "homework"
-          },
-          {
-            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
-            "value": "play"
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "drawing"
           },
           {
             "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-            "value": "sleep"
-          },
-          {
-            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
-            "value": "picture"
-          }
-        ],
-        "correct": "play",
-        "difficulty": "medium"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "这是作业。",
-        "word": "homework",
-        "sentence": "It's time to go to bed.",
-        "options": [
-          "<img src=\"assets/images/drawing.png\" width=\"80\">",
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-          "<img src=\"assets/images/homework.png\" width=\"80\">"
-        ],
-        "correct": 3,
-        "difficulty": "hard"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "我正在睡觉。",
-        "word": "sleep",
-        "sentence": "I'm sleeping.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-            "value": "sleep"
-          },
-          {
-            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
-            "value": "picture"
+            "value": "wrong1"
           },
           {
             "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
-            "value": "homework"
-          },
-          {
-            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
-            "value": "play"
+            "value": "wrong2"
           }
         ],
-        "correct": 2,
-        "difficulty": "hard"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "我画了一幅画。",
-        "word": "picture",
-        "sentence": "I draw a picture.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-            "value": "sleep"
-          },
-          {
-            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
-            "value": "homework"
-          },
-          {
-            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
-            "value": "play"
-          },
-          {
-            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
-            "value": "picture"
-          }
-        ],
-        "correct": "picture",
-        "difficulty": "easy"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "这是玩耍。",
-        "word": "play",
-        "sentence": "It's time to go to bed.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
-            "value": "homework"
-          },
-          {
-            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
-            "value": "picture"
-          },
-          {
-            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
-            "value": "play"
-          },
-          {
-            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-            "value": "sleep"
-          }
-        ],
-        "correct": "play",
-        "difficulty": "hard"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "我正在做作业。",
-        "word": "homework",
-        "sentence": "I'm doing my homework.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-            "value": "sleep"
-          },
-          {
-            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
-            "value": "play"
-          },
-          {
-            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
-            "value": "homework"
-          },
-          {
-            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
-            "value": "picture"
-          }
-        ],
-        "correct": 0,
-        "difficulty": "medium"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "我正在睡觉。",
-        "word": "sleep",
-        "sentence": "I'm sleeping.",
-        "options": [
-          "<img src=\"assets/images/dog.png\" width=\"80\">",
-          "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-          "<img src=\"assets/images/drawing.png\" width=\"80\">",
-          "<img src=\"assets/images/homework.png\" width=\"80\">"
-        ],
-        "correct": 1,
-        "difficulty": "easy"
+        "correct": "drawing",
+        "chinese": "drawing"
       },
       {
         "type": "word_match",
-        "chinese": "我画了一幅画。",
-        "word": "picture",
-        "sentence": "I draw a picture.",
+        "word": "sleeping",
         "options": [
           {
-            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
-            "value": "picture"
+            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+            "value": "sleeping"
           },
           {
             "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
-            "value": "homework"
+            "value": "wrong1"
           },
-          {
-            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
-            "value": "play"
-          },
-          {
-            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-            "value": "sleep"
-          }
-        ],
-        "correct": "picture",
-        "difficulty": "hard"
-      },
-      {
-        "type": "word_match",
-        "chinese": "我正在玩耍。",
-        "word": "play",
-        "sentence": "I'm playing.",
-        "options": [
           {
             "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
-            "value": "picture"
-          },
-          {
-            "text": "<img src=\"assets/images/dog.png\" width=\"80\">",
-            "value": "play"
-          },
-          {
-            "text": "<img src=\"assets/images/homework.png\" width=\"80\">",
-            "value": "homework"
-          },
-          {
-            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-            "value": "sleep"
+            "value": "wrong2"
           }
         ],
-        "correct": 3,
-        "difficulty": "medium"
+        "correct": "sleeping",
+        "chinese": "sleeping"
       }
     ]
   },
   "writing": {
     "pretest": [
       {
-        "type": "word_spell",
-        "word": "homework",
-        "chinese": "现在是homework点。",
-        "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
-        "display": "_omework",
-        "options": [
-          "j",
-          "i",
-          "k",
-          "h"
-        ],
-        "correct": "h"
-      },
-      {
         "type": "letter_select",
-        "word": "sleep",
-        "chinese": "我正在睡觉。",
-        "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-        "display": "sl_ep",
+        "prompt": "作业(homework)的首字母是？",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "options": [
-          "f",
           "g",
           "h",
-          "e"
-        ],
-        "correct": "e"
-      },
-      {
-        "type": "word_spell",
-        "word": "picture",
-        "chinese": "现在是picture点。",
-        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
-        "display": "pictu_e",
-        "options": [
-          "s",
-          "t",
-          "u",
-          "r"
-        ],
-        "correct": "r"
-      },
-      {
-        "type": "letter_select",
-        "word": "play",
-        "chinese": "我正在玩耍。",
-        "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
-        "display": "pla_",
-        "options": [
-          "z",
-          "a",
-          "y",
-          "b"
-        ],
-        "correct": "y"
-      },
-      {
-        "type": "letter_select",
-        "word": "homework",
-        "chinese": "现在是homework点。",
-        "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
-        "display": "homewor_",
-        "options": [
-          "l",
-          "m",
-          "n",
+          "j",
           "k"
         ],
-        "correct": "k"
+        "correct": 1,
+        "chinese": "作业",
+        "word": "作业"
       },
       {
-        "type": "word_spell",
-        "word": "sleep",
-        "chinese": "我正在睡觉。",
-        "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-        "display": "sle_p",
-        "options": [
-          "h",
-          "e",
-          "g",
-          "f"
-        ],
-        "correct": "e"
-      },
-      {
-        "type": "word_spell",
-        "word": "picture",
-        "chinese": "现在是picture点。",
-        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
-        "display": "pictu_e",
-        "options": [
-          "t",
-          "r",
-          "s",
-          "u"
-        ],
-        "correct": "r"
-      },
-      {
-        "type": "word_spell",
-        "word": "play",
-        "chinese": "我正在玩耍。",
-        "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
-        "display": "pl_y",
-        "options": [
-          "b",
-          "c",
-          "d",
-          "a"
-        ],
-        "correct": "a"
-      },
-      {
-        "type": "letter_select",
-        "word": "homework",
-        "chinese": "现在是homework点。",
-        "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
-        "display": "homew_rk",
+        "type": "pinyin_fill",
+        "hint": "h_mework",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "options": [
           "o",
-          "q",
-          "r",
-          "p"
+          "a",
+          "e",
+          "i"
         ],
-        "correct": "o"
+        "correct": 0,
+        "chinese": "作业"
       },
       {
-        "type": "word_spell",
-        "word": "sleep",
-        "chinese": "我正在睡觉。",
-        "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-        "display": "slee_",
+        "type": "pinyin_fill",
+        "hint": "p_cture",
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
         "options": [
-          "p",
-          "r",
-          "s",
-          "q"
+          "i",
+          "a",
+          "o",
+          "e"
         ],
-        "correct": "p"
+        "correct": 0,
+        "chinese": "图画"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "It's time to do my _____.",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "options": [
+          "picture",
+          "homework",
+          "dinner",
+          "bed"
+        ],
+        "correct": 1,
+        "chinese": "该做作业了。"
+      },
+      {
+        "type": "word_puzzle",
+        "hint": "p_ay",
+        "word": "play",
+        "options": [
+          "z",
+          "w",
+          "l",
+          "a"
+        ],
+        "correct": 2,
+        "chinese": "play"
+      },
+      {
+        "type": "word_puzzle",
+        "hint": "p_cture",
+        "word": "picture",
+        "options": [
+          "k",
+          "i",
+          "u",
+          "f"
+        ],
+        "correct": 1,
+        "chinese": "picture"
+      },
+      {
+        "type": "word_puzzle",
+        "hint": "h_mework",
+        "word": "homework",
+        "options": [
+          "k",
+          "n",
+          "z",
+          "o"
+        ],
+        "correct": 3,
+        "chinese": "homework"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "It's time for _____.",
+        "options": [
+          "play",
+          "homework",
+          "picture"
+        ],
+        "correct": 1,
+        "chinese": "It's time for homework."
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "Draw a _____.",
+        "options": [
+          "play",
+          "homework",
+          "picture"
+        ],
+        "correct": 2,
+        "chinese": "Draw a picture."
       }
     ],
     "practice": [
       {
-        "type": "duo_spell",
-        "word": "homework",
-        "chinese": "现在是homework点。",
-        "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
-        "display": "_omework",
-        "options": [
-          "j",
-          "i",
-          "k",
-          "h"
+        "type": "sentence_order",
+        "chinese": "现在是晚上七点。",
+        "words": [
+          "It's",
+          "7:00",
+          "p.m."
         ],
-        "correct": "h",
-        "difficulty": "easy",
-        "parts": [
-          "home",
-          "work"
+        "scrambled": [
+          "p.m.",
+          "It's",
+          "7:00"
+        ],
+        "chineseWords": [
+          "现在是",
+          "晚上",
+          "七点"
+        ],
+        "chineseScrambled": [
+          "七点",
+          "现在是",
+          "晚上"
         ]
       },
       {
-        "type": "letter_select",
-        "word": "sleep",
-        "chinese": "我正在睡觉。",
-        "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-        "display": "sl_ep",
-        "options": [
-          "f",
-          "g",
-          "h",
-          "e"
+        "type": "sentence_order",
+        "chinese": "该做作业了。",
+        "words": [
+          "It's",
+          "time",
+          "to",
+          "do",
+          "my",
+          "homework"
         ],
-        "correct": "e",
-        "difficulty": "hard",
-        "parts": [
-          "sl",
-          "eep"
+        "scrambled": [
+          "homework",
+          "It's",
+          "to",
+          "time",
+          "my",
+          "do"
+        ],
+        "chineseWords": [
+          "该",
+          "做",
+          "作业",
+          "了"
+        ],
+        "chineseScrambled": [
+          "作业",
+          "了",
+          "该",
+          "做"
         ]
       },
       {
-        "type": "duo_spell",
-        "word": "picture",
-        "chinese": "现在是picture点。",
-        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
-        "display": "pictu_e",
-        "options": [
-          "s",
-          "t",
-          "u",
-          "r"
+        "type": "sentence_order",
+        "chinese": "现在是晚上七点半。",
+        "words": [
+          "It's",
+          "7:30",
+          "p.m."
         ],
-        "correct": "r",
-        "difficulty": "hard",
-        "parts": [
-          "pic",
-          "ture"
+        "scrambled": [
+          "7:30",
+          "p.m.",
+          "It's"
+        ],
+        "chineseWords": [
+          "现在是",
+          "晚上",
+          "七点半"
+        ],
+        "chineseScrambled": [
+          "七点半",
+          "晚上",
+          "现在是"
         ]
       },
       {
-        "type": "letter_select",
-        "word": "play",
-        "chinese": "我正在玩耍。",
-        "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
-        "display": "pla_",
-        "options": [
-          "z",
+        "type": "sentence_order",
+        "chinese": "该画画了。",
+        "words": [
+          "It's",
+          "time",
+          "to",
+          "draw",
           "a",
-          "y",
-          "b"
+          "picture"
         ],
-        "correct": "y",
-        "difficulty": "medium",
-        "parts": [
-          "pl",
-          "ay"
+        "scrambled": [
+          "draw",
+          "It's",
+          "picture",
+          "time",
+          "a",
+          "to"
+        ],
+        "chineseWords": [
+          "该",
+          "画",
+          "画",
+          "了"
+        ],
+        "chineseScrambled": [
+          "画",
+          "了",
+          "该",
+          "画"
         ]
       },
       {
-        "type": "letter_select",
-        "word": "homework",
-        "chinese": "现在是homework点。",
-        "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
-        "display": "homewor_",
-        "options": [
-          "l",
-          "m",
-          "n",
-          "k"
+        "type": "sentence_order",
+        "chinese": "现在是晚上九点。",
+        "words": [
+          "It's",
+          "9:00",
+          "p.m."
         ],
-        "correct": "k",
-        "difficulty": "easy",
-        "parts": [
+        "scrambled": [
+          "9:00",
+          "It's",
+          "p.m."
+        ],
+        "chineseWords": [
+          "现在是",
+          "晚上",
+          "九点"
+        ],
+        "chineseScrambled": [
+          "九点",
+          "现在是",
+          "晚上"
+        ]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "该上床睡觉了。",
+        "words": [
+          "It's",
+          "time",
+          "to",
+          "go",
+          "to",
+          "bed"
+        ],
+        "scrambled": [
+          "bed",
+          "It's",
+          "to",
+          "go",
+          "time",
+          "to"
+        ],
+        "chineseWords": [
+          "该",
+          "上床",
+          "睡觉",
+          "了"
+        ],
+        "chineseScrambled": [
+          "睡觉",
+          "了",
+          "该",
+          "上床"
+        ]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "哦，不！我的作业！",
+        "words": [
+          "Oh",
+          "no",
+          "My",
+          "homework"
+        ],
+        "scrambled": [
+          "My",
+          "Oh",
+          "homework",
+          "no"
+        ],
+        "chineseWords": [
+          "哦",
+          "不",
+          "我的",
+          "作业"
+        ],
+        "chineseScrambled": [
+          "作业",
+          "哦",
+          "我的",
+          "不"
+        ]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "哦，不！",
+        "words": [
+          "bed",
+          "Oh"
+        ],
+        "scrambled": [
+          "Oh",
+          "bed"
+        ],
+        "chineseWords": [
+          "哦",
+          "不"
+        ],
+        "chineseScrambled": [
+          "不",
+          "哦"
+        ]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "我的作业！",
+        "words": [
+          "no",
+          "My",
+          "homework"
+        ],
+        "scrambled": [
+          "My",
+          "no",
+          "homework"
+        ],
+        "chineseWords": [
+          "我的",
+          "作业"
+        ],
+        "chineseScrambled": [
+          "作业",
+          "我的"
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "It's time to do my _____.",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "options": [
+          "picture",
+          "homework",
+          "dinner",
+          "bed"
+        ],
+        "correct": 1,
+        "chinese": "该做作业了。"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "It's time to draw a _____.",
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+        "options": [
+          "homework",
+          "picture",
+          "dinner",
+          "bed"
+        ],
+        "correct": 1,
+        "chinese": "该画画了。"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "It's time to go to _____.",
+        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
+        "options": [
+          "school",
+          "bed",
           "home",
-          "work"
-        ]
+          "dinner"
+        ],
+        "correct": 1,
+        "chinese": "该上床睡觉了。"
       },
       {
-        "type": "word_spell",
-        "word": "sleep",
-        "chinese": "我正在睡觉。",
-        "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-        "display": "sle_p",
+        "type": "fill_blank",
+        "prompt": "Oh, no! My _____!",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "options": [
-          "h",
+          "picture",
+          "dinner",
+          "homework",
+          "bed"
+        ],
+        "correct": 2,
+        "chinese": "哦，不！我的作业！"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "It's _____ to do my homework.",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "options": [
+          "day",
+          "time",
+          "clock",
+          "hour"
+        ],
+        "correct": 1,
+        "chinese": "该做作业了。"
+      },
+      {
+        "type": "word_puzzle",
+        "hint": "pl_y",
+        "word": "play",
+        "options": [
           "e",
-          "g",
-          "f"
+          "a",
+          "f",
+          "v"
         ],
-        "correct": "e",
-        "difficulty": "easy",
-        "parts": [
-          "sl",
-          "eep"
-        ]
+        "correct": 1,
+        "chinese": "play"
       },
       {
-        "type": "letter_select",
+        "type": "word_puzzle",
+        "hint": "pic_ure",
         "word": "picture",
-        "chinese": "现在是picture点。",
-        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
-        "display": "pictu_e",
         "options": [
-          "t",
-          "r",
-          "s",
-          "u"
-        ],
-        "correct": "r",
-        "difficulty": "medium",
-        "parts": [
-          "pic",
-          "ture"
-        ]
-      },
-      {
-        "type": "letter_select",
-        "word": "play",
-        "chinese": "我正在玩耍。",
-        "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
-        "display": "pl_y",
-        "options": [
-          "b",
           "c",
-          "d",
-          "a"
+          "t",
+          "m",
+          "x"
         ],
-        "correct": "a",
-        "difficulty": "medium",
-        "parts": [
-          "pl",
-          "ay"
-        ]
+        "correct": 1,
+        "chinese": "picture"
       },
       {
-        "type": "duo_spell",
+        "type": "word_puzzle",
+        "hint": "home_ork",
         "word": "homework",
-        "chinese": "现在是homework点。",
-        "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
-        "display": "homew_rk",
         "options": [
-          "o",
-          "q",
-          "r",
-          "p"
-        ],
-        "correct": "o",
-        "difficulty": "medium",
-        "parts": [
-          "home",
-          "work"
-        ]
-      },
-      {
-        "type": "letter_select",
-        "word": "sleep",
-        "chinese": "我正在睡觉。",
-        "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-        "display": "slee_",
-        "options": [
-          "p",
-          "r",
-          "s",
-          "q"
-        ],
-        "correct": "p",
-        "difficulty": "easy",
-        "parts": [
-          "sl",
-          "eep"
-        ]
-      },
-      {
-        "type": "word_spell",
-        "word": "picture",
-        "chinese": "现在是picture点。",
-        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
-        "display": "p_cture",
-        "options": [
+          "w",
+          "h",
           "j",
-          "i",
-          "l",
-          "k"
+          "t"
         ],
-        "correct": "i",
-        "difficulty": "medium",
-        "parts": [
-          "pic",
-          "ture"
-        ]
+        "correct": 0,
+        "chinese": "homework"
       },
       {
-        "type": "word_spell",
-        "word": "play",
-        "chinese": "我正在玩耍。",
-        "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
-        "display": "_lay",
+        "type": "fill_blank",
+        "prompt": "It's time for _____.",
         "options": [
-          "q",
-          "p",
-          "s",
-          "r"
+          "play",
+          "picture",
+          "homework"
         ],
-        "correct": "p",
-        "difficulty": "easy",
-        "parts": [
-          "pl",
-          "ay"
-        ]
+        "correct": 2,
+        "chinese": "It's time for homework."
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "Draw a _____.",
+        "options": [
+          "play",
+          "picture",
+          "homework"
+        ],
+        "correct": 1,
+        "chinese": "Draw a picture."
       }
     ]
   },
   "speaking": {
     "pretest": [
       {
-        "type": "shadowing",
+        "type": "repeat_word",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "word": "time",
+        "chinese": "时间",
+        "expected": "time"
+      },
+      {
+        "type": "repeat_word",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "word": "homework",
-        "chinese": "这是作业。",
-        "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
-        "sentence": "It's time to do my homework."
+        "chinese": "作业",
+        "expected": "homework"
       },
       {
-        "type": "shadowing",
-        "word": "sleep",
-        "chinese": "这是睡觉。",
-        "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-        "sentence": "It's time to do my homework."
-      },
-      {
-        "type": "read_word",
-        "word": "picture",
-        "chinese": "我喜欢picture。",
+        "type": "repeat_word",
         "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
-        "sentence": "I like picture."
-      },
-      {
-        "type": "shadowing",
-        "word": "play",
-        "chinese": "这是玩耍。",
-        "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
-        "sentence": "It's time to do my homework."
-      },
-      {
-        "type": "read_word",
-        "word": "homework",
-        "chinese": "我喜欢homework。",
-        "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
-        "sentence": "I like homework."
-      },
-      {
-        "type": "read_word",
-        "word": "sleep",
-        "chinese": "这是睡觉。",
-        "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-        "sentence": "It's time to do my homework."
-      },
-      {
-        "type": "read_word",
         "word": "picture",
-        "chinese": "这是图片。",
-        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
-        "sentence": "It's time to do my homework."
+        "chinese": "图画",
+        "expected": "picture"
       },
       {
-        "type": "shadowing",
+        "type": "repeat_word",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "word": "play",
-        "chinese": "这是玩耍。",
-        "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
-        "sentence": "It's time to do my homework."
+        "chinese": "玩",
+        "expected": "play"
       },
       {
-        "type": "shadowing",
-        "word": "homework",
-        "chinese": "我喜欢homework。",
-        "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
-        "sentence": "I like homework."
+        "type": "repeat_word",
+        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
+        "word": "bed",
+        "chinese": "床",
+        "expected": "bed"
       },
       {
-        "type": "read_word",
-        "word": "sleep",
-        "chinese": "这是睡觉。",
-        "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-        "sentence": "It's time to do my homework."
+        "type": "speak_select",
+        "audio": "clock",
+        "options": [
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "chinese": "钟"
+      },
+      {
+        "type": "speak_select",
+        "audio": "bed",
+        "options": [
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "chinese": "床"
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "It's time to do my homework.",
+        "chinese": "该做作业了。",
+        "expected": "It's time to do my homework."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "It's time to draw a picture.",
+        "chinese": "该画画了。",
+        "expected": "It's time to draw a picture."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "It's time to go to bed.",
+        "chinese": "该上床睡觉了。",
+        "expected": "It's time to go to bed."
       }
     ],
     "practice": [
       {
-        "type": "debate",
+        "type": "repeat_sentence",
+        "word": "It's 7:00 p.m.",
+        "chinese": "现在是晚上七点。",
+        "expected": "It's 7:00 p.m."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "It's time to do my homework.",
+        "chinese": "该做作业了。",
+        "expected": "It's time to do my homework."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "It's 7:30 p.m.",
+        "chinese": "现在是晚上七点半。",
+        "expected": "It's 7:30 p.m."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "It's time to draw a picture.",
+        "chinese": "该画画了。",
+        "expected": "It's time to draw a picture."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "It's 9:00 p.m.",
+        "chinese": "现在是晚上九点。",
+        "expected": "It's 9:00 p.m."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "It's time to go to bed.",
+        "chinese": "该上床睡觉了。",
+        "expected": "It's time to go to bed."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "Oh, no! My homework!",
+        "chinese": "哦，不！我的作业！",
+        "expected": "Oh, no! My homework!"
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "It's 7:00 p.m. It's time to do my homework.",
+        "chinese": "现在是晚上七点。该做作业了。",
+        "expected": "It's 7:00 p.m. It's time to do my homework."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "It's 7:30 p.m. It's time to draw a picture.",
+        "chinese": "现在是晚上七点半。该画画了。",
+        "expected": "It's 7:30 p.m. It's time to draw a picture."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "It's 9:00 p.m. It's time to go to bed.",
+        "chinese": "现在是晚上九点。该上床睡觉了。",
+        "expected": "It's 9:00 p.m. It's time to go to bed."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "It's time to go to bed. Oh, no! My homework!",
+        "chinese": "该上床睡觉了。哦，不！我的作业！",
+        "expected": "It's time to go to bed. Oh, no! My homework!"
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "It's 9:00 p.m. It's time to go to bed. Oh, no! My homework!",
+        "chinese": "现在是晚上九点。该上床睡觉了。哦，不！我的作业！",
+        "expected": "It's 9:00 p.m. It's time to go to bed. Oh, no! My homework!"
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "It's time to do my homework. It's time to draw a picture.",
+        "chinese": "该做作业了。该画画了。",
+        "expected": "It's time to do my homework. It's time to draw a picture."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "It's time to draw a picture. It's time to go to bed.",
+        "chinese": "该画画了。该上床睡觉了。",
+        "expected": "It's time to draw a picture. It's time to go to bed."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "It's time to do my homework. It's time to draw a picture. It's time to go to bed.",
+        "chinese": "该做作业了。该画画了。该上床睡觉了。",
+        "expected": "It's time to do my homework. It's time to draw a picture. It's time to go to bed."
+      },
+      {
+        "type": "repeat_word",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "word": "time",
+        "chinese": "时间",
+        "expected": "time"
+      },
+      {
+        "type": "repeat_word",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "word": "homework",
-        "chinese": "这是作业。",
-        "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
-        "sentence": "It's time to go to bed.",
-        "difficulty": "hard"
+        "chinese": "作业",
+        "expected": "homework"
       },
       {
-        "type": "roleplay",
-        "word": "sleep",
-        "chinese": "这是睡觉。",
-        "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-        "sentence": "It's time to go to bed.",
-        "difficulty": "easy"
-      },
-      {
-        "type": "debate",
-        "word": "picture",
-        "chinese": "这是一只picture。",
+        "type": "repeat_word",
         "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
-        "sentence": "This is a picture.",
-        "difficulty": "easy"
+        "word": "picture",
+        "chinese": "图画",
+        "expected": "picture"
       },
       {
-        "type": "debate",
+        "type": "repeat_word",
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+        "word": "draw",
+        "chinese": "画",
+        "expected": "draw"
+      },
+      {
+        "type": "repeat_word",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "word": "play",
-        "chinese": "这是一只玩耍。",
-        "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
-        "sentence": "This is a play.",
-        "difficulty": "easy"
+        "chinese": "玩",
+        "expected": "play"
       },
       {
-        "type": "shadowing",
+        "type": "picture_speak",
+        "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
         "word": "homework",
-        "chinese": "这是作业。",
-        "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
-        "sentence": "It's time to go to bed.",
-        "difficulty": "easy"
+        "chinese": "homework"
       },
       {
-        "type": "shadowing",
-        "word": "sleep",
-        "chinese": "这是一只睡觉。",
-        "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-        "sentence": "This is a sleep.",
-        "difficulty": "hard"
-      },
-      {
-        "type": "debate",
-        "word": "picture",
-        "chinese": "这是一只picture。",
+        "type": "picture_speak",
         "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
-        "sentence": "This is a picture.",
-        "difficulty": "easy"
+        "word": "drawing",
+        "chinese": "drawing"
       },
       {
-        "type": "shadowing",
-        "word": "play",
-        "chinese": "这是一只玩耍。",
-        "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
-        "sentence": "This is a play.",
-        "difficulty": "easy"
-      },
-      {
-        "type": "read_word",
-        "word": "homework",
-        "chinese": "这是一只homework。",
-        "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
-        "sentence": "This is a homework.",
-        "difficulty": "easy"
-      },
-      {
-        "type": "shadowing",
-        "word": "sleep",
-        "chinese": "这是一只睡觉。",
+        "type": "picture_speak",
         "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
-        "sentence": "This is a sleep.",
-        "difficulty": "easy"
+        "word": "sleeping",
+        "chinese": "sleeping"
       },
       {
-        "type": "shadowing",
-        "word": "picture",
-        "chinese": "这是图片。",
-        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
-        "sentence": "It's time to go to bed.",
-        "difficulty": "hard"
+        "type": "picture_speak",
+        "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
+        "word": "reading",
+        "chinese": "reading"
       },
       {
-        "type": "roleplay",
-        "word": "play",
-        "chinese": "这是玩耍。",
-        "image": "<img src=\"assets/images/dog.png\" width=\"80\">",
-        "sentence": "It's time to go to bed.",
-        "difficulty": "hard"
+        "type": "picture_speak",
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+        "word": "cooking",
+        "chinese": "cooking"
+      },
+      {
+        "type": "picture_speak",
+        "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+        "word": "watching_tv",
+        "chinese": "watching_tv"
       }
     ]
   }

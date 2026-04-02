@@ -1,1349 +1,2064 @@
+// Unit 3 Lesson 1: It's eleven o'clock in Beijing.
+// Core vocab: time, eleven, twelve, clock, o'clock
+// Sentences: "What's the time, Mom?", "It's eleven o'clock in Beijing.", etc.
 var unit3_lesson1 = {
   "id": "U3L1",
-  "title": "Unit 3 Lesson 1: It's eleven o'clock in Beijing.",
+  "title": "It's eleven o'clock in Beijing.",
   "listening": {
     "pretest": [
       {
-        "type": "listen_tf",
-        "audio": "clock",
-        "chinese": "现在是clock点。",
-        "options": [
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">"
-        ],
-        "correct": false,
-        "image": "<img src=\"assets/images/clock.png\" width=\"80\">"
-      },
-      {
-        "type": "listen_select",
-        "audio": "eleven",
-        "chinese": "现在是十一点。",
-        "options": [
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">"
-        ],
-        "correct": 2,
-        "image": "<img src=\"assets/images/clock_11.png\" width=\"80\">"
-      },
-      {
-        "type": "listen_select",
-        "audio": "twelve",
-        "chinese": "现在是十二点。",
-        "options": [
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">"
-        ],
-        "correct": 2,
-        "image": "<img src=\"assets/images/clock.png\" width=\"80\">"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "time",
-        "chinese": "现在是time点。",
-        "options": [
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">"
-        ],
-        "correct": false,
-        "image": "<img src=\"assets/images/clock.png\" width=\"80\">"
-      },
-      {
         "type": "listen_select",
         "audio": "clock",
-        "chinese": "现在是clock点。",
         "options": [
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
           "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "chinese": "钟"
+      },
+      {
+        "type": "listen_select",
+        "audio": "chair",
+        "options": [
           "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">"
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "chinese": "椅子"
+      },
+      {
+        "type": "listen_select",
+        "audio": "bed",
+        "options": [
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
         ],
         "correct": 0,
-        "image": "<img src=\"assets/images/clock.png\" width=\"80\">"
+        "chinese": "床"
+      },
+      {
+        "type": "listen_select",
+        "audio": "What's the time, Mom?",
+        "options": [
+          "现在是北京时间十一点。",
+          "妈妈，几点了？",
+          "好多钟！",
+          "现在是伦敦时间十二点吗？"
+        ],
+        "correct": 1,
+        "chinese": "妈妈，几点了？"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's eleven o'clock in Beijing.",
+        "options": [
+          "现在是伦敦时间三点。",
+          "妈妈，几点了？",
+          "现在是北京时间十一点。",
+          "好多钟！"
+        ],
+        "correct": 2,
+        "chinese": "现在是北京时间十一点。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "So many clocks!",
+        "options": [
+          "妈妈，几点了？",
+          "现在是北京时间十一点。",
+          "现在是伦敦时间三点。",
+          "好多钟！"
+        ],
+        "correct": 3,
+        "chinese": "好多钟！"
       },
       {
         "type": "listen_tf",
-        "audio": "eleven",
-        "chinese": "现在是十一点。",
-        "options": [
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">"
-        ],
+        "audio": "This is a clock.",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "correct": true,
-        "image": "<img src=\"assets/images/clock_11.png\" width=\"80\">"
+        "chinese": "这是一个钟，正确！"
       },
       {
         "type": "listen_select",
-        "audio": "twelve",
-        "chinese": "现在是十二点。",
+        "audio": "Is it twelve o'clock in London? No, it isn't. It's three o'clock.",
         "options": [
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">"
+          "现在是伦敦时间十二点吗？不，不是。现在是三点。",
+          "妈妈，几点了？现在是北京时间十一点。",
+          "好多钟！现在几点了？",
+          "现在是北京时间十一点。好多钟！"
         ],
         "correct": 0,
-        "image": "<img src=\"assets/images/clock.png\" width=\"80\">"
+        "chinese": "现在是伦敦时间十二点吗？不，不是。现在是三点。"
       },
       {
         "type": "listen_select",
-        "audio": "time",
-        "chinese": "现在是time点。",
+        "audio": "What's the time, Mom? It's eleven o'clock in Beijing.",
         "options": [
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">"
+          "好多钟！现在是三点。",
+          "妈妈，几点了？现在是北京时间十一点。",
+          "现在是伦敦时间十二点吗？不，不是。",
+          "现在是三点。好多钟！"
         ],
-        "correct": 2,
-        "image": "<img src=\"assets/images/clock.png\" width=\"80\">"
+        "correct": 1,
+        "chinese": "妈妈，几点了？现在是北京时间十一点。"
       },
       {
         "type": "listen_select",
-        "audio": "clock",
-        "chinese": "现在是clock点。",
+        "audio": "It's eleven o'clock.",
         "options": [
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">"
+          "十一点了。",
+          "十二点了。",
+          "三点了。",
+          "一点了。"
         ],
         "correct": 0,
-        "image": "<img src=\"assets/images/clock.png\" width=\"80\">"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "eleven",
-        "chinese": "现在是十一点。",
-        "options": [
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">"
-        ],
-        "correct": false,
-        "image": "<img src=\"assets/images/clock_12.png\" width=\"80\">"
+        "chinese": "十一点了。"
       }
     ],
     "practice": [
       {
-        "type": "scenario",
+        "type": "listen_select",
         "audio": "clock",
-        "chinese": "现在是clock点。",
         "options": [
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
           "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">"
-        ],
-        "correct": 0,
-        "difficulty": "hard",
-        "text": "Find the word",
-        "scenario": "What's the time, Mom?",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
-      },
-      {
-        "type": "scenario",
-        "audio": "eleven",
-        "chinese": "现在是十一点。",
-        "options": [
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">"
+          "<img src=\"assets/images/bed.png\" width=\"80\">"
         ],
         "correct": 2,
-        "difficulty": "hard",
-        "text": "Find the word",
-        "scenario": "What's the time, Mom?",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "twelve",
-        "chinese": "现在是十二点。",
-        "options": [
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">"
-        ],
-        "correct": 2,
-        "difficulty": "hard",
-        "text": "Find the word",
-        "scenario": "It's eleven o'clock.",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "time",
-        "chinese": "现在是time点。",
-        "options": [
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">"
-        ],
-        "correct": 0,
-        "difficulty": "medium",
-        "text": "Find the word",
-        "scenario": "What's the time, Mom?",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
+        "chinese": "钟"
       },
       {
         "type": "listen_select",
-        "audio": "clock",
-        "chinese": "现在是clock点。",
+        "audio": "schoolbag",
         "options": [
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
           "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">"
-        ],
-        "correct": 1,
-        "difficulty": "easy",
-        "text": "Find the word",
-        "scenario": "What's the time, Mom?",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "eleven",
-        "chinese": "现在是十一点。",
-        "options": [
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">"
-        ],
-        "correct": 2,
-        "difficulty": "easy",
-        "text": "Find the word",
-        "scenario": "It's eleven o'clock.",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "twelve",
-        "chinese": "现在是十二点。",
-        "options": [
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">"
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">"
         ],
         "correct": 0,
-        "difficulty": "medium",
-        "text": "Find the word",
-        "scenario": "What's the time, Mom?",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
-      },
-      {
-        "type": "scenario",
-        "audio": "time",
-        "chinese": "现在是time点。",
-        "options": [
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">"
-        ],
-        "correct": 2,
-        "difficulty": "hard",
-        "text": "Find the word",
-        "scenario": "What's the time, Mom?",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
+        "chinese": "书包"
       },
       {
         "type": "listen_select",
-        "audio": "clock",
-        "chinese": "现在是clock点。",
+        "audio": "What's the time, Mom?",
         "options": [
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">"
+          "妈妈，几点了？",
+          "现在是北京时间十一点。",
+          "好多钟！",
+          "不，不是。"
         ],
-        "correct": 1,
-        "difficulty": "easy",
-        "text": "Find the word",
-        "scenario": "It's eleven o'clock.",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
+        "correct": 0,
+        "chinese": "妈妈，几点了？"
       },
       {
-        "type": "balloon_pop",
-        "audio": "eleven",
-        "chinese": "现在是十一点。",
+        "type": "listen_select",
+        "audio": "It's eleven o'clock in Beijing.",
         "options": [
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">"
+          "现在是伦敦时间三点。",
+          "现在是北京时间十一点。",
+          "妈妈，几点了？",
+          "好多钟！"
+        ],
+        "correct": 1,
+        "chinese": "现在是北京时间十一点。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Is it twelve o'clock in London?",
+        "options": [
+          "现在是北京时间十一点吗？",
+          "妈妈，几点了？",
+          "现在是伦敦时间十二点吗？",
+          "好多钟！"
+        ],
+        "correct": 2,
+        "chinese": "现在是伦敦时间十二点吗？"
+      },
+      {
+        "type": "listen_select",
+        "audio": "No, it isn't.",
+        "options": [
+          "是的，是的。",
+          "不，不是。",
+          "妈妈，几点了？",
+          "好多钟！"
+        ],
+        "correct": 1,
+        "chinese": "不，不是。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's three o'clock.",
+        "options": [
+          "现在是十一点。",
+          "现在是十二点。",
+          "好多钟！",
+          "现在是三点。"
         ],
         "correct": 3,
-        "difficulty": "hard",
-        "text": "Find the word",
-        "scenario": "What's the time, Mom?",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
-      },
-      {
-        "type": "scenario",
-        "audio": "twelve",
-        "chinese": "现在是十二点。",
-        "options": [
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">"
-        ],
-        "correct": 2,
-        "difficulty": "medium",
-        "text": "Find the word",
-        "scenario": "It's eleven o'clock.",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
+        "chinese": "现在是三点。"
       },
       {
         "type": "listen_select",
-        "audio": "time",
-        "chinese": "现在是time点。",
+        "audio": "So many clocks!",
         "options": [
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">"
+          "好多钟！",
+          "妈妈，几点了？",
+          "现在是北京时间十一点。",
+          "不，不是。"
         ],
         "correct": 0,
-        "difficulty": "medium",
-        "text": "Find the word",
-        "scenario": "It's eleven o'clock.",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
+        "chinese": "好多钟！"
+      },
+      {
+        "type": "listen_select",
+        "audio": "What's the time, Mom? It's eleven o'clock in Beijing.",
+        "options": [
+          "妈妈，几点了？现在是北京时间十一点。",
+          "现在是伦敦时间十二点吗？不，不是。",
+          "好多钟！现在是三点。",
+          "现在是三点。好多钟！"
+        ],
+        "correct": 0,
+        "chinese": "妈妈，几点了？现在是北京时间十一点。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Is it twelve o'clock in London? No, it isn't.",
+        "options": [
+          "妈妈，几点了？现在是北京时间十一点。",
+          "现在是伦敦时间十二点吗？不，不是。",
+          "现在是三点。好多钟！",
+          "好多钟！妈妈，几点了？"
+        ],
+        "correct": 1,
+        "chinese": "现在是伦敦时间十二点吗？不，不是。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Is it twelve o'clock in London? No, it isn't. It's three o'clock.",
+        "options": [
+          "现在是伦敦时间十二点吗？不，不是。现在是三点。",
+          "妈妈，几点了？现在是北京时间十一点。",
+          "好多钟！现在是三点。",
+          "现在是北京时间十一点。好多钟！"
+        ],
+        "correct": 0,
+        "chinese": "现在是伦敦时间十二点吗？不，不是。现在是三点。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's eleven o'clock.",
+        "options": [
+          "现在是三点。",
+          "现在是十二点。",
+          "现在是十一点。",
+          "妈妈，几点了？"
+        ],
+        "correct": 2,
+        "chinese": "现在是十一点。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's twelve o'clock.",
+        "options": [
+          "现在是十一点。",
+          "现在是十二点。",
+          "现在是三点。",
+          "好多钟！"
+        ],
+        "correct": 1,
+        "chinese": "现在是十二点。"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "This is a clock.",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "correct": true,
+        "chinese": "这是一个钟，正确！"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "This is a bed.",
+        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
+        "correct": true,
+        "chinese": "这是一张床，正确！"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "This is a chair.",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "correct": false,
+        "chinese": "这不是椅子，这是一个钟。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "What's the time, Mom? It's eleven o'clock. So many clocks!",
+        "options": [
+          "妈妈，几点了？现在是十一点。好多钟！",
+          "现在是伦敦时间十二点吗？不，不是。现在是三点。",
+          "现在是北京时间十一点。妈妈，几点了？",
+          "好多钟！现在是十二点。"
+        ],
+        "correct": 0,
+        "chinese": "妈妈，几点了？现在是十一点。好多钟！"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's eleven o'clock in Beijing. So many clocks!",
+        "options": [
+          "现在是伦敦时间十二点。好多钟！",
+          "现在是北京时间十一点。好多钟！",
+          "妈妈，几点了？不，不是。",
+          "现在是三点。妈妈，几点了？"
+        ],
+        "correct": 1,
+        "chinese": "现在是北京时间十一点。好多钟！"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's three o'clock. So many clocks!",
+        "options": [
+          "现在是十一点。好多钟！",
+          "妈妈，几点了？好多钟！",
+          "现在是三点。好多钟！",
+          "现在是十二点。不，不是。"
+        ],
+        "correct": 2,
+        "chinese": "现在是三点。好多钟！"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's twelve o'clock. So many clocks!",
+        "options": [
+          "现在是十二点。好多钟！",
+          "现在是十一点。好多钟！",
+          "现在是三点。好多钟！",
+          "妈妈，几点了？"
+        ],
+        "correct": 0,
+        "chinese": "现在是十二点。好多钟！"
+      },
+      {
+        "type": "listen_sequence",
+        "audio": "three, eleven, twelve",
+        "sequence": [
+          "three",
+          "eleven",
+          "twelve"
+        ],
+        "words": [
+          "<img src=\"assets/images/clock_3.png\" width=\"60\">",
+          "<img src=\"assets/images/clock_12.png\" width=\"60\">",
+          "<img src=\"assets/images/clock_11.png\" width=\"60\">"
+        ],
+        "chinese": "听音频，按顺序点图片！"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's eleven o'clock.",
+        "context": "⏰ 你在北京，妈妈问几点了。",
+        "question": "现在几点？",
+        "options": [
+          "十一点",
+          "十二点",
+          "三点",
+          "一点"
+        ],
+        "correct": 0,
+        "chinese": "现在是十一点。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's three o'clock in London.",
+        "context": "🕐 你想知道伦敦几点。",
+        "question": "伦敦几点？",
+        "options": [
+          "三点",
+          "十一点",
+          "十二点",
+          "一点"
+        ],
+        "correct": 0,
+        "chinese": "伦敦现在三点。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "So many clocks!",
+        "context": "⏰ 好多钟！你数了数。",
+        "question": "这里有什么？",
+        "options": [
+          "很多钟",
+          "很多动物",
+          "很多书",
+          "很多人"
+        ],
+        "correct": 0,
+        "chinese": "好多钟！"
       }
     ]
   },
   "reading": {
     "pretest": [
       {
-        "type": "sentence_match",
-        "chinese": "这是时钟。",
+        "type": "word_match",
         "word": "clock",
-        "sentence": "What's the time, Mom?",
+        "sentence": "So many clocks!",
+        "chinese": "好多钟！",
         "options": [
+          {
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
+          },
           {
             "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
             "value": "clock"
           },
           {
-            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
-            "value": "time"
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "chair"
           },
           {
-            "text": "<img src=\"assets/images/one.png\" width=\"80\">",
-            "value": "one"
-          },
-          {
-            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
-            "value": "ten"
+            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+            "value": "schoolbag"
           }
         ],
         "correct": "clock"
       },
       {
         "type": "word_match",
-        "chinese": "现在是十一点。",
-        "word": "eleven",
-        "sentence": "It's eleven o'clock.",
+        "word": "chair",
+        "sentence": "This is a chair.",
+        "chinese": "这是一把椅子。",
         "options": [
           {
-            "text": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-            "value": "twelve"
-          },
-          {
-            "text": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-            "value": "eleven"
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "chair"
           },
           {
             "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
             "value": "clock"
           },
           {
-            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
-            "value": "time"
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
+          },
+          {
+            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+            "value": "schoolbag"
           }
         ],
-        "correct": "eleven"
+        "correct": "chair"
       },
       {
         "type": "word_match",
-        "chinese": "这是十二。",
-        "word": "twelve",
+        "word": "bed",
+        "sentence": "This is a bed.",
+        "chinese": "这是一张床。",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "clock"
+          },
+          {
+            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+            "value": "schoolbag"
+          },
+          {
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
+          },
+          {
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "chair"
+          }
+        ],
+        "correct": "bed"
+      },
+      {
+        "type": "sentence_match",
         "sentence": "What's the time, Mom?",
+        "chinese": "妈妈，几点了？",
         "options": [
           {
-            "text": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-            "value": "twelve"
+            "text": "现在是北京时间十一点。",
+            "value": "wrong1"
           },
           {
-            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
-            "value": "clock"
+            "text": "妈妈，几点了？",
+            "value": "correct"
           },
           {
-            "text": "<img src=\"assets/images/twelve.png\" width=\"80\">",
-            "value": "twelve"
+            "text": "好多钟！",
+            "value": "wrong2"
           },
           {
-            "text": "<img src=\"assets/images/three.png\" width=\"80\">",
-            "value": "three"
+            "text": "不，不是。",
+            "value": "wrong3"
           }
         ],
-        "correct": "twelve"
+        "correct": "correct"
       },
       {
         "type": "sentence_match",
-        "chinese": "几点了？",
-        "word": "time",
-        "sentence": "What's the time?",
+        "sentence": "It's eleven o'clock in Beijing.",
+        "chinese": "现在是北京时间十一点。",
         "options": [
           {
-            "text": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-            "value": "twelve"
+            "text": "现在是北京时间十一点。",
+            "value": "correct"
           },
           {
-            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
-            "value": "time"
+            "text": "现在是伦敦时间十二点。",
+            "value": "wrong1"
           },
           {
-            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
-            "value": "eight"
+            "text": "现在是三点。",
+            "value": "wrong2"
           },
           {
-            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
-            "value": "ten"
+            "text": "妈妈，几点了？",
+            "value": "wrong3"
           }
         ],
-        "correct": "time"
+        "correct": "correct"
       },
       {
         "type": "sentence_match",
-        "chinese": "几点了？",
-        "word": "clock",
-        "sentence": "What's the time?",
+        "sentence": "It's three o'clock.",
+        "chinese": "现在是三点。",
         "options": [
           {
-            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
-            "value": "time"
+            "text": "现在是十一点。",
+            "value": "wrong1"
           },
           {
-            "text": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-            "value": "eleven"
+            "text": "现在是十二点。",
+            "value": "wrong2"
           },
           {
-            "text": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-            "value": "twelve"
+            "text": "现在是三点。",
+            "value": "correct"
           },
           {
-            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
-            "value": "clock"
+            "text": "好多钟！",
+            "value": "wrong3"
           }
         ],
-        "correct": "clock"
+        "correct": "correct"
       },
       {
         "type": "sentence_match",
-        "chinese": "现在是十一点。",
-        "word": "eleven",
-        "sentence": "It's eleven o'clock.",
+        "sentence": "So many clocks!",
+        "chinese": "好多钟！",
         "options": [
           {
-            "text": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-            "value": "eleven"
+            "text": "妈妈，几点了？",
+            "value": "wrong1"
           },
           {
-            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
-            "value": "clock"
+            "text": "好多钟！",
+            "value": "correct"
           },
           {
-            "text": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-            "value": "twelve"
+            "text": "现在是三点。",
+            "value": "wrong2"
           },
           {
-            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
-            "value": "time"
+            "text": "不，不是。",
+            "value": "wrong3"
           }
         ],
-        "correct": "eleven"
+        "correct": "correct"
       },
       {
         "type": "sentence_match",
-        "chinese": "这是十二。",
-        "word": "twelve",
-        "sentence": "What's the time, Mom?",
+        "sentence": "Is it twelve o'clock in London?",
+        "chinese": "现在是伦敦时间十二点吗？",
         "options": [
           {
-            "text": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-            "value": "eleven"
+            "text": "现在是伦敦时间十二点吗？",
+            "value": "correct"
           },
           {
-            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
-            "value": "time"
+            "text": "现在是北京时间十一点。",
+            "value": "wrong1"
           },
           {
-            "text": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-            "value": "twelve"
+            "text": "妈妈，几点了？",
+            "value": "wrong2"
           },
           {
-            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
-            "value": "clock"
+            "text": "好多钟！",
+            "value": "wrong3"
           }
         ],
-        "correct": "twelve"
-      },
-      {
-        "type": "word_match",
-        "chinese": "这是时间。",
-        "word": "time",
-        "sentence": "What's the time, Mom?",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-            "value": "eleven"
-          },
-          {
-            "text": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-            "value": "twelve"
-          },
-          {
-            "text": "<img src=\"assets/images/nine.png\" width=\"80\">",
-            "value": "nine"
-          },
-          {
-            "text": "<img src=\"assets/images/eleven.png\" width=\"80\">",
-            "value": "eleven"
-          }
-        ],
-        "correct": "time"
+        "correct": "correct"
       },
       {
         "type": "sentence_match",
-        "chinese": "这是时钟。",
-        "word": "clock",
-        "sentence": "What's the time, Mom?",
+        "sentence": "你想问妈妈现在几点了，你会说：",
+        "chinese": "情景选择",
         "options": [
           {
-            "text": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-            "value": "eleven"
+            "text": "It's eleven o'clock.",
+            "value": "wrong1"
           },
           {
-            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
-            "value": "time"
+            "text": "So many clocks!",
+            "value": "wrong2"
           },
           {
-            "text": "<img src=\"assets/images/two.png\" width=\"80\">",
-            "value": "two"
+            "text": "What's the time, Mom?",
+            "value": "correct"
           },
           {
-            "text": "<img src=\"assets/images/six.png\" width=\"80\">",
-            "value": "six"
+            "text": "No, it isn't.",
+            "value": "wrong3"
           }
         ],
-        "correct": "clock"
+        "correct": "correct"
       },
       {
-        "type": "word_match",
-        "chinese": "现在是十一点。",
-        "word": "eleven",
-        "sentence": "It's eleven o'clock.",
+        "type": "sentence_match",
+        "sentence": "你看到很多钟，你会感叹：",
+        "chinese": "情景选择",
         "options": [
           {
-            "text": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-            "value": "twelve"
+            "text": "What's the time?",
+            "value": "wrong1"
           },
           {
-            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
-            "value": "clock"
+            "text": "It's eleven o'clock.",
+            "value": "wrong2"
           },
           {
-            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
-            "value": "eight"
+            "text": "No, it isn't.",
+            "value": "wrong3"
           },
           {
-            "text": "<img src=\"assets/images/three.png\" width=\"80\">",
-            "value": "three"
+            "text": "So many clocks!",
+            "value": "correct"
           }
         ],
-        "correct": "eleven"
+        "correct": "correct"
       }
     ],
     "practice": [
       {
-        "type": "sentence_match",
-        "chinese": "现在是十一点。",
+        "type": "tap_pair",
+        "chinese": "点英文词，配对图片！",
+        "pairs": [
+          {
+            "word": "clock",
+            "match": "<img src=\"assets/images/clock.png\" width=\"50\">",
+            "chinese": "钟"
+          },
+          {
+            "word": "eleven",
+            "match": "<img src=\"assets/images/clock_11.png\" width=\"50\">",
+            "chinese": "十一点"
+          },
+          {
+            "word": "twelve",
+            "match": "<img src=\"assets/images/clock_12.png\" width=\"50\">",
+            "chinese": "十二点"
+          },
+          {
+            "word": "three",
+            "match": "<img src=\"assets/images/clock_3.png\" width=\"50\">",
+            "chinese": "三点"
+          }
+        ]
+      },
+      {
+        "type": "tap_pair",
+        "chinese": "点英文词，配对中文！",
+        "pairs": [
+          {
+            "word": "time",
+            "match": "时间",
+            "example": "What's the time?"
+          },
+          {
+            "word": "eleven",
+            "match": "十一",
+            "example": "It's eleven o'clock."
+          },
+          {
+            "word": "twelve",
+            "match": "十二",
+            "example": "It's twelve o'clock."
+          },
+          {
+            "word": "clock",
+            "match": "钟",
+            "example": "So many clocks!"
+          }
+        ]
+      },
+      {
+        "type": "word_match",
         "word": "clock",
-        "sentence": "It's eleven o'clock.",
+        "sentence": "So many clocks!",
+        "chinese": "好多钟！",
         "options": [
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">"
+          {
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "clock"
+          },
+          {
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
+          },
+          {
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "chair"
+          },
+          {
+            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+            "value": "schoolbag"
+          }
         ],
-        "correct": "clock",
-        "difficulty": "hard"
+        "correct": "clock"
       },
       {
-        "type": "duo_race",
+        "type": "word_match",
+        "word": "schoolbag",
+        "sentence": "This is a schoolbag.",
+        "chinese": "这是一个书包。",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
+          },
+          {
+            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+            "value": "schoolbag"
+          },
+          {
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "clock"
+          },
+          {
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "chair"
+          }
+        ],
+        "correct": "schoolbag"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "What's the time, Mom?",
+        "chinese": "妈妈，几点了？",
+        "options": [
+          {
+            "text": "妈妈，几点了？",
+            "value": "correct"
+          },
+          {
+            "text": "现在是北京时间十一点。",
+            "value": "wrong1"
+          },
+          {
+            "text": "好多钟！",
+            "value": "wrong2"
+          },
+          {
+            "text": "不，不是。",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "It's eleven o'clock in Beijing.",
+        "chinese": "现在是北京时间十一点。",
+        "options": [
+          {
+            "text": "现在是伦敦时间十二点。",
+            "value": "wrong1"
+          },
+          {
+            "text": "现在是北京时间十一点。",
+            "value": "correct"
+          },
+          {
+            "text": "现在是三点。",
+            "value": "wrong2"
+          },
+          {
+            "text": "妈妈，几点了？",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "Is it twelve o'clock in London?",
+        "chinese": "现在是伦敦时间十二点吗？",
+        "options": [
+          {
+            "text": "现在是北京时间十一点吗？",
+            "value": "wrong1"
+          },
+          {
+            "text": "妈妈，几点了？",
+            "value": "wrong2"
+          },
+          {
+            "text": "现在是伦敦时间十二点吗？",
+            "value": "correct"
+          },
+          {
+            "text": "好多钟！",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "No, it isn't.",
+        "chinese": "不，不是。",
+        "options": [
+          {
+            "text": "是的，是的。",
+            "value": "wrong1"
+          },
+          {
+            "text": "不，不是。",
+            "value": "correct"
+          },
+          {
+            "text": "妈妈，几点了？",
+            "value": "wrong2"
+          },
+          {
+            "text": "好多钟！",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "It's three o'clock.",
+        "chinese": "现在是三点。",
+        "options": [
+          {
+            "text": "现在是十一点。",
+            "value": "wrong1"
+          },
+          {
+            "text": "现在是十二点。",
+            "value": "wrong2"
+          },
+          {
+            "text": "现在是三点。",
+            "value": "correct"
+          },
+          {
+            "text": "好多钟！",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "So many clocks!",
+        "chinese": "好多钟！",
+        "options": [
+          {
+            "text": "好多钟！",
+            "value": "correct"
+          },
+          {
+            "text": "妈妈，几点了？",
+            "value": "wrong1"
+          },
+          {
+            "text": "现在是三点。",
+            "value": "wrong2"
+          },
+          {
+            "text": "不，不是。",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "It's eleven o'clock.",
         "chinese": "现在是十一点。",
-        "word": "eleven",
-        "sentence": "It's eleven o'clock.",
         "options": [
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">"
+          {
+            "text": "现在是十二点。",
+            "value": "wrong1"
+          },
+          {
+            "text": "现在是三点。",
+            "value": "wrong2"
+          },
+          {
+            "text": "现在是十一点。",
+            "value": "correct"
+          },
+          {
+            "text": "妈妈，几点了？",
+            "value": "wrong3"
+          }
         ],
-        "correct": 2,
-        "difficulty": "easy"
+        "correct": "correct"
       },
       {
-        "type": "duo_race",
-        "chinese": "现在是十二点。",
-        "word": "twelve",
+        "type": "sentence_match",
         "sentence": "It's twelve o'clock.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-            "value": "twelve"
-          },
-          {
-            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
-            "value": "clock"
-          },
-          {
-            "text": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-            "value": "eleven"
-          },
-          {
-            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
-            "value": "time"
-          }
-        ],
-        "correct": 0,
-        "difficulty": "hard"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "现在是十一点。",
-        "word": "time",
-        "sentence": "It's eleven o'clock.",
-        "options": [
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">"
-        ],
-        "correct": 0,
-        "difficulty": "easy"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "现在是十一点。",
-        "word": "clock",
-        "sentence": "It's eleven o'clock.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
-            "value": "time"
-          },
-          {
-            "text": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-            "value": "eleven"
-          },
-          {
-            "text": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-            "value": "twelve"
-          },
-          {
-            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
-            "value": "clock"
-          }
-        ],
-        "correct": 1,
-        "difficulty": "hard"
-      },
-      {
-        "type": "word_match",
-        "chinese": "现在是十一点。",
-        "word": "eleven",
-        "sentence": "It's eleven o'clock.",
-        "options": [
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">"
-        ],
-        "correct": 2,
-        "difficulty": "easy"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "现在是十一点。",
-        "word": "twelve",
-        "sentence": "It's eleven o'clock.",
-        "options": [
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">"
-        ],
-        "correct": 0,
-        "difficulty": "medium"
-      },
-      {
-        "type": "word_match",
-        "chinese": "现在是十一点。",
-        "word": "time",
-        "sentence": "It's eleven o'clock.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
-            "value": "clock"
-          },
-          {
-            "text": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-            "value": "eleven"
-          },
-          {
-            "text": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-            "value": "twelve"
-          },
-          {
-            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
-            "value": "time"
-          }
-        ],
-        "correct": 2,
-        "difficulty": "hard"
-      },
-      {
-        "type": "word_match",
-        "chinese": "现在是十一点。",
-        "word": "clock",
-        "sentence": "It's eleven o'clock.",
-        "options": [
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">"
-        ],
-        "correct": 1,
-        "difficulty": "easy"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "现在是十一点。",
-        "word": "eleven",
-        "sentence": "It's eleven o'clock.",
-        "options": [
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">"
-        ],
-        "correct": 3,
-        "difficulty": "easy"
-      },
-      {
-        "type": "duo_race",
         "chinese": "现在是十二点。",
-        "word": "twelve",
-        "sentence": "It's twelve o'clock.",
         "options": [
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">"
+          {
+            "text": "现在是十二点。",
+            "value": "correct"
+          },
+          {
+            "text": "现在是十一点。",
+            "value": "wrong1"
+          },
+          {
+            "text": "现在是三点。",
+            "value": "wrong2"
+          },
+          {
+            "text": "好多钟！",
+            "value": "wrong3"
+          }
         ],
-        "correct": 2,
-        "difficulty": "easy"
+        "correct": "correct"
       },
       {
         "type": "sentence_match",
-        "chinese": "现在是十一点。",
-        "word": "time",
-        "sentence": "It's eleven o'clock.",
+        "sentence": "What's the time, Mom? It's eleven o'clock in Beijing.",
+        "chinese": "妈妈，几点了？现在是北京时间十一点。",
         "options": [
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-          "<img src=\"assets/images/clock.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_11.png\" width=\"80\">"
+          {
+            "text": "妈妈，几点了？现在是北京时间十一点。",
+            "value": "correct"
+          },
+          {
+            "text": "现在是伦敦时间十二点吗？不，不是。",
+            "value": "wrong1"
+          },
+          {
+            "text": "好多钟！现在是三点。",
+            "value": "wrong2"
+          },
+          {
+            "text": "现在是十一点。好多钟！",
+            "value": "wrong3"
+          }
         ],
-        "correct": 0,
-        "difficulty": "hard"
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "Is it twelve o'clock in London? No, it isn't. It's three o'clock.",
+        "chinese": "现在是伦敦时间十二点吗？不，不是。现在是三点。",
+        "options": [
+          {
+            "text": "妈妈，几点了？现在是北京时间十一点。",
+            "value": "wrong1"
+          },
+          {
+            "text": "现在是伦敦时间十二点吗？不，不是。现在是三点。",
+            "value": "correct"
+          },
+          {
+            "text": "好多钟！现在是十一点。",
+            "value": "wrong2"
+          },
+          {
+            "text": "现在是十二点。不，不是。",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "你想问现在几点了，你会说：",
+        "chinese": "情景选择",
+        "options": [
+          {
+            "text": "It's eleven o'clock.",
+            "value": "wrong1"
+          },
+          {
+            "text": "What's the time, Mom?",
+            "value": "correct"
+          },
+          {
+            "text": "So many clocks!",
+            "value": "wrong2"
+          },
+          {
+            "text": "No, it isn't.",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "你想知道伦敦是不是十二点，你会问：",
+        "chinese": "情景选择",
+        "options": [
+          {
+            "text": "What's the time, Mom?",
+            "value": "wrong1"
+          },
+          {
+            "text": "It's eleven o'clock in Beijing.",
+            "value": "wrong2"
+          },
+          {
+            "text": "Is it twelve o'clock in London?",
+            "value": "correct"
+          },
+          {
+            "text": "So many clocks!",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "别人问你是不是十二点，但不是，你会说：",
+        "chinese": "情景选择",
+        "options": [
+          {
+            "text": "Yes, it is.",
+            "value": "wrong1"
+          },
+          {
+            "text": "So many clocks!",
+            "value": "wrong2"
+          },
+          {
+            "text": "No, it isn't.",
+            "value": "correct"
+          },
+          {
+            "text": "What's the time?",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "你看到墙上挂了好多钟，你会说：",
+        "chinese": "情景选择",
+        "options": [
+          {
+            "text": "What's the time?",
+            "value": "wrong1"
+          },
+          {
+            "text": "It's eleven o'clock.",
+            "value": "wrong2"
+          },
+          {
+            "text": "No, it isn't.",
+            "value": "wrong3"
+          },
+          {
+            "text": "So many clocks!",
+            "value": "correct"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "It's eleven o'clock in Beijing. So many clocks!",
+        "chinese": "现在是北京时间十一点。好多钟！",
+        "options": [
+          {
+            "text": "现在是北京时间十一点。好多钟！",
+            "value": "correct"
+          },
+          {
+            "text": "妈妈，几点了？现在是三点。",
+            "value": "wrong1"
+          },
+          {
+            "text": "现在是伦敦时间十二点吗？不，不是。",
+            "value": "wrong2"
+          },
+          {
+            "text": "好多钟！妈妈，几点了？",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "It's three o'clock. So many clocks!",
+        "chinese": "现在是三点。好多钟！",
+        "options": [
+          {
+            "text": "现在是十一点。好多钟！",
+            "value": "wrong1"
+          },
+          {
+            "text": "现在是三点。好多钟！",
+            "value": "correct"
+          },
+          {
+            "text": "妈妈，几点了？好多钟！",
+            "value": "wrong2"
+          },
+          {
+            "text": "现在是十二点。不，不是。",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "It's twelve o'clock. So many clocks!",
+        "chinese": "现在是十二点。好多钟！",
+        "options": [
+          {
+            "text": "现在是十二点。好多钟！",
+            "value": "correct"
+          },
+          {
+            "text": "现在是十一点。好多钟！",
+            "value": "wrong1"
+          },
+          {
+            "text": "现在是三点。好多钟！",
+            "value": "wrong2"
+          },
+          {
+            "text": "妈妈，几点了？",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "What's the time, Mom? It's eleven o'clock in Beijing. So many clocks!",
+        "chinese": "妈妈，几点了？现在是北京时间十一点。好多钟！",
+        "options": [
+          {
+            "text": "妈妈，几点了？现在是北京时间十一点。好多钟！",
+            "value": "correct"
+          },
+          {
+            "text": "现在是伦敦时间十二点吗？不，不是。现在是三点。",
+            "value": "wrong1"
+          },
+          {
+            "text": "好多钟！现在是十一点。妈妈，几点了？",
+            "value": "wrong2"
+          },
+          {
+            "text": "现在是三点。好多钟！",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "scenario",
+        "sentence": "It's eleven o'clock in Beijing.",
+        "context": "你朋友在伦敦，他想知道北京现在几点。你看到时钟。",
+        "question": "北京几点？",
+        "options": [
+          {
+            "text": "十一点",
+            "value": "correct"
+          },
+          {
+            "text": "三点",
+            "value": "w1"
+          },
+          {
+            "text": "十二点",
+            "value": "w2"
+          },
+          {
+            "text": "一点",
+            "value": "w3"
+          }
+        ],
+        "correct": "correct",
+        "chinese": "北京现在十一点。"
+      },
+      {
+        "type": "scenario",
+        "sentence": "What's the time? It's twelve o'clock.",
+        "context": "你迟到了，看了一下钟。",
+        "question": "现在几点？",
+        "options": [
+          {
+            "text": "十二点",
+            "value": "correct"
+          },
+          {
+            "text": "十一点",
+            "value": "w1"
+          },
+          {
+            "text": "三点",
+            "value": "w2"
+          },
+          {
+            "text": "一点",
+            "value": "w3"
+          }
+        ],
+        "correct": "correct",
+        "chinese": "几点了？十二点。"
+      },
+      {
+        "type": "sentence_sequence",
+        "sentences": [
+          "What's the time, Mom?",
+          "It's eleven o'clock.",
+          "Oh, so late!"
+        ],
+        "chinese": "把问时间对话排好！",
+        "chineseHint": "妈妈，几点了？ / 十一点了。 / 哦，太晚了！"
+      },
+      {
+        "type": "sentence_sequence",
+        "sentences": [
+          "So many clocks!",
+          "What's the time?",
+          "It's three o'clock."
+        ],
+        "chinese": "把对话排好顺序！",
+        "chineseHint": "好多钟！ / 几点了？ / 三点了。"
+      },
+      {
+        "type": "word_match",
+        "word": "eleven",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
+            "value": "eleven"
+          },
+          {
+            "text": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
+            "value": "wrong1"
+          },
+          {
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "wrong2"
+          }
+        ],
+        "correct": "eleven",
+        "chinese": "eleven"
+      },
+      {
+        "type": "word_match",
+        "word": "twelve",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
+            "value": "twelve"
+          },
+          {
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "wrong1"
+          },
+          {
+            "text": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
+            "value": "wrong2"
+          }
+        ],
+        "correct": "twelve",
+        "chinese": "twelve"
       }
     ]
   },
   "writing": {
     "pretest": [
       {
-        "type": "word_spell",
-        "word": "clock",
-        "chinese": "现在是clock点。",
-        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
-        "display": "_lock",
-        "options": [
-          "d",
-          "f",
-          "e",
-          "c"
-        ],
-        "correct": "c"
-      },
-      {
-        "type": "word_spell",
-        "word": "eleven",
-        "chinese": "现在是十一点。",
-        "image": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-        "display": "e_even",
-        "options": [
-          "n",
-          "l",
-          "m",
-          "o"
-        ],
-        "correct": "l"
-      },
-      {
         "type": "letter_select",
-        "word": "twelve",
-        "chinese": "现在是十二点。",
-        "image": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-        "display": "twelv_",
+        "prompt": "钟的首字母是？",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "options": [
-          "f",
-          "e",
+          "k",
+          "c",
           "g",
-          "h"
+          "t"
         ],
-        "correct": "e"
+        "correct": 1,
+        "chinese": "钟",
+        "word": "钟"
       },
       {
-        "type": "word_spell",
-        "word": "time",
-        "chinese": "现在是time点。",
+        "type": "pinyin_fill",
+        "hint": "cl_ck",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
-        "display": "_ime",
         "options": [
-          "t",
-          "u",
-          "w",
-          "v"
-        ],
-        "correct": "t"
-      },
-      {
-        "type": "word_spell",
-        "word": "clock",
-        "chinese": "现在是clock点。",
-        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
-        "display": "cloc_",
-        "options": [
-          "l",
-          "m",
-          "n",
-          "k"
-        ],
-        "correct": "k"
-      },
-      {
-        "type": "letter_select",
-        "word": "eleven",
-        "chinese": "现在是十一点。",
-        "image": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-        "display": "e_even",
-        "options": [
-          "n",
           "o",
-          "l",
-          "m"
+          "a",
+          "e",
+          "i"
         ],
-        "correct": "l"
+        "correct": 0,
+        "chinese": "钟"
       },
       {
-        "type": "word_spell",
-        "word": "twelve",
-        "chinese": "现在是十二点。",
-        "image": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-        "display": "_welve",
-        "options": [
-          "u",
-          "w",
-          "t",
-          "v"
-        ],
-        "correct": "t"
-      },
-      {
-        "type": "letter_select",
-        "word": "time",
-        "chinese": "现在是time点。",
+        "type": "pinyin_fill",
+        "hint": "t_me",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
-        "display": "t_me",
+        "options": [
+          "i",
+          "a",
+          "o",
+          "e"
+        ],
+        "correct": 0,
+        "chinese": "时间"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "What's the _____, Mom?",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "options": [
+          "clock",
+          "time",
+          "name",
+          "day"
+        ],
+        "correct": 1,
+        "chinese": "妈妈，几点了？"
+      },
+      {
+        "type": "word_puzzle",
+        "hint": "t_me",
+        "word": "time",
         "options": [
           "l",
           "k",
-          "i",
-          "j"
-        ],
-        "correct": "i"
-      },
-      {
-        "type": "letter_select",
-        "word": "clock",
-        "chinese": "现在是clock点。",
-        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
-        "display": "_lock",
-        "options": [
-          "c",
-          "e",
-          "d",
-          "f"
-        ],
-        "correct": "c"
-      },
-      {
-        "type": "letter_select",
-        "word": "eleven",
-        "chinese": "现在是十一点。",
-        "image": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-        "display": "el_ven",
-        "options": [
           "f",
-          "g",
-          "h",
-          "e"
+          "i"
         ],
-        "correct": "e"
+        "correct": 3,
+        "chinese": "time"
+      },
+      {
+        "type": "word_puzzle",
+        "hint": "e_even",
+        "word": "eleven",
+        "options": [
+          "y",
+          "s",
+          "l",
+          "a"
+        ],
+        "correct": 2,
+        "chinese": "eleven"
+      },
+      {
+        "type": "word_puzzle",
+        "hint": "t_elve",
+        "word": "twelve",
+        "options": [
+          "r",
+          "w",
+          "j",
+          "s"
+        ],
+        "correct": 1,
+        "chinese": "twelve"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "What's the _____?",
+        "options": [
+          "clock",
+          "eleven",
+          "time",
+          "twelve"
+        ],
+        "correct": 2,
+        "chinese": "What's the time?"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "It's eleven _____.",
+        "options": [
+          "twelve",
+          "time",
+          "o'clock",
+          "eleven"
+        ],
+        "correct": 2,
+        "chinese": "It's eleven o'clock."
       }
     ],
     "practice": [
       {
-        "type": "duo_spell",
-        "word": "clock",
-        "chinese": "现在是clock点。",
-        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
-        "display": "_lock",
-        "options": [
-          "d",
-          "f",
-          "e",
-          "c"
+        "type": "sentence_order",
+        "chinese": "妈妈，几点了？",
+        "words": [
+          "What's",
+          "the",
+          "time",
+          "Mom"
         ],
-        "correct": "c",
-        "difficulty": "hard",
-        "parts": [
-          "cl",
-          "ock"
+        "scrambled": [
+          "time",
+          "What's",
+          "Mom",
+          "the"
+        ],
+        "chineseWords": [
+          "妈妈",
+          "几点",
+          "了"
+        ],
+        "chineseScrambled": [
+          "了",
+          "妈妈",
+          "几点"
         ]
       },
       {
-        "type": "word_spell",
-        "word": "eleven",
+        "type": "sentence_order",
+        "chinese": "现在是北京时间十一点。",
+        "words": [
+          "It's",
+          "eleven",
+          "o'clock",
+          "in",
+          "Beijing"
+        ],
+        "scrambled": [
+          "o'clock",
+          "It's",
+          "Beijing",
+          "eleven",
+          "in"
+        ],
+        "chineseWords": [
+          "现在是",
+          "北京",
+          "时间",
+          "十一",
+          "点"
+        ],
+        "chineseScrambled": [
+          "十一",
+          "点",
+          "现在是",
+          "时间",
+          "北京"
+        ]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "现在是伦敦时间十二点吗？",
+        "words": [
+          "Is",
+          "it",
+          "twelve",
+          "o'clock",
+          "in",
+          "London"
+        ],
+        "scrambled": [
+          "twelve",
+          "Is",
+          "London",
+          "o'clock",
+          "it",
+          "in"
+        ],
+        "chineseWords": [
+          "现在是",
+          "伦敦",
+          "时间",
+          "十二",
+          "点",
+          "吗"
+        ],
+        "chineseScrambled": [
+          "十二",
+          "吗",
+          "现在是",
+          "时间",
+          "点",
+          "伦敦"
+        ]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "不，不是。",
+        "words": [
+          "No",
+          "it",
+          "isn't"
+        ],
+        "scrambled": [
+          "it",
+          "No",
+          "isn't"
+        ],
+        "chineseWords": [
+          "不",
+          "不是"
+        ],
+        "chineseScrambled": [
+          "不是",
+          "不"
+        ]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "现在是三点。",
+        "words": [
+          "It's",
+          "three",
+          "o'clock"
+        ],
+        "scrambled": [
+          "three",
+          "It's",
+          "o'clock"
+        ],
+        "chineseWords": [
+          "现在是",
+          "三",
+          "点"
+        ],
+        "chineseScrambled": [
+          "三",
+          "点",
+          "现在是"
+        ]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "好多钟！",
+        "words": [
+          "So",
+          "many",
+          "clocks"
+        ],
+        "scrambled": [
+          "clocks",
+          "So",
+          "many"
+        ],
+        "chineseWords": [
+          "好多",
+          "钟"
+        ],
+        "chineseScrambled": [
+          "钟",
+          "好多"
+        ]
+      },
+      {
+        "type": "sentence_order",
         "chinese": "现在是十一点。",
-        "image": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-        "display": "e_even",
-        "options": [
-          "n",
-          "l",
-          "m",
-          "o"
+        "words": [
+          "It's",
+          "eleven",
+          "o'clock"
         ],
-        "correct": "l",
-        "difficulty": "hard",
-        "parts": [
-          "ele",
-          "ven"
+        "scrambled": [
+          "eleven",
+          "It's",
+          "o'clock"
+        ],
+        "chineseWords": [
+          "现在是",
+          "十一",
+          "点"
+        ],
+        "chineseScrambled": [
+          "点",
+          "现在是",
+          "十一"
         ]
       },
       {
-        "type": "duo_spell",
-        "word": "twelve",
+        "type": "sentence_order",
         "chinese": "现在是十二点。",
-        "image": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-        "display": "twelv_",
-        "options": [
-          "f",
-          "e",
-          "g",
-          "h"
+        "words": [
+          "It's",
+          "twelve",
+          "o'clock"
         ],
-        "correct": "e",
-        "difficulty": "hard",
-        "parts": [
-          "twe",
-          "lve"
+        "scrambled": [
+          "twelve",
+          "o'clock",
+          "It's"
+        ],
+        "chineseWords": [
+          "现在是",
+          "十二",
+          "点"
+        ],
+        "chineseScrambled": [
+          "十二",
+          "现在是",
+          "点"
         ]
       },
       {
-        "type": "duo_spell",
+        "type": "sentence_order",
+        "chinese": "现在是三点。好多钟！",
+        "words": [
+          "It's",
+          "three",
+          "o'clock",
+          "So",
+          "many",
+          "clocks"
+        ],
+        "scrambled": [
+          "So",
+          "three",
+          "clocks",
+          "It's",
+          "many",
+          "o'clock"
+        ],
+        "chineseWords": [
+          "现在是",
+          "三",
+          "点",
+          "好多",
+          "钟"
+        ],
+        "chineseScrambled": [
+          "好多",
+          "三",
+          "钟",
+          "现在是",
+          "点"
+        ]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "现在是十二点。好多钟！",
+        "words": [
+          "It's",
+          "twelve",
+          "o'clock",
+          "So",
+          "many",
+          "clocks"
+        ],
+        "scrambled": [
+          "clocks",
+          "twelve",
+          "It's",
+          "So",
+          "o'clock",
+          "many"
+        ],
+        "chineseWords": [
+          "现在是",
+          "十二",
+          "点",
+          "好多",
+          "钟"
+        ],
+        "chineseScrambled": [
+          "钟",
+          "十二",
+          "好多",
+          "现在是",
+          "点"
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "What's the _____, Mom?",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "options": [
+          "clock",
+          "time",
+          "name",
+          "day"
+        ],
+        "correct": 1,
+        "chinese": "妈妈，几点了？"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "It's _____ o'clock in Beijing.",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "options": [
+          "eleven",
+          "three",
+          "twelve",
+          "one"
+        ],
+        "correct": 0,
+        "chinese": "现在是北京时间十一点。"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "Is it _____ o'clock in London?",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "options": [
+          "eleven",
+          "twelve",
+          "three",
+          "one"
+        ],
+        "correct": 1,
+        "chinese": "现在是伦敦时间十二点吗？"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "It's _____ o'clock.",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "options": [
+          "eleven",
+          "twelve",
+          "three",
+          "one"
+        ],
+        "correct": 2,
+        "chinese": "现在是三点。"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "So many _____!",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "options": [
+          "animals",
+          "clocks",
+          "books",
+          "birds"
+        ],
+        "correct": 1,
+        "chinese": "好多钟！"
+      },
+      {
+        "type": "word_puzzle",
+        "hint": "ti_e",
         "word": "time",
-        "chinese": "现在是time点。",
-        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
-        "display": "_ime",
         "options": [
-          "t",
-          "u",
-          "w",
-          "v"
-        ],
-        "correct": "t",
-        "difficulty": "hard",
-        "parts": [
-          "ti",
-          "me"
-        ]
-      },
-      {
-        "type": "word_spell",
-        "word": "clock",
-        "chinese": "现在是clock点。",
-        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
-        "display": "cloc_",
-        "options": [
-          "l",
-          "m",
-          "n",
-          "k"
-        ],
-        "correct": "k",
-        "difficulty": "easy",
-        "parts": [
-          "cl",
-          "ock"
-        ]
-      },
-      {
-        "type": "word_spell",
-        "word": "eleven",
-        "chinese": "现在是十一点。",
-        "image": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-        "display": "e_even",
-        "options": [
-          "n",
           "o",
-          "l",
+          "s",
+          "r",
           "m"
         ],
-        "correct": "l",
-        "difficulty": "medium",
-        "parts": [
-          "ele",
-          "ven"
-        ]
+        "correct": 3,
+        "chinese": "time"
       },
       {
-        "type": "word_spell",
-        "word": "twelve",
-        "chinese": "现在是十二点。",
-        "image": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-        "display": "_welve",
-        "options": [
-          "u",
-          "w",
-          "t",
-          "v"
-        ],
-        "correct": "t",
-        "difficulty": "easy",
-        "parts": [
-          "twe",
-          "lve"
-        ]
-      },
-      {
-        "type": "word_spell",
-        "word": "time",
-        "chinese": "现在是time点。",
-        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
-        "display": "t_me",
-        "options": [
-          "l",
-          "k",
-          "i",
-          "j"
-        ],
-        "correct": "i",
-        "difficulty": "medium",
-        "parts": [
-          "ti",
-          "me"
-        ]
-      },
-      {
-        "type": "duo_spell",
-        "word": "clock",
-        "chinese": "现在是clock点。",
-        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
-        "display": "_lock",
-        "options": [
-          "c",
-          "e",
-          "d",
-          "f"
-        ],
-        "correct": "c",
-        "difficulty": "hard",
-        "parts": [
-          "cl",
-          "ock"
-        ]
-      },
-      {
-        "type": "letter_select",
+        "type": "word_puzzle",
+        "hint": "ele_en",
         "word": "eleven",
-        "chinese": "现在是十一点。",
-        "image": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-        "display": "el_ven",
         "options": [
-          "f",
-          "g",
-          "h",
-          "e"
+          "m",
+          "k",
+          "v",
+          "s"
         ],
-        "correct": "e",
-        "difficulty": "easy",
-        "parts": [
-          "ele",
-          "ven"
-        ]
+        "correct": 2,
+        "chinese": "eleven"
       },
       {
-        "type": "duo_spell",
-        "word": "twelve",
-        "chinese": "现在是十二点。",
-        "image": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-        "display": "t_elve",
+        "type": "fill_blank",
+        "prompt": "What's the _____?",
         "options": [
-          "z",
-          "x",
-          "w",
-          "y"
+          "twelve",
+          "clock",
+          "time",
+          "eleven"
         ],
-        "correct": "w",
-        "difficulty": "medium",
-        "parts": [
-          "twe",
-          "lve"
-        ]
+        "correct": 2,
+        "chinese": "What's the time?"
       },
       {
-        "type": "duo_spell",
-        "word": "time",
-        "chinese": "现在是time点。",
-        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
-        "display": "_ime",
+        "type": "fill_blank",
+        "prompt": "It's eleven _____.",
         "options": [
-          "w",
-          "u",
-          "t",
-          "v"
+          "eleven",
+          "twelve",
+          "o'clock",
+          "time"
         ],
-        "correct": "t",
-        "difficulty": "hard",
-        "parts": [
-          "ti",
-          "me"
-        ]
+        "correct": 2,
+        "chinese": "It's eleven o'clock."
       }
     ]
   },
   "speaking": {
     "pretest": [
       {
-        "type": "read_word",
-        "word": "clock",
-        "chinese": "这是时钟。",
+        "type": "repeat_word",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
-        "sentence": "What's the time, Mom?"
+        "word": "clock",
+        "chinese": "钟",
+        "expected": "clock"
       },
       {
-        "type": "read_word",
-        "word": "eleven",
-        "chinese": "我喜欢十一。",
-        "image": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-        "sentence": "I like eleven."
-      },
-      {
-        "type": "shadowing",
-        "word": "twelve",
-        "chinese": "这是十二。",
-        "image": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-        "sentence": "What's the time, Mom?"
-      },
-      {
-        "type": "shadowing",
+        "type": "repeat_word",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "word": "time",
-        "chinese": "我喜欢time。",
-        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
-        "sentence": "I like time."
+        "chinese": "时间",
+        "expected": "time"
       },
       {
-        "type": "shadowing",
-        "word": "clock",
-        "chinese": "我喜欢clock。",
+        "type": "repeat_word",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
-        "sentence": "I like clock."
-      },
-      {
-        "type": "read_word",
         "word": "eleven",
-        "chinese": "我喜欢十一。",
-        "image": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-        "sentence": "I like eleven."
+        "chinese": "十一",
+        "expected": "eleven"
       },
       {
-        "type": "shadowing",
+        "type": "repeat_word",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "word": "twelve",
-        "chinese": "我喜欢十二。",
-        "image": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-        "sentence": "I like twelve."
+        "chinese": "十二",
+        "expected": "twelve"
       },
       {
-        "type": "read_word",
-        "word": "time",
-        "chinese": "我喜欢time。",
+        "type": "repeat_word",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
-        "sentence": "I like time."
+        "word": "three",
+        "chinese": "三",
+        "expected": "three"
       },
       {
-        "type": "shadowing",
-        "word": "clock",
-        "chinese": "这是时钟。",
-        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
-        "sentence": "What's the time, Mom?"
+        "type": "speak_select",
+        "audio": "clock",
+        "options": [
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "chinese": "钟"
       },
       {
-        "type": "shadowing",
-        "word": "eleven",
-        "chinese": "这是十一。",
-        "image": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-        "sentence": "What's the time, Mom?"
+        "type": "speak_select",
+        "audio": "chair",
+        "options": [
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "chinese": "椅子"
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "What's the time, Mom?",
+        "chinese": "妈妈，几点了？",
+        "expected": "What's the time, Mom?"
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "It's eleven o'clock.",
+        "chinese": "现在是十一点。",
+        "expected": "It's eleven o'clock."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "So many clocks!",
+        "chinese": "好多钟！",
+        "expected": "So many clocks!"
       }
     ],
     "practice": [
       {
-        "type": "read_word",
+        "type": "repeat_sentence",
+        "word": "What's the time, Mom?",
+        "chinese": "妈妈，几点了？",
+        "expected": "What's the time, Mom?"
+      },
+      {
+        "type": "repeat_sentence",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "word": "It's eleven o'clock in Beijing.",
+        "chinese": "现在是北京时间十一点。",
+        "expected": "It's eleven o'clock in Beijing."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "Is it twelve o'clock in London?",
+        "chinese": "现在是伦敦时间十二点吗？",
+        "expected": "Is it twelve o'clock in London?"
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "No, it isn't.",
+        "chinese": "不，不是。",
+        "expected": "No, it isn't."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "It's three o'clock.",
+        "chinese": "现在是三点。",
+        "expected": "It's three o'clock."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "So many clocks!",
+        "chinese": "好多钟！",
+        "expected": "So many clocks!"
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "It's eleven o'clock.",
+        "chinese": "现在是十一点。",
+        "expected": "It's eleven o'clock."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "It's twelve o'clock.",
+        "chinese": "现在是十二点。",
+        "expected": "It's twelve o'clock."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "What's the time, Mom? It's eleven o'clock in Beijing.",
+        "chinese": "妈妈，几点了？现在是北京时间十一点。",
+        "expected": "What's the time, Mom? It's eleven o'clock in Beijing."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "Is it twelve o'clock in London? No, it isn't.",
+        "chinese": "现在是伦敦时间十二点吗？不，不是。",
+        "expected": "Is it twelve o'clock in London? No, it isn't."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "Is it twelve o'clock in London? No, it isn't. It's three o'clock.",
+        "chinese": "现在是伦敦时间十二点吗？不，不是。现在是三点。",
+        "expected": "Is it twelve o'clock in London? No, it isn't. It's three o'clock."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "It's eleven o'clock in Beijing. So many clocks!",
+        "chinese": "现在是北京时间十一点。好多钟！",
+        "expected": "It's eleven o'clock in Beijing. So many clocks!"
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "It's three o'clock. So many clocks!",
+        "chinese": "现在是三点。好多钟！",
+        "expected": "It's three o'clock. So many clocks!"
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "It's twelve o'clock. So many clocks!",
+        "chinese": "现在是十二点。好多钟！",
+        "expected": "It's twelve o'clock. So many clocks!"
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "What's the time, Mom? It's eleven o'clock. So many clocks!",
+        "chinese": "妈妈，几点了？现在是十一点。好多钟！",
+        "expected": "What's the time, Mom? It's eleven o'clock. So many clocks!"
+      },
+      {
+        "type": "repeat_word",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "word": "clock",
-        "chinese": "这是一只clock。",
+        "chinese": "钟",
+        "expected": "clock"
+      },
+      {
+        "type": "repeat_word",
         "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
-        "sentence": "This is a clock.",
-        "difficulty": "easy"
-      },
-      {
-        "type": "read_word",
-        "word": "eleven",
-        "chinese": "这是一只十一。",
-        "image": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-        "sentence": "This is a eleven.",
-        "difficulty": "easy"
-      },
-      {
-        "type": "debate",
-        "word": "twelve",
-        "chinese": "现在是十一点。",
-        "image": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-        "sentence": "It's eleven o'clock.",
-        "difficulty": "hard"
-      },
-      {
-        "type": "shadowing",
         "word": "time",
-        "chinese": "现在是十一点。",
-        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
-        "sentence": "It's eleven o'clock.",
-        "difficulty": "hard"
+        "chinese": "时间",
+        "expected": "time"
       },
       {
-        "type": "shadowing",
+        "type": "repeat_word",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "word": "eleven",
+        "chinese": "十一",
+        "expected": "eleven"
+      },
+      {
+        "type": "repeat_word",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "word": "twelve",
+        "chinese": "十二",
+        "expected": "twelve"
+      },
+      {
+        "type": "repeat_word",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "word": "three",
+        "chinese": "三",
+        "expected": "three"
+      },
+      {
+        "type": "picture_speak",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "word": "clock",
-        "chinese": "这是一只clock。",
-        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
-        "sentence": "This is a clock.",
-        "difficulty": "medium"
+        "chinese": "clock"
       },
       {
-        "type": "shadowing",
-        "word": "eleven",
-        "chinese": "这是一只十一。",
+        "type": "picture_speak",
         "image": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-        "sentence": "This is a eleven.",
-        "difficulty": "medium"
+        "word": "clock_11",
+        "chinese": "clock_11"
       },
       {
-        "type": "roleplay",
-        "word": "twelve",
-        "chinese": "现在是十一点。",
+        "type": "picture_speak",
         "image": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-        "sentence": "It's eleven o'clock.",
-        "difficulty": "medium"
+        "word": "clock_12",
+        "chinese": "clock_12"
       },
       {
-        "type": "shadowing",
-        "word": "time",
-        "chinese": "这是一只time。",
-        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
-        "sentence": "This is a time.",
-        "difficulty": "easy"
+        "type": "picture_speak",
+        "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
+        "word": "clock_3",
+        "chinese": "clock_3"
       },
       {
-        "type": "roleplay",
-        "word": "clock",
-        "chinese": "现在是十一点。",
-        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
-        "sentence": "It's eleven o'clock.",
-        "difficulty": "hard"
-      },
-      {
-        "type": "roleplay",
+        "type": "picture_speak",
+        "image": "",
         "word": "eleven",
-        "chinese": "这是一只十一。",
-        "image": "<img src=\"assets/images/clock_11.png\" width=\"80\">",
-        "sentence": "This is a eleven.",
-        "difficulty": "easy"
+        "chinese": "eleven"
       },
       {
-        "type": "debate",
+        "type": "picture_speak",
+        "image": "",
         "word": "twelve",
-        "chinese": "这是一只十二。",
-        "image": "<img src=\"assets/images/clock_12.png\" width=\"80\">",
-        "sentence": "This is a twelve.",
-        "difficulty": "medium"
-      },
-      {
-        "type": "debate",
-        "word": "time",
-        "chinese": "现在是十一点。",
-        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
-        "sentence": "It's eleven o'clock.",
-        "difficulty": "hard"
+        "chinese": "twelve"
       }
     ]
   }

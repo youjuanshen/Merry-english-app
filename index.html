@@ -10,17 +10,26 @@
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="assets/icon-192.png">
   <title>Merry English</title>
-  <link rel="stylesheet" href="style.css?v=15">
+  <link rel="stylesheet" href="style.css?v=19">
 </head>
 <body>
   <div id="app">
     <!-- Welcome Screen - 简洁大气 -->
     <div id="welcome-screen" class="screen active">
-      <div class="welcome-content">
-        <p class="welcome-subtitle">欢迎来到</p>
-        <h1 class="welcome-title">英语乐园</h1>
-        <p class="welcome-english">Let's Learn English!</p>
-        <p class="welcome-countdown" id="countdown">3</p>
+      <div class="welcome-bg-decor">
+        <span class="welcome-float-emoji" style="top:8%;left:10%;animation-delay:0s;">🌟</span>
+        <span class="welcome-float-emoji" style="top:15%;right:12%;animation-delay:0.5s;">📚</span>
+        <span class="welcome-float-emoji" style="bottom:18%;left:8%;animation-delay:1s;">✨</span>
+        <span class="welcome-float-emoji" style="bottom:12%;right:10%;animation-delay:1.5s;">🎓</span>
+        <span class="welcome-float-emoji" style="top:40%;left:5%;animation-delay:0.8s;">🔤</span>
+        <span class="welcome-float-emoji" style="top:35%;right:5%;animation-delay:1.2s;">⭐</span>
+      </div>
+      <div class="welcome-content-enhanced">
+        <img src="assets/images/welcome_hero.png" class="welcome-hero-img" alt="kids learning" />
+        <h1 class="welcome-app-name">Merry English</h1>
+        <p class="welcome-tagline">🎉 英语乐园 · 快乐学习</p>
+        <button class="welcome-start-btn" id="welcome-start-btn">🎵 点击开始</button>
+        <p class="welcome-countdown-enhanced" id="countdown" style="display:none;">3</p>
       </div>
     </div>
 
@@ -28,11 +37,7 @@
     <div id="login-screen" class="screen">
       <!-- Added Course Info Display -->
       <div class="course-info-display" id="course-info-display" style="display:none;">
-        <h3>今日课程</h3>
-        <div class="course-card">
-           <div class="c-title">📚 <span id="display-lesson-title">第一单元第一课</span></div>
-           <div class="c-module">🎧 <span id="display-module-title">听力练习</span></div>
-        </div>
+        <span id="display-lesson-title">🐻 Unit 1 动物 Lesson 1</span> · <span id="display-module-title">听力</span>
       </div>
 
       <h1 class="login-title">选择你们的名字</h1>
@@ -115,6 +120,8 @@
         <span class="turn-progress">1/12</span>
         <span class="turn-name">请 <strong>张宇豪</strong> 回答</span>
       </div>
+      <!-- 分题刻度进度条（JS动态填充） -->
+      <div id="quiz-seg-bar"></div>
 
       <div class="content-area" id="question-container">
         <!-- Question content rendered by JS -->
@@ -122,10 +129,9 @@
     </div>
     
     <!-- Finish Screen -->
-    <div id="finish-screen" class="screen">
-      <h1>太棒了！</h1>
-      <div id="finish-stars" style="font-size: 40px; text-align: center; margin: 20px 0;">⭐⭐⭐⭐⭐</div>
-      <button class="primary-btn" onclick="location.reload()">再玩一次</button>
+    <div id="finish-screen" class="screen" style="overflow-y:auto;-webkit-overflow-scrolling:touch;">
+      <h1 style="font-size:20px;margin:16px 0 8px;">太棒了！</h1>
+      <div id="finish-stars" style="text-align:center;"></div>
     </div>
   </div>
   
@@ -152,16 +158,16 @@
   <script src="data/daily-quests.js?v=1"></script>
   <script src="data/progress-map.js?v=1"></script>
   <script src="data/pet-system.js?v=1"></script>
-  <script src="modules/listening.js?v=6"></script>
-  <script src="modules/reading.js?v=6"></script>
-  <script src="modules/writing.js?v=5"></script>
+  <script src="modules/listening.js?v=8"></script>
+  <script src="modules/reading.js?v=8"></script>
+  <script src="modules/writing.js?v=7"></script>
   <script src="modules/speaking.js?v=4"></script>
   <!-- 引入 Firebase -->
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
   <!-- 引入兼容引擎与声音模块 -->
-  <script src="firebase-sync.js?v=1"></script>
+  <script src="firebase-sync.js?v=2"></script>
   <script src="modules/sounds.js?v=1"></script>
-  <script src="app.js?v=30"></script>
+  <script src="app.js?v=47"></script>
 </body>
 </html>

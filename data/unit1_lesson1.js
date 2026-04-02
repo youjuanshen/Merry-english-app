@@ -332,8 +332,7 @@ var lesson1 = {
         ],
         "correct": 0,
         "chinese": "好的，我们走吧。"
-      }
-,
+      },
       {
         "type": "listen_select",
         "audio": "That is a blue bird.",
@@ -345,6 +344,63 @@ var lesson1 = {
         ],
         "correct": 0,
         "chinese": "那是一只蓝色的鸟。"
+      },
+      {
+        "type": "listen_sequence",
+        "audio": "bear, bird, panda",
+        "sequence": [
+          "bear",
+          "bird",
+          "panda"
+        ],
+        "words": [
+          "<img src=\"assets/images/panda.png\" width=\"60\">",
+          "<img src=\"assets/images/bear.png\" width=\"60\">",
+          "<img src=\"assets/images/bird.png\" width=\"60\">"
+        ],
+        "chinese": "听音频，按顺序点图片！"
+      },
+      {
+        "type": "listen_select",
+        "audio": "This is a bear. It's big.",
+        "context": "🌳 你在动物园，导游指着一个大家伙介绍。",
+        "question": "导游介绍的动物大不大？",
+        "options": [
+          "大的",
+          "小的",
+          "可爱的",
+          "漂亮的"
+        ],
+        "correct": 0,
+        "chinese": "这是一只熊。它很大。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "They are beautiful.",
+        "context": "🦜 朋友想看漂亮的动物。导游说了一句话。",
+        "question": "导游说这些动物怎么样？",
+        "options": [
+          "很大",
+          "很漂亮",
+          "很可爱",
+          "跑得很快"
+        ],
+        "correct": 0,
+        "chinese": "它们很漂亮。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's black and white.",
+        "context": "🐼 你想知道熊猫是什么颜色的。",
+        "question": "熊猫是什么颜色？",
+        "options": [
+          "黑白色",
+          "棕色",
+          "红色",
+          "蓝色"
+        ],
+        "correct": 0,
+        "chinese": "它是黑白色的。"
       }
     ]
   },
@@ -594,6 +650,58 @@ var lesson1 = {
       }
     ],
     "practice": [
+      {
+        "type": "tap_pair",
+        "chinese": "点英文词，配对图片！",
+        "pairs": [
+          {
+            "word": "bear",
+            "match": "<img src=\"assets/images/bear.png\" width=\"50\">",
+            "chinese": "熊"
+          },
+          {
+            "word": "horse",
+            "match": "<img src=\"assets/images/horse.png\" width=\"50\">",
+            "chinese": "马"
+          },
+          {
+            "word": "bird",
+            "match": "<img src=\"assets/images/bird.png\" width=\"50\">",
+            "chinese": "鸟"
+          },
+          {
+            "word": "panda",
+            "match": "<img src=\"assets/images/panda.png\" width=\"50\">",
+            "chinese": "熊猫"
+          }
+        ]
+      },
+      {
+        "type": "tap_pair",
+        "chinese": "点英文词，配对中文！",
+        "pairs": [
+          {
+            "word": "animal",
+            "match": "动物",
+            "example": "So many animals!"
+          },
+          {
+            "word": "bear",
+            "match": "熊",
+            "example": "This is a bear."
+          },
+          {
+            "word": "big",
+            "match": "大的",
+            "example": "It's big."
+          },
+          {
+            "word": "cute",
+            "match": "可爱的",
+            "example": "It's cute."
+          }
+        ]
+      },
       {
         "type": "word_match",
         "word": "horse",
@@ -1076,6 +1184,78 @@ var lesson1 = {
           }
         ],
         "correct": "correct"
+      },
+      {
+        "type": "scenario",
+        "sentence": "This is a bear. It's big.",
+        "context": "你在动物园看到一个介绍牌。你朋友想找小动物。",
+        "question": "这个动物适合你朋友看吗？",
+        "options": [
+          {
+            "text": "不适合，这是大熊",
+            "value": "correct"
+          },
+          {
+            "text": "适合，这是小动物",
+            "value": "w1"
+          },
+          {
+            "text": "不知道",
+            "value": "w2"
+          },
+          {
+            "text": "适合，很可爱",
+            "value": "w3"
+          }
+        ],
+        "correct": "correct",
+        "chinese": "这是一只熊。它很大。"
+      },
+      {
+        "type": "scenario",
+        "sentence": "That is a panda. It's cute.",
+        "context": "朋友想看可爱的动物。你看到一个介绍牌。",
+        "question": "这个动物可爱吗？",
+        "options": [
+          {
+            "text": "可爱",
+            "value": "correct"
+          },
+          {
+            "text": "不可爱",
+            "value": "w1"
+          },
+          {
+            "text": "很大",
+            "value": "w2"
+          },
+          {
+            "text": "跑得快",
+            "value": "w3"
+          }
+        ],
+        "correct": "correct",
+        "chinese": "那是一只熊猫。它很可爱。"
+      },
+      {
+        "type": "sentence_sequence",
+        "sentences": [
+          "This is a bear.",
+          "It's big.",
+          "I like it!"
+        ],
+        "chinese": "把故事排好顺序！",
+        "chineseHint": "这是一只熊。 / 它很大。 / 我喜欢它！"
+      },
+      {
+        "type": "sentence_sequence",
+        "sentences": [
+          "So many animals!",
+          "Let's go and have a look.",
+          "OK, let's go."
+        ],
+        "chinese": "把对话排好顺序！",
+        "chineseHint": "好多动物！ / 我们去看看吧。 / 好，我们走。"
       }
     ]
   },
@@ -1084,18 +1264,58 @@ var lesson1 = {
       {
         "type": "sentence_order",
         "chinese": "这是一只熊。",
-        "words": ["This", "is", "a", "bear"],
-        "scrambled": ["bear", "a", "This", "is"],
-        "chineseWords": ["这", "是", "一只", "熊"],
-        "chineseScrambled": ["熊", "这", "一只", "是"]
+        "words": [
+          "This",
+          "is",
+          "a",
+          "bear"
+        ],
+        "scrambled": [
+          "bear",
+          "a",
+          "This",
+          "is"
+        ],
+        "chineseWords": [
+          "这",
+          "是",
+          "一只",
+          "熊"
+        ],
+        "chineseScrambled": [
+          "熊",
+          "这",
+          "一只",
+          "是"
+        ]
       },
       {
         "type": "sentence_order",
         "chinese": "那是一匹马。",
-        "words": ["That", "is", "a", "horse"],
-        "scrambled": ["horse", "That", "a", "is"],
-        "chineseWords": ["那", "是", "一匹", "马"],
-        "chineseScrambled": ["马", "一匹", "那", "是"]
+        "words": [
+          "That",
+          "is",
+          "a",
+          "horse"
+        ],
+        "scrambled": [
+          "horse",
+          "That",
+          "a",
+          "is"
+        ],
+        "chineseWords": [
+          "那",
+          "是",
+          "一匹",
+          "马"
+        ],
+        "chineseScrambled": [
+          "马",
+          "一匹",
+          "那",
+          "是"
+        ]
       },
       {
         "type": "fill_blank",
@@ -1124,40 +1344,6 @@ var lesson1 = {
         "chinese": "那是一只熊猫。它很可爱。"
       },
       {
-        "type": "word_puzzle",
-        "chinese": "熊",
-        "image": "<img src=\"assets/images/bear.png\" width=\"80\">",
-        "letters": [
-          "b",
-          "e",
-          "a",
-          "r"
-        ],
-        "scrambled": [
-          "a",
-          "r",
-          "b",
-          "e"
-        ]
-      },
-      {
-        "type": "word_puzzle",
-        "chinese": "鸟",
-        "image": "<img src=\"assets/images/bird.png\" width=\"80\">",
-        "letters": [
-          "b",
-          "i",
-          "r",
-          "d"
-        ],
-        "scrambled": [
-          "r",
-          "d",
-          "b",
-          "i"
-        ]
-      },
-      {
         "type": "letter_select",
         "prompt": "熊猫的首字母是？",
         "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
@@ -1168,20 +1354,8 @@ var lesson1 = {
           "q"
         ],
         "correct": 2,
-        "chinese": "熊猫"
-      },
-      {
-        "type": "letter_select",
-        "prompt": "马的首字母是？",
-        "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
-        "options": [
-          "n",
-          "h",
-          "m",
-          "b"
-        ],
-        "correct": 1,
-        "chinese": "马"
+        "chinese": "熊猫",
+        "word": "熊猫"
       },
       {
         "type": "pinyin_fill",
@@ -1208,112 +1382,376 @@ var lesson1 = {
         ],
         "correct": 0,
         "chinese": "它跑得很快。"
+      },
+      {
+        "type": "word_puzzle",
+        "hint": "a_imal",
+        "word": "animal",
+        "options": [
+          "a",
+          "d",
+          "n",
+          "g"
+        ],
+        "correct": 2,
+        "chinese": "animal"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "This is a _____.",
+        "options": [
+          "horse",
+          "animal",
+          "bird",
+          "bear"
+        ],
+        "correct": 3,
+        "chinese": "This is a bear."
       }
     ],
     "practice": [
       {
         "type": "sentence_order",
         "chinese": "好多动物！",
-        "words": ["So", "many", "animals"],
-        "scrambled": ["animals", "So", "many"],
-        "chineseWords": ["好多", "动物"],
-        "chineseScrambled": ["动物", "好多"]
+        "words": [
+          "So",
+          "many",
+          "animals"
+        ],
+        "scrambled": [
+          "animals",
+          "So",
+          "many"
+        ],
+        "chineseWords": [
+          "好多",
+          "动物"
+        ],
+        "chineseScrambled": [
+          "动物",
+          "好多"
+        ]
       },
       {
         "type": "sentence_order",
         "chinese": "我们去看看吧。",
-        "words": ["Let's", "go", "and", "have", "a", "look"],
-        "scrambled": ["go", "a", "Let's", "have", "look", "and"],
-        "chineseWords": ["我们", "去", "看看", "吧"],
-        "chineseScrambled": ["看看", "吧", "我们", "去"]
+        "words": [
+          "Let's",
+          "go",
+          "and",
+          "have",
+          "a",
+          "look"
+        ],
+        "scrambled": [
+          "go",
+          "a",
+          "Let's",
+          "have",
+          "look",
+          "and"
+        ],
+        "chineseWords": [
+          "我们",
+          "去",
+          "看看",
+          "吧"
+        ],
+        "chineseScrambled": [
+          "看看",
+          "吧",
+          "我们",
+          "去"
+        ]
       },
       {
         "type": "sentence_order",
+        "sentence": "OK, let's go.",
         "chinese": "好的，我们走吧。",
-        "words": ["OK", "let's", "go"],
-        "scrambled": ["let's", "OK", "go"],
-        "chineseWords": ["好的", "我们", "走吧"],
-        "chineseScrambled": ["走吧", "好的", "我们"]
+        "words": [
+          "OK",
+          "let's",
+          "go"
+        ],
+        "scrambled": [
+          "let's",
+          "OK",
+          "go"
+        ],
+        "chineseWords": [
+          "好的",
+          "我们",
+          "走吧"
+        ],
+        "chineseScrambled": [
+          "走吧",
+          "好的",
+          "我们"
+        ]
       },
       {
         "type": "sentence_order",
         "chinese": "这是一只熊。",
-        "words": ["This", "is", "a", "bear"],
-        "scrambled": ["a", "bear", "This", "is"],
-        "chineseWords": ["这", "是", "一只", "熊"],
-        "chineseScrambled": ["熊", "一只", "这", "是"]
+        "words": [
+          "This",
+          "is",
+          "a",
+          "bear"
+        ],
+        "scrambled": [
+          "a",
+          "bear",
+          "This",
+          "is"
+        ],
+        "chineseWords": [
+          "这",
+          "是",
+          "一只",
+          "熊"
+        ],
+        "chineseScrambled": [
+          "熊",
+          "一只",
+          "这",
+          "是"
+        ]
       },
       {
         "type": "sentence_order",
         "chinese": "它很大。",
-        "words": ["It's", "big"],
-        "scrambled": ["big", "It's"],
-        "chineseWords": ["它", "很大"],
-        "chineseScrambled": ["很大", "它"]
+        "words": [
+          "It's",
+          "big"
+        ],
+        "scrambled": [
+          "big",
+          "It's"
+        ],
+        "chineseWords": [
+          "它",
+          "很大"
+        ],
+        "chineseScrambled": [
+          "很大",
+          "它"
+        ]
       },
       {
         "type": "sentence_order",
         "chinese": "那是一匹马。",
-        "words": ["That", "is", "a", "horse"],
-        "scrambled": ["a", "That", "horse", "is"],
-        "chineseWords": ["那", "是", "一匹", "马"],
-        "chineseScrambled": ["马", "那", "一匹", "是"]
+        "words": [
+          "That",
+          "is",
+          "a",
+          "horse"
+        ],
+        "scrambled": [
+          "a",
+          "That",
+          "horse",
+          "is"
+        ],
+        "chineseWords": [
+          "那",
+          "是",
+          "一匹",
+          "马"
+        ],
+        "chineseScrambled": [
+          "马",
+          "那",
+          "一匹",
+          "是"
+        ]
       },
       {
         "type": "sentence_order",
         "chinese": "它跑得很快。",
-        "words": ["It", "can", "run", "fast"],
-        "scrambled": ["run", "It", "fast", "can"],
-        "chineseWords": ["它", "跑得", "很快"],
-        "chineseScrambled": ["很快", "它", "跑得"]
+        "words": [
+          "It",
+          "can",
+          "run",
+          "fast"
+        ],
+        "scrambled": [
+          "run",
+          "It",
+          "fast",
+          "can"
+        ],
+        "chineseWords": [
+          "它",
+          "跑得",
+          "很快"
+        ],
+        "chineseScrambled": [
+          "很快",
+          "它",
+          "跑得"
+        ]
       },
       {
         "type": "sentence_order",
         "chinese": "这是一只红色的鸟。",
-        "words": ["This", "is", "a", "red", "bird"],
-        "scrambled": ["red", "a", "bird", "This", "is"],
-        "chineseWords": ["这", "是", "一只", "红色的", "鸟"],
-        "chineseScrambled": ["鸟", "这", "红色的", "一只", "是"]
+        "words": [
+          "This",
+          "is",
+          "a",
+          "red",
+          "bird"
+        ],
+        "scrambled": [
+          "red",
+          "a",
+          "bird",
+          "This",
+          "is"
+        ],
+        "chineseWords": [
+          "这",
+          "是",
+          "一只",
+          "红色的",
+          "鸟"
+        ],
+        "chineseScrambled": [
+          "鸟",
+          "这",
+          "红色的",
+          "一只",
+          "是"
+        ]
       },
       {
         "type": "sentence_order",
         "chinese": "那是一只蓝色的鸟。",
-        "words": ["That", "is", "a", "blue", "bird"],
-        "scrambled": ["blue", "That", "a", "bird", "is"],
-        "chineseWords": ["那", "是", "一只", "蓝色的", "鸟"],
-        "chineseScrambled": ["蓝色的", "那", "鸟", "是", "一只"]
+        "words": [
+          "That",
+          "is",
+          "a",
+          "blue",
+          "bird"
+        ],
+        "scrambled": [
+          "blue",
+          "That",
+          "a",
+          "bird",
+          "is"
+        ],
+        "chineseWords": [
+          "那",
+          "是",
+          "一只",
+          "蓝色的",
+          "鸟"
+        ],
+        "chineseScrambled": [
+          "蓝色的",
+          "那",
+          "鸟",
+          "是",
+          "一只"
+        ]
       },
       {
         "type": "sentence_order",
         "chinese": "它们很漂亮。",
-        "words": ["They", "are", "beautiful"],
-        "scrambled": ["beautiful", "They", "are"],
-        "chineseWords": ["它们", "很", "漂亮"],
-        "chineseScrambled": ["漂亮", "它们", "很"]
+        "words": [
+          "They",
+          "are",
+          "beautiful"
+        ],
+        "scrambled": [
+          "beautiful",
+          "They",
+          "are"
+        ],
+        "chineseWords": [
+          "它们",
+          "很",
+          "漂亮"
+        ],
+        "chineseScrambled": [
+          "漂亮",
+          "它们",
+          "很"
+        ]
       },
       {
         "type": "sentence_order",
         "chinese": "那是一只熊猫。",
-        "words": ["That", "is", "a", "panda"],
-        "scrambled": ["panda", "That", "a", "is"],
-        "chineseWords": ["那", "是", "一只", "熊猫"],
-        "chineseScrambled": ["熊猫", "一只", "那", "是"]
+        "words": [
+          "That",
+          "is",
+          "a",
+          "panda"
+        ],
+        "scrambled": [
+          "panda",
+          "That",
+          "a",
+          "is"
+        ],
+        "chineseWords": [
+          "那",
+          "是",
+          "一只",
+          "熊猫"
+        ],
+        "chineseScrambled": [
+          "熊猫",
+          "一只",
+          "那",
+          "是"
+        ]
       },
       {
         "type": "sentence_order",
         "chinese": "它是黑白色的。",
-        "words": ["It's", "black", "and", "white"],
-        "scrambled": ["white", "It's", "and", "black"],
-        "chineseWords": ["它", "是", "黑白色的"],
-        "chineseScrambled": ["黑白色的", "它", "是"]
+        "words": [
+          "It's",
+          "black",
+          "and",
+          "white"
+        ],
+        "scrambled": [
+          "white",
+          "It's",
+          "and",
+          "black"
+        ],
+        "chineseWords": [
+          "它",
+          "是",
+          "黑白色的"
+        ],
+        "chineseScrambled": [
+          "黑白色的",
+          "它",
+          "是"
+        ]
       },
       {
         "type": "sentence_order",
         "chinese": "它很可爱。",
-        "words": ["It's", "cute"],
-        "scrambled": ["cute", "It's"],
-        "chineseWords": ["它", "很可爱"],
-        "chineseScrambled": ["很可爱", "它"]
+        "words": [
+          "It's",
+          "cute"
+        ],
+        "scrambled": [
+          "cute",
+          "It's"
+        ],
+        "chineseWords": [
+          "它",
+          "很可爱"
+        ],
+        "chineseScrambled": [
+          "很可爱",
+          "它"
+        ]
       },
       {
         "type": "fill_blank",
@@ -1368,78 +1806,6 @@ var lesson1 = {
         "chinese": "那是一只熊猫。它是黑白色的。"
       },
       {
-        "type": "word_puzzle",
-        "chinese": "熊",
-        "image": "<img src=\"assets/images/bear.png\" width=\"80\">",
-        "letters": [
-          "b",
-          "e",
-          "a",
-          "r"
-        ],
-        "scrambled": [
-          "r",
-          "b",
-          "e",
-          "a"
-        ]
-      },
-      {
-        "type": "word_puzzle",
-        "chinese": "马",
-        "image": "<img src=\"assets/images/horse.png\" width=\"80\">",
-        "letters": [
-          "h",
-          "o",
-          "r",
-          "s",
-          "e"
-        ],
-        "scrambled": [
-          "o",
-          "e",
-          "h",
-          "r",
-          "s"
-        ]
-      },
-      {
-        "type": "word_puzzle",
-        "chinese": "鸟",
-        "image": "<img src=\"assets/images/bird.png\" width=\"80\">",
-        "letters": [
-          "b",
-          "i",
-          "r",
-          "d"
-        ],
-        "scrambled": [
-          "i",
-          "d",
-          "b",
-          "r"
-        ]
-      },
-      {
-        "type": "word_puzzle",
-        "chinese": "熊猫",
-        "image": "<img src=\"assets/images/panda.png\" width=\"80\">",
-        "letters": [
-          "p",
-          "a",
-          "n",
-          "d",
-          "a"
-        ],
-        "scrambled": [
-          "d",
-          "a",
-          "p",
-          "n",
-          "a"
-        ]
-      },
-      {
         "type": "letter_select",
         "prompt": "熊的首字母是？",
         "image": "<img src=\"assets/images/bear.png\" width=\"80\">",
@@ -1450,20 +1816,8 @@ var lesson1 = {
           "g"
         ],
         "correct": 2,
-        "chinese": "熊"
-      },
-      {
-        "type": "letter_select",
-        "prompt": "鸟的首字母是？",
-        "image": "<img src=\"assets/images/bird.png\" width=\"80\">",
-        "options": [
-          "d",
-          "b",
-          "p",
-          "g"
-        ],
-        "correct": 1,
-        "chinese": "鸟"
+        "chinese": "熊",
+        "word": "bear"
       },
       {
         "type": "pinyin_fill",
@@ -1490,72 +1844,6 @@ var lesson1 = {
         ],
         "correct": 0,
         "chinese": "熊猫"
-      }
-,
-      {
-        "type": "sentence_order",
-        "chinese": "这是一只熊。",
-        "words": ["This", "is", "a", "bear"],
-        "scrambled": ["a", "is", "bear", "This"],
-        "chineseWords": ["这", "是", "一只", "熊"],
-        "chineseScrambled": ["一只", "熊", "这", "是"]
-      },
-      {
-        "type": "sentence_order",
-        "chinese": "那是一匹马。",
-        "words": ["That", "is", "a", "horse"],
-        "scrambled": ["That", "is", "horse", "a"],
-        "chineseWords": ["那", "是", "一匹", "马"],
-        "chineseScrambled": ["是", "那", "一匹", "马"]
-      },
-      {
-        "type": "sentence_order",
-        "chinese": "这是一只红色的鸟。",
-        "words": ["This", "is", "a", "red", "bird"],
-        "scrambled": ["This", "bird", "a", "is", "red"],
-        "chineseWords": ["这", "是", "一只", "红色的", "鸟"],
-        "chineseScrambled": ["是", "这", "鸟", "红色的", "一只"]
-      },
-      {
-        "type": "sentence_order",
-        "chinese": "那是一只蓝色的鸟。",
-        "words": ["That", "is", "a", "blue", "bird"],
-        "scrambled": ["bird", "blue", "a", "That", "is"],
-        "chineseWords": ["那", "是", "一只", "蓝色的", "鸟"],
-        "chineseScrambled": ["那", "鸟", "是", "蓝色的", "一只"]
-      },
-      {
-        "type": "sentence_order",
-        "chinese": "它们很漂亮。",
-        "words": ["They", "are", "beautiful"],
-        "scrambled": ["beautiful", "They", "are"],
-        "chineseWords": ["它们", "很", "漂亮"],
-        "chineseScrambled": ["它们", "漂亮", "很"]
-      },
-      {
-        "type": "sentence_order",
-        "chinese": "那是一只熊猫。",
-        "words": ["That", "is", "a", "panda"],
-        "scrambled": ["is", "That", "panda", "a"],
-        "chineseWords": ["那", "是", "一只", "熊猫"],
-        "chineseScrambled": ["熊猫", "那", "是", "一只"]
-      },
-      {
-        "type": "sentence_order",
-        "chinese": "好多动物！",
-        "words": ["So", "many", "animals"],
-        "scrambled": ["animals", "many", "So"],
-        "chineseWords": ["好多", "动物"],
-        "chineseScrambled": ["动物", "好多"]
-      }
-,
-      {
-        "type": "sentence_order",
-        "chinese": "好的，我们走吧。",
-        "words": ["OK", "let's", "go"],
-        "scrambled": ["go", "let's", "OK"],
-        "chineseWords": ["好的", "我们", "走吧"],
-        "chineseScrambled": ["我们", "走吧", "好的"]
       }
     ]
   },
@@ -1770,13 +2058,18 @@ var lesson1 = {
         "expected": "duck",
         "word": "duck",
         "chinese": "鸭子"
-      }
-,
+      },
       {
         "type": "repeat_sentence",
         "word": "OK, let's go.",
         "chinese": "好的，我们走吧。",
         "expected": "OK, let's go."
+      },
+      {
+        "type": "picture_speak",
+        "image": "<img src=\"assets/images/bear.png\" width=\"80\">",
+        "word": "bear",
+        "chinese": "bear"
       }
     ]
   }

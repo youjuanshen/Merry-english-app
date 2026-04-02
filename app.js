@@ -1,3 +1,6 @@
+// Safe console wrapper: prevent console.log from crashing in any environment
+(function(){var o=console.log,w=console.warn,e=console.error;console.log=function(){try{o.apply(console,arguments)}catch(x){}};console.warn=function(){try{w.apply(console,arguments)}catch(x){}};console.error=function(){try{e.apply(console,arguments)}catch(x){}};})();
+
 const students = [
   '1. 张宇豪', '2. 张佳寒', '3. 张睿渊', '4. 张羽韬', '5. 张美茹',
   '6. 张嘉钦', '7. 卢梦婷', '8. 张悦萱', '9. 张语涵', '10. 张英豪',
@@ -12,65 +15,47 @@ let players = [];
 let currentPlayerIndex = 0;
 let currentQuestionIndex = 0;
 let isAnimating = false;
+var savedPretestSnapshot = null; // 保存前测结束时的数据快照，防止实战数据覆盖
 
-// Welcome Screen Logic - 3,2,1倒计时
-document.addEventListener('DOMContentLoaded', () => {
-    const welcomeScreen = document.getElementById('welcome-screen');
-    const loginScreen = document.getElementById('login-screen');
-    const countdownEl = document.getElementById('countdown');
+// Welcome Screen Logic - 点击开始 → 音乐 → 3,2,1倒计时
+document.addEventListener('DOMContentLoaded', function() {
+    var welcomeScreen = document.getElementById('welcome-screen');
+    var loginScreen = document.getElementById('login-screen');
+    var countdownEl = document.getElementById('countdown');
+    var startBtn = document.getElementById('welcome-start-btn');
 
-    if (welcomeScreen && loginScreen && countdownEl) {
-        var countWords = ['Three', 'Two', 'One', 'Go!'];
-        var count = 3;
-        // 播报英文倒计时
-        function speakCountdown(word) {
-            try {
-                var u = new SpeechSynthesisUtterance(word);
-                u.lang = 'en-US';
-                u.rate = word === 'Go!' ? 1.2 : 0.9;
-                u.pitch = word === 'Go!' ? 1.3 : 1.0;
-                u.volume = 1;
-                speechSynthesis.speak(u);
-            } catch(e) {}
-        }
-        // 初始显示3时播报Three
-        speakCountdown('Three');
-        var countdownInterval = setInterval(function() {
-            count--;
-            if (count > 0) {
-                countdownEl.textContent = count;
-                speakCountdown(countWords[3 - count]);
-            } else {
-                clearInterval(countdownInterval);
-                countdownEl.textContent = 'GO!';
-                countdownEl.style.fontSize = '80px';
-                countdownEl.style.color = '#58CC02';
-                speakCountdown('Go!');
-                setTimeout(function() {
-                    welcomeScreen.style.opacity = '0';
-                    setTimeout(function() {
-                        welcomeScreen.classList.remove('active');
-                        loginScreen.classList.add('active');
-                    }, 500);
-                }, 600);
-            }
-        }, 1000);
+    if (welcomeScreen && loginScreen && countdownEl && startBtn) {
+        startBtn.onclick = function() {
+            // 解锁 iOS 音频
+            if (window.SoundSystem) SoundSystem.resume();
+
+            // 直接跳转到登录页（省掉3-2-1倒计时，节省课堂时间）
+            welcomeScreen.style.opacity = '0';
+            setTimeout(function() {
+                welcomeScreen.classList.remove('active');
+                loginScreen.classList.add('active');
+            }, 400);
+        };
     }
 
-    // Load current lesson from Cloud/LocalStorage via Sync
-    Sync.getCurrentLessonOnce().then(lesson => {
+    // Load current lesson from LocalStorage (sync) + Cloud (async fallback)
+    function applyLessonDisplay(lesson) {
         if (lesson && lesson.displayName) {
-            const courseInfoDisplay = document.getElementById('course-info-display');
-            const displayLessonTitle = document.getElementById('display-lesson-title');
-            const displayModuleTitle = document.getElementById('display-module-title');
-            
+            var courseInfoDisplay = document.getElementById('course-info-display');
+            var displayLessonTitle = document.getElementById('display-lesson-title');
+            var displayModuleTitle = document.getElementById('display-module-title');
             if (courseInfoDisplay && displayLessonTitle && displayModuleTitle) {
                 displayLessonTitle.textContent = lesson.displayName.split('-')[0].trim();
-                displayModuleTitle.textContent = lesson.displayName.split('-')[1] ? lesson.displayName.split('-')[1].trim() : '听力'; 
+                displayModuleTitle.textContent = lesson.displayName.split('-')[1] ? lesson.displayName.split('-')[1].trim() : '听力';
                 courseInfoDisplay.style.display = 'block';
             }
         }
-    });
+    }
+    // 先用本地缓存立即显示
+    var localLesson = Sync.getCurrentLessonOnceSync ? Sync.getCurrentLessonOnceSync() : null;
+    applyLessonDisplay(localLesson);
+    // 再异步从云端更新（不阻塞页面）
+    Sync.getCurrentLessonOnce().then(applyLessonDisplay);
 });
 
 // 计时器相关
@@ -130,12 +115,13 @@ function handleTeacherCommand(cmd) {
             return;
         }
 
+        var oldPhase = currentPhase;
         // 始终保存教师设置的模块和阶段（无论学生端处于什么状态）
         currentModule = cmd.module;
         currentPhase = cmd.phase;
         currentTimeLimit = Math.max(0, Math.min(300, cmd.timeLimit || 0));
 
-        console.log(`教师命令: 模块=${currentModule}, 阶段=${currentPhase}`);
+        console.log('教师命令: 模块=' + currentModule + ', 阶段=' + currentPhase);
 
         // 更新UI显示当前模块
         const displayModuleTitle = document.getElementById('display-module-title');
@@ -146,6 +132,16 @@ function handleTeacherCommand(cmd) {
 
         const modScreen = document.getElementById('module-screen');
         const gameScreen = document.getElementById('game-screen');
+
+        // 教师从前测切换到实战：强制跳转（无论学生在什么界面）
+        if (oldPhase === 'pretest' && currentPhase === 'practice' && gameScreen.classList.contains('active')) {
+            // 保存当前前测进度（即使没做完）
+            syncStudentProgress(true);
+            calculateStudentLevel();
+            // 显示过渡动画后自动开始实战
+            forceStartPractice();
+            return;
+        }
 
         // 如果已经在模块选择或游戏界面，直接开始
         if (modScreen.classList.contains('active') || gameScreen.classList.contains('active')) {
@@ -197,14 +193,93 @@ function syncStudentProgress(isComplete = false) {
     
     if (id1) Sync.setDashboardData(`studentProgress_${id1}`, progressData);
     if (id2) {
-        const progressData2 = { 
-            ...progressData, 
-            studentId: id2, 
-            studentName: name2, 
-            partnerId: id1, 
-            partnerName: name1 
+        const progressData2 = {
+            ...progressData,
+            studentId: id2,
+            studentName: name2,
+            partnerId: id1,
+            partnerName: name1
         };
         Sync.setDashboardData(`studentProgress_${id2}`, progressData2);
+    }
+
+    // ===== 飞书数据同步：前测或实战完成时发送到腾讯云函数 → 飞书多维表格 =====
+    if (isComplete && name1) {
+        var lessonTitle = (currentLessonData && currentLessonData.title) ? currentLessonData.title : '';
+        var lessonId = (currentLessonData && currentLessonData.id) ? currentLessonData.id : '';
+        var phaseStr = currentPhase === 'practice' ? '实战' : '前测';
+        var scfUrl = 'https://1316992450-2fbeeh6iet.ap-guangzhou.tencentscf.com/';
+
+        function sendOneRecord(studentName, stats) {
+            var correct = stats.correct || 0;
+            var total = stats.total || 0;
+            var acc = total > 0 ? Math.round((correct / total) * 100) : 0;
+            var totalMs = stats.totalTime || 0;
+            var totalSec = Math.round(totalMs / 1000);
+            var minU = Math.floor(totalSec / 60);
+            var secU = totalSec % 60;
+            var dur = minU > 0 ? minU + '分' + secU + '秒' : secU + '秒';
+            var words = (stats.wrongWords || []).join(', ');
+
+            var payload = {
+                studentName: studentName,
+                timestamp: Date.now(),
+                examType: currentModule,
+                score: correct,
+                maxScore: total,
+                accuracy: acc,
+                duration: dur,
+                phase: phaseStr,
+                wrongWords: words,
+                lessonTitle: lessonId + ' ' + lessonTitle,
+                listeningScore: currentModule === 'listening' ? correct : 0,
+                readingScore: currentModule === 'reading' ? correct : 0,
+                writingScore: currentModule === 'writing' ? correct : 0,
+                speakingScore: currentModule === 'speaking' ? correct : 0
+            };
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', scfUrl, true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.timeout = 20000;
+            xhr.onload = function() { console.log('[飞书] ' + studentName + ' ' + phaseStr + ' 成绩已提交'); };
+            xhr.onerror = function() { console.warn('[飞书] ' + studentName + ' 提交失败'); };
+            xhr.send(JSON.stringify(payload));
+        }
+
+        console.log('[飞书调试] currentPhase=' + currentPhase + ', name1=' + name1 + ', name2=' + name2);
+        console.log('[飞书调试] player2 stats:', JSON.stringify(pretestStats.player2));
+
+        if (currentPhase === 'practice') {
+            // 实战：一组一行（两人合作）
+            // 用实战期间的数据（当前pretestStats减去保存的前测数据）
+            var practiceStats = {
+                correct: pretestStats.player1.correct - (savedPretestSnapshot && savedPretestSnapshot.player1 ? savedPretestSnapshot.player1.correct : 0),
+                total: pretestStats.player1.total - (savedPretestSnapshot && savedPretestSnapshot.player1 ? savedPretestSnapshot.player1.total : 0),
+                totalTime: pretestStats.player1.totalTime - (savedPretestSnapshot && savedPretestSnapshot.player1 ? savedPretestSnapshot.player1.totalTime : 0),
+                wrongWords: pretestStats.player1.wrongWords || []
+            };
+            // 防止负数
+            if (practiceStats.correct < 0) practiceStats.correct = pretestStats.player1.correct;
+            if (practiceStats.total < 0) practiceStats.total = pretestStats.player1.total;
+
+            var groupName = name1 + (name2 ? ' & ' + name2 : '');
+            console.log('[飞书] 实战模式，发1行: ' + groupName);
+            sendOneRecord(groupName, practiceStats);
+        } else {
+            // 前测：每人一行（各答各的，数据不同）
+            console.log('[飞书] 前测模式，发2行: ' + name1 + ' 和 ' + name2);
+            sendOneRecord(name1, pretestStats.player1);
+            if (name2) {
+                // 延迟500ms发第二条，避免云函数并发冲突
+                setTimeout(function() {
+                    console.log('[飞书] 发送第2行(延迟): ' + name2);
+                    sendOneRecord(name2, pretestStats.player2);
+                }, 500);
+            } else {
+                console.warn('[飞书] name2 为空，只发了1行！');
+            }
+        }
     }
 }
 
@@ -646,25 +721,96 @@ function shuffleArray(arr) {
     return shuffled;
 }
 
+// 实战每节课的最大题数（15分钟 ÷ 约40秒/题 ≈ 22题，取20题留余量）
+var PRACTICE_MAX_QUESTIONS = 20;
+
 function getQuestions(module, phase) {
     var allQuestions = currentLessonData[module][phase] || [];
 
-    // 前测：保持难度顺序不打乱，机会均等靠严格交替
     if (phase === 'pretest') {
+        // 前测：每人需做10题（共20题），将原10题复制一份
+        var doubled = [];
+        for (var i = 0; i < allQuestions.length; i++) {
+            doubled.push(allQuestions[i]);
+        }
+        for (var j = 0; j < allQuestions.length; j++) {
+            doubled.push(allQuestions[j]);
+        }
+        return doubled;
+    }
+
+    // 实战：如果题库 ≤ PRACTICE_MAX_QUESTIONS，全出；否则按题型比例抽取
+    if (allQuestions.length <= PRACTICE_MAX_QUESTIONS) {
         return allQuestions;
     }
 
-    // 实战：按原始顺序出所有题（先简单后难，不打乱不筛选）
-    return allQuestions;
+    return selectPracticeQuestions(allQuestions, PRACTICE_MAX_QUESTIONS);
+}
+
+// 按题型比例从题库中抽取指定数量的题目
+// 保证每种题型都有代表，且按难度（easy→medium→hard）排列
+function selectPracticeQuestions(allQuestions, maxCount) {
+    // 按题型分组
+    var byType = {};
+    for (var i = 0; i < allQuestions.length; i++) {
+        var t = allQuestions[i].type || 'unknown';
+        if (!byType[t]) byType[t] = [];
+        byType[t].push(allQuestions[i]);
+    }
+
+    var types = Object.keys(byType);
+    var selected = [];
+
+    // 按题型在题库中的占比分配名额
+    for (var j = 0; j < types.length; j++) {
+        var type = types[j];
+        var pool = byType[type];
+        var quota = Math.round(maxCount * pool.length / allQuestions.length);
+        quota = Math.max(quota, 2); // 每种题型至少2道
+
+        // 从该题型的池子里按难度均匀抽取：优先保证 easy/medium/hard 各有
+        var easyPool = pool.filter(function(q) { return getQuestionDifficulty(q) === 'easy'; });
+        var medPool = pool.filter(function(q) { return getQuestionDifficulty(q) === 'medium'; });
+        var hardPool = pool.filter(function(q) { return getQuestionDifficulty(q) === 'hard'; });
+
+        // 每个难度至少取1道（如果有的话），剩余名额按比例补
+        var picked = [];
+        if (easyPool.length > 0) picked.push(easyPool[0]);
+        if (medPool.length > 0) picked.push(medPool[0]);
+        if (hardPool.length > 0) picked.push(hardPool[0]);
+
+        // 剩余名额从未选的题中按顺序补
+        var remaining = pool.filter(function(q) { return picked.indexOf(q) === -1; });
+        var need = quota - picked.length;
+        for (var k = 0; k < need && k < remaining.length; k++) {
+            picked.push(remaining[k]);
+        }
+
+        selected = selected.concat(picked);
+    }
+
+    // 如果总数超出 maxCount，截断；如果不足，不补（已经是全部了）
+    if (selected.length > maxCount) {
+        selected = selected.slice(0, maxCount);
+    }
+
+    // 按难度排序：easy → medium → hard（配合自适应算法从medium开始）
+    var diffVal = { easy: 0, medium: 1, hard: 2 };
+    selected.sort(function(a, b) {
+        return (diffVal[getQuestionDifficulty(a)] || 1) - (diffVal[getQuestionDifficulty(b)] || 1);
+    });
+
+    console.log('[i+1] 从 ' + allQuestions.length + ' 题中抽取 ' + selected.length + ' 题（' + types.join('/') + '）');
+    return selected;
 }
 
 // 根据学生水平筛选题目
 function filterQuestionsByLevel(questions, level) {
-    // 如果题目没有难度标签，根据水平分配比例
+    // 基于 Krashen i+1 + Bloom Mastery Learning 的难度分配比例
     const difficultyMap = {
-        'A': { easy: 0.2, medium: 0.4, hard: 0.4 },  // 基础好：多给难题
-        'B': { easy: 0.3, medium: 0.5, hard: 0.2 },  // 基础中等：均衡
-        'C': { easy: 0.5, medium: 0.4, hard: 0.1 }   // 基础薄弱：多给简单题
+        'A': { easy: 0.2, medium: 0.3, hard: 0.5 },  // 基础好：hard为主（i+1 挑战）
+        'B': { easy: 0.3, medium: 0.4, hard: 0.3 },  // 基础中等：均衡发展
+        'C': { easy: 0.5, medium: 0.3, hard: 0.2 }   // 基础薄弱：easy为主（夯实基础）
     };
 
     const ratio = difficultyMap[level] || difficultyMap['B'];
@@ -722,46 +868,31 @@ nextBtn.onclick = function() {
     players = selectedStudents.map(n => ({ name: n, stars: 0 }));
 
     document.getElementById('login-screen').classList.remove('active');
-    
+
     // Dynamic Course Loading System
-    // 检查教师端是否设置了模块和阶段
-    Sync.getCurrentLessonOnce().then(lesson => {
-        if (lesson) {
-            currentModule = lesson.module || 'listening';
-            const dataVarName = (lesson.unit === 1 && lesson.lesson === 1) ? 'lesson1' : `unit${lesson.unit}_lesson${lesson.lesson}`;
-            if (window[dataVarName]) {
-                currentLessonData = window[dataVarName];
-            } else {
-                currentLessonData = lesson1;
-            }
+    // 优先用本地缓存（同步），避免云端请求导致白屏
+    var lesson = Sync.getCurrentLessonOnceSync ? Sync.getCurrentLessonOnceSync() : null;
+    if (lesson) {
+        currentModule = lesson.module || 'listening';
+        var dataVarName = (lesson.unit === 1 && lesson.lesson === 1) ? 'lesson1' : 'unit' + lesson.unit + '_lesson' + lesson.lesson;
+        if (window[dataVarName]) {
+            currentLessonData = window[dataVarName];
         } else {
-            currentModule = 'listening'; // fallback
             currentLessonData = lesson1;
         }
+    } else {
+        currentModule = 'listening'; // fallback
+        currentLessonData = lesson1;
+    }
 
-        Sync.listenTeacherCommand(cmd => {
-            if (cmd) {
-                currentModule = cmd.module || 'listening';
-                currentPhase = cmd.phase || 'pretest';
-            } else {
-                currentModule = 'listening';
-                currentPhase = 'pretest';
-            }
-            startGame();
-        });
-        startGame(); // 初始启动
-    });
-    
-    // 检查教师端是否设置了模块和阶段
-    const cmd = Sync.getTeacherCommandOnce ? Sync.getTeacherCommandOnce() : null;
+    // 检查教师端是否设置了模块和阶段（只读取一次，不监听）
+    var cmd = Sync.getTeacherCommandOnce ? Sync.getTeacherCommandOnce() : null;
     if (cmd) {
         currentModule = cmd.module || 'listening';
         currentPhase = cmd.phase || 'pretest';
-    } else {
-        currentModule = 'listening';
-        currentPhase = 'pretest';
     }
-    startGame();
+
+    startGame(); // 立即启动，不等云端
 };
 
 // Step 2: Click module card to start (仅当没有教师指令时使用)
@@ -773,55 +904,117 @@ document.querySelectorAll('.module-card').forEach(card => {
         startGame();
     };
 });
+// 预加载题目中的所有图片到浏览器缓存
+function preloadQuestionImages(questions) {
+    if (!questions || !questions.length) return;
+    var urls = {};
+    var imgRegex = /src="([^"]+)"/g;
+    
+    questions.forEach(function(q) {
+        // 从选项中提取图片
+        if (q.options) {
+            q.options.forEach(function(opt) {
+                var match;
+                while ((match = imgRegex.exec(opt)) !== null) {
+                    urls[match[1]] = true;
+                }
+            });
+        }
+        // 从 image 字段提取
+        if (q.image) {
+            var match;
+            while ((match = imgRegex.exec(q.image)) !== null) {
+                urls[match[1]] = true;
+            }
+        }
+    });
+
+    var urlList = Object.keys(urls);
+    console.log('预加载 ' + urlList.length + ' 张图片');
+    urlList.forEach(function(url) {
+        var img = new Image();
+        img.src = url;
+    });
+}
 
 function startGame() {
     document.getElementById('player1-ui').querySelector('.name').textContent = players[0].name;
     document.getElementById('player2-ui').querySelector('.name').textContent = players[1].name;
 
-    // 重新读取教师设置的课程和模块（确保使用最新设置）
-    Sync.getCurrentLessonOnce().then(lesson => {
-        if (lesson) {
-            const dataVarName = (lesson.unit === 1 && lesson.lesson === 1) ? 'lesson1' : `unit${lesson.unit}_lesson${lesson.lesson}`;
-            if (window[dataVarName]) {
-                currentLessonData = window[dataVarName];
-            }
+    // 用同步方法读取本地缓存，不再发云端请求（调用方已处理过）
+    var lesson = Sync.getCurrentLessonOnceSync ? Sync.getCurrentLessonOnceSync() : null;
+    if (lesson) {
+        var dataVarName = (lesson.unit === 1 && lesson.lesson === 1) ? 'lesson1' : 'unit' + lesson.unit + '_lesson' + lesson.lesson;
+        if (window[dataVarName]) {
+            currentLessonData = window[dataVarName];
         }
+    }
 
-        // 标记双人练习完成（每日任务）
-        if (typeof markDuoPracticeComplete === 'function') {
-            markDuoPracticeComplete();
+    // 标记双人练习完成（每日任务）
+    if (typeof markDuoPracticeComplete === 'function') {
+        markDuoPracticeComplete();
+    }
+
+    // 重置前测统计
+    pretestStats = {
+        player1: { correct: 0, total: 0, totalTime: 0, wrongWords: [] },
+        player2: { correct: 0, total: 0, totalTime: 0, wrongWords: [] }
+    };
+    studentLevel = 'B'; // 重置为默认中等
+    consecutiveCorrect = 0;
+    consecutiveWrong = 0;
+    currentDifficulty = 'medium';
+
+    window._pretestUploaded = false; // 重置前测上传标记（每局游戏只上传第一次）
+
+    moduleQuestions = labelQuestionDifficulty(getQuestions(currentModule, currentPhase));
+    currentQuestionIndex = 0;
+    currentPlayerIndex = 0;
+    window.comboCount = 0;
+    window.sessionMaxCombo = 0; // 全局最长连胜（跨阶段）
+
+    // 重置双方分数（防止多轮游戏累加）
+    players[0].stars = 0;
+    players[1].stars = 0;
+
+    // 如果没有设置时间限制，使用默认值
+    if (!currentTimeLimit || currentTimeLimit === 0) {
+        currentTimeLimit = DEFAULT_TIME_LIMIT;
+    }
+
+    // 预加载所有题目图片（防止答题时加载慢）
+    preloadQuestionImages(moduleQuestions);
+    // 同时预加载实战部分的图片（前测时提前加载）
+    if (currentPhase === 'pretest') {
+        var practiceQs = getQuestions(currentModule, 'practice');
+        preloadQuestionImages(practiceQs);
+    }
+
+    document.getElementById('module-screen').classList.remove('active');
+
+    // 实战阶段：先显示情境导入页（如果有的话）
+    if (currentPhase === 'practice') {
+        var lessonId = getCurrentLessonId();
+        if (lessonId && scenarioMap[lessonId]) {
+            showScenarioScreen(scenarioMap[lessonId]);
+            return; // showScenarioScreen 的"开始"按钮会调用 startPracticeAfterScenario()
         }
+    }
 
-        // 重置前测统计
-        pretestStats = {
-            player1: { correct: 0, total: 0, totalTime: 0, wrongWords: [] },
-            player2: { correct: 0, total: 0, totalTime: 0, wrongWords: [] }
-        };
-        studentLevel = 'B'; // 重置为默认中等
-        consecutiveCorrect = 0;
-        consecutiveWrong = 0;
-        currentDifficulty = 'medium';
+    document.getElementById('game-screen').classList.add('active');
 
-        moduleQuestions = getQuestions(currentModule, currentPhase);
-        currentQuestionIndex = 0;
-        currentPlayerIndex = 0;
+    // Show phase indicator
+    updatePhaseIndicator();
 
-        // 重置双方分数（防止多轮游戏累加）
-        players[0].stars = 0;
-        players[1].stars = 0;
+    // 启动倒计时（前测5分钟，实战由教师设置或默认15分钟）
+    stopPretestTimer(); // 清除上一轮
+    if (currentPhase === 'pretest') {
+        startPretestTimer(5 * 60); // 前测5分钟
+    } else {
+        startPretestTimer(15 * 60); // 实战默认15分钟
+    }
 
-        // 如果没有设置时间限制，使用默认值
-        if (!currentTimeLimit || currentTimeLimit === 0) {
-            currentTimeLimit = DEFAULT_TIME_LIMIT;
-        }
-
-        document.getElementById('module-screen').classList.remove('active');
-        document.getElementById('game-screen').classList.add('active');
-
-        // Show phase indicator
-        updatePhaseIndicator();
-        renderQuestion();
-    });
+    renderQuestion();
 }
 
 function updatePhaseIndicator() {
@@ -835,8 +1028,8 @@ function updatePhaseIndicator() {
     }
 
     const phaseNames = {
-        pretest: '前测',
-        practice: '实战'
+        pretest: '热身赛',
+        practice: '闯关赛'
     };
     const moduleNames = {
         listening: '听力',
@@ -845,14 +1038,37 @@ function updatePhaseIndicator() {
         speaking: '口语'
     };
 
-    const lesson = Sync.getCurrentLessonOnceSync ? Sync.getCurrentLessonOnceSync() : null;
-    if (lesson) {
-        // 课程名取 displayName 的第一段（去掉模块部分，避免重复）
-        const lessonTitle = lesson.displayName ? lesson.displayName.split('-')[0].trim() : lesson.displayName;
-        indicator.textContent = `📚 ${lessonTitle} · ${moduleNames[currentModule] || ''} · ${phaseNames[currentPhase]}`;
-    } else {
-        indicator.textContent = `📚 ${moduleNames[currentModule] || ''} · ${phaseNames[currentPhase]}`;
+    // 获取课文标题（如 "This is a bear."）
+    var lessonTopic = currentLessonData && currentLessonData.title ? currentLessonData.title : '';
+
+    // 从 currentLessonData.id（如 "U1L1"）解析出 fallback 课程名
+    function deriveLessonLabel() {
+        var lessonId = currentLessonData && currentLessonData.id ? currentLessonData.id : '';
+        var match = lessonId.match(/^U(\d+)L(\d+)$/);
+        if (match) {
+            return 'Unit ' + match[1] + ' Lesson ' + match[2];
+        }
+        return '';
     }
+
+    const lesson = Sync.getCurrentLessonOnceSync ? Sync.getCurrentLessonOnceSync() : null;
+    var lessonTitle = '';
+    if (lesson && lesson.displayName) {
+        lessonTitle = lesson.displayName.split('-')[0].trim();
+    } else {
+        lessonTitle = deriveLessonLabel();
+    }
+
+    var parts = [];
+    if (lessonTitle) {
+        parts.push('📚 ' + lessonTitle);
+    } else {
+        parts.push('📚');
+    }
+    if (lessonTopic) parts.push(lessonTopic);
+    parts.push(moduleNames[currentModule] || '');
+    parts.push(phaseNames[currentPhase]);
+    indicator.textContent = parts.join(' · ');
 }
 
 function showQuestionHint(type, container) {
@@ -897,6 +1113,22 @@ function showQuestionHint(type, container) {
 
 function renderQuestion() {
     isAnimating = false;
+    window.wrongCount = 0;
+    window.scaffoldVoiceThresholdLowered = false;
+    window.earnedStarThisTurn = false;
+    // 研究数据：初始化支架日志和自适应连胜计数
+    if (!window.sessionScaffoldLog) window.sessionScaffoldLog = [];
+    if (window.adaptiveEasyStreak === undefined) window.adaptiveEasyStreak = 0;
+    if (window.adaptiveHardStreak === undefined) window.adaptiveHardStreak = 0;
+
+    // 清除上一题的底部按钮行（因为是append到body的）
+    var oldBtnRow = document.querySelector('.btn-row-fixed');
+    if (oldBtnRow) oldBtnRow.remove();
+
+    // 停止上一题的语音播放（防止语音重叠）
+    if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+    }
 
     // 清除上一题的反馈元素（防止遮挡）
     hideFeedbackPanel();
@@ -912,12 +1144,23 @@ function renderQuestion() {
     // Check if we reached the end of current phase
     if (currentQuestionIndex >= moduleQuestions.length) {
         if (currentPhase === 'pretest') {
-            // Pretest done, calculate level and start practice
+            // Pretest done, submit data then calculate level and start practice
+            // 保存前测数据快照（深拷贝），防止实战数据累加后覆盖
+            savedPretestSnapshot = {
+                player1: { correct: pretestStats.player1.correct, total: pretestStats.player1.total, totalTime: pretestStats.player1.totalTime, wrongWords: pretestStats.player1.wrongWords.slice() },
+                player2: { correct: pretestStats.player2.correct, total: pretestStats.player2.total, totalTime: pretestStats.player2.totalTime, wrongWords: pretestStats.player2.wrongWords.slice() }
+            };
+            // 只上传第一次前测数据（第二次"再来一遍"有记忆效应，数据不准确）
+            if (!window._pretestUploaded) {
+                syncStudentProgress(true);
+                window._pretestUploaded = true;
+            }
             calculateStudentLevel();
             showTransition();
         } else {
-            // Practice done, show finish
-            showFinishScreen();
+            // Practice done — 直接进入项目(L4)或结束页
+            // 翻牌配对已移除：测记忆力不测英语能力，不符合i+1原则
+            proceedAfterPractice();
         }
         return;
     }
@@ -934,31 +1177,112 @@ function renderQuestion() {
 
     // Update turn indicator with progress and timer (合并显示)
     const currentPlayerName = players[currentPlayerIndex].name.replace(/^\d+\.\s*/, '');
-    const progress = `${currentQuestionIndex + 1}/${moduleQuestions.length}`;
+    const progress = '第' + (currentQuestionIndex + 1) + '/' + moduleQuestions.length + '题';
+    const isLastQ = (currentQuestionIndex >= moduleQuestions.length - 1);
+    const lastBadge = isLastQ ? '<span style="font-size:11px;background:#ff6b6b;color:#fff;padding:1px 6px;border-radius:8px;margin-left:4px;">最后！</span>' : '';
 
-    // 练习阶段显示当前难度
-    let difficultyIndicator = '';
-    if (currentPhase === 'practice') {
-        const diffLabels = { easy: '🟢简单', medium: '🟡中等', hard: '🔴困难' };
-        difficultyIndicator = `<span class="difficulty-tag">${diffLabels[currentDifficulty] || ''}</span>`;
+    // 恢复答题状态栏（从结果页/过渡页回来时可能被隐藏了）
+    var turnIndicatorEl = document.getElementById('turn-indicator');
+    if (turnIndicatorEl) turnIndicatorEl.style.display = '';
+    var segBarEl = document.getElementById('quiz-seg-bar');
+    if (segBarEl) segBarEl.style.display = '';
+
+    // 重置容器背景（结果页会给 container 设渐变背景，答题页要恢复白色）
+    container.style.background = '';
+    container.style.paddingBottom = '';
+
+    // 隐藏顶部 .header 行（AB名字+进度），全部合并进绿色横幅
+    var headerEl = document.querySelector('#game-screen .header');
+    if (headerEl) headerEl.style.display = 'none';
+
+    var turnIndicator = document.getElementById('turn-indicator');
+    var currentStars = currentPhase === 'practice' ? players[0].stars : players[currentPlayerIndex].stars;
+    // countdownHtml: 空元素，渲染后立即由 updatePretestTimerDisplay() 填充，避免闪烁
+    var countdownHtml = '<span id="pretest-countdown" style="background:rgba(255,255,255,0.3);padding:2px 8px;border-radius:10px;font-weight:bold;min-width:40px;text-align:center;font-size:13px;"></span>';
+
+    // 普通徽章（等待方）
+    function letterBadge(letter) {
+        return '<span style="background:rgba(255,255,255,0.75);color:#555;font-size:12px;font-weight:900;width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;">' + letter + '</span>';
+    }
+    // 活跃徽章（正在答题方，带弹跳）
+    function letterBadgeActive(letter) {
+        return '<span class="badge-active" style="background:#fff;color:#3c8c00;font-size:14px;font-weight:900;width:28px;height:28px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 0 0 3px rgba(255,255,255,0.5);">' + letter + '</span>';
     }
 
-    // 实战阶段：两人一起答；前测阶段：交替答
-    var turnText = '';
+    var name1 = players[0] ? players[0].name.replace(/^\d+\.\s*/, '') : 'A';
+    var name2 = players[1] ? players[1].name.replace(/^\d+\.\s*/, '') : 'B';
+
     if (currentPhase === 'practice') {
-        turnText = '<span class="turn-name">两人 <strong>一起回答</strong></span>';
+        // 实战：Duolingo 合作模式横幅
+        // 设计原则：让学生一眼看出「我们要一起答」（不是各打各）
+        turnIndicator.innerHTML =
+            // 左：两个玩家名字（小字，说明谁在玩）
+            '<span style="display:flex;align-items:center;gap:5px;font-size:12px;opacity:0.9;">' +
+                letterBadge('A') + '<span>' + name1 + '</span>' +
+                '<span style="opacity:0.5;padding:0 2px;">·</span>' +
+                letterBadge('B') + '<span>' + name2 + '</span>' +
+            '</span>' +
+            // 中：醒目的「合力答题」提示（视觉重心）
+            '<span style="display:flex;align-items:center;gap:5px;background:rgba(255,255,255,0.25);padding:3px 12px;border-radius:20px;font-weight:900;font-size:13px;letter-spacing:0.3px;">' +
+                '🤝&nbsp;一起来答题！' +
+            '</span>' +
+            // 右：星星 + 倒计时
+            '<span style="display:flex;align-items:center;gap:6px;">' +
+                '<span style="background:rgba(255,255,255,0.3);padding:2px 8px;border-radius:10px;font-weight:bold;font-size:13px;">⭐ ' + currentStars + '</span>' +
+                countdownHtml +
+            '</span>';
+
     } else {
-        turnText = '<span class="turn-name">请 <strong>' + currentPlayerName + '</strong> 回答</span>';
+        // 前测：A 固定左侧，B 固定右侧，活跃方大圆弹跳 + "轮到你答！"
+        var aIsActive = (currentPlayerIndex === 0);
+
+        turnIndicator.innerHTML =
+            // 左：A（固定位置）
+            '<span style="display:flex;align-items:center;gap:6px;">' +
+                (aIsActive ? letterBadgeActive('A') : letterBadge('A')) +
+                '<span style="display:flex;flex-direction:column;line-height:1.15;' + (aIsActive ? '' : 'opacity:0.55;') + '">' +
+                    '<span style="font-weight:900;font-size:13px;">' + name1 + '</span>' +
+                    (aIsActive ? '<span style="font-size:10px;">✏️ 轮到你答！</span>' : '') +
+                '</span>' +
+            '</span>' +
+            // 中：倒计时
+            '<span>' + countdownHtml + '</span>' +
+            // 右：B（固定位置）
+            '<span style="display:flex;align-items:center;gap:6px;justify-content:flex-end;">' +
+                '<span style="display:flex;flex-direction:column;line-height:1.15;text-align:right;' + (!aIsActive ? '' : 'opacity:0.55;') + '">' +
+                    '<span style="font-weight:900;font-size:13px;">' + name2 + '</span>' +
+                    (!aIsActive ? '<span style="font-size:10px;">✏️ 轮到你答！</span>' : '') +
+                '</span>' +
+                (!aIsActive ? letterBadgeActive('B') : letterBadge('B')) +
+            '</span>';
     }
 
-    document.getElementById('turn-indicator').innerHTML = `
-        ${turnText}
-        ${difficultyIndicator}
-        <span class="turn-timer" id="question-timer">${currentTimeLimit ? currentTimeLimit + 's' : ''}</span>
-    `;
+    // 切题后立即填充倒计时值，防止闪烁（不等 interval 下一秒再更新）
+    updatePretestTimerDisplay();
 
-    // Update header progress (头像中间)
-    document.getElementById('question-progress').textContent = progress;
+    // question-progress 保留但隐藏（后台兼容）
+    var qp = document.getElementById('question-progress');
+    if (qp) qp.style.display = 'none';
+
+    // ── 分题刻度进度条（充电格 + 右侧数字标注）──
+    var segBar = document.getElementById('quiz-seg-bar');
+    if (segBar) {
+        var total   = moduleQuestions.length;
+        var current = currentQuestionIndex;
+        var segsHtml = '';
+        for (var si = 0; si < total; si++) {
+            if (si < current)        segsHtml += '<div class="qseg done"></div>';
+            else if (si === current) segsHtml += '<div class="qseg current"></div>';
+            else                     segsHtml += '<div class="qseg"></div>';
+        }
+        segBar.innerHTML =
+            '<div style="flex:1;display:flex;gap:3px;align-items:center;">' + segsHtml + '</div>' +
+            '<span style="color:rgba(255,255,255,0.95);font-size:11px;font-weight:800;margin-left:8px;white-space:nowrap;letter-spacing:0.3px;">' + (current + 1) + '/' + total + '</span>';
+    }
+
+
+
+
 
     // 启动计时器
     startQuestionTimer();
@@ -977,109 +1301,271 @@ function renderQuestion() {
     // 给所有选项卡片内的图片添加白色背景包装（去除透明马赛克）
     wrapImagesWithWhiteBg(container);
 
-    // 添加底部按钮（默认禁用，答对后才启用）
+    // 底部按钮（前测和实战都显示，前测默认禁用等选完答案后激活）
     const skipBtn = document.createElement('button');
     skipBtn.className = 'next-btn';
     skipBtn.id = 'next-question-btn';
 
-    // 最后一题时显示"再来一次"，否则显示"下一题"
-    if (currentQuestionIndex >= moduleQuestions.length - 1) {
-        skipBtn.textContent = '再来一次';
+    var isLastQuestion = (currentQuestionIndex >= moduleQuestions.length - 1);
+
+    if (currentPhase === 'pretest') {
+        // 前测：上一题+下一题 并排按钮
+        window.pretestPendingAnswer = null;
+
+        var btnRow = document.createElement('div');
+        btnRow.className = 'btn-row-fixed';
+
+        // 上一题按钮
+        var prevBtn = document.createElement('button');
+        prevBtn.className = 'next-btn';
+        prevBtn.textContent = '◀ 上一题';
+        if (currentQuestionIndex <= 0) {
+            prevBtn.disabled = true;
+            prevBtn.style.opacity = '0.3';
+        } else {
+            prevBtn.style.background = 'linear-gradient(135deg, #e0e0e0, #ccc)';
+            prevBtn.style.boxShadow = '0 4px 0 #aaa';
+            prevBtn.style.color = '#666';
+            prevBtn.onclick = function() {
+                if (window.pretestPendingAnswer) {
+                    var p = window.pretestPendingAnswer;
+                    var tStats = pretestStats[p.playerKey];
+                    tStats.total++;
+                    tStats.totalTime += p.responseTime;
+                    if (p.isCorrect) { tStats.correct++; }
+                    window.pretestPendingAnswer = null;
+                }
+                isAnimating = false;
+                if (currentPhase !== 'practice') {
+                    currentPlayerIndex = currentPlayerIndex === 0 ? 1 : 0;
+                }
+                currentQuestionIndex--;
+                renderQuestion();
+            };
+        }
+        btnRow.appendChild(prevBtn);
+
+        // 下一题按钮
+        skipBtn.textContent = isLastQuestion ? '✅ 完成热身' : '下一题 ▶';
+        skipBtn.disabled = true;
+        skipBtn.style.opacity = '0.4';
         skipBtn.onclick = function() {
-            startGame();
+            if (window.pretestPendingAnswer) {
+                var p = window.pretestPendingAnswer;
+                var tStats = pretestStats[p.playerKey];
+                tStats.total++;
+                tStats.totalTime += p.responseTime;
+                if (p.isCorrect) {
+                    tStats.correct++;
+                    window.earnedStarThisTurn = true;
+                }
+                window.pretestPendingAnswer = null;
+            }
+            isAnimating = false;
+            skipToNextQuestion();
         };
-        skipBtn.disabled = false; // 最后一题直接启用
+        btnRow.appendChild(skipBtn);
+
+        document.body.appendChild(btnRow);
+        syncStudentProgress();
+        return;
     } else {
-        skipBtn.textContent = '下一题 ▶';
+        // 实战：上一题+下一题 并排按钮
+        var btnRow = document.createElement('div');
+        btnRow.className = 'btn-row-fixed';
+
+        // 上一题按钮
+        var prevBtn = document.createElement('button');
+        prevBtn.className = 'next-btn';
+        prevBtn.textContent = '◀ 上一题';
+        if (currentQuestionIndex <= 0) {
+            prevBtn.disabled = true;
+            prevBtn.style.opacity = '0.3';
+        } else {
+            prevBtn.style.background = 'linear-gradient(135deg, #e0e0e0, #ccc)';
+            prevBtn.style.boxShadow = '0 4px 0 #aaa';
+            prevBtn.style.color = '#666';
+            prevBtn.onclick = function() {
+                isAnimating = false;
+                if (currentPhase !== 'practice') {
+                    currentPlayerIndex = currentPlayerIndex === 0 ? 1 : 0;
+                }
+                currentQuestionIndex--;
+                renderQuestion();
+            };
+        }
+        btnRow.appendChild(prevBtn);
+
+        // 下一题/查看结果按钮
+        skipBtn.textContent = isLastQuestion ? '✅ 查看结果' : '下一题 ▶';
         skipBtn.onclick = skipToNextQuestion;
-        skipBtn.disabled = true; // 非最后一题默认禁用
+        if (isLastQuestion) {
+            skipBtn.disabled = false;
+            skipBtn.style.background = 'linear-gradient(135deg, #58cc02, #46a302)';
+            skipBtn.style.boxShadow = '0 4px 0 #3d8f02';
+            skipBtn.style.color = 'white';
+            skipBtn.style.opacity = '1';
+        } else {
+            skipBtn.disabled = true;
+        }
+        btnRow.appendChild(skipBtn);
+
+        document.body.appendChild(btnRow);
     }
-    container.appendChild(skipBtn);
 
     syncStudentProgress();
 }
 
 function showTransition() {
-    const container = document.getElementById('question-container');
+    var container = document.getElementById('question-container');
 
-    // 获取水平等级描述
-    const levelInfo = {
-        'A': { emoji: '🌟', label: '基础扎实', desc: '你们很棒！接下来挑战更难的题目！', color: '#58cc02' },
-        'B': { emoji: '👍', label: '基础中等', desc: '继续加油！练习会帮助你们进步！', color: '#1cb0f6' },
-        'C': { emoji: '💪', label: '需要加强', desc: '别担心！我们从简单的开始练习！', color: '#ff9500' }
-    };
+    // 隐藏所有答题状态栏（结果/过渡页应干净）
+    var turnBar = document.getElementById('turn-indicator');
+    if (turnBar) turnBar.style.display = 'none';
+    var progBar = document.getElementById('question-progress');
+    if (progBar) progBar.style.display = 'none';
+    var segBar = document.getElementById('quiz-seg-bar');
+    if (segBar) segBar.style.display = 'none';
 
-    const info = levelInfo[studentLevel] || levelInfo['B'];
+    // 隐藏左上右上的学生名字卡片
+    var headerEl = document.querySelector('.header');
+    if (headerEl) headerEl.style.display = 'none';
 
-    // 计算每位同学的统计数据
-    const p1 = pretestStats.player1;
-    const p2 = pretestStats.player2;
+    // 清除底部按钮行
+    var oldBtnRow = document.querySelector('.btn-row-fixed');
+    if (oldBtnRow) oldBtnRow.remove();
 
-    const p1Accuracy = p1.total > 0 ? Math.round((p1.correct / p1.total) * 100) : 0;
-    const p2Accuracy = p2.total > 0 ? Math.round((p2.correct / p2.total) * 100) : 0;
-    const p1AvgTime = p1.total > 0 ? (p1.totalTime / p1.total / 1000).toFixed(1) : 0;
-    const p2AvgTime = p2.total > 0 ? (p2.totalTime / p2.total / 1000).toFixed(1) : 0;
+    // 停止倒计时
+    stopPretestTimer();
 
-    // 整体正确率
-    const totalCorrect = p1.correct + p2.correct;
-    const totalQuestions = p1.total + p2.total;
-    const totalAccuracy = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0;
+    // 获取玩家名字和数据
+    var player1Name = players[0] ? players[0].name.replace(/^\d+\.\s*/, '') : 'Student A';
+    var player2Name = players[1] ? players[1].name.replace(/^\d+\.\s*/, '') : 'Student B';
+    var p1Stars = players[0] ? players[0].stars : 0;
+    var p2Stars = players[1] ? players[1].stars : 0;
+    var p1 = pretestStats.player1;
+    var p2 = pretestStats.player2;
+    var totalCorrect = p1.correct + p2.correct;
+    // 用固定题目数（20题），不用pretestStats.total（可能因上一题/重答被多算）
+    var totalQuestions = 20;
+    var totalAccuracy = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0;
 
-    container.innerHTML = `
-        <div style="text-align: center; padding: 20px;">
-            <div style="font-size: 50px; margin-bottom: 10px;">🎉</div>
-            <h2 style="margin: 10px 0;">前测完成！</h2>
+    // 鼓励语（基于Growth Mindset，夸努力和过程，不夸天赋）
+    // 渐变色背景 + 大字体 + 动感设计
+    var cheerEmoji, cheerText, cheerColor, cheerBg;
+    if (totalCorrect >= 16) {
+        cheerEmoji = '🏆';
+        cheerText = '太厉害了！你们已经掌握了！';
+        cheerColor = '#fff';
+        cheerBg = 'linear-gradient(135deg, #ff9500, #ff6b00)';
+    } else if (totalCorrect >= 11) {
+        cheerEmoji = '🌟';
+        cheerText = '很棒！大部分都会了！';
+        cheerColor = '#fff';
+        cheerBg = 'linear-gradient(135deg, #ffb800, #ff9500)';
+    } else if (totalCorrect >= 6) {
+        cheerEmoji = '👏';
+        cheerText = '不错的开始！闯关赛会更好！';
+        cheerColor = '#fff';
+        cheerBg = 'linear-gradient(135deg, #1cb0f6, #0095e8)';
+    } else if (totalCorrect >= 3) {
+        cheerEmoji = '💪';
+        cheerText = '勇敢完成了！接下来一起练！';
+        cheerColor = '#fff';
+        cheerBg = 'linear-gradient(135deg, #58cc02, #46a302)';
+    } else {
+        cheerEmoji = '🌱';
+        cheerText = '种子已种下，闯关赛一起成长！';
+        cheerColor = '#fff';
+        cheerBg = 'linear-gradient(135deg, #58cc02, #46a302)';
+    }
 
-            <!-- 两位同学的成绩 -->
-            <div style="display: flex; margin: 15px 0;">
-                <!-- 玩家1 -->
-                <div style="flex: 1; margin-right: 10px; background: #e3f4ff; border: 2px solid #1cb0f6; border-radius: 12px; padding: 12px;">
-                    <div style="font-size: 24px;">👦</div>
-                    <div style="font-size: 14px; font-weight: bold; color: #1cb0f6;">${player1Name}</div>
-                    <div style="font-size: 20px; font-weight: bold; margin: 5px 0;">${p1Accuracy}%</div>
-                    <div style="font-size: 12px; color: #666;">
-                        ${p1.correct}/${p1.total}题 · ${p1AvgTime}秒/题
-                    </div>
-                </div>
-                <!-- 玩家2 -->
-                <div style="flex: 1; background: #fff3e0; border: 2px solid #ff9500; border-radius: 12px; padding: 12px;">
-                    <div style="font-size: 24px;">👧</div>
-                    <div style="font-size: 14px; font-weight: bold; color: #ff9500;">${player2Name}</div>
-                    <div style="font-size: 20px; font-weight: bold; margin: 5px 0;">${p2Accuracy}%</div>
-                    <div style="font-size: 12px; color: #666;">
-                        ${p2.correct}/${p2.total}题 · ${p2AvgTime}秒/题
-                    </div>
-                </div>
-            </div>
+    // ① 先注入 @keyframes（必须在 innerHTML 之前，否则动画不生效）
+    if (!document.getElementById('transition-anim-style')) {
+        var styleEl = document.createElement('style');
+        styleEl.id = 'transition-anim-style';
+        styleEl.textContent =
+            '@keyframes popIn{from{transform:scale(0.3) rotate(-10deg);opacity:0}to{transform:scale(1) rotate(0);opacity:1}}' +
+            '@keyframes starDrop{0%{transform:scale(0) translateY(-20px);opacity:0}60%{transform:scale(1.4) translateY(4px)}100%{transform:scale(1) translateY(0);opacity:1}}' +
+            '@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}';
+        document.head.appendChild(styleEl);
+    }
 
-            <!-- 整体水平 -->
-            <div style="background: linear-gradient(135deg, ${info.color}22, ${info.color}11);
-                        border: 2px solid ${info.color};
-                        border-radius: 12px;
-                        padding: 12px;
-                        margin: 10px 0;">
-                <div style="font-size: 28px;">${info.emoji}</div>
-                <div style="font-size: 18px; font-weight: bold; color: ${info.color};">
-                    整体水平：${info.label}
-                </div>
-                <div style="font-size: 14px; color: #888; margin-top: 5px;">
-                    ${info.desc}
-                </div>
-            </div>
+    // ② 设置容器背景（直接作用于 #question-container，避免 min-height:100% flex 失效）
+    container.style.background = 'linear-gradient(160deg,#e8f8ff 0%,#f0ffe8 55%,#fffbea 100%)';
+    container.style.paddingBottom = '40px';
 
-            <!-- 按钮区域 -->
-            <div style="display: flex; margin-top: 20px;">
-                <button onclick="restartPretest()" style="flex: 1; margin-right: 10px; padding: 15px; font-size: 16px; background: #fff; border: 2px solid #1cb0f6; color: #1cb0f6; border-radius: 12px; cursor: pointer;">
-                    🔄 再来一遍
-                </button>
-                <button onclick="startPractice()" style="flex: 1; padding: 15px; font-size: 16px; background: #58cc02; border: none; color: white; border-radius: 12px; cursor: pointer;">
-                    ▶️ 开始练习
-                </button>
-            </div>
-        </div>
-    `;
+    // ③ 星级：低分也给最少1颗星，永远庆祝努力（Duolingo Growth Mindset 原则）
+    var stars = totalAccuracy >= 80 ? 3 : totalAccuracy >= 40 ? 2 : 1;
+    var starsHtml = [0,1,2].map(function(si) {
+        var on = si < stars;
+        return '<span style="font-size:44px;display:inline-block;' +
+            (on ? 'animation:starDrop 0.5s ' + (0.25 + si*0.15) + 's cubic-bezier(0.175,0.885,0.32,1.275) both;' : 'filter:grayscale(1) opacity(0.22);') +
+            '">⭐</span>';
+    }).join('&nbsp;');
 
-    createConfetti(30);
+    // ④ 低分用鼓励蓝，不用羞耻红
+    var scoreColor = totalAccuracy >= 80 ? '#58cc02' : totalAccuracy >= 50 ? '#ffc200' : '#1cb0f6';
+
+
+    var html = '<div style="padding:20px 18px 10px;text-align:center;">';
+
+    // 庆祝徽章（弹入动画）
+    html += '<div style="width:96px;height:96px;margin:0 auto 12px;border-radius:50%;background:' + cheerBg + ';display:flex;align-items:center;justify-content:center;font-size:50px;box-shadow:0 8px 24px rgba(0,0,0,0.18);animation:popIn 0.45s cubic-bezier(0.175,0.885,0.32,1.275) both;">' + cheerEmoji + '</div>';
+    html += '<div style="font-size:26px;font-weight:900;color:#1a1a1a;letter-spacing:-0.5px;margin-bottom:4px;animation:fadeUp 0.4s 0.1s both;">热身赛完成！</div>';
+    html += '<div style="font-size:13px;color:#aaa;margin-bottom:16px;animation:fadeUp 0.4s 0.15s both;">' + player1Name + ' & ' + player2Name + '</div>';
+
+    // 星级（视觉重心）
+    html += '<div style="margin-bottom:20px;line-height:1;">' + starsHtml + '</div>';
+
+    // 成绩卡片
+    html += '<div style="background:#fff;border-radius:22px;padding:20px 20px 16px;box-shadow:0 2px 20px rgba(0,0,0,0.07);border:1.5px solid #e8e8e8;margin-bottom:16px;animation:fadeUp 0.4s 0.3s both;">';
+    html += '<div style="font-size:66px;font-weight:900;color:' + scoreColor + ';line-height:1;letter-spacing:-3px;margin-bottom:4px;">' + totalCorrect + '<span style="font-size:26px;color:#ccc;font-weight:400;"> / ' + totalQuestions + '</span></div>';
+    var barW = Math.max(5, totalAccuracy);
+    html += '<div style="width:88%;margin:12px auto 8px;height:12px;background:#f0f0f0;border-radius:99px;overflow:hidden;"><div style="width:' + barW + '%;height:100%;background:' + cheerBg + ';border-radius:99px;transition:width 1.2s cubic-bezier(0.25,1,0.5,1);"></div></div>';
+    html += '<div style="font-size:13px;color:#bbb;">答对了 <b style="color:' + scoreColor + ';">' + totalAccuracy + '%</b></div>';
+    html += '</div>';
+
+    // 鼓励语（纯文字，不做成按钮样式）
+    html += '<div style="font-size:17px;font-weight:bold;color:#555;margin-bottom:24px;line-height:1.5;animation:fadeUp 0.4s 0.4s both;">' + cheerText + '</div>';
+
+    // 唯一主操作按钮
+    html += '<button onclick="restartPretest()" style="width:100%;max-width:300px;padding:17px;font-size:18px;font-weight:900;background:linear-gradient(180deg,#49c0f8,#1cb0f6);border:none;color:#fff;border-radius:16px;cursor:pointer;box-shadow:0 5px 0 #0077cc;display:block;margin:0 auto 12px;animation:fadeUp 0.4s 0.5s both;">🔄 再来一遍</button>';
+    html += '<div style="font-size:12px;color:#ccc;animation:fadeUp 0.4s 0.55s both;">等待老师指令进入闯关赛</div>';
+
+    html += '</div>';
+
+    container.innerHTML = html;
+
+    // 静默保存成就数据（不显示在页面上）
+    try {
+        var orderId1 = getPlayerOrderId(0);
+        var orderId2 = getPlayerOrderId(1);
+        var data1 = loadAchievements(orderId1);
+        var data2 = loadAchievements(orderId2);
+
+        data1.totalCorrect = (data1.totalCorrect || 0) + p1.correct;
+        data1.totalStars = (data1.totalStars || 0) + players[0].stars;
+        data2.totalCorrect = (data2.totalCorrect || 0) + p2.correct;
+        data2.totalStars = (data2.totalStars || 0) + players[1].stars;
+        if (totalAccuracy === 100) { data1.lastPerfect = true; data2.lastPerfect = true; }
+        data1.maxCombo = Math.max(data1.maxCombo || 0, consecutiveCorrect);
+        data2.maxCombo = Math.max(data2.maxCombo || 0, consecutiveCorrect);
+
+        for (var i = 0; i < achievementDefs.length; i++) {
+            var def = achievementDefs[i];
+            if (def.check(data1) && (!data1.earned || data1.earned.indexOf(def.id) === -1)) {
+                if (!data1.earned) data1.earned = [];
+                data1.earned.push(def.id);
+            }
+            if (def.check(data2) && (!data2.earned || data2.earned.indexOf(def.id) === -1)) {
+                if (!data2.earned) data2.earned = [];
+                data2.earned.push(def.id);
+            }
+        }
+        saveAchievements(orderId1, data1);
+        saveAchievements(orderId2, data2);
+    } catch(e) { console.error('achievements save error', e); }
 }
 
 // 重新开始前测
@@ -1090,8 +1576,22 @@ function restartPretest() {
         player2: { correct: 0, total: 0, totalTime: 0, wrongWords: [] }
     };
     currentPhase = 'pretest';
-    moduleQuestions = getQuestions(currentModule, currentPhase);
+    moduleQuestions = labelQuestionDifficulty(getQuestions(currentModule, currentPhase));
     currentQuestionIndex = 0;
+    currentPlayerIndex = 0;
+
+    // 恢复header显示（showTransition里隐藏了）
+    var headerEl = document.querySelector('.header');
+    if (headerEl) headerEl.style.display = '';
+    var turnBar = document.getElementById('turn-indicator');
+    if (turnBar) turnBar.style.display = '';
+    var progBar = document.getElementById('question-progress');
+    if (progBar) progBar.style.display = '';
+
+    // 重启倒计时
+    stopPretestTimer();
+    startPretestTimer(5 * 60);
+
     updatePhaseIndicator();
     renderQuestion();
 }
@@ -1099,10 +1599,12 @@ function restartPretest() {
 // 开始练习
 function startPractice() {
     currentPhase = 'practice';
-    moduleQuestions = getQuestions(currentModule, currentPhase);
+    moduleQuestions = labelQuestionDifficulty(getQuestions(currentModule, currentPhase));
     currentQuestionIndex = 0;
-    currentDifficulty = studentLevel === 'A' ? 'medium' : (studentLevel === 'C' ? 'easy' : 'medium');
     updatePhaseIndicator();
+    // 实战倒计时15分钟
+    stopPretestTimer();
+    startPretestTimer(15 * 60);
     renderQuestion();
 }
 
@@ -1123,7 +1625,8 @@ function calculateStudentLevel() {
 
     const accuracy = totalCorrect / totalQuestions;
     const avgTimePerQuestion = totalTime / totalQuestions; // 毫秒
-    const standardTime = currentTimeLimit * 1000; // 转换为毫秒
+    // 当教师未设置时间限制时，用15秒作为基准（中等难度的合理答题时间）
+    const standardTime = currentTimeLimit > 0 ? currentTimeLimit * 1000 : 15000;
 
     // 根据 Bloom Mastery Learning 理论
     // A级：正确率≥80% 且 平均用时≤标准时间
@@ -1145,31 +1648,15 @@ function updateHeader() {
     var p1 = document.getElementById('player1-ui');
     var p2 = document.getElementById('player2-ui');
     var teamUI = document.getElementById('team-ui');
+    var headerEl = document.querySelector('.header');
 
     if (currentPhase === 'practice') {
-        // 实战：合作模式 — 隐藏AB，显示团队
-        p1.style.display = 'none';
-        p2.style.display = 'none';
-
-        if (!teamUI) {
-            teamUI = document.createElement('div');
-            teamUI.id = 'team-ui';
-            teamUI.style.cssText = 'display:flex;align-items:center;justify-content:center;width:100%;gap:8px;';
-            var header = document.querySelector('.header');
-            header.insertBefore(teamUI, document.getElementById('question-progress'));
-        }
-
-        var name1 = players[0].name.replace(/^\d+\.\s*/, '');
-        var name2 = players[1].name.replace(/^\d+\.\s*/, '');
-        var teamScore = players[0].stars;
-
-        teamUI.innerHTML = '<div style="text-align:center;">' +
-            '<div style="font-size:14px;font-weight:bold;color:#4b4b4b;">' + name1 + ' & ' + name2 + '</div>' +
-            '<div style="font-size:13px;color:#58cc02;font-weight:bold;">⭐ ' + teamScore + '</div>' +
-        '</div>';
-        teamUI.style.display = 'flex';
+        // 实战：简洁合作模式 — 隐藏整个 .header，所有信息合并到 turn-indicator
+        headerEl.style.display = 'none';
+        if (teamUI) teamUI.style.display = 'none';
     } else {
         // 前测：竞争模式
+        headerEl.style.display = '';
         p1.style.display = '';
         p2.style.display = '';
         if (teamUI) teamUI.style.display = 'none';
@@ -1177,97 +1664,193 @@ function updateHeader() {
         p1.querySelector('.name').textContent = players[0].name;
         p1.classList.toggle('active-player', currentPlayerIndex === 0);
         p2.classList.toggle('active-player', currentPlayerIndex === 1);
-        p1.querySelector('.stars').innerHTML = '⭐ ' + players[0].stars;
-        p2.querySelector('.stars').innerHTML = '⭐ ' + players[1].stars;
+        // 前测不显示星星（前测是诊断测试，不是竞争）
+        p1.querySelector('.stars').innerHTML = '';
+        p2.querySelector('.stars').innerHTML = '';
     }
 }
 
 function handleAnswer(isCorrect, cardEl = null, correctAnswer = null) {
     if(isAnimating) return;
+    
+    const q = moduleQuestions[currentQuestionIndex];
+    
+    // E. 降低语音识别灵敏度处理（第3次答错后的放宽策略）
+    if (!isCorrect && q && ['repeat_word', 'repeat_sentence', 'picture_speak'].indexOf(q.type) !== -1) {
+        if (window.scaffoldVoiceThresholdLowered) {
+             isCorrect = true;
+        }
+    }
+
     isAnimating = true;
 
-    // 记录答题时间
     const responseTime = Date.now() - questionStartTime;
-
-    // 记录前测或练习统计（用于计算学生水平和易错词收集）
     const playerKey = currentPlayerIndex === 0 ? 'player1' : 'player2';
     const targetStats = pretestStats[playerKey];
-    
-    // We update pretestStats as a global accumulator for the Teacher Dashboard export
-    targetStats.total++;
-    targetStats.totalTime += responseTime;
+
+    if (currentPhase === 'pretest') {
+        // 前测：不立即记分，只存储待提交答案。学生可以改选，以最终点「下一题」时的选择为准。
+        window.pretestPendingAnswer = { isCorrect: isCorrect, responseTime: responseTime, playerKey: playerKey };
+    } else {
+        // 实战：只在第一次尝试本题时统计（总题数不膨胀）
+        if (window.wrongCount === 0 || window.wrongCount === undefined) {
+            targetStats.total++;
+            targetStats.totalTime += responseTime;
+            if (currentPhase === 'practice' && players.length > 1) {
+                pretestStats.player2.total++;
+                pretestStats.player2.totalTime += responseTime;
+            }
+            if (isCorrect) {
+                targetStats.correct++;
+                if (currentPhase === 'practice' && players.length > 1) pretestStats.player2.correct++;
+                window.earnedStarThisTurn = true;
+            }
+        }
+    }
     
     if (isCorrect) {
-        targetStats.correct++;
-        // 处理成就
-        processAchievements(true);
+        window.comboCount = (window.comboCount || 0) + 1;
+        targetStats.maxCombo = Math.max(targetStats.maxCombo || 0, window.comboCount);
+        // 全局最长连胜（用于结束页称号评定，不受阶段区分影响）
+        window.sessionMaxCombo = Math.max(window.sessionMaxCombo || 0, window.comboCount);
+        // 前测不显示星星动画（不暴露对错）
+        if (currentPhase !== 'pretest' && window.earnedStarThisTurn && typeof window.showStarAnimation === 'function') {
+            window.showStarAnimation();
+            var qsProg = document.getElementById('question-progress');
+            if (qsProg) {
+                var currentScore = currentPhase === 'practice' ? players[0].stars : players[currentPlayerIndex].stars;
+                var progressStr = '第' + (currentQuestionIndex + 1) + '/' + moduleQuestions.length + '题';
+                qsProg.innerHTML = progressStr + ' &nbsp;⭐ ' + (currentScore + 1);
+            }
+        }
+        if (typeof processAchievements === 'function') processAchievements(true);
     } else {
-        // 处理成就（答错也要记录）
-        processAchievements(false);
-        const q = moduleQuestions[currentQuestionIndex];
-        if (q && q.word && !targetStats.wrongWords.includes(q.word)) {
-            // Store up to 10 unique wrong words per session
+        if (typeof processAchievements === 'function') processAchievements(false);
+        var wrongItem = (q && (q.word || q.audio || q.chinese)) ? (q.word || q.audio) : null;
+        if (wrongItem && targetStats.wrongWords && !targetStats.wrongWords.includes(wrongItem)) {
             if (targetStats.wrongWords.length < 10) {
-                targetStats.wrongWords.push(q.word);
+                targetStats.wrongWords.push(wrongItem);
             }
         }
     }
-
-    // 动态难度调整（练习阶段）
-    if (currentPhase === 'practice') {
-        if (isCorrect) {
-            consecutiveCorrect++;
-            consecutiveWrong = 0;
-            // 连续3题正确，提升难度
-            if (consecutiveCorrect >= 3) {
-                adjustDifficulty('up');
-                consecutiveCorrect = 0;
-            }
-        } else {
-            consecutiveWrong++;
-            consecutiveCorrect = 0;
-            // 连续2题错误，降低难度
-            if (consecutiveWrong >= 2) {
-                adjustDifficulty('down');
-                consecutiveWrong = 0;
-            }
-        }
-    }
-
-    const q = moduleQuestions[currentQuestionIndex];
 
     if (isCorrect) {
         stopQuestionTimer(); // 答对停止计时
-        if (cardEl) cardEl.classList.add('correct');
-        if (window.SoundSystem) SoundSystem.playCorrect();
-        playSuccessSound();
-        speakFeedback(true);      // 语音说英文
-        resetHintLevel();
 
-        // 只显示底部反馈面板（包含答案和鼓励语，不再重复显示绿色答案条）
-        showFeedbackPanel(true, q);
+        // 前测：高亮选中项，允许改选（不锁定，等学生点"下一题"）
+        if (currentPhase === 'pretest') {
+            // 清除所有卡片的旧高亮
+            var allCards = document.querySelectorAll('.option-card, .tf-option-card');
+            allCards.forEach(function(c) { c.style.border = ''; c.style.backgroundColor = ''; });
+            // 高亮当前选中
+            if (cardEl) {
+                cardEl.style.border = '3px solid #1cb0f6';
+                cardEl.style.backgroundColor = '#e8f4fd';
+            }
+            isAnimating = false; // 解锁，允许改选
+            activatePretestNextButton();
+            return;
+        } else {
+            // 实战：完整反馈体验
+            if (cardEl) cardEl.classList.add('correct');
+            if (window.SoundSystem) SoundSystem.playCorrect();
+            playSuccessSound();
+            speakFeedback(true);      // 语音说英文
+            resetHintLevel();
 
-        // 答对后保持 isAnimating = true，防止学生重复点击选项
-        // 由 onFeedbackContinue() 中的"继续"按钮来解锁并跳到下一题
+            // ===== 📊 研究数据记录：支架使用量 + i+1自适应信号 =====
+            var scaffoldUsed = window.wrongCount || 0; // 答对前答错了几次 = 支架深度
+            console.log('[i+1] 本题scaffoldLevel=' + scaffoldUsed + ' easyStreak=' + (window.adaptiveEasyStreak||0) + ' hardStreak=' + (window.adaptiveHardStreak||0) + ' phase=' + currentPhase);
+            if (currentPhase === 'practice' && q) {
+                // 记录本题数据
+                window.sessionScaffoldLog.push({
+                    qIndex: currentQuestionIndex,
+                    type: q.type,
+                    scaffoldLevel: scaffoldUsed,          // 0=无支架 1=轻提示 2=英文 3=英文+中文 4=高亮
+                    timeSpent: Date.now() - questionStartTime,
+                    correct: true
+                });
+
+                // i+1 × ZPD 联动：支架深度作为难度调整信号
+                if (scaffoldUsed <= 1) {
+                    // 几乎不需要帮助 → 连胜计数+1
+                    window.adaptiveEasyStreak = (window.adaptiveEasyStreak || 0) + 1;
+                    window.adaptiveHardStreak = 0;
+                    if (window.adaptiveEasyStreak >= 3) {
+                        // 连续3题低支架答对 → 题目可能偏易，建议升难度
+                        window.adaptiveDifficultySignal = 'upgrade';
+                        window.adaptiveEasyStreak = 0;
+                        console.log('[i+1] 连续3题低支架 → 升难度');
+                        adjustDifficulty('up');
+                        reorderRemainingQuestions();
+                    }
+                } else if (scaffoldUsed >= 3) {
+                    // 需要深度支架才答对 → 调低难度计数+1
+                    window.adaptiveHardStreak = (window.adaptiveHardStreak || 0) + 1;
+                    window.adaptiveEasyStreak = 0;
+                    if (window.adaptiveHardStreak >= 2) {
+                        // 连续2题高支架 → 题目可能偏难，建议降难度
+                        window.adaptiveDifficultySignal = 'downgrade';
+                        window.adaptiveHardStreak = 0;
+                        console.log('[i+1] 连续2题高支架 → 降难度');
+                        adjustDifficulty('down');
+                        reorderRemainingQuestions();
+                    }
+                } else {
+                    // 中间档（scaffoldLevel 2）→ 处于ZPD最佳区，保持
+                    window.adaptiveEasyStreak = Math.max(0, (window.adaptiveEasyStreak || 0) - 1);
+                    window.adaptiveHardStreak = Math.max(0, (window.adaptiveHardStreak || 0) - 1);
+                }
+
+                // 把当前课程的支架日志存入localStorage，供教师端查看
+                try {
+                    var logKey = 'scaffoldLog_' + (currentLessonData && currentLessonData.id || 'session');
+                    localStorage.setItem(logKey, JSON.stringify(window.sessionScaffoldLog.slice(-50)));
+                } catch(e) {}
+            }
+            // ===== 数据记录结束 =====
+
+            // 只显示底部反馈面板（包含答案和鼓励语，不再重复显示绿色答案条）
+            showFeedbackPanel(true, q);
+
+            // 答对后保持 isAnimating = true，防止学生重复点击选项
+            // 由 onFeedbackContinue() 中的"继续"按钮来解锁并跳到下一题
+        }
     } else {
+        window.comboCount = 0;
+
+        // 前测：高亮选中项，允许改选（不锁定）
+        if (currentPhase === 'pretest') {
+            var allCards = document.querySelectorAll('.option-card, .tf-option-card');
+            allCards.forEach(function(c) { c.style.border = ''; c.style.backgroundColor = ''; });
+            if (cardEl) {
+                cardEl.style.border = '3px solid #1cb0f6';
+                cardEl.style.backgroundColor = '#e8f4fd';
+            }
+            isAnimating = false; // 解锁，允许改选
+            activatePretestNextButton();
+            return;
+        }
+
+        // 实战阶段：显示错误反馈+支架
         if (cardEl) cardEl.classList.add('wrong');
         if (window.SoundSystem) SoundSystem.playWrong();
         playWrongSound();
-        speakFeedback(false);     // 语音说英文
+        speakFeedback(false);
 
-        // 答错才显示提示（分层提示）
-        if (q && q.audio) {
-            const hint = getHint(q.audio);
-            if (hint) {
-                showProgressiveHint(hint, wrongAttempts);
-            }
+        // 增加错误计数
+        window.wrongCount = (window.wrongCount || 0) + 1;
+
+        // 执行三级支架逻辑（仅实战阶段）
+        if (q && typeof window.applyScaffolding === 'function') {
+            window.applyScaffolding(q, cardEl);
         }
-        increaseHintLevel();
 
-        // 答错后显示提示一段时间，但不显示底部面板（让学生继续尝试）
         setTimeout(() => {
             if (cardEl) cardEl.classList.remove('wrong');
-            hideCorrectHint();
+            // 支架提示保持显示，不隐藏（让学生有时间看清楚）
+            // progressive-hint 只在下一题加载时自动清除
+
             isAnimating = false;
         }, 2500);
     }
@@ -1279,12 +1862,20 @@ function showProgressiveHint(hint, level) {
         hintEl = document.createElement('div');
         hintEl.id = 'progressive-hint';
         hintEl.className = 'correct-hint';
-        document.getElementById('question-container').appendChild(hintEl);
+        // 插入到选项上方（而不是底部），确保学生看得到
+        var qContainer = document.getElementById('question-container');
+        var optionsGrid = qContainer.querySelector('.options-grid');
+        if (optionsGrid) {
+            qContainer.insertBefore(hintEl, optionsGrid);
+        } else {
+            // 没有 options-grid 时插入到最前面
+            qContainer.insertBefore(hintEl, qContainer.firstChild);
+        }
     }
 
     // 中文标签（学生看得懂）
     const icons = ['💡', '📝', '📖'];
-    const labels = ['提示：', '答案是：', ''];  // level3直接显示内容
+    const labels = ['💡 提示：', '📝 再看看：', ''];  // 不直接说"答案是"
 
     if (level === 2) {
         // Level 3: 直接显示中文指示
@@ -1361,6 +1952,7 @@ function showCorrectAnswerWithTranslation(q) {
     if (nextBtn) {
         nextBtn.disabled = false;
         nextBtn.style.pointerEvents = 'auto';
+        nextBtn.style.opacity = '1';
     }
 }
 
@@ -1400,17 +1992,49 @@ function showFeedbackPanel(isCorrect, question) {
     panel.id = 'feedback-panel';
     panel.className = `feedback-panel ${isCorrect ? 'correct' : 'wrong'}`;
 
-    // 获取鼓励语
-    const feedbackList = isCorrect ? feedbackMap.success : feedbackMap.encourage;
-    const feedback = feedbackList[Math.floor(Math.random() * feedbackList.length)];
+    // 获取鼓励语（细颗粒度连击反馈，每一个里程碑都有独特感受）
+    let feedbackTitle = '';
+    let comboPopClass = '';
+    if (isCorrect) {
+        var c = window.comboCount || 1;
+        if      (c >= 15) { feedbackTitle = '🏆 连对' + c + '题！神级传说！'; comboPopClass = 'combo-text-pop'; }
+        else if (c >= 10) { feedbackTitle = '👑 连对' + c + '题！王者风范！'; comboPopClass = 'combo-text-pop'; }
+        else if (c >= 9)  { feedbackTitle = '👑 连对9题！传奇就差一步！'; comboPopClass = 'combo-text-pop'; }
+        else if (c >= 8)  { feedbackTitle = '🔥🔥🔥 连对8题！完全在线！'; comboPopClass = 'combo-text-pop'; }
+        else if (c >= 7)  { feedbackTitle = '🔥🔥🔥 连对7题！停不下来！'; comboPopClass = 'combo-text-pop'; }
+        else if (c >= 6)  { feedbackTitle = '🔥🔥 连对6题！厉害了！'; comboPopClass = 'combo-text-pop'; }
+        else if (c >= 5)  { feedbackTitle = '🔥🔥 连对5题！势不可挡！'; comboPopClass = 'combo-text-pop'; }
+        else if (c >= 4)  { feedbackTitle = '🔥 连对4题！越来越好！'; comboPopClass = 'combo-text-pop'; }
+        else if (c >= 3)  { feedbackTitle = '🔥 连对3题！太燃了！'; comboPopClass = 'combo-text-pop'; }
+        else if (c >= 2)  { feedbackTitle = '连对2题！不错哦 🌟'; }
+        else              { feedbackTitle = '答对了！⭐'; }
+    } else {
+        const feedbackList = feedbackMap.encourage;
+        feedbackTitle = feedbackList[Math.floor(Math.random() * feedbackList.length)].cn;
+    }
 
     // 获取正确答案（从所有可能的字段中取）
     let answerWord = (question && question.sentence) || (question && question.word) || (question && question.audio) || (question && question.prompt) || (question && question.hint) || (question && question.expected) || '';
     let answerChinese = (question && question.chinese) || '';
 
+    // 判断题特殊处理：从解释句中提取核心中文词
+    if (question && (question.type === 'listen_tf' || question.type === 'read_tf')) {
+        answerWord = (question.word || question.audio || '');
+        // 尝试从解释句中提取核心词，如 "这是猴子，正确！" → "猴子"
+        if (answerChinese && answerChinese.length > 4) {
+            var extracted = answerChinese.replace(/这是/g, '').replace(/这不是/g, '').replace(/[,，。！正确]/g, '').trim();
+            // 如果提取后还是很长，就不显示
+            if (extracted.length <= 4) {
+                answerChinese = extracted;
+            } else {
+                answerChinese = '';
+            }
+        }
+    }
+
     // 最后一题时按钮文案改为"查看结果"
     var isLastQuestion = (currentQuestionIndex >= moduleQuestions.length - 1);
-    var continueBtnText = isLastQuestion ? '再来一次' : '继续';
+    var continueBtnText = isLastQuestion ? '查看结果 ✨' : '继续';
 
     // 构建面板内容
     let contentHTML = '';
@@ -1419,7 +2043,7 @@ function showFeedbackPanel(isCorrect, question) {
             <div class="feedback-panel-content">
                 <div class="feedback-icon">✓</div>
                 <div class="feedback-text">
-                    <div class="feedback-title">${feedback.cn}</div>
+                    <div class="feedback-title ${comboPopClass}" style="font-size: 20px;">${feedbackTitle}</div>
                     ${answerWord ? `<div class="feedback-answer"><span class="answer-word">${answerWord}</span>${answerChinese ? ` = ${answerChinese}` : ''}</div>` : ''}
                 </div>
             </div>
@@ -1430,7 +2054,7 @@ function showFeedbackPanel(isCorrect, question) {
             <div class="feedback-panel-content">
                 <div class="feedback-icon">✗</div>
                 <div class="feedback-text">
-                    <div class="feedback-title">${feedback.cn}</div>
+                    <div class="feedback-title">${feedbackTitle}</div>
                     ${answerWord ? `<div class="feedback-answer">正确答案：<span class="answer-word">${answerWord}</span>${answerChinese ? ` (${answerChinese})` : ''}</div>` : ''}
                 </div>
             </div>
@@ -1462,6 +2086,65 @@ function onFeedbackContinue() {
     } else {
         skipToNextQuestion();
     }
+}
+
+// ===== 题目难度自动标注（i+1 基础设施） =====
+// 根据题目客观特征（词数、字母数等）自动计算难度，不需要手动标注题库
+function getQuestionDifficulty(q) {
+    if (!q) return 'medium';
+    if (q.type === 'sentence_order') {
+        var wLen = q.words ? q.words.length : 0;
+        return wLen <= 3 ? 'easy' : wLen <= 5 ? 'medium' : 'hard';
+    }
+    if (q.type === 'word_puzzle' || q.type === 'word_spell' || q.type === 'pinyin_fill') {
+        var wordLen = (q.word || q.hint || '').replace(/_/g, '').length;
+        return wordLen <= 4 ? 'easy' : wordLen <= 6 ? 'medium' : 'hard';
+    }
+    if (q.type === 'listen_select' || q.type === 'listen_tf') {
+        var audioWords = (q.audio || '').split(' ').length;
+        return audioWords <= 2 ? 'easy' : audioWords <= 5 ? 'medium' : 'hard';
+    }
+    if (q.type === 'fill_blank') {
+        return q.image ? 'easy' : 'medium';
+    }
+    if (q.type === 'listen_sequence') {
+        // 听音排序是综合题，同时考察多个词的听力理解
+        return 'hard';
+    }
+    if (q.type === 'sentence_sequence') {
+        return 'hard';
+    }
+    if (q.type === 'repeat_word' || q.type === 'picture_speak') {
+        return 'easy';
+    }
+    if (q.type === 'repeat_sentence') {
+        var sWords = (q.sentence || q.word || '').split(' ').length;
+        return sWords <= 4 ? 'easy' : sWords <= 7 ? 'medium' : 'hard';
+    }
+    if (q.type === 'word_match') {
+        return 'easy';
+    }
+    if (q.type === 'sentence_match') {
+        var smText = q.sentence || q.word || '';
+        var smWords = smText.split(' ').length;
+        return smWords <= 4 ? 'easy' : smWords <= 7 ? 'medium' : 'hard';
+    }
+    if (q.type === 'tap_pair') {
+        // 图片配对为 medium，中文文字配对为 hard
+        var hasImage = q.pairs && q.pairs.length > 0 && q.pairs[0].match && q.pairs[0].match.indexOf('<img') !== -1;
+        return hasImage ? 'medium' : 'hard';
+    }
+    return 'medium';
+}
+
+// 给一组题目批量标注难度（在加载题目时调用）
+function labelQuestionDifficulty(questions) {
+    for (var i = 0; i < questions.length; i++) {
+        if (!questions[i].difficulty) {
+            questions[i].difficulty = getQuestionDifficulty(questions[i]);
+        }
+    }
+    return questions;
 }
 
 // ===== 动态难度调整 =====
@@ -1501,6 +2184,63 @@ function showDifficultyChangeNotice(direction) {
     }, 1500);
 }
 
+// 难度调整后，对剩余题目按新难度重新排序
+// 如果当前难度的题不够了，从已做过的题中回收同难度题（间隔重复 spaced repetition）
+function reorderRemainingQuestions() {
+    if (currentQuestionIndex >= moduleQuestions.length - 1) return;
+
+    var done = moduleQuestions.slice(0, currentQuestionIndex + 1);
+    var remaining = moduleQuestions.slice(currentQuestionIndex + 1);
+
+    // 检查剩余题中当前难度的题还有几道
+    var targetCount = remaining.filter(function(q) { return q.difficulty === currentDifficulty; }).length;
+
+    // 总题数上限：不能无限膨胀。最多比初始多5道回收题
+    var totalCap = PRACTICE_MAX_QUESTIONS + 5;
+    var canAdd = Math.max(0, totalCap - done.length - remaining.length);
+
+    // 如果当前难度的题不足3道且还有空间，从已做过的题中回收同难度题
+    if (targetCount < 3 && canAdd > 0) {
+        var recycled = [];
+        for (var i = 0; i < done.length; i++) {
+            if (done[i].difficulty === currentDifficulty) {
+                // 复制一份，标记为回收题，重新打乱顺序
+                var copy = JSON.parse(JSON.stringify(done[i]));
+                copy._recycled = true;
+                // 如果有scrambled字段（排序题），重新打乱
+                if (copy.scrambled && copy.words) {
+                    copy.scrambled = copy.words.slice().sort(function() { return Math.random() - 0.5; });
+                }
+                if (copy.chineseScrambled && copy.chineseWords) {
+                    copy.chineseScrambled = copy.chineseWords.slice().sort(function() { return Math.random() - 0.5; });
+                }
+                recycled.push(copy);
+            }
+        }
+        if (recycled.length > 0) {
+            // 只加到上限允许的数量
+            recycled = recycled.slice(0, canAdd);
+            remaining = remaining.concat(recycled);
+            console.log('[i+1] 回收 ' + recycled.length + ' 道 ' + currentDifficulty + ' 题（间隔重复）| 总题数:' + (done.length + remaining.length));
+        }
+    }
+
+    // 按当前难度排序
+    var diffOrder = { easy: 0, medium: 1, hard: 2 };
+    remaining.sort(function(a, b) {
+        var da = diffOrder[a.difficulty] !== undefined ? diffOrder[a.difficulty] : 1;
+        var db = diffOrder[b.difficulty] !== undefined ? diffOrder[b.difficulty] : 1;
+        if (currentDifficulty === 'hard') return db - da; // hard优先
+        if (currentDifficulty === 'easy') return da - db; // easy优先
+        return 0; // medium保持原序
+    });
+
+    moduleQuestions = done.concat(remaining);
+    var diffCounts = { easy: 0, medium: 0, hard: 0 };
+    remaining.forEach(function(q) { diffCounts[q.difficulty || 'medium']++; });
+    console.log('[i+1] 剩余题目按难度 ' + currentDifficulty + ' 重排 | easy:' + diffCounts.easy + ' medium:' + diffCounts.medium + ' hard:' + diffCounts.hard);
+}
+
 // ===== 计时器功能 =====
 function startQuestionTimer() {
     // 清除之前的计时器
@@ -1512,8 +2252,7 @@ function startQuestionTimer() {
     if (!currentTimeLimit || currentTimeLimit === 0) {
          const timerEl = document.getElementById('question-timer');
          if (timerEl) {
-             timerEl.textContent = '⏱️ 无限制';
-             timerEl.style.color = '';
+             timerEl.textContent = '';
          }
          return;
     }
@@ -1569,6 +2308,67 @@ function forceNextQuestion() {
     }, 1500);
 }
 
+// 前测专用：显示"下一题"按钮
+// 激活前测的"下一题"按钮（按钮已在renderQuestion中创建，这里只是激活）
+function activatePretestNextButton() {
+    var btn = document.getElementById('next-question-btn');
+    if (btn) {
+        btn.disabled = false;
+        btn.style.opacity = '1';
+        btn.style.background = 'linear-gradient(135deg, #1cb0f6, #0095e8)';
+        btn.style.boxShadow = '0 4px 0 #0077cc';
+        btn.style.color = 'white';
+    }
+}
+
+// 倒计时（前测和实战共用）
+var pretestTimerInterval = null;
+var pretestTimeRemaining = 0;
+
+function startPretestTimer(seconds) {
+    pretestTimeRemaining = seconds || 5 * 60;
+    // 等 renderQuestion() 创建 DOM 后再更新，避免第0秒空白
+    setTimeout(updatePretestTimerDisplay, 50);
+    pretestTimerInterval = setInterval(function() {
+        pretestTimeRemaining--;
+        updatePretestTimerDisplay();
+        if (pretestTimeRemaining <= 0) {
+            clearInterval(pretestTimerInterval);
+            pretestTimerInterval = null;
+            currentQuestionIndex = moduleQuestions.length;
+            // 实战时间到：先显示提示再跳转
+            if (currentPhase === 'practice') {
+                var toast = document.createElement('div');
+                toast.style.cssText = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,0.78);color:#fff;font-size:22px;font-weight:bold;padding:18px 36px;border-radius:18px;z-index:9999;pointer-events:none;';
+                toast.textContent = '⏰ 时间到！';
+                document.body.appendChild(toast);
+                setTimeout(function() { toast.remove(); renderQuestion(); }, 1500);
+            } else {
+                renderQuestion();
+            }
+        }
+    }, 1000);
+}
+
+
+function stopPretestTimer() {
+    if (pretestTimerInterval) {
+        clearInterval(pretestTimerInterval);
+        pretestTimerInterval = null;
+    }
+}
+
+function updatePretestTimerDisplay() {
+    var timerEl = document.getElementById('pretest-countdown');
+    if (!timerEl) return;
+    var min = Math.floor(pretestTimeRemaining / 60);
+    var sec = pretestTimeRemaining % 60;
+    timerEl.textContent = min + ':' + (sec < 10 ? '0' : '') + sec;
+    if (pretestTimeRemaining <= 60) {
+        timerEl.style.color = '#ff4b4b';
+    }
+}
+
 // 手动跳过/下一题按钮
 function skipToNextQuestion() {
     if (isAnimating) return;
@@ -1592,7 +2392,7 @@ function showCorrectHint(answer) {
         hint.className = 'correct-hint';
         document.getElementById('question-container').appendChild(hint);
     }
-    hint.innerHTML = `💡 提示：正确答案是 <strong>${answer}</strong>`;
+    hint.innerHTML = `💡 提示：<strong>${answer}</strong>`;
     hint.style.display = 'block';
 }
 
@@ -1608,13 +2408,14 @@ function hideCorrectHint() {
 }
 
 function onCorrect() {
-    if (currentPhase === 'practice') {
-        // 实战阶段：两人合作，都加分
-        players[0].stars += 1;
-        players[1].stars += 1;
-    } else {
-        // 前测阶段：只给当前回答的同学加分
-        players[currentPlayerIndex].stars += 1;
+    if (window.earnedStarThisTurn) {
+        if (currentPhase === 'practice') {
+            // 实战阶段：两人合作，都加⭐（实战才有星星）
+            players[0].stars += 1;
+            players[1].stars += 1;
+        }
+        // 前测：不加星 —— 前测目的是诊断，不是竞争
+        // 准确率数据已在 handleAnswer 的 pretestStats 中实时统计
     }
     updateHeader();
     createConfetti(15);
@@ -1628,30 +2429,558 @@ function onCorrect() {
     renderQuestion();
 }
 
+// ===== Memory Match Game (翻牌配对) =====
+function hasMemoryGameData() {
+    if (!currentLessonData || !currentLessonData.reading) return false;
+    var practiceWords = (currentLessonData.reading.practice || []).filter(function(q) {
+        return q.type === 'word_match';
+    });
+    var pretestWords = (currentLessonData.reading.pretest || []).filter(function(q) {
+        return q.type === 'word_match';
+    });
+    return (practiceWords.length + pretestWords.length) >= 4;
+}
+
+function getMemoryCards() {
+    var wordMatchQuestions = (currentLessonData.reading.practice || []).filter(function(q) {
+        return q.type === 'word_match';
+    });
+    if (wordMatchQuestions.length < 4) {
+        var pretestWords = (currentLessonData.reading.pretest || []).filter(function(q) {
+            return q.type === 'word_match';
+        });
+        wordMatchQuestions = wordMatchQuestions.concat(pretestWords);
+    }
+    // 去重（按 word 字段）
+    var seen = {};
+    var unique = [];
+    for (var i = 0; i < wordMatchQuestions.length; i++) {
+        if (!seen[wordMatchQuestions[i].word]) {
+            seen[wordMatchQuestions[i].word] = true;
+            unique.push(wordMatchQuestions[i]);
+        }
+    }
+    wordMatchQuestions = unique.slice(0, 4);
+
+    var cards = [];
+    for (var i = 0; i < wordMatchQuestions.length; i++) {
+        var q = wordMatchQuestions[i];
+        // 找到正确选项的图片
+        var imgSrc = '';
+        for (var j = 0; j < q.options.length; j++) {
+            var opt = q.options[j];
+            var optVal = typeof opt === 'object' ? opt.value : opt;
+            if (optVal === q.correct) {
+                var optText = typeof opt === 'object' ? opt.text : opt;
+                // 从 <img src="..."> 中提取 src
+                var srcMatch = optText.match(/src="([^"]+)"/);
+                if (srcMatch) imgSrc = srcMatch[1];
+                break;
+            }
+        }
+        cards.push({ type: 'word', content: q.word, pairId: i, imgSrc: '' });
+        cards.push({ type: 'image', content: imgSrc, pairId: i, word: q.word });
+    }
+    return shuffleArray(cards);
+}
+
+function showMemoryGame() {
+    var cards = getMemoryCards();
+    if (cards.length < 8) { proceedAfterPractice(); return; }
+
+    var container = document.getElementById('question-container');
+    var memoryState = {
+        cards: cards,
+        flippedIndices: [],   // 当前翻开的（最多2张）
+        matchedPairs: 0,
+        locked: false,        // 翻牌锁（等动画时不可点）
+        currentPlayer: 0      // 0 或 1
+    };
+
+    function getPlayerName(idx) {
+        return players[idx] ? players[idx].name.replace(/^\d+\.\s*/, '') : ('Student ' + (idx + 1));
+    }
+
+    function render() {
+        var html = '<div class="memory-game-container">';
+        html += '<div class="memory-game-title">🎮 翻牌配对！</div>';
+        html += '<div class="memory-game-rule">找出 <strong>单词 + 图片</strong> 的配对 · 翻错了换人</div>';
+        var flippedCount = memoryState.flippedIndices.length;
+        var turnMsg = flippedCount === 1 ? '已翻1张，再翻1张！' : '请翻2张牌';
+        html += '<div class="memory-game-turn">👉 <strong>' + getPlayerName(memoryState.currentPlayer) + '</strong> · ' + turnMsg + '</div>';
+        html += '<div class="memory-game-grid">';
+
+        for (var i = 0; i < memoryState.cards.length; i++) {
+            var card = memoryState.cards[i];
+            var isFlipped = memoryState.flippedIndices.indexOf(i) !== -1;
+            var isMatched = card.matched;
+            var classes = 'memory-card';
+            if (isFlipped || isMatched) classes += ' flipped';
+            if (isMatched) classes += ' matched';
+
+            var backContent = '';
+            if (card.type === 'word') {
+                backContent = '<span style="font-size:15px;font-weight:bold;">' + card.content + '</span>';
+            } else {
+                backContent = card.content ? '<img src="' + card.content + '" style="max-width:65px;max-height:65px;">' : '🖼️';
+            }
+
+            html += '<div class="' + classes + '" data-index="' + i + '">';
+            html += '<div class="memory-card-inner">';
+            html += '<div class="memory-card-front">❓</div>';
+            html += '<div class="memory-card-back">' + backContent + '</div>';
+            html += '</div></div>';
+        }
+
+        html += '</div>'; // grid
+
+        // 计分
+        html += '<div class="memory-game-scores">';
+        for (var p = 0; p < 2; p++) {
+            var activeClass = memoryState.currentPlayer === p ? ' active-scorer' : '';
+            html += '<div class="memory-score-item' + activeClass + '">';
+            html += getPlayerName(p) + ' ⭐' + (players[p] ? players[p].stars : 0);
+            html += '</div>';
+        }
+        html += '</div>';
+        html += '</div>'; // container
+
+        container.innerHTML = html;
+
+        // 绑定点击事件
+        var cardEls = container.querySelectorAll('.memory-card');
+        for (var j = 0; j < cardEls.length; j++) {
+            cardEls[j].addEventListener('click', onCardClick);
+        }
+    }
+
+    function onCardClick(e) {
+        if (memoryState.locked) return;
+
+        var cardEl = e.currentTarget;
+        var idx = parseInt(cardEl.getAttribute('data-index'));
+        var card = memoryState.cards[idx];
+
+        // 不能翻已配对的牌
+        if (card.matched) return;
+        // 不能翻当前已翻开的牌
+        if (memoryState.flippedIndices.indexOf(idx) !== -1) return;
+        // 最多翻2张
+        if (memoryState.flippedIndices.length >= 2) return;
+
+        // 翻牌
+        memoryState.flippedIndices.push(idx);
+        cardEl.classList.add('flipped');
+
+        if (memoryState.flippedIndices.length === 2) {
+            // 两张翻开，检查配对
+            memoryState.locked = true;
+            var idx1 = memoryState.flippedIndices[0];
+            var idx2 = memoryState.flippedIndices[1];
+            var card1 = memoryState.cards[idx1];
+            var card2 = memoryState.cards[idx2];
+
+            if (card1.pairId === card2.pairId && card1.type !== card2.type) {
+                // 配对成功！
+                setTimeout(function() {
+                    card1.matched = true;
+                    card2.matched = true;
+                    memoryState.matchedPairs++;
+
+                    // 加星
+                    if (players[memoryState.currentPlayer]) {
+                        players[memoryState.currentPlayer].stars++;
+                    }
+
+                    if (window.SoundSystem) SoundSystem.playCorrect();
+
+                    memoryState.flippedIndices = [];
+                    memoryState.locked = false;
+
+                    if (memoryState.matchedPairs >= 4) {
+                        // 游戏结束
+                        render();
+                        createConfetti(20);
+                        setTimeout(function() {
+                            proceedAfterPractice();
+                        }, 2000);
+                    } else {
+                        render(); // 不换人，继续翻
+                    }
+                }, 500);
+            } else {
+                // 不配对
+                setTimeout(function() {
+                    if (window.SoundSystem) SoundSystem.playWrong();
+
+                    // 翻回去
+                    memoryState.flippedIndices = [];
+                    // 换人
+                    memoryState.currentPlayer = memoryState.currentPlayer === 0 ? 1 : 0;
+                    memoryState.locked = false;
+                    render();
+                }, 1000);
+            }
+        }
+    }
+
+    render();
+}
+
+// ===== Unit Project (单元小项目, L4 only) =====
+var projectMap = {
+    'U1L4': {
+        title: '\ud83e\udd81 \u8bbe\u8ba1\u4f60\u7684\u52a8\u7269\u56ed',
+        task: '\u90093\u4e2a\u4f60\u6700\u559c\u6b22\u7684\u52a8\u7269\uff0c\u7528\u82f1\u6587\u4ecb\u7ecd\u5b83\u4eec\uff01',
+        example: '\u4f8b\u5982\uff1a"This is a bear. It\'s big. I like it!"',
+        icon: '\ud83c\udfde\ufe0f'
+    },
+    'U2L4': {
+        title: '\ud83d\udc57 \u6211\u7684\u65f6\u88c5\u79c0',
+        task: '\u90093\u4ef6\u8863\u670d\u642d\u914d\u4e00\u5957\u7a7f\u642d\uff0c\u7528\u82f1\u6587\u4ecb\u7ecd\u4f60\u7684\u642d\u914d\uff01',
+        example: '\u4f8b\u5982\uff1a"I wear a T-shirt and shorts. My shoes are white!"',
+        icon: '\ud83d\udc54'
+    },
+    'U3L4': {
+        title: '\ud83d\udcc5 \u6211\u7684\u5b8c\u7f8e\u4e00\u5929',
+        task: '\u5b89\u6392\u4f60\u7684\u4e00\u5929\uff0c\u7528\u82f1\u6587\u8bf4\u51fa3\u4e2a\u65f6\u95f4\u548c\u6d3b\u52a8\uff01',
+        example: '\u4f8b\u5982\uff1a"It\'s 7 o\'clock. It\'s time for breakfast!"',
+        icon: '\u23f0'
+    },
+    'U4L4': {
+        title: '\ud83c\udf7d\ufe0f \u8bbe\u8ba1\u4f60\u7684\u83dc\u5355',
+        task: '\u4e3a\u4f60\u7684\u9910\u5385\u8bbe\u8ba1\u83dc\u5355\uff0c\u7528\u82f1\u6587\u4ecb\u7ecd\u65e9\u9910\u3001\u5348\u9910\u548c\u665a\u9910\u5404\u6709\u4ec0\u4e48\uff01',
+        example: '\u4f8b\u5982\uff1a"For breakfast, we have eggs and milk!"',
+        icon: '\ud83d\udccb'
+    }
+};
+
+function proceedAfterPractice() {
+    var lessonId = getCurrentLessonId();
+    if (lessonId && projectMap[lessonId]) {
+        showUnitProject(lessonId);
+    } else {
+        showFinishScreen();
+    }
+}
+
+function showUnitProject(lessonId) {
+    var project = projectMap[lessonId];
+    if (!project) { showFinishScreen(); return; }
+
+    var container = document.getElementById('question-container');
+
+    function getPlayerName(idx) {
+        return players[idx] ? players[idx].name.replace(/^\d+\.\s*/, '') : ('Student ' + (idx + 1));
+    }
+
+    var html = '<div class="unit-project-container">';
+    html += '<div class="unit-project-icon">' + project.icon + '</div>';
+    html += '<div class="unit-project-title">' + project.title + '</div>';
+    html += '<div class="unit-project-task">' + project.task + '</div>';
+    html += '<div class="unit-project-example">' + project.example + '</div>';
+
+    // 口头任务说明（iOS 12 不支持 MediaRecorder，用纯口头方案）
+    html += '<div class="unit-project-instruction">\ud83d\udde3\ufe0f \u4e24\u4e2a\u4eba\u4e00\u8d77\u8ba8\u8bba\uff0c\u7136\u540e\u8f6e\u6d41\u7528\u82f1\u6587\u4ecb\u7ecd\u4f60\u4eec\u7684\u4f5c\u54c1\uff01</div>';
+
+    // 两位学生的任务卡片
+    for (var p = 0; p < 2; p++) {
+        html += '<div class="unit-project-player-card">';
+        html += '<div class="unit-project-player-name">\ud83d\udc64 ' + getPlayerName(p) + '</div>';
+        html += '<div class="unit-project-player-status">\ud83c\udfa4 \u8bf7\u53e3\u5934\u5b8c\u6210\u4efb\u52a1</div>';
+        html += '</div>';
+    }
+
+    // 按钮
+    html += '<div class="unit-project-buttons">';
+    html += '<button class="unit-project-btn skip" onclick="skipUnitProject()">\u23ed\ufe0f \u8df3\u8fc7</button>';
+    html += '<button class="unit-project-btn complete" onclick="completeUnitProject()">\u2705 \u5b8c\u6210\uff01</button>';
+    html += '</div>';
+
+    html += '</div>';
+
+    container.innerHTML = html;
+}
+
+function skipUnitProject() {
+    showFinishScreen();
+}
+
+function completeUnitProject() {
+    // 两人各得3⭐奖励星
+    if (players[0]) players[0].stars += 3;
+    if (players[1]) players[1].stars += 3;
+    createConfetti(30);
+
+    if (window.SoundSystem) SoundSystem.playCorrect();
+
+    // 短暂延迟后进入结果页
+    setTimeout(function() {
+        showFinishScreen();
+    }, 1500);
+}
+
+// ===== 宝石 & 段位系统 =====
+
+// 宝石存储：每位学生独立累积（因为搭档每节课可能不同）
+function loadPlayerGems(studentId) {
+    try { return JSON.parse(localStorage.getItem('merryGems_' + studentId) || '{"total":0}'); }
+    catch(e) { return { total: 0 }; }
+}
+function savePlayerGems(studentId, data) {
+    try { localStorage.setItem('merryGems_' + studentId, JSON.stringify(data)); } catch(e) {}
+}
+
+// 本节课的星星换算成宝石（10⭐ = 1💎，每10颗才换一颗，让宝石有价值感）
+function convertStarsToGems(sessionStars) {
+    return Math.floor(sessionStars / 10);
+}
+
+// 段位（按小组两人中总宝石数平均值判断）
+function getGroupRank(avgGems) {
+    if (avgGems >= 60) return { icon: '👑', name: '传奇', color: '#FFD700', desc: '顶级！' };
+    if (avgGems >= 30) return { icon: '💎', name: '精英', color: '#b980f0', desc: '出类拔萃' };
+    if (avgGems >= 15) return { icon: '🔥', name: '达人', color: '#ff6b35', desc: '相当厉害' };
+    if (avgGems >= 5)  return { icon: '🌟', name: '学徒', color: '#1cb0f6', desc: '进步很快' };
+    return                   { icon: '🌱', name: '新芽', color: '#58cc02', desc: '刚刚起步' };
+}
+
+// 本节课称号（当堂行为，结束时即时评定）
+function getSessionTitles(sessionStars, totalQuestions, maxCombo, hadMistakes, p1PretestAcc, p2PretestAcc) {
+    var titles = [];
+    // 正确率（实战）
+    var acc = totalQuestions > 0 ? sessionStars / totalQuestions : 0;
+    if (acc >= 1.0 && totalQuestions > 0)  titles.push({ icon: '👑', name: '无懈可击', desc: '100% 全对！' });
+    else if (acc >= 0.9)                   titles.push({ icon: '🎯', name: '精准射手', desc: '正确率 90%+' });
+    // 连胜
+    if (maxCombo >= 10)      titles.push({ icon: '🔥', name: '传奇连胜', desc: '连对 ' + maxCombo + ' 题！' });
+    else if (maxCombo >= 7)  titles.push({ icon: '🔥', name: '连胜王', desc: '连对 ' + maxCombo + ' 题' });
+    else if (maxCombo >= 5)  titles.push({ icon: '🔥', name: '势如破竹', desc: '连对 ' + maxCombo + ' 题' });
+    // 坚持完成
+    if (hadMistakes && totalQuestions > 0) titles.push({ icon: '💪', name: '永不放弃', desc: '遇挫但完成了全部题目' });
+    // 前测默契搭档（两人前测都≥70%）
+    if (typeof p1PretestAcc !== 'undefined' && typeof p2PretestAcc !== 'undefined') {
+        if (p1PretestAcc >= 70 && p2PretestAcc >= 70) titles.push({ icon: '🤝', name: '默契搭档', desc: '两人前测均 70%+' });
+    }
+    return titles;
+}
+
+// 计算距下一段位还差多少
+function getNextRankInfo(avgGems) {
+    var tiers = [
+        { at: 5,  name: '学徒', icon: '🌟', color: '#1cb0f6' },
+        { at: 15, name: '达人', icon: '🔥', color: '#ff6b35' },
+        { at: 30, name: '精英', icon: '💎', color: '#b980f0' },
+        { at: 60, name: '传奇', icon: '👑', color: '#FFD700' }
+    ];
+    for (var i = 0; i < tiers.length; i++) {
+        if (avgGems < tiers[i].at) {
+            var prev = i > 0 ? tiers[i-1].at : 0;
+            return {
+                next: tiers[i].at, nextName: tiers[i].name,
+                nextIcon: tiers[i].icon, nextColor: tiers[i].color,
+                need: tiers[i].at - avgGems,
+                progress: (avgGems - prev) / (tiers[i].at - prev)
+            };
+        }
+    }
+    return null;
+}
+
+// 数字从0滚动到目标值（ease-out cubic）
+function animateFinishNumbers(stars, gems, combo) {
+    function countUp(elId, target, duration, delay) {
+        setTimeout(function() {
+            var el = document.getElementById(elId);
+            if (!el) return;
+            if (target === 0) { el.textContent = 0; return; }
+            var start = null;
+            function step(ts) {
+                if (!start) start = ts;
+                var pct = Math.min((ts - start) / duration, 1);
+                var eased = 1 - Math.pow(1 - pct, 3);
+                el.textContent = Math.round(target * eased);
+                if (pct < 1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+        }, delay);
+    }
+    countUp('finish-num-stars', stars, 900, 100);
+    countUp('finish-num-gems',  gems,  700, 400);
+    countUp('finish-num-combo', combo, 600, 700);
+}
+
 function showFinishScreen() {
-    document.getElementById('game-screen').classList.remove('active');
+    checkAndShowAchievements(renderFinishScreen);
+}
+
+function renderFinishScreen() {
+    var screens = document.querySelectorAll('.screen');
+    for (var i = 0; i < screens.length; i++) screens[i].classList.remove('active');
     document.getElementById('finish-screen').classList.add('active');
 
-    // Show final scores
-    const finishStars = document.getElementById('finish-stars');
-    finishStars.innerHTML = `
-        <div style="margin-bottom: 20px;">
-            <div style="font-size: 24px; margin: 10px 0;">${players[0].name}: ⭐ ${players[0].stars}</div>
-            <div style="font-size: 24px; margin: 10px 0;">${players[1].name}: ⭐ ${players[1].stars}</div>
-        </div>
-        <div style="display: flex; margin-top: 20px; padding: 0 20px;">
-            <button onclick="restartCurrentModule()" style="flex: 1; margin-right: 10px; padding: 15px; font-size: 16px; background: #fff; border: 2px solid #1cb0f6; color: #1cb0f6; border-radius: 12px; cursor: pointer;">
-                🔄 再来一次
-            </button>
-            <button onclick="location.reload()" style="flex: 1; padding: 15px; font-size: 16px; background: #58cc02; border: none; color: white; border-radius: 12px; cursor: pointer;">
-                🏠 返回首页
-            </button>
-        </div>
-    `;
+    // 结果页：隐藏所有答题状态 chrome（干净庆祝感）
+    ['turn-indicator', 'question-progress', 'quiz-seg-bar'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+    });
+
+    var finishStars = document.getElementById('finish-stars');
+    var s0 = players[0].stars;
+    var totalQ = moduleQuestions.length;
+    var maxCombo = Math.max(pretestStats.player1.maxCombo || 0, pretestStats.player2.maxCombo || 0,
+                            window.sessionMaxCombo || 0);
+    var name1 = players[0] ? players[0].name.replace(/^\d+\.\s*/, '') : 'A';
+    var name2 = players[1] ? players[1].name.replace(/^\d+\.\s*/, '') : 'B';
+    var groupName = name1 + ' & ' + name2;
+
+    function extractId(n) { var m = n.match(/^(\d+)/); return m ? m[1] : n; }
+    var id1 = extractId(players[0].name);
+    var id2 = extractId(players[1] ? players[1].name : '');
+
+    var newGems = convertStarsToGems(s0);
+    var gem1data = loadPlayerGems(id1); gem1data.total = (gem1data.total || 0) + newGems; savePlayerGems(id1, gem1data);
+    var gem2data = loadPlayerGems(id2); gem2data.total = (gem2data.total || 0) + newGems; savePlayerGems(id2, gem2data);
+    var avgGems = Math.round((gem1data.total + gem2data.total) / 2);
+
+    var rank     = getGroupRank(avgGems);
+    var nextRank = getNextRankInfo(avgGems);
+
+    var p1PretestAcc = savedPretestSnapshot && savedPretestSnapshot.player1 && savedPretestSnapshot.player1.total > 0
+        ? Math.round(savedPretestSnapshot.player1.correct / savedPretestSnapshot.player1.total * 100) : undefined;
+    var p2PretestAcc = savedPretestSnapshot && savedPretestSnapshot.player2 && savedPretestSnapshot.player2.total > 0
+        ? Math.round(savedPretestSnapshot.player2.correct / savedPretestSnapshot.player2.total * 100) : undefined;
+    var hadMistakes = (pretestStats.player1.total > pretestStats.player1.correct) ||
+                      (pretestStats.player2.total > pretestStats.player2.correct);
+    var sessionTitles = getSessionTitles(s0, totalQ, maxCombo, hadMistakes, p1PretestAcc, p2PretestAcc);
+    var newAchs = window.sessionNewAchievements || [];
+
+    // === 鼓励语（Bandura: Verbal Persuasion）===
+    var acc = totalQ > 0 ? s0 / totalQ : 0;
+    var encouragement;
+    if (acc >= 1.0 && totalQ > 0) encouragement = '完美！全部答对！你们真的太厉害了！';
+    else if (acc >= 0.9)          encouragement = '几乎全对！太拼了，继续保持！';
+    else if (acc >= 0.7)          encouragement = '做得不错！多练几次就更棒了！';
+    else if (maxCombo >= 5)       encouragement = '连胜厉害！下次可以答得更准！';
+    else                          encouragement = '坚持到底！每次练习都在进步！';
+
+    // === 最佳称号（取第1个最重要的，最多2个）===
+    var topTitles = sessionTitles.slice(0, 2);
+
+    var html = '';
+
+    // ── Layer 1：英雄区（最大、第一眼） ─────────────────────────────
+    // Bandura: Mastery Experience + Social Constructivism（两人共同成果）
+    html += '<div style="text-align:center;padding:28px 20px 0;">';
+    html += '<div style="font-size:11px;color:#bbb;letter-spacing:2px;margin-bottom:8px;text-transform:uppercase;">闯关赛完成 🎉</div>';
+    html += '<div style="font-size:21px;font-weight:900;color:#2c3e50;margin-bottom:20px;">' + groupName + '</div>';
+
+    // 大星星数字
+    html += '<div style="position:relative;display:inline-block;margin-bottom:4px;">';
+    html += '<div id="finish-num-stars" style="font-size:72px;font-weight:900;line-height:1;color:#f5a623;font-variant-numeric:tabular-nums;">0</div>';
+    html += '<div style="font-size:16px;color:#bbb;margin-top:2px;font-weight:600;">颗星星 ⭐</div>';
+    html += '</div>';
+
+    // 称号徽章（Bandura: Mastery Experience 即时认可）
+    if (topTitles.length > 0) {
+        html += '<div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:16px 0 0;">';
+        topTitles.forEach(function(t) {
+            html += '<div style="display:inline-flex;align-items:center;gap:6px;background:white;border-radius:24px;padding:8px 16px;border:2px solid #eee;box-shadow:0 2px 8px rgba(0,0,0,0.06);">';
+            html += '<span style="font-size:18px;">' + t.icon + '</span>';
+            html += '<div style="text-align:left;"><div style="font-size:14px;font-weight:800;color:#333;">' + t.name + '</div>';
+            html += '<div style="font-size:11px;color:#aaa;">' + t.desc + '</div></div>';
+            html += '</div>';
+        });
+        html += '</div>';
+    }
+
+    // 鼓励语（Bandura: Verbal Persuasion）
+    html += '<div style="margin:14px 20px 0;font-size:15px;color:#666;line-height:1.5;font-style:italic;">"' + encouragement + '"</div>';
+    html += '</div>'; // Layer 1 end
+
+    // ── Layer 2：次要数据（连胜 — 小，不抢焦点）────────────────────
+    if (maxCombo >= 3) {
+        html += '<div style="text-align:center;margin:18px 20px 0;">';
+        html += '<div style="display:inline-flex;align-items:center;gap:6px;background:#fff4ee;border-radius:20px;padding:6px 16px;border:1.5px solid rgba(255,130,0,0.2);">';
+        html += '<span style="font-size:16px;">🔥</span>';
+        html += '<span style="font-size:13px;font-weight:700;color:#ff6b35;">最长连胜 <span id="finish-num-combo" style="font-size:16px;">0</span> 题</span>';
+        html += '</div></div>';
+    }
+
+    // ── Layer 3：ZPD进度（Vygotsky: 可见的下一步目标）──────────────
+    html += '<div style="margin:18px 16px 0;background:linear-gradient(135deg,' + rank.color + '15,' + rank.color + '05);border-radius:18px;padding:14px 16px;border:1.5px solid ' + rank.color + '25;">';
+
+    // 当前段位 + 新增宝石标记
+    html += '<div style="display:flex;align-items:center;gap:10px;margin-bottom:' + (nextRank ? '12px' : '0') + ';">';
+    html += '<div style="font-size:26px;">' + rank.icon + '</div>';
+    html += '<div style="flex:1;"><div style="font-size:15px;font-weight:800;color:' + rank.color + ';">' + rank.name + '</div>';
+    html += '<div style="font-size:11px;color:#999;margin-top:1px;">累计 ' + avgGems + ' 💎</div></div>';
+    if (newGems > 0) {
+        html += '<div style="background:' + rank.color + ';color:white;font-size:12px;font-weight:700;padding:4px 10px;border-radius:20px;">+' + newGems + ' 💎</div>';
+    }
+    html += '</div>';
+
+    // 进度条（ZPD: 距下一段位"跳一跳够得着"）
+    if (nextRank) {
+        html += '<div style="display:flex;align-items:center;gap:8px;">';
+        html += '<span style="font-size:14px;">' + rank.icon + '</span>';
+        html += '<div style="flex:1;background:rgba(0,0,0,0.08);border-radius:20px;height:8px;overflow:hidden;">';
+        html += '<div id="rank-progress-bar" style="height:100%;width:0%;background:' + rank.color + ';border-radius:20px;transition:width 1.2s cubic-bezier(0.34,1.2,0.64,1);"></div>';
+        html += '</div>';
+        html += '<span style="font-size:14px;">' + nextRank.nextIcon + '</span>';
+        html += '</div>';
+        html += '<div style="text-align:center;font-size:12px;color:#888;margin-top:7px;">再得 <strong style="color:' + nextRank.nextColor + ';">' + nextRank.need + '</strong> 颗 💎 就升级到 ' + nextRank.nextName + '！</div>';
+    }
+    html += '</div>'; // Layer 3 end
+
+    // ── 按钮区 ────────────────────────────────────────────────────
+    // ── 按钮区：只保留「再来一次」（每台手机固定一对学生）──────────
+    html += '<div style="padding:20px 16px 32px;">';
+    html += '<button onclick="restartCurrentModule()" style="width:100%;padding:16px;font-size:18px;font-weight:700;background:linear-gradient(135deg,#58cc02,#46a302);border:none;color:white;border-radius:16px;cursor:pointer;box-shadow:0 4px 14px rgba(88,204,2,0.35);">🔄 再来一次</button>';
+    html += '</div>';
+
+    finishStars.innerHTML = html;
 
     createConfetti(50);
     syncStudentProgress(true);
+
+    // 数字动画（DOM设置后才能拿到元素）
+    animateFinishNumbers(s0, newGems, maxCombo);
+
+    // 段位进度条（延迟让CSS transition触发）
+    setTimeout(function() {
+        var bar = document.getElementById('rank-progress-bar');
+        if (bar && nextRank) bar.style.width = Math.max(4, Math.round(nextRank.progress * 100)) + '%';
+    }, 300);
+
+    // 飞书宝石备份（延迟2秒，避免与成绩上传冲突）
+    setTimeout(function() {
+        try {
+            var scfUrl = 'https://1316992450-2fbeeh6iet.ap-guangzhou.tencentscf.com/';
+            var lessonId    = (currentLessonData && currentLessonData.id)    ? currentLessonData.id    : '';
+            var lessonTitle = (currentLessonData && currentLessonData.title) ? currentLessonData.title : '';
+            function sendGemsRecord(studentName, totalGems, newGemsThis) {
+                var payload = {
+                    studentName: studentName, timestamp: Date.now(),
+                    examType: 'gems_backup', score: newGemsThis, maxScore: totalGems,
+                    accuracy: totalGems, phase: '实战', wrongWords: '',
+                    lessonTitle: lessonId + ' ' + lessonTitle,
+                    listeningScore:0, readingScore:0, writingScore:0, speakingScore:0
+                };
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', scfUrl, true);
+                xhr.setRequestHeader('Content-Type', 'application/json');
+                xhr.timeout = 15000;
+                xhr.onload  = function() { console.log('[飞书💎] ' + studentName + ' 备份成功，累计=' + totalGems); };
+                xhr.onerror = function() { console.warn('[飞书💎] ' + studentName + ' 备份失败'); };
+                xhr.send(JSON.stringify(payload));
+            }
+            sendGemsRecord(name1, gem1data.total, newGems);
+            setTimeout(function() { sendGemsRecord(name2, gem2data.total, newGems); }, 600);
+        } catch(e) { console.warn('[飞书💎] 备份出错:', e); }
+    }, 2000);
 }
+
 
 // 重新开始当前模块
 function restartCurrentModule() {
@@ -1837,3 +3166,587 @@ function createConfetti(count) {
         }, 2000);
     }
 }
+
+// ---- Scaffolding Injection ---- 
+// Helper: get useful Chinese hint (skip generic labels like "情景选择")
+function getUsefulChineseHint(q) {
+    var genericLabels = ['情景选择', '场景选择', '情境选择'];
+    if (q.chinese && genericLabels.indexOf(q.chinese) === -1) {
+        return q.chinese;
+    }
+    // For scenario questions, find the correct answer text from options
+    if (q.options && q.correct !== undefined) {
+        for (var i = 0; i < q.options.length; i++) {
+            var opt = q.options[i];
+            var isObj = typeof opt === 'object' && opt !== null;
+            if (isObj && (opt.value === q.correct || opt.value === 'correct')) {
+                return opt.text || '';
+            } else if (!isObj && i === q.correct) {
+                return String(opt);
+            }
+        }
+    }
+    return q.sentence || q.word || q.text || '';
+}
+
+window.applyScaffolding = function(q, cardEl) {
+    const container = document.getElementById('question-container');
+    if (!container) return;
+    
+    const isSelectionType = ['listen_select', 'speak_select', 'word_match', 'sentence_match', 'fill_blank', 'read_select', 'letter_select', 'word_spell', 'sentence_fill', 'pinyin_fill', 'scenario'].indexOf(q.type) !== -1;
+    const isTFType = ['listen_tf', 'read_tf'].indexOf(q.type) !== -1;
+    const isOrderType = q.type === 'sentence_order' || q.type === 'duo_sentence' || q.type === 'sentence_sequence';
+    const isPuzzleType = q.type === 'word_puzzle' || q.type === 'duo_spell';
+    const isSpeakingType = ['repeat_word', 'repeat_sentence', 'picture_speak'].indexOf(q.type) !== -1;
+
+    var wrongCount = window.wrongCount || 0;
+
+    if (isSelectionType) {
+        // === 4级支架（ZPD渐进原则）===
+        // 错1: 仅重播音频，不显示文字 → 4选项全保留
+        // 错2: 显示英文句子（提示级，不是"答案是"）→ 4选项全保留
+        // 错3: 英文+中文（答案级）+ 灰掉1个错误选项 → 3选项
+        // 错4+: 高亮正确答案（直接引导）→ 3选项
+
+        var engText = q.sentence || q.word || q.text || q.audio || '';
+        var chText = getUsefulChineseHint(q) || q.chinese || '';
+        var isListenType = (q.type.indexOf('listen') !== -1);
+
+        // 通用：灰掉错误选项，保留 keepCount 个可点击
+        function grayWrongOptions(keepCount) {
+            var allOpts = Array.from(container.querySelectorAll('.option-card'));
+            var alreadyGrayed = allOpts.filter(function(o) { return o.style.opacity === '0.3'; }).length;
+            var activeOpts = allOpts.filter(function(o) { return o.style.opacity !== '0.3'; });
+            var wrongOpts = activeOpts.filter(function(opt, idx) {
+                var globalIdx = allOpts.indexOf(opt);
+                if (opt === cardEl || opt.classList.contains('correct')) return false;
+                if (q.options && q.options.length === allOpts.length) {
+                    var dataOpt = q.options[globalIdx];
+                    var isObj = typeof dataOpt === 'object' && dataOpt !== null;
+                    if (isObj) return !(dataOpt.value === q.correct || dataOpt.value === q.word);
+                    else return globalIdx !== q.correct;
+                } else {
+                    var cText = q.options && typeof q.correct === 'number' ? q.options[q.correct] : null;
+                    if (cText && typeof cText === 'object') cText = cText.text || cText.value;
+                    return !(cText && opt.textContent.trim() === cText.toString().trim());
+                }
+            });
+            var toGray = Math.max(0, activeOpts.length - keepCount);
+            for (var i = 0; i < toGray && i < wrongOpts.length; i++) {
+                wrongOpts[i].style.opacity = '0.3';
+                wrongOpts[i].style.pointerEvents = 'none';
+            }
+        }
+
+        if (wrongCount === 1) {
+            // 第1级：仅重播音频，不给任何文字提示
+            if (q.audio && window.speakWord) speakWord(q.audio);
+            // 非听力类型给最轻量提示
+            if (!isListenType && chText) {
+                showProgressiveHint('再仔细看看，想想意思', 0);
+            }
+
+        } else if (wrongCount === 2) {
+            // 第2级：显示提示 → 4选项保持
+            if (q.audio && window.speakWord) speakWord(q.audio);
+
+            // scenario 听力题特殊处理：重播+强化情境中文理解（不泄露英文关键词）
+            if (q.context && isListenType) {
+                var contextHint = q.question || q.context || '再听一次，想想情境里问了什么';
+                showProgressiveHint('💡 ' + contextHint + '\n再仔细听一遍！', 0);
+                var hEl2 = document.getElementById('progressive-hint');
+                if (hEl2) { hEl2.style.fontSize = '16px'; hEl2.style.color = '#ff9500'; hEl2.style.whiteSpace = 'pre-line'; }
+            } else {
+                var showText = isListenType ? engText : (engText || chText);
+                if (showText) {
+                    showProgressiveHint(showText, 0);
+                    var hEl2 = document.getElementById('progressive-hint');
+                    if (hEl2) {
+                        hEl2.style.fontSize = '20px';
+                        hEl2.style.fontWeight = 'bold';
+                        hEl2.style.color = '#1cb0f6';
+                    }
+                }
+            }
+
+        } else if (wrongCount === 3) {
+            // 第3级：英文+中文同时显示（明确告知答案）+ 灰掉1个错误选项 → 3选项
+            if (q.audio && window.speakWord) speakWord(q.audio);
+            var hint3 = engText;
+            if (chText) hint3 = engText + '\n' + chText;
+            if (hint3) {
+                showProgressiveHint(hint3, 1); // 📝 再看看：
+                var hEl3 = document.getElementById('progressive-hint');
+                if (hEl3) {
+                    hEl3.style.fontSize = '20px';
+                    hEl3.style.whiteSpace = 'pre-line';
+                }
+            }
+            grayWrongOptions(3); // 只灰1个，保留3个可点
+
+        } else if (wrongCount >= 4) {
+            // 第4级：高亮正确答案（直接引导点对）
+            var allOpts4 = Array.from(container.querySelectorAll('.option-card'));
+            allOpts4.forEach(function(opt, idx) {
+                var isCorrectNode = false;
+                if (q.options && q.options.length === allOpts4.length) {
+                    var dataOpt = q.options[idx];
+                    var isObj = typeof dataOpt === 'object' && dataOpt !== null;
+                    if (isObj) isCorrectNode = (dataOpt.value === q.correct || dataOpt.value === q.word);
+                    else isCorrectNode = (idx === q.correct);
+                } else {
+                    var cText = q.options && typeof q.correct === 'number' ? q.options[q.correct] : null;
+                    if (cText && typeof cText === 'object') cText = cText.text || cText.value;
+                    if (cText && opt.textContent.trim() === cText.toString().trim()) isCorrectNode = true;
+                }
+                if (isCorrectNode) opt.classList.add('scaffold-highlight');
+            });
+        }
+    } else if (isTFType) {
+        // === TF判断题 4级支架 ===
+        // 错1: 仅重播音频      → 2个选项保持
+        // 错2: 显示英文句子    → 2个选项保持
+        // 错3: 英文+中文翻译   → 2个选项保持（只有2个没法灰掉）
+        // 错4+: 高亮正确按钮
+        var tfEngText = q.sentence || q.word || q.text || q.audio || '';
+        var tfChText = q.chinese || '';
+
+        if (wrongCount === 1) {
+            if (q.audio && window.speakWord) speakWord(q.audio);
+        } else if (wrongCount === 2) {
+            if (q.audio && window.speakWord) speakWord(q.audio);
+            if (tfEngText) {
+                showProgressiveHint(tfEngText, 0);
+                var hElTF2 = document.getElementById('progressive-hint');
+                if (hElTF2) { hElTF2.style.fontSize = '20px'; hElTF2.style.color = '#1cb0f6'; }
+            }
+        } else if (wrongCount === 3) {
+            if (q.audio && window.speakWord) speakWord(q.audio);
+            var tfHint3 = tfEngText + (tfChText ? '\n' + tfChText : '');
+            showProgressiveHint(tfHint3, 1);
+            var hElTF3 = document.getElementById('progressive-hint');
+            if (hElTF3) hElTF3.style.whiteSpace = 'pre-line';
+        } else if (wrongCount >= 4) {
+            var tfBtns = Array.from(container.querySelectorAll('.tf-btn, .tf-option-card'));
+            tfBtns.forEach(function(btn) {
+                var isTrueBtn = btn.textContent.indexOf('√') !== -1 || btn.textContent.indexOf('对') !== -1;
+                if ((q.isTrue && isTrueBtn) || (!q.isTrue && !isTrueBtn)) {
+                    btn.classList.add('scaffold-highlight');
+                }
+            });
+        }
+
+    } else if (isOrderType || isPuzzleType) {
+        // === 排序/拼词题 4级支架 ===
+
+        // sentence_sequence 特殊处理（句子排序，不是词排序）
+        if (q.type === 'sentence_sequence') {
+            var seqSentences = q.sentences || [];
+            var firstSentence = seqSentences[0] || '';
+            if (wrongCount === 1) {
+                // Level 1：启发式提示（不给答案）
+                showProgressiveHint('想想故事的开头是哪一句？', 0);
+            } else if (wrongCount === 2) {
+                // Level 2：显示每句话的中文翻译帮助理解（不给顺序）
+                var chHint = q.chineseHint || q.chinese || '';
+                if (chHint && chHint.indexOf('排') === -1) {
+                    // chineseHint 是真正的翻译内容
+                    showProgressiveHint('💡 句子的意思：\n' + chHint, 0);
+                } else {
+                    // 没有翻译，给通用提示
+                    showProgressiveHint('💡 想想这几句话在讲一个什么故事？先找"介绍"的那句', 0);
+                }
+                var hElSeq = document.getElementById('progressive-hint');
+                if (hElSeq) { hElSeq.style.fontSize = '15px'; hElSeq.style.color = '#ff9500'; hElSeq.style.whiteSpace = 'pre-line'; }
+            } else if (wrongCount === 3) {
+                // Level 3：告诉第一句（给起点，剩下2句自己排）
+                showProgressiveHint('💡 第一句是："' + firstSentence + '"', 0);
+                var hElSeq2 = document.getElementById('progressive-hint');
+                if (hElSeq2) { hElSeq2.style.fontSize = '16px'; hElSeq2.style.color = '#1cb0f6'; }
+            } else if (wrongCount >= 4) {
+                // Level 4：告诉前两句（只剩最后一句自己点）
+                var secondSentence = seqSentences[1] || '';
+                showProgressiveHint('💡 前两句："' + firstSentence + '" → "' + secondSentence + '"', 0);
+                var hElSeq3 = document.getElementById('progressive-hint');
+                if (hElSeq3) { hElSeq3.style.fontSize = '15px'; hElSeq3.style.color = '#4caf50'; }
+            }
+            return;
+        }
+
+        // 错1: 引导看中文参考（不泄露具体词）
+        // 错2: 提示第一个词/字母是什么
+        // 错3: 自动放置第1个词（给起点）
+        // 错4+: 自动放置更多词
+
+        var firstWord = (q.words || q.letters || [])[0] || '';
+
+        if (wrongCount === 1) {
+            showProgressiveHint(isPuzzleType ? '仔细想想中文意思，再拼一次' : '对照上面的中文，重新排排看', 0);
+
+        } else if (wrongCount === 2) {
+            // 告诉第一个词/字母，不自动填
+            if (firstWord) {
+                var prefix = isPuzzleType ? '第一个字母是：' : '第一个词是：';
+                showProgressiveHint(prefix + firstWord, 0);
+                var hElOrd2 = document.getElementById('progressive-hint');
+                if (hElOrd2) { hElOrd2.style.fontSize = '22px'; hElOrd2.style.color = '#1cb0f6'; }
+            }
+
+        } else if (wrongCount === 3) {
+            // 自动点击放入第1个词/字母
+            showProgressiveHint('帮你放好第一个词，其余自己来！', 0);
+            setTimeout(function() { window.lockOrderPieces(q, container, 1); }, 850);
+
+        } else if (wrongCount >= 4) {
+            var lockTotal = isPuzzleType ? 2 : 3;
+            showProgressiveHint('再帮你多放几个，继续加油！', 0);
+            setTimeout(function() { window.lockOrderPieces(q, container, lockTotal); }, 850);
+        }
+
+    } else if (isSpeakingType) {
+        // === 口语题 4级支架 ===
+        // 错1: 播放示范音频 + 提示跟读
+        // 错2: 显示文字 + 再听（看着说）
+        // 错3: 发音技巧/慢速提示
+        // 错4+: 降低识别阈值，鼓励尝试
+
+        var spWord = q.word || q.sentence || q.expected || '';
+
+        if (wrongCount === 1) {
+            showProgressiveHint('再听一次，跟着读', 0);
+            if (spWord && window.speakWord) speakWord(spWord);
+
+        } else if (wrongCount === 2) {
+            if (spWord && window.speakWord) speakWord(spWord);
+            if (spWord) {
+                showProgressiveHint(spWord, 0); // 显示文字，看着读
+                var hElSp2 = document.getElementById('progressive-hint');
+                if (hElSp2) { hElSp2.style.fontSize = '22px'; hElSp2.style.color = '#1cb0f6'; }
+            }
+
+        } else if (wrongCount === 3) {
+            if (q.phonetic) {
+                showProgressiveHint('发音提示：' + q.phonetic + '（注意嘴型）', 1);
+            } else {
+                showProgressiveHint('慢慢说，把每个词说清楚', 1);
+            }
+            if (spWord && window.speakWord) speakWord(spWord);
+
+        } else if (wrongCount >= 4) {
+            showProgressiveHint('老师稍微放宽了要求，再试一次吧！', 1);
+            window.scaffoldVoiceThresholdLowered = true;
+        }
+    }
+};
+
+window.lockOrderPieces = function(q, container, count) {
+    var correctArr = q.words || q.letters || q.parts || q.chineseWords || [];
+    if (!correctArr || correctArr.length === 0) return;
+    
+    var lockCount = Math.min(count, correctArr.length);
+    for (var i = 0; i < lockCount; i++) {
+        var targetText = correctArr[i];
+        var allDivs = container.getElementsByTagName('div');
+        for (var j = 0; j < allDivs.length; j++) {
+            var div = allDivs[j];
+            if (div.textContent === targetText && typeof div.onclick === 'function' && div.style.opacity !== '0') {
+                if (div.className.indexOf('option-card') !== -1 || div.style.boxShadow) {
+                    div.click();
+                    break;
+                }
+            }
+        }
+    }
+    
+    var allDivs2 = container.getElementsByTagName('div');
+    for (var k = 0; k < allDivs2.length; k++) {
+        var slot = allDivs2[k];
+        if (typeof slot.onclick === 'function') {
+            var hasText = slot.textContent && slot.textContent.trim() !== '';
+            if (hasText && (slot.className.indexOf('puzzle-slot') !== -1 || slot.style.borderRadius === '12px')) {
+                slot.onclick = null;
+                slot.style.pointerEvents = 'none';
+                slot.style.opacity = '0.6';
+                slot.style.filter = 'grayscale(100%)';
+            }
+        }
+    }
+};
+
+window.showStarAnimation = function() {
+    var starEl = document.createElement('div');
+    starEl.className = 'floating-star';
+    starEl.textContent = '⭐';
+    document.body.appendChild(starEl);
+    setTimeout(function() {
+        if (document.body.contains(starEl)) {
+            document.body.removeChild(starEl);
+        }
+    }, 1000);
+};
+
+// ===== 情境导入页 (Problem-based Learning) =====
+var scenarioMap = {
+    'U1L1': { title: '🦁 动物园探险', text: '你来到动物园，好多动物！认识它们吧！', img: 'assets/images/scenario_animals.png', bg: 'linear-gradient(135deg, #a8e063, #56ab2f)' },
+    'U1L2': { title: '🐾 动物朋友', text: '农场里有好多动物朋友，它们叫什么名字呢？', img: 'assets/images/scenario_animals.png', bg: 'linear-gradient(135deg, #56ab2f, #a8e063)' },
+    'U1L3': { title: '🐒 猜猜我是谁', text: '动物们在玩捉迷藏，听声音猜猜它们是谁！', img: 'assets/images/scenario_animals.png', bg: 'linear-gradient(135deg, #f7971e, #ffd200)' },
+    'U1L4': { title: '🎪 动物表演', text: '动物们要表演了！看看谁最大谁最小！', img: 'assets/images/scenario_animals.png', bg: 'linear-gradient(135deg, #ffd200, #f7971e)' },
+    'U2L1': { title: '👕 穿衣服啦', text: '今天天气真好，选什么衣服出门呢？帮忙搭配吧！', img: 'assets/images/scenario_clothes.png', bg: 'linear-gradient(135deg, #f093fb, #f5576c)' },
+    'U2L2': { title: '👗 时装秀', text: '学校要办时装秀！帮同学们挑选合适的衣服！', img: 'assets/images/scenario_clothes.png', bg: 'linear-gradient(135deg, #f5576c, #f093fb)' },
+    'U2L3': { title: '🧥 找衣服', text: '今天要出门，但毛衣找不到了！帮妈妈找到衣服吧！', img: 'assets/images/scenario_clothes.png', bg: 'linear-gradient(135deg, #a18cd1, #fbc2eb)' },
+    'U2L4': { title: '👟 运动日', text: '今天是运动日！穿上运动服和运动鞋，出发！', img: 'assets/images/scenario_clothes.png', bg: 'linear-gradient(135deg, #fbc2eb, #a18cd1)' },
+    'U3L1': { title: '⏰ 几点了', text: '闹钟响了！看看现在几点，该做什么了？', img: 'assets/images/scenario_time.png', bg: 'linear-gradient(135deg, #4facfe, #00f2fe)' },
+    'U3L2': { title: '📅 我的一天', text: '从早上起床到晚上睡觉，安排好一天的时间吧！', img: 'assets/images/scenario_time.png', bg: 'linear-gradient(135deg, #00f2fe, #4facfe)' },
+    'U3L3': { title: '🏫 学校时间表', text: '学校的课程表是怎样的？什么时间上什么课？', img: 'assets/images/scenario_time.png', bg: 'linear-gradient(135deg, #43e97b, #38f9d7)' },
+    'U3L4': { title: '🎉 周末计划', text: '周末到了！几点去公园？几点吃午饭？安排一下！', img: 'assets/images/scenario_time.png', bg: 'linear-gradient(135deg, #38f9d7, #43e97b)' },
+    'U4L1': { title: '🍳 早餐时间', text: '肚子饿了！早餐想吃什么？来看看有什么好吃的！', img: 'assets/images/scenario_food.png', bg: 'linear-gradient(135deg, #fa709a, #fee140)' },
+    'U4L2': { title: '🍔 午餐点餐', text: '你和朋友去餐厅吃饭，服务员问你们想吃什么。帮忙点餐吧！', img: 'assets/images/scenario_food.png', bg: 'linear-gradient(135deg, #fee140, #fa709a)' },
+    'U4L3': { title: '🥤 饮料时间', text: '口渴了！你最喜欢什么饮料？帮大家选饮料吧！', img: 'assets/images/scenario_food.png', bg: 'linear-gradient(135deg, #f6d365, #fda085)' },
+    'U4L4': { title: '🍲 丰盛晚餐', text: '妈妈在做晚饭，今天有什么菜？帮妈妈准备晚餐吧！', img: 'assets/images/scenario_food.png', bg: 'linear-gradient(135deg, #fda085, #f6d365)' }
+};
+
+function getCurrentLessonId() {
+    // 优先使用 currentLessonData 自带的 id 字段
+    if (currentLessonData && currentLessonData.id) {
+        return currentLessonData.id;
+    }
+    // 兜底：逐个比较引用
+    var lessonMap = {
+        'U1L1': typeof lesson1 !== 'undefined' ? lesson1 : null,
+        'U1L2': typeof unit1_lesson2 !== 'undefined' ? unit1_lesson2 : null,
+        'U1L3': typeof unit1_lesson3 !== 'undefined' ? unit1_lesson3 : null,
+        'U1L4': typeof unit1_lesson4 !== 'undefined' ? unit1_lesson4 : null,
+        'U2L1': typeof unit2_lesson1 !== 'undefined' ? unit2_lesson1 : null,
+        'U2L2': typeof unit2_lesson2 !== 'undefined' ? unit2_lesson2 : null,
+        'U2L3': typeof unit2_lesson3 !== 'undefined' ? unit2_lesson3 : null,
+        'U2L4': typeof unit2_lesson4 !== 'undefined' ? unit2_lesson4 : null,
+        'U3L1': typeof unit3_lesson1 !== 'undefined' ? unit3_lesson1 : null,
+        'U3L2': typeof unit3_lesson2 !== 'undefined' ? unit3_lesson2 : null,
+        'U3L3': typeof unit3_lesson3 !== 'undefined' ? unit3_lesson3 : null,
+        'U3L4': typeof unit3_lesson4 !== 'undefined' ? unit3_lesson4 : null,
+        'U4L1': typeof unit4_lesson1 !== 'undefined' ? unit4_lesson1 : null,
+        'U4L2': typeof unit4_lesson2 !== 'undefined' ? unit4_lesson2 : null,
+        'U4L3': typeof unit4_lesson3 !== 'undefined' ? unit4_lesson3 : null,
+        'U4L4': typeof unit4_lesson4 !== 'undefined' ? unit4_lesson4 : null
+    };
+    for (var key in lessonMap) {
+        if (lessonMap[key] && lessonMap[key] === currentLessonData) return key;
+    }
+    return null;
+}
+
+function tryShowScenarioScreen() {
+    var id = getCurrentLessonId();
+    if (id && scenarioMap[id]) {
+        showScenarioScreen(scenarioMap[id]);
+    } else {
+        startPractice();
+    }
+}
+
+// Teacher forced switch: show transition overlay then auto-start practice
+function forceStartPractice() {
+    // Hide any feedback panel
+    hideFeedbackPanel();
+    
+    // Create a full-screen overlay
+    var overlay = document.createElement('div');
+    overlay.id = 'force-practice-overlay';
+    overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,#58cc02,#7ce800);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9999;animation:fadeIn 0.3s ease;';
+    overlay.innerHTML = '<div style="font-size:64px;margin-bottom:16px;">🚀</div>' +
+        '<div style="font-size:24px;font-weight:bold;color:white;text-shadow:0 2px 4px rgba(0,0,0,0.2);">进入闯关赛！</div>' +
+        '<div style="font-size:16px;color:rgba(255,255,255,0.8);margin-top:8px;">一起加油！</div>';
+    document.body.appendChild(overlay);
+
+    // Auto-start after 2 seconds
+    setTimeout(function() {
+        if (overlay.parentNode) overlay.parentNode.removeChild(overlay);
+        tryShowScenarioScreen();
+    }, 2000);
+}
+
+function showScenarioScreen(scenario) {
+    var screens = document.querySelectorAll('.screen');
+    for (var i = 0; i < screens.length; i++) {
+        screens[i].classList.remove('active');
+    }
+    
+    var screen = document.getElementById('scenario-screen');
+    if (!screen) {
+        screen = document.createElement('div');
+        screen.className = 'screen';
+        screen.id = 'scenario-screen';
+        var appContainer = document.querySelector('.app-container') || document.body;
+        appContainer.appendChild(screen);
+    }
+    
+    var bgStyle = scenario.bg || 'linear-gradient(135deg, #667eea, #764ba2)';
+    var imgHtml = scenario.img ? '<img src="' + scenario.img + '" class="scenario-img" alt="scenario" />' : '';
+    
+    screen.innerHTML = '<div class="scenario-card-enhanced" style="background: ' + bgStyle + ';">' +
+        '<div class="scenario-sparkles">✨</div>' +
+        imgHtml +
+        '<h2 class="scenario-title-enhanced">' + scenario.title + '</h2>' +
+        '<p class="scenario-desc-enhanced">' + scenario.text + '</p>' +
+        '<button class="scenario-btn-enhanced" onclick="startPracticeAfterScenario()">🚀 开始挑战！</button>' +
+    '</div>';
+    screen.classList.add('active');
+}
+
+function startPracticeAfterScenario() {
+    var scr = document.getElementById('scenario-screen');
+    if (scr) scr.classList.remove('active');
+    document.getElementById('game-screen').classList.add('active');
+    updatePhaseIndicator();
+    // 确保实战倒计时启动（不能遗漏）
+    stopPretestTimer();
+    startPretestTimer(15 * 60);
+    renderQuestion();
+}
+
+// ===== 成就系统 (Achievement System) =====
+var achievementDefs = [
+    { id: 'first_star', name: '第一颗星', icon: '⭐', desc: '获得第1颗星星', check: function(d) { return d.totalStars >= 1; } },
+    { id: 'ten_correct', name: '小有成就', icon: '🌟', desc: '累计答对10题', check: function(d) { return d.totalCorrect >= 10; } },
+    { id: 'fifty_correct', name: '学习达人', icon: '🏅', desc: '累计答对50题', check: function(d) { return d.totalCorrect >= 50; } },
+    { id: 'hundred_correct', name: '英语高手', icon: '🏆', desc: '累计答对100题', check: function(d) { return d.totalCorrect >= 100; } },
+    { id: 'perfect_10', name: '满分王', icon: '👑', desc: '单次测试全对', check: function(d) { return d.lastPerfect === true; } },
+    { id: 'combo_5', name: '连胜达人', icon: '🔥', desc: '连续答对5题', check: function(d) { return d.maxCombo >= 5; } },
+    { id: 'combo_10', name: '无敌连胜', icon: '💎', desc: '连续答对10题', check: function(d) { return d.maxCombo >= 10; } },
+    { id: 'all_units', name: '全册通关', icon: '🎓', desc: '完成所有16课', check: function(d) { return d.lessonsCompleted >= 16; } }
+];
+
+function getPlayerOrderId(idx) {
+    if (!players || !players[idx]) return null;
+    var match = players[idx].name.match(/^\d+/);
+    return match ? match[0] : players[idx].name;
+}
+
+function loadAchievements(orderId) {
+    try {
+        var dataStr = localStorage.getItem('merryAchievements_' + orderId);
+        if (dataStr) {
+            return JSON.parse(dataStr);
+        }
+    } catch(e) {
+        console.error('Failed to load achievements', e);
+    }
+    return { totalStars: 0, totalCorrect: 0, maxCombo: 0, lessonsCompleted: 0, earned: [] };
+}
+
+function saveAchievements(orderId, data) {
+    try {
+        localStorage.setItem('merryAchievements_' + orderId, JSON.stringify(data));
+    } catch(e) {
+        console.error('Failed to save achievements', e);
+    }
+}
+
+function checkAchievements(pIdx) {
+    var orderId = getPlayerOrderId(pIdx);
+    if (!orderId) return [];
+    
+    var data = loadAchievements(orderId);
+    var pStats = pIdx === 0 ? pretestStats.player1 : (pretestStats.player2 || {correct:0, total:0});
+    var matchStars = players[pIdx].stars || 0;
+    var matchCorrect = pStats.correct || 0;
+    var matchTotal = pStats.total || 0;
+    var matchMaxCombo = Math.max(pretestStats.player1.maxCombo || 0, pretestStats.player2.maxCombo || 0); // use overall max combo for player session
+    
+    data.totalStars += matchStars;
+    data.totalCorrect += matchCorrect;
+    if (matchMaxCombo > data.maxCombo) {
+        data.maxCombo = matchMaxCombo;
+    }
+    // 满分王：只有在答了一定数量的题目之后，星星的数量严格等于全部答题量（由于只有一遍对才给星，这是最严谨的）
+    data.lastPerfect = (matchTotal > 0 && matchStars === matchTotal); 
+    data.lessonsCompleted += 1; // Mark a module as fully complete
+    
+    if (!data.earned) data.earned = [];
+    var newlyEarned = [];
+    
+    for (var i = 0; i < achievementDefs.length; i++) {
+        var def = achievementDefs[i];
+        if (data.earned.indexOf(def.id) === -1) {
+            if (def.check(data)) {
+                data.earned.push(def.id);
+                newlyEarned.push(def);
+            }
+        }
+    }
+    
+    saveAchievements(orderId, data);
+    return newlyEarned;
+}
+
+var pendingAchievementModals = [];
+var onAchievementsDoneCallback = null;
+
+// ===== 成就系统（静默版）=====
+// 原则：游戏中绝不打断答题节奏；所有新成就在结束页统一揭晓，制造一次高潮
+function checkAndShowAchievements(callback) {
+    window.sessionNewAchievements = [];
+
+    if (currentPhase === 'practice' && players.length > 1) {
+        var p1New = checkAchievements(0);
+        var p2New = checkAchievements(1);
+        // 合并去重 — 同一个成就只展示一次
+        var seen = {};
+        p1New.concat(p2New).forEach(function(ach) {
+            if (!seen[ach.id]) { seen[ach.id] = true; window.sessionNewAchievements.push(ach); }
+        });
+    } else {
+        var p1New = checkAchievements(0);
+        window.sessionNewAchievements = p1New.slice();
+        if (players.length > 1) {
+            checkAchievements(1).forEach(function(ach) {
+                var dup = window.sessionNewAchievements.some(function(a) { return a.id === ach.id; });
+                if (!dup) window.sessionNewAchievements.push(ach);
+            });
+        }
+    }
+
+    // 直接进结束页，不打断答题节奏，所有新成就在结束页统一揭晓
+    if (typeof callback === 'function') callback();
+}
+
+function renderAchievementSection() {
+    // Collect earned achievement IDs (merge both players)
+    var earnedIds = [];
+    if (currentPhase === 'practice' && players.length > 1) {
+        var d0 = loadAchievements(getPlayerOrderId(0));
+        var d1 = loadAchievements(getPlayerOrderId(1));
+        var e0 = d0.earned || []; var e1 = d1.earned || [];
+        for (var i = 0; i < e0.length; i++) { if (earnedIds.indexOf(e0[i]) === -1) earnedIds.push(e0[i]); }
+        for (var j = 0; j < e1.length; j++) { if (earnedIds.indexOf(e1[j]) === -1) earnedIds.push(e1[j]); }
+    } else {
+        for (var p = 0; p < players.length; p++) {
+            var d = loadAchievements(getPlayerOrderId(p));
+            var e = d.earned || [];
+            for (var k = 0; k < e.length; k++) { if (earnedIds.indexOf(e[k]) === -1) earnedIds.push(e[k]); }
+        }
+    }
+    var total = achievementDefs.length;
+    var count = earnedIds.length;
+    var pct = total > 0 ? Math.round((count / total) * 100) : 0;
+
+    var html = '<div class="ach-section-mini">';
+    // Progress bar row
+    html += '<div class="ach-progress-row">';
+    html += '<span class="ach-progress-label">🏆 ' + count + '/' + total + '</span>';
+    html += '<div class="ach-progress-track"><div class="ach-progress-fill" style="width:' + pct + '%"></div></div>';
+    html += '</div>';
+    // Show only earned icons (no locks)
+    if (count > 0) {
+        html += '<div class="ach-earned-row">';
+        for (var m = 0; m < achievementDefs.length; m++) {
+            if (earnedIds.indexOf(achievementDefs[m].id) !== -1) {
+                html += '<span class="ach-mini-icon" title="' + achievementDefs[m].name + '">' + achievementDefs[m].icon + '</span>';
+            }
+        }
+        html += '</div>';
+    }
+    html += '</div>';
+    return html;
+}
+

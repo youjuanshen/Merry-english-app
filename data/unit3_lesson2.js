@@ -1,1337 +1,2148 @@
+// Unit 3 Lesson 2: What's the time in New York?
+// Core vocab: kid, read, watch, TV
+// Sentences: "What's the time in New York?", "I'm watching TV.", "She is reading.", etc.
 var unit3_lesson2 = {
   "id": "U3L2",
-  "title": "Unit 3 Lesson 2: What's the time in New York?",
+  "title": "What's the time in New York?",
   "listening": {
     "pretest": [
       {
-        "type": "listen_tf",
-        "audio": "read",
-        "chinese": "我正在看书。",
+        "type": "listen_select",
+        "audio": "clock",
         "options": [
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-          "<img src=\"assets/images/reading.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
         ],
-        "correct": false,
-        "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "watch TV",
-        "chinese": "现在是watch TV点。",
-        "options": [
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-          "<img src=\"assets/images/reading.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
-        ],
-        "correct": true,
-        "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "kid",
-        "chinese": "现在是kid点。",
-        "options": [
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-          "<img src=\"assets/images/reading.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
-        ],
-        "correct": true,
-        "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "three",
-        "chinese": "现在是三点。",
-        "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/reading.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">"
-        ],
-        "correct": false,
-        "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "read",
-        "chinese": "我正在看书。",
-        "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-          "<img src=\"assets/images/reading.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">"
-        ],
-        "correct": true,
-        "image": "<img src=\"assets/images/reading.png\" width=\"80\">"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "watch TV",
-        "chinese": "现在是watch TV点。",
-        "options": [
-          "<img src=\"assets/images/reading.png\" width=\"80\">",
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
-        ],
-        "correct": true,
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
+        "correct": 1,
+        "chinese": "钟"
       },
       {
         "type": "listen_select",
-        "audio": "kid",
-        "chinese": "现在是kid点。",
+        "audio": "drawing",
         "options": [
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-          "<img src=\"assets/images/reading.png\" width=\"80\">",
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">"
         ],
-        "correct": 3,
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "three",
-        "chinese": "现在是三点。",
-        "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-          "<img src=\"assets/images/reading.png\" width=\"80\">"
-        ],
-        "correct": true,
-        "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "read",
-        "chinese": "我正在看书。",
-        "options": [
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-          "<img src=\"assets/images/reading.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">"
-        ],
-        "correct": false,
-        "image": "<img src=\"assets/images/reading.png\" width=\"80\">"
+        "correct": 2,
+        "chinese": "画画"
       },
       {
         "type": "listen_select",
-        "audio": "watch TV",
-        "chinese": "现在是watch TV点。",
+        "audio": "schoolbag",
         "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-          "<img src=\"assets/images/reading.png\" width=\"80\">",
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">"
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "chinese": "书包"
+      },
+      {
+        "type": "listen_select",
+        "audio": "What's the time in New York?",
+        "options": [
+          "爷爷，伦敦几点了？",
+          "纽约几点了？",
+          "我在看电视。",
+          "现在是福州上午八点半。"
+        ],
+        "correct": 1,
+        "chinese": "纽约几点了？"
+      },
+      {
+        "type": "listen_select",
+        "audio": "I'm watching TV.",
+        "options": [
+          "我在看书。",
+          "孩子们在做什么？",
+          "我在看电视。",
+          "她在看书。"
+        ],
+        "correct": 2,
+        "chinese": "我在看电视。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "I'm reading.",
+        "options": [
+          "我在看电视。",
+          "孩子们在做什么？",
+          "她在看书。",
+          "我在看书。"
         ],
         "correct": 3,
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">"
+        "chinese": "我在看书。"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "This is a clock.",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "correct": true,
+        "chinese": "这是一个钟，正确！"
+      },
+      {
+        "type": "listen_select",
+        "audio": "What's the time in London, Grandpa?",
+        "options": [
+          "爷爷，伦敦几点了？",
+          "纽约几点了？",
+          "现在是上午十点半。",
+          "我在看电视。"
+        ],
+        "correct": 0,
+        "chinese": "爷爷，伦敦几点了？"
+      },
+      {
+        "type": "listen_select",
+        "audio": "What are the kids doing? Ben and Kate are playing with toys.",
+        "options": [
+          "孩子们在做什么？本和凯特在玩玩具。",
+          "奶奶也在看电视吗？不，她没有。",
+          "我在看电视。我在看书。",
+          "爷爷，伦敦几点了？"
+        ],
+        "correct": 0,
+        "chinese": "孩子们在做什么？本和凯特在玩玩具。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "She is reading a book.",
+        "options": [
+          "她在读书。",
+          "她在看电视。",
+          "她在睡觉。",
+          "她在做作业。"
+        ],
+        "correct": 0,
+        "chinese": "她在读书。"
       }
     ],
     "practice": [
       {
-        "type": "scenario",
-        "audio": "read",
-        "chinese": "我正在看书。",
+        "type": "listen_select",
+        "audio": "clock",
         "options": [
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-          "<img src=\"assets/images/reading.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
         ],
         "correct": 2,
-        "difficulty": "easy",
-        "text": "Find the word",
-        "scenario": "What's the time in New York?",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
-      },
-      {
-        "type": "balloon_pop",
-        "audio": "watch TV",
-        "chinese": "现在是watch TV点。",
-        "options": [
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-          "<img src=\"assets/images/reading.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
-        ],
-        "correct": 1,
-        "difficulty": "hard",
-        "text": "Find the word",
-        "scenario": "What's the time in New York?",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
-      },
-      {
-        "type": "balloon_pop",
-        "audio": "kid",
-        "chinese": "现在是kid点。",
-        "options": [
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-          "<img src=\"assets/images/reading.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
-        ],
-        "correct": 3,
-        "difficulty": "hard",
-        "text": "Find the word",
-        "scenario": "I'm reading.",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
-      },
-      {
-        "type": "scenario",
-        "audio": "three",
-        "chinese": "现在是三点。",
-        "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/reading.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">"
-        ],
-        "correct": 2,
-        "difficulty": "hard",
-        "text": "Find the word",
-        "scenario": "What's the time in New York?",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
-      },
-      {
-        "type": "scenario",
-        "audio": "read",
-        "chinese": "我正在看书。",
-        "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-          "<img src=\"assets/images/reading.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">"
-        ],
-        "correct": 2,
-        "difficulty": "easy",
-        "text": "Find the word",
-        "scenario": "I'm reading.",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
+        "chinese": "钟"
       },
       {
         "type": "listen_select",
-        "audio": "watch TV",
-        "chinese": "现在是watch TV点。",
+        "audio": "chair",
         "options": [
-          "<img src=\"assets/images/reading.png\" width=\"80\">",
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/drawing.png\" width=\"80\">"
         ],
-        "correct": 1,
-        "difficulty": "easy",
-        "text": "Find the word",
-        "scenario": "I'm reading.",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
-      },
-      {
-        "type": "balloon_pop",
-        "audio": "kid",
-        "chinese": "现在是kid点。",
-        "options": [
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-          "<img src=\"assets/images/reading.png\" width=\"80\">",
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
-        ],
-        "correct": 3,
-        "difficulty": "hard",
-        "text": "Find the word",
-        "scenario": "What's the time in New York?",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
-      },
-      {
-        "type": "balloon_pop",
-        "audio": "three",
-        "chinese": "现在是三点。",
-        "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-          "<img src=\"assets/images/reading.png\" width=\"80\">"
-        ],
-        "correct": 1,
-        "difficulty": "hard",
-        "text": "Find the word",
-        "scenario": "I'm reading.",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
-      },
-      {
-        "type": "scenario",
-        "audio": "read",
-        "chinese": "我正在看书。",
-        "options": [
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-          "<img src=\"assets/images/reading.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">"
-        ],
-        "correct": 1,
-        "difficulty": "hard",
-        "text": "Find the word",
-        "scenario": "I'm reading.",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
+        "correct": 0,
+        "chinese": "椅子"
       },
       {
         "type": "listen_select",
-        "audio": "watch TV",
-        "chinese": "现在是watch TV点。",
+        "audio": "It's 8:30 a.m. in Fuzhou.",
         "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-          "<img src=\"assets/images/reading.png\" width=\"80\">",
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">"
+          "现在是福州上午八点半。",
+          "纽约几点了？",
+          "现在是上午十点半。",
+          "我在看电视。"
         ],
-        "correct": 3,
-        "difficulty": "medium",
-        "text": "Find the word",
-        "scenario": "What's the time in New York?",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
+        "correct": 0,
+        "chinese": "现在是福州上午八点半。"
       },
       {
         "type": "listen_select",
-        "audio": "kid",
-        "chinese": "现在是kid点。",
+        "audio": "What's the time in New York?",
         "options": [
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-          "<img src=\"assets/images/reading.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
+          "现在是福州上午八点半。",
+          "纽约几点了？",
+          "爷爷，伦敦几点了？",
+          "我在看书。"
         ],
-        "correct": 3,
-        "difficulty": "hard",
-        "text": "Find the word",
-        "scenario": "I'm reading.",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
+        "correct": 1,
+        "chinese": "纽约几点了？"
       },
       {
-        "type": "scenario",
-        "audio": "three",
-        "chinese": "现在是三点。",
+        "type": "listen_select",
+        "audio": "What's the time in London, Grandpa?",
         "options": [
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-          "<img src=\"assets/images/reading.png\" width=\"80\">"
+          "纽约几点了？",
+          "我在看电视。",
+          "爷爷，伦敦几点了？",
+          "孩子们在做什么？"
         ],
         "correct": 2,
-        "difficulty": "hard",
-        "text": "Find the word",
-        "scenario": "I'm reading.",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
+        "chinese": "爷爷，伦敦几点了？"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's 10:30 a.m.",
+        "options": [
+          "现在是下午七点半。",
+          "现在是福州上午八点半。",
+          "纽约几点了？",
+          "现在是上午十点半。"
+        ],
+        "correct": 3,
+        "chinese": "现在是上午十点半。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "I'm watching TV.",
+        "options": [
+          "我在看书。",
+          "我在看电视。",
+          "她在看书。",
+          "孩子们在玩玩具。"
+        ],
+        "correct": 1,
+        "chinese": "我在看电视。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's 7:30 p.m.",
+        "options": [
+          "现在是上午十点半。",
+          "现在是福州上午八点半。",
+          "现在是下午七点半。",
+          "纽约几点了？"
+        ],
+        "correct": 2,
+        "chinese": "现在是下午七点半。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "I'm reading.",
+        "options": [
+          "我在看书。",
+          "我在看电视。",
+          "她在看书。",
+          "孩子们在做什么？"
+        ],
+        "correct": 0,
+        "chinese": "我在看书。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "What are the kids doing?",
+        "options": [
+          "奶奶也在看电视吗？",
+          "爷爷，伦敦几点了？",
+          "我在看电视。",
+          "孩子们在做什么？"
+        ],
+        "correct": 3,
+        "chinese": "孩子们在做什么？"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Ben and Kate are playing with toys.",
+        "options": [
+          "本和凯特在玩玩具。",
+          "孩子们在做什么？",
+          "奶奶也在看电视吗？",
+          "她在看书。"
+        ],
+        "correct": 0,
+        "chinese": "本和凯特在玩玩具。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Is Grandma watching TV, too?",
+        "options": [
+          "爷爷，伦敦几点了？",
+          "孩子们在做什么？",
+          "奶奶也在看电视吗？",
+          "不，她没有。"
+        ],
+        "correct": 2,
+        "chinese": "奶奶也在看电视吗？"
+      },
+      {
+        "type": "listen_select",
+        "audio": "No, she isn't. She is reading.",
+        "options": [
+          "是的，她在看电视。",
+          "不，她没有。她在看书。",
+          "孩子们在玩玩具。",
+          "我在看电视。"
+        ],
+        "correct": 1,
+        "chinese": "不，她没有。她在看书。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's 10:30 a.m. I'm watching TV.",
+        "options": [
+          "现在是上午十点半。我在看电视。",
+          "现在是下午七点半。我在看书。",
+          "孩子们在做什么？本和凯特在玩玩具。",
+          "爷爷，伦敦几点了？"
+        ],
+        "correct": 0,
+        "chinese": "现在是上午十点半。我在看电视。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's 7:30 p.m. I'm reading.",
+        "options": [
+          "现在是上午十点半。我在看电视。",
+          "孩子们在做什么？",
+          "现在是下午七点半。我在看书。",
+          "奶奶也在看电视吗？"
+        ],
+        "correct": 2,
+        "chinese": "现在是下午七点半。我在看书。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Is Grandma watching TV, too? No, she isn't. She is reading.",
+        "options": [
+          "奶奶也在看电视吗？不，她没有。她在看书。",
+          "孩子们在做什么？本和凯特在玩玩具。",
+          "现在是上午十点半。我在看电视。",
+          "爷爷，伦敦几点了？"
+        ],
+        "correct": 0,
+        "chinese": "奶奶也在看电视吗？不，她没有。她在看书。"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "This is a clock.",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "correct": true,
+        "chinese": "这是一个钟，正确！"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "This is a bed.",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "correct": false,
+        "chinese": "这不是床，这是一个钟。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "What are the kids doing? Ben and Kate are playing with toys.",
+        "options": [
+          "孩子们在做什么？本和凯特在玩玩具。",
+          "奶奶也在看电视吗？不，她没有。她在看书。",
+          "现在是上午十点半。我在看电视。",
+          "爷爷，伦敦几点了？现在是下午七点半。"
+        ],
+        "correct": 0,
+        "chinese": "孩子们在做什么？本和凯特在玩玩具。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "It's 8:30 a.m. in Fuzhou. What's the time in New York?",
+        "options": [
+          "爷爷，伦敦几点了？现在是上午十点半。",
+          "现在是福州上午八点半。纽约几点了？",
+          "我在看电视。我在看书。",
+          "孩子们在做什么？"
+        ],
+        "correct": 1,
+        "chinese": "现在是福州上午八点半。纽约几点了？"
+      },
+      {
+        "type": "listen_sequence",
+        "audio": "reading, watching TV, sleeping",
+        "sequence": [
+          "reading",
+          "watching TV",
+          "sleeping"
+        ],
+        "words": [
+          "<img src=\"assets/images/sleeping.png\" width=\"60\">",
+          "<img src=\"assets/images/reading.png\" width=\"60\">",
+          "<img src=\"assets/images/watching_tv.png\" width=\"60\">"
+        ],
+        "chinese": "听音频，按顺序点图片！"
+      },
+      {
+        "type": "listen_select",
+        "audio": "I'm watching TV.",
+        "context": "📺 你打电话给朋友，问他在干什么。",
+        "question": "朋友在做什么？",
+        "options": [
+          "看电视",
+          "读书",
+          "写作业",
+          "睡觉"
+        ],
+        "correct": 0,
+        "chinese": "我在看电视。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "She is reading.",
+        "context": "📖 姐姐呢？她在干什么？",
+        "question": "姐姐在做什么？",
+        "options": [
+          "读书",
+          "看电视",
+          "画画",
+          "做作业"
+        ],
+        "correct": 0,
+        "chinese": "她在读书。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "What's the time in New York?",
+        "context": "🌍 你想知道纽约几点了。",
+        "question": "有人在问什么？",
+        "options": [
+          "纽约几点",
+          "伦敦几点",
+          "北京几点",
+          "今天星期几"
+        ],
+        "correct": 0,
+        "chinese": "纽约几点了？"
       }
     ]
   },
   "reading": {
     "pretest": [
       {
-        "type": "sentence_match",
-        "chinese": "这是阅读。",
-        "word": "read",
-        "sentence": "What's the time in New York?",
+        "type": "word_match",
+        "word": "clock",
+        "sentence": "So many clocks!",
+        "chinese": "好多钟！",
         "options": [
           {
-            "text": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-            "value": "watch TV"
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
           },
           {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "kid"
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "clock"
           },
           {
-            "text": "<img src=\"assets/images/one.png\" width=\"80\">",
-            "value": "one"
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "chair"
           },
           {
-            "text": "<img src=\"assets/images/eleven.png\" width=\"80\">",
-            "value": "eleven"
+            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+            "value": "schoolbag"
           }
         ],
-        "correct": "read"
+        "correct": "clock"
+      },
+      {
+        "type": "word_match",
+        "word": "bed",
+        "sentence": "This is a bed.",
+        "chinese": "这是一张床。",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "chair"
+          },
+          {
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
+          },
+          {
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "clock"
+          },
+          {
+            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+            "value": "schoolbag"
+          }
+        ],
+        "correct": "bed"
+      },
+      {
+        "type": "word_match",
+        "word": "drawing",
+        "sentence": "I'm drawing.",
+        "chinese": "我在画画。",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "clock"
+          },
+          {
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "chair"
+          },
+          {
+            "text": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+            "value": "drawing"
+          },
+          {
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
+          }
+        ],
+        "correct": "drawing"
       },
       {
         "type": "sentence_match",
-        "chinese": "我正在看电视。",
-        "word": "watch TV",
+        "sentence": "What's the time in New York?",
+        "chinese": "纽约几点了？",
+        "options": [
+          {
+            "text": "爷爷，伦敦几点了？",
+            "value": "wrong1"
+          },
+          {
+            "text": "纽约几点了？",
+            "value": "correct"
+          },
+          {
+            "text": "我在看电视。",
+            "value": "wrong2"
+          },
+          {
+            "text": "现在是福州上午八点半。",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
         "sentence": "I'm watching TV.",
+        "chinese": "我在看电视。",
         "options": [
           {
-            "text": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-            "value": "three"
+            "text": "我在看电视。",
+            "value": "correct"
           },
           {
-            "text": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-            "value": "watch TV"
+            "text": "我在看书。",
+            "value": "wrong1"
           },
           {
-            "text": "<img src=\"assets/images/five.png\" width=\"80\">",
-            "value": "five"
+            "text": "她在看书。",
+            "value": "wrong2"
           },
           {
-            "text": "<img src=\"assets/images/twelve.png\" width=\"80\">",
-            "value": "twelve"
+            "text": "孩子们在玩玩具。",
+            "value": "wrong3"
           }
         ],
-        "correct": "watch TV"
+        "correct": "correct"
       },
       {
         "type": "sentence_match",
-        "chinese": "这是小孩。",
-        "word": "kid",
-        "sentence": "What's the time in New York?",
+        "sentence": "I'm reading.",
+        "chinese": "我在看书。",
         "options": [
           {
-            "text": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-            "value": "three"
+            "text": "我在看电视。",
+            "value": "wrong1"
           },
           {
-            "text": "<img src=\"assets/images/reading.png\" width=\"80\">",
-            "value": "read"
+            "text": "孩子们在做什么？",
+            "value": "wrong2"
           },
           {
-            "text": "<img src=\"assets/images/three.png\" width=\"80\">",
-            "value": "three"
+            "text": "我在看书。",
+            "value": "correct"
           },
           {
-            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
-            "value": "ten"
+            "text": "她在看书。",
+            "value": "wrong3"
           }
         ],
-        "correct": "kid"
-      },
-      {
-        "type": "word_match",
-        "chinese": "这是三。",
-        "word": "three",
-        "sentence": "What's the time in New York?",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/reading.png\" width=\"80\">",
-            "value": "read"
-          },
-          {
-            "text": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-            "value": "three"
-          },
-          {
-            "text": "<img src=\"assets/images/eight.png\" width=\"80\">",
-            "value": "eight"
-          },
-          {
-            "text": "<img src=\"assets/images/four.png\" width=\"80\">",
-            "value": "four"
-          }
-        ],
-        "correct": "three"
+        "correct": "correct"
       },
       {
         "type": "sentence_match",
-        "chinese": "这是阅读。",
-        "word": "read",
-        "sentence": "What's the time in New York?",
+        "sentence": "What are the kids doing?",
+        "chinese": "孩子们在做什么？",
         "options": [
           {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "kid"
+            "text": "孩子们在做什么？",
+            "value": "correct"
           },
           {
-            "text": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-            "value": "three"
+            "text": "奶奶也在看电视吗？",
+            "value": "wrong1"
           },
           {
-            "text": "<img src=\"assets/images/reading.png\" width=\"80\">",
-            "value": "read"
+            "text": "纽约几点了？",
+            "value": "wrong2"
           },
           {
-            "text": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-            "value": "watch TV"
+            "text": "我在看电视。",
+            "value": "wrong3"
           }
         ],
-        "correct": "read"
-      },
-      {
-        "type": "word_match",
-        "chinese": "这是看电视。",
-        "word": "watch TV",
-        "sentence": "What's the time in New York?",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-            "value": "three"
-          },
-          {
-            "text": "<img src=\"assets/images/reading.png\" width=\"80\">",
-            "value": "read"
-          },
-          {
-            "text": "<img src=\"assets/images/eleven.png\" width=\"80\">",
-            "value": "eleven"
-          },
-          {
-            "text": "<img src=\"assets/images/three.png\" width=\"80\">",
-            "value": "three"
-          }
-        ],
-        "correct": "watch TV"
+        "correct": "correct"
       },
       {
         "type": "sentence_match",
-        "chinese": "这是小孩。",
-        "word": "kid",
-        "sentence": "What's the time in New York?",
+        "sentence": "She is reading.",
+        "chinese": "她在看书。",
         "options": [
           {
-            "text": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-            "value": "three"
+            "text": "我在看书。",
+            "value": "wrong1"
           },
           {
-            "text": "<img src=\"assets/images/reading.png\" width=\"80\">",
-            "value": "read"
+            "text": "她在看电视。",
+            "value": "wrong2"
           },
           {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "kid"
+            "text": "她在看书。",
+            "value": "correct"
           },
           {
-            "text": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-            "value": "watch TV"
+            "text": "孩子们在玩玩具。",
+            "value": "wrong3"
           }
         ],
-        "correct": "kid"
-      },
-      {
-        "type": "word_match",
-        "chinese": "这是三。",
-        "word": "three",
-        "sentence": "What's the time in New York?",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-            "value": "watch TV"
-          },
-          {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "kid"
-          },
-          {
-            "text": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-            "value": "three"
-          },
-          {
-            "text": "<img src=\"assets/images/reading.png\" width=\"80\">",
-            "value": "read"
-          }
-        ],
-        "correct": "three"
+        "correct": "correct"
       },
       {
         "type": "sentence_match",
-        "chinese": "这是阅读。",
-        "word": "read",
-        "sentence": "What's the time in New York?",
+        "sentence": "你想问纽约现在几点了，你会说：",
+        "chinese": "情景选择",
         "options": [
           {
-            "text": "<img src=\"assets/images/reading.png\" width=\"80\">",
-            "value": "read"
+            "text": "What's the time in London?",
+            "value": "wrong1"
           },
           {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "kid"
+            "text": "I'm watching TV.",
+            "value": "wrong2"
           },
           {
-            "text": "<img src=\"assets/images/seven.png\" width=\"80\">",
-            "value": "seven"
+            "text": "What's the time in New York?",
+            "value": "correct"
           },
           {
-            "text": "<img src=\"assets/images/ten.png\" width=\"80\">",
-            "value": "ten"
+            "text": "What are the kids doing?",
+            "value": "wrong3"
           }
         ],
-        "correct": "read"
+        "correct": "correct"
       },
       {
-        "type": "word_match",
-        "chinese": "我正在看电视。",
-        "word": "watch TV",
-        "sentence": "I'm watching TV.",
+        "type": "sentence_match",
+        "sentence": "你想问奶奶是不是也在看电视，你会说：",
+        "chinese": "情景选择",
         "options": [
           {
-            "text": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-            "value": "watch TV"
+            "text": "What are the kids doing?",
+            "value": "wrong1"
           },
           {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "kid"
+            "text": "I'm watching TV.",
+            "value": "wrong2"
           },
           {
-            "text": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-            "value": "three"
+            "text": "She is reading.",
+            "value": "wrong3"
           },
           {
-            "text": "<img src=\"assets/images/reading.png\" width=\"80\">",
-            "value": "read"
+            "text": "Is Grandma watching TV, too?",
+            "value": "correct"
           }
         ],
-        "correct": "watch TV"
+        "correct": "correct"
       }
     ],
     "practice": [
       {
-        "type": "duo_race",
-        "chinese": "我正在看书。",
-        "word": "read",
-        "sentence": "I'm reading.",
+        "type": "tap_pair",
+        "chinese": "点英文词，配对图片！",
+        "pairs": [
+          {
+            "word": "reading",
+            "match": "<img src=\"assets/images/reading.png\" width=\"50\">",
+            "chinese": "读书"
+          },
+          {
+            "word": "watching TV",
+            "match": "<img src=\"assets/images/watching_tv.png\" width=\"50\">",
+            "chinese": "看电视"
+          },
+          {
+            "word": "homework",
+            "match": "<img src=\"assets/images/homework.png\" width=\"50\">",
+            "chinese": "作业"
+          },
+          {
+            "word": "sleeping",
+            "match": "<img src=\"assets/images/sleeping.png\" width=\"50\">",
+            "chinese": "睡觉"
+          }
+        ]
+      },
+      {
+        "type": "tap_pair",
+        "chinese": "点英文词，配对中文！",
+        "pairs": [
+          {
+            "word": "kid",
+            "match": "孩子",
+            "example": "Come on, kids!"
+          },
+          {
+            "word": "read",
+            "match": "读书",
+            "example": "She is reading."
+          },
+          {
+            "word": "watch",
+            "match": "看",
+            "example": "I'm watching TV."
+          },
+          {
+            "word": "TV",
+            "match": "电视",
+            "example": "I'm watching TV."
+          }
+        ]
+      },
+      {
+        "type": "word_match",
+        "word": "clock",
+        "sentence": "What's the time?",
+        "chinese": "几点了？",
         "options": [
           {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "kid"
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "clock"
+          },
+          {
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
+          },
+          {
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "chair"
+          },
+          {
+            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+            "value": "schoolbag"
+          }
+        ],
+        "correct": "clock"
+      },
+      {
+        "type": "word_match",
+        "word": "chair",
+        "sentence": "This is a chair.",
+        "chinese": "这是一把椅子。",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
+          },
+          {
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "chair"
+          },
+          {
+            "text": "<img src=\"assets/images/clock.png\" width=\"80\">",
+            "value": "clock"
+          },
+          {
+            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+            "value": "schoolbag"
+          }
+        ],
+        "correct": "chair"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "It's 8:30 a.m. in Fuzhou.",
+        "chinese": "现在是福州上午八点半。",
+        "options": [
+          {
+            "text": "现在是福州上午八点半。",
+            "value": "correct"
+          },
+          {
+            "text": "纽约几点了？",
+            "value": "wrong1"
+          },
+          {
+            "text": "现在是上午十点半。",
+            "value": "wrong2"
+          },
+          {
+            "text": "我在看电视。",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "What's the time in New York?",
+        "chinese": "纽约几点了？",
+        "options": [
+          {
+            "text": "爷爷，伦敦几点了？",
+            "value": "wrong1"
+          },
+          {
+            "text": "纽约几点了？",
+            "value": "correct"
+          },
+          {
+            "text": "现在是福州上午八点半。",
+            "value": "wrong2"
+          },
+          {
+            "text": "我在看书。",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "What's the time in London, Grandpa?",
+        "chinese": "爷爷，伦敦几点了？",
+        "options": [
+          {
+            "text": "纽约几点了？",
+            "value": "wrong1"
+          },
+          {
+            "text": "现在是上午十点半。",
+            "value": "wrong2"
+          },
+          {
+            "text": "爷爷，伦敦几点了？",
+            "value": "correct"
+          },
+          {
+            "text": "孩子们在做什么？",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "It's 10:30 a.m. I'm watching TV.",
+        "chinese": "现在是上午十点半。我在看电视。",
+        "options": [
+          {
+            "text": "现在是上午十点半。我在看电视。",
+            "value": "correct"
+          },
+          {
+            "text": "现在是下午七点半。我在看书。",
+            "value": "wrong1"
+          },
+          {
+            "text": "孩子们在做什么？",
+            "value": "wrong2"
+          },
+          {
+            "text": "奶奶也在看电视吗？",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "It's 7:30 p.m. I'm reading.",
+        "chinese": "现在是下午七点半。我在看书。",
+        "options": [
+          {
+            "text": "现在是上午十点半。我在看电视。",
+            "value": "wrong1"
+          },
+          {
+            "text": "现在是下午七点半。我在看书。",
+            "value": "correct"
+          },
+          {
+            "text": "孩子们在玩玩具。",
+            "value": "wrong2"
+          },
+          {
+            "text": "奶奶也在看电视吗？",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "What are the kids doing?",
+        "chinese": "孩子们在做什么？",
+        "options": [
+          {
+            "text": "奶奶也在看电视吗？",
+            "value": "wrong1"
+          },
+          {
+            "text": "孩子们在做什么？",
+            "value": "correct"
+          },
+          {
+            "text": "我在看电视。",
+            "value": "wrong2"
+          },
+          {
+            "text": "纽约几点了？",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "Ben and Kate are playing with toys.",
+        "chinese": "本和凯特在玩玩具。",
+        "options": [
+          {
+            "text": "本和凯特在玩玩具。",
+            "value": "correct"
+          },
+          {
+            "text": "孩子们在做什么？",
+            "value": "wrong1"
+          },
+          {
+            "text": "她在看书。",
+            "value": "wrong2"
+          },
+          {
+            "text": "我在看电视。",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "Is Grandma watching TV, too?",
+        "chinese": "奶奶也在看电视吗？",
+        "options": [
+          {
+            "text": "孩子们在做什么？",
+            "value": "wrong1"
+          },
+          {
+            "text": "我在看电视。",
+            "value": "wrong2"
+          },
+          {
+            "text": "奶奶也在看电视吗？",
+            "value": "correct"
+          },
+          {
+            "text": "她在看书。",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "No, she isn't. She is reading.",
+        "chinese": "不，她没有。她在看书。",
+        "options": [
+          {
+            "text": "是的，她在看电视。",
+            "value": "wrong1"
+          },
+          {
+            "text": "不，她没有。她在看书。",
+            "value": "correct"
+          },
+          {
+            "text": "孩子们在玩玩具。",
+            "value": "wrong2"
+          },
+          {
+            "text": "我在看电视。",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "I'm watching TV.",
+        "chinese": "我在看电视。",
+        "options": [
+          {
+            "text": "我在看书。",
+            "value": "wrong1"
+          },
+          {
+            "text": "我在看电视。",
+            "value": "correct"
+          },
+          {
+            "text": "她在看书。",
+            "value": "wrong2"
+          },
+          {
+            "text": "孩子们在玩玩具。",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "I'm reading.",
+        "chinese": "我在看书。",
+        "options": [
+          {
+            "text": "我在看电视。",
+            "value": "wrong1"
+          },
+          {
+            "text": "她在看书。",
+            "value": "wrong2"
+          },
+          {
+            "text": "我在看书。",
+            "value": "correct"
+          },
+          {
+            "text": "孩子们在做什么？",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "She is reading.",
+        "chinese": "她在看书。",
+        "options": [
+          {
+            "text": "她在看书。",
+            "value": "correct"
+          },
+          {
+            "text": "我在看书。",
+            "value": "wrong1"
+          },
+          {
+            "text": "我在看电视。",
+            "value": "wrong2"
+          },
+          {
+            "text": "奶奶也在看电视吗？",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "你想问爷爷伦敦几点了，你会说：",
+        "chinese": "情景选择",
+        "options": [
+          {
+            "text": "What's the time in New York?",
+            "value": "wrong1"
+          },
+          {
+            "text": "What's the time in London, Grandpa?",
+            "value": "correct"
+          },
+          {
+            "text": "What are the kids doing?",
+            "value": "wrong2"
+          },
+          {
+            "text": "I'm watching TV.",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "你想知道孩子们在做什么，你会问：",
+        "chinese": "情景选择",
+        "options": [
+          {
+            "text": "Is Grandma watching TV, too?",
+            "value": "wrong1"
+          },
+          {
+            "text": "What's the time in London?",
+            "value": "wrong2"
+          },
+          {
+            "text": "What are the kids doing?",
+            "value": "correct"
+          },
+          {
+            "text": "I'm reading.",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "Is Grandma watching TV, too? No, she isn't. She is reading.",
+        "chinese": "奶奶也在看电视吗？不，她没有。她在看书。",
+        "options": [
+          {
+            "text": "奶奶也在看电视吗？不，她没有。她在看书。",
+            "value": "correct"
+          },
+          {
+            "text": "孩子们在做什么？本和凯特在玩玩具。",
+            "value": "wrong1"
+          },
+          {
+            "text": "现在是上午十点半。我在看电视。",
+            "value": "wrong2"
+          },
+          {
+            "text": "爷爷，伦敦几点了？",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "What are the kids doing? Ben and Kate are playing with toys.",
+        "chinese": "孩子们在做什么？本和凯特在玩玩具。",
+        "options": [
+          {
+            "text": "孩子们在做什么？本和凯特在玩玩具。",
+            "value": "correct"
+          },
+          {
+            "text": "奶奶也在看电视吗？不，她没有。",
+            "value": "wrong1"
+          },
+          {
+            "text": "现在是下午七点半。我在看书。",
+            "value": "wrong2"
+          },
+          {
+            "text": "纽约几点了？",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "It's 8:30 a.m. in Fuzhou. What's the time in New York?",
+        "chinese": "现在是福州上午八点半。纽约几点了？",
+        "options": [
+          {
+            "text": "现在是福州上午八点半。纽约几点了？",
+            "value": "correct"
+          },
+          {
+            "text": "爷爷，伦敦几点了？现在是上午十点半。",
+            "value": "wrong1"
+          },
+          {
+            "text": "我在看电视。我在看书。",
+            "value": "wrong2"
+          },
+          {
+            "text": "孩子们在做什么？",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "别人问奶奶是不是在看电视，但她没有，你会说：",
+        "chinese": "情景选择",
+        "options": [
+          {
+            "text": "Yes, she is.",
+            "value": "wrong1"
+          },
+          {
+            "text": "No, she isn't. She is reading.",
+            "value": "correct"
+          },
+          {
+            "text": "I'm watching TV.",
+            "value": "wrong2"
+          },
+          {
+            "text": "What are the kids doing?",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "scenario",
+        "sentence": "I'm watching TV. She is reading.",
+        "context": "妈妈问家里两个孩子在干什么。你看到他们的状态。",
+        "question": "两个孩子分别在做什么？",
+        "options": [
+          {
+            "text": "一个看电视，一个读书",
+            "value": "correct"
+          },
+          {
+            "text": "都在看电视",
+            "value": "w1"
+          },
+          {
+            "text": "都在读书",
+            "value": "w2"
+          },
+          {
+            "text": "都在睡觉",
+            "value": "w3"
+          }
+        ],
+        "correct": "correct",
+        "chinese": "我在看电视。她在读书。"
+      },
+      {
+        "type": "scenario",
+        "sentence": "Come on, kids! It's time for bed.",
+        "context": "爸爸说了一句话。现在很晚了。",
+        "question": "爸爸让孩子们做什么？",
+        "options": [
+          {
+            "text": "去睡觉",
+            "value": "correct"
+          },
+          {
+            "text": "看电视",
+            "value": "w1"
+          },
+          {
+            "text": "做作业",
+            "value": "w2"
+          },
+          {
+            "text": "吃饭",
+            "value": "w3"
+          }
+        ],
+        "correct": "correct",
+        "chinese": "快点，孩子们！该睡觉了。"
+      },
+      {
+        "type": "sentence_sequence",
+        "sentences": [
+          "What are you doing?",
+          "I'm watching TV.",
+          "Come on, it's late!"
+        ],
+        "chinese": "把对话排好顺序！",
+        "chineseHint": "你在做什么？ / 我在看电视。 / 快点，很晚了！"
+      },
+      {
+        "type": "sentence_sequence",
+        "sentences": [
+          "She is reading.",
+          "He is sleeping.",
+          "It's very quiet."
+        ],
+        "chinese": "把描述排好顺序！",
+        "chineseHint": "她在读书。 / 他在睡觉。 / 很安静。"
+      },
+      {
+        "type": "word_match",
+        "word": "reading",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/reading.png\" width=\"80\">",
+            "value": "reading"
           },
           {
             "text": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-            "value": "watch TV"
+            "value": "wrong1"
           },
           {
-            "text": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-            "value": "three"
-          },
-          {
-            "text": "<img src=\"assets/images/reading.png\" width=\"80\">",
-            "value": "read"
+            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+            "value": "wrong2"
           }
         ],
-        "correct": 2,
-        "difficulty": "hard"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "我正在看书。",
-        "word": "watch TV",
-        "sentence": "I'm reading.",
-        "options": [
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-          "<img src=\"assets/images/reading.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
-        ],
-        "correct": "watch TV",
-        "difficulty": "hard"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "孩子们在做什么？",
-        "word": "kid",
-        "sentence": "What are the kids doing?",
-        "options": [
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-          "<img src=\"assets/images/reading.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
-        ],
-        "correct": 0,
-        "difficulty": "easy"
+        "correct": "reading",
+        "chinese": "reading"
       },
       {
         "type": "word_match",
-        "chinese": "现在是三点。",
-        "word": "three",
-        "sentence": "It's three o'clock.",
-        "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/reading.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">"
-        ],
-        "correct": 2,
-        "difficulty": "easy"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "我正在看书。",
-        "word": "read",
-        "sentence": "I'm reading.",
-        "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-          "<img src=\"assets/images/reading.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">"
-        ],
-        "correct": "read",
-        "difficulty": "medium"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "我正在看书。",
-        "word": "watch TV",
-        "sentence": "I'm reading.",
-        "options": [
-          "<img src=\"assets/images/reading.png\" width=\"80\">",
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
-        ],
-        "correct": "watch TV",
-        "difficulty": "medium"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "孩子们在做什么？",
-        "word": "kid",
-        "sentence": "What are the kids doing?",
-        "options": [
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-          "<img src=\"assets/images/reading.png\" width=\"80\">",
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
-        ],
-        "correct": 3,
-        "difficulty": "hard"
-      },
-      {
-        "type": "word_match",
-        "chinese": "我正在看书。",
-        "word": "three",
-        "sentence": "I'm reading.",
-        "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-          "<img src=\"assets/images/reading.png\" width=\"80\">"
-        ],
-        "correct": 1,
-        "difficulty": "hard"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "我正在看书。",
-        "word": "read",
-        "sentence": "I'm reading.",
+        "word": "watching TV",
         "options": [
           {
-            "text": "<img src=\"assets/images/baby.png\" width=\"80\">",
-            "value": "kid"
+            "text": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
+            "value": "watching TV"
           },
           {
-            "text": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-            "value": "three"
+            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+            "value": "wrong1"
           },
           {
             "text": "<img src=\"assets/images/reading.png\" width=\"80\">",
-            "value": "read"
+            "value": "wrong2"
+          }
+        ],
+        "correct": "watching TV",
+        "chinese": "watching TV"
+      },
+      {
+        "type": "word_match",
+        "word": "sleeping",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+            "value": "sleeping"
+          },
+          {
+            "text": "<img src=\"assets/images/reading.png\" width=\"80\">",
+            "value": "wrong1"
           },
           {
             "text": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-            "value": "watch TV"
+            "value": "wrong2"
           }
         ],
-        "correct": 2,
-        "difficulty": "easy"
-      },
-      {
-        "type": "word_match",
-        "chinese": "我正在看书。",
-        "word": "watch TV",
-        "sentence": "I'm reading.",
-        "options": [
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-          "<img src=\"assets/images/reading.png\" width=\"80\">",
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">"
-        ],
-        "correct": 3,
-        "difficulty": "hard"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "我正在看书。",
-        "word": "kid",
-        "sentence": "I'm reading.",
-        "options": [
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-          "<img src=\"assets/images/reading.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">"
-        ],
-        "correct": "kid",
-        "difficulty": "medium"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "我正在看书。",
-        "word": "three",
-        "sentence": "I'm reading.",
-        "options": [
-          "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-          "<img src=\"assets/images/baby.png\" width=\"80\">",
-          "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-          "<img src=\"assets/images/reading.png\" width=\"80\">"
-        ],
-        "correct": "three",
-        "difficulty": "medium"
+        "correct": "sleeping",
+        "chinese": "sleeping"
       }
     ]
   },
   "writing": {
     "pretest": [
       {
-        "type": "word_spell",
-        "word": "read",
-        "chinese": "我正在看书。",
-        "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
-        "display": "rea_",
+        "type": "letter_select",
+        "prompt": "钟的首字母是？",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "options": [
+          "k",
+          "c",
+          "g",
+          "t"
+        ],
+        "correct": 1,
+        "chinese": "钟",
+        "word": "钟"
+      },
+      {
+        "type": "pinyin_fill",
+        "hint": "w_tch",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "options": [
+          "a",
+          "e",
+          "o",
+          "i"
+        ],
+        "correct": 0,
+        "chinese": "看"
+      },
+      {
+        "type": "pinyin_fill",
+        "hint": "r_ad",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "options": [
           "e",
-          "d",
-          "f",
+          "a",
+          "o",
+          "i"
+        ],
+        "correct": 0,
+        "chinese": "读"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "I'm watching _____.",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "options": [
+          "book",
+          "TV",
+          "clock",
+          "time"
+        ],
+        "correct": 1,
+        "chinese": "我在看电视。"
+      },
+      {
+        "type": "word_puzzle",
+        "hint": "k_d",
+        "word": "kid",
+        "options": [
+          "i",
+          "v",
+          "t",
           "g"
         ],
-        "correct": "d"
+        "correct": 0,
+        "chinese": "kid"
       },
       {
-        "type": "letter_select",
-        "word": "watch TV",
-        "chinese": "现在是watch TV点。",
-        "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-        "display": "wa_ch TV",
+        "type": "word_puzzle",
+        "hint": "r_ad",
+        "word": "read",
+        "options": [
+          "e",
+          "a",
+          "c",
+          "m"
+        ],
+        "correct": 0,
+        "chinese": "read"
+      },
+      {
+        "type": "word_puzzle",
+        "hint": "w_tch",
+        "word": "watch",
         "options": [
           "t",
-          "v",
-          "u",
-          "w"
-        ],
-        "correct": "t"
-      },
-      {
-        "type": "word_spell",
-        "word": "kid",
-        "chinese": "现在是kid点。",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
-        "display": "ki_",
-        "options": [
-          "e",
-          "d",
-          "g",
-          "f"
-        ],
-        "correct": "d"
-      },
-      {
-        "type": "letter_select",
-        "word": "three",
-        "chinese": "现在是三点。",
-        "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-        "display": "t_ree",
-        "options": [
-          "h",
-          "k",
-          "i",
-          "j"
-        ],
-        "correct": "h"
-      },
-      {
-        "type": "word_spell",
-        "word": "read",
-        "chinese": "我正在看书。",
-        "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
-        "display": "r_ad",
-        "options": [
-          "g",
-          "e",
-          "h",
-          "f"
-        ],
-        "correct": "e"
-      },
-      {
-        "type": "letter_select",
-        "word": "watch TV",
-        "chinese": "现在是watch TV点。",
-        "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-        "display": "w_tch TV",
-        "options": [
-          "d",
-          "c",
-          "b",
+          "x",
+          "m",
           "a"
         ],
-        "correct": "a"
+        "correct": 3,
+        "chinese": "watch"
       },
       {
-        "type": "word_spell",
-        "word": "kid",
-        "chinese": "现在是kid点。",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
-        "display": "ki_",
+        "type": "fill_blank",
+        "prompt": "She is _____.",
         "options": [
-          "g",
-          "f",
-          "e",
-          "d"
+          "kid",
+          "read",
+          "watch",
+          "reading"
         ],
-        "correct": "d"
+        "correct": 3,
+        "chinese": "She is reading."
       },
       {
-        "type": "letter_select",
-        "word": "three",
-        "chinese": "现在是三点。",
-        "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-        "display": "t_ree",
+        "type": "fill_blank",
+        "prompt": "I'm _____ TV.",
         "options": [
-          "j",
-          "i",
-          "k",
-          "h"
+          "watching",
+          "watch",
+          "kid",
+          "read"
         ],
-        "correct": "h"
-      },
-      {
-        "type": "letter_select",
-        "word": "read",
-        "chinese": "我正在看书。",
-        "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
-        "display": "rea_",
-        "options": [
-          "d",
-          "e",
-          "g",
-          "f"
-        ],
-        "correct": "d"
-      },
-      {
-        "type": "word_spell",
-        "word": "watch TV",
-        "chinese": "现在是watch TV点。",
-        "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-        "display": "watch_TV",
-        "options": [
-          "o",
-          " ",
-          "p",
-          "q"
-        ],
-        "correct": " "
+        "correct": 0,
+        "chinese": "I'm watching TV."
       }
     ],
     "practice": [
       {
-        "type": "word_spell",
-        "word": "read",
-        "chinese": "我正在看书。",
-        "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
-        "display": "rea_",
-        "options": [
-          "e",
-          "d",
-          "f",
-          "g"
+        "type": "sentence_order",
+        "chinese": "现在是福州上午八点半。",
+        "words": [
+          "It's",
+          "8:30",
+          "a.m.",
+          "in",
+          "Fuzhou"
         ],
-        "correct": "d",
-        "difficulty": "medium",
-        "parts": [
-          "re",
-          "ad"
+        "scrambled": [
+          "a.m.",
+          "It's",
+          "Fuzhou",
+          "8:30",
+          "in"
+        ],
+        "chineseWords": [
+          "现在是",
+          "福州",
+          "上午",
+          "八点半"
+        ],
+        "chineseScrambled": [
+          "八点半",
+          "现在是",
+          "上午",
+          "福州"
         ]
       },
       {
-        "type": "word_spell",
-        "word": "watch TV",
-        "chinese": "现在是watch TV点。",
-        "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-        "display": "wa_ch TV",
-        "options": [
-          "t",
-          "v",
-          "u",
-          "w"
+        "type": "sentence_order",
+        "chinese": "纽约几点了？",
+        "words": [
+          "What's",
+          "the",
+          "time",
+          "in",
+          "New York"
         ],
-        "correct": "t",
-        "difficulty": "medium",
-        "parts": [
-          "watc",
-          "h TV"
+        "scrambled": [
+          "time",
+          "What's",
+          "New York",
+          "in",
+          "the"
+        ],
+        "chineseWords": [
+          "纽约",
+          "几点",
+          "了"
+        ],
+        "chineseScrambled": [
+          "几点",
+          "了",
+          "纽约"
         ]
       },
       {
-        "type": "word_spell",
-        "word": "kid",
-        "chinese": "现在是kid点。",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
-        "display": "ki_",
-        "options": [
-          "e",
-          "d",
-          "g",
-          "f"
+        "type": "sentence_order",
+        "chinese": "爷爷，伦敦几点了？",
+        "words": [
+          "What's",
+          "the",
+          "time",
+          "in",
+          "London",
+          "Grandpa"
         ],
-        "correct": "d",
-        "difficulty": "easy",
-        "parts": [
-          "k",
-          "id"
+        "scrambled": [
+          "London",
+          "What's",
+          "Grandpa",
+          "time",
+          "in",
+          "the"
+        ],
+        "chineseWords": [
+          "爷爷",
+          "伦敦",
+          "几点",
+          "了"
+        ],
+        "chineseScrambled": [
+          "几点",
+          "爷爷",
+          "了",
+          "伦敦"
         ]
       },
       {
-        "type": "letter_select",
-        "word": "three",
-        "chinese": "现在是三点。",
-        "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-        "display": "t_ree",
-        "options": [
-          "h",
-          "k",
-          "i",
-          "j"
+        "type": "sentence_order",
+        "chinese": "现在是上午十点半。",
+        "words": [
+          "It's",
+          "10:30",
+          "a.m."
         ],
-        "correct": "h",
-        "difficulty": "medium",
-        "parts": [
-          "th",
-          "ree"
+        "scrambled": [
+          "a.m.",
+          "It's",
+          "10:30"
+        ],
+        "chineseWords": [
+          "现在是",
+          "上午",
+          "十点半"
+        ],
+        "chineseScrambled": [
+          "十点半",
+          "上午",
+          "现在是"
         ]
       },
       {
-        "type": "duo_spell",
-        "word": "read",
-        "chinese": "我正在看书。",
-        "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
-        "display": "r_ad",
-        "options": [
-          "g",
-          "e",
-          "h",
-          "f"
+        "type": "sentence_order",
+        "chinese": "我在看电视。",
+        "words": [
+          "I'm",
+          "watching",
+          "TV"
         ],
-        "correct": "e",
-        "difficulty": "hard",
-        "parts": [
-          "re",
-          "ad"
+        "scrambled": [
+          "TV",
+          "I'm",
+          "watching"
+        ],
+        "chineseWords": [
+          "我",
+          "在看",
+          "电视"
+        ],
+        "chineseScrambled": [
+          "电视",
+          "我",
+          "在看"
         ]
       },
       {
-        "type": "letter_select",
-        "word": "watch TV",
-        "chinese": "现在是watch TV点。",
-        "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-        "display": "w_tch TV",
-        "options": [
-          "d",
-          "c",
-          "b",
-          "a"
+        "type": "sentence_order",
+        "chinese": "现在是下午七点半。",
+        "words": [
+          "It's",
+          "7:30",
+          "p.m."
         ],
-        "correct": "a",
-        "difficulty": "hard",
-        "parts": [
-          "watc",
-          "h TV"
+        "scrambled": [
+          "p.m.",
+          "It's",
+          "7:30"
+        ],
+        "chineseWords": [
+          "现在是",
+          "下午",
+          "七点半"
+        ],
+        "chineseScrambled": [
+          "七点半",
+          "下午",
+          "现在是"
         ]
       },
       {
-        "type": "letter_select",
-        "word": "kid",
-        "chinese": "现在是kid点。",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
-        "display": "ki_",
-        "options": [
-          "g",
-          "f",
-          "e",
-          "d"
+        "type": "sentence_order",
+        "chinese": "我在看书。",
+        "words": [
+          "I'm",
+          "reading"
         ],
-        "correct": "d",
-        "difficulty": "easy",
-        "parts": [
-          "k",
-          "id"
+        "scrambled": [
+          "reading",
+          "I'm"
+        ],
+        "chineseWords": [
+          "我",
+          "在看书"
+        ],
+        "chineseScrambled": [
+          "在看书",
+          "我"
         ]
       },
       {
-        "type": "letter_select",
-        "word": "three",
-        "chinese": "现在是三点。",
-        "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-        "display": "t_ree",
-        "options": [
-          "j",
-          "i",
-          "k",
-          "h"
+        "type": "sentence_order",
+        "chinese": "孩子们在做什么？",
+        "words": [
+          "What",
+          "are",
+          "the",
+          "kids",
+          "doing"
         ],
-        "correct": "h",
-        "difficulty": "easy",
-        "parts": [
-          "th",
-          "ree"
+        "scrambled": [
+          "kids",
+          "What",
+          "doing",
+          "are",
+          "the"
+        ],
+        "chineseWords": [
+          "孩子们",
+          "在做",
+          "什么"
+        ],
+        "chineseScrambled": [
+          "什么",
+          "孩子们",
+          "在做"
         ]
       },
       {
-        "type": "duo_spell",
-        "word": "read",
-        "chinese": "我正在看书。",
-        "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
-        "display": "rea_",
-        "options": [
-          "d",
-          "e",
-          "g",
-          "f"
+        "type": "sentence_order",
+        "chinese": "奶奶也在看电视吗？",
+        "words": [
+          "Is",
+          "Grandma",
+          "watching",
+          "TV",
+          "too"
         ],
-        "correct": "d",
-        "difficulty": "medium",
-        "parts": [
-          "re",
-          "ad"
+        "scrambled": [
+          "TV",
+          "Is",
+          "too",
+          "Grandma",
+          "watching"
+        ],
+        "chineseWords": [
+          "奶奶",
+          "也",
+          "在看",
+          "电视",
+          "吗"
+        ],
+        "chineseScrambled": [
+          "电视",
+          "吗",
+          "奶奶",
+          "也",
+          "在看"
         ]
       },
       {
-        "type": "letter_select",
-        "word": "watch TV",
-        "chinese": "现在是watch TV点。",
-        "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-        "display": "watch_TV",
-        "options": [
-          "o",
-          " ",
-          "p",
-          "q"
+        "type": "sentence_order",
+        "chinese": "不，她没有。她在看书。",
+        "words": [
+          "No",
+          "she",
+          "isn't",
+          "She",
+          "is",
+          "reading"
         ],
-        "correct": " ",
-        "difficulty": "easy",
-        "parts": [
-          "watc",
-          "h TV"
+        "scrambled": [
+          "She",
+          "No",
+          "reading",
+          "she",
+          "is",
+          "isn't"
+        ],
+        "chineseWords": [
+          "不",
+          "她没有",
+          "她",
+          "在看书"
+        ],
+        "chineseScrambled": [
+          "在看书",
+          "不",
+          "她",
+          "她没有"
         ]
       },
       {
-        "type": "letter_select",
-        "word": "kid",
-        "chinese": "现在是kid点。",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
-        "display": "k_d",
-        "options": [
-          "j",
-          "i",
-          "k",
-          "l"
+        "type": "sentence_order",
+        "chinese": "现在是上午十点半。我在看电视。",
+        "words": [
+          "It's",
+          "10:30",
+          "a.m.",
+          "I'm",
+          "watching",
+          "TV"
         ],
-        "correct": "i",
-        "difficulty": "medium",
-        "parts": [
-          "k",
-          "id"
+        "scrambled": [
+          "I'm",
+          "10:30",
+          "TV",
+          "It's",
+          "watching",
+          "a.m."
+        ],
+        "chineseWords": [
+          "现在是",
+          "上午",
+          "十点半",
+          "我",
+          "在看",
+          "电视"
+        ],
+        "chineseScrambled": [
+          "电视",
+          "十点半",
+          "我",
+          "现在是",
+          "在看",
+          "上午"
         ]
       },
       {
-        "type": "duo_spell",
-        "word": "three",
-        "chinese": "现在是三点。",
-        "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-        "display": "t_ree",
-        "options": [
-          "i",
-          "h",
-          "k",
-          "j"
+        "type": "sentence_order",
+        "chinese": "现在是下午七点半。我在看书。",
+        "words": [
+          "It's",
+          "7:30",
+          "p.m.",
+          "I'm",
+          "reading"
         ],
-        "correct": "h",
-        "difficulty": "hard",
-        "parts": [
-          "th",
-          "ree"
+        "scrambled": [
+          "reading",
+          "It's",
+          "p.m.",
+          "I'm",
+          "7:30"
+        ],
+        "chineseWords": [
+          "现在是",
+          "下午",
+          "七点半",
+          "我",
+          "在看书"
+        ],
+        "chineseScrambled": [
+          "在看书",
+          "七点半",
+          "现在是",
+          "我",
+          "下午"
         ]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "不，她没有。",
+        "words": [
+          "No",
+          "she",
+          "isn't"
+        ],
+        "scrambled": [
+          "she",
+          "No",
+          "isn't"
+        ],
+        "chineseWords": [
+          "吗",
+          "不",
+          "她没有"
+        ],
+        "chineseScrambled": [
+          "不",
+          "吗",
+          "她没有"
+        ]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "她在看书。",
+        "words": [
+          "She",
+          "is",
+          "reading"
+        ],
+        "scrambled": [
+          "is",
+          "She",
+          "reading"
+        ],
+        "chineseWords": [
+          "她",
+          "在看书"
+        ],
+        "chineseScrambled": [
+          "在看书",
+          "她"
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "I'm watching _____.",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "options": [
+          "book",
+          "TV",
+          "clock",
+          "time"
+        ],
+        "correct": 1,
+        "chinese": "我在看电视。"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "What's the _____ in New York?",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "options": [
+          "clock",
+          "time",
+          "day",
+          "name"
+        ],
+        "correct": 1,
+        "chinese": "纽约几点了？"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "What are the _____ doing?",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "options": [
+          "boys",
+          "kids",
+          "dogs",
+          "cats"
+        ],
+        "correct": 1,
+        "chinese": "孩子们在做什么？"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "She is _____.",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "options": [
+          "watching",
+          "reading",
+          "playing",
+          "drawing"
+        ],
+        "correct": 1,
+        "chinese": "她在看书。"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "Is Grandma _____ TV, too?",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "options": [
+          "reading",
+          "watching",
+          "playing",
+          "doing"
+        ],
+        "correct": 1,
+        "chinese": "奶奶也在看电视吗？"
       }
     ]
   },
   "speaking": {
     "pretest": [
       {
-        "type": "shadowing",
+        "type": "repeat_word",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "word": "clock",
+        "chinese": "钟",
+        "expected": "clock"
+      },
+      {
+        "type": "repeat_word",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "word": "time",
+        "chinese": "时间",
+        "expected": "time"
+      },
+      {
+        "type": "repeat_word",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "word": "watch",
+        "chinese": "看",
+        "expected": "watch"
+      },
+      {
+        "type": "repeat_word",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "word": "read",
-        "chinese": "这是阅读。",
-        "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
-        "sentence": "What's the time in New York?"
+        "chinese": "读",
+        "expected": "read"
       },
       {
-        "type": "read_word",
-        "word": "watch TV",
-        "chinese": "这是看电视。",
-        "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-        "sentence": "What's the time in New York?"
-      },
-      {
-        "type": "read_word",
+        "type": "repeat_word",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "word": "kid",
-        "chinese": "我喜欢kid。",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
-        "sentence": "I like kid."
+        "chinese": "孩子",
+        "expected": "kid"
       },
       {
-        "type": "read_word",
-        "word": "three",
-        "chinese": "我喜欢三。",
-        "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-        "sentence": "I like three."
+        "type": "speak_select",
+        "audio": "clock",
+        "options": [
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "chinese": "钟"
       },
       {
-        "type": "read_word",
-        "word": "read",
-        "chinese": "我喜欢看书。",
-        "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
-        "sentence": "I like read."
+        "type": "speak_select",
+        "audio": "bed",
+        "options": [
+          "<img src=\"assets/images/clock.png\" width=\"80\">",
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "chinese": "床"
       },
       {
-        "type": "shadowing",
-        "word": "watch TV",
-        "chinese": "我喜欢watch TV。",
-        "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-        "sentence": "I like watch TV."
+        "type": "repeat_sentence",
+        "word": "What's the time in New York?",
+        "chinese": "纽约几点了？",
+        "expected": "What's the time in New York?"
       },
       {
-        "type": "shadowing",
-        "word": "kid",
-        "chinese": "这是小孩。",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
-        "sentence": "What's the time in New York?"
+        "type": "repeat_sentence",
+        "word": "I'm watching TV.",
+        "chinese": "我在看电视。",
+        "expected": "I'm watching TV."
       },
       {
-        "type": "shadowing",
-        "word": "three",
-        "chinese": "我喜欢三。",
-        "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-        "sentence": "I like three."
-      },
-      {
-        "type": "shadowing",
-        "word": "read",
-        "chinese": "我喜欢看书。",
-        "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
-        "sentence": "I like read."
-      },
-      {
-        "type": "shadowing",
-        "word": "watch TV",
-        "chinese": "这是看电视。",
-        "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-        "sentence": "What's the time in New York?"
+        "type": "repeat_sentence",
+        "word": "I'm reading.",
+        "chinese": "我在看书。",
+        "expected": "I'm reading."
       }
     ],
     "practice": [
       {
-        "type": "read_word",
+        "type": "repeat_sentence",
+        "word": "It's 8:30 a.m. in Fuzhou.",
+        "chinese": "现在是福州上午八点半。",
+        "expected": "It's 8:30 a.m. in Fuzhou."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "What's the time in New York?",
+        "chinese": "纽约几点了？",
+        "expected": "What's the time in New York?"
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "What's the time in London, Grandpa?",
+        "chinese": "爷爷，伦敦几点了？",
+        "expected": "What's the time in London, Grandpa?"
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "It's 10:30 a.m. I'm watching TV.",
+        "chinese": "现在是上午十点半。我在看电视。",
+        "expected": "It's 10:30 a.m. I'm watching TV."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "It's 7:30 p.m. I'm reading.",
+        "chinese": "现在是下午七点半。我在看书。",
+        "expected": "It's 7:30 p.m. I'm reading."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "What are the kids doing?",
+        "chinese": "孩子们在做什么？",
+        "expected": "What are the kids doing?"
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "Ben and Kate are playing with toys.",
+        "chinese": "本和凯特在玩玩具。",
+        "expected": "Ben and Kate are playing with toys."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "Is Grandma watching TV, too?",
+        "chinese": "奶奶也在看电视吗？",
+        "expected": "Is Grandma watching TV, too?"
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "No, she isn't. She is reading.",
+        "chinese": "不，她没有。她在看书。",
+        "expected": "No, she isn't. She is reading."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "I'm watching TV.",
+        "chinese": "我在看电视。",
+        "expected": "I'm watching TV."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "I'm reading.",
+        "chinese": "我在看书。",
+        "expected": "I'm reading."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "She is reading.",
+        "chinese": "她在看书。",
+        "expected": "She is reading."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "It's 8:30 a.m. in Fuzhou. What's the time in New York?",
+        "chinese": "现在是福州上午八点半。纽约几点了？",
+        "expected": "It's 8:30 a.m. in Fuzhou. What's the time in New York?"
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "What are the kids doing? Ben and Kate are playing with toys.",
+        "chinese": "孩子们在做什么？本和凯特在玩玩具。",
+        "expected": "What are the kids doing? Ben and Kate are playing with toys."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "Is Grandma watching TV, too? No, she isn't.",
+        "chinese": "奶奶也在看电视吗？不，她没有。",
+        "expected": "Is Grandma watching TV, too? No, she isn't."
+      },
+      {
+        "type": "repeat_word",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "word": "clock",
+        "chinese": "钟",
+        "expected": "clock"
+      },
+      {
+        "type": "repeat_word",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "word": "watch",
+        "chinese": "看",
+        "expected": "watch"
+      },
+      {
+        "type": "repeat_word",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "word": "read",
-        "chinese": "这是一只看书。",
-        "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
-        "sentence": "This is a read.",
-        "difficulty": "hard"
+        "chinese": "读",
+        "expected": "read"
       },
       {
-        "type": "debate",
-        "word": "watch TV",
-        "chinese": "这是一只watch TV。",
-        "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-        "sentence": "This is a watch TV.",
-        "difficulty": "hard"
-      },
-      {
-        "type": "debate",
+        "type": "repeat_word",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
         "word": "kid",
-        "chinese": "我正在看书。",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
-        "sentence": "I'm reading.",
-        "difficulty": "medium"
+        "chinese": "孩子",
+        "expected": "kid"
       },
       {
-        "type": "roleplay",
-        "word": "three",
-        "chinese": "这是一只三。",
-        "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-        "sentence": "This is a three.",
-        "difficulty": "hard"
+        "type": "repeat_word",
+        "image": "<img src=\"assets/images/clock.png\" width=\"80\">",
+        "word": "time",
+        "chinese": "时间",
+        "expected": "time"
       },
       {
-        "type": "roleplay",
-        "word": "read",
-        "chinese": "这是一只看书。",
+        "type": "picture_speak",
         "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
-        "sentence": "This is a read.",
-        "difficulty": "medium"
+        "word": "reading",
+        "chinese": "reading"
       },
       {
-        "type": "shadowing",
-        "word": "watch TV",
-        "chinese": "我正在看书。",
+        "type": "picture_speak",
         "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-        "sentence": "I'm reading.",
-        "difficulty": "hard"
+        "word": "watching_tv",
+        "chinese": "watching_tv"
       },
       {
-        "type": "read_word",
-        "word": "kid",
-        "chinese": "我正在看书。",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
-        "sentence": "I'm reading.",
-        "difficulty": "easy"
+        "type": "picture_speak",
+        "image": "<img src=\"assets/images/homework.png\" width=\"80\">",
+        "word": "homework",
+        "chinese": "homework"
       },
       {
-        "type": "debate",
-        "word": "three",
-        "chinese": "我正在看书。",
-        "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-        "sentence": "I'm reading.",
-        "difficulty": "hard"
+        "type": "picture_speak",
+        "image": "<img src=\"assets/images/sleeping.png\" width=\"80\">",
+        "word": "sleeping",
+        "chinese": "sleeping"
       },
       {
-        "type": "shadowing",
-        "word": "read",
-        "chinese": "我正在看书。",
-        "image": "<img src=\"assets/images/reading.png\" width=\"80\">",
-        "sentence": "I'm reading.",
-        "difficulty": "medium"
+        "type": "picture_speak",
+        "image": "<img src=\"assets/images/drawing.png\" width=\"80\">",
+        "word": "drawing",
+        "chinese": "drawing"
       },
       {
-        "type": "roleplay",
-        "word": "watch TV",
-        "chinese": "这是一只watch TV。",
-        "image": "<img src=\"assets/images/watching_tv.png\" width=\"80\">",
-        "sentence": "This is a watch TV.",
-        "difficulty": "medium"
-      },
-      {
-        "type": "shadowing",
-        "word": "kid",
-        "chinese": "我正在看书。",
-        "image": "<img src=\"assets/images/baby.png\" width=\"80\">",
-        "sentence": "I'm reading.",
-        "difficulty": "easy"
-      },
-      {
-        "type": "roleplay",
-        "word": "three",
-        "chinese": "这是一只三。",
-        "image": "<img src=\"assets/images/clock_3.png\" width=\"80\">",
-        "sentence": "This is a three.",
-        "difficulty": "medium"
+        "type": "picture_speak",
+        "image": "<img src=\"assets/images/cooking.png\" width=\"80\">",
+        "word": "cooking",
+        "chinese": "cooking"
       }
     ]
   }

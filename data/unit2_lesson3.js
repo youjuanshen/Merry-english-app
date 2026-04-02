@@ -1,401 +1,404 @@
+// Unit 2 Lesson 3: Where is my sweater?
+// Core vocab: where, room, sweater, under, bed, chair, schoolbag
+// Sentences: "Where is my sweater, Mom?", "Is it on your bed?", "Is it under your chair?", etc.
 var unit2_lesson3 = {
   "id": "U2L3",
-  "title": "Unit 2 Lesson 3: Where is my sweater?",
+  "title": "Where is my sweater?",
   "listening": {
     "pretest": [
       {
         "type": "listen_select",
         "audio": "sweater",
-        "chinese": "这是sweater。",
+        "options": [
+          "<img src=\"assets/images/jacket.png\" width=\"80\">",
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/shorts.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "chinese": "毛衣"
+      },
+      {
+        "type": "listen_select",
+        "audio": "bed",
         "options": [
           "<img src=\"assets/images/chair.png\" width=\"80\">",
           "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-          "<img src=\"assets/images/sweater.png\" width=\"80\">",
-          "<img src=\"assets/images/bed.png\" width=\"80\">"
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/jacket.png\" width=\"80\">"
         ],
         "correct": 2,
-        "image": "<img src=\"assets/images/sweater.png\" width=\"80\">"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "bed",
-        "chinese": "这是bed。",
-        "options": [
-          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-          "<img src=\"assets/images/bed.png\" width=\"80\">",
-          "<img src=\"assets/images/sweater.png\" width=\"80\">",
-          "<img src=\"assets/images/chair.png\" width=\"80\">"
-        ],
-        "correct": false,
-        "image": "<img src=\"assets/images/chair.png\" width=\"80\">"
+        "chinese": "床"
       },
       {
         "type": "listen_select",
         "audio": "chair",
-        "chinese": "这是chair。",
         "options": [
           "<img src=\"assets/images/chair.png\" width=\"80\">",
-          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
           "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-          "<img src=\"assets/images/bed.png\" width=\"80\">"
+          "<img src=\"assets/images/sweater.png\" width=\"80\">"
         ],
         "correct": 0,
-        "image": "<img src=\"assets/images/chair.png\" width=\"80\">"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "schoolbag",
-        "chinese": "这是书包。",
-        "options": [
-          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-          "<img src=\"assets/images/sweater.png\" width=\"80\">",
-          "<img src=\"assets/images/chair.png\" width=\"80\">",
-          "<img src=\"assets/images/bed.png\" width=\"80\">"
-        ],
-        "correct": false,
-        "image": "<img src=\"assets/images/sweater.png\" width=\"80\">"
+        "chinese": "椅子"
       },
       {
         "type": "listen_select",
-        "audio": "sweater",
-        "chinese": "这是sweater。",
+        "audio": "Where is my sweater, Mom?",
         "options": [
-          "<img src=\"assets/images/sweater.png\" width=\"80\">",
-          "<img src=\"assets/images/bed.png\" width=\"80\">",
-          "<img src=\"assets/images/chair.png\" width=\"80\">",
-          "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
+          "它在你的床上吗？",
+          "妈妈，我的毛衣在哪里？",
+          "它在你的椅子下面吗？",
+          "看！你的毛衣在你的书包里！"
         ],
-        "correct": 0,
-        "image": "<img src=\"assets/images/bed.png\" width=\"80\">"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "bed",
-        "chinese": "这是bed。",
-        "options": [
-          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-          "<img src=\"assets/images/sweater.png\" width=\"80\">",
-          "<img src=\"assets/images/chair.png\" width=\"80\">",
-          "<img src=\"assets/images/bed.png\" width=\"80\">"
-        ],
-        "correct": true,
-        "image": "<img src=\"assets/images/chair.png\" width=\"80\">"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "chair",
-        "chinese": "这是chair。",
-        "options": [
-          "<img src=\"assets/images/bed.png\" width=\"80\">",
-          "<img src=\"assets/images/sweater.png\" width=\"80\">",
-          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-          "<img src=\"assets/images/chair.png\" width=\"80\">"
-        ],
-        "correct": true,
-        "image": "<img src=\"assets/images/chair.png\" width=\"80\">"
+        "correct": 1,
+        "chinese": "妈妈，我的毛衣在哪里？"
       },
       {
         "type": "listen_select",
-        "audio": "schoolbag",
-        "chinese": "这是书包。",
+        "audio": "Is it on your bed?",
         "options": [
-          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-          "<img src=\"assets/images/bed.png\" width=\"80\">",
-          "<img src=\"assets/images/sweater.png\" width=\"80\">",
-          "<img src=\"assets/images/chair.png\" width=\"80\">"
-        ],
-        "correct": 0,
-        "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
-      },
-      {
-        "type": "listen_tf",
-        "audio": "sweater",
-        "chinese": "这是sweater。",
-        "options": [
-          "<img src=\"assets/images/sweater.png\" width=\"80\">",
-          "<img src=\"assets/images/chair.png\" width=\"80\">",
-          "<img src=\"assets/images/bed.png\" width=\"80\">",
-          "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
-        ],
-        "correct": false,
-        "image": "<img src=\"assets/images/bed.png\" width=\"80\">"
-      },
-      {
-        "type": "listen_select",
-        "audio": "bed",
-        "chinese": "这是bed。",
-        "options": [
-          "<img src=\"assets/images/sweater.png\" width=\"80\">",
-          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-          "<img src=\"assets/images/bed.png\" width=\"80\">",
-          "<img src=\"assets/images/chair.png\" width=\"80\">"
+          "它在你的椅子下面吗？",
+          "妈妈，我的毛衣在哪里？",
+          "它在你的床上吗？",
+          "不，不在。"
         ],
         "correct": 2,
-        "image": "<img src=\"assets/images/chair.png\" width=\"80\">"
+        "chinese": "它在你的床上吗？"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Is it under your chair?",
+        "options": [
+          "它在你的床上吗？",
+          "看！你的毛衣在你的书包里！",
+          "妈妈，我的毛衣在哪里？",
+          "它在你的椅子下面吗？"
+        ],
+        "correct": 3,
+        "chinese": "它在你的椅子下面吗？"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "This is a bed.",
+        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
+        "correct": true,
+        "chinese": "这是一张床，正确！"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "This is a chair.",
+        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
+        "correct": false,
+        "chinese": "这不是椅子，这是一张床。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Look! Your sweater is in your schoolbag!",
+        "options": [
+          "看！你的毛衣在你的书包里！",
+          "妈妈，我的毛衣在哪里？",
+          "它在你的床上吗？不，不在。",
+          "亲爱的，请把你的衣服收好。"
+        ],
+        "correct": 0,
+        "chinese": "看！你的毛衣在你的书包里！"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Dear, put away your clothes, please.",
+        "options": [
+          "妈妈，我的毛衣在哪里？",
+          "它在你的椅子下面吗？",
+          "亲爱的，请把你的衣服收好。",
+          "好的，妈妈。"
+        ],
+        "correct": 2,
+        "chinese": "亲爱的，请把你的衣服收好。"
       }
     ],
     "practice": [
       {
-        "type": "scenario",
+        "type": "listen_select",
         "audio": "sweater",
-        "chinese": "这是sweater。",
         "options": [
-          "<img src=\"assets/images/chair.png\" width=\"80\">",
-          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+          "<img src=\"assets/images/shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/shorts.png\" width=\"80\">",
           "<img src=\"assets/images/sweater.png\" width=\"80\">",
-          "<img src=\"assets/images/bed.png\" width=\"80\">"
+          "<img src=\"assets/images/jacket.png\" width=\"80\">"
         ],
         "correct": 2,
-        "difficulty": "hard",
-        "text": "Find the word",
-        "scenario": "Where is my sweater?",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
+        "chinese": "毛衣"
       },
       {
-        "type": "balloon_pop",
-        "audio": "bed",
-        "chinese": "这是bed。",
+        "type": "listen_select",
+        "audio": "schoolbag",
         "options": [
           "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
           "<img src=\"assets/images/bed.png\" width=\"80\">",
-          "<img src=\"assets/images/sweater.png\" width=\"80\">",
-          "<img src=\"assets/images/chair.png\" width=\"80\">"
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/jacket.png\" width=\"80\">"
+        ],
+        "correct": 0,
+        "chinese": "书包"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Where is my sweater, Mom?",
+        "options": [
+          "妈妈，我的毛衣在哪里？",
+          "它在你的床上吗？",
+          "不，不在。",
+          "好的，妈妈。"
+        ],
+        "correct": 0,
+        "chinese": "妈妈，我的毛衣在哪里？"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Is it on your bed?",
+        "options": [
+          "它在你的椅子下面吗？",
+          "它在你的床上吗？",
+          "妈妈，我的毛衣在哪里？",
+          "不，不在。"
         ],
         "correct": 1,
-        "difficulty": "hard",
-        "text": "Find the word",
-        "scenario": "Look! Your sweater is in your schoolbag!",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
+        "chinese": "它在你的床上吗？"
       },
       {
-        "type": "duo_listen_select",
-        "audio": "chair",
-        "chinese": "这是chair。",
+        "type": "listen_select",
+        "audio": "No, it isn't.",
         "options": [
-          "<img src=\"assets/images/chair.png\" width=\"80\">",
-          "<img src=\"assets/images/sweater.png\" width=\"80\">",
-          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-          "<img src=\"assets/images/bed.png\" width=\"80\">"
-        ],
-        "correct": 0,
-        "difficulty": "hard",
-        "text": "Find the word",
-        "scenario": "Look! Your sweater is in your schoolbag!",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
-      },
-      {
-        "type": "balloon_pop",
-        "audio": "schoolbag",
-        "chinese": "这是书包。",
-        "options": [
-          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-          "<img src=\"assets/images/sweater.png\" width=\"80\">",
-          "<img src=\"assets/images/chair.png\" width=\"80\">",
-          "<img src=\"assets/images/bed.png\" width=\"80\">"
-        ],
-        "correct": 0,
-        "difficulty": "medium",
-        "text": "Find the word",
-        "scenario": "Look! Your sweater is in your schoolbag!",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
-      },
-      {
-        "type": "scenario",
-        "audio": "sweater",
-        "chinese": "这是sweater。",
-        "options": [
-          "<img src=\"assets/images/sweater.png\" width=\"80\">",
-          "<img src=\"assets/images/bed.png\" width=\"80\">",
-          "<img src=\"assets/images/chair.png\" width=\"80\">",
-          "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
-        ],
-        "correct": 0,
-        "difficulty": "easy",
-        "text": "Find the word",
-        "scenario": "Look! Your sweater is in your schoolbag!",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "bed",
-        "chinese": "这是bed。",
-        "options": [
-          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-          "<img src=\"assets/images/sweater.png\" width=\"80\">",
-          "<img src=\"assets/images/chair.png\" width=\"80\">",
-          "<img src=\"assets/images/bed.png\" width=\"80\">"
-        ],
-        "correct": 3,
-        "difficulty": "hard",
-        "text": "Find the word",
-        "scenario": "Look! Your sweater is in your schoolbag!",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
-      },
-      {
-        "type": "scenario",
-        "audio": "chair",
-        "chinese": "这是chair。",
-        "options": [
-          "<img src=\"assets/images/bed.png\" width=\"80\">",
-          "<img src=\"assets/images/sweater.png\" width=\"80\">",
-          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-          "<img src=\"assets/images/chair.png\" width=\"80\">"
-        ],
-        "correct": 3,
-        "difficulty": "easy",
-        "text": "Find the word",
-        "scenario": "Where is my sweater?",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
-      },
-      {
-        "type": "scenario",
-        "audio": "schoolbag",
-        "chinese": "这是书包。",
-        "options": [
-          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-          "<img src=\"assets/images/bed.png\" width=\"80\">",
-          "<img src=\"assets/images/sweater.png\" width=\"80\">",
-          "<img src=\"assets/images/chair.png\" width=\"80\">"
-        ],
-        "correct": 0,
-        "difficulty": "hard",
-        "text": "Find the word",
-        "scenario": "Where is my sweater?",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
-      },
-      {
-        "type": "scenario",
-        "audio": "sweater",
-        "chinese": "这是sweater。",
-        "options": [
-          "<img src=\"assets/images/sweater.png\" width=\"80\">",
-          "<img src=\"assets/images/chair.png\" width=\"80\">",
-          "<img src=\"assets/images/bed.png\" width=\"80\">",
-          "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
-        ],
-        "correct": 0,
-        "difficulty": "easy",
-        "text": "Find the word",
-        "scenario": "Where is my sweater?",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
-      },
-      {
-        "type": "duo_listen_select",
-        "audio": "bed",
-        "chinese": "这是bed。",
-        "options": [
-          "<img src=\"assets/images/sweater.png\" width=\"80\">",
-          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-          "<img src=\"assets/images/bed.png\" width=\"80\">",
-          "<img src=\"assets/images/chair.png\" width=\"80\">"
+          "好的，妈妈。",
+          "是的，它在。",
+          "不，不在。",
+          "谢谢。"
         ],
         "correct": 2,
-        "difficulty": "medium",
-        "text": "Find the word",
-        "scenario": "Where is my sweater?",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
+        "chinese": "不，不在。"
       },
       {
-        "type": "scenario",
-        "audio": "chair",
-        "chinese": "这是chair。",
+        "type": "listen_select",
+        "audio": "Is it under your chair?",
         "options": [
-          "<img src=\"assets/images/bed.png\" width=\"80\">",
-          "<img src=\"assets/images/sweater.png\" width=\"80\">",
-          "<img src=\"assets/images/chair.png\" width=\"80\">",
-          "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
+          "它在你的椅子下面吗？",
+          "它在你的床上吗？",
+          "你的毛衣在你的书包里。",
+          "妈妈，我的毛衣在哪里？"
         ],
-        "correct": 2,
-        "difficulty": "medium",
-        "text": "Find the word",
-        "scenario": "Where is my sweater?",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
+        "correct": 0,
+        "chinese": "它在你的椅子下面吗？"
       },
       {
-        "type": "balloon_pop",
-        "audio": "schoolbag",
-        "chinese": "这是书包。",
+        "type": "listen_select",
+        "audio": "Look! Your sweater is in your schoolbag!",
         "options": [
-          "<img src=\"assets/images/chair.png\" width=\"80\">",
-          "<img src=\"assets/images/sweater.png\" width=\"80\">",
-          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-          "<img src=\"assets/images/bed.png\" width=\"80\">"
+          "它在你的床上吗？",
+          "妈妈，我的毛衣在哪里？",
+          "看！你的毛衣在你的书包里！",
+          "不，不在。"
         ],
         "correct": 2,
-        "difficulty": "medium",
-        "text": "Find the word",
-        "scenario": "Look! Your sweater is in your schoolbag!",
-        "question": "What should we pick?",
-        "feedback": "Great choice!"
+        "chinese": "看！你的毛衣在你的书包里！"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Dear, put away your clothes, please.",
+        "options": [
+          "好的，妈妈。",
+          "亲爱的，请把你的衣服收好。",
+          "妈妈，我的毛衣在哪里？",
+          "谢谢。"
+        ],
+        "correct": 1,
+        "chinese": "亲爱的，请把你的衣服收好。"
       },
       {
         "type": "listen_select",
         "audio": "Okay, Mom.",
         "options": [
-          "好的，妈妈。",
-          "谢谢你。",
+          "不，不在。",
+          "谢谢。",
           "不客气。",
-          "我的毛衣在哪里？"
+          "好的，妈妈。"
         ],
-        "correct": 0,
+        "correct": 3,
         "chinese": "好的，妈妈。"
       },
       {
         "type": "listen_select",
         "audio": "Oh, thank you very much.",
         "options": [
-          "好的，妈妈。",
-          "哦，非常感谢你。",
+          "哦，非常感谢。",
           "不客气。",
-          "请收好你的衣服。"
+          "好的，妈妈。",
+          "妈妈，我的毛衣在哪里？"
         ],
-        "correct": 1,
-        "chinese": "哦，非常感谢你。"
+        "correct": 0,
+        "chinese": "哦，非常感谢。"
       },
       {
         "type": "listen_select",
         "audio": "You're welcome.",
         "options": [
-          "非常感谢。",
+          "谢谢。",
           "好的，妈妈。",
           "不客气。",
-          "它在你的书包里。"
+          "不，不在。"
         ],
         "correct": 2,
         "chinese": "不客气。"
-      }
-,
+      },
       {
         "type": "listen_select",
-        "audio": "Is it on your bed? No, it isn't.",
-        "options": ["它在你的床上吗？不，不在。", "它在你的椅子下面吗？", "它在你的书包里。", "好的，妈妈。"],
+        "audio": "Where is my sweater, Mom? Is it on your bed? No, it isn't.",
+        "options": [
+          "妈妈，我的毛衣在哪里？它在你的床上吗？不，不在。",
+          "它在你的椅子下面吗？不，不在。",
+          "看！你的毛衣在你的书包里！",
+          "亲爱的，请把你的衣服收好。好的，妈妈。"
+        ],
         "correct": 0,
-        "chinese": "它在你的床上吗？不，不在。"
+        "chinese": "妈妈，我的毛衣在哪里？它在你的床上吗？不，不在。"
       },
       {
         "type": "listen_select",
         "audio": "Is it under your chair? No, it isn't.",
-        "options": ["好的，妈妈。", "它在你的椅子下面吗？不，不在。", "它在你的书包里。", "我的毛衣在哪里？"],
+        "options": [
+          "它在你的床上吗？不，不在。",
+          "它在你的椅子下面吗？不，不在。",
+          "看！你的毛衣在你的书包里！",
+          "好的，妈妈。"
+        ],
         "correct": 1,
         "chinese": "它在你的椅子下面吗？不，不在。"
       },
       {
         "type": "listen_select",
-        "audio": "Dear, put away your clothes, please.",
-        "options": ["亲爱的，请收好你的衣服。", "我的毛衣在哪里？", "它在你的书包里。", "好的，妈妈。"],
+        "audio": "Oh, thank you very much. You're welcome.",
+        "options": [
+          "好的，妈妈。不客气。",
+          "亲爱的，请把你的衣服收好。",
+          "哦，非常感谢。不客气。",
+          "妈妈，我的毛衣在哪里？"
+        ],
+        "correct": 2,
+        "chinese": "哦，非常感谢。不客气。"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "This is a schoolbag.",
+        "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+        "correct": true,
+        "chinese": "这是一个书包，正确！"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "This is a sweater.",
+        "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+        "correct": true,
+        "chinese": "这是一件毛衣，正确！"
+      },
+      {
+        "type": "listen_tf",
+        "audio": "This is a bed.",
+        "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
+        "correct": false,
+        "chinese": "这不是床，这是一把椅子。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Dear, put away your clothes, please. Okay, Mom.",
+        "options": [
+          "亲爱的，请把你的衣服收好。好的，妈妈。",
+          "妈妈，我的毛衣在哪里？不，不在。",
+          "哦，非常感谢。不客气。",
+          "看！你的毛衣在你的书包里！"
+        ],
         "correct": 0,
-        "chinese": "亲爱的，请收好你的衣服。"
+        "chinese": "亲爱的，请把你的衣服收好。好的，妈妈。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Look! Your sweater is in your schoolbag! Oh, thank you very much.",
+        "options": [
+          "妈妈，我的毛衣在哪里？不，不在。",
+          "看！你的毛衣在你的书包里！哦，非常感谢。",
+          "亲爱的，请把你的衣服收好。好的，妈妈。",
+          "它在你的椅子下面吗？不，不在。"
+        ],
+        "correct": 1,
+        "chinese": "看！你的毛衣在你的书包里！哦，非常感谢。"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Where is my sweater, Mom? Is it under your chair?",
+        "options": [
+          "妈妈，我的毛衣在哪里？它在你的床上吗？",
+          "看！你的毛衣在你的书包里！",
+          "妈妈，我的毛衣在哪里？它在你的椅子下面吗？",
+          "亲爱的，请把你的衣服收好。"
+        ],
+        "correct": 2,
+        "chinese": "妈妈，我的毛衣在哪里？它在你的椅子下面吗？"
+      },
+      {
+        "type": "listen_sequence",
+        "audio": "bed, chair, schoolbag",
+        "sequence": [
+          "bed",
+          "chair",
+          "schoolbag"
+        ],
+        "words": [
+          "<img src=\"assets/images/schoolbag.png\" width=\"60\">",
+          "<img src=\"assets/images/bed.png\" width=\"60\">",
+          "<img src=\"assets/images/chair.png\" width=\"60\">"
+        ],
+        "chinese": "听音频，按顺序点图片！"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Is it on your bed?",
+        "context": "🏠 你的毛衣找不到了！妈妈帮你找。",
+        "question": "妈妈觉得毛衣在哪？",
+        "options": [
+          "床上",
+          "椅子下",
+          "书包里",
+          "桌子上"
+        ],
+        "correct": 0,
+        "chinese": "它在你的床上吗？"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Is it under your chair?",
+        "context": "🏠 不在床上，妈妈又猜了一个地方。",
+        "question": "妈妈这次猜哪里？",
+        "options": [
+          "椅子下面",
+          "床上",
+          "书包里",
+          "门后面"
+        ],
+        "correct": 0,
+        "chinese": "它在你的椅子下面吗？"
+      },
+      {
+        "type": "listen_select",
+        "audio": "Your sweater is in your schoolbag.",
+        "context": "🎒 终于找到了！",
+        "question": "毛衣在哪里找到的？",
+        "options": [
+          "书包里",
+          "床上",
+          "椅子下",
+          "柜子里"
+        ],
+        "correct": 0,
+        "chinese": "你的毛衣在你的书包里。"
       }
     ]
   },
@@ -403,93 +406,307 @@ var unit2_lesson3 = {
     "pretest": [
       {
         "type": "word_match",
-        "chinese": "我的sweater在哪里？",
         "word": "sweater",
         "sentence": "Where is my sweater?",
+        "chinese": "我的毛衣在哪里？",
         "options": [
           {
-            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
-            "value": "bed"
+            "text": "<img src=\"assets/images/jacket.png\" width=\"80\">",
+            "value": "jacket"
           },
           {
             "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
             "value": "sweater"
           },
           {
-            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
-            "value": "chair"
+            "text": "<img src=\"assets/images/shirt.png\" width=\"80\">",
+            "value": "shirt"
           },
           {
-            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-            "value": "schoolbag"
+            "text": "<img src=\"assets/images/shorts.png\" width=\"80\">",
+            "value": "shorts"
           }
         ],
         "correct": "sweater"
       },
       {
-        "type": "sentence_match",
-        "chinese": "我穿了一件bed。",
+        "type": "word_match",
         "word": "bed",
-        "sentence": "I wear a bed.",
+        "sentence": "Is it on your bed?",
+        "chinese": "它在你的床上吗？",
         "options": [
           {
             "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
             "value": "chair"
           },
           {
+            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+            "value": "schoolbag"
+          },
+          {
             "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
             "value": "bed"
           },
           {
-            "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
-            "value": "skirt"
-          },
-          {
-            "text": "<img src=\"assets/images/shirt.png\" width=\"80\">",
-            "value": "shirt"
+            "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+            "value": "sweater"
           }
         ],
         "correct": "bed"
       },
       {
-        "type": "sentence_match",
-        "chinese": "我的sweater在哪里？",
+        "type": "word_match",
         "word": "chair",
-        "sentence": "Where is my sweater?",
+        "sentence": "Is it under your chair?",
+        "chinese": "它在你的椅子下面吗？",
         "options": [
-          {
-            "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
-            "value": "sweater"
-          },
           {
             "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
             "value": "chair"
+          },
+          {
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
           },
           {
             "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
             "value": "schoolbag"
           },
           {
-            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
-            "value": "bed"
+            "text": "<img src=\"assets/images/jacket.png\" width=\"80\">",
+            "value": "jacket"
           }
         ],
         "correct": "chair"
       },
       {
-        "type": "word_match",
-        "chinese": "我穿了一件书包。",
-        "word": "schoolbag",
-        "sentence": "I wear a schoolbag.",
+        "type": "sentence_match",
+        "sentence": "Where is my sweater, Mom?",
+        "chinese": "妈妈，我的毛衣在哪里？",
         "options": [
           {
-            "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
-            "value": "sweater"
+            "text": "它在你的床上吗？",
+            "value": "wrong1"
           },
           {
-            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
-            "value": "chair"
+            "text": "妈妈，我的毛衣在哪里？",
+            "value": "correct"
           },
+          {
+            "text": "它在你的椅子下面吗？",
+            "value": "wrong2"
+          },
+          {
+            "text": "不，不在。",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "Is it on your bed?",
+        "chinese": "它在你的床上吗？",
+        "options": [
+          {
+            "text": "它在你的床上吗？",
+            "value": "correct"
+          },
+          {
+            "text": "它在你的椅子下面吗？",
+            "value": "wrong1"
+          },
+          {
+            "text": "妈妈，我的毛衣在哪里？",
+            "value": "wrong2"
+          },
+          {
+            "text": "不，不在。",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "Is it under your chair?",
+        "chinese": "它在你的椅子下面吗？",
+        "options": [
+          {
+            "text": "它在你的床上吗？",
+            "value": "wrong1"
+          },
+          {
+            "text": "不，不在。",
+            "value": "wrong2"
+          },
+          {
+            "text": "它在你的椅子下面吗？",
+            "value": "correct"
+          },
+          {
+            "text": "妈妈，我的毛衣在哪里？",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "Your sweater is in your schoolbag!",
+        "chinese": "你的毛衣在你的书包里！",
+        "options": [
+          {
+            "text": "你的毛衣在你的书包里！",
+            "value": "correct"
+          },
+          {
+            "text": "它在你的床上吗？",
+            "value": "wrong1"
+          },
+          {
+            "text": "妈妈，我的毛衣在哪里？",
+            "value": "wrong2"
+          },
+          {
+            "text": "它在你的椅子下面吗？",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "Dear, put away your clothes, please.",
+        "chinese": "亲爱的，请把你的衣服收好。",
+        "options": [
+          {
+            "text": "好的，妈妈。",
+            "value": "wrong1"
+          },
+          {
+            "text": "妈妈，我的毛衣在哪里？",
+            "value": "wrong2"
+          },
+          {
+            "text": "亲爱的，请把你的衣服收好。",
+            "value": "correct"
+          },
+          {
+            "text": "不客气。",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "你找不到毛衣，想问妈妈，你会说：",
+        "chinese": "情景选择",
+        "options": [
+          {
+            "text": "Is it on your bed?",
+            "value": "wrong1"
+          },
+          {
+            "text": "Dear, put away your clothes, please.",
+            "value": "wrong2"
+          },
+          {
+            "text": "Where is my sweater, Mom?",
+            "value": "correct"
+          },
+          {
+            "text": "No, it isn't.",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "妈妈帮你找到了毛衣，你很感谢，你会说：",
+        "chinese": "情景选择",
+        "options": [
+          {
+            "text": "Okay, Mom.",
+            "value": "wrong1"
+          },
+          {
+            "text": "You're welcome.",
+            "value": "wrong2"
+          },
+          {
+            "text": "No, it isn't.",
+            "value": "wrong3"
+          },
+          {
+            "text": "Oh, thank you very much.",
+            "value": "correct"
+          }
+        ],
+        "correct": "correct"
+      }
+    ],
+    "practice": [
+      {
+        "type": "tap_pair",
+        "chinese": "点英文词，配对图片！",
+        "pairs": [
+          {
+            "word": "sweater",
+            "match": "<img src=\"assets/images/sweater.png\" width=\"50\">",
+            "chinese": "毛衣"
+          },
+          {
+            "word": "bed",
+            "match": "<img src=\"assets/images/bed.png\" width=\"50\">",
+            "chinese": "床"
+          },
+          {
+            "word": "chair",
+            "match": "<img src=\"assets/images/chair.png\" width=\"50\">",
+            "chinese": "椅子"
+          },
+          {
+            "word": "schoolbag",
+            "match": "<img src=\"assets/images/schoolbag.png\" width=\"50\">",
+            "chinese": "书包"
+          }
+        ]
+      },
+      {
+        "type": "tap_pair",
+        "chinese": "点英文词，配对中文！",
+        "pairs": [
+          {
+            "word": "Where",
+            "match": "在哪里",
+            "example": "Where is my sweater, Mom?"
+          },
+          {
+            "word": "under",
+            "match": "在…下面",
+            "example": "Is it under your chair?"
+          },
+          {
+            "word": "sweater",
+            "match": "毛衣",
+            "example": "Where is my sweater?"
+          },
+          {
+            "word": "put away",
+            "match": "收好",
+            "example": "Please put away your clothes."
+          }
+        ]
+      },
+      {
+        "type": "word_match",
+        "word": "schoolbag",
+        "sentence": "Your sweater is in your schoolbag!",
+        "chinese": "你的毛衣在你的书包里！",
+        "options": [
           {
             "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
             "value": "bed"
@@ -497,20 +714,24 @@ var unit2_lesson3 = {
           {
             "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
             "value": "schoolbag"
+          },
+          {
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "chair"
+          },
+          {
+            "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+            "value": "sweater"
           }
         ],
         "correct": "schoolbag"
       },
       {
-        "type": "sentence_match",
-        "chinese": "我穿了一件sweater。",
+        "type": "word_match",
         "word": "sweater",
-        "sentence": "I wear a sweater.",
+        "sentence": "Where is my sweater?",
+        "chinese": "我的毛衣在哪里？",
         "options": [
-          {
-            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
-            "value": "bed"
-          },
           {
             "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
             "value": "sweater"
@@ -520,407 +741,559 @@ var unit2_lesson3 = {
             "value": "jacket"
           },
           {
-            "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
-            "value": "dress"
-          }
-        ],
-        "correct": "sweater"
-      },
-      {
-        "type": "sentence_match",
-        "chinese": "我穿了一件bed。",
-        "word": "bed",
-        "sentence": "I wear a bed.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
-            "value": "bed"
-          },
-          {
-            "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
-            "value": "sweater"
-          },
-          {
-            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-            "value": "schoolbag"
-          },
-          {
-            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
-            "value": "chair"
-          }
-        ],
-        "correct": "bed"
-      },
-      {
-        "type": "word_match",
-        "chinese": "我的sweater在哪里？",
-        "word": "chair",
-        "sentence": "Where is my sweater?",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-            "value": "schoolbag"
-          },
-          {
-            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
-            "value": "bed"
-          },
-          {
-            "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
-            "value": "sweater"
-          },
-          {
-            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
-            "value": "chair"
-          }
-        ],
-        "correct": "chair"
-      },
-      {
-        "type": "word_match",
-        "chinese": "我穿了一件书包。",
-        "word": "schoolbag",
-        "sentence": "I wear a schoolbag.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-            "value": "schoolbag"
-          },
-          {
-            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
-            "value": "bed"
-          },
-          {
-            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
-            "value": "chair"
-          },
-          {
-            "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
-            "value": "sweater"
-          }
-        ],
-        "correct": "schoolbag"
-      },
-      {
-        "type": "word_match",
-        "chinese": "我的sweater在哪里？",
-        "word": "sweater",
-        "sentence": "Where is my sweater?",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
-            "value": "bed"
-          },
-          {
-            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-            "value": "schoolbag"
-          },
-          {
             "text": "<img src=\"assets/images/shirt.png\" width=\"80\">",
             "value": "shirt"
           },
           {
-            "text": "<img src=\"assets/images/t-shirt.png\" width=\"80\">",
-            "value": "t-shirt"
+            "text": "<img src=\"assets/images/skirt.png\" width=\"80\">",
+            "value": "skirt"
           }
         ],
         "correct": "sweater"
       },
       {
-        "type": "word_match",
-        "chinese": "我的sweater在哪里？",
-        "word": "bed",
-        "sentence": "Where is my sweater?",
+        "type": "sentence_match",
+        "sentence": "Where is my sweater, Mom?",
+        "chinese": "妈妈，我的毛衣在哪里？",
         "options": [
           {
-            "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
-            "value": "sweater"
+            "text": "妈妈，我的毛衣在哪里？",
+            "value": "correct"
           },
           {
-            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-            "value": "schoolbag"
+            "text": "它在你的床上吗？",
+            "value": "wrong1"
           },
           {
-            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
-            "value": "chair"
+            "text": "不，不在。",
+            "value": "wrong2"
           },
           {
-            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
-            "value": "bed"
+            "text": "好的，妈妈。",
+            "value": "wrong3"
           }
         ],
-        "correct": "bed"
-      }
-    ],
-    "practice": [
-      {
-        "type": "duo_race",
-        "chinese": "这是毛衣。",
-        "word": "sweater",
-        "sentence": "Look! Your sweater is in your schoolbag!",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
-            "value": "bed"
-          },
-          {
-            "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
-            "value": "sweater"
-          },
-          {
-            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
-            "value": "chair"
-          },
-          {
-            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-            "value": "schoolbag"
-          }
-        ],
-        "correct": 2,
-        "difficulty": "hard"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "这是床。",
-        "word": "bed",
-        "sentence": "Look! Your sweater is in your schoolbag!",
-        "options": [
-          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-          "<img src=\"assets/images/bed.png\" width=\"80\">",
-          "<img src=\"assets/images/sweater.png\" width=\"80\">",
-          "<img src=\"assets/images/chair.png\" width=\"80\">"
-        ],
-        "correct": 1,
-        "difficulty": "hard"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "我穿了一件chair。",
-        "word": "chair",
-        "sentence": "I wear a chair.",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
-            "value": "sweater"
-          },
-          {
-            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
-            "value": "chair"
-          },
-          {
-            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-            "value": "schoolbag"
-          },
-          {
-            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
-            "value": "bed"
-          }
-        ],
-        "correct": 1,
-        "difficulty": "hard"
-      },
-      {
-        "type": "word_match",
-        "chinese": "这是书包。",
-        "word": "schoolbag",
-        "sentence": "Look! Your sweater is in your schoolbag!",
-        "options": [
-          {
-            "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
-            "value": "sweater"
-          },
-          {
-            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
-            "value": "chair"
-          },
-          {
-            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
-            "value": "bed"
-          },
-          {
-            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-            "value": "schoolbag"
-          }
-        ],
-        "correct": 0,
-        "difficulty": "easy"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "这是毛衣。",
-        "word": "sweater",
-        "sentence": "Look! Your sweater is in your schoolbag!",
-        "options": [
-          "<img src=\"assets/images/sweater.png\" width=\"80\">",
-          "<img src=\"assets/images/bed.png\" width=\"80\">",
-          "<img src=\"assets/images/chair.png\" width=\"80\">",
-          "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
-        ],
-        "correct": 0,
-        "difficulty": "hard"
-      },
-      {
-        "type": "word_match",
-        "chinese": "这是床。",
-        "word": "bed",
-        "sentence": "Look! Your sweater is in your schoolbag!",
-        "options": [
-          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-          "<img src=\"assets/images/sweater.png\" width=\"80\">",
-          "<img src=\"assets/images/chair.png\" width=\"80\">",
-          "<img src=\"assets/images/bed.png\" width=\"80\">"
-        ],
-        "correct": 3,
-        "difficulty": "easy"
-      },
-      {
-        "type": "word_match",
-        "chinese": "这是椅子。",
-        "word": "chair",
-        "sentence": "Look! Your sweater is in your schoolbag!",
-        "options": [
-          "<img src=\"assets/images/bed.png\" width=\"80\">",
-          "<img src=\"assets/images/sweater.png\" width=\"80\">",
-          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-          "<img src=\"assets/images/chair.png\" width=\"80\">"
-        ],
-        "correct": 3,
-        "difficulty": "hard"
+        "correct": "correct"
       },
       {
         "type": "sentence_match",
-        "chinese": "这是书包。",
-        "word": "schoolbag",
-        "sentence": "Look! Your sweater is in your schoolbag!",
+        "sentence": "Is it on your bed?",
+        "chinese": "它在你的床上吗？",
         "options": [
-          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-          "<img src=\"assets/images/bed.png\" width=\"80\">",
-          "<img src=\"assets/images/sweater.png\" width=\"80\">",
-          "<img src=\"assets/images/chair.png\" width=\"80\">"
+          {
+            "text": "它在你的椅子下面吗？",
+            "value": "wrong1"
+          },
+          {
+            "text": "它在你的床上吗？",
+            "value": "correct"
+          },
+          {
+            "text": "妈妈，我的毛衣在哪里？",
+            "value": "wrong2"
+          },
+          {
+            "text": "不，不在。",
+            "value": "wrong3"
+          }
         ],
-        "correct": "schoolbag",
-        "difficulty": "medium"
-      },
-      {
-        "type": "duo_race",
-        "chinese": "这是毛衣。",
-        "word": "sweater",
-        "sentence": "Look! Your sweater is in your schoolbag!",
-        "options": [
-          "<img src=\"assets/images/sweater.png\" width=\"80\">",
-          "<img src=\"assets/images/chair.png\" width=\"80\">",
-          "<img src=\"assets/images/bed.png\" width=\"80\">",
-          "<img src=\"assets/images/schoolbag.png\" width=\"80\">"
-        ],
-        "correct": 0,
-        "difficulty": "easy"
+        "correct": "correct"
       },
       {
         "type": "sentence_match",
-        "chinese": "我穿了一件bed。",
-        "word": "bed",
-        "sentence": "I wear a bed.",
+        "sentence": "No, it isn't.",
+        "chinese": "不，不在。",
         "options": [
           {
-            "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
-            "value": "sweater"
+            "text": "是的，它在。",
+            "value": "wrong1"
           },
           {
-            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-            "value": "schoolbag"
+            "text": "不，不在。",
+            "value": "correct"
           },
           {
-            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
-            "value": "chair"
+            "text": "好的，妈妈。",
+            "value": "wrong2"
           },
           {
-            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
-            "value": "bed"
+            "text": "谢谢。",
+            "value": "wrong3"
           }
         ],
-        "correct": 2,
-        "difficulty": "hard"
+        "correct": "correct"
       },
       {
-        "type": "word_match",
-        "chinese": "我穿了一件chair。",
-        "word": "chair",
-        "sentence": "I wear a chair.",
+        "type": "sentence_match",
+        "sentence": "Is it under your chair?",
+        "chinese": "它在你的椅子下面吗？",
         "options": [
           {
-            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
-            "value": "bed"
+            "text": "它在你的床上吗？",
+            "value": "wrong1"
           },
           {
-            "text": "<img src=\"assets/images/sweater.png\" width=\"80\">",
-            "value": "sweater"
+            "text": "妈妈，我的毛衣在哪里？",
+            "value": "wrong2"
           },
           {
-            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
-            "value": "chair"
+            "text": "它在你的椅子下面吗？",
+            "value": "correct"
           },
           {
-            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-            "value": "schoolbag"
+            "text": "你的毛衣在你的书包里！",
+            "value": "wrong3"
           }
         ],
-        "correct": 2,
-        "difficulty": "hard"
+        "correct": "correct"
       },
       {
-        "type": "duo_race",
-        "chinese": "这是书包。",
-        "word": "schoolbag",
+        "type": "sentence_match",
         "sentence": "Look! Your sweater is in your schoolbag!",
+        "chinese": "看！你的毛衣在你的书包里！",
         "options": [
-          "<img src=\"assets/images/chair.png\" width=\"80\">",
-          "<img src=\"assets/images/sweater.png\" width=\"80\">",
-          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-          "<img src=\"assets/images/bed.png\" width=\"80\">"
+          {
+            "text": "看！你的毛衣在你的书包里！",
+            "value": "correct"
+          },
+          {
+            "text": "它在你的床上吗？",
+            "value": "wrong1"
+          },
+          {
+            "text": "它在你的椅子下面吗？",
+            "value": "wrong2"
+          },
+          {
+            "text": "妈妈，我的毛衣在哪里？",
+            "value": "wrong3"
+          }
         ],
-        "correct": 2,
-        "difficulty": "easy"
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "Dear, put away your clothes, please.",
+        "chinese": "亲爱的，请把你的衣服收好。",
+        "options": [
+          {
+            "text": "好的，妈妈。",
+            "value": "wrong1"
+          },
+          {
+            "text": "不客气。",
+            "value": "wrong2"
+          },
+          {
+            "text": "亲爱的，请把你的衣服收好。",
+            "value": "correct"
+          },
+          {
+            "text": "妈妈，我的毛衣在哪里？",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "Okay, Mom.",
+        "chinese": "好的，妈妈。",
+        "options": [
+          {
+            "text": "不，不在。",
+            "value": "wrong1"
+          },
+          {
+            "text": "好的，妈妈。",
+            "value": "correct"
+          },
+          {
+            "text": "谢谢。",
+            "value": "wrong2"
+          },
+          {
+            "text": "不客气。",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
       },
       {
         "type": "sentence_match",
         "sentence": "Oh, thank you very much.",
+        "chinese": "哦，非常感谢。",
         "options": [
-          {"text": "哦，非常感谢你。", "value": "correct"},
-          {"text": "好的，妈妈。", "value": "wrong1"},
-          {"text": "不客气。", "value": "wrong2"},
-          {"text": "我的毛衣在哪里？", "value": "wrong3"}
+          {
+            "text": "不客气。",
+            "value": "wrong1"
+          },
+          {
+            "text": "好的，妈妈。",
+            "value": "wrong2"
+          },
+          {
+            "text": "哦，非常感谢。",
+            "value": "correct"
+          },
+          {
+            "text": "不，不在。",
+            "value": "wrong3"
+          }
         ],
         "correct": "correct"
       },
       {
         "type": "sentence_match",
         "sentence": "You're welcome.",
+        "chinese": "不客气。",
         "options": [
-          {"text": "不客气。", "value": "correct"},
-          {"text": "非常感谢。", "value": "wrong1"},
-          {"text": "好的，妈妈。", "value": "wrong2"},
-          {"text": "请收好你的衣服。", "value": "wrong3"}
+          {
+            "text": "不客气。",
+            "value": "correct"
+          },
+          {
+            "text": "谢谢。",
+            "value": "wrong1"
+          },
+          {
+            "text": "好的，妈妈。",
+            "value": "wrong2"
+          },
+          {
+            "text": "不，不在。",
+            "value": "wrong3"
+          }
         ],
         "correct": "correct"
-      }
-,
+      },
       {
         "type": "sentence_match",
-        "sentence": "Is it on your bed?",
-        "options": [{"text": "它在你的床上吗？", "value": "correct"}, {"text": "它在椅子下面吗？", "value": "wrong1"}, {"text": "它在书包里。", "value": "wrong2"}, {"text": "我的毛衣在哪里？", "value": "wrong3"}],
+        "sentence": "Where is my sweater, Mom? Is it on your bed? No, it isn't.",
+        "chinese": "妈妈，我的毛衣在哪里？它在你的床上吗？不，不在。",
+        "options": [
+          {
+            "text": "妈妈，我的毛衣在哪里？它在你的床上吗？不，不在。",
+            "value": "correct"
+          },
+          {
+            "text": "它在你的椅子下面吗？不，不在。",
+            "value": "wrong1"
+          },
+          {
+            "text": "看！你的毛衣在你的书包里！",
+            "value": "wrong2"
+          },
+          {
+            "text": "亲爱的，请把你的衣服收好。好的，妈妈。",
+            "value": "wrong3"
+          }
+        ],
         "correct": "correct"
       },
       {
         "type": "sentence_match",
-        "sentence": "Is it under your chair?",
-        "options": [{"text": "它在你的椅子下面吗？", "value": "correct"}, {"text": "它在你的床上吗？", "value": "wrong1"}, {"text": "请收好你的衣服。", "value": "wrong2"}, {"text": "好的，妈妈。", "value": "wrong3"}],
+        "sentence": "Is it under your chair? No, it isn't.",
+        "chinese": "它在你的椅子下面吗？不，不在。",
+        "options": [
+          {
+            "text": "它在你的床上吗？不，不在。",
+            "value": "wrong1"
+          },
+          {
+            "text": "它在你的椅子下面吗？不，不在。",
+            "value": "correct"
+          },
+          {
+            "text": "看！你的毛衣在你的书包里！",
+            "value": "wrong2"
+          },
+          {
+            "text": "好的，妈妈。",
+            "value": "wrong3"
+          }
+        ],
         "correct": "correct"
       },
       {
         "type": "sentence_match",
-        "sentence": "Dear, put away your clothes, please.",
-        "options": [{"text": "亲爱的，请收好你的衣服。", "value": "correct"}, {"text": "我的毛衣在哪里？", "value": "wrong1"}, {"text": "它在你的书包里。", "value": "wrong2"}, {"text": "不客气。", "value": "wrong3"}],
+        "sentence": "你想问毛衣是不是在椅子下面，你会说：",
+        "chinese": "情景选择",
+        "options": [
+          {
+            "text": "Is it on your bed?",
+            "value": "wrong1"
+          },
+          {
+            "text": "Where is my sweater?",
+            "value": "wrong2"
+          },
+          {
+            "text": "Is it under your chair?",
+            "value": "correct"
+          },
+          {
+            "text": "No, it isn't.",
+            "value": "wrong3"
+          }
+        ],
         "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "妈妈让你收好衣服，你答应了，你会说：",
+        "chinese": "情景选择",
+        "options": [
+          {
+            "text": "Where is my sweater, Mom?",
+            "value": "wrong1"
+          },
+          {
+            "text": "No, it isn't.",
+            "value": "wrong2"
+          },
+          {
+            "text": "Thank you very much.",
+            "value": "wrong3"
+          },
+          {
+            "text": "Okay, Mom.",
+            "value": "correct"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "Dear, put away your clothes, please. Okay, Mom.",
+        "chinese": "亲爱的，请把你的衣服收好。好的，妈妈。",
+        "options": [
+          {
+            "text": "亲爱的，请把你的衣服收好。好的，妈妈。",
+            "value": "correct"
+          },
+          {
+            "text": "妈妈，我的毛衣在哪里？不，不在。",
+            "value": "wrong1"
+          },
+          {
+            "text": "哦，非常感谢。不客气。",
+            "value": "wrong2"
+          },
+          {
+            "text": "看！你的毛衣在你的书包里！",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "Oh, thank you very much. You're welcome.",
+        "chinese": "哦，非常感谢。不客气。",
+        "options": [
+          {
+            "text": "好的，妈妈。不客气。",
+            "value": "wrong1"
+          },
+          {
+            "text": "哦，非常感谢。不客气。",
+            "value": "correct"
+          },
+          {
+            "text": "亲爱的，请把你的衣服收好。",
+            "value": "wrong2"
+          },
+          {
+            "text": "妈妈，我的毛衣在哪里？",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "你找到了毛衣在书包里，你会说：",
+        "chinese": "情景选择",
+        "options": [
+          {
+            "text": "Is it on your bed?",
+            "value": "wrong1"
+          },
+          {
+            "text": "Look! Your sweater is in your schoolbag!",
+            "value": "correct"
+          },
+          {
+            "text": "Where is my sweater?",
+            "value": "wrong2"
+          },
+          {
+            "text": "Okay, Mom.",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "你想问毛衣是不是在床上，你会说：",
+        "chinese": "情景选择",
+        "options": [
+          {
+            "text": "Is it under your chair?",
+            "value": "wrong1"
+          },
+          {
+            "text": "Where is my sweater?",
+            "value": "wrong2"
+          },
+          {
+            "text": "Is it on your bed?",
+            "value": "correct"
+          },
+          {
+            "text": "No, it isn't.",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "sentence_match",
+        "sentence": "Look! Your sweater is in your schoolbag! Oh, thank you very much.",
+        "chinese": "看！你的毛衣在你的书包里！哦，非常感谢。",
+        "options": [
+          {
+            "text": "看！你的毛衣在你的书包里！哦，非常感谢。",
+            "value": "correct"
+          },
+          {
+            "text": "它在你的椅子下面吗？不，不在。",
+            "value": "wrong1"
+          },
+          {
+            "text": "亲爱的，请把你的衣服收好。好的，妈妈。",
+            "value": "wrong2"
+          },
+          {
+            "text": "妈妈，我的毛衣在哪里？",
+            "value": "wrong3"
+          }
+        ],
+        "correct": "correct"
+      },
+      {
+        "type": "scenario",
+        "sentence": "Where is my sweater? Is it on your bed?",
+        "context": "你朋友的毛衣丢了，他写了纸条问妈妈。妈妈回复说不在床上。",
+        "question": "毛衣在床上吗？",
+        "options": [
+          {
+            "text": "不在",
+            "value": "correct"
+          },
+          {
+            "text": "在",
+            "value": "w1"
+          },
+          {
+            "text": "不知道",
+            "value": "w2"
+          },
+          {
+            "text": "可能在",
+            "value": "w3"
+          }
+        ],
+        "correct": "correct",
+        "chinese": "我的毛衣在哪里？它在你的床上吗？"
+      },
+      {
+        "type": "scenario",
+        "sentence": "Your sweater is in your schoolbag!",
+        "context": "妈妈终于找到了毛衣，告诉你在哪里。",
+        "question": "你应该去哪里拿毛衣？",
+        "options": [
+          {
+            "text": "书包",
+            "value": "correct"
+          },
+          {
+            "text": "床上",
+            "value": "w1"
+          },
+          {
+            "text": "椅子下",
+            "value": "w2"
+          },
+          {
+            "text": "柜子里",
+            "value": "w3"
+          }
+        ],
+        "correct": "correct",
+        "chinese": "你的毛衣在你的书包里！"
+      },
+      {
+        "type": "sentence_sequence",
+        "sentences": [
+          "Where is my sweater?",
+          "Is it on your bed?",
+          "No, it isn't."
+        ],
+        "chinese": "把找毛衣对话排好！",
+        "chineseHint": "我的毛衣在哪？ / 在你床上吗？ / 不，不是。"
+      },
+      {
+        "type": "sentence_sequence",
+        "sentences": [
+          "Is it under your chair?",
+          "No, it isn't.",
+          "It's in your schoolbag!"
+        ],
+        "chinese": "把对话排好顺序！",
+        "chineseHint": "在椅子下面吗？ / 不，不是。 / 在你书包里！"
+      },
+      {
+        "type": "word_match",
+        "word": "bed",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "bed"
+          },
+          {
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "wrong1"
+          },
+          {
+            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+            "value": "wrong2"
+          }
+        ],
+        "correct": "bed",
+        "chinese": "bed"
+      },
+      {
+        "type": "word_match",
+        "word": "chair",
+        "options": [
+          {
+            "text": "<img src=\"assets/images/chair.png\" width=\"80\">",
+            "value": "chair"
+          },
+          {
+            "text": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+            "value": "wrong1"
+          },
+          {
+            "text": "<img src=\"assets/images/bed.png\" width=\"80\">",
+            "value": "wrong2"
+          }
+        ],
+        "correct": "chair",
+        "chinese": "chair"
       }
     ]
   },
@@ -928,643 +1301,631 @@ var unit2_lesson3 = {
     "pretest": [
       {
         "type": "letter_select",
-        "word": "sweater",
-        "chinese": "这是sweater。",
+        "prompt": "毛衣的首字母是？",
         "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
-        "display": "s_eater",
-        "options": [
-          "w",
-          "x",
-          "y",
-          "z"
-        ],
-        "correct": "w"
-      },
-      {
-        "type": "letter_select",
-        "word": "bed",
-        "chinese": "这是bed。",
-        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
-        "display": "_ed",
         "options": [
           "c",
-          "e",
-          "d",
-          "b"
+          "s",
+          "w",
+          "j"
         ],
-        "correct": "b"
+        "correct": 1,
+        "chinese": "毛衣",
+        "word": "毛衣"
       },
       {
-        "type": "word_spell",
-        "word": "chair",
-        "chinese": "这是chair。",
-        "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
-        "display": "c_air",
+        "type": "pinyin_fill",
+        "hint": "b_d",
+        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
         "options": [
-          "j",
-          "k",
-          "h",
+          "e",
+          "a",
+          "o",
           "i"
         ],
-        "correct": "h"
+        "correct": 0,
+        "chinese": "床"
       },
       {
-        "type": "letter_select",
-        "word": "schoolbag",
-        "chinese": "这是书包。",
-        "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-        "display": "sch_olbag",
-        "options": [
-          "r",
-          "o",
-          "q",
-          "p"
-        ],
-        "correct": "o"
-      },
-      {
-        "type": "letter_select",
-        "word": "sweater",
-        "chinese": "这是sweater。",
-        "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
-        "display": "s_eater",
-        "options": [
-          "x",
-          "y",
-          "w",
-          "z"
-        ],
-        "correct": "w"
-      },
-      {
-        "type": "letter_select",
-        "word": "bed",
-        "chinese": "这是bed。",
-        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
-        "display": "be_",
-        "options": [
-          "d",
-          "g",
-          "f",
-          "e"
-        ],
-        "correct": "d"
-      },
-      {
-        "type": "letter_select",
-        "word": "chair",
-        "chinese": "这是chair。",
+        "type": "pinyin_fill",
+        "hint": "ch_ir",
         "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
-        "display": "_hair",
         "options": [
-          "c",
-          "f",
+          "a",
           "e",
-          "d"
+          "o",
+          "i"
         ],
-        "correct": "c"
+        "correct": 0,
+        "chinese": "椅子"
       },
       {
-        "type": "letter_select",
-        "word": "schoolbag",
-        "chinese": "这是书包。",
-        "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-        "display": "schoo_bag",
-        "options": [
-          "l",
-          "n",
-          "m",
-          "o"
-        ],
-        "correct": "l"
-      },
-      {
-        "type": "letter_select",
-        "word": "sweater",
-        "chinese": "这是sweater。",
+        "type": "fill_blank",
+        "prompt": "Where is my _____, Mom?",
         "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
-        "display": "_weater",
         "options": [
-          "t",
-          "v",
-          "s",
-          "u"
+          "jacket",
+          "sweater",
+          "shirt",
+          "skirt"
         ],
-        "correct": "s"
+        "correct": 1,
+        "chinese": "妈妈，我的毛衣在哪里？"
       },
       {
-        "type": "letter_select",
-        "word": "bed",
-        "chinese": "这是bed。",
-        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
-        "display": "b_d",
+        "type": "word_puzzle",
+        "hint": "w_ere",
+        "word": "where",
         "options": [
-          "g",
-          "h",
-          "e",
-          "f"
+          "p",
+          "j",
+          "i",
+          "h"
         ],
-        "correct": "e"
+        "correct": 3,
+        "chinese": "where"
+      },
+      {
+        "type": "word_puzzle",
+        "hint": "s_eater",
+        "word": "sweater",
+        "options": [
+          "h",
+          "n",
+          "k",
+          "w"
+        ],
+        "correct": 3,
+        "chinese": "sweater"
+      },
+      {
+        "type": "word_puzzle",
+        "hint": "u_der",
+        "word": "under",
+        "options": [
+          "p",
+          "n",
+          "q",
+          "r"
+        ],
+        "correct": 1,
+        "chinese": "under"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "Where is my _____?",
+        "options": [
+          "under",
+          "sweater",
+          "where",
+          "bed"
+        ],
+        "correct": 1,
+        "chinese": "Where is my sweater?"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "Is it on your _____?",
+        "options": [
+          "under",
+          "where",
+          "bed",
+          "sweater"
+        ],
+        "correct": 2,
+        "chinese": "Is it on your bed?"
       }
     ],
     "practice": [
       {
-        "type": "duo_spell",
-        "word": "sweater",
-        "chinese": "这是sweater。",
-        "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
-        "display": "s_eater",
-        "options": [
-          "w",
-          "x",
-          "y",
-          "z"
+        "type": "sentence_order",
+        "chinese": "妈妈，我的毛衣在哪里？",
+        "words": [
+          "Where",
+          "is",
+          "my",
+          "sweater",
+          "Mom"
         ],
-        "correct": "w",
-        "difficulty": "medium",
-        "parts": [
-          "swe",
-          "ater"
+        "scrambled": [
+          "sweater",
+          "Where",
+          "Mom",
+          "my",
+          "is"
+        ],
+        "chineseWords": [
+          "妈妈",
+          "我的",
+          "毛衣",
+          "在哪里"
+        ],
+        "chineseScrambled": [
+          "毛衣",
+          "在哪里",
+          "妈妈",
+          "我的"
         ]
       },
       {
-        "type": "duo_spell",
-        "word": "bed",
-        "chinese": "这是bed。",
+        "type": "sentence_order",
+        "chinese": "它在你的床上吗？",
+        "words": [
+          "Is",
+          "it",
+          "on",
+          "your",
+          "bed"
+        ],
+        "scrambled": [
+          "bed",
+          "Is",
+          "your",
+          "it",
+          "on"
+        ],
+        "chineseWords": [
+          "它",
+          "在",
+          "你的",
+          "床上",
+          "吗"
+        ],
+        "chineseScrambled": [
+          "床上",
+          "吗",
+          "它",
+          "你的",
+          "在"
+        ]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "不，不在。",
+        "words": [
+          "No",
+          "it",
+          "isn't"
+        ],
+        "scrambled": [
+          "it",
+          "No",
+          "isn't"
+        ],
+        "chineseWords": [
+          "不",
+          "不在"
+        ],
+        "chineseScrambled": [
+          "不在",
+          "不"
+        ]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "它在你的椅子下面吗？",
+        "words": [
+          "Is",
+          "it",
+          "under",
+          "your",
+          "chair"
+        ],
+        "scrambled": [
+          "chair",
+          "Is",
+          "under",
+          "it",
+          "your"
+        ],
+        "chineseWords": [
+          "它",
+          "在",
+          "你的",
+          "椅子",
+          "下面",
+          "吗"
+        ],
+        "chineseScrambled": [
+          "椅子",
+          "吗",
+          "它",
+          "下面",
+          "在",
+          "你的"
+        ]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "亲爱的，请把你的衣服收好。",
+        "words": [
+          "Dear",
+          "put",
+          "away",
+          "your",
+          "clothes",
+          "please"
+        ],
+        "scrambled": [
+          "clothes",
+          "Dear",
+          "please",
+          "put",
+          "your",
+          "away"
+        ],
+        "chineseWords": [
+          "亲爱的",
+          "请",
+          "把",
+          "你的",
+          "衣服",
+          "收好"
+        ],
+        "chineseScrambled": [
+          "衣服",
+          "收好",
+          "亲爱的",
+          "请",
+          "你的",
+          "把"
+        ]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "好的，妈妈。",
+        "words": [
+          "Okay",
+          "Mom"
+        ],
+        "scrambled": [
+          "Mom",
+          "Okay"
+        ],
+        "chineseWords": [
+          "好的",
+          "妈妈"
+        ],
+        "chineseScrambled": [
+          "妈妈",
+          "好的"
+        ]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "哦，非常感谢。",
+        "words": [
+          "Oh",
+          "thank",
+          "you",
+          "very",
+          "much"
+        ],
+        "scrambled": [
+          "very",
+          "Oh",
+          "much",
+          "thank",
+          "you"
+        ],
+        "chineseWords": [
+          "哦",
+          "非常",
+          "感谢"
+        ],
+        "chineseScrambled": [
+          "感谢",
+          "哦",
+          "非常"
+        ]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "不客气。",
+        "words": [
+          "You're",
+          "welcome"
+        ],
+        "scrambled": [
+          "welcome",
+          "You're"
+        ],
+        "chineseWords": [
+          "不客气"
+        ],
+        "chineseScrambled": [
+          "不客气"
+        ]
+      },
+      {
+        "type": "sentence_order",
+        "chinese": "看！",
+        "words": [
+          "Look"
+        ],
+        "scrambled": [
+          "Look"
+        ],
+        "chineseWords": [
+          "看"
+        ],
+        "chineseScrambled": [
+          "看"
+        ]
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "Where is my _____, Mom?",
+        "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+        "options": [
+          "jacket",
+          "sweater",
+          "shirt",
+          "skirt"
+        ],
+        "correct": 1,
+        "chinese": "妈妈，我的毛衣在哪里？"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "Is it _____ your bed?",
         "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
-        "display": "_ed",
+        "options": [
+          "in",
+          "on",
+          "under",
+          "at"
+        ],
+        "correct": 1,
+        "chinese": "它在你的床上吗？"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "Is it _____ your chair?",
+        "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
+        "options": [
+          "on",
+          "in",
+          "under",
+          "at"
+        ],
+        "correct": 2,
+        "chinese": "它在你的椅子下面吗？"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "Your sweater is _____ your schoolbag!",
+        "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+        "options": [
+          "on",
+          "under",
+          "in",
+          "at"
+        ],
+        "correct": 2,
+        "chinese": "你的毛衣在你的书包里！"
+      },
+      {
+        "type": "fill_blank",
+        "prompt": "Dear, put _____ your clothes, please.",
+        "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+        "options": [
+          "on",
+          "away",
+          "in",
+          "up"
+        ],
+        "correct": 1,
+        "chinese": "亲爱的，请把你的衣服收好。"
+      },
+      {
+        "type": "word_puzzle",
+        "hint": "wh_re",
+        "word": "where",
         "options": [
           "c",
           "e",
-          "d",
-          "b"
-        ],
-        "correct": "b",
-        "difficulty": "easy",
-        "parts": [
-          "b",
-          "ed"
-        ]
-      },
-      {
-        "type": "duo_spell",
-        "word": "chair",
-        "chinese": "这是chair。",
-        "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
-        "display": "c_air",
-        "options": [
-          "j",
-          "k",
-          "h",
-          "i"
-        ],
-        "correct": "h",
-        "difficulty": "hard",
-        "parts": [
-          "ch",
-          "air"
-        ]
-      },
-      {
-        "type": "duo_spell",
-        "word": "schoolbag",
-        "chinese": "这是书包。",
-        "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-        "display": "sch_olbag",
-        "options": [
-          "r",
-          "o",
           "q",
-          "p"
+          "r"
         ],
-        "correct": "o",
-        "difficulty": "hard",
-        "parts": [
-          "scho",
-          "olbag"
-        ]
+        "correct": 1,
+        "chinese": "where"
       },
       {
-        "type": "letter_select",
+        "type": "word_puzzle",
+        "hint": "swe_ter",
         "word": "sweater",
-        "chinese": "这是sweater。",
-        "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
-        "display": "s_eater",
-        "options": [
-          "x",
-          "y",
-          "w",
-          "z"
-        ],
-        "correct": "w",
-        "difficulty": "easy",
-        "parts": [
-          "swe",
-          "ater"
-        ]
-      },
-      {
-        "type": "duo_spell",
-        "word": "bed",
-        "chinese": "这是bed。",
-        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
-        "display": "be_",
         "options": [
           "d",
-          "g",
-          "f",
-          "e"
-        ],
-        "correct": "d",
-        "difficulty": "hard",
-        "parts": [
-          "b",
-          "ed"
-        ]
-      },
-      {
-        "type": "letter_select",
-        "word": "chair",
-        "chinese": "这是chair。",
-        "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
-        "display": "_hair",
-        "options": [
           "c",
-          "f",
-          "e",
-          "d"
-        ],
-        "correct": "c",
-        "difficulty": "medium",
-        "parts": [
-          "ch",
-          "air"
-        ]
-      },
-      {
-        "type": "duo_spell",
-        "word": "schoolbag",
-        "chinese": "这是书包。",
-        "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-        "display": "schoo_bag",
-        "options": [
-          "l",
-          "n",
           "m",
-          "o"
+          "a"
         ],
-        "correct": "l",
-        "difficulty": "medium",
-        "parts": [
-          "scho",
-          "olbag"
-        ]
+        "correct": 3,
+        "chinese": "sweater"
       },
       {
-        "type": "duo_spell",
-        "word": "sweater",
-        "chinese": "这是sweater。",
-        "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
-        "display": "_weater",
+        "type": "word_puzzle",
+        "hint": "un_er",
+        "word": "under",
         "options": [
-          "t",
-          "v",
-          "s",
-          "u"
-        ],
-        "correct": "s",
-        "difficulty": "hard",
-        "parts": [
-          "swe",
-          "ater"
-        ]
-      },
-      {
-        "type": "duo_spell",
-        "word": "bed",
-        "chinese": "这是bed。",
-        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
-        "display": "b_d",
-        "options": [
-          "g",
-          "h",
-          "e",
-          "f"
-        ],
-        "correct": "e",
-        "difficulty": "easy",
-        "parts": [
-          "b",
-          "ed"
-        ]
-      },
-      {
-        "type": "duo_spell",
-        "word": "chair",
-        "chinese": "这是chair。",
-        "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
-        "display": "_hair",
-        "options": [
-          "c",
+          "n",
           "d",
-          "f",
-          "e"
-        ],
-        "correct": "c",
-        "difficulty": "medium",
-        "parts": [
-          "ch",
-          "air"
-        ]
-      },
-      {
-        "type": "letter_select",
-        "word": "schoolbag",
-        "chinese": "这是书包。",
-        "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-        "display": "sch_olbag",
-        "options": [
-          "r",
           "p",
-          "o",
-          "q"
+          "x"
         ],
-        "correct": "o",
-        "difficulty": "medium",
-        "parts": [
-          "scho",
-          "olbag"
-        ]
-      }
-,
-      {
-        "type": "sentence_order",
-        "chinese": "我的毛衣在哪里？",
-        "words": ["Where", "is", "my", "sweater"],
-        "scrambled": ["is", "sweater", "Where", "my"],
-        "chineseWords": ["我的", "毛衣", "在", "哪里"],
-        "chineseScrambled": ["在", "哪里", "我的", "毛衣"]
+        "correct": 1,
+        "chinese": "under"
       },
       {
-        "type": "sentence_order",
-        "chinese": "它在你的床上吗？",
-        "words": ["Is", "it", "on", "your", "bed"],
-        "scrambled": ["on", "bed", "it", "Is", "your"],
-        "chineseWords": ["它", "在", "你的", "床上", "吗"],
-        "chineseScrambled": ["你的", "吗", "床上", "它", "在"]
+        "type": "fill_blank",
+        "prompt": "Where is my _____?",
+        "options": [
+          "under",
+          "where",
+          "sweater",
+          "bed"
+        ],
+        "correct": 2,
+        "chinese": "Where is my sweater?"
       },
       {
-        "type": "sentence_order",
-        "chinese": "它在你的椅子下面吗？",
-        "words": ["Is", "it", "under", "your", "chair"],
-        "scrambled": ["your", "it", "under", "Is", "chair"],
-        "chineseWords": ["它", "在", "你的", "椅子", "下面", "吗"],
-        "chineseScrambled": ["下面", "你的", "它", "吗", "在", "椅子"]
-      },
-      {
-        "type": "sentence_order",
-        "chinese": "你的毛衣在你的书包里！",
-        "words": ["Your", "sweater", "is", "in", "your", "schoolbag"],
-        "scrambled": ["schoolbag", "sweater", "your", "in", "is", "Your"],
-        "chineseWords": ["你的", "毛衣", "在", "你的", "书包里"],
-        "chineseScrambled": ["你的", "你的", "书包里", "在", "毛衣"]
-      },
-      {
-        "type": "sentence_order",
-        "chinese": "请收好你的衣服。",
-        "words": ["Put", "away", "your", "clothes", "please"],
-        "scrambled": ["away", "your", "please", "Put", "clothes"],
-        "chineseWords": ["请", "收好", "你的", "衣服"],
-        "chineseScrambled": ["你的", "请", "收好", "衣服"]
-      }
-,
-      {
-        "type": "sentence_order",
-        "chinese": "我的毛衣在哪里？",
-        "words": ["Where", "is", "my", "sweater"],
-        "scrambled": ["is", "sweater", "Where", "my"],
-        "chineseWords": ["我的", "毛衣", "在哪里"],
-        "chineseScrambled": ["我的", "在哪里", "毛衣"]
-      },
-      {
-        "type": "sentence_order",
-        "chinese": "它在你的床上吗？",
-        "words": ["Is", "it", "on", "your", "bed"],
-        "scrambled": ["your", "on", "bed", "Is", "it"],
-        "chineseWords": ["它", "在", "你的", "床上吗"],
-        "chineseScrambled": ["你的", "在", "床上吗", "它"]
-      },
-      {
-        "type": "sentence_order",
-        "chinese": "它在你的椅子下面吗？",
-        "words": ["Is", "it", "under", "your", "chair"],
-        "scrambled": ["under", "your", "it", "chair", "Is"],
-        "chineseWords": ["它", "在", "你的椅子", "下面吗"],
-        "chineseScrambled": ["下面吗", "它", "你的椅子", "在"]
-      },
-      {
-        "type": "sentence_order",
-        "chinese": "你的毛衣在书包里！",
-        "words": ["Your", "sweater", "is", "in", "your", "schoolbag"],
-        "scrambled": ["sweater", "Your", "is", "schoolbag", "your", "in"],
-        "chineseWords": ["你的", "毛衣", "在", "书包里"],
-        "chineseScrambled": ["毛衣", "在", "书包里", "你的"]
-      },
-      {
-        "type": "sentence_order",
-        "chinese": "请收好你的衣服。",
-        "words": ["Put", "away", "your", "clothes", "please"],
-        "scrambled": ["please", "clothes", "away", "your", "Put"],
-        "chineseWords": ["请", "收好", "你的", "衣服"],
-        "chineseScrambled": ["你的", "收好", "衣服", "请"]
-      }
-,
-      {
-        "type": "sentence_order",
-        "chinese": "哦，非常感谢你。",
-        "words": ["Oh", "thank", "you", "very", "much"],
-        "scrambled": ["you", "Oh", "much", "very", "thank"],
-        "chineseWords": ["哦", "非常", "感谢", "你"],
-        "chineseScrambled": ["你", "非常", "哦", "感谢"]
+        "type": "fill_blank",
+        "prompt": "Is it on your _____?",
+        "options": [
+          "bed",
+          "where",
+          "sweater",
+          "under"
+        ],
+        "correct": 0,
+        "chinese": "Is it on your bed?"
       }
     ]
   },
   "speaking": {
     "pretest": [
       {
-        "type": "read_word",
-        "word": "sweater",
-        "chinese": "我的sweater在哪里？",
+        "type": "repeat_word",
         "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
-        "sentence": "Where is my sweater?"
+        "word": "sweater",
+        "chinese": "毛衣",
+        "expected": "sweater"
       },
       {
-        "type": "read_word",
-        "word": "bed",
-        "chinese": "我喜欢bed。",
+        "type": "repeat_word",
         "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
-        "sentence": "I like bed."
+        "word": "bed",
+        "chinese": "床",
+        "expected": "bed"
       },
       {
-        "type": "shadowing",
-        "word": "chair",
-        "chinese": "我喜欢chair。",
+        "type": "repeat_word",
         "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
-        "sentence": "I like chair."
-      },
-      {
-        "type": "read_word",
-        "word": "schoolbag",
-        "chinese": "我的sweater在哪里？",
-        "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-        "sentence": "Where is my sweater?"
-      },
-      {
-        "type": "shadowing",
-        "word": "sweater",
-        "chinese": "我喜欢sweater。",
-        "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
-        "sentence": "I like sweater."
-      },
-      {
-        "type": "read_word",
-        "word": "bed",
-        "chinese": "我喜欢bed。",
-        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
-        "sentence": "I like bed."
-      },
-      {
-        "type": "shadowing",
         "word": "chair",
-        "chinese": "我的sweater在哪里？",
-        "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
-        "sentence": "Where is my sweater?"
+        "chinese": "椅子",
+        "expected": "chair"
       },
       {
-        "type": "shadowing",
-        "word": "schoolbag",
-        "chinese": "我的sweater在哪里？",
+        "type": "repeat_word",
         "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-        "sentence": "Where is my sweater?"
+        "word": "schoolbag",
+        "chinese": "书包",
+        "expected": "schoolbag"
       },
       {
-        "type": "read_word",
-        "word": "sweater",
-        "chinese": "我的sweater在哪里？",
-        "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
-        "sentence": "Where is my sweater?"
+        "type": "repeat_word",
+        "image": "<img src=\"assets/images/jacket.png\" width=\"80\">",
+        "word": "jacket",
+        "chinese": "夹克",
+        "expected": "jacket"
       },
       {
-        "type": "shadowing",
-        "word": "bed",
-        "chinese": "我喜欢bed。",
-        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
-        "sentence": "I like bed."
+        "type": "speak_select",
+        "audio": "sweater",
+        "options": [
+          "<img src=\"assets/images/jacket.png\" width=\"80\">",
+          "<img src=\"assets/images/sweater.png\" width=\"80\">",
+          "<img src=\"assets/images/shirt.png\" width=\"80\">",
+          "<img src=\"assets/images/shorts.png\" width=\"80\">"
+        ],
+        "correct": 1,
+        "chinese": "毛衣"
+      },
+      {
+        "type": "speak_select",
+        "audio": "bed",
+        "options": [
+          "<img src=\"assets/images/chair.png\" width=\"80\">",
+          "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+          "<img src=\"assets/images/bed.png\" width=\"80\">",
+          "<img src=\"assets/images/sweater.png\" width=\"80\">"
+        ],
+        "correct": 2,
+        "chinese": "床"
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "Where is my sweater, Mom?",
+        "chinese": "妈妈，我的毛衣在哪里？",
+        "expected": "Where is my sweater, Mom?"
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "Is it on your bed?",
+        "chinese": "它在你的床上吗？",
+        "expected": "Is it on your bed?"
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "No, it isn't.",
+        "chinese": "不，不在。",
+        "expected": "No, it isn't."
       }
     ],
     "practice": [
       {
-        "type": "roleplay",
-        "word": "sweater",
-        "chinese": "这是一只sweater。",
-        "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
-        "sentence": "This is a sweater.",
-        "difficulty": "hard"
+        "type": "repeat_sentence",
+        "word": "Where is my sweater, Mom?",
+        "chinese": "妈妈，我的毛衣在哪里？",
+        "expected": "Where is my sweater, Mom?"
       },
-      {
-        "type": "debate",
-        "word": "bed",
-        "chinese": "这是床。",
-        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
-        "sentence": "Look! Your sweater is in your schoolbag!",
-        "difficulty": "easy"
-      },
-      {
-        "type": "debate",
-        "word": "chair",
-        "chinese": "这是一只chair。",
-        "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
-        "sentence": "This is a chair.",
-        "difficulty": "medium"
-      },
-      {
-        "type": "roleplay",
-        "word": "schoolbag",
-        "chinese": "这是一只书包。",
-        "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-        "sentence": "This is a schoolbag.",
-        "difficulty": "medium"
-      },
-      {
-        "type": "read_word",
-        "word": "sweater",
-        "chinese": "这是一只sweater。",
-        "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
-        "sentence": "This is a sweater.",
-        "difficulty": "medium"
-      },
-      {
-        "type": "read_word",
-        "word": "bed",
-        "chinese": "这是一只bed。",
-        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
-        "sentence": "This is a bed.",
-        "difficulty": "easy"
-      },
-      {
-        "type": "roleplay",
-        "word": "chair",
-        "chinese": "这是一只chair。",
-        "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
-        "sentence": "This is a chair.",
-        "difficulty": "hard"
-      },
-      {
-        "type": "roleplay",
-        "word": "schoolbag",
-        "chinese": "这是书包。",
-        "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-        "sentence": "Look! Your sweater is in your schoolbag!",
-        "difficulty": "easy"
-      },
-      {
-        "type": "shadowing",
-        "word": "sweater",
-        "chinese": "这是一只sweater。",
-        "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
-        "sentence": "This is a sweater.",
-        "difficulty": "easy"
-      },
-      {
-        "type": "shadowing",
-        "word": "bed",
-        "chinese": "这是床。",
-        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
-        "sentence": "Look! Your sweater is in your schoolbag!",
-        "difficulty": "easy"
-      },
-      {
-        "type": "read_word",
-        "word": "chair",
-        "chinese": "这是一只chair。",
-        "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
-        "sentence": "This is a chair.",
-        "difficulty": "easy"
-      },
-      {
-        "type": "read_word",
-        "word": "schoolbag",
-        "chinese": "这是书包。",
-        "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
-        "sentence": "Look! Your sweater is in your schoolbag!",
-        "difficulty": "medium"
-      }
-,
       {
         "type": "repeat_sentence",
-        "word": "Is it on your bed? No, it isn't.",
-        "chinese": "它在你的床上吗？不，不在。",
-        "expected": "Is it on your bed? No, it isn't."
+        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
+        "word": "Is it on your bed?",
+        "chinese": "它在你的床上吗？",
+        "expected": "Is it on your bed?"
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "No, it isn't.",
+        "chinese": "不，不在。",
+        "expected": "No, it isn't."
+      },
+      {
+        "type": "repeat_sentence",
+        "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
+        "word": "Is it under your chair?",
+        "chinese": "它在你的椅子下面吗？",
+        "expected": "Is it under your chair?"
+      },
+      {
+        "type": "repeat_sentence",
+        "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+        "word": "Look! Your sweater is in your schoolbag!",
+        "chinese": "看！你的毛衣在你的书包里！",
+        "expected": "Look! Your sweater is in your schoolbag!"
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "Dear, put away your clothes, please.",
+        "chinese": "亲爱的，请把你的衣服收好。",
+        "expected": "Dear, put away your clothes, please."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "Okay, Mom.",
+        "chinese": "好的，妈妈。",
+        "expected": "Okay, Mom."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "Oh, thank you very much.",
+        "chinese": "哦，非常感谢。",
+        "expected": "Oh, thank you very much."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "You're welcome.",
+        "chinese": "不客气。",
+        "expected": "You're welcome."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "Where is my sweater, Mom? Is it on your bed?",
+        "chinese": "妈妈，我的毛衣在哪里？它在你的床上吗？",
+        "expected": "Where is my sweater, Mom? Is it on your bed?"
       },
       {
         "type": "repeat_sentence",
@@ -1574,15 +1935,98 @@ var unit2_lesson3 = {
       },
       {
         "type": "repeat_sentence",
-        "word": "Dear, put away your clothes, please.",
-        "chinese": "亲爱的，请收好你的衣服。",
-        "expected": "Dear, put away your clothes, please."
+        "word": "Look! Your sweater is in your schoolbag! Oh, thank you very much.",
+        "chinese": "看！你的毛衣在你的书包里！哦，非常感谢。",
+        "expected": "Look! Your sweater is in your schoolbag! Oh, thank you very much."
       },
       {
         "type": "repeat_sentence",
-        "word": "Oh, thank you very much.",
-        "chinese": "哦，非常感谢你。",
-        "expected": "Oh, thank you very much."
+        "word": "Dear, put away your clothes, please. Okay, Mom.",
+        "chinese": "亲爱的，请把你的衣服收好。好的，妈妈。",
+        "expected": "Dear, put away your clothes, please. Okay, Mom."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "Oh, thank you very much. You're welcome.",
+        "chinese": "哦，非常感谢。不客气。",
+        "expected": "Oh, thank you very much. You're welcome."
+      },
+      {
+        "type": "repeat_sentence",
+        "word": "Is it on your bed? No, it isn't.",
+        "chinese": "它在你的床上吗？不，不在。",
+        "expected": "Is it on your bed? No, it isn't."
+      },
+      {
+        "type": "repeat_word",
+        "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+        "word": "sweater",
+        "chinese": "毛衣",
+        "expected": "sweater"
+      },
+      {
+        "type": "repeat_word",
+        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
+        "word": "bed",
+        "chinese": "床",
+        "expected": "bed"
+      },
+      {
+        "type": "repeat_word",
+        "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
+        "word": "chair",
+        "chinese": "椅子",
+        "expected": "chair"
+      },
+      {
+        "type": "repeat_word",
+        "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+        "word": "schoolbag",
+        "chinese": "书包",
+        "expected": "schoolbag"
+      },
+      {
+        "type": "repeat_word",
+        "image": "<img src=\"assets/images/jacket.png\" width=\"80\">",
+        "word": "jacket",
+        "chinese": "夹克",
+        "expected": "jacket"
+      },
+      {
+        "type": "picture_speak",
+        "image": "<img src=\"assets/images/sweater.png\" width=\"80\">",
+        "word": "sweater",
+        "chinese": "sweater"
+      },
+      {
+        "type": "picture_speak",
+        "image": "<img src=\"assets/images/bed.png\" width=\"80\">",
+        "word": "bed",
+        "chinese": "bed"
+      },
+      {
+        "type": "picture_speak",
+        "image": "<img src=\"assets/images/chair.png\" width=\"80\">",
+        "word": "chair",
+        "chinese": "chair"
+      },
+      {
+        "type": "picture_speak",
+        "image": "<img src=\"assets/images/schoolbag.png\" width=\"80\">",
+        "word": "schoolbag",
+        "chinese": "schoolbag"
+      },
+      {
+        "type": "picture_speak",
+        "image": "<img src=\"assets/images/jacket.png\" width=\"80\">",
+        "word": "jacket",
+        "chinese": "jacket"
+      },
+      {
+        "type": "picture_speak",
+        "image": "<img src=\"assets/images/shirt.png\" width=\"80\">",
+        "word": "shirt",
+        "chinese": "shirt"
       }
     ]
   }
