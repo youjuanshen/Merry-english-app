@@ -870,29 +870,49 @@ nextBtn.onclick = function() {
     document.getElementById('login-screen').classList.remove('active');
 
     // Dynamic Course Loading System
-    // 优先用本地缓存（同步），避免云端请求导致白屏
-    var lesson = Sync.getCurrentLessonOnceSync ? Sync.getCurrentLessonOnceSync() : null;
-    if (lesson) {
-        currentModule = lesson.module || 'listening';
-        var dataVarName = (lesson.unit === 1 && lesson.lesson === 1) ? 'lesson1' : 'unit' + lesson.unit + '_lesson' + lesson.lesson;
-        if (window[dataVarName]) {
-            currentLessonData = window[dataVarName];
+    // 先从云端拉最新课程设置（带2秒超时，防白屏）
+    var started = false;
+    function applyLessonAndStart(lesson) {
+        if (started) return; // 防止重复启动
+        started = true;
+        if (lesson) {
+            currentModule = lesson.module || 'listening';
+            var dataVarName = (lesson.unit === 1 && lesson.lesson === 1) ? 'lesson1' : 'unit' + lesson.unit + '_lesson' + lesson.lesson;
+            if (window[dataVarName]) {
+                currentLessonData = window[dataVarName];
+            } else {
+                currentLessonData = lesson1;
+            }
         } else {
+            currentModule = 'listening';
             currentLessonData = lesson1;
         }
-    } else {
-        currentModule = 'listening'; // fallback
-        currentLessonData = lesson1;
+
+        // 检查教师端是否设置了模块和阶段
+        var cmd = Sync.getTeacherCommandOnce ? Sync.getTeacherCommandOnce() : null;
+        if (cmd) {
+            currentModule = cmd.module || 'listening';
+            currentPhase = cmd.phase || 'pretest';
+        }
+
+        startGame();
     }
 
-    // 检查教师端是否设置了模块和阶段（只读取一次，不监听）
-    var cmd = Sync.getTeacherCommandOnce ? Sync.getTeacherCommandOnce() : null;
-    if (cmd) {
-        currentModule = cmd.module || 'listening';
-        currentPhase = cmd.phase || 'pretest';
-    }
+    // 超时保护：2秒后还没拿到云端数据就用本地缓存启动
+    var timeout = setTimeout(function() {
+        var local = Sync.getCurrentLessonOnceSync ? Sync.getCurrentLessonOnceSync() : null;
+        applyLessonAndStart(local);
+    }, 2000);
 
-    startGame(); // 立即启动，不等云端
+    // 尝试从云端获取最新课程
+    Sync.getCurrentLessonOnce().then(function(lesson) {
+        clearTimeout(timeout);
+        applyLessonAndStart(lesson);
+    }).catch(function() {
+        clearTimeout(timeout);
+        var local = Sync.getCurrentLessonOnceSync ? Sync.getCurrentLessonOnceSync() : null;
+        applyLessonAndStart(local);
+    });
 };
 
 // Step 2: Click module card to start (仅当没有教师指令时使用)
