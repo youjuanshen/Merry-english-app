@@ -74,9 +74,6 @@ function initPreparePage() {
     }
 
     renderObjectives(currentLesson);
-    renderObservationList();
-    renderHomeworkCheckList();
-    renderLastHomeworkIncomplete();
     // 强制同步一次界面内容保证和 DOM element 绝对一致
     updateCurrentLesson();
 
@@ -118,43 +115,94 @@ function initPreparePage() {
     });
 
     // Start Class
-    document.getElementById('btn-start-class').onclick = () => {
-        const timeLimitEl = document.getElementById('time-limit-select');
-        const timeLimit = parseInt(timeLimitEl ? timeLimitEl.value : 0) || 0;
+    var btnStart = document.getElementById('btn-start-class');
 
-        const unitEl = document.getElementById('unit-select');
-        const lessonEl = document.getElementById('lesson-select');
-        const unitVal = unitEl ? unitEl.value : '1';
-        const lessonVal = lessonEl ? lessonEl.value : '1';
-        
-        const unitSelect = document.getElementById('unit-select');
-        const lessonSelect = document.getElementById('lesson-select');
-        const unitText = unitSelect ? unitSelect.options[unitSelect.selectedIndex].text : `Unit ${unitVal}`;
-        const lessonText = lessonSelect ? lessonSelect.options[lessonSelect.selectedIndex].text.split(':')[0] : `Lesson ${lessonVal}`;
-        const moduleText = getModuleChinese(currentModule);
-        
-        const currentLessonObj = {
-          unit: parseInt(unitVal),
-          lesson: parseInt(lessonVal),
-          module: currentModule,
-          displayName: `${unitText} ${lessonText} - ${moduleText}`
+    // 重置按钮：始终绑定（不管有没有发布），方便换课程测试
+    var btnReset = document.getElementById('btn-reset-class');
+    if (btnReset) {
+        btnReset.onclick = function() {
+            localStorage.removeItem('merry_class_started');
+            localStorage.removeItem('teacherCommand');
+            localStorage.removeItem('currentLesson');
+            // 恢复发布按钮为初始状态
+            btnStart.textContent = '🚀 开始上课 (发布任务)';
+            btnStart.style.background = '';
+            bindPublishButton(); // 重新绑定发布逻辑
+            // 视觉反馈
+            btnReset.textContent = '✅ 已重置！';
+            setTimeout(function() { btnReset.textContent = '🔄 重置课堂 (换课程重新发布)'; }, 1500);
         };
-        
-        Sync.setCurrentLesson(currentLessonObj);
+    }
 
-        // Publish command to student app via Sync engine
-        Sync.sendTeacherCommand({
-            action: 'start',
-            module: currentModule,
-            phase: currentPhase, // 使用选择的阶段（前测/实战）
-            lesson: currentLesson,
-            timeLimit: timeLimit,
-            timestamp: Date.now()
-        });
-        
-        // Navigate to control
-        window.location.href = 'control.html';
-    };
+    // 根据是否已发布设置按钮状态
+    function updateStartButton() {
+        var classStartedAt = localStorage.getItem('merry_class_started');
+        if (classStartedAt && (Date.now() - parseInt(classStartedAt)) > 2 * 60 * 60 * 1000) {
+            localStorage.removeItem('merry_class_started');
+            classStartedAt = null;
+        }
+        if (classStartedAt) {
+            btnStart.textContent = '✅ 已发布 — 点击进入课中控制';
+            btnStart.style.background = 'linear-gradient(135deg, #1cb0f6, #0090d6)';
+            btnStart.onclick = function() {
+                window.location.href = 'control.html';
+            };
+        } else {
+            bindPublishButton();
+        }
+    }
+
+    function bindPublishButton() {
+        btnStart.onclick = function() {
+            var timeLimitEl = document.getElementById('time-limit-select');
+            var timeLimit = parseInt(timeLimitEl ? timeLimitEl.value : 0) || 0;
+
+            var unitEl = document.getElementById('unit-select');
+            var lessonEl = document.getElementById('lesson-select');
+            var unitVal = unitEl ? unitEl.value : '1';
+            var lessonVal = lessonEl ? lessonEl.value : '1';
+            
+            var unitSelect = document.getElementById('unit-select');
+            var lessonSelect = document.getElementById('lesson-select');
+            var unitText = unitSelect ? unitSelect.options[unitSelect.selectedIndex].text : 'Unit ' + unitVal;
+            var lessonText = lessonSelect ? lessonSelect.options[lessonSelect.selectedIndex].text.split(':')[0] : 'Lesson ' + lessonVal;
+            var moduleText = getModuleChinese(currentModule);
+            
+            // Extract topic title from lessonObjectives
+            var lId = 'U' + unitVal + 'L' + lessonVal;
+            var objData = typeof lessonObjectives !== 'undefined' ? lessonObjectives[lId] : null;
+            if (objData && objData.title && objData.title.indexOf(':') !== -1) {
+                var topicName = objData.title.split(':')[1].trim();
+                lessonText += ' · ' + topicName;
+            }
+            
+            var currentLessonObj = {
+              unit: parseInt(unitVal),
+              lesson: parseInt(lessonVal),
+              module: currentModule,
+              displayName: unitText + ' ' + lessonText + ' - ' + moduleText
+            };
+            
+            Sync.setCurrentLesson(currentLessonObj);
+
+            Sync.sendTeacherCommand({
+                action: 'start',
+                module: currentModule,
+                phase: currentPhase,
+                lesson: currentLesson,
+                timeLimit: timeLimit,
+                timestamp: Date.now()
+            });
+            
+            // Mark class as started
+            localStorage.setItem('merry_class_started', Date.now().toString());
+            
+            window.location.href = 'control.html';
+        };
+    }
+
+    // 初始化时根据状态设置按钮
+    updateStartButton();
 }
 
 function renderObjectives(lessonId) {
@@ -184,8 +232,8 @@ function renderObjectives(lessonId) {
     }
 
     const container = document.getElementById('objectives-container');
+    if (!container) return;
     container.innerHTML = `
-        <h3 class="card-title">📖 教学目标</h3>
         <h4 style="margin-top:0; color:var(--teacher-primary)">${data.title}</h4>
         
         ${moduleObjHtml}
@@ -216,6 +264,7 @@ function renderObjectives(lessonId) {
 function renderObservationList() {
     const group = getTodayObservationGroup();
     const container = document.getElementById('observation-list');
+    if (!container) return;
     container.innerHTML = group.map(student => `
         <div class="name-item">
             <label><input type="checkbox" checked disabled> ${student.id}. ${student.name}</label>
@@ -224,154 +273,41 @@ function renderObservationList() {
 }
 
 // --- HOMEWORK CHECK ---
-function renderHomeworkCheckList() {
-    const container = document.getElementById('homework-check-list');
-    const dotsContainer = document.getElementById('hw-page-dots');
-    if (!container) return;
-    
-    // 获取所有的学生 (27人)
-    const allStudents = [];
-    if (typeof observationGroups !== 'undefined') {
-        observationGroups.forEach(group => {
-            group.forEach(s => allStudents.push(s));
-        });
-        allStudents.sort((a, b) => a.id - b.id); // 按学号排序
-    }
-
-    container.innerHTML = '';
-    if (dotsContainer) dotsContainer.innerHTML = '';
-
-    const STUDENTS_PER_PAGE = 12; // 3列x4行
-    const totalPages = Math.ceil(allStudents.length / STUDENTS_PER_PAGE);
-
-    for (let page = 0; page < totalPages; page++) {
-        const pageEl = document.createElement('div');
-        pageEl.className = 'hw-page';
-
-        const startIdx = page * STUDENTS_PER_PAGE;
-        const endIdx = Math.min(startIdx + STUDENTS_PER_PAGE, allStudents.length);
-
-        for (let i = startIdx; i < endIdx; i++) {
-            const student = allStudents[i];
-            const cardEl = document.createElement('div');
-            cardEl.className = 'hw-student-card';
-            cardEl.dataset.id = student.id;
-            cardEl.dataset.name = student.name;
-            cardEl.textContent = `${student.id}. ${student.name}`;
-            cardEl.onclick = () => toggleHomeworkStatus(cardEl);
-            pageEl.appendChild(cardEl);
-        }
-        
-        container.appendChild(pageEl);
-
-        // 创建页码点
-        if (dotsContainer) {
-            const dot = document.createElement('div');
-            dot.className = `hw-page-dot ${page === 0 ? 'active' : ''}`;
-            dotsContainer.appendChild(dot);
-        }
-    }
-
-    // 监听滑动更新点点
-    container.addEventListener('scroll', () => {
-        if (!dotsContainer) return;
-        const scrollLeft = container.scrollLeft;
-        const pageIndex = Math.round(scrollLeft / container.clientWidth);
-        const dots = dotsContainer.querySelectorAll('.hw-page-dot');
-        dots.forEach((dot, idx) => {
-            dot.classList.toggle('active', idx === pageIndex);
-        });
-    });
-
-    // 绑定保存按钮
-    const saveBtn = document.getElementById('btn-save-homework');
-    if (saveBtn) {
-        saveBtn.onclick = saveHomeworkCheck;
-    }
-}
-
-function toggleHomeworkStatus(element) {
-    element.classList.toggle('incomplete');
-}
-
-function saveHomeworkCheck() {
-    const incompleteCards = document.querySelectorAll('.hw-student-card.incomplete');
-    const incompleteStudents = Array.from(incompleteCards).map(card => ({
-        id: card.dataset.id,
-        name: card.dataset.name
-    }));
-
-    localStorage.setItem('homeworkIncomplete', JSON.stringify(incompleteStudents));
-    
-    // 视觉反馈
-    const btn = document.getElementById('btn-save-homework');
-    const originalText = btn.innerHTML;
-    btn.innerHTML = '✅ 提交成功！';
-    btn.style.backgroundColor = '#2ecc71';
-    
-    setTimeout(() => {
-        btn.innerHTML = originalText;
-        btn.style.backgroundColor = '';
-        renderLastHomeworkIncomplete(); // 更新上方显示
-    }, 2000);
-}
-
-function renderLastHomeworkIncomplete() {
-    const container = document.getElementById('last-homework-incomplete');
-    if (!container) return;
-
-    Sync.getHomeworkRecordsOnce().then(records => {
-        try {
-            // Find most recent homework check intuitively or return all flat array
-            // Here we assume it's simply an array if they didn't implement the date-key structure correctly yet
-            let saved = [];
-            if (Array.isArray(records)) {
-                saved = records;
-            } else {
-                // If it's an object, flatten to get the latest missing students
-                let latestDate = '';
-                for (let key in records) {
-                    if (key > latestDate) {
-                        latestDate = key;
-                        saved = records[key];
-                    }
-                }
-            }
-            // fallback structure compatibility
-            if (!Array.isArray(saved)) {
-                 saved = JSON.parse(localStorage.getItem('homeworkIncomplete') || '[]');
-            }
-            
-            if (saved.length === 0) {
-                container.innerHTML = '<p style="color:var(--teacher-success); font-size:14px; font-weight:bold;">🎉 上节课全班都交齐了作业！</p>';
-            } else {
-                container.innerHTML = saved.map(s => 
-                    `<span class="hw-incomplete-badge">${s.id}. ${s.name}</span>`
-                ).join('');
-            }
-        } catch (e) {
-            container.innerHTML = '<p style="color:#888; font-size:14px;">暂无记录</p>';
-        }
-    });
-}
 
 // --- CONTROL PAGE ---
 function updateControlTitle(mod, phase) {
     var lessonInfo = Sync.getCurrentLessonOnceSync();
     var unitLesson = lessonInfo ? ('U' + lessonInfo.unit + 'L' + lessonInfo.lesson + ' ') : '';
-    var phaseText = phase === 'pretest' ? '前测' : '实战';
-    document.getElementById('display-module').textContent = unitLesson + getModuleChinese(mod) + ' - ' + phaseText;
+    var phaseText = phase === 'pretest' ? '热身赛' : '闯关赛';
+
+    var lessonKey = lessonInfo ? ('U' + lessonInfo.unit + 'L' + lessonInfo.lesson) : '';
+    var topicTitle = '';
+    if (lessonKey && typeof lessonObjectives !== 'undefined' && lessonObjectives[lessonKey]) {
+        var fullTitle = lessonObjectives[lessonKey].title || '';
+        var colonIdx = fullTitle.indexOf(':');
+        topicTitle = colonIdx !== -1 ? fullTitle.substring(colonIdx + 1).trim() : fullTitle;
+    }
+
+    var displayText = unitLesson + (topicTitle ? topicTitle + ' · ' : '') + getModuleChinese(mod) + ' - ' + phaseText;
+    var el = document.getElementById('display-module');
+    if (el) el.textContent = displayText;
+
+    // Update phase badge if exists
+    var badge = document.getElementById('phase-badge');
+    if (badge) {
+        badge.textContent = phase === 'pretest' ? '🏃 热身赛' : '🎮 闯关赛';
+    }
 }
 
 function initControlPage() {
-    // 页面加载时立即显示当前课程信息
+    // 页面加载时显示当前课程信息（以 localStorage 为准，因为刚从 prepare.html 跳过来）
     var initCmd = Sync.getTeacherCommandOnce();
+    var initTimestamp = initCmd ? initCmd.timestamp : 0;
     if (initCmd && initCmd.module) {
         currentModule = initCmd.module;
         currentPhase = initCmd.phase || 'pretest';
         updateControlTitle(currentModule, currentPhase);
     } else {
-        // 没有指令时也尝试从课程信息更新标题
         var lessonInfo = Sync.getCurrentLessonOnceSync();
         if (lessonInfo) {
             updateControlTitle(currentModule, currentPhase);
@@ -380,67 +316,55 @@ function initControlPage() {
 
     Sync.listenTeacherCommand(cmd => {
         if (cmd && cmd.module) {
+            // 只接受比初始命令更新的命令（防止云端旧命令覆盖刚发布的设置）
+            if (cmd.timestamp && cmd.timestamp < initTimestamp) return;
             currentModule = cmd.module;
             currentPhase = cmd.phase;
             updateControlTitle(currentModule, currentPhase);
+            // 如果云端返回 practice，更新按钮状态
+            var btnLaunch = document.getElementById('btn-launch');
+            if (btnLaunch && currentPhase === 'practice') {
+                btnLaunch.innerHTML = '✅ 已进入闯关赛';
+                btnLaunch.classList.add('disabled');
+                btnLaunch.disabled = true;
+            }
         }
     });
 
-    // Timer logic
-    let seconds = 0;
-    const timerEl = document.getElementById('timer-display');
-    setInterval(() => {
-        seconds++;
-        const m = Math.floor(seconds / 60).toString().padStart(2, '0');
-        const s = (seconds % 60).toString().padStart(2, '0');
-        timerEl.textContent = `⏱️ ${m}:${s}`;
-    }, 1000);
 
-    // 显示未交作业
-    const hwContainer = document.getElementById('control-homework-incomplete');
-    if (hwContainer) {
-        try {
-            const saved = JSON.parse(localStorage.getItem('homeworkIncomplete') || '[]');
-            if (saved.length === 0) {
-                hwContainer.innerHTML = '<div style="text-align:center; padding:10px;"><p style="color:var(--teacher-success); font-size:14px; font-weight:bold; margin:0;">🎉 全班交齐作业！</p></div>';
-            } else {
-                hwContainer.innerHTML = '<div style="display:flex; flex-wrap:wrap; justify-content:center; padding-top:10px;">' + 
-                    saved.map(s => `<span class="hw-incomplete-badge" style="margin-bottom:5px;">${s.id}. ${s.name}</span>`).join('') +
-                    '</div>';
-            }
-        } catch (e) {
-            hwContainer.innerHTML = '<p style="color:#888; font-size:14px; text-align:center;">暂无记录</p>';
+    // 进入实战 = send command + start timer (one-way)
+    var btnLaunch = document.getElementById('btn-launch');
+    if (btnLaunch) {
+        if (currentPhase === 'practice') {
+            btnLaunch.innerHTML = '✅ 已进入闯关赛';
+            btnLaunch.classList.add('disabled');
+            btnLaunch.disabled = true;
+            var tc = document.getElementById('timer-controls');
+            if (tc) tc.classList.add('show');
         }
+        btnLaunch.onclick = function() {
+            if (this.disabled) return;
+            currentPhase = 'practice';
+            Sync.sendTeacherCommand({
+                action: 'start',
+                module: currentModule,
+                phase: currentPhase,
+                timestamp: Date.now()
+            });
+            // Disable button permanently
+            this.innerHTML = '✅ 已进入闯关赛';
+            this.classList.add('disabled');
+            this.disabled = true;
+            updateControlTitle(currentModule, currentPhase);
+            // Show timer controls and start countdown
+            var tc = document.getElementById('timer-controls');
+            if (tc) tc.classList.add('show');
+            // Disable preset switching
+            if (typeof launched !== 'undefined') launched = true;
+            // Start countdown (function defined in control.html inline script)
+            if (typeof startCountdown === 'function') startCountdown();
+        };
     }
-
-    // Poll student progress
-    setInterval(pollStudentProgress, 2000);
-    pollStudentProgress();
-
-    // Pause button
-    document.getElementById('btn-pause').onclick = function() {
-        const isPaused = this.textContent.includes('继续');
-        Sync.sendTeacherCommand({
-            action: isPaused ? 'start' : 'pause',
-            module: currentModule,
-            phase: currentPhase,
-            timestamp: Date.now()
-        });
-        this.innerHTML = isPaused ? '📢 暂停' : '▶️ 继续';
-        this.className = isPaused ? 'teacher-btn btn-warning' : 'teacher-btn btn-success';
-    };
-
-    // Next Phase Button
-    document.getElementById('btn-next').onclick = () => {
-        currentPhase = currentPhase === 'pretest' ? 'practice' : 'pretest';
-        Sync.sendTeacherCommand({
-            action: 'start',
-            module: currentModule,
-            phase: currentPhase,
-            timestamp: Date.now()
-        });
-        window.location.reload(); // Reload to update UI
-    };
 }
 
 async function pollStudentProgress() {
@@ -510,14 +434,19 @@ function updateCompletionDisplay(allProgress) {
         completeContainer.innerHTML = '<li>暂无小组完成</li>';
     } else {
         const compList = allProgress.filter(p => p.completed);
-        completeContainer.innerHTML = compList.map(p => `<li>• ${p.studentName}组 (⭐ ${p.stars || 0})</li>`).join('');
+        // 按得分从高到低排序
+        compList.sort((a, b) => (b.stars || 0) - (a.stars || 0));
+        completeContainer.innerHTML = compList.map(p => {
+            var total = p.totalQuestions || p.totalAnswered || '?';
+            return `<li>• ${p.studentName}${p.partnerName ? ' & ' + p.partnerName : ''}组 (⭐ ${p.stars || 0}/${total})</li>`;
+        }).join('');
     }
 
     if (incomplete.length === 0) {
         incompleteContainer.innerHTML = '<li>全部完成！🎉</li>';
     } else {
         incompleteContainer.innerHTML = incomplete.map(p => 
-            `<li>• ${p.studentName}组 (第${p.currentQuestion || 0}/${p.totalQuestions || 0}题)</li>`
+            `<li>• ${p.studentName}${p.partnerName ? ' & ' + p.partnerName : ''}组 (第${p.currentQuestion || 0}/${p.totalQuestions || 0}题)</li>`
         ).join('');
     }
 }
