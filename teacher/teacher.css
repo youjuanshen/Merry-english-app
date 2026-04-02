@@ -1,7 +1,7 @@
 /* teacher.css */
 
 :root {
-  --teacher-primary: #4A90D9;      /* 蓝色主色 */
+  --teacher-primary: #58cc02;      /* 绿色主色 */
   --teacher-success: #58cc02;      /* 绿色 */
   --teacher-warning: #ff9600;      /* 橙色警告 */
   --teacher-danger: #ff4b4b;       /* 红色 */
@@ -111,11 +111,11 @@ body {
     color: white;
     width: 100%;
     margin-top: 20px;
-    box-shadow: 0 4px 0 #3a75b3;
+    box-shadow: 0 4px 0 #46a302;
 }
 .btn-primary:active {
     transform: translateY(4px);
-    box-shadow: 0 0 0 #3a75b3;
+    box-shadow: 0 0 0 #46a302;
 }
 
 .btn-success { background: var(--teacher-success); color: white; box-shadow: 0 4px 0 #46a302; }
@@ -172,7 +172,7 @@ body {
 .module-select.active {
     border-color: var(--teacher-primary);
     color: var(--teacher-primary);
-    background: #eef5fb;
+    background: #f0fff0;
 }
 
 /* 阶段选择 */
@@ -192,12 +192,12 @@ body {
     color: #999;
 }
 .phase-select.active {
-    border-color: var(--teacher-success);
-    color: var(--teacher-success);
+    border-color: var(--teacher-primary);
+    color: var(--teacher-primary);
     background: #f0fff0;
 }
 .phase-select.active small {
-    color: var(--teacher-success);
+    color: var(--teacher-primary);
 }
 
 /* 名单网格 */

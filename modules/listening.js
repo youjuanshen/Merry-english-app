@@ -2,7 +2,7 @@
 
 function renderListeningQuestion(q, container) {
     // 容错：如果题目数据不完整，自动跳过
-    if (!q || (!q.options && q.type !== 'listen_tf')) {
+    if (!q || (!q.options && q.type !== 'listen_tf' && q.type !== 'listen_sequence')) {
         var skipEl = document.createElement('div');
         skipEl.style.textAlign = 'center';
         skipEl.style.padding = '40px';
@@ -33,9 +33,22 @@ function renderListeningQuestion(q, container) {
     // 提示不要一开始就显示，只在答错时才显示
     // （由handleAnswer函数中的showProgressiveHint处理）
 
-    setTimeout(function() { speakWord(q.audio); }, 300); // Auto play
+    // listen_sequence 有自己的播放逻辑，不走默认 auto play
+    if (q.type !== 'listen_sequence') {
+        setTimeout(function() { speakWord(q.audio); }, 300);
+    }
 
     if (q.type === 'listen_select' || q.type === 'listen_question') {
+        // Scenario 情境框（PBL）：如果题目有 context 字段，显示情境
+        if (q.context) {
+            var ctxBox = document.createElement('div');
+            ctxBox.style.cssText = 'background:#FFF8E1;border:2px solid #FFB74D;border-radius:12px;padding:10px 14px;margin-bottom:10px;text-align:center;';
+            ctxBox.innerHTML = '<div style="font-size:14px;color:#e65100;font-weight:bold;">' + q.context + '</div>';
+            if (q.question) {
+                ctxBox.innerHTML += '<div style="font-size:13px;color:#666;margin-top:4px;">' + q.question + '</div>';
+            }
+            container.appendChild(ctxBox);
+        }
         if (q.image) {
             var imgEl = document.createElement('div');
             imgEl.style.fontSize = '80px';
@@ -95,69 +108,193 @@ function renderListeningQuestion(q, container) {
         container.appendChild(tfGrid);
 
     } else if (q.type === 'listen_sequence') {
+        // 听音排序：播放3个词的音频，学生按听到的顺序点击图片/文字
+        // 理论：i+1（听力理解→排序输出）+ Play-based（游戏化排序）
+
+        // 顶部：播放按钮 + 说明
+        playBtn.innerHTML = '🔊 再听一遍';
+        playBtn.style.cssText += 'font-size:14px;padding:8px 16px;white-space:nowrap;min-width:120px;width:auto;height:auto;border-radius:24px;';
+
         var instructionSeq = document.createElement('div');
-        instructionSeq.style.textAlign = 'center';
-        instructionSeq.style.marginBottom = '15px';
-        instructionSeq.style.fontSize = '16px';
-        instructionSeq.style.color = '#666';
-        instructionSeq.textContent = '按顺序点击，排列正确顺序';
+        instructionSeq.style.cssText = 'text-align:center;margin-bottom:12px;font-size:16px;color:#666;font-weight:bold;';
+        instructionSeq.textContent = '👂 听音频，按顺序点击！';
         container.appendChild(instructionSeq);
 
+        // 已选区域（显示 ①②③）
         var sortArea = document.createElement('div');
-        sortArea.className = 'sort-area';
+        sortArea.style.cssText = 'display:flex;gap:8px;justify-content:center;min-height:50px;margin-bottom:12px;padding:8px;background:#f5f5f5;border-radius:12px;';
         container.appendChild(sortArea);
 
-        var wordsContainer = document.createElement('div');
-        wordsContainer.style.display = 'flex';
-        wordsContainer.style.gap = '10px';
-        wordsContainer.style.flexWrap = 'wrap';
-        wordsContainer.style.justifyContent = 'center';
+        // 选项区域（图片/文字卡片，乱序显示）
+        // correctPos = 该词在 sequence 中的播放顺序位置
+        var items = q.words.map(function(w, i) {
+            // 提取词名：从图片标签 (bear.png → bear) 或纯文本
+            var wordName = '';
+            var imgMatch = w.match(/([\w-]+)\.(?:png|jpg|gif)/);
+            if (imgMatch) {
+                wordName = imgMatch[1].toLowerCase().replace(/_/g, ' ');
+            } else {
+                wordName = w.trim().toLowerCase();
+            }
+
+            // 在 sequence 中找到该词的正确位置
+            var seqPos = i; // 默认回退
+            if (q.sequence && wordName) {
+                for (var si = 0; si < q.sequence.length; si++) {
+                    var seqWord = q.sequence[si].toLowerCase().replace(/-/g, ' ');
+                    if (seqWord === wordName || wordName.indexOf(seqWord) !== -1 || seqWord.indexOf(wordName) !== -1) {
+                        seqPos = si;
+                        break;
+                    }
+                }
+            }
+            return { content: w, correctPos: seqPos };
+        });
+        // 打乱
+        for (var si = items.length - 1; si > 0; si--) {
+            var sj = Math.floor(Math.random() * (si + 1));
+            var stmp = items[si]; items[si] = items[sj]; items[sj] = stmp;
+        }
+
+        var cardsContainer = document.createElement('div');
+        cardsContainer.style.cssText = 'display:flex;gap:10px;flex-wrap:wrap;justify-content:center;';
 
         var currentAns = [];
+        var numberLabels = ['①', '②', '③', '④', '⑤'];
 
-        q.words.forEach(function(word) {
-            var wordBtn = document.createElement('div');
-            wordBtn.className = 'sort-word';
-            wordBtn.innerHTML = word;
+        // 自动播放音频序列（正常速度）
+        function playSequence() {
+            var audios = q.sequence || [];
+            var delay = 0;
+            audios.forEach(function(word, i) {
+                setTimeout(function() {
+                    if (window.speakWord) speakWord(word);
+                }, delay);
+                delay += 1200;
+            });
+        }
 
-            var originalIndex = q.words.indexOf(word);
+        // 逐词慢速播放（支架 Level 2 用）
+        function playSequenceSlow() {
+            var audios = q.sequence || [];
+            var delay = 0;
+            audios.forEach(function(word, i) {
+                setTimeout(function() {
+                    if (window.speakWord) speakWord(word);
+                    // 播放时短暂高亮对应的编号提示
+                    var numHint = document.getElementById('seq-num-hint');
+                    if (numHint) numHint.textContent = '第' + (i + 1) + '个';
+                }, delay);
+                delay += 2000; // 间隔更长，给学生思考时间
+            });
+        }
 
-            wordBtn.onclick = function() {
+        // 高亮第一个应该点的卡片（支架 Level 3 用）
+        function highlightFirstCorrect() {
+            var allCards = cardsContainer.querySelectorAll('.option-card');
+            for (var hi = 0; hi < allCards.length; hi++) {
+                if (!allCards[hi].classList.contains('picked') && allCards[hi].dataset.correctPos === '0') {
+                    allCards[hi].style.border = '3px solid #4caf50';
+                    allCards[hi].style.boxShadow = '0 0 10px rgba(76,175,80,0.5)';
+                    break;
+                }
+            }
+        }
+
+        // 点击播放按钮重播
+        playBtn.onclick = function() {
+            var wc = window.wrongCount || 0;
+            if (wc >= 2) { playSequenceSlow(); } else { playSequence(); }
+        };
+        // 自动播放
+        setTimeout(playSequence, 500);
+
+        // 支架提示区域
+        var seqHintArea = document.createElement('div');
+        seqHintArea.id = 'seq-num-hint';
+        seqHintArea.style.cssText = 'text-align:center;font-size:14px;color:#999;min-height:20px;margin-bottom:4px;';
+        container.appendChild(seqHintArea);
+
+        items.forEach(function(item, displayIdx) {
+            var card = document.createElement('div');
+            card.className = 'option-card';
+            card.style.cssText = 'padding:10px 16px;font-size:18px;text-align:center;cursor:pointer;min-width:80px;min-height:60px;display:flex;align-items:center;justify-content:center;border:2px solid #e0e0e0;border-radius:12px;background:#fff;position:relative;';
+            card.innerHTML = item.content;
+            card.dataset.correctPos = item.correctPos;
+
+            card.onclick = function() {
                 if (isAnimating) return;
-                if (currentAns.indexOf(originalIndex) !== -1) return;
-                wordBtn.style.opacity = '0.3';
+                if (card.classList.contains('picked')) return;
 
-                var cloned = document.createElement('div');
-                cloned.className = 'sort-word animate-pop';
-                cloned.innerHTML = word;
-                cloned.onclick = function() {
+                // 标记已选
+                card.classList.add('picked');
+                card.style.opacity = '0.4';
+                card.style.pointerEvents = 'none';
+                currentAns.push(item.correctPos);
+
+                // 在已选区显示编号
+                var badge = document.createElement('div');
+                badge.style.cssText = 'width:40px;height:40px;border-radius:50%;background:#1cb0f6;color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:bold;';
+                badge.textContent = numberLabels[currentAns.length - 1] || currentAns.length;
+                badge.onclick = function() {
+                    // 点击已选的可以撤销
                     if (isAnimating) return;
-                    sortArea.removeChild(cloned);
-                    wordBtn.style.opacity = '1';
-                    currentAns = currentAns.filter(function(idx) { return idx !== originalIndex; });
+                    sortArea.removeChild(badge);
+                    card.classList.remove('picked');
+                    card.style.opacity = '1';
+                    card.style.pointerEvents = 'auto';
+                    currentAns = currentAns.filter(function(p) { return p !== item.correctPos; });
+                    // 重新编号
+                    var badges = sortArea.querySelectorAll('div');
+                    for (var bi = 0; bi < badges.length; bi++) {
+                        badges[bi].textContent = numberLabels[bi] || (bi + 1);
+                    }
                 };
-                sortArea.appendChild(cloned);
-                currentAns.push(originalIndex);
+                sortArea.appendChild(badge);
 
-                if (currentAns.length === q.correct.length) {
-                    var correctSequence = q.correct.map(function(i) { return q.words[i]; }).join(' → ');
-                    if (currentAns.join(',') === q.correct.join(',')) {
-                        handleAnswer(true, null, null);
+                // 全部选完，判断对错
+                var totalItems = q.sequence ? q.sequence.length : q.words.length;
+                if (currentAns.length === totalItems) {
+                    // 正确顺序就是 0,1,2,...
+                    var correctOrder = [];
+                    for (var ci = 0; ci < totalItems; ci++) correctOrder.push(ci);
+                    var isCorrect = currentAns.join(',') === correctOrder.join(',');
+
+                    if (isCorrect) {
+                        handleAnswer(true);
                     } else {
-                        handleAnswer(false, null, correctSequence);
+                        // 答错：显示正确顺序，重置让学生再试
+                        var correctWords = (q.sequence || []).join(' → ');
+                        handleAnswer(false, null, correctWords);
                         setTimeout(function() {
                             sortArea.innerHTML = '';
-                            for (var i = 0; i < wordsContainer.childNodes.length; i++) {
-                                wordsContainer.childNodes[i].style.opacity = '1';
+                            var allCards = cardsContainer.querySelectorAll('.option-card');
+                            for (var ri = 0; ri < allCards.length; ri++) {
+                                allCards[ri].classList.remove('picked');
+                                allCards[ri].style.opacity = '1';
+                                allCards[ri].style.pointerEvents = 'auto';
                             }
                             currentAns = [];
+                            // 渐进支架重播
+                            var wc = window.wrongCount || 0;
+                            if (wc >= 3) {
+                                // Level 3+：慢速逐词播放 + 高亮第一个
+                                playSequenceSlow();
+                                setTimeout(highlightFirstCorrect, 500);
+                            } else if (wc >= 2) {
+                                // Level 2：慢速逐词播放（每词之间停顿更长）
+                                playSequenceSlow();
+                            } else {
+                                // Level 1：正常速度重播
+                                playSequence();
+                            }
                         }, 2500);
                     }
                 }
             };
-            wordsContainer.appendChild(wordBtn);
+            cardsContainer.appendChild(card);
         });
-        container.appendChild(wordsContainer);
+        container.appendChild(cardsContainer);
     } else if (q.type === 'whack_mole') {
         var descEl = document.createElement('h3');
         descEl.innerHTML = '🔨 打中 <strong style="font-size:24px;color:#ff4b4b;">' + (q.word || q.sentence || '') + '</strong>';

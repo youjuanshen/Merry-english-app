@@ -126,7 +126,7 @@ function renderSpeakingQuestion(q, container) {
 
     var statusText = document.createElement('div');
     statusText.style.cssText = 'margin-top:5px;font-size:13px;font-weight:bold;min-height:20px;color:#888;text-align:center;';
-    statusText.textContent = '🔊听示范  🎤录音';
+    statusText.textContent = '🔊先听示范　🎤点击录音';
 
     // 录音中脉冲动画
     if (!document.getElementById('recording-pulse-style')) {
@@ -149,7 +149,7 @@ function renderSpeakingQuestion(q, container) {
             recordBtn.style.webkitAnimation = 'recordPulse 1.5s infinite';
             recordBtn.style.transform = 'scale(1.1)';
             recordBtn.innerHTML = '🎤';
-            statusText.textContent = '🔴 录音中...';
+            statusText.textContent = '🔴 录音中…再点一下停止';
             statusText.style.color = '#ff4b4b';
         } else {
             isRecording = false;

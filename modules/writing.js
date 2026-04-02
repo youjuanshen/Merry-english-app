@@ -39,7 +39,7 @@ function renderWritingQuestion(q, container) {
 
         const grid = document.createElement('div');
         grid.className = 'options-grid';
-        q.options.forEach((opt, idx) => {
+        (q.options || []).forEach((opt, idx) => {
             const card = document.createElement('div');
             card.className = 'option-card';
             card.style.fontSize = '50px';
@@ -113,7 +113,7 @@ function renderWritingQuestion(q, container) {
         grid.className = 'options-grid';
         
         // Sort options randomly or keep them
-        q.options.forEach((opt, idx) => {
+        (q.options || []).forEach((opt, idx) => {
             const card = document.createElement('div');
             card.className = 'option-card';
             card.style.fontSize = '40px';
@@ -132,6 +132,16 @@ function renderWritingQuestion(q, container) {
     } else if (q.type === 'word_puzzle' || q.type === 'sentence_order') {
         var isOrder = (q.type === 'sentence_order');
         var hasChinese = isOrder && q.chineseWords && q.chineseScrambled;
+
+        // === 题目提示（让学生知道要做什么）===
+        var promptHeader = document.createElement('div');
+        promptHeader.style.cssText = 'text-align:center;margin-bottom:10px;';
+        if (isOrder) {
+            promptHeader.innerHTML = '<div style="font-size:16px;color:#888;font-weight:bold;">✏️ 点击词块，排列成正确的句子</div>';
+        } else {
+            promptHeader.innerHTML = '<div style="font-size:16px;color:#888;font-weight:bold;">✏️ 点击字母，拼出正确的单词</div>';
+        }
+        container.appendChild(promptHeader);
 
         // === 多邻国风格双语排列题 ===
 
@@ -194,7 +204,7 @@ function renderWritingQuestion(q, container) {
                 });
             }
 
-            cfg.scrambled.forEach(function(item) {
+            (cfg.scrambled || []).forEach(function(item) {
                 var piece = document.createElement('div');
                 piece.style.cssText = 'background:white;border:2px solid #e5e5e5;border-radius:12px;padding:8px 16px;font-size:' +
                     cfg.fontSize + ';font-weight:bold;color:#4b4b4b;cursor:pointer;transition:all 0.15s;box-shadow:0 2px 0 #e5e5e5;user-select:none;';
@@ -247,35 +257,37 @@ function renderWritingQuestion(q, container) {
         var enSection = buildOrderSection({
             label: '🇬🇧 排列英文',
             placeholder: '点击词块组成英文句子',
-            scrambled: isOrder ? q.scrambled : q.scrambled,
-            correct: isOrder ? q.words : q.letters,
+            scrambled: (isOrder ? q.scrambled : q.scrambled) || [],
+            correct: (isOrder ? q.words : q.letters) || [],
             fontSize: isOrder ? '18px' : '32px',
             chipBg: '#ddf4ff', chipBorder: '#84d8ff', chipColor: '#1cb0f6',
             onChange: function() { checkBothDone(); }
         });
         container.appendChild(enSection.el);
 
-        // 中文排列区（如果有数据）
-        var cnSection = null;
+        // 中文参考句（静态显示，作为语义脚手架）
         if (hasChinese) {
-            cnSection = buildOrderSection({
-                label: '🇨🇳 排列中文',
-                placeholder: '点击词块组成中文句子',
-                scrambled: q.chineseScrambled,
-                correct: q.chineseWords,
-                fontSize: '18px',
-                chipBg: '#fff3dd', chipBorder: '#ffb020', chipColor: '#e09000',
-                onChange: function() { checkBothDone(); }
-            });
-            container.appendChild(cnSection.el);
+            var cnRef = document.createElement('div');
+            cnRef.style.cssText = 'margin:0 0 14px;text-align:center;';
+            cnRef.innerHTML =
+                '<div style="font-size:13px;color:#bbb;font-weight:bold;margin-bottom:6px;">🇨🇳 中文意思（参考）</div>' +
+                '<div style="font-size:20px;font-weight:bold;color:#e09000;background:#fff9ec;border-radius:14px;padding:10px 20px;display:inline-block;letter-spacing:1px;">' +
+                    q.chineseWords.join('') +
+                '</div>';
+            container.appendChild(cnRef);
         }
+        var cnSection = null; // 不再作为交互区，checkBothDone 中 cnDone 默认 true
+
 
         // 检查两边是否都填满
+        var _checking = false; // 防止同时触发多次检查
         function checkBothDone() {
+            if (_checking) return;
             var enDone = enSection.isFull();
             var cnDone = cnSection ? cnSection.isFull() : true;
             if (!enDone || !cnDone) return;
 
+            _checking = true;
             var enOk = enSection.isCorrect();
             var cnOk = cnSection ? cnSection.isCorrect() : true;
 
@@ -284,22 +296,30 @@ function renderWritingQuestion(q, container) {
                 if (cnSection) cnSection.showResult(true);
                 setTimeout(function() { handleAnswer(true); }, 600);
             } else {
-                enSection.showResult(!enOk ? false : true);
-                if (cnSection) cnSection.showResult(!cnOk ? false : true);
+                // 答错：显示红色反馈
+                enSection.showResult(false);
+                if (cnSection) cnSection.showResult(false);
                 setTimeout(function() {
+                    // 重置词块
                     if (!enOk) enSection.reset();
                     if (cnSection && !cnOk) cnSection.reset();
+                    // ⚠️ 关键：必须先清除动画锁，再记录错误
+                    // 否则 handleAnswer 设置的 isAnimating 会冻结整个 UI
+                    isAnimating = false;
+                    _checking = false; // 允许下一次检查
                     handleAnswer(false);
                 }, 800);
             }
         }
 
-        // 非 sentence_order（word_puzzle）不需要中文排列
+
+        // word_puzzle 添加提示
         if (!isOrder) {
-            var descEl = document.createElement('h3');
-            descEl.textContent = '拼出单词！';
-            if (q.chinese) descEl.textContent += ' (' + q.chinese + ')';
-            container.insertBefore(descEl, container.firstChild);
+            var descEl = document.createElement('div');
+            descEl.style.cssText = 'text-align:center;font-size:18px;font-weight:bold;color:#4b4b4b;margin-bottom:8px;';
+            descEl.textContent = '拼出单词';
+            if (q.chinese) descEl.textContent += '：' + q.chinese;
+            container.insertBefore(descEl, promptHeader.nextSibling);
         }
 
     } else if (q.type === 'fill_blank') {
@@ -322,7 +342,7 @@ function renderWritingQuestion(q, container) {
 
         const grid = document.createElement('div');
         grid.className = 'options-grid';
-        q.options.forEach((opt, idx) => {
+        (q.options || []).forEach((opt, idx) => {
             const card = document.createElement('div');
             card.className = 'option-card';
             card.style.fontSize = '30px';
@@ -362,7 +382,7 @@ function renderWritingQuestion(q, container) {
         const grid = document.createElement('div');
         grid.className = 'options-grid';
         
-        q.options.forEach((opt, idx) => {
+        (q.options || []).forEach((opt, idx) => {
             const card = document.createElement('div');
             card.className = 'option-card';
             card.style.fontSize = '40px';
@@ -415,8 +435,8 @@ function renderWritingQuestion(q, container) {
         sourceArea.style.justifyContent = 'center';
         sourceArea.style.flexWrap = 'wrap';
 
-        let correctArr = q.type === 'duo_spell' ? q.parts : q.words;
-        let scrambledArr = q.scrambled;
+        let correctArr = (q.type === 'duo_spell' ? q.parts : q.words) || [];
+        let scrambledArr = q.scrambled || [];
         
         correctArr.forEach(() => {
             const slot = document.createElement('div');

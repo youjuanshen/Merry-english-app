@@ -95,14 +95,65 @@ const SoundSystem = (function() {
             }
         },
 
-        // 欢迎页倒计时 3-2-1-GO!
-        playCountdownTick: () => {
-            // 3-2-1 时的"叮"
-            playTone(600, 'sine', 0.1, 0.1);
+        // 倒计时 3-2-1：清脆铃声，越来越高越来越紧迫
+        playCountdownTick: function(step) {
+            // 五声音阶上行：Sol4 → Re5 → La5
+            var freqs = { 3: 392.00, 2: 587.33, 1: 880.00 };
+            var freq = freqs[step] || 392.00;
+            // 铃声主音（triangle = 清脆不刺耳）
+            playTone(freq, 'triangle', 0.3, 0.14);
+            // 泛音（让音色更饱满像真铃声）
+            playTone(freq * 2, 'sine', 0.2, 0.05, 0.0);
+            playTone(freq * 3, 'sine', 0.12, 0.02, 0.0);
+            // 低音铺垫（只有最后一拍加，增加紧迫感）
+            if (step === 1) {
+                playTone(freq * 0.5, 'triangle', 0.4, 0.07, 0.0);
+                // 快速装饰音 La→La（双击效果）
+                playTone(freq, 'triangle', 0.08, 0.10, 0.15);
+            }
         },
-        playCountdownGo: () => {
-            // GO 时的"嘟嘟嘟"
-            playTone(1200, 'square', 0.3, 0.1);
+
+        // GO! 胜利号角（大调和弦 + 欢呼琶音）
+        playCountdownGo: function() {
+            // 快速上行琶音 Do-Mi-Sol-Do↑
+            playTone(523.25, 'triangle', 0.10, 0.13, 0.00);  // C5
+            playTone(659.25, 'triangle', 0.10, 0.13, 0.05);  // E5
+            playTone(783.99, 'triangle', 0.10, 0.14, 0.10);  // G5
+            playTone(1046.50, 'triangle', 0.35, 0.15, 0.15); // C6
+            // 和弦爆发（四音同时 = 辉煌感）
+            playTone(523.25, 'sine', 0.8, 0.07, 0.22);
+            playTone(659.25, 'sine', 0.8, 0.07, 0.22);
+            playTone(783.99, 'sine', 0.8, 0.07, 0.22);
+            playTone(1046.50, 'sine', 0.8, 0.06, 0.22);
+            // 星星闪烁高音装饰
+            playTone(1567.98, 'sine', 0.12, 0.03, 0.30);
+            playTone(2093.0, 'sine', 0.15, 0.03, 0.40);
+            playTone(1567.98, 'sine', 0.12, 0.02, 0.50);
+        },
+
+        // 开场旋律（五声音阶欢快旋律，类似多邻国/趣味游戏）
+        // Do-Re-Mi-Sol-La-Sol-Mi-Re-Mi-Sol-Do↑
+        playOpeningJingle: function() {
+            var m = [
+                // 第一乐句：上行 Do-Re-Mi-Sol（活泼跳跃）
+                { f: 523.25, d: 0.10, v: 0.11, t: 0.00 },  // Do
+                { f: 587.33, d: 0.08, v: 0.10, t: 0.10 },  // Re
+                { f: 659.25, d: 0.12, v: 0.12, t: 0.18 },  // Mi（稍长）
+                { f: 783.99, d: 0.12, v: 0.12, t: 0.30 },  // Sol
+                // 第二乐句：La-Sol-Mi（下行回弹）
+                { f: 880.00, d: 0.10, v: 0.13, t: 0.42 },  // La
+                { f: 783.99, d: 0.08, v: 0.11, t: 0.52 },  // Sol
+                { f: 659.25, d: 0.10, v: 0.10, t: 0.60 },  // Mi
+                // 第三乐句：Sol-La-Do↑（冲向高潮）
+                { f: 783.99, d: 0.08, v: 0.12, t: 0.72 },  // Sol
+                { f: 880.00, d: 0.08, v: 0.13, t: 0.80 },  // La
+                { f: 1046.50, d: 0.30, v: 0.14, t: 0.88 },  // Do↑（结尾长音）
+            ];
+            for (var i = 0; i < m.length; i++) {
+                playTone(m[i].f, 'triangle', m[i].d, m[i].v, m[i].t);
+                // 泛音层（让每个音更亮更有光泽）
+                playTone(m[i].f * 2, 'sine', m[i].d * 0.5, m[i].v * 0.15, m[i].t);
+            }
         }
     };
 })();

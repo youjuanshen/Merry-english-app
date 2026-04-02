@@ -31,7 +31,7 @@ function _shuffleOptions(q) {
 
 function renderReadingQuestion(q, container) {
     // 容错：如果题目数据不完整，自动跳过
-    if (!q || (!q.options && !q.pairs && q.type !== 'spot_diff')) {
+    if (!q || (!q.options && !q.pairs && q.type !== 'spot_diff' && q.type !== 'sentence_sequence')) {
         var skipEl = document.createElement('div');
         skipEl.style.textAlign = 'center';
         skipEl.style.padding = '40px';
@@ -438,6 +438,245 @@ function renderReadingQuestion(q, container) {
             grid.appendChild(cardEl);
         });
         container.appendChild(grid);
+    } else if (q.type === 'tap_pair') {
+        // 点击配对题：左边英文词，右边图片/中文，点一个词再点一张图配对
+        // Play-based + i+1：游戏化交互 + 词义配对练习
+        var pairs = q.pairs || []; // [{word: 'bear', match: '<img ...>', matchId: 0}, ...]
+        var matchedCount = 0;
+        var selectedWord = null;
+
+        var titleEl = document.createElement('div');
+        titleEl.style.cssText = 'text-align:center;font-size:18px;font-weight:bold;margin-bottom:12px;color:#333;';
+        titleEl.textContent = '👆 点英文词，再点配对的图片！';
+        container.appendChild(titleEl);
+
+        var pairArea = document.createElement('div');
+        pairArea.className = 'tap-pair-area';
+        pairArea.style.cssText = 'display:flex;justify-content:space-between;gap:8px;width:100%;align-items:stretch;';
+
+        // 左列：英文词
+        var leftCol = document.createElement('div');
+        leftCol.style.cssText = 'display:flex;flex-direction:column;gap:6px;flex:1;';
+
+        // 右列：图片/中文（乱序）
+        var rightCol = document.createElement('div');
+        rightCol.style.cssText = 'display:flex;flex-direction:column;gap:6px;flex:1;';
+
+        // 打乱右列顺序
+        var rightItems = pairs.map(function(p, i) { return { content: p.match, id: i }; });
+        for (var ri = rightItems.length - 1; ri > 0; ri--) {
+            var rj = Math.floor(Math.random() * (ri + 1));
+            var tmp = rightItems[ri]; rightItems[ri] = rightItems[rj]; rightItems[rj] = tmp;
+        }
+
+        pairs.forEach(function(pair, idx) {
+            var wordBtn = document.createElement('div');
+            wordBtn.className = 'option-card';
+            wordBtn.style.cssText = 'padding:6px 10px;font-size:18px;font-weight:bold;text-align:center;cursor:pointer;min-height:48px;display:flex;align-items:center;justify-content:center;border:2px solid #e0e0e0;border-radius:12px;background:#fff;';
+            wordBtn.textContent = pair.word;
+            wordBtn.dataset.pairId = idx;
+            wordBtn.dataset.side = 'left';
+
+            wordBtn.onclick = function() {
+                if (wordBtn.classList.contains('matched')) return;
+                // 取消之前的选中
+                var allLeft = leftCol.querySelectorAll('.option-card');
+                allLeft.forEach(function(el) { el.style.border = '2px solid #e0e0e0'; });
+                // 选中当前
+                wordBtn.style.border = '3px solid #1cb0f6';
+                selectedWord = { el: wordBtn, id: idx };
+            };
+            leftCol.appendChild(wordBtn);
+        });
+
+        rightItems.forEach(function(item) {
+            var matchBtn = document.createElement('div');
+            matchBtn.className = 'option-card';
+            matchBtn.style.cssText = 'padding:4px 8px;font-size:16px;text-align:center;cursor:pointer;min-height:48px;display:flex;align-items:center;justify-content:center;border:2px solid #e0e0e0;border-radius:12px;background:#fff;overflow:hidden;';
+            matchBtn.innerHTML = item.content;
+            matchBtn.dataset.pairId = item.id;
+            matchBtn.dataset.side = 'right';
+
+            matchBtn.onclick = function() {
+                if (matchBtn.classList.contains('matched')) return;
+                if (!selectedWord) {
+                    // 没选左边的词，提示一下
+                    matchBtn.style.border = '2px solid #ff9500';
+                    setTimeout(function() { matchBtn.style.border = '2px solid #e0e0e0'; }, 500);
+                    return;
+                }
+                // 判断配对是否正确
+                if (selectedWord.id == item.id) {
+                    // 配对成功
+                    selectedWord.el.classList.add('matched');
+                    selectedWord.el.style.cssText += 'background:#e8f5e9;border:2px solid #4caf50;opacity:0.6;pointer-events:none;';
+                    matchBtn.classList.add('matched');
+                    matchBtn.style.cssText += 'background:#e8f5e9;border:2px solid #4caf50;opacity:0.6;pointer-events:none;';
+                    if (window.SoundSystem) SoundSystem.playCorrect();
+                    matchedCount++;
+                    selectedWord = null;
+                    if (matchedCount === pairs.length) {
+                        setTimeout(function() { handleAnswer(true); }, 600);
+                    }
+                } else {
+                    // 配对错误
+                    matchBtn.style.border = '2px solid #e74c3c';
+                    matchBtn.classList.add('wrong');
+                    if (window.SoundSystem) SoundSystem.playWrong();
+                    setTimeout(function() {
+                        matchBtn.style.border = '2px solid #e0e0e0';
+                        matchBtn.classList.remove('wrong');
+                    }, 500);
+                    selectedWord.el.style.border = '2px solid #e0e0e0';
+                    selectedWord = null;
+                    // 记录错误次数（触发支架）
+                    window.wrongCount = (window.wrongCount || 0) + 1;
+                    var wc = window.wrongCount;
+                    console.log('[tap_pair] wrongCount=' + wc + ' pairs=' + pairs.length + ' matchedCount=' + matchedCount);
+
+                    // ===== tap_pair 支架：错2次才给提示，之后每错1次多教一个词 =====
+                    if (wc < 3) {
+                        // 前2次错误不给提示，让学生自己尝试
+                        return;
+                    }
+
+                    var isImagePair = pairs[0] && pairs[0].match && pairs[0].match.indexOf('<img') !== -1;
+                    var hintIdx = -1;
+                    var allLeftCards = leftCol.querySelectorAll('.option-card');
+                    for (var hi = 0; hi < allLeftCards.length; hi++) {
+                        if (!allLeftCards[hi].classList.contains('matched') && !allLeftCards[hi].dataset.hinted) {
+                            hintIdx = parseInt(allLeftCards[hi].dataset.pairId);
+                            allLeftCards[hi].dataset.hinted = 'true';
+                            break;
+                        }
+                    }
+
+                    if (hintIdx >= 0) {
+                        var hintText = '';
+                        if (isImagePair) {
+                            // 词→图片题：告诉中文意思（还要自己找图片，不等于给答案）
+                            var chineseMeaning = pairs[hintIdx].chinese || '';
+                            if (!chineseMeaning) {
+                                // 没有 chinese 字段，用通用提示
+                                hintText = '💡 "' + pairs[hintIdx].word + '" — 想想这个词是什么意思？';
+                            } else {
+                                hintText = '💡 "' + pairs[hintIdx].word + '" = ' + chineseMeaning;
+                            }
+                        } else {
+                            // 词→中文题：给例句语境（不直接给答案，让学生推断）
+                            var exSentence = pairs[hintIdx].example || '';
+                            if (exSentence) {
+                                hintText = '💡 例句：' + exSentence;
+                            } else {
+                                hintText = '💡 "' + pairs[hintIdx].word + '" — 在课文里出现过，想想看！';
+                            }
+                        }
+
+                        // 浮动提示：屏幕中央弹出，2秒后消失
+                        var oldHint = document.getElementById('tap-pair-hint');
+                        if (oldHint) oldHint.remove();
+                        var hintEl = document.createElement('div');
+                        hintEl.id = 'tap-pair-hint';
+                        hintEl.style.cssText = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(0.8);background:#fff8e1;color:#e65100;font-size:17px;font-weight:bold;padding:14px 24px;border-radius:16px;box-shadow:0 4px 20px rgba(0,0,0,0.2);z-index:9999;opacity:0;transition:all 0.3s ease;text-align:center;max-width:80%;';
+                        hintEl.textContent = hintText;
+                        document.body.appendChild(hintEl);
+                        // 弹入动画
+                        setTimeout(function() {
+                            hintEl.style.opacity = '1';
+                            hintEl.style.transform = 'translate(-50%,-50%) scale(1)';
+                        }, 50);
+                        // 2秒后消失
+                        setTimeout(function() {
+                            hintEl.style.opacity = '0';
+                            hintEl.style.transform = 'translate(-50%,-50%) scale(0.8)';
+                            setTimeout(function() { if (hintEl.parentNode) hintEl.remove(); }, 300);
+                        }, 2500);
+                    }
+                }
+            };
+            rightCol.appendChild(matchBtn);
+        });
+
+        pairArea.appendChild(leftCol);
+        pairArea.appendChild(rightCol);
+        container.appendChild(pairArea);
+
+    } else if (q.type === 'sentence_sequence') {
+        // 句子排序：把3个短句按正确顺序排列（语篇组织能力）
+        var titleSeq = document.createElement('div');
+        titleSeq.style.cssText = 'text-align:center;font-size:17px;font-weight:bold;margin-bottom:12px;color:#333;';
+        titleSeq.textContent = '📖 把句子按正确顺序排列！';
+        container.appendChild(titleSeq);
+
+        var sortArea = document.createElement('div');
+        sortArea.style.cssText = 'display:flex;gap:6px;justify-content:center;min-height:40px;margin-bottom:10px;padding:8px;background:#f5f5f5;border-radius:12px;flex-wrap:wrap;';
+        container.appendChild(sortArea);
+
+        var sentences = q.sentences || [];
+        // 打乱顺序显示
+        var shuffled = sentences.map(function(s, i) { return { text: s, correctPos: i }; });
+        for (var si = shuffled.length - 1; si > 0; si--) {
+            var sj = Math.floor(Math.random() * (si + 1));
+            var tmp = shuffled[si]; shuffled[si] = shuffled[sj]; shuffled[sj] = tmp;
+        }
+
+        var currentAns = [];
+        var numberLabels = ['①', '②', '③', '④', '⑤'];
+        var cardsArea = document.createElement('div');
+        cardsArea.style.cssText = 'display:flex;flex-direction:column;gap:8px;padding-bottom:20px;width:100%;';
+
+        shuffled.forEach(function(item) {
+            var card = document.createElement('div');
+            card.className = 'option-card';
+            card.style.cssText = 'padding:12px 16px;font-size:16px;text-align:left;cursor:pointer;border:2px solid #e0e0e0;border-radius:12px;background:#fff;line-height:1.4;';
+            card.textContent = item.text;
+
+            card.onclick = function() {
+                if (isAnimating) return;
+                if (card.classList.contains('picked')) return;
+                card.classList.add('picked');
+                card.style.opacity = '0.4';
+                card.style.pointerEvents = 'none';
+                currentAns.push(item.correctPos);
+
+                var badge = document.createElement('span');
+                badge.style.cssText = 'display:inline-block;width:28px;height:28px;border-radius:50%;background:#1cb0f6;color:#fff;text-align:center;line-height:28px;font-size:14px;font-weight:bold;';
+                badge.textContent = numberLabels[currentAns.length - 1];
+                badge.onclick = function() {
+                    if (isAnimating) return;
+                    sortArea.removeChild(badge);
+                    card.classList.remove('picked');
+                    card.style.opacity = '1';
+                    card.style.pointerEvents = 'auto';
+                    currentAns = currentAns.filter(function(p) { return p !== item.correctPos; });
+                    var badges = sortArea.querySelectorAll('span');
+                    for (var bi = 0; bi < badges.length; bi++) badges[bi].textContent = numberLabels[bi];
+                };
+                sortArea.appendChild(badge);
+
+                if (currentAns.length === sentences.length) {
+                    var correctOrder = sentences.map(function(_, i) { return i; });
+                    if (currentAns.join(',') === correctOrder.join(',')) {
+                        handleAnswer(true);
+                    } else {
+                        handleAnswer(false, null, sentences.join(' → '));
+                        setTimeout(function() {
+                            sortArea.innerHTML = '';
+                            var allCards = cardsArea.querySelectorAll('.option-card');
+                            for (var ri = 0; ri < allCards.length; ri++) {
+                                allCards[ri].classList.remove('picked');
+                                allCards[ri].style.opacity = '1';
+                                allCards[ri].style.pointerEvents = 'auto';
+                            }
+                            currentAns = [];
+                        }, 2500);
+                    }
+                }
+            };
+            cardsArea.appendChild(card);
+        });
+        container.appendChild(cardsArea);
+
     } else if (q.type === 'spot_diff') {
         const descEl = document.createElement('h3');
         descEl.textContent = q.question;
@@ -513,10 +752,17 @@ function renderReadingQuestion(q, container) {
             card.className = 'option-card';
             card.style.fontSize = '18px';
             card.style.padding = '15px';
-            card.textContent = opt;
+            const isObj = typeof opt === 'object' && opt !== null;
+            card.textContent = isObj ? opt.text : opt;
             card.onclick = () => {
-                const correctAnswer = q.options[q.correct];
-                handleAnswer(idx === q.correct, card, correctAnswer);
+                const isCorrect = isObj
+                    ? opt.value === q.correct
+                    : idx === q.correct;
+                const correctOpt = q.options.find(o =>
+                    typeof o === 'object' && o !== null ? o.value === q.correct : false
+                );
+                const correctAnswer = correctOpt ? correctOpt.text : q.options[q.correct];
+                handleAnswer(isCorrect, card, correctAnswer);
             };
             grid.appendChild(card);
         });

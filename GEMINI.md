@@ -29,9 +29,14 @@
 | 46 | 打地鼠题型优化 | P1 | ⬜ 待做 |
 | 47 | 🔥 选择题统一4个选项 + chinese字段完整翻译 | P0 | ⬜ 待做 |
 | 48 | 🔥 替换带英文标注的动物图片 | P0 | ⬜ 待做 |
-| 49 | 🔥 写作模块题目缺失提示文字 | P0 | ⬜ 待做 |
-| 50 | 🔥 口语模块录完音下一题按钮卡死+UI优化 | P0 | ⬜ 待做 |
-| 51 | 🔥 反馈面板布局优化+文案优化 | P1 | ⬜ 待做 |
+| 49 | 🔥 写作模块题目缺失提示文字 | P0 | ✅ 完成 |
+| 50 | 🔥 口语模块录完音下一题按钮卡死+UI优化 | P0 | ✅ 完成 |
+| 51 | 🔥 反馈面板布局优化+文案优化 | P1 | ✅ 完成 |
+| 52 | 游戏化系统（星星+连击+成就+情境导入） | P0 | ✅ 完成 |
+| 53 | 支架优化（听力英文提示+变灰梯次+正确答案不误伤） | P0 | ✅ 完成 |
+| 54 | 听力支架分层升级（英文→英文+中文→灰掉选项） | P0 | ✅ 完成 |
+| 55 | 统一设计系统（绿色主题+欢迎页+选人页） | P1 | ✅ 完成 |
+| 56 | 欢迎页音效升级（五声音阶+点击解锁） | P1 | ✅ 完成 |
 
 ---
 
@@ -772,13 +777,31 @@ firebase.database().ref('teacherCommand').on('value', (snapshot) => {
 | 36 | 真实语料引擎（题库对齐课本） | 03-17 | Gemini |
 | 37 | 跨设备师生通信（Firebase） | 03-17 | Gemini |
 | 38 | 音效系统（Web Audio API） | 03-17 | Gemini |
+| 52 | 游戏化系统（星星+连击+成就+情境导入） | 03-26 | Gemini |
+| 53 | 支架优化（正确答案保护+听力英文提示+梯次变灰） | 03-26 | Gemini |
 
-### Claude 03-16 修复记录
+### Gemini 03-26 修复记录
 
-| 提交 | 内容 |
+**改动文件**：`app.js`、`style.css`、`assets/images/scenario_*.png`（4张新图片）
+
+#### 任务52：游戏化系统
+| 功能 | 说明 |
 |------|------|
-| `bc4a08c` | 修复3处JS语法错误 + PWA图标 |
-| `9d487d3` | JSON.parse添加try-catch + 输入验证 |
-| `2c9aa31` | 前测"再来一遍"按钮 + 清除反馈遮挡 |
-| `f2ac66d` | 移除绿色答案条 + 教师端课程恢复 |
-| `05f2cd5` | 完成界面"再来一次"按钮 |
+| 星星计分 | `window.earnedStarThisTurn` 控制每题最多得1分；practice阶段两人同步加星 |
+| 连击系统 | `window.comboCount` 累计连对数；反馈面板显示连击鼓励语（3/5/7/10连击） |
+| 成就系统 | 8个成就定义在 `achievementDefs`；用 `localStorage` 按学生 `orderId` 持久化 |
+| 成就弹窗 | `showNextAchievementModal()` 逐个弹出新解锁成就 |
+| 成就展示 | 结果页底部网格展示已解锁(彩色)和未解锁(灰度)图标 |
+| 情境导入页 | `scenarioMap` 16课全配置；`showScenarioScreen()` 在 `startGame()` 中拦截 practice 阶段 |
+| 情境UI | 渐变背景 + 200x200卡通主题插图 + 弹跳入场动画 + 呼吸发光按钮 |
+| 新增图片 | `scenario_animals.png`、`scenario_clothes.png`、`scenario_time.png`、`scenario_food.png` |
+
+#### 任务53：支架优化
+| 修复项 | 说明 |
+|--------|------|
+| 正确答案保护 | `applyScaffolding` 改用数组索引+对象字段精确匹配，不再依赖 `textContent` 比较 |
+| 听力英文提示 | `wrongCount===1` 时显示英文原句（`q.sentence`/`q.word`/`q.audio`），不直接变灰 |
+| 梯次变灰 | `wrongCount===2` 才开始灰掉错误选项，`wrongCount>=3` 高亮正确答案 |
+| Practice同步计分 | `handleAnswer` 中 practice 阶段同时给 `player1` 和 `player2` 累加 `correct`/`total` |
+| 自动跳转移除 | 删除答对后1.5秒 `setTimeout` 自动跳转，改为学生手动点"继续" |
+| 情境页触发修复 | `getCurrentLessonId()` 优先用 `.id` 字段匹配，解决教师端发布后引用不一致问题 |
